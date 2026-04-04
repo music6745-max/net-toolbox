@@ -512,6 +512,11 @@ export const tools: Tool[] = [
   { slug: "countdown-timer", name: "カウントダウンタイマー", description: "目標日時までの残り時間をリアルタイムで表示。", icon: "⏰", category: "日常ツール" },
   { slug: "image-compressor", name: "画像圧縮", description: "ブラウザ内で画像を圧縮・軽量化。サーバー送信なしで安心。", icon: "🗜️", category: "画像・メディア" },
   { slug: "favicon-generator", name: "ファビコン生成", description: "テキストや絵文字からファビコンを作成。色・形状カスタマイズ対応。", icon: "⭐", category: "デザイン" },
+  { slug: "svg-to-png", name: "SVG→PNG変換", description: "SVGファイルやコードをPNG画像に変換してダウンロード。倍率・背景色指定対応。", icon: "🖼️", category: "画像・メディア" },
+  { slug: "text-to-image", name: "テキスト画像生成", description: "テキストを画像化。フォント・色・サイズを自由にカスタマイズしてPNGダウンロード。", icon: "🅰️", category: "画像・メディア" },
+  { slug: "box-shadow", name: "box-shadow生成", description: "CSSのbox-shadowをスライダーで視覚的に作成。複数シャドウ対応。", icon: "🎭", category: "デザイン" },
+  { slug: "flexbox-generator", name: "Flexboxジェネレーター", description: "Flexboxのプロパティを視覚的に設定しCSSコードを自動生成。", icon: "📐", category: "デザイン" },
+  { slug: "wifi-qr", name: "WiFi QRコード", description: "WiFiのSSIDとパスワードからQRコードを生成。スマホで読み取り接続。", icon: "📶", category: "日常ツール" },
 ];
 
 export const siteConfig = {
