@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Unit = "deg" | "rad";
 
@@ -198,6 +199,7 @@ export default function TrigonometryPage() {
       </section>
 
 
+      <AffiliateSection slug="trigonometry" category="日常ツール" />
       <RelatedTools currentSlug="trigonometry" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface CookieEntry {
   key: string;
@@ -145,6 +146,7 @@ export default function CookieViewerPage() {
       </section>
 
 
+      <AffiliateSection slug="cookie-viewer" category="開発ツール" />
       <RelatedTools currentSlug="cookie-viewer" category="開発ツール" />
     </div>
   );

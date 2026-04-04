@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function CompoundInterestPage() {
   const [principal, setPrincipal] = useState("");
@@ -177,6 +178,7 @@ export default function CompoundInterestPage() {
       </section>
 
 
+      <AffiliateSection slug="compound-interest" category="日常ツール" />
       <RelatedTools currentSlug="compound-interest" category="日常ツール" />
     </div>
   );

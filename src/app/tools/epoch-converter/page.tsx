@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function pad(n: number, len = 2) {
   return n.toString().padStart(len, "0");
@@ -231,6 +232,7 @@ export default function EpochConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="epoch-converter" category="開発ツール" />
       <RelatedTools currentSlug="epoch-converter" category="開発ツール" />
     </div>
   );

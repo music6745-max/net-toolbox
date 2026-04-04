@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Mode = "speed" | "distance" | "time";
 
@@ -137,6 +138,7 @@ export default function SpeedCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="speed-calculator" category="日常ツール" />
       <RelatedTools currentSlug="speed-calculator" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function playBeep() {
   try {
@@ -178,6 +179,7 @@ export default function TimerPage() {
       </section>
 
 
+      <AffiliateSection slug="timer" category="日常ツール" />
       <RelatedTools currentSlug="timer" category="日常ツール" />
     </div>
   );

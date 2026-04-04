@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type ReverseMode = "chars" | "words" | "lines";
 
@@ -194,6 +195,7 @@ export default function TextReversePage() {
       </section>
 
 
+      <AffiliateSection slug="text-reverse" category="テキスト" />
       <RelatedTools currentSlug="text-reverse" category="テキスト" />
     </div>
   );

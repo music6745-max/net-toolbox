@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type DiffOp = { type: "equal" | "insert" | "delete"; text: string };
 
@@ -230,6 +231,7 @@ export default function CharDiffPage() {
       </section>
 
 
+      <AffiliateSection slug="char-diff" category="テキスト" />
       <RelatedTools currentSlug="char-diff" category="テキスト" />
     </div>
   );

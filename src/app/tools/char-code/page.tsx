@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface CharInfo {
   char: string;
@@ -107,6 +108,7 @@ export default function CharCodePage() {
       </section>
 
 
+      <AffiliateSection slug="char-code" category="開発ツール" />
       <RelatedTools currentSlug="char-code" category="開発ツール" />
     </div>
   );

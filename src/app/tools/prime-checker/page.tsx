@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function isPrime(n: number): boolean {
   if (n < 2) return false;
@@ -214,6 +215,7 @@ export default function PrimeCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="prime-checker" category="日常ツール" />
       <RelatedTools currentSlug="prime-checker" category="日常ツール" />
     </div>
   );

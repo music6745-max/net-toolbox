@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function calcMortgage(principal: number, annualRate: number, years: number) {
   const p = principal * 10000; // 万円 → 円
@@ -126,6 +127,7 @@ export default function MortgageCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="mortgage-calculator" category="日常ツール" />
       <RelatedTools currentSlug="mortgage-calculator" category="日常ツール" />
     </div>
   );

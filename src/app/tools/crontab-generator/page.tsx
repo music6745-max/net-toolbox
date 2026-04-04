@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type FieldMode = "every" | "specific" | "range" | "step";
 
@@ -235,6 +236,7 @@ export default function CrontabGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="crontab-generator" category="開発ツール" />
       <RelatedTools currentSlug="crontab-generator" category="開発ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function CharacterCountPage() {
   const [text, setText] = useState("");
@@ -82,6 +83,7 @@ export default function CharacterCountPage() {
       </section>
 
 
+      <AffiliateSection slug="character-count" category="テキスト" />
       <RelatedTools currentSlug="character-count" category="テキスト" />
     </div>
   );

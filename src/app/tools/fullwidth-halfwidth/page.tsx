@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const toHalf = (s: string) => s.replace(/[Ａ-Ｚａ-ｚ０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/　/g, " ");
 const toFull = (s: string) => s.replace(/[A-Za-z0-9]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0xfee0)).replace(/ /g, "　");
@@ -48,6 +49,7 @@ export default function FullwidthHalfwidthPage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">全角半角変換ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>テキストを入力し、変換ボタンをクリックするだけで全角⇔半角、ひらがな⇔カタカナの変換ができます。</p><p>データ入力の統一やテキスト整形にご活用ください。</p></div></section>
 
 
+      <AffiliateSection slug="fullwidth-halfwidth" category="テキスト" />
       <RelatedTools currentSlug="fullwidth-halfwidth" category="テキスト" />
     </div>
   );

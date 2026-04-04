@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Platform = {
   name: string;
@@ -145,6 +146,7 @@ export default function SnsCharLimitPage() {
       </section>
 
 
+      <AffiliateSection slug="sns-char-limit" category="テキスト" />
       <RelatedTools currentSlug="sns-char-limit" category="テキスト" />
     </div>
   );

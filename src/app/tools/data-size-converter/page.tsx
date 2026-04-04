@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const UNITS = ["B", "KB", "MB", "GB", "TB", "PB"] as const;
 type Unit = typeof UNITS[number];
@@ -99,6 +100,7 @@ export default function DataSizeConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="data-size-converter" category="開発ツール" />
       <RelatedTools currentSlug="data-size-converter" category="開発ツール" />
     </div>
   );

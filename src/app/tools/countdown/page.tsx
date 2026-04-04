@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type TimeLeft = {
   days: number;
@@ -187,6 +188,7 @@ export default function CountdownPage() {
       </section>
 
 
+      <AffiliateSection slug="countdown" category="日常ツール" />
       <RelatedTools currentSlug="countdown" category="日常ツール" />
     </div>
   );

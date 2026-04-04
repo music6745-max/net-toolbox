@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -105,6 +106,9 @@ export default function Page() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="text-to-html" category="開発ツール" />
+
 
       <RelatedTools currentSlug="text-to-html" category="開発ツール" />
     </div>

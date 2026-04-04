@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DICE_TYPES = [4, 6, 8, 10, 12, 20] as const;
 type DiceType = (typeof DICE_TYPES)[number];
@@ -181,6 +182,7 @@ export default function DicePage() {
       </section>
 
 
+      <AffiliateSection slug="dice" category="日常ツール" />
       <RelatedTools currentSlug="dice" category="日常ツール" />
     </div>
   );

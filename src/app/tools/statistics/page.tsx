@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface Stats {
   count: number;
@@ -162,6 +163,7 @@ export default function StatisticsPage() {
       </section>
 
 
+      <AffiliateSection slug="statistics" category="日常ツール" />
       <RelatedTools currentSlug="statistics" category="日常ツール" />
     </div>
   );

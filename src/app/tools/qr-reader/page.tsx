@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type ImageInfo = {
   name: string;
@@ -245,6 +246,7 @@ export default function ImageInfoPage() {
       </section>
 
 
+      <AffiliateSection slug="qr-reader" category="画像・メディア" />
       <RelatedTools currentSlug="qr-reader" category="画像・メディア" />
     </div>
   );

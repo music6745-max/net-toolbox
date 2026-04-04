@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface ColorStop {
   color: string;
@@ -201,6 +202,7 @@ export default function CssGradientPage() {
       </section>
 
 
+      <AffiliateSection slug="css-gradient" category="デザイン" />
       <RelatedTools currentSlug="css-gradient" category="デザイン" />
     </div>
   );

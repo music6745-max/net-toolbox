@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type FormData = {
   siteName: string;
@@ -237,6 +238,7 @@ export default function PrivacyGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="privacy-generator" category="開発ツール" />
       <RelatedTools currentSlug="privacy-generator" category="開発ツール" />
     </div>
   );

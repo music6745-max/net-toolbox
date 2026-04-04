@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function TermsGeneratorPage() {
   const [siteName, setSiteName] = useState("");
@@ -175,6 +176,7 @@ export default function TermsGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="terms-generator" category="開発ツール" />
       <RelatedTools currentSlug="terms-generator" category="開発ツール" />
     </div>
   );

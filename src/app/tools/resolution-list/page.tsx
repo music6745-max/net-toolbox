@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 type Resolution = { name: string; w: number; h: number; ratio: string; category: string };
@@ -103,6 +104,9 @@ export default function Page() {
           <p>レスポンシブデザインやメディアクエリの設定時の参考にご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="resolution-list" category="デザイン" />
+
 
       <RelatedTools currentSlug="resolution-list" category="デザイン" />
     </div>

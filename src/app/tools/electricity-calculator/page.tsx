@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PRESETS = [
   { name: "エアコン（冷房）", watts: 860 },
@@ -135,6 +136,7 @@ export default function ElectricityCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="electricity-calculator" category="日常ツール" />
       <RelatedTools currentSlug="electricity-calculator" category="日常ツール" />
     </div>
   );

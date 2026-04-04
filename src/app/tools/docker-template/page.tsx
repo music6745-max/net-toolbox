@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type BaseImage = "node" | "node-alpine" | "python" | "nginx" | "ubuntu" | "alpine" | "go" | "ruby" | "php";
 
@@ -285,6 +286,7 @@ export default function DockerTemplatePage() {
       </section>
 
 
+      <AffiliateSection slug="docker-template" category="開発ツール" />
       <RelatedTools currentSlug="docker-template" category="開発ツール" />
     </div>
   );

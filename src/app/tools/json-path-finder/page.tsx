@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type TreeNode = {
   key: string;
@@ -307,6 +308,7 @@ export default function JsonPathFinderPage() {
       </section>
 
 
+      <AffiliateSection slug="json-path-finder" category="開発ツール" />
       <RelatedTools currentSlug="json-path-finder" category="開発ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type MimeType = "text/plain" | "text/html";
 type Encoding = "base64" | "uri";
@@ -202,6 +203,7 @@ export default function DataUrlPage() {
       </section>
 
 
+      <AffiliateSection slug="data-url" category="開発ツール" />
       <RelatedTools currentSlug="data-url" category="開発ツール" />
     </div>
   );

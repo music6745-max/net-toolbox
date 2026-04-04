@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type CipherMode = "rot13" | "caesar" | "xor";
 
@@ -283,6 +284,7 @@ export default function TextEncryptPage() {
       </section>
 
 
+      <AffiliateSection slug="text-encrypt" category="セキュリティ" />
       <RelatedTools currentSlug="text-encrypt" category="セキュリティ" />
     </div>
   );

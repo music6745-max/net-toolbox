@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function mdToHtml(md: string): string {
   let html = md
@@ -45,6 +46,7 @@ export default function MarkdownPreviewPage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">マークダウンプレビューツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>左側にマークダウン記法でテキストを入力すると、右側にリアルタイムでHTMLプレビューが表示されます。</p><p>見出し(#)、太字(**)、斜体(*)、コード(`)、リスト(-)、リンク([](url))に対応しています。</p></div></section>
 
 
+      <AffiliateSection slug="markdown-preview" category="開発ツール" />
       <RelatedTools currentSlug="markdown-preview" category="開発ツール" />
     </div>
   );

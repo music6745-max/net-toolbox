@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DEFAULT_ROWS = 3;
 const DEFAULT_COLS = 3;
@@ -279,6 +280,7 @@ export default function MarkdownTablePage() {
       </section>
 
 
+      <AffiliateSection slug="markdown-table" category="開発ツール" />
       <RelatedTools currentSlug="markdown-table" category="開発ツール" />
     </div>
   );

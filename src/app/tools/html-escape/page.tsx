@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const escapeHtml = (s: string) => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
 const unescapeHtml = (s: string) => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'");
@@ -34,6 +35,7 @@ export default function HtmlEscapePage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">HTMLエスケープツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>HTMLコードを入力し、「エスケープ」で特殊文字を安全な文字参照に変換します。</p><p>「アンエスケープ」で文字参照を元の文字に戻します。XSS対策やブログ記事の作成に便利です。</p></div></section>
 
 
+      <AffiliateSection slug="html-escape" category="開発ツール" />
       <RelatedTools currentSlug="html-escape" category="開発ツール" />
     </div>
   );

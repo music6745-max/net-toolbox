@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 type Perms = [boolean, boolean, boolean]; // read, write, execute
@@ -141,6 +142,9 @@ export default function Page() {
           <p>生成されたchmodコマンドをそのままターミナルで使用できます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="chmod-calculator" category="開発ツール" />
+
 
       <RelatedTools currentSlug="chmod-calculator" category="開発ツール" />
     </div>

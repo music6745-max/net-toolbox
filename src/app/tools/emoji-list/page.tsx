@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface EmojiEntry {
   emoji: string;
@@ -240,6 +241,7 @@ export default function EmojiListPage() {
       </section>
 
 
+      <AffiliateSection slug="emoji-list" category="テキスト" />
       <RelatedTools currentSlug="emoji-list" category="テキスト" />
     </div>
   );

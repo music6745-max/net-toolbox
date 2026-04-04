@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PRESETS = [
   { label: "正方形 (400×400)", w: 400, h: 400 },
@@ -119,6 +120,7 @@ export default function PlaceholderImagePage() {
       </section>
 
 
+      <AffiliateSection slug="placeholder-image" category="デザイン" />
       <RelatedTools currentSlug="placeholder-image" category="デザイン" />
     </div>
   );

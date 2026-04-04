@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 async function hashText(text: string, algorithm: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -89,6 +90,7 @@ export default function HashGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="hash-generator" category="セキュリティ" />
       <RelatedTools currentSlug="hash-generator" category="セキュリティ" />
     </div>
   );

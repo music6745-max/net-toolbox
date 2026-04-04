@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const commonDisplays = [
@@ -108,6 +109,9 @@ export default function Page() {
           <p>PPI（ピクセル密度）が自動計算され、主要ディスプレイとの比較も確認できます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="dpi-calculator" category="デザイン" />
+
 
       <RelatedTools currentSlug="dpi-calculator" category="デザイン" />
     </div>

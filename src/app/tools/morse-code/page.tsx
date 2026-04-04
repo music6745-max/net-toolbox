@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const MORSE: Record<string, string> = {
@@ -50,6 +51,8 @@ export default function Page() {
           <p>3. モールス信号の各文字はスペースで区切り、単語は「/」で区切ります。</p>
         </div>
       </section>
+      <AffiliateSection slug="morse-code" category="テキスト" />
+
       <RelatedTools currentSlug="morse-code" category="テキスト" />
     </div>
   );

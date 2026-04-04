@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Unit = "px" | "rem" | "em" | "pt" | "%";
 
@@ -150,6 +151,7 @@ export default function CssUnitConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="css-unit-converter" category="開発ツール" />
       <RelatedTools currentSlug="css-unit-converter" category="開発ツール" />
     </div>
   );

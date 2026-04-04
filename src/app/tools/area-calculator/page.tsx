@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Shape = "circle" | "rectangle" | "triangle" | "trapezoid";
 
@@ -168,6 +169,7 @@ export default function AreaCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="area-calculator" category="日常ツール" />
       <RelatedTools currentSlug="area-calculator" category="日常ツール" />
     </div>
   );

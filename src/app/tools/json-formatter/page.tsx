@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function JsonFormatterPage() {
   const [input, setInput] = useState("");
@@ -130,6 +131,7 @@ export default function JsonFormatterPage() {
       </section>
 
 
+      <AffiliateSection slug="json-formatter" category="開発ツール" />
       <RelatedTools currentSlug="json-formatter" category="開発ツール" />
     </div>
   );

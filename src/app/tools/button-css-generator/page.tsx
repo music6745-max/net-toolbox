@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -131,6 +132,9 @@ export default function Page() {
           <p>プレビューで確認後、生成されたCSSコードをコピーしてご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="button-css-generator" category="デザイン" />
+
 
       <RelatedTools currentSlug="button-css-generator" category="デザイン" />
     </div>

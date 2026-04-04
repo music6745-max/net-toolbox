@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type NewlineType = "CRLF" | "LF" | "CR";
 
@@ -135,6 +136,7 @@ export default function NewlineConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="newline-converter" category="テキスト" />
       <RelatedTools currentSlug="newline-converter" category="テキスト" />
     </div>
   );

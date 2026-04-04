@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type SortOrder = "asc" | "desc";
 
@@ -195,6 +196,7 @@ export default function TextSortPage() {
       </section>
 
 
+      <AffiliateSection slug="text-sort" category="テキスト" />
       <RelatedTools currentSlug="text-sort" category="テキスト" />
     </div>
   );

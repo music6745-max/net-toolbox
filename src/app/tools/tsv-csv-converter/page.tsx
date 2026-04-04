@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function tsvToCSV(tsv: string): string {
   return tsv
@@ -189,6 +190,7 @@ export default function TsvCsvConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="tsv-csv-converter" category="開発ツール" />
       <RelatedTools currentSlug="tsv-csv-converter" category="開発ツール" />
     </div>
   );

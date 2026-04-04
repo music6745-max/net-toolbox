@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function TimestampConverterPage() {
   const [currentTs, setCurrentTs] = useState(0);
@@ -159,6 +160,7 @@ export default function TimestampConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="timestamp-converter" category="開発ツール" />
       <RelatedTools currentSlug="timestamp-converter" category="開発ツール" />
     </div>
   );

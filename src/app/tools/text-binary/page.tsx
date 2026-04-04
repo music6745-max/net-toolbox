@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function textToBinary(text: string): string {
   const encoder = new TextEncoder();
@@ -137,6 +138,7 @@ export default function TextBinaryPage() {
       </section>
 
 
+      <AffiliateSection slug="text-binary" category="開発ツール" />
       <RelatedTools currentSlug="text-binary" category="開発ツール" />
     </div>
   );

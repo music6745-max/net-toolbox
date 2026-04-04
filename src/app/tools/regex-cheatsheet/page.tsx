@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type RegexItem = {
   syntax: string;
@@ -204,6 +205,7 @@ export default function RegexCheatsheetPage() {
       </section>
 
 
+      <AffiliateSection slug="regex-cheatsheet" category="開発ツール" />
       <RelatedTools currentSlug="regex-cheatsheet" category="開発ツール" />
     </div>
   );

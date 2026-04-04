@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function calcDensity(text: string, keyword: string) {
   if (!text.trim() || !keyword.trim()) return { count: 0, density: 0, wordCount: 0 };
@@ -99,6 +100,7 @@ export default function KeywordDensityPage() {
       </section>
 
 
+      <AffiliateSection slug="keyword-density" category="開発ツール" />
       <RelatedTools currentSlug="keyword-density" category="開発ツール" />
     </div>
   );

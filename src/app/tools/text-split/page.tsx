@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DELIMITER_OPTIONS = [
   { label: "カンマ（,）", value: "," },
@@ -162,6 +163,7 @@ export default function TextSplitPage() {
       </section>
 
 
+      <AffiliateSection slug="text-split" category="テキスト" />
       <RelatedTools currentSlug="text-split" category="テキスト" />
     </div>
   );

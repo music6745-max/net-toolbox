@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Options = {
   trimLines: boolean;
@@ -201,6 +202,7 @@ export default function WhitespaceRemoverPage() {
       </section>
 
 
+      <AffiliateSection slug="whitespace-remover" category="テキスト" />
       <RelatedTools currentSlug="whitespace-remover" category="テキスト" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const BG_PRESETS = [
   { label: "青", color: "#2563eb" },
@@ -251,6 +252,7 @@ export default function FaviconPreviewPage() {
       </section>
 
 
+      <AffiliateSection slug="favicon-preview" category="デザイン" />
       <RelatedTools currentSlug="favicon-preview" category="デザイン" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function factorial(n: number): bigint {
   if (n < 0) return BigInt(-1);
@@ -211,6 +212,7 @@ export default function ProbabilityPage() {
       </section>
 
 
+      <AffiliateSection slug="probability" category="日常ツール" />
       <RelatedTools currentSlug="probability" category="日常ツール" />
     </div>
   );

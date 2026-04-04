@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function base64UrlDecode(str: string): string {
   // Replace URL-safe chars and pad
@@ -262,6 +263,7 @@ export default function JwtDecoderPage() {
       </section>
 
 
+      <AffiliateSection slug="jwt-decoder" category="開発ツール" />
       <RelatedTools currentSlug="jwt-decoder" category="開発ツール" />
     </div>
   );

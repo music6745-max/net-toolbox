@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function csvToJson(csv: string): string {
   const lines = csv.trim().split("\n");
@@ -57,6 +58,7 @@ export default function CsvJsonPage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">CSV⇔JSON変換ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>CSVデータを入力して「CSV → JSON」をクリックするとJSON形式に変換されます。</p><p>逆にJSONデータを入力して「JSON → CSV」でCSV形式に変換できます。</p></div></section>
 
 
+      <AffiliateSection slug="csv-json" category="開発ツール" />
       <RelatedTools currentSlug="csv-json" category="開発ツール" />
     </div>
   );

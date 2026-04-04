@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -34,6 +35,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>身長・体重・年齢・性別からBMI法で体脂肪率を推定。健康管理に。</p></div></section>
+      <AffiliateSection slug="body-fat" category="日常ツール" />
+
       <RelatedTools currentSlug="body-fat" category="日常ツール" />
     </div>
   );

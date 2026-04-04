@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Port = {
   port: number;
@@ -148,6 +149,7 @@ export default function PortListPage() {
       </section>
 
 
+      <AffiliateSection slug="port-list" category="開発ツール" />
       <RelatedTools currentSlug="port-list" category="開発ツール" />
     </div>
   );

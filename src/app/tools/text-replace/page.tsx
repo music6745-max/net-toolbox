@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function TextReplacePage() {
   const [text, setText] = useState("");
@@ -57,6 +58,7 @@ export default function TextReplacePage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">テキスト置換ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>テキストを入力し、検索文字列と置換文字列を指定して「置換実行」をクリックします。</p><p>正規表現を有効にすると、パターンマッチによる高度な置換も可能です。</p></div></section>
 
 
+      <AffiliateSection slug="text-replace" category="テキスト" />
       <RelatedTools currentSlug="text-replace" category="テキスト" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface WordEntry {
   word: string;
@@ -189,6 +190,7 @@ export default function WordFrequencyPage() {
       </section>
 
 
+      <AffiliateSection slug="word-frequency" category="テキスト" />
       <RelatedTools currentSlug="word-frequency" category="テキスト" />
     </div>
   );

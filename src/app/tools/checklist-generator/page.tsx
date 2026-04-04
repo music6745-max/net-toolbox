@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function ChecklistGeneratorPage() {
   const [input, setInput] = useState("タスク1\nタスク2\nタスク3");
@@ -90,6 +91,7 @@ export default function ChecklistGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="checklist-generator" category="日常ツール" />
       <RelatedTools currentSlug="checklist-generator" category="日常ツール" />
     </div>
   );

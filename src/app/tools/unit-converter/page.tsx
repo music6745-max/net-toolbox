@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const categories = {
   "長さ": { units: ["mm", "cm", "m", "km", "in", "ft", "yd", "mi"], base: [1, 10, 1000, 1e6, 25.4, 304.8, 914.4, 1.609e6] },
@@ -71,6 +72,7 @@ export default function UnitConverterPage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">単位変換ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>カテゴリ（長さ・重さ・温度）を選び、値と変換元・変換先の単位を指定するだけで自動変換されます。</p><p>日常の計算や、海外の単位換算にご活用ください。</p></div></section>
 
 
+      <AffiliateSection slug="unit-converter" category="日常ツール" />
       <RelatedTools currentSlug="unit-converter" category="日常ツール" />
     </div>
   );

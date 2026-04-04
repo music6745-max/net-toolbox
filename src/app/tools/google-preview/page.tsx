@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const TITLE_LIMIT = 60;
 const DESC_LIMIT = 160;
@@ -139,6 +140,7 @@ export default function GooglePreviewPage() {
       </section>
 
 
+      <AffiliateSection slug="google-preview" category="開発ツール" />
       <RelatedTools currentSlug="google-preview" category="開発ツール" />
     </div>
   );

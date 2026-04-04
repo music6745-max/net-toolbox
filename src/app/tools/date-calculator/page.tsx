@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function DateCalculatorPage() {
   const today = new Date().toISOString().split("T")[0];
@@ -94,6 +95,7 @@ export default function DateCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="date-calculator" category="日常ツール" />
       <RelatedTools currentSlug="date-calculator" category="日常ツール" />
     </div>
   );

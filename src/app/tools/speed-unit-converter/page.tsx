@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type SpeedUnit = "km/h" | "mph" | "m/s" | "knots" | "ft/s";
 
@@ -101,6 +102,7 @@ export default function SpeedUnitConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="speed-unit-converter" category="日常ツール" />
       <RelatedTools currentSlug="speed-unit-converter" category="日常ツール" />
     </div>
   );

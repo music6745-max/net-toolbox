@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToRgb(hex: string): [number, number, number] | null {
@@ -138,6 +139,9 @@ export default function Page() {
           <p>結果のHEXやRGB値はコピーボタンでクリップボードにコピーできます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="color-mix" category="デザイン" />
+
 
       <RelatedTools currentSlug="color-mix" category="デザイン" />
     </div>

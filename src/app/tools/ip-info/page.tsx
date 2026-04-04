@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface InfoItem {
   label: string;
@@ -118,6 +119,7 @@ export default function IpInfoPage() {
       </section>
 
 
+      <AffiliateSection slug="ip-info" category="開発ツール" />
       <RelatedTools currentSlug="ip-info" category="開発ツール" />
     </div>
   );

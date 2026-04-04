@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const hiraganaMap: Record<string, string> = {
@@ -177,6 +178,9 @@ export default function Page() {
           <p>パスポートや公的書類でのローマ字表記確認にご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="romaji-converter" category="テキスト" />
+
 
       <RelatedTools currentSlug="romaji-converter" category="テキスト" />
     </div>

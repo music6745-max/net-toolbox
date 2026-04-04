@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function CssFlexboxPage() {
   const [direction, setDirection] = useState("row");
@@ -144,6 +145,7 @@ export default function CssFlexboxPage() {
       </section>
 
 
+      <AffiliateSection slug="css-flexbox" category="デザイン" />
       <RelatedTools currentSlug="css-flexbox" category="デザイン" />
     </div>
   );

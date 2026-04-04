@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 type Matrix = number[][];
@@ -254,6 +255,9 @@ export default function Page() {
           <p>行列式・転置・逆行列は単一の行列に対して計算されます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="matrix-calculator" category="日常ツール" />
+
 
       <RelatedTools currentSlug="matrix-calculator" category="日常ツール" />
     </div>

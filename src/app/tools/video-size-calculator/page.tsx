@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes.toFixed(0)} B`;
@@ -156,6 +157,7 @@ export default function VideoSizeCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="video-size-calculator" category="画像・メディア" />
       <RelatedTools currentSlug="video-size-calculator" category="画像・メディア" />
     </div>
   );

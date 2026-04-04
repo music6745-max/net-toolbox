@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Phase = "work" | "break";
 
@@ -195,6 +196,7 @@ export default function PomodoroTimerPage() {
       </section>
 
 
+      <AffiliateSection slug="pomodoro-timer" category="日常ツール" />
       <RelatedTools currentSlug="pomodoro-timer" category="日常ツール" />
     </div>
   );

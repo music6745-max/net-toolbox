@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function base64UrlEncode(str: string): string {
@@ -243,6 +244,9 @@ export default function Page() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="jwt-generator" category="セキュリティ" />
+
 
       <RelatedTools currentSlug="jwt-generator" category="セキュリティ" />
     </div>

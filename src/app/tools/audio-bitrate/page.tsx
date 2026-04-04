@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PRESETS = [
   { label: "MP3 128kbps", bitrate: 128 },
@@ -120,6 +121,7 @@ export default function AudioBitratePage() {
       </section>
 
 
+      <AffiliateSection slug="audio-bitrate" category="画像・メディア" />
       <RelatedTools currentSlug="audio-bitrate" category="画像・メディア" />
     </div>
   );

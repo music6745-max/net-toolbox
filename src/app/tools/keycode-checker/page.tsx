@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface KeyInfo {
   key: string;
@@ -144,6 +145,7 @@ export default function KeycodeCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="keycode-checker" category="開発ツール" />
       <RelatedTools currentSlug="keycode-checker" category="開発ツール" />
     </div>
   );

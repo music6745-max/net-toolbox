@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 type Op = "AND" | "OR" | "XOR" | "NOT" | "ADD" | "SUB";
@@ -142,6 +143,9 @@ export default function Page() {
           <p>結果は2進数、10進数、16進数の3形式で表示されます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="binary-calculator" category="開発ツール" />
+
 
       <RelatedTools currentSlug="binary-calculator" category="開発ツール" />
     </div>

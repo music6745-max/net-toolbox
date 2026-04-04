@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -115,6 +116,9 @@ export default function Page() {
           <p>生成されたCSSコードをコピーしてご利用ください。リセットボタンで初期値に戻せます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="css-filter-generator" category="デザイン" />
+
 
       <RelatedTools currentSlug="css-filter-generator" category="デザイン" />
     </div>

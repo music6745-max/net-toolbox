@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const RATIOS = [
   {
@@ -154,6 +155,7 @@ export default function AspectRatioListPage() {
       </section>
 
 
+      <AffiliateSection slug="aspect-ratio-list" category="デザイン" />
       <RelatedTools currentSlug="aspect-ratio-list" category="デザイン" />
     </div>
   );

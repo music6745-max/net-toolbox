@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function hexToHsl(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -165,6 +166,7 @@ export default function ColorPalettePage() {
       </section>
 
 
+      <AffiliateSection slug="color-palette" category="デザイン" />
       <RelatedTools currentSlug="color-palette" category="デザイン" />
     </div>
   );

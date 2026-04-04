@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function generateMetaTags(
   title: string,
@@ -213,6 +214,7 @@ export default function MetaTagGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="meta-tag-generator" category="開発ツール" />
       <RelatedTools currentSlug="meta-tag-generator" category="開発ツール" />
     </div>
   );

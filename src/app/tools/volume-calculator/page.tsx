@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Shape = "cuboid" | "sphere" | "cylinder" | "cone";
 
@@ -149,6 +150,7 @@ export default function VolumeCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="volume-calculator" category="日常ツール" />
       <RelatedTools currentSlug="volume-calculator" category="日常ツール" />
     </div>
   );

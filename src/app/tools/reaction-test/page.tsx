@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Phase = "idle" | "waiting" | "ready" | "clicked" | "toosoon";
 
@@ -184,6 +185,7 @@ export default function ReactionTestPage() {
       </section>
 
 
+      <AffiliateSection slug="reaction-test" category="日常ツール" />
       <RelatedTools currentSlug="reaction-test" category="日常ツール" />
     </div>
   );

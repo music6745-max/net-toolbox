@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const STORAGE_KEY = "toolbox_notepad_content";
 const SAVE_DELAY = 800;
@@ -139,6 +140,7 @@ export default function NotepadPage() {
       </section>
 
 
+      <AffiliateSection slug="notepad" category="日常ツール" />
       <RelatedTools currentSlug="notepad" category="日常ツール" />
     </div>
   );

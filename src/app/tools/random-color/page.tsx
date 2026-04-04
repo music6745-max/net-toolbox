@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function randomHex(): string {
   return (
@@ -159,6 +160,7 @@ export default function RandomColorPage() {
       </section>
 
 
+      <AffiliateSection slug="random-color" category="デザイン" />
       <RelatedTools currentSlug="random-color" category="デザイン" />
     </div>
   );

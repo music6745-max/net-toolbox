@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function PasswordGeneratorPage() {
   const [length, setLength] = useState(16);
@@ -151,6 +152,7 @@ export default function PasswordGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="password-generator" category="セキュリティ" />
       <RelatedTools currentSlug="password-generator" category="セキュリティ" />
     </div>
   );

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type AngleUnit = "deg" | "rad" | "grad" | "turn";
 
@@ -95,6 +96,7 @@ export default function AngleConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="angle-converter" category="日常ツール" />
       <RelatedTools currentSlug="angle-converter" category="日常ツール" />
     </div>
   );

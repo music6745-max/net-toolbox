@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -142,6 +143,9 @@ export default function Page() {
           <p>放物線の頂点座標も合わせて表示します。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="quadratic-equation" category="日常ツール" />
+
 
       <RelatedTools currentSlug="quadratic-equation" category="日常ツール" />
     </div>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Sign = {
   name: string;
@@ -143,6 +144,7 @@ export default function HoroscopeCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="horoscope-calculator" category="日常ツール" />
       <RelatedTools currentSlug="horoscope-calculator" category="日常ツール" />
     </div>
   );

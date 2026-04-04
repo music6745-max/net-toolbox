@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface ParsedUrl {
   protocol: string;
@@ -153,6 +154,7 @@ export default function UrlParserPage() {
       </section>
 
 
+      <AffiliateSection slug="url-parser" category="開発ツール" />
       <RelatedTools currentSlug="url-parser" category="開発ツール" />
     </div>
   );

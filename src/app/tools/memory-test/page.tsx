@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Phase = "idle" | "showing" | "input" | "correct" | "wrong" | "finished";
 
@@ -187,6 +188,7 @@ export default function MemoryTestPage() {
       </section>
 
 
+      <AffiliateSection slug="memory-test" category="日常ツール" />
       <RelatedTools currentSlug="memory-test" category="日常ツール" />
     </div>
   );

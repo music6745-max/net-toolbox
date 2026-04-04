@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const STOP_WORDS = new Set([
   "a", "an", "the", "and", "or", "but", "in", "on", "at", "to", "for",
@@ -154,6 +155,7 @@ export default function WordCounterEnPage() {
       </section>
 
 
+      <AffiliateSection slug="word-counter-en" category="テキスト" />
       <RelatedTools currentSlug="word-counter-en" category="テキスト" />
     </div>
   );

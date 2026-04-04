@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function VerticalTextPage() {
   const [input, setInput] = useState("");
@@ -121,6 +122,7 @@ export default function VerticalTextPage() {
       </section>
 
 
+      <AffiliateSection slug="vertical-text" category="テキスト" />
       <RelatedTools currentSlug="vertical-text" category="テキスト" />
     </div>
   );

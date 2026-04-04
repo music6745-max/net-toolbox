@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type FormulaResult = {
   name: string;
@@ -166,6 +167,7 @@ export default function IdealWeightPage() {
       </section>
 
 
+      <AffiliateSection slug="ideal-weight" category="日常ツール" />
       <RelatedTools currentSlug="ideal-weight" category="日常ツール" />
     </div>
   );

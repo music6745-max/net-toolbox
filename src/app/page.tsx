@@ -2,6 +2,7 @@ import Link from "next/link";
 import { tools, siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
 import { FAQJsonLd } from "@/components/JsonLd";
+import { ToolSearch } from "@/components/ToolSearch";
 
 const faqItems = [
   {
@@ -41,6 +42,8 @@ export default function Home() {
           全{tools.length}ツール ・ 登録不要 ・ 完全無料
         </p>
       </section>
+
+      <ToolSearch />
 
       {/* Category navigation */}
       <nav className="flex flex-wrap justify-center gap-2 mb-10">

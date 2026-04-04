@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface Device {
@@ -149,6 +150,9 @@ export default function Page() {
           <p>複数の家電を追加して、電気代を比較・合計できます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="electricity-rate" category="日常ツール" />
+
 
       <RelatedTools currentSlug="electricity-rate" category="日常ツール" />
     </div>

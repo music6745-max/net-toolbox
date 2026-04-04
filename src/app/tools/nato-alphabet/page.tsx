@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const natoMap: Record<string, string> = {
@@ -113,6 +114,9 @@ export default function Page() {
           <p>数字にも対応しています（0=Zero, 1=One...）。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="nato-alphabet" category="テキスト" />
+
 
       <RelatedTools currentSlug="nato-alphabet" category="テキスト" />
     </div>

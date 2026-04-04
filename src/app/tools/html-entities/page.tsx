@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface Entity {
@@ -161,6 +162,9 @@ export default function Page() {
           <p>HTMLで特殊文字を表示する際に、対応するエンティティコードを使用してください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="html-entities" category="開発ツール" />
+
 
       <RelatedTools currentSlug="html-entities" category="開発ツール" />
     </div>

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -24,6 +25,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>A判・B判・はがき等の用紙サイズをmm/inch/pxで一覧表示。印刷に便利。</p></div></section>
+      <AffiliateSection slug="paper-size" category="日常ツール" />
+
       <RelatedTools currentSlug="paper-size" category="日常ツール" />
     </div>
   );

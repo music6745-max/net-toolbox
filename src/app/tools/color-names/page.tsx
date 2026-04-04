@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const CSS_COLORS: { name: string; hex: string; ja: string }[] = [
   { name: "red", hex: "#FF0000", ja: "赤" },
@@ -238,6 +239,7 @@ export default function ColorNamesPage() {
       </section>
 
 
+      <AffiliateSection slug="color-names" category="デザイン" />
       <RelatedTools currentSlug="color-names" category="デザイン" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type OutputFormat = "image/png" | "image/jpeg" | "image/webp";
 
@@ -312,6 +313,7 @@ export default function ImageResizePage() {
       </section>
 
 
+      <AffiliateSection slug="image-resize" category="画像・メディア" />
       <RelatedTools currentSlug="image-resize" category="画像・メディア" />
     </div>
   );

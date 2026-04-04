@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -31,6 +32,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>収縮期・拡張期の血圧値から血圧レベルを判定。WHO基準に基づく分類。</p></div></section>
+      <AffiliateSection slug="blood-pressure" category="日常ツール" />
+
       <RelatedTools currentSlug="blood-pressure" category="日常ツール" />
     </div>
   );

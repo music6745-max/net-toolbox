@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface SizeInfo {
   screenWidth: number;
@@ -129,6 +130,7 @@ export default function ScreenSizePage() {
       </section>
 
 
+      <AffiliateSection slug="screen-size" category="開発ツール" />
       <RelatedTools currentSlug="screen-size" category="開発ツール" />
     </div>
   );

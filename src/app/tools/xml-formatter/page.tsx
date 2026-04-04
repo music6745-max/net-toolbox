@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function formatXML(xml: string, indentSize: number): string {
   const indentStr = " ".repeat(indentSize);
@@ -166,6 +167,7 @@ export default function XmlFormatterPage() {
       </section>
 
 
+      <AffiliateSection slug="xml-formatter" category="開発ツール" />
       <RelatedTools currentSlug="xml-formatter" category="開発ツール" />
     </div>
   );

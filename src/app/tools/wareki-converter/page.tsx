@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Era = {
   name: string;
@@ -273,6 +274,7 @@ export default function WarekiConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="wareki-converter" category="日常ツール" />
       <RelatedTools currentSlug="wareki-converter" category="日常ツール" />
     </div>
   );

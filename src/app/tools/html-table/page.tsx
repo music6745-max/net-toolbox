@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const MAX_ROWS = 20;
 const MAX_COLS = 10;
@@ -227,6 +228,7 @@ export default function HtmlTablePage() {
       </section>
 
 
+      <AffiliateSection slug="html-table" category="開発ツール" />
       <RelatedTools currentSlug="html-table" category="開発ツール" />
     </div>
   );

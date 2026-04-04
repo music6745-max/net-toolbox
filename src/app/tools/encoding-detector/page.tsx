@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 // Common mojibake patterns and their fixes (Shift-JIS read as Latin-1 → UTF-8)
 const MOJIBAKE_MAP: [RegExp, string][] = [
@@ -127,6 +128,7 @@ export default function EncodingDetectorPage() {
       </section>
 
 
+      <AffiliateSection slug="encoding-detector" category="テキスト" />
       <RelatedTools currentSlug="encoding-detector" category="テキスト" />
     </div>
   );

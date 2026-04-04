@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DIGITS_NORMAL = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
 const DIGITS_DAIJI = ["", "壱", "弐", "参", "四", "伍", "六", "七", "八", "九"];
@@ -221,6 +222,7 @@ export default function NumberToKanjiPage() {
       </section>
 
 
+      <AffiliateSection slug="number-to-kanji" category="日常ツール" />
       <RelatedTools currentSlug="number-to-kanji" category="日常ツール" />
     </div>
   );

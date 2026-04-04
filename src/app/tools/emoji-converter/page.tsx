@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const EMOTICON_TO_EMOJI: [string, string][] = [
   [":)", "😊"], [":-)", "😊"], [":D", "😄"], [":-D", "😄"],
@@ -116,6 +117,7 @@ export default function EmojiConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="emoji-converter" category="テキスト" />
       <RelatedTools currentSlug="emoji-converter" category="テキスト" />
     </div>
   );

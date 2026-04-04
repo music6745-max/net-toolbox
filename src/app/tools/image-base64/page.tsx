@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -166,6 +167,7 @@ export default function ImageBase64Page() {
       </section>
 
 
+      <AffiliateSection slug="image-base64" category="画像・メディア" />
       <RelatedTools currentSlug="image-base64" category="画像・メディア" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function UrlEncodePage() {
   const [input, setInput] = useState("");
@@ -92,6 +93,7 @@ export default function UrlEncodePage() {
       </section>
 
 
+      <AffiliateSection slug="url-encode" category="開発ツール" />
       <RelatedTools currentSlug="url-encode" category="開発ツール" />
     </div>
   );

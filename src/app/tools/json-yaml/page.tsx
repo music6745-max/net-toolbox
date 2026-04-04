@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function jsonToYaml(obj: unknown, indent = 0): string {
   const pad = "  ".repeat(indent);
@@ -320,6 +321,7 @@ export default function JsonYamlPage() {
       </section>
 
 
+      <AffiliateSection slug="json-yaml" category="開発ツール" />
       <RelatedTools currentSlug="json-yaml" category="開発ツール" />
     </div>
   );

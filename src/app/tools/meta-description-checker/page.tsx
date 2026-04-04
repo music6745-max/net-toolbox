@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const MIN = 120;
 const MAX = 160;
@@ -100,6 +101,7 @@ export default function MetaDescriptionCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="meta-description-checker" category="開発ツール" />
       <RelatedTools currentSlug="meta-description-checker" category="開発ツール" />
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface CheatItem {
@@ -176,6 +177,9 @@ export default function Page() {
           <p>各構文の「コピー」ボタンでクリップボードにコピーして、すぐに使用できます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="markdown-cheatsheet" category="開発ツール" />
+
 
       <RelatedTools currentSlug="markdown-cheatsheet" category="開発ツール" />
     </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function TwitterPreviewPage() {
   const [cardType, setCardType] = useState<"summary" | "summary_large_image">("summary_large_image");
@@ -186,6 +187,7 @@ ${site ? `<meta name="twitter:site" content="${site}" />` : ""}`}
       </section>
 
 
+      <AffiliateSection slug="twitter-preview" category="開発ツール" />
       <RelatedTools currentSlug="twitter-preview" category="開発ツール" />
     </div>
   );

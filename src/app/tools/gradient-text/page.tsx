@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PRESETS = [
   { label: "サンセット", from: "#f97316", to: "#ec4899" },
@@ -126,6 +127,7 @@ export default function GradientTextPage() {
       </section>
 
 
+      <AffiliateSection slug="gradient-text" category="デザイン" />
       <RelatedTools currentSlug="gradient-text" category="デザイン" />
     </div>
   );

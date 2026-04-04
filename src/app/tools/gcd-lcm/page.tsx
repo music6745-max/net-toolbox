@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function gcd(a: number, b: number): number {
   a = Math.abs(a);
@@ -158,6 +159,7 @@ export default function GcdLcmPage() {
       </section>
 
 
+      <AffiliateSection slug="gcd-lcm" category="日常ツール" />
       <RelatedTools currentSlug="gcd-lcm" category="日常ツール" />
     </div>
   );

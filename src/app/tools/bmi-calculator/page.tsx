@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type BmiCategory = {
   label: string;
@@ -205,6 +206,7 @@ export default function BmiCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="bmi-calculator" category="日常ツール" />
       <RelatedTools currentSlug="bmi-calculator" category="日常ツール" />
     </div>
   );

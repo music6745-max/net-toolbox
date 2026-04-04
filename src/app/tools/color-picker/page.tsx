@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function hslToRgb(h: number, s: number, l: number): [number, number, number] {
   s /= 100;
@@ -223,6 +224,7 @@ export default function ColorPickerPage() {
       </section>
 
 
+      <AffiliateSection slug="color-picker" category="デザイン" />
       <RelatedTools currentSlug="color-picker" category="デザイン" />
     </div>
   );

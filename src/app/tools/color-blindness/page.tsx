@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -117,6 +118,7 @@ export default function ColorBlindnessPage() {
       </section>
 
 
+      <AffiliateSection slug="color-blindness" category="デザイン" />
       <RelatedTools currentSlug="color-blindness" category="デザイン" />
     </div>
   );

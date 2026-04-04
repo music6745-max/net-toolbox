@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function SavingsCalculatorPage() {
   const [monthly, setMonthly] = useState("");
@@ -171,6 +172,7 @@ export default function SavingsCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="savings-calculator" category="日常ツール" />
       <RelatedTools currentSlug="savings-calculator" category="日常ツール" />
     </div>
   );

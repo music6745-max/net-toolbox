@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToHsl(hex: string): [number, number, number] {
@@ -147,6 +148,9 @@ export default function Page() {
           <p>5つの配色パターンが自動生成されます。色をクリックするとHEXコードをコピーできます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="color-wheel" category="デザイン" />
+
 
       <RelatedTools currentSlug="color-wheel" category="デザイン" />
     </div>

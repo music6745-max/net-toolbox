@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -209,6 +210,7 @@ export default function ContrastCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="contrast-checker" category="デザイン" />
       <RelatedTools currentSlug="contrast-checker" category="デザイン" />
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const VALS: [number, string][] = [[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]];
@@ -37,6 +38,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>数字を入力するとリアルタイムで変換されます。1〜3999の範囲に対応しています。</p></div></section>
+      <AffiliateSection slug="roman-numeral" category="日常ツール" />
+
       <RelatedTools currentSlug="roman-numeral" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function ReadmeGeneratorPage() {
   const [projectName, setProjectName] = useState("");
@@ -219,6 +220,7 @@ export default function ReadmeGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="readme-generator" category="開発ツール" />
       <RelatedTools currentSlug="readme-generator" category="開発ツール" />
     </div>
   );

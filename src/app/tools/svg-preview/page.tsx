@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const defaultSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
@@ -90,6 +91,9 @@ export default function Page() {
           <p>幅、高さ、viewBoxなどのサイズ情報も自動で検出・表示します。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="svg-preview" category="デザイン" />
+
 
       <RelatedTools currentSlug="svg-preview" category="デザイン" />
     </div>

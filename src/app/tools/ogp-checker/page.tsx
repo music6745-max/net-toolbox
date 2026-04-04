@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface OgpTag {
@@ -200,6 +201,9 @@ export default function Page() {
           <p>必須タグの設定状況もチェックできます。サンプルコードをコピーしてご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="ogp-checker" category="開発ツール" />
+
 
       <RelatedTools currentSlug="ogp-checker" category="開発ツール" />
     </div>

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Stats = {
   total: number;
@@ -150,6 +151,7 @@ export default function WordCounterJPPage() {
       </section>
 
 
+      <AffiliateSection slug="word-counter-jp" category="テキスト" />
       <RelatedTools currentSlug="word-counter-jp" category="テキスト" />
     </div>
   );

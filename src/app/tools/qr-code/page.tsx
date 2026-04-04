@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import QRCode from "qrcode";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function QRCodePage() {
   const [text, setText] = useState("");
@@ -104,6 +105,7 @@ export default function QRCodePage() {
       </section>
 
 
+      <AffiliateSection slug="qr-code" category="画像・メディア" />
       <RelatedTools currentSlug="qr-code" category="画像・メディア" />
     </div>
   );

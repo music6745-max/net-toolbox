@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToRgb(hex: string): [number, number, number] | null {
@@ -94,6 +95,9 @@ export default function Page() {
           <p>rgba形式と8桁HEX形式の値がリアルタイムで生成されます。コピーボタンで取得できます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="color-opacity" category="デザイン" />
+
 
       <RelatedTools currentSlug="color-opacity" category="デザイン" />
     </div>

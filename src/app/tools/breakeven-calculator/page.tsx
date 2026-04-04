@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function BreakevenCalculatorPage() {
   const [fixedCost, setFixedCost] = useState("");
@@ -174,6 +175,7 @@ export default function BreakevenCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="breakeven-calculator" category="日常ツール" />
       <RelatedTools currentSlug="breakeven-calculator" category="日常ツール" />
     </div>
   );

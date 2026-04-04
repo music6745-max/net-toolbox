@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function htmlToMarkdown(html: string): string {
@@ -150,6 +151,9 @@ export default function Page() {
           <p>見出し、太字、斜体、リンク、リスト、コードブロック、引用、画像に対応しています。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="html-to-markdown" category="開発ツール" />
+
 
       <RelatedTools currentSlug="html-to-markdown" category="開発ツール" />
     </div>

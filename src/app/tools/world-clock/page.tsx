@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type CityInfo = {
   name: string;
@@ -142,6 +143,7 @@ export default function WorldClockPage() {
       </section>
 
 
+      <AffiliateSection slug="world-clock" category="日常ツール" />
       <RelatedTools currentSlug="world-clock" category="日常ツール" />
     </div>
   );

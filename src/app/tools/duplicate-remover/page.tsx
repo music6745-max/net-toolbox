@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function DuplicateRemoverPage() {
   const [input, setInput] = useState("");
@@ -161,6 +162,7 @@ export default function DuplicateRemoverPage() {
       </section>
 
 
+      <AffiliateSection slug="duplicate-remover" category="テキスト" />
       <RelatedTools currentSlug="duplicate-remover" category="テキスト" />
     </div>
   );

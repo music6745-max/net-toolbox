@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type TaxRate = 10 | 8;
 
@@ -183,6 +184,7 @@ export default function TaxCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="tax-calculator" category="日常ツール" />
       <RelatedTools currentSlug="tax-calculator" category="日常ツール" />
     </div>
   );

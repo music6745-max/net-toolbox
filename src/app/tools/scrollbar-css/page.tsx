@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -114,6 +115,9 @@ export default function Page() {
           <p>WebKit系ブラウザとFirefox対応のCSSコードを生成します。コピーしてお使いください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="scrollbar-css" category="デザイン" />
+
 
       <RelatedTools currentSlug="scrollbar-css" category="デザイン" />
     </div>

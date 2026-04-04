@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function HtmlStripPage() {
   const [input, setInput] = useState("");
@@ -110,6 +111,7 @@ export default function HtmlStripPage() {
       </section>
 
 
+      <AffiliateSection slug="html-strip" category="テキスト" />
       <RelatedTools currentSlug="html-strip" category="テキスト" />
     </div>
   );

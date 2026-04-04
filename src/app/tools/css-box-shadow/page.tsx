@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface Shadow {
   x: number;
@@ -215,6 +216,7 @@ export default function CssBoxShadowPage() {
       </section>
 
 
+      <AffiliateSection slug="css-box-shadow" category="デザイン" />
       <RelatedTools currentSlug="css-box-shadow" category="デザイン" />
     </div>
   );

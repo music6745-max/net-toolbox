@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type InputFormat = "decimal" | "binary" | "hex" | "integer";
 
@@ -227,6 +228,7 @@ export default function IpConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="ip-converter" category="開発ツール" />
       <RelatedTools currentSlug="ip-converter" category="開発ツール" />
     </div>
   );

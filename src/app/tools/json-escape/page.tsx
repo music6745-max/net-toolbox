@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function escapeJson(str: string): string {
@@ -101,6 +102,9 @@ export default function Page() {
           <p>JSONデータの生成・解析時にご活用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="json-escape" category="開発ツール" />
+
 
       <RelatedTools currentSlug="json-escape" category="開発ツール" />
     </div>

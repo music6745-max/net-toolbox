@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function parseCSV(text: string): string[][] {
   const lines = text.split(/\r?\n/);
@@ -200,6 +201,7 @@ export default function CsvViewerPage() {
       </section>
 
 
+      <AffiliateSection slug="csv-viewer" category="開発ツール" />
       <RelatedTools currentSlug="csv-viewer" category="開発ツール" />
     </div>
   );

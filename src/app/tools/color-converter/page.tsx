@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const match = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -217,6 +218,7 @@ export default function ColorConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="color-converter" category="デザイン" />
       <RelatedTools currentSlug="color-converter" category="デザイン" />
     </div>
   );

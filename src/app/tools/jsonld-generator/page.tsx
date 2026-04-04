@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type SchemaType = "Article" | "Product" | "FAQ" | "Breadcrumb";
 
@@ -329,6 +330,7 @@ export default function JsonLdGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="jsonld-generator" category="開発ツール" />
       <RelatedTools currentSlug="jsonld-generator" category="開発ツール" />
     </div>
   );

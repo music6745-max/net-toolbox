@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -35,6 +36,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>px値を入力すると、pt・em・rem・%に自動変換されます。基準サイズを変更すると、em/rem/%の値も連動します。</p></div></section>
+      <AffiliateSection slug="font-size-converter" category="デザイン" />
+
       <RelatedTools currentSlug="font-size-converter" category="デザイン" />
     </div>
   );

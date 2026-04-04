@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function LogarithmPage() {
   const [number, setNumber] = useState("");
@@ -137,6 +138,7 @@ export default function LogarithmPage() {
       </section>
 
 
+      <AffiliateSection slug="logarithm" category="日常ツール" />
       <RelatedTools currentSlug="logarithm" category="日常ツール" />
     </div>
   );

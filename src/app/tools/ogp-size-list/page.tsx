@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface SizeEntry {
   name: string;
@@ -150,6 +151,7 @@ export default function OgpSizeListPage() {
       </section>
 
 
+      <AffiliateSection slug="ogp-size-list" category="デザイン" />
       <RelatedTools currentSlug="ogp-size-list" category="デザイン" />
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -33,6 +34,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>借入額・年利・返済期間を入力すると、元利均等返済方式での月々の返済額を計算します。</p></div></section>
+      <AffiliateSection slug="loan-calculator" category="日常ツール" />
+
       <RelatedTools currentSlug="loan-calculator" category="日常ツール" />
     </div>
   );

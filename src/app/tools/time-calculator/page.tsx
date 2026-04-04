@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type TimeEntry = { h: string; m: string; s: string; op: "+" | "-" };
 
@@ -139,6 +140,7 @@ export default function TimeCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="time-calculator" category="日常ツール" />
       <RelatedTools currentSlug="time-calculator" category="日常ツール" />
     </div>
   );

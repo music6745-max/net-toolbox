@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface LSEntry {
   key: string;
@@ -182,6 +183,7 @@ export default function LocalStorageViewerPage() {
       </section>
 
 
+      <AffiliateSection slug="localstorage-viewer" category="開発ツール" />
       <RelatedTools currentSlug="localstorage-viewer" category="開発ツール" />
     </div>
   );

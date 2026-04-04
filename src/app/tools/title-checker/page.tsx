@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const RECOMMENDED_MAX = 60;
 const PIXEL_LIMIT = 580; // approximate px limit Google uses
@@ -102,6 +103,7 @@ export default function TitleCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="title-checker" category="開発ツール" />
       <RelatedTools currentSlug="title-checker" category="開発ツール" />
     </div>
   );

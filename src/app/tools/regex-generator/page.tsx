@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Pattern = {
   name: string;
@@ -299,6 +300,7 @@ export default function RegexGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="regex-generator" category="開発ツール" />
       <RelatedTools currentSlug="regex-generator" category="開発ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function ProfitCalculatorPage() {
   const [revenue, setRevenue] = useState("");
@@ -163,6 +164,7 @@ export default function ProfitCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="profit-calculator" category="日常ツール" />
       <RelatedTools currentSlug="profit-calculator" category="日常ツール" />
     </div>
   );

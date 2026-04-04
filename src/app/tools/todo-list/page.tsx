@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const STORAGE_KEY = "toolbox_todo_items";
 
@@ -209,6 +210,7 @@ export default function TodoListPage() {
       </section>
 
 
+      <AffiliateSection slug="todo-list" category="日常ツール" />
       <RelatedTools currentSlug="todo-list" category="日常ツール" />
     </div>
   );

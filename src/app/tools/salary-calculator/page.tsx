@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function calcTakeHome(annualSalary: number): {
   incomeTax: number;
@@ -181,6 +182,7 @@ export default function SalaryCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="salary-calculator" category="日常ツール" />
       <RelatedTools currentSlug="salary-calculator" category="日常ツール" />
     </div>
   );

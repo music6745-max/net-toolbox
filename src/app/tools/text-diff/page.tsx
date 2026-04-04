@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function computeDiff(a: string, b: string) {
   const linesA = a.split("\n");
@@ -98,6 +99,7 @@ export default function TextDiffPage() {
       </section>
 
 
+      <AffiliateSection slug="text-diff" category="テキスト" />
       <RelatedTools currentSlug="text-diff" category="テキスト" />
     </div>
   );

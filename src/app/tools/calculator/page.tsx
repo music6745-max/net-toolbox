@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type CalcState = {
   display: string;
@@ -305,6 +306,7 @@ export default function CalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="calculator" category="日常ツール" />
       <RelatedTools currentSlug="calculator" category="日常ツール" />
     </div>
   );

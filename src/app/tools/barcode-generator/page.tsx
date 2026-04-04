@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 // Code 128B encoding table
 const CODE128B_START = 104;
@@ -223,6 +224,7 @@ export default function BarcodeGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="barcode-generator" category="画像・メディア" />
       <RelatedTools currentSlug="barcode-generator" category="画像・メディア" />
     </div>
   );

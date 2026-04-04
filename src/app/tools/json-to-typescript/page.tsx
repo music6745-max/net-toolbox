@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function inferType(value: unknown, name: string, interfaces: Map<string, string>): string {
@@ -102,6 +103,9 @@ export default function Page() {
           <p>ネストされたオブジェクトや配列にも対応しています。生成されたコードをコピーしてご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="json-to-typescript" category="開発ツール" />
+
 
       <RelatedTools currentSlug="json-to-typescript" category="開発ツール" />
     </div>

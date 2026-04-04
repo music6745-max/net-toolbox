@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const FONTS = [
   { name: "serif", label: "Serif（明朝体系）" },
@@ -154,6 +155,7 @@ export default function FontPreviewPage() {
       </section>
 
 
+      <AffiliateSection slug="font-preview" category="デザイン" />
       <RelatedTools currentSlug="font-preview" category="デザイン" />
     </div>
   );

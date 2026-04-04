@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type CaseType = "upper" | "lower" | "title" | "camel" | "snake" | "kebab";
 
@@ -126,6 +127,7 @@ export default function CaseConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="case-converter" category="テキスト" />
       <RelatedTools currentSlug="case-converter" category="テキスト" />
     </div>
   );

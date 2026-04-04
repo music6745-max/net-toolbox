@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Direction = "tab-to-space" | "space-to-tab";
 
@@ -131,6 +132,7 @@ export default function IndentConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="indent-converter" category="テキスト" />
       <RelatedTools currentSlug="indent-converter" category="テキスト" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const ACTIVITY_LEVELS = [
   {
@@ -220,6 +221,7 @@ export default function WaterIntakePage() {
       </section>
 
 
+      <AffiliateSection slug="water-intake" category="日常ツール" />
       <RelatedTools currentSlug="water-intake" category="日常ツール" />
     </div>
   );

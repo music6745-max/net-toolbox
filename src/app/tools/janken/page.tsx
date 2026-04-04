@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Hand = "gu" | "choki" | "pa";
 
@@ -177,6 +178,7 @@ export default function JankenPage() {
       </section>
 
 
+      <AffiliateSection slug="janken" category="日常ツール" />
       <RelatedTools currentSlug="janken" category="日常ツール" />
     </div>
   );

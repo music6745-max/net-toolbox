@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToRgb(hex: string) {
@@ -145,6 +146,9 @@ export default function Page() {
           <p>生成されたCSSコードをコピーしてご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="neumorphism" category="デザイン" />
+
 
       <RelatedTools currentSlug="neumorphism" category="デザイン" />
     </div>

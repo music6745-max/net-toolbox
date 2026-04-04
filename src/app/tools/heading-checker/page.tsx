@@ -2,6 +2,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface Heading {
   level: number;
@@ -132,6 +133,7 @@ export default function HeadingCheckerPage() {
       </section>
 
 
+      <AffiliateSection slug="heading-checker" category="開発ツール" />
       <RelatedTools currentSlug="heading-checker" category="開発ツール" />
     </div>
   );

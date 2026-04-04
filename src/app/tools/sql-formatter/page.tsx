@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function formatSQL(sql: string, indent: number): string {
   const indentStr = " ".repeat(indent);
@@ -149,6 +150,7 @@ export default function SqlFormatterPage() {
       </section>
 
 
+      <AffiliateSection slug="sql-formatter" category="開発ツール" />
       <RelatedTools currentSlug="sql-formatter" category="開発ツール" />
     </div>
   );

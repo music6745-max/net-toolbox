@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const COMMON_PATTERNS = [
   "password", "123456", "qwerty", "abc123", "letmein", "monkey", "dragon",
@@ -135,6 +136,7 @@ export default function PasswordStrengthPage() {
       </section>
 
 
+      <AffiliateSection slug="password-strength" category="セキュリティ" />
       <RelatedTools currentSlug="password-strength" category="セキュリティ" />
     </div>
   );

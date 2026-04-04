@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const STATUS_CODES = [
   // 1xx
@@ -165,6 +166,7 @@ export default function HttpStatusCodesPage() {
       </section>
 
 
+      <AffiliateSection slug="http-status-codes" category="開発ツール" />
       <RelatedTools currentSlug="http-status-codes" category="開発ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const VIEWPORTS = [
   { label: "モバイル", width: 375, icon: "📱" },
@@ -125,6 +126,7 @@ export default function ResponsiveTesterPage() {
       </section>
 
 
+      <AffiliateSection slug="responsive-tester" category="開発ツール" />
       <RelatedTools currentSlug="responsive-tester" category="開発ツール" />
     </div>
   );

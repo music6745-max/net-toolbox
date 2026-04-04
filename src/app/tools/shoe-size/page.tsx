@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const MENS = [
@@ -42,6 +43,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>メンズ・レディースを切り替えて、各国の靴サイズを比較できます。</p></div></section>
+      <AffiliateSection slug="shoe-size" category="日常ツール" />
+
       <RelatedTools currentSlug="shoe-size" category="日常ツール" />
     </div>
   );

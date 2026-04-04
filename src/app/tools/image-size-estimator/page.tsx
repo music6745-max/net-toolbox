@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const FORMAT_PRESETS = [
   { label: "JPEG (高品質)", depth: 24, ratio: 0.1 },
@@ -102,6 +103,7 @@ export default function ImageSizeEstimatorPage() {
       </section>
 
 
+      <AffiliateSection slug="image-size-estimator" category="画像・メディア" />
       <RelatedTools currentSlug="image-size-estimator" category="画像・メディア" />
     </div>
   );

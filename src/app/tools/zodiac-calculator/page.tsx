@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const ZODIAC = [
   { name: "子", reading: "ね", animal: "ネズミ", en: "Rat" },
@@ -92,6 +93,7 @@ export default function ZodiacCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="zodiac-calculator" category="日常ツール" />
       <RelatedTools currentSlug="zodiac-calculator" category="日常ツール" />
     </div>
   );

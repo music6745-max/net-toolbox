@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function UuidGeneratorPage() {
   const [count, setCount] = useState(1);
@@ -124,6 +125,7 @@ export default function UuidGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="uuid-generator" category="開発ツール" />
       <RelatedTools currentSlug="uuid-generator" category="開発ツール" />
     </div>
   );

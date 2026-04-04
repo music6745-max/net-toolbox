@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const SAMPLE_TEXTS = [
   "日本語のタイピング練習をしましょう。毎日少しずつ練習することで速度が上がります。正確さも大切にしながら、リズムよく入力することが上達の近道です。",
@@ -225,6 +226,7 @@ export default function TypingTestPage() {
       </section>
 
 
+      <AffiliateSection slug="typing-test" category="日常ツール" />
       <RelatedTools currentSlug="typing-test" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface UnicodeChar {
   char: string;
@@ -191,6 +192,7 @@ export default function UnicodeSearchPage() {
       </section>
 
 
+      <AffiliateSection slug="unicode-search" category="開発ツール" />
       <RelatedTools currentSlug="unicode-search" category="開発ツール" />
     </div>
   );

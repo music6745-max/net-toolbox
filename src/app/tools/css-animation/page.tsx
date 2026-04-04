@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function CssAnimationPage() {
   const [duration, setDuration] = useState(1);
@@ -189,6 +190,7 @@ export default function CssAnimationPage() {
       </section>
 
 
+      <AffiliateSection slug="css-animation" category="デザイン" />
       <RelatedTools currentSlug="css-animation" category="デザイン" />
     </div>
   );

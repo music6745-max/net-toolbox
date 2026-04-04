@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function factorialBig(n: number): bigint {
   let result = BigInt(1);
@@ -188,6 +189,7 @@ export default function FactorialPage() {
       </section>
 
 
+      <AffiliateSection slug="factorial" category="日常ツール" />
       <RelatedTools currentSlug="factorial" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Mode = "a_of_b" | "x_percent_of_a" | "change";
 
@@ -276,6 +277,7 @@ export default function PercentageCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="percentage-calculator" category="日常ツール" />
       <RelatedTools currentSlug="percentage-calculator" category="日常ツール" />
     </div>
   );

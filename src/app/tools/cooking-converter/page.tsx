@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 const UNITS = [
@@ -51,6 +52,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>量と単位を入力すると、各単位での値が一覧表示されます。</p></div></section>
+      <AffiliateSection slug="cooking-converter" category="日常ツール" />
+
       <RelatedTools currentSlug="cooking-converter" category="日常ツール" />
     </div>
   );

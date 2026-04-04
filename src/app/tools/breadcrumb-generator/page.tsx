@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface BreadcrumbItem {
   name: string;
@@ -197,6 +198,7 @@ export default function BreadcrumbGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="breadcrumb-generator" category="開発ツール" />
       <RelatedTools currentSlug="breadcrumb-generator" category="開発ツール" />
     </div>
   );

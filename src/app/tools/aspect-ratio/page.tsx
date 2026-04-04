@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function gcd(a: number, b: number): number {
   return b === 0 ? a : gcd(b, a % b);
@@ -223,6 +224,7 @@ export default function AspectRatioPage() {
       </section>
 
 
+      <AffiliateSection slug="aspect-ratio" category="デザイン" />
       <RelatedTools currentSlug="aspect-ratio" category="デザイン" />
     </div>
   );

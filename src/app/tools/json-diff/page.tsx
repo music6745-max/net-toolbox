@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type DiffResult = {
   key: string;
@@ -189,6 +190,7 @@ export default function JsonDiffPage() {
       </section>
 
 
+      <AffiliateSection slug="json-diff" category="開発ツール" />
       <RelatedTools currentSlug="json-diff" category="開発ツール" />
     </div>
   );

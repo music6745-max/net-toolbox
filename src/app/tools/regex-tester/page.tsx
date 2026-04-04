@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function RegexTesterPage() {
   const [pattern, setPattern] = useState("");
@@ -70,6 +71,7 @@ export default function RegexTesterPage() {
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">正規表現テストツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>正規表現パターンとフラグを入力し、テストテキストに対するマッチ結果をリアルタイムで確認できます。</p><p>フラグには g（グローバル）、i（大文字小文字無視）、m（複数行）などが使えます。</p></div></section>
 
 
+      <AffiliateSection slug="regex-tester" category="開発ツール" />
       <RelatedTools currentSlug="regex-tester" category="開発ツール" />
     </div>
   );

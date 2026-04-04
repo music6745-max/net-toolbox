@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function minifyCss(css: string): string {
@@ -118,6 +119,9 @@ export default function Page() {
           <p>圧縮結果をコピーして本番環境のCSSファイルにご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="css-minifier" category="開発ツール" />
+
 
       <RelatedTools currentSlug="css-minifier" category="開発ツール" />
     </div>

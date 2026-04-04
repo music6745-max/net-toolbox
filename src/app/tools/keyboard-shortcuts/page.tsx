@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Shortcut = {
   win: string;
@@ -233,6 +234,7 @@ export default function KeyboardShortcutsPage() {
       </section>
 
 
+      <AffiliateSection slug="keyboard-shortcuts" category="開発ツール" />
       <RelatedTools currentSlug="keyboard-shortcuts" category="開発ツール" />
     </div>
   );

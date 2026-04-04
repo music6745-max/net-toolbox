@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -88,6 +89,9 @@ export default function Page() {
           <p>プレビューテキストを変更して確認後、CSSコードをコピーしてご利用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="text-shadow-generator" category="デザイン" />
+
 
       <RelatedTools currentSlug="text-shadow-generator" category="デザイン" />
     </div>

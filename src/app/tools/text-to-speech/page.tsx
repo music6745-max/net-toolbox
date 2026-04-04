@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function TextToSpeechPage() {
   const [text, setText] = useState("こんにちは。テキスト読み上げツールへようこそ。");
@@ -142,6 +143,7 @@ export default function TextToSpeechPage() {
       </section>
 
 
+      <AffiliateSection slug="text-to-speech" category="日常ツール" />
       <RelatedTools currentSlug="text-to-speech" category="日常ツール" />
     </div>
   );

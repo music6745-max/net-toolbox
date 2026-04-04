@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface Item {
@@ -162,6 +163,9 @@ export default function Page() {
           <p>スーパーでの買い物比較などにご活用ください。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="unit-price" category="日常ツール" />
+
 
       <RelatedTools currentSlug="unit-price" category="日常ツール" />
     </div>

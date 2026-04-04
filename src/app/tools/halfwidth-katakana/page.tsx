@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const FULL_TO_HALF: Record<string, string> = {
   ア: "ｱ", イ: "ｲ", ウ: "ｳ", エ: "ｴ", オ: "ｵ",
@@ -166,6 +167,7 @@ export default function HalfwidthKatakanaPage() {
       </section>
 
 
+      <AffiliateSection slug="halfwidth-katakana" category="テキスト" />
       <RelatedTools currentSlug="halfwidth-katakana" category="テキスト" />
     </div>
   );

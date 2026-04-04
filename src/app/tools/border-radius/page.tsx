@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PRESETS = [
   { label: "角なし", tl: 0, tr: 0, br: 0, bl: 0 },
@@ -125,6 +126,7 @@ export default function BorderRadiusPage() {
       </section>
 
 
+      <AffiliateSection slug="border-radius" category="デザイン" />
       <RelatedTools currentSlug="border-radius" category="デザイン" />
     </div>
   );

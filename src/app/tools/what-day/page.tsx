@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const WEEKDAYS = ["日", "月", "火", "水", "木", "金", "土"];
 const WEEKDAY_COLORS = ["text-red-500", "text-foreground", "text-foreground", "text-foreground", "text-foreground", "text-foreground", "text-blue-500"];
@@ -137,6 +138,7 @@ export default function WhatDayPage() {
       </section>
 
 
+      <AffiliateSection slug="what-day" category="日常ツール" />
       <RelatedTools currentSlug="what-day" category="日常ツール" />
     </div>
   );

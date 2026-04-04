@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function RandomNumberPage() {
   const [min, setMin] = useState("1");
@@ -177,6 +178,7 @@ export default function RandomNumberPage() {
       </section>
 
 
+      <AffiliateSection slug="random-number" category="日常ツール" />
       <RelatedTools currentSlug="random-number" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Mode = "amount" | "rate";
 
@@ -251,6 +252,7 @@ export default function DiscountCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="discount-calculator" category="日常ツール" />
       <RelatedTools currentSlug="discount-calculator" category="日常ツール" />
     </div>
   );

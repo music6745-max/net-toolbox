@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function parseMac(input: string): string | null {
   // Remove all separators and whitespace
@@ -169,6 +170,7 @@ export default function MacFormatterPage() {
       </section>
 
 
+      <AffiliateSection slug="mac-formatter" category="開発ツール" />
       <RelatedTools currentSlug="mac-formatter" category="開発ツール" />
     </div>
   );

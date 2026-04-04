@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function OgPreviewPage() {
   const [title, setTitle] = useState("");
@@ -163,6 +164,7 @@ ${siteName ? `<meta property="og:site_name" content="${siteName}" />` : ""}
       </section>
 
 
+      <AffiliateSection slug="og-preview" category="開発ツール" />
       <RelatedTools currentSlug="og-preview" category="開発ツール" />
     </div>
   );

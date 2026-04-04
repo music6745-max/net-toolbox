@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type Gender = "male" | "female";
 
@@ -150,6 +151,7 @@ export default function CalorieCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="calorie-calculator" category="日常ツール" />
       <RelatedTools currentSlug="calorie-calculator" category="日常ツール" />
     </div>
   );

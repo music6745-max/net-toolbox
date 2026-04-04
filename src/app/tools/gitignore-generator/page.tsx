@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface GitignoreTemplate {
   id: string;
@@ -382,6 +383,7 @@ export default function GitignoreGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="gitignore-generator" category="開発ツール" />
       <RelatedTools currentSlug="gitignore-generator" category="開発ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function LotteryPage() {
   const [items, setItems] = useState(
@@ -189,6 +190,7 @@ export default function LotteryPage() {
       </section>
 
 
+      <AffiliateSection slug="lottery" category="日常ツール" />
       <RelatedTools currentSlug="lottery" category="日常ツール" />
     </div>
   );

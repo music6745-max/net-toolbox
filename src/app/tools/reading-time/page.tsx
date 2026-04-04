@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const JP_READING_SPEED = 500; // chars per minute
 const EN_READING_SPEED = 200; // words per minute
@@ -124,6 +125,7 @@ export default function ReadingTimePage() {
       </section>
 
 
+      <AffiliateSection slug="reading-time" category="テキスト" />
       <RelatedTools currentSlug="reading-time" category="テキスト" />
     </div>
   );

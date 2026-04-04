@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function dogToHuman(dogAge: number): number {
   if (dogAge <= 0) return 0;
@@ -144,6 +145,7 @@ export default function DogAgeCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="dog-age-calculator" category="日常ツール" />
       <RelatedTools currentSlug="dog-age-calculator" category="日常ツール" />
     </div>
   );

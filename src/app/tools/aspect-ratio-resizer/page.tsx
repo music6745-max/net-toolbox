@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 function gcd(a: number, b: number): number {
@@ -150,6 +151,9 @@ export default function Page() {
           <p>スケール（倍率）も合わせて表示されます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="aspect-ratio-resizer" category="画像・メディア" />
+
 
       <RelatedTools currentSlug="aspect-ratio-resizer" category="画像・メディア" />
     </div>

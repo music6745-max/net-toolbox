@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 import QRCode from "qrcode";
 
@@ -128,6 +129,9 @@ export default function Page() {
           <p>すべての処理はブラウザ内で完結し、パスワードが外部に送信されることはありません。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="wifi-qr" category="日常ツール" />
+
 
       <RelatedTools currentSlug="wifi-qr" category="日常ツール" />
     </div>

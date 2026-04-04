@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function Base64Page() {
   const [input, setInput] = useState("");
@@ -92,6 +93,7 @@ export default function Base64Page() {
       </section>
 
 
+      <AffiliateSection slug="base64" category="開発ツール" />
       <RelatedTools currentSlug="base64" category="開発ツール" />
     </div>
   );

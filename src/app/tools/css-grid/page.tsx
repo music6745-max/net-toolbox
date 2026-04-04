@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function CssGridPage() {
   const [columns, setColumns] = useState("repeat(3, 1fr)");
@@ -155,6 +156,7 @@ export default function CssGridPage() {
       </section>
 
 
+      <AffiliateSection slug="css-grid" category="デザイン" />
       <RelatedTools currentSlug="css-grid" category="デザイン" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 interface ParsedUA {
   browser: string;
@@ -212,6 +213,7 @@ export default function UserAgentParserPage() {
       </section>
 
 
+      <AffiliateSection slug="useragent-parser" category="開発ツール" />
       <RelatedTools currentSlug="useragent-parser" category="開発ツール" />
     </div>
   );

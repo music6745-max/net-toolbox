@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DPI_PRESETS = [72, 96, 150, 300];
 
@@ -182,6 +183,7 @@ export default function PixelCmConverterPage() {
       </section>
 
 
+      <AffiliateSection slug="pixel-cm-converter" category="デザイン" />
       <RelatedTools currentSlug="pixel-cm-converter" category="デザイン" />
     </div>
   );

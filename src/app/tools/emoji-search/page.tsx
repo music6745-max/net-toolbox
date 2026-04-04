@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 interface EmojiItem {
@@ -181,6 +182,9 @@ export default function Page() {
           <p>カテゴリ別に整理されているので、ブラウズして探すこともできます。</p>
         </div>
       </section>
+
+      <AffiliateSection slug="emoji-search" category="テキスト" />
+
 
       <RelatedTools currentSlug="emoji-search" category="テキスト" />
     </div>

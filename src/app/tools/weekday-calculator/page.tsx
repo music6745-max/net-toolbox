@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const DAYS_JA = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
 const DAYS_EN = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -94,6 +95,7 @@ export default function WeekdayCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="weekday-calculator" category="日常ツール" />
       <RelatedTools currentSlug="weekday-calculator" category="日常ツール" />
     </div>
   );

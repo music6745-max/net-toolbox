@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function generateFibonacci(n: number): bigint[] {
   if (n <= 0) return [];
@@ -161,6 +162,7 @@ export default function FibonacciPage() {
       </section>
 
 
+      <AffiliateSection slug="fibonacci" category="日常ツール" />
       <RelatedTools currentSlug="fibonacci" category="日常ツール" />
     </div>
   );

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function JsonMinifyPage() {
   const [input, setInput] = useState("");
@@ -172,6 +173,7 @@ export default function JsonMinifyPage() {
       </section>
 
 
+      <AffiliateSection slug="json-minify" category="開発ツール" />
       <RelatedTools currentSlug="json-minify" category="開発ツール" />
     </div>
   );

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 export default function FuelCalculatorPage() {
   const [distance, setDistance] = useState("");
@@ -110,6 +111,7 @@ export default function FuelCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="fuel-calculator" category="日常ツール" />
       <RelatedTools currentSlug="fuel-calculator" category="日常ツール" />
     </div>
   );

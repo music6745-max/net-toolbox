@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type FormatResult = {
   label: string;
@@ -194,6 +195,7 @@ export default function NumberFormatterPage() {
       </section>
 
 
+      <AffiliateSection slug="number-formatter" category="日常ツール" />
       <RelatedTools currentSlug="number-formatter" category="日常ツール" />
     </div>
   );

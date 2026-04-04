@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function levenshtein(a: string, b: string): number {
   const m = a.length;
@@ -126,6 +127,7 @@ export default function TextSimilarityPage() {
       </section>
 
 
+      <AffiliateSection slug="text-similarity" category="テキスト" />
       <RelatedTools currentSlug="text-similarity" category="テキスト" />
     </div>
   );

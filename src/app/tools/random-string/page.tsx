@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const CHARSETS = {
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -164,6 +165,7 @@ export default function RandomStringPage() {
       </section>
 
 
+      <AffiliateSection slug="random-string" category="開発ツール" />
       <RelatedTools currentSlug="random-string" category="開発ツール" />
     </div>
   );

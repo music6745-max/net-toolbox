@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function calcBedtimes(wakeHour: number, wakeMin: number) {
   const results: { cycles: number; bedtime: string; totalHours: string }[] = [];
@@ -114,6 +115,7 @@ export default function SleepCalculatorPage() {
       </section>
 
 
+      <AffiliateSection slug="sleep-calculator" category="日常ツール" />
       <RelatedTools currentSlug="sleep-calculator" category="日常ツール" />
     </div>
   );

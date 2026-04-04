@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
@@ -39,6 +40,8 @@ export default function Page() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>テストの点数と配点から平均点・合計点・偏差値を計算。</p></div></section>
+      <AffiliateSection slug="grade-calculator" category="日常ツール" />
+
       <RelatedTools currentSlug="grade-calculator" category="日常ツール" />
     </div>
   );

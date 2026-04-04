@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 type LicenseType = "MIT" | "Apache-2.0" | "GPL-3.0" | "BSD-2-Clause" | "BSD-3-Clause" | "ISC" | "MPL-2.0";
 
@@ -311,6 +312,7 @@ export default function LicenseGeneratorPage() {
       </section>
 
 
+      <AffiliateSection slug="license-generator" category="開発ツール" />
       <RelatedTools currentSlug="license-generator" category="開発ツール" />
     </div>
   );

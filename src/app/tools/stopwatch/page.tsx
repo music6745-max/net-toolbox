@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 function formatTime(ms: number): string {
   const totalMs = Math.floor(ms);
@@ -174,6 +175,7 @@ export default function StopwatchPage() {
       </section>
 
 
+      <AffiliateSection slug="stopwatch" category="日常ツール" />
       <RelatedTools currentSlug="stopwatch" category="日常ツール" />
     </div>
   );
