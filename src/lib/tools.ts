@@ -42,6 +42,41 @@ export const tools: Tool[] = [
     icon: "🎨",
     category: "デザイン",
   },
+  {
+    slug: "base64",
+    name: "Base64変換",
+    description: "テキストをBase64にエンコード・デコード。日本語テキストにも対応。",
+    icon: "🔄",
+    category: "開発ツール",
+  },
+  {
+    slug: "url-encode",
+    name: "URLエンコード/デコード",
+    description: "URLの日本語や特殊文字をパーセントエンコーディング形式に変換・復元。",
+    icon: "🔗",
+    category: "開発ツール",
+  },
+  {
+    slug: "date-calculator",
+    name: "日数計算",
+    description: "2つの日付間の日数を計算。何日後・何日前の日付も求められます。",
+    icon: "📅",
+    category: "日常ツール",
+  },
+  {
+    slug: "text-diff",
+    name: "テキスト差分比較",
+    description: "2つのテキストを比較して差分をハイライト表示。変更箇所を素早く確認。",
+    icon: "📝",
+    category: "テキスト",
+  },
+  {
+    slug: "hash-generator",
+    name: "ハッシュ生成",
+    description: "SHA-1/SHA-256/SHA-512のハッシュ値を生成。データ整合性の確認に。",
+    icon: "🛡️",
+    category: "セキュリティ",
+  },
 ];
 
 export const siteConfig = {
