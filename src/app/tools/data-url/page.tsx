@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type MimeType = "text/plain" | "text/html";
 type Encoding = "base64" | "uri";
@@ -199,6 +200,9 @@ export default function DataUrlPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="data-url" category="開発ツール" />
     </div>
   );
 }

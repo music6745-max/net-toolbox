@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const WORDS = [
   "りんご","みかん","すいか","いちご","ぶどう","もも","なし","かき","うめ","さくら",
@@ -190,6 +191,9 @@ export default function PassphraseGeneratorPage() {
           <p>生成はすべてブラウザ内で行われ、外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="passphrase-generator" category="セキュリティ" />
     </div>
   );
 }

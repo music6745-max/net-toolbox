@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const BG_PRESETS = [
   { label: "青", color: "#2563eb" },
@@ -248,6 +249,9 @@ export default function FaviconPreviewPage() {
           <p>「ダウンロード」ボタンで64×64pxのPNGファイルを保存できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="favicon-preview" category="デザイン" />
     </div>
   );
 }

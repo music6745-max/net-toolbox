@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type TreeNode = {
   key: string;
@@ -304,6 +305,9 @@ export default function JsonPathFinderPage() {
           <p>APIのレスポンスを解析してアクセスパスを確認するのに便利です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="json-path-finder" category="開発ツール" />
     </div>
   );
 }

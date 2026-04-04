@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface Stats {
   count: number;
@@ -159,6 +160,9 @@ export default function StatisticsPage() {
           <p>※ 数値以外の文字が含まれている場合はエラーが表示されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="statistics" category="日常ツール" />
     </div>
   );
 }

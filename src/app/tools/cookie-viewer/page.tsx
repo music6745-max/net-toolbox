@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface CookieEntry {
   key: string;
@@ -142,6 +143,9 @@ export default function CookieViewerPage() {
           <p>※ HttpOnly 属性のCookieはJavaScriptからアクセスできないため表示されません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="cookie-viewer" category="開発ツール" />
     </div>
   );
 }

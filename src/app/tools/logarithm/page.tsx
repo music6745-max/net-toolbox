@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function LogarithmPage() {
   const [number, setNumber] = useState("");
@@ -134,6 +135,9 @@ export default function LogarithmPage() {
           <p>※ 真数は必ず正の数（0より大きい値）を入力してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="logarithm" category="日常ツール" />
     </div>
   );
 }

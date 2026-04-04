@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Unit = "px" | "rem" | "em" | "pt" | "%";
 
@@ -147,6 +148,9 @@ export default function CssUnitConverterPage() {
           <p>rem変換には「基準フォントサイズ」、em・%変換には「親要素サイズ」を設定してください（デフォルトは16px）。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-unit-converter" category="開発ツール" />
     </div>
   );
 }

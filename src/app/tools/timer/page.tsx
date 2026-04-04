@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function playBeep() {
   try {
@@ -175,6 +176,9 @@ export default function TimerPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="timer" category="日常ツール" />
     </div>
   );
 }

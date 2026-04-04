@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Mode = "a_of_b" | "x_percent_of_a" | "change";
 
@@ -273,6 +274,9 @@ export default function PercentageCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、入力データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="percentage-calculator" category="日常ツール" />
     </div>
   );
 }

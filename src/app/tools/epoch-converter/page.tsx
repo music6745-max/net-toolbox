@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function pad(n: number, len = 2) {
   return n.toString().padStart(len, "0");
@@ -228,6 +229,9 @@ export default function EpochConverterPage() {
           <p>現在時刻はリアルタイムで更新されます。「コピー」ボタンで各値をクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="epoch-converter" category="開発ツール" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const jaTexts = [
   "吾輩は猫である。名前はまだない。どこで生まれたかとんと見当がつかぬ。",
@@ -50,6 +51,9 @@ export default function DummyTextPage() {
         )}
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">ダミーテキスト生成ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>段落数を指定して「生成」をクリックすると、日本語のダミーテキストが生成されます。</p><p>Webサイトのデザインモックアップやレイアウト確認にご活用ください。</p></div></section>
+
+
+      <RelatedTools currentSlug="dummy-text" category="テキスト" />
     </div>
   );
 }

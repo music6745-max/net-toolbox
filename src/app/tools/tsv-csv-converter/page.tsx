@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function tsvToCSV(tsv: string): string {
   return tsv
@@ -186,6 +187,9 @@ export default function TsvCsvConverterPage() {
           <p>※ カンマを含むCSVフィールドは自動的にクォートで囲まれます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="tsv-csv-converter" category="開発ツール" />
     </div>
   );
 }

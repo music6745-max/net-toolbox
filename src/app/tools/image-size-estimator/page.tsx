@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const FORMAT_PRESETS = [
   { label: "JPEG (高品質)", depth: 24, ratio: 0.1 },
@@ -99,6 +100,9 @@ export default function ImageSizeEstimatorPage() {
           <p>圧縮率はフォーマットや画像の内容によって大きく異なるため、あくまで目安としてご利用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="image-size-estimator" category="画像・メディア" />
     </div>
   );
 }

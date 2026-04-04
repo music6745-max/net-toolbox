@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatCSS(css: string, indentSize: number): string {
   const indentStr = " ".repeat(indentSize);
@@ -163,6 +164,9 @@ export default function CssFormatterPage() {
           <p>すべての処理はブラウザ内で完結するため、CSSの内容がサーバーに送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-formatter" category="開発ツール" />
     </div>
   );
 }

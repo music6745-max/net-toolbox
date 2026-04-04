@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function gcd(a: number, b: number): number {
   return b === 0 ? a : gcd(b, a % b);
@@ -220,6 +221,9 @@ export default function AspectRatioPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="aspect-ratio" category="デザイン" />
     </div>
   );
 }

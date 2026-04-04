@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const CSS_COLORS: { name: string; hex: string; ja: string }[] = [
   { name: "red", hex: "#FF0000", ja: "赤" },
@@ -235,6 +236,9 @@ export default function ColorNamesPage() {
           </p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="color-names" category="デザイン" />
     </div>
   );
 }

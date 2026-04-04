@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function ChecklistGeneratorPage() {
   const [input, setInput] = useState("タスク1\nタスク2\nタスク3");
@@ -87,6 +88,9 @@ export default function ChecklistGeneratorPage() {
           <p>「印刷用に開く」ボタンで印刷ダイアログを開き、チェックリストを印刷できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="checklist-generator" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const VIEWPORTS = [
   { label: "モバイル", width: 375, icon: "📱" },
@@ -122,6 +123,9 @@ export default function ResponsiveTesterPage() {
           <p>※ X-Frame-Options や CSP により表示できないサイトがあります。その場合は実際のブラウザで確認してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="responsive-tester" category="開発ツール" />
     </div>
   );
 }

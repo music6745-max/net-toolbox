@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type ReverseMode = "chars" | "words" | "lines";
 
@@ -191,6 +192,9 @@ export default function TextReversePage() {
           <p>6. すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-reverse" category="テキスト" />
     </div>
   );
 }

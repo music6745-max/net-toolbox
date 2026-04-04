@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Era = {
   name: string;
@@ -270,6 +271,9 @@ export default function WarekiConverterPage() {
           <p>4. すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="wareki-converter" category="日常ツール" />
     </div>
   );
 }

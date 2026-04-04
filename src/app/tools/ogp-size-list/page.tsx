@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface SizeEntry {
   name: string;
@@ -147,6 +148,9 @@ export default function OgpSizeListPage() {
           <p>画像サイズは各プラットフォームのアップデートにより変更される場合があります。最新情報は各公式サイトもご確認ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="ogp-size-list" category="デザイン" />
     </div>
   );
 }

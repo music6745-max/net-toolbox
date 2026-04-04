@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function TextToSpeechPage() {
   const [text, setText] = useState("こんにちは。テキスト読み上げツールへようこそ。");
@@ -139,6 +140,9 @@ export default function TextToSpeechPage() {
           <p>Web Speech APIを使用するため、インターネット接続が必要な場合があります（ブラウザ依存）。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-to-speech" category="日常ツール" />
     </div>
   );
 }

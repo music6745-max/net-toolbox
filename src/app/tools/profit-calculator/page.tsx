@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function ProfitCalculatorPage() {
   const [revenue, setRevenue] = useState("");
@@ -160,6 +161,9 @@ export default function ProfitCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="profit-calculator" category="日常ツール" />
     </div>
   );
 }

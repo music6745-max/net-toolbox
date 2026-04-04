@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface ParsedUrl {
   protocol: string;
@@ -150,6 +151,9 @@ export default function UrlParserPage() {
           <p>クエリパラメータが複数ある場合は、キーと値を個別に確認できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="url-parser" category="開発ツール" />
     </div>
   );
 }

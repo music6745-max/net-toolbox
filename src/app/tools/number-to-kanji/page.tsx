@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const DIGITS_NORMAL = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
 const DIGITS_DAIJI = ["", "壱", "弐", "参", "四", "伍", "六", "七", "八", "九"];
@@ -218,6 +219,9 @@ export default function NumberToKanjiPage() {
           <p>変換例ボタンをクリックするとその数値を入力欄に自動入力できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="number-to-kanji" category="日常ツール" />
     </div>
   );
 }

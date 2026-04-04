@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const PRESETS = [
   { label: "正方形 (400×400)", w: 400, h: 400 },
@@ -116,6 +117,9 @@ export default function PlaceholderImagePage() {
           <p>生成されたURLをHTMLの src 属性にそのまま使用できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="placeholder-image" category="デザイン" />
     </div>
   );
 }

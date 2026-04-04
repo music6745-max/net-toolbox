@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function calcAge(birth: string) {
   const b = new Date(birth);
@@ -43,6 +44,9 @@ export default function AgeCalculatorPage() {
         </div>
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">年齢計算ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>生年月日を入力すると、現在の年齢と関連情報が自動で表示されます。</p><p>書類記入時の年齢確認や、記念日の計算にご活用ください。</p></div></section>
+
+
+      <RelatedTools currentSlug="age-calculator" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function randomHex(): string {
   return (
@@ -156,6 +157,9 @@ export default function RandomColorPage() {
           <p>すべての処理はブラウザ内で完結するため、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="random-color" category="デザイン" />
     </div>
   );
 }

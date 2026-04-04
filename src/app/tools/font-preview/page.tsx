@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const FONTS = [
   { name: "serif", label: "Serif（明朝体系）" },
@@ -151,6 +152,9 @@ export default function FontPreviewPage() {
           <p>システムフォントとよく使われるWebセーフフォントを比較できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="font-preview" category="デザイン" />
     </div>
   );
 }

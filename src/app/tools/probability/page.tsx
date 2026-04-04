@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function factorial(n: number): bigint {
   if (n < 0) return BigInt(-1);
@@ -208,6 +209,9 @@ export default function ProbabilityPage() {
           <p>※ n は計算量の関係で20以下に制限しています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="probability" category="日常ツール" />
     </div>
   );
 }

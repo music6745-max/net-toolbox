@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function TimestampConverterPage() {
   const [currentTs, setCurrentTs] = useState(0);
@@ -156,6 +157,9 @@ export default function TimestampConverterPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="timestamp-converter" category="開発ツール" />
     </div>
   );
 }

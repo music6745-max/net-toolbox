@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function generateMetaTags(
   title: string,
@@ -210,6 +211,9 @@ export default function MetaTagGeneratorPage() {
           <p>OGP画像は1200×630px（横長）が推奨サイズです。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="meta-tag-generator" category="開発ツール" />
     </div>
   );
 }

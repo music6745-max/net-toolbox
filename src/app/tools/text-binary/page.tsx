@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function textToBinary(text: string): string {
   const encoder = new TextEncoder();
@@ -134,6 +135,9 @@ export default function TextBinaryPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-binary" category="開発ツール" />
     </div>
   );
 }

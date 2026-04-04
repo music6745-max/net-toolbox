@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function DuplicateRemoverPage() {
   const [input, setInput] = useState("");
@@ -158,6 +159,9 @@ export default function DuplicateRemoverPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="duplicate-remover" category="テキスト" />
     </div>
   );
 }

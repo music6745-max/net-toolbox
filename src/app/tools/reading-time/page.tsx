@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const JP_READING_SPEED = 500; // chars per minute
 const EN_READING_SPEED = 200; // words per minute
@@ -121,6 +122,9 @@ export default function ReadingTimePage() {
           <p>ブログ記事・プレゼン原稿・レポートの目安時間の確認にご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="reading-time" category="テキスト" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const CHANGEFREQ_OPTIONS = ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"];
 const PRIORITY_OPTIONS = ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1"];
@@ -173,6 +174,9 @@ export default function SitemapGeneratorPage() {
           <p>すべての処理はブラウザ内で完結します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="sitemap-generator" category="開発ツール" />
     </div>
   );
 }

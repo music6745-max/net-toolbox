@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const DELIMITER_OPTIONS = [
   { label: "カンマ（,）", value: "," },
@@ -159,6 +160,9 @@ export default function TextSplitPage() {
           <p>4. 「全てコピー」ボタンで結果を改行区切りでコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-split" category="テキスト" />
     </div>
   );
 }

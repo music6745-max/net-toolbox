@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function SavingsCalculatorPage() {
   const [monthly, setMonthly] = useState("");
@@ -168,6 +169,9 @@ export default function SavingsCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="savings-calculator" category="日常ツール" />
     </div>
   );
 }

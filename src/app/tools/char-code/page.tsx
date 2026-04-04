@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface CharInfo {
   char: string;
@@ -104,6 +105,9 @@ export default function CharCodePage() {
           <p>絵文字や漢字なども対応しています。すべての処理はブラウザ内で完結します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="char-code" category="開発ツール" />
     </div>
   );
 }

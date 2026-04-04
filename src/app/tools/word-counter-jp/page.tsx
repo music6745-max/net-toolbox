@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Stats = {
   total: number;
@@ -147,6 +148,9 @@ export default function WordCounterJPPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="word-counter-jp" category="テキスト" />
     </div>
   );
 }

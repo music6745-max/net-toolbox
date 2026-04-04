@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type CalcState = {
   display: string;
@@ -302,6 +303,9 @@ export default function CalculatorPage() {
           <p>計算結果は履歴に最大10件保存されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="calculator" category="日常ツール" />
     </div>
   );
 }

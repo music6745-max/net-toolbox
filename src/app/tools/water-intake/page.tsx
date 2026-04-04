@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const ACTIVITY_LEVELS = [
   {
@@ -217,6 +218,9 @@ export default function WaterIntakePage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="water-intake" category="日常ツール" />
     </div>
   );
 }

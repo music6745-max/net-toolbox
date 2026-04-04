@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes.toFixed(0)} B`;
@@ -153,6 +154,9 @@ export default function VideoSizeCalculatorPage() {
           <p>ビットレートはエンコード設定によって変わるため、実際のサイズとは異なる場合があります。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="video-size-calculator" category="画像・メディア" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const STOP_WORDS = new Set([
   "a", "an", "the", "and", "or", "but", "in", "on", "at", "to", "for",
@@ -151,6 +152,9 @@ export default function WordCounterEnPage() {
           <p>すべての処理はブラウザ内で行われ、入力テキストは外部に送信されません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="word-counter-en" category="テキスト" />
     </div>
   );
 }

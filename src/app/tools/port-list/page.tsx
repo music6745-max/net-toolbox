@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Port = {
   port: number;
@@ -145,6 +146,9 @@ export default function PortListPage() {
           <p>1024以下のポートはウェルノウンポートと呼ばれ、OSの管理者権限が必要なことが多いです。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="port-list" category="開発ツール" />
     </div>
   );
 }

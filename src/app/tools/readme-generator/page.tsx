@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function ReadmeGeneratorPage() {
   const [projectName, setProjectName] = useState("");
@@ -216,6 +217,9 @@ export default function ReadmeGeneratorPage() {
           <p>4. 未入力フィールドはデフォルトのテンプレート文が挿入されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="readme-generator" category="開発ツール" />
     </div>
   );
 }

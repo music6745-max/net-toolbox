@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function TermsGeneratorPage() {
   const [siteName, setSiteName] = useState("");
@@ -172,6 +173,9 @@ export default function TermsGeneratorPage() {
           <p>※ 生成されたテンプレートはあくまで参考です。実際の運用に合わせて専門家にご確認ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="terms-generator" category="開発ツール" />
     </div>
   );
 }

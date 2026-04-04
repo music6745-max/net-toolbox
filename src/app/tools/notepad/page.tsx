@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const STORAGE_KEY = "toolbox_notepad_content";
 const SAVE_DELAY = 800;
@@ -136,6 +137,9 @@ export default function NotepadPage() {
           <p>文字数・行数はリアルタイムでステータスバーに表示されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="notepad" category="日常ツール" />
     </div>
   );
 }

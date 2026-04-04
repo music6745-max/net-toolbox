@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function DateCalculatorPage() {
   const today = new Date().toISOString().split("T")[0];
@@ -91,6 +92,9 @@ export default function DateCalculatorPage() {
           <p>納期計算や記念日の計算などにご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="date-calculator" category="日常ツール" />
     </div>
   );
 }

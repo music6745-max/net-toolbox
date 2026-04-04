@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type SpeedUnit = "km/h" | "mph" | "m/s" | "knots" | "ft/s";
 
@@ -98,6 +99,9 @@ export default function SpeedUnitConverterPage() {
           <p>ノットは航海・航空で使われる速度単位で、1ノット = 1.852 km/hです。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="speed-unit-converter" category="日常ツール" />
     </div>
   );
 }

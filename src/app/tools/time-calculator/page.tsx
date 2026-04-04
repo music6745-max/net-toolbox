@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type TimeEntry = { h: string; m: string; s: string; op: "+" | "-" };
 
@@ -136,6 +137,9 @@ export default function TimeCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="time-calculator" category="日常ツール" />
     </div>
   );
 }

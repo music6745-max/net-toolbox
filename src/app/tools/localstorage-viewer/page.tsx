@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface LSEntry {
   key: string;
@@ -179,6 +180,9 @@ export default function LocalStorageViewerPage() {
           <p>4. 「全削除」ボタンでlocalStorageのすべてのデータを一括削除します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="localstorage-viewer" category="開発ツール" />
     </div>
   );
 }

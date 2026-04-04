@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type CipherMode = "rot13" | "caesar" | "xor";
 
@@ -280,6 +281,9 @@ export default function TextEncryptPage() {
           <p>すべての処理はブラウザ内で完結し、テキストが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-encrypt" category="セキュリティ" />
     </div>
   );
 }

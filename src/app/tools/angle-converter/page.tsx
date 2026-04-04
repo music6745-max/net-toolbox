@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type AngleUnit = "deg" | "rad" | "grad" | "turn";
 
@@ -92,6 +93,9 @@ export default function AngleConverterPage() {
           <p>グラジアン（グレード）は1周を400等分した単位で、測量などで使われます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="angle-converter" category="日常ツール" />
     </div>
   );
 }

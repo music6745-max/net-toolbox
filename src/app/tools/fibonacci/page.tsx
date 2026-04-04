@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function generateFibonacci(n: number): bigint[] {
   if (n <= 0) return [];
@@ -158,6 +159,9 @@ export default function FibonacciPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="fibonacci" category="日常ツール" />
     </div>
   );
 }

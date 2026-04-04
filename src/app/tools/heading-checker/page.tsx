@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface Heading {
   level: number;
@@ -129,6 +130,9 @@ export default function HeadingCheckerPage() {
           <p>SEOの観点から、H1は1ページに1つ、見出しレベルは順番に使うことが推奨されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="heading-checker" category="開発ツール" />
     </div>
   );
 }

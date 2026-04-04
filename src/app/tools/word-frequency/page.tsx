@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface WordEntry {
   word: string;
@@ -186,6 +187,9 @@ export default function WordFrequencyPage() {
           <p>5. 「表示件数」で上位何件を表示するか選択できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="word-frequency" category="テキスト" />
     </div>
   );
 }

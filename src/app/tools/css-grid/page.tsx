@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function CssGridPage() {
   const [columns, setColumns] = useState("repeat(3, 1fr)");
@@ -152,6 +153,9 @@ export default function CssGridPage() {
           <p>4. 「コピー」ボタンで生成されたCSSコードをコピーします。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-grid" category="デザイン" />
     </div>
   );
 }

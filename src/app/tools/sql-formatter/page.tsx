@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatSQL(sql: string, indent: number): string {
   const indentStr = " ".repeat(indent);
@@ -146,6 +147,9 @@ export default function SqlFormatterPage() {
           <p>SELECT、FROM、WHERE、JOIN、ORDER BY、GROUP BYなどの主要キーワードで自動的に改行されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="sql-formatter" category="開発ツール" />
     </div>
   );
 }

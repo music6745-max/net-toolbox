@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function isPrime(n: number): boolean {
   if (n < 2) return false;
@@ -211,6 +212,9 @@ export default function PrimeCheckerPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="prime-checker" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatTime(ms: number): string {
   const totalMs = Math.floor(ms);
@@ -171,6 +172,9 @@ export default function StopwatchPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="stopwatch" category="日常ツール" />
     </div>
   );
 }

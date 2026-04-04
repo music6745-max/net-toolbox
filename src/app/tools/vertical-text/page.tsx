@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function VerticalTextPage() {
   const [input, setInput] = useState("");
@@ -118,6 +119,9 @@ export default function VerticalTextPage() {
           <p>「コピー」ボタンでクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="vertical-text" category="テキスト" />
     </div>
   );
 }

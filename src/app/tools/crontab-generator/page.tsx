@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type FieldMode = "every" | "specific" | "range" | "step";
 
@@ -232,6 +233,9 @@ export default function CrontabGeneratorPage() {
           <p>crontabに貼り付けて使用してください。例: <code>*/5 * * * * /path/to/script.sh</code></p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="crontab-generator" category="開発ツール" />
     </div>
   );
 }

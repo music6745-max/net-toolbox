@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface Shadow {
   x: number;
@@ -212,6 +213,9 @@ export default function CssBoxShadowPage() {
           <p>5. 「コピー」ボタンでCSSコードをクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-box-shadow" category="デザイン" />
     </div>
   );
 }

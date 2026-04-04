@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Phase = "idle" | "showing" | "input" | "correct" | "wrong" | "finished";
 
@@ -184,6 +185,9 @@ export default function MemoryTestPage() {
           <p>短期記憶（ワーキングメモリ）のトレーニングに活用できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="memory-test" category="日常ツール" />
     </div>
   );
 }

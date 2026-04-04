@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Shape = "circle" | "rectangle" | "triangle" | "trapezoid";
 
@@ -165,6 +166,9 @@ export default function AreaCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="area-calculator" category="日常ツール" />
     </div>
   );
 }

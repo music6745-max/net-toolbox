@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const WEEKDAYS = ["日", "月", "火", "水", "木", "金", "土"];
 const WEEKDAY_COLORS = ["text-red-500", "text-foreground", "text-foreground", "text-foreground", "text-foreground", "text-foreground", "text-blue-500"];
@@ -134,6 +135,9 @@ export default function WhatDayPage() {
           <p>プリセットから「100日後」「30日前」などをすぐに選択できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="what-day" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { siteConfig } from "@/lib/tools";
+import { categories } from "@/lib/categories";
+import { WebSiteJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: {
@@ -40,19 +42,46 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
-        <header className="bg-white border-b border-card-border sticky top-0 z-50">
+        <WebSiteJsonLd
+          url={siteConfig.url}
+          name={siteConfig.name}
+          description={siteConfig.description}
+        />
+        <header className="bg-card-bg border-b border-card-border sticky top-0 z-50">
           <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
             <Link href="/" className="text-lg font-bold text-primary">
               {siteConfig.name}
             </Link>
-            <nav className="text-sm text-muted">
-              無料で使えるWeb便利ツール集
+            <nav className="hidden sm:flex items-center gap-4 text-sm text-muted">
+              {categories.slice(0, 4).map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/category/${encodeURIComponent(cat.slug)}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  {cat.icon} {cat.slug}
+                </Link>
+              ))}
             </nav>
           </div>
         </header>
         <main className="flex-1">{children}</main>
-        <footer className="bg-white border-t border-card-border mt-12">
+        <footer className="bg-card-bg border-t border-card-border mt-12">
           <div className="max-w-5xl mx-auto px-4 py-8 text-sm text-muted">
+            <div className="mb-6">
+              <h3 className="font-medium text-foreground mb-3 text-center">カテゴリ</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/category/${encodeURIComponent(cat.slug)}`}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {cat.icon} {cat.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Link href="/privacy" className="hover:text-primary">プライバシーポリシー</Link>
               <Link href="/terms" className="hover:text-primary">利用規約</Link>

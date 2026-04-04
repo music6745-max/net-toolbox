@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function UrlEncodePage() {
   const [input, setInput] = useState("");
@@ -89,6 +90,9 @@ export default function UrlEncodePage() {
           <p>Web開発やAPIのパラメータ作成に便利です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="url-encode" category="開発ツール" />
     </div>
   );
 }

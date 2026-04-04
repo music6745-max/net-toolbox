@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const DPI_PRESETS = [72, 96, 150, 300];
 
@@ -179,6 +180,9 @@ export default function PixelCmConverterPage() {
           <p>72dpiは昔のMacスクリーン標準、300dpiは印刷物の高品質基準です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="pixel-cm-converter" category="デザイン" />
     </div>
   );
 }

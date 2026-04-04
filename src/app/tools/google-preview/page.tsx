@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const TITLE_LIMIT = 60;
 const DESC_LIMIT = 160;
@@ -136,6 +137,9 @@ export default function GooglePreviewPage() {
           <p>タイトルは60文字以内、説明文は120〜160文字が推奨です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="google-preview" category="開発ツール" />
     </div>
   );
 }

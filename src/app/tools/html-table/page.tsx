@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const MAX_ROWS = 20;
 const MAX_COLS = 10;
@@ -224,6 +225,9 @@ export default function HtmlTablePage() {
           <p>「コピー」ボタンでHTMLをクリップボードにコピーし、エディタに貼り付けてご利用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="html-table" category="開発ツール" />
     </div>
   );
 }

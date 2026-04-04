@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Shortcut = {
   win: string;
@@ -230,6 +231,9 @@ export default function KeyboardShortcutsPage() {
           <p>カテゴリボタンで一般操作・ブラウザ・テキスト編集・開発者ツールに絞り込めます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="keyboard-shortcuts" category="開発ツール" />
     </div>
   );
 }

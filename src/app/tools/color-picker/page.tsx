@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function hslToRgb(h: number, s: number, l: number): [number, number, number] {
   s /= 100;
@@ -220,6 +221,9 @@ export default function ColorPickerPage() {
           <p>プリセットカラーをクリックするとその色をすぐに選択できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="color-picker" category="デザイン" />
     </div>
   );
 }

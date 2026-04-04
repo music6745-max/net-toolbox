@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const PRESETS = [
   { label: "サンセット", from: "#f97316", to: "#ec4899" },
@@ -123,6 +124,9 @@ export default function GradientTextPage() {
           <p>生成されたCSSをコピーして、そのままHTMLファイルで使用できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="gradient-text" category="デザイン" />
     </div>
   );
 }

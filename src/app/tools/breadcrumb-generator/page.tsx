@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface BreadcrumbItem {
   name: string;
@@ -194,6 +195,9 @@ export default function BreadcrumbGeneratorPage() {
           <p>4. HTMLはページ本文内に、JSON-LDは&lt;head&gt;内に貼り付けてください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="breadcrumb-generator" category="開発ツール" />
     </div>
   );
 }

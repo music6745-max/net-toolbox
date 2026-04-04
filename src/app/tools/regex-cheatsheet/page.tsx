@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type RegexItem = {
   syntax: string;
@@ -201,6 +202,9 @@ export default function RegexCheatsheetPage() {
           <p>JavaScriptでは /パターン/フラグ の形式で使用します（例: /\\d+/g）。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="regex-cheatsheet" category="開発ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function PasswordGeneratorPage() {
   const [length, setLength] = useState(16);
@@ -148,6 +149,9 @@ export default function PasswordGeneratorPage() {
           <p>パスワードはブラウザ内で生成されるため、外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="password-generator" category="セキュリティ" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const LAST_NAMES = [
   "佐藤", "鈴木", "高橋", "田中", "伊藤", "渡辺", "山本", "中村", "小林", "加藤",
@@ -154,6 +155,9 @@ export default function RandomNamePage() {
           <p>テストデータの作成、フィクションのキャラクター名など、ダミーデータが必要なときに活用できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="random-name" category="日常ツール" />
     </div>
   );
 }

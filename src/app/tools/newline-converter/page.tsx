@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type NewlineType = "CRLF" | "LF" | "CR";
 
@@ -132,6 +133,9 @@ export default function NewlineConverterPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="newline-converter" category="テキスト" />
     </div>
   );
 }

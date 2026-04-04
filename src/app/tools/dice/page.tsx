@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const DICE_TYPES = [4, 6, 8, 10, 12, 20] as const;
 type DiceType = (typeof DICE_TYPES)[number];
@@ -178,6 +179,9 @@ export default function DicePage() {
           <p>ボードゲーム・TRPG・各種ゲームのダイスロールにお使いください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="dice" category="日常ツール" />
     </div>
   );
 }

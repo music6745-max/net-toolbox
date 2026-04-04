@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function CompoundInterestPage() {
   const [principal, setPrincipal] = useState("");
@@ -174,6 +175,9 @@ export default function CompoundInterestPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="compound-interest" category="日常ツール" />
     </div>
   );
 }

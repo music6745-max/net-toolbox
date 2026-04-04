@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type CityInfo = {
   name: string;
@@ -139,6 +140,9 @@ export default function WorldClockPage() {
           <p>5. すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="world-clock" category="日常ツール" />
     </div>
   );
 }

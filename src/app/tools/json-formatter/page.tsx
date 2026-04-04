@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function JsonFormatterPage() {
   const [input, setInput] = useState("");
@@ -127,6 +128,9 @@ export default function JsonFormatterPage() {
           <p>JSONに構文エラーがある場合は、エラー内容が表示されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="json-formatter" category="開発ツール" />
     </div>
   );
 }

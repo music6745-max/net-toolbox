@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const RATES: { code: string; name: string; toJpy: number }[] = [
   { code: "USD", name: "米ドル", toJpy: 150.0 },
@@ -156,6 +157,9 @@ export default function CurrencyConverterPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="currency-converter" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const DEFAULT_ROWS = 3;
 const DEFAULT_COLS = 3;
@@ -276,6 +277,9 @@ export default function MarkdownTablePage() {
           <p>最大 {MAX_COLS} 列 × {MAX_ROWS} 行まで対応しています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="markdown-table" category="開発ツール" />
     </div>
   );
 }

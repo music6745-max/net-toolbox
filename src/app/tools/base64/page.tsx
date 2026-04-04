@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Base64Page() {
   const [input, setInput] = useState("");
@@ -89,6 +90,9 @@ export default function Base64Page() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="base64" category="開発ツール" />
     </div>
   );
 }

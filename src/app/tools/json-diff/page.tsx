@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type DiffResult = {
   key: string;
@@ -186,6 +187,9 @@ export default function JsonDiffPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="json-diff" category="開発ツール" />
     </div>
   );
 }

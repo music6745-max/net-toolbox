@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function dogToHuman(dogAge: number): number {
   if (dogAge <= 0) return 0;
@@ -141,6 +142,9 @@ export default function DogAgeCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="dog-age-calculator" category="日常ツール" />
     </div>
   );
 }

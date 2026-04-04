@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Rule = {
   id: number;
@@ -260,6 +261,9 @@ export default function RobotsTxtGeneratorPage() {
           <p>Googleなど主要検索エンジンはrobots.txtを尊重しますが、全てのクローラーが従うわけではありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="robots-txt-generator" category="開発ツール" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Gender = "male" | "female";
 
@@ -147,6 +148,9 @@ export default function CalorieCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="calorie-calculator" category="日常ツール" />
     </div>
   );
 }

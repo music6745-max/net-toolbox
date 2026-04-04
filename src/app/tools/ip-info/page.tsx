@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface InfoItem {
   label: string;
@@ -115,6 +116,9 @@ export default function IpInfoPage() {
           <p>VPNや代理サーバー使用時は、実際の接続IPアドレスが表示されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="ip-info" category="開発ツール" />
     </div>
   );
 }

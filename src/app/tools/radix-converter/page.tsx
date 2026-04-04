@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function RadixConverterPage() {
   const [input, setInput] = useState("255");
@@ -51,6 +52,9 @@ export default function RadixConverterPage() {
         )}
       </div>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">進数変換ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>値を入力し、その値の基数を選択すると、2進数・8進数・10進数・16進数に自動変換されます。</p><p>プログラミングやネットワーク設定での進数変換にご活用ください。各値をクリックでコピーできます。</p></div></section>
+
+
+      <RelatedTools currentSlug="radix-converter" category="開発ツール" />
     </div>
   );
 }

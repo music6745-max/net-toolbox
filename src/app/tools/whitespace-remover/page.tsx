@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Options = {
   trimLines: boolean;
@@ -198,6 +199,9 @@ export default function WhitespaceRemoverPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="whitespace-remover" category="テキスト" />
     </div>
   );
 }

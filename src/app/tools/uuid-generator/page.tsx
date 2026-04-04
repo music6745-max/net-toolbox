@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function UuidGeneratorPage() {
   const [count, setCount] = useState(1);
@@ -121,6 +122,9 @@ export default function UuidGeneratorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="uuid-generator" category="開発ツール" />
     </div>
   );
 }

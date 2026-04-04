@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type InputFormat = "decimal" | "binary" | "hex" | "integer";
 
@@ -224,6 +225,9 @@ export default function IpConverterPage() {
           <p>※ このツールはIPv4アドレス専用です。IPv6には対応していません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="ip-converter" category="開発ツール" />
     </div>
   );
 }

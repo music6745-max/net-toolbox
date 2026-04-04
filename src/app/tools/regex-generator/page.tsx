@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Pattern = {
   name: string;
@@ -296,6 +297,9 @@ export default function RegexGeneratorPage() {
           <p>コピーしたパターンはJavaScript（new RegExp）やその他の言語でそのまま使用できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="regex-generator" category="開発ツール" />
     </div>
   );
 }

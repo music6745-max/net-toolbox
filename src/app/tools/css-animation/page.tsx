@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function CssAnimationPage() {
   const [duration, setDuration] = useState(1);
@@ -186,6 +187,9 @@ export default function CssAnimationPage() {
           <p>生成されたコードは @keyframes と .animated-box のセットで構成されています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-animation" category="デザイン" />
     </div>
   );
 }

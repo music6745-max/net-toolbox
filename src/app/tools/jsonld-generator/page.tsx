@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type SchemaType = "Article" | "Product" | "FAQ" | "Breadcrumb";
 
@@ -326,6 +327,9 @@ export default function JsonLdGeneratorPage() {
           <p>4. Google検索コンソールのリッチリザルトテストで検証することをお勧めします。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="jsonld-generator" category="開発ツール" />
     </div>
   );
 }

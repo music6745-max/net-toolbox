@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function calcMortgage(principal: number, annualRate: number, years: number) {
   const p = principal * 10000; // 万円 → 円
@@ -123,6 +124,9 @@ export default function MortgageCalculatorPage() {
           <p>※ 本ツールはシミュレーション用途です。実際のローン審査・契約は金融機関にご相談ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="mortgage-calculator" category="日常ツール" />
     </div>
   );
 }

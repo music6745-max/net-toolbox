@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const COMMON_PATTERNS = [
   "password", "123456", "qwerty", "abc123", "letmein", "monkey", "dragon",
@@ -132,6 +133,9 @@ export default function PasswordStrengthPage() {
           <p>入力されたパスワードはすべてブラウザ内で処理され、サーバーには送信されません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="password-strength" category="セキュリティ" />
     </div>
   );
 }

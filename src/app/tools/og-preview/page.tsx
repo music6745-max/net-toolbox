@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function OgPreviewPage() {
   const [title, setTitle] = useState("");
@@ -160,6 +161,9 @@ ${siteName ? `<meta property="og:site_name" content="${siteName}" />` : ""}
           <p>4. 生成されたメタタグをHTMLの&lt;head&gt;内に貼り付けてご利用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="og-preview" category="開発ツール" />
     </div>
   );
 }

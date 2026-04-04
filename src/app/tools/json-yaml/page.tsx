@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function jsonToYaml(obj: unknown, indent = 0): string {
   const pad = "  ".repeat(indent);
@@ -317,6 +318,9 @@ export default function JsonYamlPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="json-yaml" category="開発ツール" />
     </div>
   );
 }

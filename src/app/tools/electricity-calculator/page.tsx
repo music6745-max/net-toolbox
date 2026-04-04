@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const PRESETS = [
   { name: "エアコン（冷房）", watts: 860 },
@@ -132,6 +133,9 @@ export default function ElectricityCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="electricity-calculator" category="日常ツール" />
     </div>
   );
 }

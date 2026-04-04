@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function LotteryPage() {
   const [items, setItems] = useState(
@@ -186,6 +187,9 @@ export default function LotteryPage() {
           <p>5. すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="lottery" category="日常ツール" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const UNITS = ["B", "KB", "MB", "GB", "TB", "PB"] as const;
 type Unit = typeof UNITS[number];
@@ -96,6 +97,9 @@ export default function DataSizeConverterPage() {
           <p>2進数モード（1KB = 1024B）はコンピュータの実際のメモリ計算に、10進数モード（1KB = 1000B）はストレージメーカーの表記に使われます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="data-size-converter" category="開発ツール" />
     </div>
   );
 }

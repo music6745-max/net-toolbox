@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const LOREM_PARAGRAPHS = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -101,6 +102,9 @@ export default function LoremIpsumPage() {
           <p>Lorem IpsumはWebデザインや印刷物のレイアウト確認用のダミーテキストとして広く使われています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="lorem-ipsum" category="テキスト" />
     </div>
   );
 }

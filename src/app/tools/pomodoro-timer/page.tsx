@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Phase = "work" | "break";
 
@@ -192,6 +193,9 @@ export default function PomodoroTimerPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="pomodoro-timer" category="日常ツール" />
     </div>
   );
 }

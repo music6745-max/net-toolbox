@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function RandomNumberPage() {
   const [min, setMin] = useState("1");
@@ -174,6 +175,9 @@ export default function RandomNumberPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="random-number" category="日常ツール" />
     </div>
   );
 }

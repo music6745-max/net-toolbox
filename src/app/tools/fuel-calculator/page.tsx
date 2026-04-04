@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function FuelCalculatorPage() {
   const [distance, setDistance] = useState("");
@@ -107,6 +108,9 @@ export default function FuelCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="fuel-calculator" category="日常ツール" />
     </div>
   );
 }

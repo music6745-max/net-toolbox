@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const STORAGE_KEY = "toolbox_todo_items";
 
@@ -206,6 +207,9 @@ export default function TodoListPage() {
           <p>タスクはブラウザのlocalStorageに自動保存されるため、再読み込みしても消えません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="todo-list" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface KeyInfo {
   key: string;
@@ -141,6 +142,9 @@ export default function KeycodeCheckerPage() {
           <p>最新10件の押下履歴も一覧で確認できます。JavaScript のキーイベント処理に活用してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="keycode-checker" category="開発ツール" />
     </div>
   );
 }

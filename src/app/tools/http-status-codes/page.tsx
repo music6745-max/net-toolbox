@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const STATUS_CODES = [
   // 1xx
@@ -162,6 +163,9 @@ export default function HttpStatusCodesPage() {
           <p>検索ボックスにコード番号や英語名、日本語の説明を入力してリアルタイムで絞り込めます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="http-status-codes" category="開発ツール" />
     </div>
   );
 }

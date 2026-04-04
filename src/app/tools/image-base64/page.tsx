@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatBytes(bytes: number): string {
   if (bytes < 1024) return `${bytes} B`;
@@ -163,6 +164,9 @@ export default function ImageBase64Page() {
           <p>Base64変換により元ファイルより約33%サイズが増加します。CSSの background-image や img src 属性に直接埋め込めます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="image-base64" category="画像・メディア" />
     </div>
   );
 }

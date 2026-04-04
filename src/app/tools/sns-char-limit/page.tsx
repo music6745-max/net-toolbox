@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Platform = {
   name: string;
@@ -142,6 +143,9 @@ export default function SnsCharLimitPage() {
           <p>絵文字は一般的に2文字としてカウントされる場合があります（SNSによって異なります）。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="sns-char-limit" category="テキスト" />
     </div>
   );
 }

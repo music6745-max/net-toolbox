@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const RATIOS = [
   {
@@ -151,6 +152,9 @@ export default function AspectRatioListPage() {
           <p>動画制作・Web設計・印刷物のサイズ選定にご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="aspect-ratio-list" category="デザイン" />
     </div>
   );
 }

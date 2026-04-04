@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface SizeInfo {
   screenWidth: number;
@@ -126,6 +127,9 @@ export default function ScreenSizePage() {
           <p>「ビューポート幅/高さ」がCSSのメディアクエリで参照されるサイズです。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="screen-size" category="開発ツール" />
     </div>
   );
 }

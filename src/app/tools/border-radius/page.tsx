@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const PRESETS = [
   { label: "角なし", tl: 0, tr: 0, br: 0, bl: 0 },
@@ -122,6 +123,9 @@ export default function BorderRadiusPage() {
           <p>プリセットから一般的な角丸スタイルを素早く選ぶこともできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="border-radius" category="デザイン" />
     </div>
   );
 }

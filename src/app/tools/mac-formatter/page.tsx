@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function parseMac(input: string): string | null {
   // Remove all separators and whitespace
@@ -166,6 +167,9 @@ export default function MacFormatterPage() {
           <p>4. OUI（最初の3バイト）はIEEEに登録されたベンダー識別子です。ローカル管理アドレス（LAA）の場合はベンダー識別としては使用されません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="mac-formatter" category="開発ツール" />
     </div>
   );
 }

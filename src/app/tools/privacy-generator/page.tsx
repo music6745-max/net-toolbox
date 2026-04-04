@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type FormData = {
   siteName: string;
@@ -234,6 +235,9 @@ export default function PrivacyGeneratorPage() {
           <p>法的な問題については必ず専門の弁護士・行政書士にご相談ください。このツールは法的助言を提供するものではありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="privacy-generator" category="開発ツール" />
     </div>
   );
 }

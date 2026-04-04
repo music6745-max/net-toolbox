@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function SplitBillPage() {
   const [total, setTotal] = useState("");
@@ -175,6 +176,9 @@ export default function SplitBillPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="split-bill" category="日常ツール" />
     </div>
   );
 }

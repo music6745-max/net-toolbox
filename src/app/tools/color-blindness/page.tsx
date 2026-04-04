@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -114,6 +115,9 @@ export default function ColorBlindnessPage() {
           <p>赤色覚異常（1型）・緑色覚異常（2型）は男性の約5%、青色覚異常（3型）は非常に稀です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="color-blindness" category="デザイン" />
     </div>
   );
 }

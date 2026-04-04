@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 // Code 128B encoding table
 const CODE128B_START = 104;
@@ -220,6 +221,9 @@ export default function BarcodeGeneratorPage() {
           <p>Code128Bフォーマットで生成されます。生成はすべてブラウザ内で行われます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="barcode-generator" category="画像・メディア" />
     </div>
   );
 }

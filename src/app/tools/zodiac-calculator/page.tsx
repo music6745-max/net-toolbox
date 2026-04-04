@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const ZODIAC = [
   { name: "子", reading: "ね", animal: "ネズミ", en: "Rat" },
@@ -89,6 +90,9 @@ export default function ZodiacCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="zodiac-calculator" category="日常ツール" />
     </div>
   );
 }

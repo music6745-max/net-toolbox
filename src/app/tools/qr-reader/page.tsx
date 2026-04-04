@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type ImageInfo = {
   name: string;
@@ -242,6 +243,9 @@ export default function ImageInfoPage() {
           <p>すべての処理はブラウザ内で完結し、画像が外部サーバーに送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="qr-reader" category="画像・メディア" />
     </div>
   );
 }

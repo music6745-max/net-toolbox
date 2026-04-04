@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 async function hashText(text: string, algorithm: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -86,6 +87,9 @@ export default function HashGeneratorPage() {
           <p>データの整合性チェックやセキュリティ用途にご活用ください。すべての処理はブラウザ内で完結します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="hash-generator" category="セキュリティ" />
     </div>
   );
 }

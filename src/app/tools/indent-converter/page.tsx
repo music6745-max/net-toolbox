@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Direction = "tab-to-space" | "space-to-tab";
 
@@ -128,6 +129,9 @@ export default function IndentConverterPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="indent-converter" category="テキスト" />
     </div>
   );
 }

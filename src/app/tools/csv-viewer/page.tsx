@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function parseCSV(text: string): string[][] {
   const lines = text.split(/\r?\n/);
@@ -197,6 +198,9 @@ export default function CsvViewerPage() {
           <p>※ クォート（"）で囲まれたフィールドやカンマを含む値にも対応しています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="csv-viewer" category="開発ツール" />
     </div>
   );
 }

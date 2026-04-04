@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface GitignoreTemplate {
   id: string;
@@ -379,6 +380,9 @@ export default function GitignoreGeneratorPage() {
           <p>4. 「コピー」ボタンで内容をコピーし、プロジェクトルートの.gitignoreファイルに貼り付けてください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="gitignore-generator" category="開発ツール" />
     </div>
   );
 }

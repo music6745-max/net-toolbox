@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface ColorStop {
   color: string;
@@ -198,6 +199,9 @@ export default function CssGradientPage() {
           <p>5. 「コピー」ボタンでCSSコードをクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-gradient" category="デザイン" />
     </div>
   );
 }

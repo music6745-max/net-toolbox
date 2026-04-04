@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const RECOMMENDED_MAX = 60;
 const PIXEL_LIMIT = 580; // approximate px limit Google uses
@@ -99,6 +100,9 @@ export default function TitleCheckerPage() {
           <p>タイトルは主要キーワードを含み、30〜60文字程度に収めることが推奨されています。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="title-checker" category="開発ツール" />
     </div>
   );
 }

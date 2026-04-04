@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Phase = "idle" | "waiting" | "ready" | "clicked" | "toosoon";
 
@@ -181,6 +182,9 @@ export default function ReactionTestPage() {
           <p>一般的な反応速度の目安: 150〜200ms=良好、200〜300ms=普通、300ms以上=改善の余地あり。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="reaction-test" category="日常ツール" />
     </div>
   );
 }

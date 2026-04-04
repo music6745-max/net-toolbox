@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToHsl(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -162,6 +163,9 @@ export default function ColorPalettePage() {
           <p>Webデザインやグラフィックデザインの配色選びにご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="color-palette" category="デザイン" />
     </div>
   );
 }

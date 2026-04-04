@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function calcBedtimes(wakeHour: number, wakeMin: number) {
   const results: { cycles: number; bedtime: string; totalHours: string }[] = [];
@@ -111,6 +112,9 @@ export default function SleepCalculatorPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="sleep-calculator" category="日常ツール" />
     </div>
   );
 }

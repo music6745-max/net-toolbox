@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface Config {
   forceHttps: boolean;
@@ -359,6 +360,9 @@ export default function HtaccessGeneratorPage() {
           <p>.htaccessはApache Webサーバーの設定ファイルです。設定を変更するとサイトの動作に影響するため、バックアップを取ってから適用してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="htaccess-generator" category="開発ツール" />
     </div>
   );
 }

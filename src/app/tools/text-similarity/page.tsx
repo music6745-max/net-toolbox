@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function levenshtein(a: string, b: string): number {
   const m = a.length;
@@ -123,6 +124,9 @@ export default function TextSimilarityPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-similarity" category="テキスト" />
     </div>
   );
 }

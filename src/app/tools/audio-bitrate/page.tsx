@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const PRESETS = [
   { label: "MP3 128kbps", bitrate: 128 },
@@ -117,6 +118,9 @@ export default function AudioBitratePage() {
           <p>計算式: ファイルサイズ = ビットレート × 再生秒数 ÷ 8</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="audio-bitrate" category="画像・メディア" />
     </div>
   );
 }

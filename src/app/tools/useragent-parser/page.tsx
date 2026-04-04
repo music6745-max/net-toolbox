@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface ParsedUA {
   browser: string;
@@ -209,6 +210,9 @@ export default function UserAgentParserPage() {
           <p>ブラウザ・OS・デバイス種別・レンダリングエンジンを判定して表示します。すべての処理はブラウザ内で完結します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="useragent-parser" category="開発ツール" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const EMOTICON_TO_EMOJI: [string, string][] = [
   [":)", "😊"], [":-)", "😊"], [":D", "😄"], [":-D", "😄"],
@@ -113,6 +114,9 @@ export default function EmojiConverterPage() {
           <p>「絵文字 → 顔文字」モードでは絵文字をテキスト顔文字に変換します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="emoji-converter" category="テキスト" />
     </div>
   );
 }

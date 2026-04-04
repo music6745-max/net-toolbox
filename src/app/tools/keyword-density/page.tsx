@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function calcDensity(text: string, keyword: string) {
   if (!text.trim() || !keyword.trim()) return { count: 0, density: 0, wordCount: 0 };
@@ -96,6 +97,9 @@ export default function KeywordDensityPage() {
           <p>日本語テキストには文字数ベースの計算を、英語テキストには単語数ベースの計算を適用します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="keyword-density" category="開発ツール" />
     </div>
   );
 }

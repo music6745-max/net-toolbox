@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function formatXML(xml: string, indentSize: number): string {
   const indentStr = " ".repeat(indentSize);
@@ -163,6 +164,9 @@ export default function XmlFormatterPage() {
           <p>XMLに構文エラーがある場合は、エラー内容が表示されます。すべての処理はブラウザ内で完結します。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="xml-formatter" category="開発ツール" />
     </div>
   );
 }

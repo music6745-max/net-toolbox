@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function JsonMinifyPage() {
   const [input, setInput] = useState("");
@@ -169,6 +170,9 @@ export default function JsonMinifyPage() {
           <p>5. 「コピー」ボタンで圧縮済みJSONをクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="json-minify" category="開発ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function CharacterCountPage() {
   const [text, setText] = useState("");
@@ -79,6 +80,9 @@ export default function CharacterCountPage() {
           <p>Twitter（X）の文字数制限チェックや、レポートの文字数確認にご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="character-count" category="テキスト" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function base64UrlDecode(str: string): string {
   // Replace URL-safe chars and pad
@@ -259,6 +260,9 @@ export default function JwtDecoderPage() {
           <p>5. 本番環境のJWTには個人情報や認証情報が含まれる場合があります。取り扱いに注意してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="jwt-decoder" category="開発ツール" />
     </div>
   );
 }

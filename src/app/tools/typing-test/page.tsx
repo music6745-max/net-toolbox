@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const SAMPLE_TEXTS = [
   "日本語のタイピング練習をしましょう。毎日少しずつ練習することで速度が上がります。正確さも大切にしながら、リズムよく入力することが上達の近道です。",
@@ -222,6 +223,9 @@ export default function TypingTestPage() {
           <p>一般的なタイピング速度の目安: 200CPM以下=初心者、300CPM=中級者、500CPM以上=上級者。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="typing-test" category="日常ツール" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const FULL_TO_HALF: Record<string, string> = {
   ア: "ｱ", イ: "ｲ", ウ: "ｳ", エ: "ｴ", オ: "ｵ",
@@ -163,6 +164,9 @@ export default function HalfwidthKatakanaPage() {
           <p>※ 濁点（ﾞ）・半濁点（ﾟ）を含む半角カタカナも正しく全角に変換されます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="halfwidth-katakana" category="テキスト" />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type BaseImage = "node" | "node-alpine" | "python" | "nginx" | "ubuntu" | "alpine" | "go" | "ruby" | "php";
 
@@ -282,6 +283,9 @@ export default function DockerTemplatePage() {
           <p>生成されるテンプレートはベストプラクティスに基づいており、必要に応じてカスタマイズして使用してください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="docker-template" category="開発ツール" />
     </div>
   );
 }

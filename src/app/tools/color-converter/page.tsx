@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function hexToRgb(hex: string): [number, number, number] | null {
   const match = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
@@ -214,6 +215,9 @@ export default function ColorConverterPage() {
           <p>Webデザインやアプリ開発でのカラーコード確認にご活用ください。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="color-converter" category="デザイン" />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const MIN = 120;
 const MAX = 160;
@@ -97,6 +98,9 @@ export default function MetaDescriptionCheckerPage() {
           <p>主要キーワードを自然に含め、ユーザーがクリックしたくなる説明文を心がけましょう。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="meta-description-checker" category="開発ツール" />
     </div>
   );
 }

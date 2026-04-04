@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function LineNumberPage() {
   const [input, setInput] = useState("");
@@ -102,6 +103,9 @@ export default function LineNumberPage() {
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="line-number" category="テキスト" />
     </div>
   );
 }

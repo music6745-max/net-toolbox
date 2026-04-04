@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 interface ByteStats {
   utf8: number;
@@ -173,6 +174,9 @@ export default function ByteCounterPage() {
           </p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="byte-counter" category="開発ツール" />
     </div>
   );
 }

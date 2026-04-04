@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 export default function CssFlexboxPage() {
   const [direction, setDirection] = useState("row");
@@ -141,6 +142,9 @@ export default function CssFlexboxPage() {
           <p>wrap を有効にするとアイテムが折り返され、align-content が有効になります。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="css-flexbox" category="デザイン" />
     </div>
   );
 }

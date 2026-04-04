@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 // Common mojibake patterns and their fixes (Shift-JIS read as Latin-1 → UTF-8)
 const MOJIBAKE_MAP: [RegExp, string][] = [
@@ -124,6 +125,9 @@ export default function EncodingDetectorPage() {
           <p>注意：ブラウザ上でのバイト操作のため、すべての文字化けを修復できるわけではありません。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="encoding-detector" category="テキスト" />
     </div>
   );
 }

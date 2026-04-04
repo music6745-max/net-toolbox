@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 function computeDiff(a: string, b: string) {
   const linesA = a.split("\n");
@@ -95,6 +96,9 @@ export default function TextDiffPage() {
           <p>コードレビューや文書の変更確認に便利です。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="text-diff" category="テキスト" />
     </div>
   );
 }

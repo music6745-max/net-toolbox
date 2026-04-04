@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type CaseType = "upper" | "lower" | "title" | "camel" | "snake" | "kebab";
 
@@ -123,6 +124,9 @@ export default function CaseConverterPage() {
           <p>各変換結果の右の「コピー」ボタンでクリップボードにコピーできます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="case-converter" category="テキスト" />
     </div>
   );
 }

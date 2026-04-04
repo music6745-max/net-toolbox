@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { RelatedTools } from "@/components/RelatedTools";
 
 type Hand = "gu" | "choki" | "pa";
 
@@ -174,6 +175,9 @@ export default function JankenPage() {
           <p>4. 「スコアをリセット」ボタンで記録を初期化できます。</p>
         </div>
       </section>
+
+
+      <RelatedTools currentSlug="janken" category="日常ツール" />
     </div>
   );
 }
