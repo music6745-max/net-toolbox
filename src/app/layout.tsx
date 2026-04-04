@@ -90,7 +90,7 @@ export default function RootLayout({
             <div className="text-center mb-4">
               <span className="text-xs">姉妹サイト: </span>
               <a
-                href="https://ai-tools-navi.vercel.app"
+                href="https://ai-tools-navi-navy.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs hover:text-primary"
