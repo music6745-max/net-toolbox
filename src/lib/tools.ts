@@ -362,5 +362,5 @@ export const tools: Tool[] = [
 export const siteConfig = {
   name: "ネットツールボックス",
   description: "無料で使えるWeb便利ツール集。QRコード作成、文字数カウント、パスワード生成など、日常で使えるツールが揃っています。",
-  url: "https://net-toolbox.vercel.app",
+  url: "https://net-toolbox.jp",
 };
