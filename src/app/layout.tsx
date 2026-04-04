@@ -32,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="h-full antialiased">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6483317297217533"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <header className="bg-white border-b border-card-border sticky top-0 z-50">
           <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
