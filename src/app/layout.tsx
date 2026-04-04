@@ -87,6 +87,17 @@ export default function RootLayout({
               <Link href="/terms" className="hover:text-primary">利用規約</Link>
               <Link href="/contact" className="hover:text-primary">お問い合わせ</Link>
             </div>
+            <div className="text-center mb-4">
+              <span className="text-xs">姉妹サイト: </span>
+              <a
+                href="https://ai-tools-navi.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs hover:text-primary"
+              >
+                🤖 AIツールナビ - AIツール比較・おすすめガイド
+              </a>
+            </div>
             <p className="text-center">&copy; 2026 {siteConfig.name}. All rights reserved.</p>
             <p className="mt-1 text-center">
               すべてのツールは無料でご利用いただけます。データはブラウザ内で処理され、サーバーに送信されません。
