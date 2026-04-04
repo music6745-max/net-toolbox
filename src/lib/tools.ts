@@ -517,6 +517,12 @@ export const tools: Tool[] = [
   { slug: "box-shadow", name: "box-shadow生成", description: "CSSのbox-shadowをスライダーで視覚的に作成。複数シャドウ対応。", icon: "🎭", category: "デザイン" },
   { slug: "flexbox-generator", name: "Flexboxジェネレーター", description: "Flexboxのプロパティを視覚的に設定しCSSコードを自動生成。", icon: "📐", category: "デザイン" },
   { slug: "wifi-qr", name: "WiFi QRコード", description: "WiFiのSSIDとパスワードからQRコードを生成。スマホで読み取り接続。", icon: "📶", category: "日常ツール" },
+  { slug: "text-repeat", name: "テキスト繰り返し", description: "テキストをN回繰り返して生成。テストデータ作成やダミーテキスト生成に。", icon: "🔁", category: "テキスト" },
+  { slug: "url-encoder", name: "URLエンコード変換", description: "URLの特殊文字をencodeURIComponent/encodeURIでエンコード・デコード。", icon: "🔗", category: "開発ツール" },
+  { slug: "image-crop", name: "画像切り抜き", description: "ブラウザ内で画像をトリミング・切り抜きしてダウンロード。サーバー送信不要。", icon: "✂️", category: "画像・メディア" },
+  { slug: "typography-scale", name: "タイポグラフィスケール", description: "ベースサイズと比率からフォントサイズスケールを自動生成。", icon: "🔤", category: "デザイン" },
+  { slug: "base-converter", name: "進数変換", description: "2進数・8進数・10進数・16進数を相互変換。プログラミング学習に。", icon: "🔢", category: "開発ツール" },
+  { slug: "dns-lookup", name: "DNS情報確認", description: "ドメインのDNSレコード情報を確認。A/MX/NS/TXTレコード対応。", icon: "🌐", category: "開発ツール" },
 ];
 
 export const siteConfig = {
