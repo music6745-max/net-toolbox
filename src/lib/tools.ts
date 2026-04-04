@@ -507,6 +507,11 @@ export const tools: Tool[] = [
   { slug: "lorem-jp", name: "日本語ダミーテキスト（名文）", description: "名作文学からサンプル文を生成。", icon: "📚", category: "テキスト" },
   { slug: "cidr-calculator", name: "CIDRサブネット計算", description: "IPサブネットの範囲・ホスト数を計算。", icon: "🌐", category: "開発ツール" },
   { slug: "interview-timer", name: "面接タイマー", description: "面接の時間配分をステージ別に管理。", icon: "🤝", category: "日常ツール" },
+  { slug: "ip-address", name: "IPアドレス確認", description: "現在のグローバルIPアドレスとユーザーエージェント情報を表示。", icon: "🌐", category: "開発ツール" },
+  { slug: "http-status", name: "HTTPステータスコード一覧", description: "HTTPステータスコードの意味を検索・一覧表示。Web開発の参照に。", icon: "📡", category: "開発ツール" },
+  { slug: "countdown-timer", name: "カウントダウンタイマー", description: "目標日時までの残り時間をリアルタイムで表示。", icon: "⏰", category: "日常ツール" },
+  { slug: "image-compressor", name: "画像圧縮", description: "ブラウザ内で画像を圧縮・軽量化。サーバー送信なしで安心。", icon: "🗜️", category: "画像・メディア" },
+  { slug: "favicon-generator", name: "ファビコン生成", description: "テキストや絵文字からファビコンを作成。色・形状カスタマイズ対応。", icon: "⭐", category: "デザイン" },
 ];
 
 export const siteConfig = {
