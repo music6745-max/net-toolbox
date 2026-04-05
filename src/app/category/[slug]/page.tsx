@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export function generateStaticParams() {
-  return categories.map((c) => ({ slug: encodeURIComponent(c.slug) }));
+  return categories.map((c) => ({ slug: c.slug }));
 }
 
 export default async function CategoryPage({ params }: Props) {
@@ -79,7 +79,7 @@ export default async function CategoryPage({ params }: Props) {
             .map((c) => (
               <Link
                 key={c.slug}
-                href={`/category/${encodeURIComponent(c.slug)}`}
+                href={`/category/${c.slug}`}
                 className="inline-flex items-center gap-2 bg-card-bg border border-card-border rounded-lg px-4 py-2 text-sm hover:border-primary/30 hover:shadow-sm transition-all"
               >
                 <span>{c.icon}</span>

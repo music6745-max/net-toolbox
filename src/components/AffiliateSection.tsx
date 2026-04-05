@@ -245,6 +245,105 @@ const TOOL_SPECIFIC: Record<string, Recommendation[]> = {
       tag: "転職",
     },
   ],
+  "blood-pressure": [
+    {
+      title: "タニタ 血圧計",
+      description: "正確な測定で毎日の健康管理。スマホ連携で記録を簡単管理。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=タニタ+血圧計",
+      tag: "健康機器",
+    },
+  ],
+  "pregnancy-due-date": [
+    {
+      title: "ゼクシィBaby - 妊娠・出産情報",
+      description: "妊娠・出産に役立つ情報が満載。無料の妊婦雑誌もお届け。",
+      linkText: "無料登録する",
+      url: "https://zexybaby.zexy.net/",
+      tag: "マタニティ",
+    },
+  ],
+  "pace-calculator": [
+    {
+      title: "Garmin - ランニングウォッチ",
+      description: "GPS搭載のランニングウォッチで正確なペース・距離を記録。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=Garmin+ランニングウォッチ",
+      tag: "ランニング",
+    },
+  ],
+  "shoe-size": [
+    {
+      title: "Amazon - シューズ",
+      description: "サイズがわかったらAmazonで購入。返品無料のTry Before You Buy対応。",
+      linkText: "シューズを探す",
+      url: "https://www.amazon.co.jp/b?node=2016926051",
+      tag: "ショッピング",
+    },
+  ],
+  "unit-price": [
+    {
+      title: "Amazon - お得な大容量商品",
+      description: "まとめ買いで単価を下げてお得に。定期おトク便でさらに割引。",
+      linkText: "お得商品を探す",
+      url: "https://www.amazon.co.jp/s?k=お得+大容量",
+      tag: "節約",
+    },
+  ],
+  "grade-calculator": [
+    {
+      title: "スタディサプリ - オンライン学習",
+      description: "月額2,178円で全教科の授業が見放題。テスト対策・受験対策に。",
+      linkText: "無料体験する",
+      url: "https://studysapuri.jp/",
+      tag: "学習",
+    },
+  ],
+  "jwt-generator": [
+    {
+      title: "NordVPN - セキュリティ対策",
+      description: "開発・テスト環境のセキュリティ強化に。公共WiFiでも安全に作業。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+      tag: "セキュリティ",
+    },
+  ],
+  "ip-subnet": [
+    {
+      title: "ConoHa VPS - 開発用サーバー",
+      description: "初期費用無料、月682円〜。ネットワーク学習やサーバー構築の実験環境に。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+      tag: "VPS",
+    },
+  ],
+  "csp-generator": [
+    {
+      title: "エックスサーバー - セキュアなホスティング",
+      description: "WAF・SSL標準搭載の安全なサーバー。CSP設定もカスタマイズ可能。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+      tag: "サーバー",
+    },
+  ],
+  "moving-cost": [
+    {
+      title: "SUUMO引越し見積もり",
+      description: "複数の引越し業者に一括見積もり。最安値がすぐわかる。",
+      linkText: "無料見積もり",
+      url: "https://hikkoshi.suumo.jp/",
+      tag: "引越し",
+    },
+  ],
+  "wedding-cost": [
+    {
+      title: "ゼクシィ - 結婚準備",
+      description: "式場探し・費用相場・見積もり比較。結婚準備のすべてがわかる。",
+      linkText: "式場を探す",
+      url: "https://zexy.net/",
+      tag: "ウェディング",
+    },
+  ],
   "tax-calculator": [
     {
       title: "freee - クラウド会計ソフト",

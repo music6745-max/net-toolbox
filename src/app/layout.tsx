@@ -94,7 +94,7 @@ export default function RootLayout({
               {categories.slice(0, 4).map((cat) => (
                 <Link
                   key={cat.slug}
-                  href={`/category/${encodeURIComponent(cat.slug)}`}
+                  href={`/category/${cat.slug}`}
                   className="hover:text-primary transition-colors"
                 >
                   {cat.icon} {cat.slug}
@@ -112,7 +112,7 @@ export default function RootLayout({
                 {categories.map((cat) => (
                   <Link
                     key={cat.slug}
-                    href={`/category/${encodeURIComponent(cat.slug)}`}
+                    href={`/category/${cat.slug}`}
                     className="hover:text-primary transition-colors"
                   >
                     {cat.icon} {cat.name}

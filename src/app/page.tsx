@@ -50,7 +50,7 @@ export default function Home() {
         {categories.map((cat) => (
           <Link
             key={cat.slug}
-            href={`/category/${encodeURIComponent(cat.slug)}`}
+            href={`/category/${cat.slug}`}
             className="inline-flex items-center gap-1.5 bg-card-bg border border-card-border rounded-full px-4 py-2 text-sm hover:border-primary/30 hover:shadow-sm transition-all"
           >
             <span>{cat.icon}</span>
@@ -70,7 +70,7 @@ export default function Home() {
               {cat.icon} {cat.name}
             </h2>
             <Link
-              href={`/category/${encodeURIComponent(cat.slug)}`}
+              href={`/category/${cat.slug}`}
               className="text-sm text-primary hover:underline"
             >
               すべて見る →
