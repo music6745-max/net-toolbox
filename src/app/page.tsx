@@ -168,29 +168,29 @@ export default function Home() {
       </section>
 
       {/* Sister Site Section */}
-      <section className="mt-8 border border-card-border rounded-xl p-8" style={{ background: "linear-gradient(to right, #f5f3ff, #eff6ff)" }}>
+      <section className="mt-8 rounded-xl p-8" style={{ background: "linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)", color: "#ffffff" }}>
         <div className="flex items-center gap-4 mb-4">
           <span className="text-4xl">🤖</span>
           <div>
-            <h2 className="text-xl font-bold">AIツールもお探しですか？</h2>
-            <p className="text-sm text-muted">姉妹サイト「AIツールナビ」で100以上のAIツールを比較</p>
+            <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>AIツールもお探しですか？</h2>
+            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「AIツールナビ」で115以上のAIツールを比較・解説</p>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
-          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
-            <div className="text-sm font-medium">ChatGPT vs Claude</div>
-            <div className="text-xs text-muted">AIチャット比較</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>ChatGPT vs Claude</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIチャット比較</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
-            <div className="text-sm font-medium">AI英語学習ガイド</div>
-            <div className="text-xs text-muted">AIで英語力UP</div>
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI英語学習ガイド</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIで英語力UP</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
-            <div className="text-sm font-medium">AI副業ガイド</div>
-            <div className="text-xs text-muted">月5万円を目指す</div>
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI副業ガイド</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>月5万円を目指す</div>
           </a>
         </div>
-        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-primary hover:underline font-medium">
+        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#7c3aed" }}>
           AIツールナビを見る →
         </a>
       </section>
