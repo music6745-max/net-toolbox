@@ -131,6 +131,26 @@ const guides = [
     readTime: "15分",
     icon: "💼",
   },
+  {
+    slug: "online-english-comparison",
+    title:
+      "【2026年最新】オンライン英会話比較おすすめ5選｜料金・講師・特徴を徹底解説",
+    description:
+      "DMM英会話・NativeCamp・QQEnglish・Kimini英会話・AQUESの料金・講師・レッスン内容を徹底比較。初心者からビジネス英語、TOEIC対策まで目的別おすすめも紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🗣️",
+  },
+  {
+    slug: "programming-school-comparison",
+    title:
+      "【2026年最新】プログラミングスクール比較おすすめ5選｜料金・言語・転職支援を徹底解説",
+    description:
+      "テックアカデミー・DMM WEBCAMP・RUNTEQ・SkillHacks・Progateの料金・学習言語・転職サポート・受講形式を徹底比較。目的別おすすめや失敗しない選び方も紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💻",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
