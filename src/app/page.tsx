@@ -168,7 +168,7 @@ export default function Home() {
       </section>
 
       {/* Sister Site Section */}
-      <section className="mt-8 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/30 dark:to-blue-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-8">
+      <section className="mt-8 border border-card-border rounded-xl p-8" style={{ background: "linear-gradient(to right, #f5f3ff, #eff6ff)" }}>
         <div className="flex items-center gap-4 mb-4">
           <span className="text-4xl">🤖</span>
           <div>
@@ -177,20 +177,20 @@ export default function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
-          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
             <div className="text-sm font-medium">ChatGPT vs Claude</div>
             <div className="text-xs text-muted">AIチャット比較</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
             <div className="text-sm font-medium">AI英語学習ガイド</div>
             <div className="text-xs text-muted">AIで英語力UP</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="bg-card-bg rounded-lg p-3 text-center hover:shadow-md transition border border-card-border">
             <div className="text-sm font-medium">AI副業ガイド</div>
             <div className="text-xs text-muted">月5万円を目指す</div>
           </a>
         </div>
-        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-purple-600 dark:text-purple-400 hover:underline font-medium">
+        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-primary hover:underline font-medium">
           AIツールナビを見る →
         </a>
       </section>
