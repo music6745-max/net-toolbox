@@ -33,18 +33,24 @@ export function ThemeToggle() {
     applyTheme(next);
   }
 
-  const icon = theme === "dark" ? "\u{1F319}" : theme === "light" ? "\u2600\uFE0F" : "\u{1F4BB}";
-  const label = theme === "dark" ? "\u30C0\u30FC\u30AF" : theme === "light" ? "\u30E9\u30A4\u30C8" : "\u81EA\u52D5";
-
   return (
     <button
       onClick={cycle}
-      className="flex items-center gap-1 px-2 py-1 text-xs rounded-md border border-card-border bg-card-bg hover:border-primary/50 transition-colors"
-      aria-label={`\u30C6\u30FC\u30DE: ${label}`}
-      title={`\u73FE\u5728: ${label}\u30E2\u30FC\u30C9\u3000\u30AF\u30EA\u30C3\u30AF\u3067\u5207\u308A\u66FF\u3048`}
+      className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs rounded-full transition-colors"
+      style={{
+        background: theme === "dark" ? "#1e293b" : theme === "light" ? "#f8fafc" : "linear-gradient(135deg, #f8fafc 50%, #1e293b 50%)",
+        color: theme === "dark" ? "#e2e8f0" : theme === "light" ? "#1e293b" : "#64748b",
+        border: "1.5px solid",
+        borderColor: theme === "dark" ? "#475569" : theme === "light" ? "#cbd5e1" : "#94a3b8",
+      }}
+      title={`\u30AF\u30EA\u30C3\u30AF\u3067\u80CC\u666F\u8272\u3092\u5207\u308A\u66FF\u3048`}
     >
-      <span>{icon}</span>
-      <span className="hidden sm:inline">{label}</span>
+      <span style={{ fontSize: "14px" }}>
+        {theme === "dark" ? "\u{1F319}" : theme === "light" ? "\u2600\uFE0F" : "\u{1F504}"}
+      </span>
+      <span className="hidden sm:inline font-medium">
+        {theme === "dark" ? "\u30C0\u30FC\u30AF" : theme === "light" ? "\u30E9\u30A4\u30C8" : "\u81EA\u52D5"}
+      </span>
     </button>
   );
 }
