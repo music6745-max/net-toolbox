@@ -7,11 +7,11 @@ import { WebSiteJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - 無料Web便利ツール集｜250以上のオンラインツール`,
+    default: `${siteConfig.name} - 無料Web便利ツール集｜300以上のオンラインツール`,
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など250以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
+    "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など300以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
   metadataBase: new URL(siteConfig.url),
   keywords: [
     "無料Webツール",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "計算ツール",
   ],
   openGraph: {
-    title: `${siteConfig.name} - 無料Web便利ツール集｜250以上のオンラインツール`,
+    title: `${siteConfig.name} - 無料Web便利ツール集｜300以上のオンラインツール`,
     description:
-      "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など250以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
+      "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など300以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "ja_JP",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} - 無料Web便利ツール250+`,
+    title: `${siteConfig.name} - 無料Web便利ツール300+`,
     description:
-      "文字数カウント・QRコード作成・パスワード生成など250以上の無料ツール。登録不要・ブラウザ完結。",
+      "文字数カウント・QRコード作成・パスワード生成など300以上の無料ツール。登録不要・ブラウザ完結。",
     creator: "@net_toolbox_jp",
   },
   alternates: {
