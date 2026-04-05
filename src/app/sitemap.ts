@@ -17,6 +17,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const guidePages = [
+    "qr-code-howto",
+    "password-security",
+    "web-tools-for-work",
+    "developer-tools-guide",
+    "best-rental-servers",
+    "tax-software-comparison",
+    "best-vpn-services",
+    "side-business-tools",
+  ].map((slug) => ({
+    url: `${siteConfig.url}/guide/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     {
       url: siteConfig.url,
@@ -24,6 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `${siteConfig.url}/guide`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    ...guidePages,
     ...categoryPages,
     ...toolPages,
   ];

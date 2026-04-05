@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   verification: {
-    google: "-DIu5mdFjxw1ikjtlccXK53hdAfXXT3UzFNb3YU14dc",
+    google: ["-DIu5mdFjxw1ikjtlccXK53hdAfXXT3UzFNb3YU14dc", "R_xMFhMulMpq9lvf8ZpC9HYRJvF81Jie03S7l1jyHpY"],
   },
 };
 
@@ -53,6 +53,9 @@ export default function RootLayout({
               {siteConfig.name}
             </Link>
             <nav className="hidden sm:flex items-center gap-4 text-sm text-muted">
+              <Link href="/guide" className="hover:text-primary transition-colors font-medium">
+                ガイド
+              </Link>
               {categories.slice(0, 4).map((cat) => (
                 <Link
                   key={cat.slug}
@@ -80,6 +83,20 @@ export default function RootLayout({
                     {cat.icon} {cat.name}
                   </Link>
                 ))}
+              </div>
+            </div>
+            <div className="mb-6">
+              <h3 className="font-medium text-foreground mb-3 text-center">ガイド記事</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                <Link href="/guide" className="hover:text-primary transition-colors">活用ガイド一覧</Link>
+                <Link href="/guide/best-rental-servers" className="hover:text-primary transition-colors">レンタルサーバー比較</Link>
+                <Link href="/guide/tax-software-comparison" className="hover:text-primary transition-colors">確定申告ソフト比較</Link>
+                <Link href="/guide/best-vpn-services" className="hover:text-primary transition-colors">VPN比較</Link>
+                <Link href="/guide/side-business-tools" className="hover:text-primary transition-colors">副業ツール</Link>
+                <Link href="/guide/qr-code-howto" className="hover:text-primary transition-colors">QRコードの作り方</Link>
+                <Link href="/guide/password-security" className="hover:text-primary transition-colors">パスワードセキュリティ</Link>
+                <Link href="/guide/web-tools-for-work" className="hover:text-primary transition-colors">仕事効率化ツール</Link>
+                <Link href="/guide/developer-tools-guide" className="hover:text-primary transition-colors">開発者ツール活用</Link>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
