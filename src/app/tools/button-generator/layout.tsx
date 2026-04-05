@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CSSボタン生成 - 無料オンラインツール",
+  description: "色、形、影などを調整してCSSボタンのコードを生成します。登録不要・無料でブラウザ上で使えます。",
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/button-generator",
+  },
+};
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return children;
+}

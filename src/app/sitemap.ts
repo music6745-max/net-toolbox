@@ -25,8 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "best-rental-servers",
     "tax-software-comparison",
     "best-vpn-services",
+    "vpn-comparison",
+    "rental-server-comparison",
     "side-business-tools",
     "remote-work-tools",
+    "accounting-software-comparison",
   ].map((slug) => ({
     url: `${siteConfig.url}/guide/${slug}`,
     lastModified: new Date(),

@@ -5,6 +5,16 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 const guides = [
   {
+    slug: "rental-server-comparison",
+    title:
+      "【2026年最新】レンタルサーバー比較おすすめ5選｜料金・速度・WordPress対応を徹底解説",
+    description:
+      "ConoHa WING・エックスサーバー・ロリポップ・mixhost・シンレンタルサーバーの料金・速度・WordPress対応を徹底比較。初心者にも最適なサーバーが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🖥️",
+  },
+  {
     slug: "best-rental-servers",
     title: "【2026年】レンタルサーバーおすすめ比較5選｜初心者向け",
     description:
@@ -21,6 +31,24 @@ const guides = [
     category: "副業・税金",
     readTime: "8分",
     icon: "📊",
+  },
+  {
+    slug: "accounting-software-comparison",
+    title: "【2026年最新】確定申告ソフト比較おすすめ3選｜freee・弥生・マネーフォワード徹底解説",
+    description:
+      "freee・弥生会計・マネーフォワード クラウドの料金・機能・使いやすさ・e-Tax対応を徹底比較。個人事業主・フリーランスの確定申告に最適なソフトが見つかります。",
+    category: "副業・税金",
+    readTime: "15分",
+    icon: "🧾",
+  },
+  {
+    slug: "vpn-comparison",
+    title: "【2026年最新】VPN比較おすすめ3選｜料金・速度・安全性を徹底解説",
+    description:
+      "NordVPN・ExpressVPN・MillenVPNの料金・速度・セキュリティを徹底比較。無料VPNとの違いや選び方のポイントも紹介。",
+    category: "比較",
+    readTime: "12分",
+    icon: "🔐",
   },
   {
     slug: "best-vpn-services",
