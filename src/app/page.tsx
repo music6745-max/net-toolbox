@@ -3,6 +3,7 @@ import { tools, siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
 import { FAQJsonLd } from "@/components/JsonLd";
 import { ToolSearch } from "@/components/ToolSearch";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 const faqItems = [
   {
@@ -93,6 +94,9 @@ export default function Home() {
           </div>
         </section>
       ))}
+
+      {/* Mid-page ad placement */}
+      <AdSenseUnit format="horizontal" className="my-8" />
 
       {/* Guide Articles Section */}
       <section className="mb-12">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 interface Recommendation {
   title: string;
@@ -761,6 +762,8 @@ export function AffiliateSection({ slug, category }: { slug: string; category: s
         ))}
       </div>
       <p className="text-xs text-muted mt-2 text-right">※ PR・広告を含みます</p>
+      {/* Display ad after affiliate recommendations */}
+      <AdSenseUnit format="rectangle" className="mt-4" />
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { tools, type Tool } from "@/lib/tools";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 export function RelatedTools({ currentSlug, category }: { currentSlug: string; category: string }) {
   const sameCategoryTools = tools.filter(
@@ -19,6 +20,8 @@ export function RelatedTools({ currentSlug, category }: { currentSlug: string; c
 
   return (
     <section className="mt-10">
+      {/* In-content ad between tool output and related tools */}
+      <AdSenseUnit format="horizontal" className="my-8" />
       <h2 className="text-lg font-bold mb-4">関連ツール</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {related.map((tool) => (
