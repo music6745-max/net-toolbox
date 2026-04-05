@@ -10,7 +10,8 @@ export function ToolSearch() {
   const router = useRouter();
 
   function handleKeyDown(e: React.KeyboardEvent) {
-    if (e.key === "Enter" && query.trim()) {
+    if (e.key === "Enter" && !e.nativeEvent.isComposing && query.trim()) {
+      e.preventDefault();
       router.push(`/search?q=${encodeURIComponent(query.trim())}`);
       setQuery("");
     }
