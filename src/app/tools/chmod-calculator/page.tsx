@@ -2,150 +2,83 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
-type Perms = [boolean, boolean, boolean]; // read, write, execute
+const PERMS = ["---", "--x", "-w-", "-wx", "r--", "r-x", "rw-", "rwx"];
 
-function permsToNum(p: Perms): number {
-  return (p[0] ? 4 : 0) + (p[1] ? 2 : 0) + (p[2] ? 1 : 0);
-}
+export default function ChmodCalculatorPage() {
+  const [owner, setOwner] = useState([false, false, false]);
+  const [group, setGroup] = useState([false, false, false]);
+  const [other, setOther] = useState([false, false, false]);
+  const [numInput, setNumInput] = useState("");
 
-function numToPerms(n: number): Perms {
-  return [(n & 4) !== 0, (n & 2) !== 0, (n & 1) !== 0];
-}
+  const toNum = (perms: boolean[]) => (perms[0] ? 4 : 0) + (perms[1] ? 2 : 0) + (perms[2] ? 1 : 0);
+  const fromNum = (n: number): boolean[] => [(n & 4) !== 0, (n & 2) !== 0, (n & 1) !== 0];
 
-function permsToSymbol(p: Perms): string {
-  return (p[0] ? "r" : "-") + (p[1] ? "w" : "-") + (p[2] ? "x" : "-");
-}
+  const octal = String(toNum(owner)) + String(toNum(group)) + String(toNum(other));
+  const symbolic = "" + PERMS[toNum(owner)] + PERMS[toNum(group)] + PERMS[toNum(other)];
+  const command = "chmod " + octal;
 
-export default function Page() {
-  const [owner, setOwner] = useState<Perms>([true, true, true]);
-  const [group, setGroup] = useState<Perms>([true, false, true]);
-  const [other, setOther] = useState<Perms>([true, false, true]);
-  const [numericInput, setNumericInput] = useState("755");
-
-  const numeric = `${permsToNum(owner)}${permsToNum(group)}${permsToNum(other)}`;
-  const symbolic = permsToSymbol(owner) + permsToSymbol(group) + permsToSymbol(other);
-
-  const handleNumericChange = (val: string) => {
-    setNumericInput(val);
-    if (/^[0-7]{3}$/.test(val)) {
-      setOwner(numToPerms(parseInt(val[0])));
-      setGroup(numToPerms(parseInt(val[1])));
-      setOther(numToPerms(parseInt(val[2])));
+  const applyNumeric = () => {
+    const digits = numInput.padStart(3, "0").split("").map(Number);
+    if (digits.length === 3 && digits.every(d => d >= 0 && d <= 7)) {
+      setOwner(fromNum(digits[0]));
+      setGroup(fromNum(digits[1]));
+      setOther(fromNum(digits[2]));
     }
   };
 
-  const handleCheckbox = (
-    target: "owner" | "group" | "other",
-    index: number,
-    checked: boolean
-  ) => {
-    const update = (perms: Perms): Perms => {
-      const next = [...perms] as Perms;
-      next[index] = checked;
-      return next;
-    };
-    if (target === "owner") {
-      const next = update(owner);
-      setOwner(next);
-      setNumericInput(`${permsToNum(next)}${permsToNum(group)}${permsToNum(other)}`);
-    } else if (target === "group") {
-      const next = update(group);
-      setGroup(next);
-      setNumericInput(`${permsToNum(owner)}${permsToNum(next)}${permsToNum(other)}`);
-    } else {
-      const next = update(other);
-      setOther(next);
-      setNumericInput(`${permsToNum(owner)}${permsToNum(group)}${permsToNum(next)}`);
-    }
+  const labels = ["読み取り (r)", "書き込み (w)", "実行 (x)"];
+  const togglePerm = (setter: Function, perms: boolean[], idx: number) => {
+    const next = [...perms];
+    next[idx] = !next[idx];
+    setter(next);
   };
-
-  const labels = ["読取 (r)", "書込 (w)", "実行 (x)"];
-  const rows: { name: string; key: "owner" | "group" | "other"; perms: Perms }[] = [
-    { name: "所有者 (Owner)", key: "owner", perms: owner },
-    { name: "グループ (Group)", key: "group", perms: group },
-    { name: "その他 (Other)", key: "other", perms: other },
-  ];
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <nav className="text-sm text-muted mb-6">
-        <Link href="/" className="hover:text-primary">トップ</Link>
-        <span className="mx-2">/</span>
-        <span>chmod計算</span>
-      </nav>
-
-      <h1 className="text-2xl font-bold mb-2">chmod計算</h1>
-      <p className="text-muted mb-8">Linuxのファイルパーミッションを数値⇔記号表記で変換。chmodコマンド生成。</p>
-
-      <div className="bg-card-bg border border-card-border rounded-xl p-6">
-        <div className="overflow-x-auto mb-6">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-card-border">
-                <th className="text-left py-2 pr-4"></th>
-                {labels.map((l) => (
-                  <th key={l} className="text-center py-2 px-4">{l}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => (
-                <tr key={row.key} className="border-b border-card-border/50">
-                  <td className="py-3 pr-4 font-medium">{row.name}</td>
-                  {[0, 1, 2].map((i) => (
-                    <td key={i} className="text-center py-3 px-4">
-                      <input
-                        type="checkbox"
-                        checked={row.perms[i]}
-                        onChange={(e) => handleCheckbox(row.key, i, e.target.checked)}
-                        className="w-5 h-5 rounded cursor-pointer accent-primary"
-                      />
-                    </td>
-                  ))}
-                </tr>
+      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>chmod計算機</span></nav>
+      <h1 className="text-2xl font-bold mb-2">chmod計算機</h1>
+      <p className="text-muted mb-8">ファイルパーミッションの数値表記と記号表記を相互変換します。</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-6">
+        <div className="flex gap-4 items-end">
+          <div className="flex-1">
+            <label className="block text-sm font-medium mb-1">数値入力</label>
+            <input type="text" maxLength={3} value={numInput} onChange={e => setNumInput(e.target.value)} placeholder="755" className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent font-mono" />
+          </div>
+          <button onClick={applyNumeric} className="bg-primary text-white rounded-lg px-4 py-2 font-medium hover:opacity-90 transition">適用</button>
+        </div>
+        <div className="grid grid-cols-3 gap-4">
+          {[["所有者", owner, setOwner], ["グループ", group, setGroup], ["その他", other, setOther]].map(([label, perms, setter], gi) => (
+            <div key={gi}>
+              <h3 className="font-medium text-sm mb-2">{label as string}</h3>
+              {labels.map((l, i) => (
+                <label key={i} className="flex items-center gap-2 text-sm py-1 cursor-pointer">
+                  <input type="checkbox" checked={(perms as boolean[])[i]} onChange={() => togglePerm(setter as Function, perms as boolean[], i)} className="rounded" />
+                  {l}
+                </label>
               ))}
-            </tbody>
-          </table>
+            </div>
+          ))}
         </div>
-
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div>
-            <label className="text-sm font-medium mb-2 block">数値入力 (逆変換)</label>
-            <input
-              type="text"
-              value={numericInput}
-              onChange={(e) => handleNumericChange(e.target.value)}
-              maxLength={3}
-              className="w-full border border-card-border rounded-lg px-4 py-2.5 text-center text-2xl font-mono focus:outline-none focus:ring-2 focus:ring-primary/30"
-            />
+        <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+            <p className="text-xs text-muted">数値</p>
+            <p className="text-2xl font-bold font-mono">{octal}</p>
           </div>
-          <div className="flex flex-col justify-end">
-            <div className="text-xs text-muted mb-1">記号表記</div>
-            <div className="text-2xl font-mono text-center bg-black/5 dark:bg-white/5 rounded-lg px-4 py-2.5">{symbolic}</div>
+          <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+            <p className="text-xs text-muted">記号</p>
+            <p className="text-lg font-bold font-mono">{symbolic}</p>
           </div>
-        </div>
-
-        <div className="bg-primary/5 border border-primary/20 rounded-lg px-4 py-3">
-          <div className="text-xs text-muted mb-1">コマンド</div>
-          <code className="text-sm font-mono font-bold">chmod {numeric} filename</code>
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-3">
+            <p className="text-xs text-muted">コマンド</p>
+            <p className="text-lg font-bold font-mono">{command}</p>
+          </div>
         </div>
       </div>
-
-      <section className="mt-10">
-        <h2 className="text-lg font-bold mb-3">使い方</h2>
-        <div className="text-sm text-muted leading-relaxed space-y-2">
-          <p>チェックボックスで各ユーザーの権限を設定すると、数値表記と記号表記が自動更新されます。</p>
-          <p>数値入力欄に3桁の数字（例: 755）を入力すると、逆にチェックボックスが更新されます。</p>
-          <p>生成されたchmodコマンドをそのままターミナルで使用できます。</p>
-        </div>
-      </section>
-
+      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>チェックボックスでパーミッションを設定するか、数値（例: 755）を入力して適用できます。対応するchmodコマンドも表示されます。</p></div></section>
       <AffiliateSection slug="chmod-calculator" category="開発ツール" />
-
-
       <RelatedTools currentSlug="chmod-calculator" category="開発ツール" />
     </div>
   );

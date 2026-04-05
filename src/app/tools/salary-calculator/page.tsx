@@ -5,183 +5,96 @@ import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
 
-function calcTakeHome(annualSalary: number): {
-  incomeTax: number;
-  socialInsurance: number;
-  annualTakeHome: number;
-  monthlyTakeHome: number;
-  effectiveRate: number;
-} {
-  // Social insurance: ~15% of gross
-  const socialInsurance = annualSalary * 0.15;
-  const taxableIncome = annualSalary - socialInsurance;
-
-  // Rough progressive income tax (including resident tax ~10%)
-  let incomeTaxRate: number;
-  if (annualSalary <= 1_950_000) incomeTaxRate = 0.05;
-  else if (annualSalary <= 3_300_000) incomeTaxRate = 0.10;
-  else if (annualSalary <= 6_950_000) incomeTaxRate = 0.20;
-  else if (annualSalary <= 9_000_000) incomeTaxRate = 0.23;
-  else if (annualSalary <= 18_000_000) incomeTaxRate = 0.33;
-  else incomeTaxRate = 0.40;
-
-  // Basic deduction ~480,000 yen
-  const basicDeduction = 480_000;
-  // Employment income deduction (simplified)
-  let employmentDeduction: number;
-  if (annualSalary <= 1_625_000) employmentDeduction = 550_000;
-  else if (annualSalary <= 1_800_000) employmentDeduction = annualSalary * 0.40 - 100_000;
-  else if (annualSalary <= 3_600_000) employmentDeduction = annualSalary * 0.30 + 80_000;
-  else if (annualSalary <= 6_600_000) employmentDeduction = annualSalary * 0.20 + 440_000;
-  else if (annualSalary <= 8_500_000) employmentDeduction = annualSalary * 0.10 + 1_100_000;
-  else employmentDeduction = 1_950_000;
-
-  const taxBase = Math.max(0, taxableIncome - employmentDeduction - basicDeduction);
-  const incomeTax = taxBase * incomeTaxRate;
-
-  const annualTakeHome = annualSalary - socialInsurance - incomeTax;
-  const monthlyTakeHome = annualTakeHome / 12;
-  const effectiveRate = ((annualSalary - annualTakeHome) / annualSalary) * 100;
-
-  return { incomeTax, socialInsurance, annualTakeHome, monthlyTakeHome, effectiveRate };
-}
-
 export default function SalaryCalculatorPage() {
-  const [salary, setSalary] = useState("");
-  const [result, setResult] = useState<ReturnType<typeof calcTakeHome> | null>(null);
-  const [error, setError] = useState("");
+  const [annual, setAnnual] = useState("");
+  const [age, setAge] = useState("30");
+  const [dependents, setDependents] = useState("0");
+  const [result, setResult] = useState<{
+    gross: number; healthIns: number; pension: number; employment: number;
+    socialTotal: number; incomeTax: number; residentTax: number; taxTotal: number;
+    takeHome: number; monthlyTakeHome: number;
+  } | null>(null);
 
   const calculate = () => {
-    const s = Number(salary);
-    if (!salary || isNaN(s) || s <= 0) {
-      setError("有効な年収を入力してください");
-      setResult(null);
-      return;
-    }
-    if (s > 100_000_000) {
-      setError("年収は1億円以下で入力してください");
-      setResult(null);
-      return;
-    }
-    setError("");
-    setResult(calcTakeHome(s));
+    const gross = Number(annual);
+    if (!gross || gross <= 0) return;
+    const monthlyGross = gross / 12;
+    const healthIns = Math.round(gross * 0.04985);
+    const pension = Math.round(gross * 0.0915);
+    const employment = Math.round(gross * 0.006);
+    const socialTotal = healthIns + pension + employment;
+    const taxableBase = gross - socialTotal;
+    let deduction = 0;
+    if (taxableBase <= 1625000) deduction = 550000;
+    else if (taxableBase <= 1800000) deduction = Math.round(taxableBase * 0.4 - 100000);
+    else if (taxableBase <= 3600000) deduction = Math.round(taxableBase * 0.3 + 80000);
+    else if (taxableBase <= 6600000) deduction = Math.round(taxableBase * 0.2 + 440000);
+    else if (taxableBase <= 8500000) deduction = Math.round(taxableBase * 0.1 + 1100000);
+    else deduction = 1950000;
+    const basicDeduction = 480000;
+    const dependentDeduction = Number(dependents) * 380000;
+    const taxableIncome = Math.max(0, taxableBase - deduction - basicDeduction - dependentDeduction);
+    let incomeTax = 0;
+    if (taxableIncome <= 1950000) incomeTax = Math.round(taxableIncome * 0.05);
+    else if (taxableIncome <= 3300000) incomeTax = Math.round(taxableIncome * 0.1 - 97500);
+    else if (taxableIncome <= 6950000) incomeTax = Math.round(taxableIncome * 0.2 - 427500);
+    else if (taxableIncome <= 9000000) incomeTax = Math.round(taxableIncome * 0.23 - 636000);
+    else if (taxableIncome <= 18000000) incomeTax = Math.round(taxableIncome * 0.33 - 1536000);
+    else if (taxableIncome <= 40000000) incomeTax = Math.round(taxableIncome * 0.40 - 2796000);
+    else incomeTax = Math.round(taxableIncome * 0.45 - 4796000);
+    incomeTax = Math.round(incomeTax * 1.021);
+    const residentTax = Math.round(taxableIncome * 0.1 + 5000);
+    const taxTotal = incomeTax + residentTax;
+    const takeHome = gross - socialTotal - taxTotal;
+    setResult({ gross, healthIns, pension, employment, socialTotal, incomeTax, residentTax, taxTotal, takeHome, monthlyTakeHome: Math.round(takeHome / 12) });
   };
 
-  const reset = () => {
-    setSalary("");
-    setResult(null);
-    setError("");
-  };
-
-  const fmt = (n: number) => Math.round(n).toLocaleString("ja-JP");
-
-  const presets = [3_000_000, 4_000_000, 5_000_000, 6_000_000, 8_000_000, 10_000_000];
+  const fmt = (n: number) => n.toLocaleString();
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <nav className="text-sm text-muted mb-6">
-        <Link href="/" className="hover:text-primary">トップ</Link>
-        <span className="mx-2">/</span>
-        <span>給与手取り計算</span>
-      </nav>
-
-      <h1 className="text-2xl font-bold mb-2">給与手取り計算ツール</h1>
-      <p className="text-muted mb-8">
-        年収を入力して、所得税・社会保険料を差し引いた手取り額の目安を計算します。
-      </p>
-
-      <div className="bg-card-bg border border-card-border rounded-xl p-6">
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2">年収 (円)</label>
-          <input
-            type="number"
-            value={salary}
-            onChange={(e) => setSalary(e.target.value)}
-            placeholder="例: 5000000"
-            className="w-full border border-card-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-          />
+      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>手取り計算</span></nav>
+      <h1 className="text-2xl font-bold mb-2">手取り計算ツール</h1>
+      <p className="text-muted mb-8">年収を入力すると、社会保険料・税金を差し引いた手取り額の概算を計算します。</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-4">
+        <div>
+          <label className="block text-sm font-medium mb-1">年収（額面）</label>
+          <input type="number" value={annual} onChange={e => setAnnual(e.target.value)} placeholder="例: 5000000" className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent" />
         </div>
-
-        <div className="flex flex-wrap gap-2 mb-6">
-          {presets.map((p) => (
-            <button
-              key={p}
-              onClick={() => setSalary(String(p))}
-              className="px-3 py-1.5 rounded-lg text-xs border border-card-border hover:bg-background transition-colors"
-            >
-              {(p / 10000).toLocaleString()}万円
-            </button>
-          ))}
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-1">年齢</label>
+            <select value={age} onChange={e => setAge(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent">
+              {["20","25","30","35","40","45","50","55","60"].map(a => <option key={a} value={a}>{a}歳</option>)}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">扶養人数</label>
+            <select value={dependents} onChange={e => setDependents(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent">
+              {["0","1","2","3","4","5"].map(d => <option key={d} value={d}>{d}人</option>)}
+            </select>
+          </div>
         </div>
-
-        {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
-
-        <div className="flex gap-3">
-          <button
-            onClick={calculate}
-            className="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors"
-          >
-            計算する
-          </button>
-          <button
-            onClick={reset}
-            className="px-5 py-2.5 rounded-lg text-sm font-medium border border-card-border hover:bg-background transition-colors"
-          >
-            リセット
-          </button>
-        </div>
-
+        <button onClick={calculate} className="w-full bg-primary text-white rounded-lg py-2 font-medium hover:opacity-90 transition">計算する</button>
         {result && (
-          <div className="mt-8 space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-background rounded-lg p-4 text-center">
-                <p className="text-sm text-muted mb-1">月手取り（概算）</p>
-                <p className="text-3xl font-bold text-primary">¥{fmt(result.monthlyTakeHome)}</p>
-              </div>
-              <div className="bg-background rounded-lg p-4 text-center">
-                <p className="text-sm text-muted mb-1">年手取り（概算）</p>
-                <p className="text-3xl font-bold text-primary">¥{fmt(result.annualTakeHome)}</p>
-              </div>
+          <div className="mt-4 space-y-3">
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4 text-center">
+              <p className="text-sm text-muted">年間手取り</p>
+              <p className="text-3xl font-bold text-green-600">{fmt(result.takeHome)}円</p>
+              <p className="text-sm text-muted mt-1">月額 約 {fmt(result.monthlyTakeHome)}円</p>
             </div>
-            <div className="bg-background rounded-lg p-4 text-sm space-y-1">
-              <div className="flex justify-between">
-                <span className="text-muted">年収（額面）</span>
-                <span className="font-medium">¥{fmt(Number(salary))}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted">社会保険料（概算）</span>
-                <span className="font-medium text-red-500">－¥{fmt(result.socialInsurance)}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted">所得税・住民税（概算）</span>
-                <span className="font-medium text-red-500">－¥{fmt(result.incomeTax)}</span>
-              </div>
-              <div className="flex justify-between border-t border-card-border pt-1 mt-1">
-                <span className="text-muted">年手取り</span>
-                <span className="font-bold">¥{fmt(result.annualTakeHome)}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-muted">実効税負担率</span>
-                <span className="font-medium">{result.effectiveRate.toFixed(1)}%</span>
-              </div>
+            <div className="grid grid-cols-2 gap-2 text-sm">
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3"><p className="text-muted">健康保険</p><p className="font-medium">{fmt(result.healthIns)}円</p></div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3"><p className="text-muted">厚生年金</p><p className="font-medium">{fmt(result.pension)}円</p></div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3"><p className="text-muted">雇用保険</p><p className="font-medium">{fmt(result.employment)}円</p></div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3"><p className="text-muted">社保合計</p><p className="font-bold">{fmt(result.socialTotal)}円</p></div>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-3"><p className="text-muted">所得税</p><p className="font-medium">{fmt(result.incomeTax)}円</p></div>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-3"><p className="text-muted">住民税</p><p className="font-medium">{fmt(result.residentTax)}円</p></div>
             </div>
           </div>
         )}
       </div>
-
-      <section className="mt-10">
-        <h2 className="text-lg font-bold mb-3">給与手取り計算ツールの使い方</h2>
-        <div className="text-sm text-muted leading-relaxed space-y-2">
-          <p>1. 年収（税込の額面年収）を入力します。下のプリセットボタンも利用できます。</p>
-          <p>2. 「計算する」ボタンを押すと、手取りの概算額が表示されます。</p>
-          <p>社会保険料は年収の約15%、所得税・住民税は累進税率で概算しています。</p>
-          <p>※ 配偶者控除・扶養控除・各種保険料控除等は考慮していません。あくまで参考値としてご利用ください。</p>
-          <p>正確な計算は税理士または会社の給与担当にご確認ください。</p>
-          <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>
-        </div>
-      </section>
-
-
+      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>年収（額面）、年齢、扶養人数を入力して「計算する」をクリックすると、社会保険料・所得税・住民税を差し引いた手取り額の概算が表示されます。</p><p>※概算値です。実際の金額は勤務先や自治体により異なります。</p></div></section>
       <AffiliateSection slug="salary-calculator" category="日常ツール" />
       <RelatedTools currentSlug="salary-calculator" category="日常ツール" />
     </div>

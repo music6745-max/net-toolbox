@@ -1,70 +1,90 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
-import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const ZONES = [
-  { label: "日本 (JST)", tz: "Asia/Tokyo" },
-  { label: "UTC", tz: "UTC" },
-  { label: "米国東部 (EST/EDT)", tz: "America/New_York" },
-  { label: "米国西部 (PST/PDT)", tz: "America/Los_Angeles" },
-  { label: "英国 (GMT/BST)", tz: "Europe/London" },
-  { label: "中央ヨーロッパ (CET)", tz: "Europe/Paris" },
-  { label: "中国 (CST)", tz: "Asia/Shanghai" },
-  { label: "韓国 (KST)", tz: "Asia/Seoul" },
-  { label: "インド (IST)", tz: "Asia/Kolkata" },
-  { label: "オーストラリア東部 (AEST)", tz: "Australia/Sydney" },
-  { label: "シンガポール (SGT)", tz: "Asia/Singapore" },
-  { label: "ハワイ (HST)", tz: "Pacific/Honolulu" },
+  { city: "東京", tz: "Asia/Tokyo", flag: "🇯🇵" },
+  { city: "ニューヨーク", tz: "America/New_York", flag: "🇺🇸" },
+  { city: "ロンドン", tz: "Europe/London", flag: "🇬🇧" },
+  { city: "パリ", tz: "Europe/Paris", flag: "🇫🇷" },
+  { city: "シドニー", tz: "Australia/Sydney", flag: "🇦🇺" },
+  { city: "ドバイ", tz: "Asia/Dubai", flag: "🇦🇪" },
+  { city: "シンガポール", tz: "Asia/Singapore", flag: "🇸🇬" },
+  { city: "ソウル", tz: "Asia/Seoul", flag: "🇰🇷" },
+  { city: "北京", tz: "Asia/Shanghai", flag: "🇨🇳" },
+  { city: "ムンバイ", tz: "Asia/Kolkata", flag: "🇮🇳" },
+  { city: "ロサンゼルス", tz: "America/Los_Angeles", flag: "🇺🇸" },
+  { city: "サンパウロ", tz: "America/Sao_Paulo", flag: "🇧🇷" },
 ];
 
-export default function Page() {
-  const now = new Date();
-  const [dateStr, setDateStr] = useState(now.toISOString().slice(0, 16));
-  const [fromTz, setFromTz] = useState("Asia/Tokyo");
+export default function TimezoneConverterPage() {
+  const [fromZone, setFromZone] = useState("Asia/Tokyo");
+  const [toZone, setToZone] = useState("America/New_York");
+  const [dateStr, setDateStr] = useState(new Date().toISOString().slice(0, 10));
+  const [timeStr, setTimeStr] = useState("12:00");
+  const [result, setResult] = useState<string | null>(null);
+  const [diff, setDiff] = useState<string | null>(null);
 
-  const fmt = (tz: string) => {
-    try {
-      const d = new Date(dateStr);
-      // Convert from source timezone
-      const srcOffset = new Date(d.toLocaleString("en-US", { timeZone: fromTz })).getTime();
-      const utc = d.getTime() - (srcOffset - d.getTime());
-      const target = new Date(utc);
-      return target.toLocaleString("ja-JP", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
-    } catch { return "-"; }
+  const convert = () => {
+    const [y, mo, d] = dateStr.split("-").map(Number);
+    const [h, mi] = timeStr.split(":").map(Number);
+    const fromDate = new Date(Date.UTC(y, mo - 1, d, h, mi));
+    const fromOffset = getOffsetMinutes(fromZone, fromDate);
+    const toOffset = getOffsetMinutes(toZone, fromDate);
+    const utcTime = fromDate.getTime() - fromOffset * 60000;
+    const toTime = new Date(utcTime + toOffset * 60000);
+    const fmt = new Intl.DateTimeFormat("ja-JP", { year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "UTC" });
+    setResult(fmt.format(toTime));
+    const diffH = (toOffset - fromOffset) / 60;
+    setDiff((diffH >= 0 ? "+" : "") + diffH + "時間");
   };
+
+  function getOffsetMinutes(tz: string, date: Date): number {
+    const str = date.toLocaleString("en-US", { timeZone: tz });
+    const local = new Date(str);
+    const utcStr = date.toLocaleString("en-US", { timeZone: "UTC" });
+    const utc = new Date(utcStr);
+    return (local.getTime() - utc.getTime()) / 60000;
+  }
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>タイムゾーン変換</span></nav>
       <h1 className="text-2xl font-bold mb-2">タイムゾーン変換ツール</h1>
-      <p className="text-muted mb-8">世界各地のタイムゾーン間で時刻を変換します。</p>
-      <div className="bg-card-bg border border-card-border rounded-xl p-6">
-        <div className="grid sm:grid-cols-2 gap-4 mb-6">
+      <p className="text-muted mb-8">都市間の時差を計算し、日時を変換します。</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-4">
+        <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium mb-2">基準タイムゾーン</label>
-            <select value={fromTz} onChange={e => setFromTz(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30">
-              {ZONES.map(z => <option key={z.tz} value={z.tz}>{z.label}</option>)}
+            <label className="block text-sm font-medium mb-1">変換元の都市</label>
+            <select value={fromZone} onChange={e => setFromZone(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent">
+              {ZONES.map(z => <option key={z.tz} value={z.tz}>{z.flag} {z.city}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">日時</label>
-            <input type="datetime-local" value={dateStr} onChange={e => setDateStr(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30" />
+            <label className="block text-sm font-medium mb-1">変換先の都市</label>
+            <select value={toZone} onChange={e => setToZone(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent">
+              {ZONES.map(z => <option key={z.tz} value={z.tz}>{z.flag} {z.city}</option>)}
+            </select>
           </div>
         </div>
-        <div className="space-y-2">
-          {ZONES.map(z => (
-            <div key={z.tz} className={`flex justify-between items-center p-3 rounded-lg ${z.tz === fromTz ? "bg-primary/10 font-bold" : "bg-background"}`}>
-              <span className="text-sm">{z.label}</span>
-              <span className="text-sm font-mono">{fmt(z.tz)}</span>
-            </div>
-          ))}
+        <div className="grid grid-cols-2 gap-4">
+          <div><label className="block text-sm font-medium mb-1">日付</label><input type="date" value={dateStr} onChange={e => setDateStr(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent" /></div>
+          <div><label className="block text-sm font-medium mb-1">時間</label><input type="time" value={timeStr} onChange={e => setTimeStr(e.target.value)} className="w-full border border-card-border rounded-lg px-3 py-2 bg-transparent" /></div>
         </div>
+        <button onClick={convert} className="w-full bg-primary text-white rounded-lg py-2 font-medium hover:opacity-90 transition">変換する</button>
+        {result && (
+          <div className="mt-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 text-center">
+            <p className="text-sm text-muted">変換結果</p>
+            <p className="text-2xl font-bold mt-1">{result}</p>
+            <p className="text-sm text-muted mt-2">時差: {diff}</p>
+          </div>
+        )}
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>基準タイムゾーンと日時を設定すると、世界各地の時刻が一覧表示されます。</p></div></section>
+      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>変換元と変換先の都市を選び、日時を入力して変換できます。サマータイムにも対応しています。</p></div></section>
       <AffiliateSection slug="timezone-converter" category="日常ツール" />
-
       <RelatedTools currentSlug="timezone-converter" category="日常ツール" />
     </div>
   );
