@@ -523,6 +523,21 @@ export const tools: Tool[] = [
   { slug: "typography-scale", name: "タイポグラフィスケール", description: "ベースサイズと比率からフォントサイズスケールを自動生成。", icon: "🔤", category: "デザイン" },
   { slug: "base-converter", name: "進数変換", description: "2進数・8進数・10進数・16進数を相互変換。プログラミング学習に。", icon: "🔢", category: "開発ツール" },
   { slug: "dns-lookup", name: "DNS情報確認", description: "ドメインのDNSレコード情報を確認。A/MX/NS/TXTレコード対応。", icon: "🌐", category: "開発ツール" },
+  { slug: "instagram-font", name: "インスタフォント変換", description: "通常テキストをおしゃれな特殊文字・フォントに変換。インスタグラムのプロフィールや投稿に。", icon: "✨", category: "テキスト" },
+  { slug: "ruby-generator", name: "ふりがなHTML生成", description: "漢字にふりがなを付けるrubyタグHTMLを自動生成。Webコンテンツのルビ振りに。", icon: "🔤", category: "テキスト" },
+  { slug: "aspect-ratio-calculator", name: "アスペクト比計算機", description: "幅と高さからアスペクト比を計算。リサイズ時の寸法も自動計算。", icon: "📐", category: "画像・メディア" },
+  { slug: "cron-generator", name: "Cron式ジェネレーター", description: "スケジュール実行のCron式を視覚的に作成。日本語で意味も表示。", icon: "🕐", category: "開発ツール" },
+  { slug: "subnet-calculator", name: "サブネット計算機", description: "IPアドレスとサブネットマスクからネットワーク情報を計算。CIDR表記対応。", icon: "🔌", category: "開発ツール" },
+  { slug: "reading-time", name: "読了時間計算", description: "文章を貼り付けると読み終わるまでの時間を推定。ブログ記事やプレゼン原稿の時間管理に。", icon: "📖", category: "テキスト" },
+  { slug: "ogp-checker", name: "OGP確認ツール", description: "URLを入力するとOGPタグ（タイトル・説明・画像）を取得してプレビュー表示。", icon: "🔍", category: "開発ツール" },
+  { slug: "mortgage-calculator", name: "住宅ローン計算", description: "借入額・金利・返済期間から毎月の返済額と総支払額をシミュレーション。", icon: "🏠", category: "日常ツール" },
+  { slug: "tax-calculator", name: "消費税計算", description: "税込・税抜価格を即座に計算。8%・10%の軽減税率にも対応。", icon: "💴", category: "日常ツール" },
+  { slug: "color-gradient-css", name: "CSSグラデーション生成", description: "方向・色数を選んでCSSグラデーションコードを生成。プレビュー付き。", icon: "🌈", category: "デザイン" },
+  { slug: "screen-resolution", name: "画面解像度確認", description: "現在のブラウザ・画面の解像度やピクセル比をリアルタイム表示。", icon: "🖥️", category: "開発ツール" },
+  { slug: "calorie-burn", name: "消費カロリー計算", description: "運動の種類と時間から消費カロリーを計算。ダイエット・健康管理に。", icon: "🏃", category: "日常ツール" },
+  { slug: "json-to-typescript", name: "JSON→TypeScript変換", description: "JSONデータからTypeScriptの型定義を自動生成。APIレスポンスの型付けに。", icon: "📝", category: "開発ツール" },
+  { slug: "emoji-search", name: "絵文字検索", description: "キーワードで絵文字を検索。クリックでコピー。SNS投稿やチャットに。", icon: "😀", category: "テキスト" },
+  { slug: "rent-split", name: "割り勘計算", description: "金額と人数で均等割り、メンバー別の金額調整もできる割り勘ツール。", icon: "💰", category: "日常ツール" },
 ];
 
 export const siteConfig = {

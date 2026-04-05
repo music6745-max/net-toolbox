@@ -94,6 +94,107 @@ export default function Home() {
         </section>
       ))}
 
+      {/* Guide Articles Section */}
+      <section className="mb-12">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold">📚 ガイド記事</h2>
+          <Link
+            href="/guide"
+            className="text-sm text-primary hover:underline"
+          >
+            すべて見る →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {[
+            {
+              slug: "best-rental-servers",
+              title: "【2026年】レンタルサーバーおすすめ比較5選",
+              description: "ConoHa WING・エックスサーバーなど初心者向け5社を徹底比較",
+              category: "比較",
+              readTime: "10分",
+              icon: "🖥️",
+            },
+            {
+              slug: "tax-software-comparison",
+              title: "【2026年】確定申告ソフト比較",
+              description: "freee・弥生・マネーフォワードの料金・特徴を解説",
+              category: "副業・税金",
+              readTime: "8分",
+              icon: "📊",
+            },
+            {
+              slug: "best-vpn-services",
+              title: "【2026年】VPNおすすめ比較",
+              description: "NordVPN・ExpressVPNなど5社の料金・セキュリティを比較",
+              category: "セキュリティ",
+              readTime: "8分",
+              icon: "🛡️",
+            },
+            {
+              slug: "side-business-tools",
+              title: "副業に必要なWebツール完全ガイド",
+              description: "ブログ開設からデザイン・確定申告まで必要ツールを網羅",
+              category: "副業",
+              readTime: "12分",
+              icon: "💰",
+            },
+          ].map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/guide/${guide.slug}`}
+              className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200 group"
+            >
+              <div className="flex items-start gap-3">
+                <span className="text-3xl flex-shrink-0">{guide.icon}</span>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">
+                      {guide.category}
+                    </span>
+                    <span className="text-xs text-muted">{guide.readTime}</span>
+                  </div>
+                  <h3 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-sm text-muted leading-relaxed line-clamp-2">
+                    {guide.description}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Sister Site Section */}
+      <section className="mt-8 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950/30 dark:to-blue-950/30 border border-purple-200 dark:border-purple-800 rounded-xl p-8">
+        <div className="flex items-center gap-4 mb-4">
+          <span className="text-4xl">🤖</span>
+          <div>
+            <h2 className="text-xl font-bold">AIツールもお探しですか？</h2>
+            <p className="text-sm text-muted">姉妹サイト「AIツールナビ」で100以上のAIツールを比較</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+            <div className="text-sm font-medium">ChatGPT vs Claude</div>
+            <div className="text-xs text-muted">AIチャット比較</div>
+          </a>
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+            <div className="text-sm font-medium">AI英語学習ガイド</div>
+            <div className="text-xs text-muted">AIで英語力UP</div>
+          </a>
+          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="bg-white/70 dark:bg-white/5 rounded-lg p-3 text-center hover:shadow-md transition">
+            <div className="text-sm font-medium">AI副業ガイド</div>
+            <div className="text-xs text-muted">月5万円を目指す</div>
+          </a>
+        </div>
+        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block text-sm text-purple-600 dark:text-purple-400 hover:underline font-medium">
+          AIツールナビを見る →
+        </a>
+      </section>
+
       {/* FAQ Section */}
       <section className="mt-8 bg-card-bg border border-card-border rounded-xl p-8">
         <h2 className="text-xl font-bold mb-6">よくある質問</h2>
