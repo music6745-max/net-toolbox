@@ -1,60 +1,78 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { AffiliateSection } from "@/components/AffiliateSection";
 
 const UNITS = [
-  { name: "小さじ (5ml)", ml: 5 },
-  { name: "大さじ (15ml)", ml: 15 },
-  { name: "カップ (200ml)", ml: 200 },
-  { name: "ml", ml: 1 },
-  { name: "L", ml: 1000 },
-  { name: "cc", ml: 1 },
+  { key: "ml", label: "ml", toMl: 1 },
+  { key: "l", label: "L", toMl: 1000 },
+  { key: "tsp", label: "\u5C0F\u3055\u3058 (tsp)", toMl: 5 },
+  { key: "tbsp", label: "\u5927\u3055\u3058 (tbsp)", toMl: 15 },
+  { key: "cup_jp", label: "\u30AB\u30C3\u30D7\uFF08\u65E5\u672C\uFF09", toMl: 200 },
+  { key: "cup_us", label: "\u30AB\u30C3\u30D7\uFF08US\uFF09", toMl: 236.588 },
+  { key: "fl_oz", label: "fl oz", toMl: 29.5735 },
+  { key: "cc", label: "cc", toMl: 1 },
+  { key: "go", label: "\u5408", toMl: 180 },
 ];
 
-export default function Page() {
-  const [val, setVal] = useState("1");
-  const [unit, setUnit] = useState(1); // 大さじ index
+const WEIGHT_UNITS = [
+  { key: "g", label: "g", toG: 1 },
+  { key: "kg", label: "kg", toG: 1000 },
+  { key: "oz", label: "oz", toG: 28.3495 },
+  { key: "lb", label: "lb", toG: 453.592 },
+];
 
-  const v = parseFloat(val) || 0;
-  const mlVal = v * UNITS[unit].ml;
+export default function CookingConverterPage() {
+  const [mode, setMode] = useState<"volume" | "weight">("volume");
+  const [value, setValue] = useState("1");
+  const [fromUnit, setFromUnit] = useState("cup_jp");
+  const [copied, setCopied] = useState("");
+
+  const units = mode === "volume" ? UNITS : WEIGHT_UNITS;
+  const from = units.find((u) => u.key === fromUnit);
+  const baseValue = (parseFloat(value) || 0) * (from ? (mode === "volume" ? (from as typeof UNITS[0]).toMl : (from as typeof WEIGHT_UNITS[0]).toG) : 1);
+
+  const copy = (text: string) => {
+    navigator.clipboard.writeText(text).then(() => { setCopied(text); setTimeout(() => setCopied(""), 2000); });
+  };
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>料理計量変換</span></nav>
-      <h1 className="text-2xl font-bold mb-2">料理計量変換ツール</h1>
-      <p className="text-muted mb-8">大さじ・小さじ・カップ・ml・gの計量単位を相互変換します。</p>
-      <div className="bg-card-bg border border-card-border rounded-xl p-6">
-        <div className="grid sm:grid-cols-2 gap-4 mb-6">
-          <div>
-            <label className="block text-sm font-medium mb-2">量</label>
-            <input type="number" value={val} onChange={e => setVal(e.target.value)} step="0.1" className="w-full border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30" />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">単位</label>
-            <select value={unit} onChange={e => setUnit(Number(e.target.value))} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30">
-              {UNITS.map((u, i) => <option key={i} value={i}>{u.name}</option>)}
-            </select>
-          </div>
+      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">{"\u30C8\u30C3\u30D7"}</Link><span className="mx-2">/</span><span>{"\u6599\u7406\u5358\u4F4D\u5909\u63DB"}</span></nav>
+      <h1 className="text-2xl font-bold mb-2">{"\u6599\u7406\u5358\u4F4D\u5909\u63DB"}</h1>
+      <p className="text-muted mb-8">{"\u5927\u3055\u3058\u30FB\u5C0F\u3055\u3058\u30FB\u30AB\u30C3\u30D7\u30FBml\u30FBg\u306A\u3069\u306E\u6599\u7406\u5358\u4F4D\u3092\u76F8\u4E92\u5909\u63DB\u3057\u307E\u3059\u3002"}</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-4">
+        <div className="flex gap-3">
+          <button onClick={() => { setMode("volume"); setFromUnit("cup_jp"); }} className={"px-4 py-2 rounded-lg text-sm font-medium " + (mode === "volume" ? "bg-primary text-white" : "bg-base border border-card-border")}>{"\u4F53\u7A4D"}</button>
+          <button onClick={() => { setMode("weight"); setFromUnit("g"); }} className={"px-4 py-2 rounded-lg text-sm font-medium " + (mode === "weight" ? "bg-primary text-white" : "bg-base border border-card-border")}>{"\u91CD\u3055"}</button>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {UNITS.map((u, i) => (
-            <div key={i} className={`p-3 rounded-lg text-center ${i === unit ? "bg-primary/10 ring-1 ring-primary/30" : "bg-background"}`}>
-              <div className="text-xs text-muted mb-1">{u.name}</div>
-              <div className="text-lg font-bold">{(mlVal / u.ml).toFixed(2)}</div>
-            </div>
-          ))}
+        <div className="flex gap-3">
+          <input type="number" value={value} onChange={(e) => setValue(e.target.value)} className="flex-1 p-2 border border-card-border rounded-lg bg-base text-sm" />
+          <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)} className="p-2 border border-card-border rounded-lg bg-base text-sm">
+            {units.map((u) => <option key={u.key} value={u.key}>{u.label}</option>)}
+          </select>
         </div>
-        <div className="mt-6 p-4 bg-background rounded-lg">
-          <p className="text-sm font-medium mb-2">水の場合の重さ: <span className="font-bold">{mlVal.toFixed(1)}g</span></p>
-          <p className="text-xs text-muted">※ 水の場合 1ml ≒ 1g です。他の食材は密度によって異なります。</p>
+        <div className="space-y-2 mt-4">
+          {units.map((u) => {
+            const factor = mode === "volume" ? (u as typeof UNITS[0]).toMl : (u as typeof WEIGHT_UNITS[0]).toG;
+            const converted = baseValue / factor;
+            const display = converted < 0.01 && converted > 0 ? converted.toExponential(2) : converted.toFixed(3);
+            return (
+              <div key={u.key} className={"flex items-center justify-between p-3 border border-card-border rounded-lg cursor-pointer hover:bg-base " + (u.key === fromUnit ? "bg-primary/10" : "")} onClick={() => copy(display)}>
+                <span className="text-sm font-medium">{u.label}</span>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-sm">{display}</span>
+                  <span className="text-xs text-muted">{copied === display ? "\u30B3\u30D4\u30FC\u6E08" : ""}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>量と単位を入力すると、各単位での値が一覧表示されます。</p></div></section>
-      <AffiliateSection slug="cooking-converter" category="日常ツール" />
-
-      <RelatedTools currentSlug="cooking-converter" category="日常ツール" />
+      <section className="mt-10"><h2 className="text-lg font-bold mb-3">{"\u4F7F\u3044\u65B9"}</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>{"\u4F53\u7A4D\u307E\u305F\u306F\u91CD\u3055\u3092\u9078\u3073\u3001\u5024\u3068\u5358\u4F4D\u3092\u5165\u529B\u3059\u308B\u3068\u4ED6\u306E\u5358\u4F4D\u306B\u81EA\u52D5\u5909\u63DB\u3055\u308C\u307E\u3059\u3002\u65E5\u672C\u306E\u30AB\u30C3\u30D7\u3068US\u30AB\u30C3\u30D7\u306E\u4E21\u65B9\u306B\u5BFE\u5FDC\u3057\u3066\u3044\u307E\u3059\u3002"}</p></div></section>
+      <AffiliateSection slug="cooking-converter" category="\u65E5\u5E38\u30C4\u30FC\u30EB" />
+      <RelatedTools currentSlug="cooking-converter" category="\u65E5\u5E38\u30C4\u30FC\u30EB" />
     </div>
   );
 }
