@@ -34,7 +34,9 @@ export function ToolSearch() {
     <div className="relative max-w-xl mx-auto mb-10">
       <div className="relative">
         <input
-          type="text"
+          type="search"
+          name="tool-search"
+          autoComplete="on"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
