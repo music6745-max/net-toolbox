@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
 import { WebSiteJsonLd } from "@/components/JsonLd";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: {
@@ -71,6 +72,11 @@ export default function RootLayout({
     <html lang="ja" className="h-full antialiased">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)})()`,
+          }}
+        />
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6483317297217533"
           crossOrigin="anonymous"
@@ -87,19 +93,22 @@ export default function RootLayout({
             <Link href="/" className="text-lg font-bold text-primary">
               {siteConfig.name}
             </Link>
-            <nav className="hidden sm:flex items-center gap-4 text-sm text-muted">
-              <Link href="/guide" className="hover:text-primary transition-colors font-medium">
-                ガイド
-              </Link>
-              {categories.slice(0, 4).map((cat) => (
-                <Link
-                  key={cat.slug}
-                  href={`/category/${cat.slug}`}
-                  className="hover:text-primary transition-colors"
-                >
-                  {cat.icon} {cat.slug}
+            <nav className="flex items-center gap-4 text-sm text-muted">
+              <div className="hidden sm:flex items-center gap-4">
+                <Link href="/guide" className="hover:text-primary transition-colors font-medium">
+                  ガイド
                 </Link>
-              ))}
+                {categories.slice(0, 4).map((cat) => (
+                  <Link
+                    key={cat.slug}
+                    href={`/category/${cat.slug}`}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {cat.icon} {cat.slug}
+                  </Link>
+                ))}
+              </div>
+              <ThemeToggle />
             </nav>
           </div>
         </header>

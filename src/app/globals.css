@@ -10,8 +10,9 @@
   --muted: #64748b;
 }
 
+/* OS設定に自動追従（data-themeが未設定の場合） */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --background: #0f172a;
     --foreground: #e2e8f0;
     --primary: #3b82f6;
@@ -20,6 +21,17 @@
     --card-border: #334155;
     --muted: #94a3b8;
   }
+}
+
+/* 手動ダークモード */
+:root[data-theme="dark"] {
+  --background: #0f172a;
+  --foreground: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --muted: #94a3b8;
 }
 
 @theme inline {
@@ -39,8 +51,18 @@ body {
 }
 
 /* Dark mode form inputs */
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] textarea,
+:root[data-theme="dark"] select {
+  background-color: var(--card-bg);
+  color: var(--foreground);
+  border-color: var(--card-border);
+}
+
 @media (prefers-color-scheme: dark) {
-  input, textarea, select {
+  :root:not([data-theme="light"]) input,
+  :root:not([data-theme="light"]) textarea,
+  :root:not([data-theme="light"]) select {
     background-color: var(--card-bg);
     color: var(--foreground);
     border-color: var(--card-border);
