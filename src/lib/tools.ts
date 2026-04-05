@@ -558,6 +558,21 @@ export const tools: Tool[] = [
   { slug: "invoice-generator", name: "請求書作成", description: "ブラウザ上で請求書を作成してPDF出力。フリーランス・個人事業主に。", icon: "📄", category: "日常ツール" },
   { slug: "tip-calculator", name: "チップ計算", description: "食事代からチップ額と合計を計算。海外旅行・出張時に便利。", icon: "🍽️", category: "日常ツール" },
   { slug: "electricity-cost", name: "電気料金計算", description: "家電のW数と使用時間から電気料金を計算。節電の目安に。", icon: "⚡", category: "日常ツール" },
+  { slug: "yaml-formatter", name: "YAML整形", description: "YAMLデータを見やすくフォーマット。インデントの自動修正と構文チェック。", icon: "📝", category: "開発ツール" },
+  { slug: "toml-formatter", name: "TOML整形", description: "TOMLファイルを整形・検証。設定ファイルの編集に。", icon: "⚙️", category: "開発ツール" },
+  { slug: "env-validator", name: ".env検証", description: ".envファイルの構文チェックと重複キーの検出。環境変数の管理に。", icon: "🔐", category: "開発ツール" },
+  { slug: "http-header-viewer", name: "HTTPヘッダー確認", description: "URLのHTTPレスポンスヘッダーを一覧表示。キャッシュやセキュリティの確認に。", icon: "📡", category: "開発ツール" },
+  { slug: "regex-cheatsheet", name: "正規表現チートシート", description: "よく使う正規表現パターンを一覧表示。クリックでコピー。", icon: "📋", category: "開発ツール" },
+  { slug: "diff-checker", name: "テキスト差分比較（高機能）", description: "2つのテキストの差分を行単位・文字単位でハイライト表示。コードレビューに。", icon: "🔍", category: "開発ツール" },
+  { slug: "markdown-preview", name: "Markdownプレビュー", description: "Markdownテキストをリアルタイムでプレビュー。README作成に便利。", icon: "📖", category: "開発ツール" },
+  { slug: "wedding-cost", name: "結婚式費用計算", description: "ゲスト人数・料理・衣装から結婚式の概算費用をシミュレーション。", icon: "💒", category: "日常ツール" },
+  { slug: "baby-name-generator", name: "名前候補生成", description: "画数や読みの条件から赤ちゃんの名前候補を生成。姓名判断の参考に。", icon: "👶", category: "日常ツール" },
+  { slug: "moving-cost", name: "引越し費用計算", description: "距離・荷物量・時期から引越し費用の目安を計算。", icon: "🚚", category: "日常ツール" },
+  { slug: "speed-converter", name: "速度変換", description: "km/h・mph・m/s・ノットを相互変換。", icon: "🏎️", category: "日常ツール" },
+  { slug: "cooking-converter", name: "料理単位変換", description: "大さじ・小さじ・カップ・ml・gを相互変換。レシピの分量調整に。", icon: "🍳", category: "日常ツール" },
+  { slug: "noise-generator", name: "ホワイトノイズ生成", description: "集中・睡眠用のホワイトノイズ・ピンクノイズをブラウザで再生。", icon: "🎧", category: "日常ツール" },
+  { slug: "button-generator", name: "CSSボタン生成", description: "色・角丸・影・ホバーを調整してCSSボタンコードを生成。プレビュー付き。", icon: "🔘", category: "デザイン" },
+  { slug: "text-shadow-generator", name: "テキストシャドウ生成", description: "CSSのtext-shadowをスライダーで視覚的に作成。コードをコピー。", icon: "💫", category: "デザイン" },
 ];
 
 export const siteConfig = {

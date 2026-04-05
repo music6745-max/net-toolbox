@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "tax-software-comparison",
     "best-vpn-services",
     "side-business-tools",
+    "remote-work-tools",
   ].map((slug) => ({
     url: `${siteConfig.url}/guide/${slug}`,
     lastModified: new Date(),

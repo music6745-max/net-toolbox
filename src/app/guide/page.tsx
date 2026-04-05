@@ -76,6 +76,15 @@ const guides = [
     readTime: "7分",
     icon: "💻",
   },
+  {
+    slug: "remote-work-tools",
+    title: "リモートワークに必須の無料ツール10選｜在宅勤務を効率化",
+    description:
+      "ポモドーロタイマー・世界時計・タイムゾーン変換・パスワード生成など、リモートワーク・在宅勤務に役立つ無料ツール10選を厳選紹介。",
+    category: "リモートワーク",
+    readTime: "7分",
+    icon: "🏠",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -86,6 +95,7 @@ const categoryColors: Record<string, string> = {
   比較: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
   "副業・税金": "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300",
   副業: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300",
+  リモートワーク: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
 };
 
 export const metadata: Metadata = {

@@ -7,23 +7,58 @@ import { WebSiteJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - 無料Web便利ツール集`,
+    default: `${siteConfig.name} - 無料Web便利ツール集｜250以上のオンラインツール`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description:
+    "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など250以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
   metadataBase: new URL(siteConfig.url),
+  keywords: [
+    "無料Webツール",
+    "オンラインツール",
+    "ブラウザツール",
+    "文字数カウント",
+    "QRコード作成",
+    "パスワード生成",
+    "JSON整形",
+    "画像変換",
+    "テキスト変換",
+    "開発者ツール",
+    "SEOツール",
+    "計算ツール",
+  ],
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: `${siteConfig.name} - 無料Web便利ツール集｜250以上のオンラインツール`,
+    description:
+      "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など250以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
+    url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "ja_JP",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: `${siteConfig.name} - 無料Web便利ツール250+`,
+    description:
+      "文字数カウント・QRコード作成・パスワード生成など250以上の無料ツール。登録不要・ブラウザ完結。",
+    creator: "@net_toolbox_jp",
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
   verification: {
     google: ["-DIu5mdFjxw1ikjtlccXK53hdAfXXT3UzFNb3YU14dc", "R_xMFhMulMpq9lvf8ZpC9HYRJvF81Jie03S7l1jyHpY"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -97,6 +132,7 @@ export default function RootLayout({
                 <Link href="/guide/password-security" className="hover:text-primary transition-colors">パスワードセキュリティ</Link>
                 <Link href="/guide/web-tools-for-work" className="hover:text-primary transition-colors">仕事効率化ツール</Link>
                 <Link href="/guide/developer-tools-guide" className="hover:text-primary transition-colors">開発者ツール活用</Link>
+                <Link href="/guide/remote-work-tools" className="hover:text-primary transition-colors">リモートワークツール</Link>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
