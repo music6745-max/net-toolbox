@@ -360,6 +360,369 @@ const TOOL_SPECIFIC: Record<string, Recommendation[]> = {
       tag: "会計",
     },
   ],
+  // --- 健康系ツール ---
+  "calorie-burn": [
+    {
+      title: "あすけん - 食事・運動管理アプリ",
+      description: "消費カロリーと食事を記録して効率的なダイエットを。栄養士のアドバイス付き。",
+      linkText: "無料で始める",
+      url: "https://www.asken.jp/",
+      tag: "健康管理",
+    },
+  ],
+  "ideal-weight": [
+    {
+      title: "タニタ 体組成計",
+      description: "BMI・体脂肪率・筋肉量を正確測定。理想体重の管理に最適。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=タニタ+体組成計",
+      tag: "健康機器",
+    },
+  ],
+  "water-intake": [
+    {
+      title: "Amazon - ウォーターボトル",
+      description: "目盛り付きボトルで水分摂取量を管理。1日の水分量を可視化。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=ウォーターボトル+目盛り付き",
+      tag: "健康グッズ",
+    },
+  ],
+  "sleep-calculator": [
+    {
+      title: "Amazon - スマートウォッチ",
+      description: "睡眠の質を自動計測。レム睡眠・深い眠りの分析で睡眠改善。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=スマートウォッチ+睡眠計測",
+      tag: "睡眠管理",
+    },
+  ],
+  // --- 金融・節約系ツール ---
+  "invoice-generator": [
+    {
+      title: "freee - フリーランスの請求書管理",
+      description: "請求書の作成から経理まで一元管理。確定申告もラクラク。",
+      linkText: "無料で始める",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+      tag: "会計",
+    },
+    {
+      title: "弥生会計 - 請求書・経理管理",
+      description: "請求書作成から経理までNo.1ソフトにお任せ。白色申告は永年無料。",
+      linkText: "無料で始める",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+      tag: "会計",
+    },
+  ],
+  "discount-calculator": [
+    {
+      title: "Amazon - タイムセール",
+      description: "割引率がわかったら早速チェック。毎日開催のタイムセールでお得にお買い物。",
+      linkText: "セールを見る",
+      url: "https://www.amazon.co.jp/gp/goldbox",
+      tag: "セール",
+    },
+  ],
+  "roi-calculator": [
+    {
+      title: "SBI証券 - ネット証券No.1",
+      description: "業界最安の手数料で投資リターンを最大化。NISA・iDeCo対応。",
+      linkText: "口座開設(無料)",
+      url: "https://www.sbisec.co.jp/",
+      tag: "資産運用",
+    },
+  ],
+  "breakeven-calculator": [
+    {
+      title: "マネーフォワード クラウド会計",
+      description: "売上・経費を自動取得して損益をリアルタイム把握。事業分析に。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+      tag: "会計",
+    },
+  ],
+  "profit-calculator": [
+    {
+      title: "freee - クラウド会計",
+      description: "利益率の管理から確定申告まで。フリーランス・個人事業主の味方。",
+      linkText: "無料で始める",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+      tag: "会計",
+    },
+  ],
+  "loan-comparison": [
+    {
+      title: "モゲチェック - 住宅ローン比較",
+      description: "複数銀行のローンを一括比較。金利差で数百万円の違いが出ることも。",
+      linkText: "無料で比較する",
+      url: "https://mogecheck.jp/",
+      tag: "ローン比較",
+    },
+  ],
+  "fuel-calculator": [
+    {
+      title: "エネチェンジ - エネルギー比較",
+      description: "電気・ガスの料金を比較。乗り換えで光熱費を年間数万円節約。",
+      linkText: "無料で比較する",
+      url: "https://enechange.jp/",
+      tag: "節約",
+    },
+  ],
+  "electricity-cost": [
+    {
+      title: "エネチェンジ - 電力会社比較",
+      description: "電力会社を無料で比較。切り替えるだけで年間数万円の節約に。",
+      linkText: "無料で比較する",
+      url: "https://enechange.jp/",
+      tag: "節約",
+    },
+  ],
+  "split-bill": [
+    {
+      title: "マネーフォワード ME - 家計簿アプリ",
+      description: "銀行・カードと連携して支出を自動記録。グループでの出費管理にも。",
+      linkText: "無料で始める",
+      url: "https://moneyforward.com/me",
+      tag: "家計管理",
+    },
+  ],
+  "rent-split": [
+    {
+      title: "マネーフォワード ME - 家計簿",
+      description: "割り勘の支出も自動記録。銀行・カード連携で家計を見える化。",
+      linkText: "無料で始める",
+      url: "https://moneyforward.com/me",
+      tag: "家計管理",
+    },
+  ],
+  // --- 開発ツール（A8.net サーバー系） ---
+  "docker-template": [
+    {
+      title: "ConoHa VPS - Docker対応VPS",
+      description: "初期費用無料、SSD搭載の高速VPS。Docker環境の構築に最適。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+      tag: "VPS",
+    },
+  ],
+  "gitignore-generator": [
+    {
+      title: "エックスサーバー - Git対応サーバー",
+      description: "SSH接続・Git対応の高性能サーバー。本番環境のデプロイに。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+      tag: "サーバー",
+    },
+  ],
+  "htaccess-generator": [
+    {
+      title: "エックスサーバー - .htaccess対応",
+      description: "htaccessを完全サポート。リダイレクト・キャッシュ設定も自由自在。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+      tag: "サーバー",
+    },
+  ],
+  "robots-txt-generator": [
+    {
+      title: "ConoHa WING - SEOに強いサーバー",
+      description: "表示速度国内最速。SEO対策の土台となる高速サーバー環境。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+      tag: "サーバー",
+    },
+  ],
+  "sitemap-generator": [
+    {
+      title: "ConoHa WING - WordPress最適化",
+      description: "WordPress簡単セットアップ。サイトマップ自動生成プラグインもワンクリック。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+      tag: "サーバー",
+    },
+  ],
+  "meta-tag-generator": [
+    {
+      title: "ConoHa WING - SEO対策サーバー",
+      description: "メタタグ設定と合わせて、高速サーバーでSEO効果を最大化。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+      tag: "サーバー",
+    },
+  ],
+  "readme-generator": [
+    {
+      title: "SkillHacks - プログラミング学習",
+      description: "動画でプログラミングを学べる講座。GitHubの使い方も基礎から。",
+      linkText: "詳しく見る",
+      url: "https://skillhacks.co.jp/",
+      tag: "学習",
+    },
+  ],
+  // --- VPN・セキュリティ系（A8.net高単価） ---
+  "hash-generator": [
+    {
+      title: "NordVPN - 通信の暗号化に",
+      description: "AES-256暗号化でオンライン通信を保護。セキュリティ意識の高い方に。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+      tag: "VPN",
+    },
+  ],
+  "text-encrypt": [
+    {
+      title: "ExpressVPN - プライバシー保護",
+      description: "業界最速の暗号化通信。テキストだけでなく通信全体を暗号化。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
+      tag: "VPN",
+    },
+  ],
+  "password-strength": [
+    {
+      title: "MillenVPN - 安心の国産VPN",
+      description: "パスワードと合わせてVPNでセキュリティ強化。日本企業運営で安心。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+      tag: "VPN",
+    },
+  ],
+  "passphrase-generator": [
+    {
+      title: "NordVPN + NordPass",
+      description: "VPNとパスワード管理をセットで。パスフレーズも安全に保管。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+      tag: "セキュリティ",
+    },
+  ],
+  "ip-address": [
+    {
+      title: "ExpressVPN - IPアドレスを保護",
+      description: "VPN接続でIPアドレスを隠してプライバシーを保護。世界94カ国対応。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
+      tag: "VPN",
+    },
+  ],
+  "ip-info": [
+    {
+      title: "MillenVPN - IP保護の国産VPN",
+      description: "日本のIPアドレスで安全にブラウジング。確定率99%の信頼性。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+      tag: "VPN",
+    },
+  ],
+  "dns-lookup": [
+    {
+      title: "NordVPN - DNS漏洩防止",
+      description: "DNS漏洩を完全防止。安全なDNS経由でプライバシーを保護。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+      tag: "VPN",
+    },
+  ],
+  "wifi-qr": [
+    {
+      title: "NordVPN - 公共WiFiのセキュリティ",
+      description: "カフェ・空港のフリーWiFiも安全に。VPNで通信を暗号化。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+      tag: "WiFiセキュリティ",
+    },
+  ],
+  "useragent-parser": [
+    {
+      title: "ExpressVPN - フィンガープリント対策",
+      description: "UserAgentからの追跡を防止。VPNでブラウザの匿名性を向上。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
+      tag: "プライバシー",
+    },
+  ],
+  // --- 日常・ライフスタイル系 ---
+  "timezone-converter": [
+    {
+      title: "MillenVPN - 海外出張に",
+      description: "海外でも日本のサービスにアクセス可能。出張・旅行の必需品。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+      tag: "VPN",
+    },
+  ],
+  "world-clock": [
+    {
+      title: "MillenVPN - 海外接続対応",
+      description: "世界中のサーバーに接続可能。海外のサービスも自由にアクセス。",
+      linkText: "詳しく見る",
+      url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+      tag: "VPN",
+    },
+  ],
+  "baby-name-generator": [
+    {
+      title: "ゼクシィBaby - 出産・育児情報",
+      description: "名前選びと合わせて妊娠・出産の情報も。無料の妊婦向け雑誌をお届け。",
+      linkText: "無料登録する",
+      url: "https://zexybaby.zexy.net/",
+      tag: "マタニティ",
+    },
+  ],
+  "blood-type-calculator": [
+    {
+      title: "ゼクシィBaby - 妊娠・出産準備",
+      description: "赤ちゃんの血液型が気になったら。出産準備に役立つ情報満載。",
+      linkText: "無料登録する",
+      url: "https://zexybaby.zexy.net/",
+      tag: "マタニティ",
+    },
+  ],
+  "dog-age-calculator": [
+    {
+      title: "Amazon - ペット用品",
+      description: "愛犬の年齢に合ったフード・おもちゃ・ケア用品が見つかる。",
+      linkText: "ペット用品を見る",
+      url: "https://www.amazon.co.jp/b?node=2127212051",
+      tag: "ペット",
+    },
+  ],
+  "horoscope-calculator": [
+    {
+      title: "Amazon - 占い・スピリチュアル書籍",
+      description: "星座占い・運勢の本が充実。自分の星座をもっと深く知ろう。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=星座+占い+本",
+      tag: "書籍",
+    },
+  ],
+  "typing-test": [
+    {
+      title: "SkillHacks - プログラミング学習",
+      description: "タイピングの次はプログラミング。動画講座でスキルアップ。",
+      linkText: "詳しく見る",
+      url: "https://skillhacks.co.jp/",
+      tag: "学習",
+    },
+  ],
+  "pomodoro-timer": [
+    {
+      title: "Amazon - 集中力グッズ",
+      description: "ポモドーロ・テクニックと合わせて集中力をブースト。ノイキャンイヤホンも。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=集中力+タイマー",
+      tag: "生産性",
+    },
+  ],
+  "cooking-converter": [
+    {
+      title: "Amazon - キッチンスケール",
+      description: "正確な計量で料理の味が安定。0.1g単位で測れるデジタルスケール。",
+      linkText: "Amazonで見る",
+      url: "https://www.amazon.co.jp/s?k=キッチンスケール+デジタル",
+      tag: "キッチン",
+    },
+  ],
 };
 
 export function AffiliateSection({ slug, category }: { slug: string; category: string }) {
