@@ -151,6 +151,66 @@ const guides = [
     readTime: "15分",
     icon: "💻",
   },
+  {
+    slug: "insurance-comparison",
+    title:
+      "【2026年最新】ネット保険比較おすすめ5選｜生命保険・医療保険・がん保険を徹底解説",
+    description:
+      "ライフネット生命・SBI生命・アクサダイレクト生命・チューリッヒ生命・オリックス生命の保険料・保障内容・申込み方法を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🛡️",
+  },
+  {
+    slug: "streaming-comparison",
+    title:
+      "【2026年最新】動画配信サービス比較おすすめ6選｜料金・作品数・画質を徹底解説",
+    description:
+      "Amazon Prime Video・Netflix・U-NEXT・Disney+・Hulu・ABEMAの料金・作品数・画質を徹底比較。あなたに最適な動画配信サービスが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🎬",
+  },
+  {
+    slug: "wifi-comparison",
+    title:
+      "【2026年最新】ポケットWiFi・ホームルーター比較おすすめ5選｜料金・速度・エリアを徹底解説",
+    description:
+      "WiMAX・楽天モバイル・ドコモhome5G・ソフトバンクAir・モバレコAirの月額料金・通信速度・エリアを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📶",
+  },
+  {
+    slug: "credit-card-comparison",
+    title:
+      "【2026年最新】クレジットカード比較おすすめ5選｜年会費無料・ポイント還元率を徹底解説",
+    description:
+      "楽天カード・三井住友カード(NL)・JCBカードW・PayPayカード・dカードの年会費・ポイント還元率・特典を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💳",
+  },
+  {
+    slug: "cloud-storage-comparison",
+    title:
+      "【2026年最新】クラウドストレージ比較おすすめ5選｜容量・料金・セキュリティを徹底解説",
+    description:
+      "Google Drive・iCloud+・OneDrive・Dropbox・Amazon Driveの無料容量・有料プラン・共有機能・セキュリティを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "☁️",
+  },
+  {
+    slug: "ebook-comparison",
+    title:
+      "【2026年最新】電子書籍サービス比較おすすめ5選｜品揃え・料金・使いやすさを徹底解説",
+    description:
+      "Kindle・楽天Kobo・BookLive!・ebookjapan・DMMブックスの品揃え・料金・キャンペーン・対応デバイスを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📚",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
