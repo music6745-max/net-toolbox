@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "HSLスライダーで直感的に色を選択し、HEX・RGB・HSLの各形式でコピーできる無料カラーピッカーツール。",
   keywords: ["カラーピッカー", "色", "HEX", "RGB", "HSL", "カラーコード", "色選択"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/color-picker",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

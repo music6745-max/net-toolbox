@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "SQLクエリを見やすく整形・フォーマットする無料オンラインツール。SELECT、FROM、WHERE、JOINなどのキーワードで自動改行・インデントします。",
   keywords: ["SQLフォーマット", "SQL整形", "SQL整形ツール", "SQLビューティファイ", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/sql-formatter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

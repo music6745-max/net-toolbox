@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "横書きのテキストを縦書きに変換して表示・コピーできる無料オンラインツール。日本語の縦書き組版に対応。",
   keywords: ["縦書き変換", "縦書き", "縦書きテキスト", "writing-mode", "日本語", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/vertical-text",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

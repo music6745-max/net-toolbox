@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "IPアドレスとサブネットマスクからネットワークアドレス、ブロードキャスト、ホスト範囲を計算。CIDR表記対応の無料オンラインツール。",
   keywords: ["サブネット計算", "サブネットマスク", "CIDR", "IPアドレス", "ネットワーク"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/subnet-calculator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

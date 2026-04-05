@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "URLを入力してプロトコル・ホスト・ポート・パス・クエリパラメータ・ハッシュなどの構成要素を分解・表示する無料オンラインツール。",
   keywords: ["URLパーサー", "URL解析", "クエリパラメータ", "URL分解", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/url-parser",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "テキストの文字数・単語数・行数をリアルタイムでカウントする無料オンラインツール。レポートやSNS投稿の文字数チェックに最適。",
   keywords: ["文字数カウント", "文字数", "単語数", "行数", "テキスト", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/character-count",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

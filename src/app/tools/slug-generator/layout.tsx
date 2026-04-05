@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "日本語・英語のテキストからURL用スラッグを生成。日本語はローマ字に変換し、SEOフレンドリーなスラッグを作成します。",
   keywords: ["スラッグ", "slug", "URL", "ローマ字", "SEO", "パーマリンク"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/slug-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

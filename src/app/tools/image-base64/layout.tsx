@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "画像ファイルをアップロードしてBase64データURLに変換する無料ツール。変換前後のサイズ比較や、HTMLへの埋め込みコードもすぐに確認できます。",
   keywords: ["画像Base64変換", "Base64エンコード", "データURL", "画像変換", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/image-base64",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "HTML・CSSで使えるカラー名とHEXコードの一覧を検索できる無料オンラインツール。クリックでHEXコードをコピーできます。",
   keywords: ["HTMLカラー", "CSSカラー", "カラー名", "HEXコード", "色一覧", "色見本"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/color-names",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

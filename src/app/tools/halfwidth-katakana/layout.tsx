@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "全角カタカナと半角カタカナを相互変換できる無料オンラインツール。濁点・半濁点にも対応。",
   keywords: ["半角カタカナ変換", "全角カタカナ", "半角カタカナ", "全角半角変換", "カタカナ", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/halfwidth-katakana",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

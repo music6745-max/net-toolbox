@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "TSV（タブ区切り）とCSV（カンマ区切り）を相互変換できる無料オンラインツール。スプレッドシートのデータ変換に便利。",
   keywords: ["TSV変換", "CSV変換", "TSV CSV", "タブ区切り", "カンマ区切り", "データ変換", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/tsv-csv-converter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

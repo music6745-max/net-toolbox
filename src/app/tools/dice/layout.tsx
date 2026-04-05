@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "4面・6面・8面・10面・12面・20面サイコロを1〜10個振れるオンラインダイスツール。合計値も表示。ボードゲームやTRPGに最適。",
   keywords: ["サイコロ", "ダイス", "ダイスロール", "D6", "D20", "TRPG", "ボードゲーム", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/dice",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

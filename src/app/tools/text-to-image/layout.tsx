@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "テキストをPNG画像に変換する無料オンラインツール。フォント・色・サイズ・背景色を自由に指定して画像を生成・ダウンロード。",
   keywords: ["テキスト", "画像生成", "テキスト画像", "PNG", "文字画像", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/text-to-image",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

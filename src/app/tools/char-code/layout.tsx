@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "文字を入力するとUnicodeコードポイント・UTF-8の16進数・10進数を確認できる無料オンラインツール。",
   keywords: ["文字コード", "Unicode", "UTF-8", "コードポイント", "16進数", "オンライン", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/char-code",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

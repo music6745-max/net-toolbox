@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "メール・電話番号・URL・IPアドレス・日付・郵便番号など、よく使う正規表現パターンをワンクリックでコピーできる無料ツール。",
   keywords: ["正規表現", "regex", "パターン", "メール", "電話番号", "URL", "IPアドレス"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/regex-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

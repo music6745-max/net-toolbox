@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "目標の日時を設定すると残り日数・時間・分・秒をリアルタイムで表示するカウントダウンタイマー。イベントや締め切りの管理に便利な無料ツール。",
   keywords: ["カウントダウンタイマー", "タイマー", "残り時間", "目標日時", "締め切り", "イベント", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/countdown-timer",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "XMLデータを見やすく整形・フォーマットする無料オンラインツール。適切なインデントで階層構造を分かりやすく表示します。",
   keywords: ["XML整形", "XMLフォーマット", "XML整形ツール", "XMLビューティファイ", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/xml-formatter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

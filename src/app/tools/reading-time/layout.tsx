@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "テキストを貼り付けるだけで読了時間・音読時間・文字数・単語数を自動計算。ブログ記事やレポートの目安時間を無料で確認できます。",
   keywords: ["読了時間", "文字数", "単語数", "読書速度", "計算", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/reading-time",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

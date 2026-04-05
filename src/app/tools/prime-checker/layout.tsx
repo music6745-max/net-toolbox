@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "入力した数が素数かどうかを判定します。素数でない場合は因数（約数）を表示します。また指定した数までの素数一覧も表示できます。",
   keywords: ["素数", "素数判定", "因数", "prime", "素因数", "数学"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/prime-checker",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

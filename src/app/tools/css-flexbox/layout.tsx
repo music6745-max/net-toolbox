@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "Flexboxのコンテナプロパティ（direction, wrap, justify-content, align-items）をインタラクティブに設定し、レイアウトをリアルタイム確認できる無料ツール。",
   keywords: ["CSS Flexbox", "flexbox", "レイアウト", "CSS生成", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/css-flexbox",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "2進数・8進数・10進数・16進数を相互変換する無料オンラインツール。プログラミングやIT学習に最適。",
   keywords: ["進数変換", "2進数", "8進数", "10進数", "16進数", "基数変換", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/base-converter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -51,6 +51,15 @@ const guides = [
     icon: "🔐",
   },
   {
+    slug: "sim-comparison",
+    title: "【2026年最新】格安SIM比較おすすめ6選｜料金・速度・通話プランを徹底解説",
+    description:
+      "楽天モバイル・ahamo・LINEMO・povo・UQモバイル・ワイモバイルの料金・速度・通話プランを徹底比較。乗り換えのポイントも紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📱",
+  },
+  {
     slug: "best-vpn-services",
     title: "【2026年】VPNおすすめ比較｜安全なインターネット利用に",
     description:
@@ -112,6 +121,15 @@ const guides = [
     category: "リモートワーク",
     readTime: "7分",
     icon: "🏠",
+  },
+  {
+    slug: "job-site-comparison",
+    title: "【2026年最新】転職サイト比較おすすめ5選｜求人数・サポート・年齢層別に徹底解説",
+    description:
+      "doda・リクルートエージェント・マイナビ転職・ビズリーチ・エン転職の求人数・サポート体制・対象年齢層を徹底比較。20代・30代・40代の年代別おすすめも紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💼",
   },
 ];
 

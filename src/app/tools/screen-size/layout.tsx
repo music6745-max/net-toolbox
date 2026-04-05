@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "現在の画面サイズ・ウィンドウサイズ・ビューポートサイズ・デバイスピクセル比・画面向きをリアルタイムで確認できる無料ツール。",
   keywords: ["画面サイズ確認", "ウィンドウサイズ", "ビューポート", "デバイスピクセル比", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/screen-size",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

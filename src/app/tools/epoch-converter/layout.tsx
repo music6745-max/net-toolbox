@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "Unixエポック（秒・ミリ秒）と人間が読める日時を相互変換する無料ツール。現在のエポック秒もリアルタイム表示。",
   keywords: ["エポック秒", "Unix時間", "タイムスタンプ", "変換", "ミリ秒", "日時"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/epoch-converter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

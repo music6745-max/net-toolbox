@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "Twitter Card（X Card）のタイトル・説明・画像URLを入力して、X/Twitterでシェアされた際のプレビューを確認できる無料ツール。",
   keywords: ["Twitter Card", "Xカード", "OGP", "SNSシェア", "Twitter", "X", "メタタグ", "プレビュー"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/twitter-preview",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

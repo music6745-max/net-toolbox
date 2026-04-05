@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "行数・列数を指定してデータを入力するだけでMarkdown形式の表を自動生成できる無料ツール。GitHubやQiitaなどのMarkdown記法に対応しています。",
   keywords: ["マークダウン テーブル", "Markdown 表", "Markdown 生成", "マークダウン 書き方", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/markdown-table",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

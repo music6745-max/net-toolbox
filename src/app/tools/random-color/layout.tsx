@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "ランダムな色をHEX・RGB・HSL形式で生成する無料オンラインツール。複数色の一括生成やお気に入り色のロック機能付き。",
   keywords: ["ランダムカラー", "色生成", "HEX", "RGB", "HSL", "カラーパレット", "デザイン"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/random-color",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

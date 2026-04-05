@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "画像をアップロードして幅・高さを指定するだけでリサイズ。アスペクト比の維持も対応。PNG・JPEG形式でダウンロード可能。データはブラウザ内のみで処理されます。",
   keywords: ["画像リサイズ", "画像サイズ変更", "画像圧縮", "PNG", "JPEG", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/image-resize",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

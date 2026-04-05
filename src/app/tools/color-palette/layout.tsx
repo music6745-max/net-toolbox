@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "ベースカラーを入力するだけで、補色・類似色・三角配色・スプリット補色のパレットを自動生成する無料オンラインツール。",
   keywords: ["カラーパレット", "配色", "補色", "類似色", "デザイン", "色彩", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/color-palette",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

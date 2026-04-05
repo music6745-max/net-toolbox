@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "東京・ニューヨーク・ロンドン・パリ・シドニーなど世界主要都市の現在時刻をリアルタイムで表示。タイムゾーン確認に便利な無料ツールです。",
   keywords: ["世界時計", "世界時刻", "タイムゾーン", "現在時刻", "時差", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/world-clock",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "角度（度数法または弧度法）を入力してsin・cos・tan・cot・sec・cscを計算します。",
   keywords: ["三角関数", "sin", "cos", "tan", "cot", "sec", "csc", "角度", "数学"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/trigonometry",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

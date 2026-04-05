@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "テキストからSHA-1、SHA-256、SHA-384、SHA-512のハッシュ値を生成する無料オンラインツール。データ整合性の確認に。",
   keywords: ["ハッシュ", "SHA-256", "SHA-512", "ハッシュ生成", "ハッシュ値", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/hash-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

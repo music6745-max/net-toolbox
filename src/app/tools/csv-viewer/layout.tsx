@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "CSVデータをブラウザ上で表形式に整形して表示する無料オンラインツール。列のソートにも対応。",
   keywords: ["CSVビューアー", "CSV表示", "CSV変換", "CSV", "表形式", "データ確認", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/csv-viewer",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

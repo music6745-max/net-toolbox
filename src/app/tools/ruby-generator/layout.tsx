@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "漢字にふりがなを付けるHTMLのrubyタグを自動生成。Webコンテンツのルビ振りに便利な無料オンラインツール。登録不要でブラウザ上で完結。",
   keywords: ["ふりがな", "ルビ", "ruby タグ", "HTML", "ふりがな変換"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/ruby-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "ブラウザ内で画像を切り抜き・トリミングしてダウンロードできる無料オンラインツール。サーバー送信不要で安心。",
   keywords: ["画像切り抜き", "トリミング", "画像編集", "クロップ", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/image-crop",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

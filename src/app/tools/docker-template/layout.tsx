@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "ベースイメージ・ポート・作業ディレクトリなどを選択してDockerfileテンプレートを自動生成。Node.js・Python・Nginx・Goなどに対応。",
   keywords: ["Dockerfile", "Docker", "テンプレート", "コンテナ", "Node.js", "Python", "nginx", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/docker-template",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

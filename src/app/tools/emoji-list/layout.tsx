@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "絵文字をカテゴリ別に一覧表示し、検索してコピーできる無料オンラインツール。100種類以上の絵文字を収録。",
   keywords: ["絵文字", "emoji", "一覧", "検索", "コピー", "カテゴリ", "オンライン", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/emoji-list",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

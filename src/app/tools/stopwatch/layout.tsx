@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "スタート・ストップ・リセット・ラップ機能付きのストップウォッチです。ミリ秒単位で経過時間を計測し、ラップタイムの一覧を表示します。",
   keywords: ["ストップウォッチ", "stopwatch", "ラップ", "時間計測", "タイム"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/stopwatch",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

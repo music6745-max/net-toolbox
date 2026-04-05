@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "CSSアニメーションのプロパティ（duration, timing, iteration, direction）を設定し、ライブプレビューを確認しながらCSSコードを生成できる無料ツール。",
   keywords: ["CSSアニメーション", "animation", "CSS生成", "ライブプレビュー", "開発ツール", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/css-animation",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

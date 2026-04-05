@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "前景色と背景色のコントラスト比を計算し、WCAGのAA・AAAレベルの合否を確認できる無料オンラインツール。",
   keywords: ["コントラスト比", "WCAG", "アクセシビリティ", "AA", "AAA", "色", "デザイン"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/contrast-checker",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

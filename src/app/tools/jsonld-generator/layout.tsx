@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "Article・Product・FAQ・Breadcrumbなどの構造化データ（JSON-LD）を簡単に生成できる無料ツール。SEO対策に役立つschema.orgのマークアップをコピペで使えます。",
   keywords: ["構造化データ", "JSON-LD", "schema.org", "SEO", "Article", "Product", "FAQ", "リッチリザルト"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/jsonld-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

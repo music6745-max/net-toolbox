@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "合計金額・人数・チップ率を入力して一人あたりの負担額を計算。飲み会や食事の割り勘に便利です。ブラウザ内で処理するためデータは外部に送信されません。",
   keywords: ["割り勘", "割り勘計算", "飲み会", "食事", "チップ計算", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/split-bill",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

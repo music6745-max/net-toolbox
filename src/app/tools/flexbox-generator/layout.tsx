@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "CSS Flexboxのプロパティをビジュアルに操作してCSSコードを自動生成する無料ツール。レイアウト作成に便利。",
   keywords: ["Flexbox", "CSS", "ジェネレーター", "レイアウト", "フレックスボックス", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/flexbox-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

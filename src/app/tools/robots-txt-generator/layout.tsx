@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "クローラーの許可・禁止設定を選択してrobots.txtを自動生成できる無料ツール。クロール禁止パスの指定やSitemapのURL設定も可能です。",
   keywords: ["robots.txt", "robots", "クローラー", "SEO", "robots.txt生成", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/robots-txt-generator",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

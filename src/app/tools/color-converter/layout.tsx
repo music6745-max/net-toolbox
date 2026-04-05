@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "HEX・RGB・HSLのカラーコードを相互変換する無料オンラインツール。プレビュー付きで色を確認しながら操作できます。",
   keywords: ["カラーコード変換", "HEX", "RGB", "HSL", "色変換", "デザイン", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/color-converter",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "テキストの余分な空白・改行・空行を一括削除できる無料ツール。行頭行末のトリム、連続空白の正規化など複数のクリーンアップオプション付き。",
   keywords: ["空白", "削除", "トリム", "改行", "空行", "テキスト整形"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/whitespace-remover",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

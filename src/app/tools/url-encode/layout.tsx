@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "URLの日本語や特殊文字をエンコード・デコードする無料オンラインツール。パーセントエンコーディングに対応。",
   keywords: ["URLエンコード", "URLデコード", "パーセントエンコーディング", "URL変換", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/url-encode",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

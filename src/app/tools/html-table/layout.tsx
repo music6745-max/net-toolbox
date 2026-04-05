@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "行数・列数を指定してデータを入力するだけでHTMLテーブルコードを自動生成。クラスやスタイルのオプションも設定できる無料ツール。",
   keywords: ["HTML", "テーブル", "table", "生成", "作成", "コード"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/html-table",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

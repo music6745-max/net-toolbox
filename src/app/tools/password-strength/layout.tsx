@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "パスワードの強度をエントロピー計算で診断する無料ツール。文字の種類・長さ・よくあるパターンを検出し、安全なパスワード作成をサポートします。",
   keywords: ["パスワード強度", "パスワードチェック", "セキュリティ", "エントロピー", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/password-strength",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

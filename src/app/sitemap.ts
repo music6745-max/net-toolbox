@@ -30,6 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "side-business-tools",
     "remote-work-tools",
     "accounting-software-comparison",
+    "job-site-comparison",
+    "sim-comparison",
   ].map((slug) => ({
     url: `${siteConfig.url}/guide/${slug}`,
     lastModified: new Date(),

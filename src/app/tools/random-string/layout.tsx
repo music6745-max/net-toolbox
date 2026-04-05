@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "長さ・文字種・生成数を指定してランダムな文字列を生成する無料オンラインツール。パスワードやトークンの生成に便利です。",
   keywords: ["ランダム文字列", "文字列生成", "パスワード生成", "トークン", "ランダム", "オンライン", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/random-string",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

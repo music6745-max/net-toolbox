@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "NATOフォネティックコードツール - 無料オンラインNATOフォネティックコード",
   description: "テキストをNATOフォネティックアルファベットに変換。電話での伝達に。無料・登録不要でブラウザ上で完結。",
   keywords: ["NATO","フォネティック","アルファベット"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/nato-alphabet",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

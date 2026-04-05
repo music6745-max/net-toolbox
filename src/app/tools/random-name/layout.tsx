@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "日本人の苗字・名前をランダムに組み合わせてダミー名を生成します。男女別に対応。テストデータや小説のキャラクター名などに活用できます。",
   keywords: ["ランダム名前", "日本人名", "ダミーデータ", "名前生成", "苗字", "テストデータ", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/random-name",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

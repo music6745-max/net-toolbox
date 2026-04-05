@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "ROT13・シーザー暗号・XOR暗号でテキストを簡単に暗号化・復号化。学習・ゲーム・ちょっとした秘密メッセージ作成に便利な教育用ツールです。",
   keywords: ["暗号化", "復号化", "ROT13", "シーザー暗号", "XOR", "テキスト変換", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/text-encrypt",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

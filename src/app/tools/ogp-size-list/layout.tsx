@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "OGP・Twitter Card・Facebook・Instagram・YouTube等、SNS別の推奨画像サイズをまとめた一覧。Webサイト制作やSNS運用に役立てましょう。",
   keywords: ["OGP", "画像サイズ", "Twitter Card", "Facebook", "Instagram", "YouTube", "SNS"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/ogp-size-list",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

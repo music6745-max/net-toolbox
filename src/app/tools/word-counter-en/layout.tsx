@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description:
     "英文の単語数・文字数・文章数・段落数・平均単語長・頻出単語Top5を無料で計測。英語ライティングの品質改善にご活用ください。",
   keywords: ["ワードカウント", "英語", "単語数", "文字数", "頻出単語", "無料"],
+  alternates: {
+    canonical: "https://net-toolbox.jp/tools/word-counter-en",
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
