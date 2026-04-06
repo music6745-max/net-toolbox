@@ -906,6 +906,7 @@ export default function EbookComparisonPage() {
         <h3 className="text-xl font-bold text-center">おすすめ電子書籍ストア</h3>
         <AffiliateCTA serviceName="Renta!" url="https://renta.papy.co.jp/" badge="レンタル" description="お得なレンタル作品多数・漫画読むならRenta!" color="red" />
         <AffiliateCTA serviceName="BOOK☆WALKER" url="https://bookwalker.jp/" badge="角川系" description="KADOKAWA直営・ライトノベル充実" color="purple" />
+        <AffiliateCTA serviceName="楽天Kobo" url="https://af.moshimo.com/af/c/click?a_id=5465446&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fbooks.rakuten.co.jp%2F" badge="楽天ポイント" description="楽天ポイントが貯まる・使える電子書籍ストア" color="red" />
       </div>
     </div>
   );
