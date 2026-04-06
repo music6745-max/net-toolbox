@@ -912,6 +912,12 @@ export default function OnlineEnglishComparisonPage() {
               highlight: "LIVE配信で学ぶオンライン英会話",
               price: "月額980円〜",
             },
+            {
+              name: "QQ English",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM",
+              highlight: "プロ教師によるカランメソッド",
+              price: "月2,980円〜",
+            },
           ]}
         />
       </section>

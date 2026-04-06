@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -863,6 +864,24 @@ export default function ProgrammingSchoolComparisonPage() {
           </p>
         </div>
       </section>
+
+      {/* SkillHacks Affiliate CTA */}
+      <AffiliateCTA
+        serviceName="SkillHacks（スキルハックス）"
+        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM"
+        description="業界最安値のオンラインプログラミングスクール。動画で学べて質問し放題。初心者でも安心のサポート体制。"
+        badge="業界最安値"
+        color="purple"
+      />
+
+      {/* Winスクール Affiliate CTA */}
+      <AffiliateCTA
+        serviceName="Winスクール"
+        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5YJRM"
+        description="全国各地に教室を展開する個人レッスンのプログラミングスクール。資格取得に強く、就転職サポートも充実。"
+        badge="全国展開"
+        color="blue"
+      />
 
       {/* Related Tool CTA */}
       <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
