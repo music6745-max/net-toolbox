@@ -918,6 +918,25 @@ export default function OnlineEnglishComparisonPage() {
               highlight: "プロ教師によるカランメソッド",
               price: "月2,980円〜",
             },
+            {
+              name: "ベストティーチャー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+7QNN6+2ZIK+5YJRM",
+              highlight: "Writing×Speakingの独自メソッド",
+              price: "月12,000円〜",
+            },
+            {
+              name: "LanCul（ランカル）",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+5YCTU+4FL0+HV7V6",
+              highlight: "月額1,100円から話し放題",
+              price: "月1,100円〜",
+              badge: "最安値",
+            },
+            {
+              name: "AQUES（アクエス）",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM",
+              highlight: "日本人×外国人のハイブリッド",
+              price: "月額制",
+            },
           ]}
         />
       </section>
