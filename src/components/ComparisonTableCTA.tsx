@@ -44,7 +44,7 @@ export function ComparisonTableCTA({ services }: ComparisonTableCTAProps) {
                     )}
                   </div>
                 </td>
-                <td className="p-4 border-b border-card-border text-muted dark:text-zinc-300">
+                <td className="p-4 border-b border-card-border text-muted dark:text-zinc-100">
                   {svc.highlight}
                 </td>
                 <td className="p-4 border-b border-card-border font-medium whitespace-nowrap dark:text-zinc-200">
