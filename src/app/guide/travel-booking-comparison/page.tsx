@@ -265,7 +265,7 @@ export default function TravelBookingComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -556,7 +556,7 @@ export default function TravelBookingComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {service.bestFor}
@@ -753,7 +753,7 @@ export default function TravelBookingComparisonPage() {
             },
             {
               season: "夏（6月〜8月）",
-              color: "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800",
+              color: "bg-blue-50 dark:bg-blue-900/40 border-blue-200 dark:border-blue-800",
               titleColor: "text-blue-700 dark:text-blue-300",
               highlights: "海水浴・花火大会・避暑地",
               desc: "沖縄や離島のビーチリゾート、北海道や信州の避暑地が人気です。アソビュー!でシュノーケリングやSUPなどの体験を予約すれば、旅がさらに充実。夏休み期間は料金が高騰するため、7月上旬や8月下旬が狙い目です。",
@@ -844,7 +844,7 @@ export default function TravelBookingComparisonPage() {
                 → 高級宿に特化。タイムセールで憧れの宿がお得に。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 Yahoo!トラベル
               </span>
@@ -852,7 +852,7 @@ export default function TravelBookingComparisonPage() {
                 → PayPayポイント最大10%以上還元。ゾロ目クーポンも。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 アソビュー!
               </span>
@@ -878,7 +878,7 @@ export default function TravelBookingComparisonPage() {
       </div>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           便利ツールもチェック
         </h2>

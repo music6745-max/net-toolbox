@@ -135,7 +135,7 @@ export default function QrCodeHowtoPage() {
         <p className="text-muted leading-relaxed mb-4">
           スマートフォンのカメラをかざすだけで読み取れる手軽さから、URLの共有、決済、名刺交換、イベント管理など、さまざまな場面で活用されています。
         </p>
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+        <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
           <p className="text-sm font-medium mb-1">豆知識</p>
           <p className="text-sm text-muted">
             QRコードは最大7,089文字の数字、または4,296文字の英数字を格納できます。また、一部が汚れたり欠損しても読み取れるエラー訂正機能を備えています。
@@ -266,14 +266,14 @@ export default function QrCodeHowtoPage() {
         </h2>
 
         <div className="space-y-4">
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">適切なサイズで印刷する</h3>
             <p className="text-sm text-muted">
               QRコードは最低でも2cm x
               2cm以上のサイズで印刷しましょう。小さすぎるとスマートフォンのカメラで読み取れないことがあります。遠くから読み取る場合は、距離の1/10以上のサイズが目安です。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               コントラストを確保する
             </h3>
@@ -281,7 +281,7 @@ export default function QrCodeHowtoPage() {
               QRコードは白背景に黒いパターンが基本です。背景色と前景色のコントラストが低いと読み取りに失敗します。明るい色の背景に暗い色のコードを配置してください。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               余白（クワイエットゾーン）を確保する
             </h3>
@@ -289,7 +289,7 @@ export default function QrCodeHowtoPage() {
               QRコードの周囲には最低でもセル4個分の余白が必要です。余白がないと正しく認識されないことがあります。画像を切り抜くときは余白を削りすぎないように注意しましょう。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               公開前に必ずテストする
             </h3>

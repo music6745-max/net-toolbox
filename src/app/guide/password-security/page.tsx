@@ -232,7 +232,7 @@ export default function PasswordSecurityPage() {
             </div>
           ))}
         </div>
-        <div className="mt-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+        <div className="mt-4 bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
           <p className="text-sm font-medium mb-1">パスワード強度の目安</p>
           <p className="text-sm text-muted">
             8文字の英数字パスワードは数時間で解読される可能性がありますが、16文字のランダムな英数字+記号パスワードの解読には数百年以上かかると言われています。長さは最も効果的な防御です。
@@ -269,7 +269,7 @@ export default function PasswordSecurityPage() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               複数の無関係な単語をつなげてパスワードを作る方法です。覚えやすさと安全性のバランスが取れています。4つ以上の単語を使い、間に数字や記号を挟むとより安全です。
             </p>
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3">
+            <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-3">
               <p className="text-xs text-muted">
                 例: 「雲-自転車!42-サボテン-月曜日」のように、無関係な単語を記号や数字で区切る
               </p>
@@ -321,7 +321,7 @@ export default function PasswordSecurityPage() {
           </div>
         </div>
 
-        <div className="mt-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+        <div className="mt-4 bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
           <p className="text-sm font-medium mb-1">代表的なパスワードマネージャー</p>
           <p className="text-sm text-muted">
             1Password、Bitwarden（無料プランあり）、Apple

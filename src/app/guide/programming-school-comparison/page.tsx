@@ -291,7 +291,7 @@ export default function ProgrammingSchoolComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：目的別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -595,7 +595,7 @@ export default function ProgrammingSchoolComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {school.bestFor}
@@ -818,7 +818,7 @@ export default function ProgrammingSchoolComparisonPage() {
             プログラミングスクール選びで最も大切なのは、自分の目的に合ったスクールを選ぶことです。この記事で比較した5社は、それぞれ異なる強みを持っており、あなたの目的に合ったスクールが必ず見つかります。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 テックアカデミー
               </span>
@@ -834,7 +834,7 @@ export default function ProgrammingSchoolComparisonPage() {
                 → エンジニア転職No.1。転職保証と給付金で安心して転職を目指せる。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 RUNTEQ
               </span>
@@ -884,7 +884,7 @@ export default function ProgrammingSchoolComparisonPage() {
       />
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           開発に役立つツールもチェック
         </h2>

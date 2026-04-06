@@ -310,7 +310,7 @@ export default function RentalServerComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：迷ったらこれ!</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -708,7 +708,7 @@ export default function RentalServerComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {server.bestFor}
@@ -1012,7 +1012,7 @@ export default function RentalServerComparisonPage() {
             レンタルサーバーはWordPressブログやWebサイト運営の基盤となる重要なサービスです。この記事で比較した5社は、いずれも信頼性が高く初心者でも安心して使えるサーバーです。迷ったら以下を参考にしてください。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0 whitespace-nowrap">
                 ConoHa WING
               </span>
@@ -1030,7 +1030,7 @@ export default function RentalServerComparisonPage() {
                 安定性No.1。国内シェアトップの実績と充実のサポートで長期運用に最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0 whitespace-nowrap">
                 ロリポップ!
               </span>
@@ -1066,7 +1066,7 @@ export default function RentalServerComparisonPage() {
       </section>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           サイト運営に役立つツールもチェック
         </h2>

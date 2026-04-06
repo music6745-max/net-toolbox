@@ -234,7 +234,7 @@ export default function VpnComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：迷ったらこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -568,7 +568,7 @@ export default function VpnComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {vpn.bestFor}
@@ -896,7 +896,7 @@ export default function VpnComparisonPage() {
             VPNは公共WiFiのセキュリティ対策、海外からの日本サービスアクセス、プライバシー保護に必要不可欠なツールです。この記事で比較した3社は、いずれも信頼性が高く30日間の返金保証があるため、安心して試すことができます。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 NordVPN
               </span>
@@ -905,7 +905,7 @@ export default function VpnComparisonPage() {
                 総合力No.1。速度・セキュリティ・コスパのバランスが最も良く、迷ったらこれ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 ExpressVPN
               </span>
@@ -963,7 +963,7 @@ export default function VpnComparisonPage() {
       </section>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           セキュリティツールもチェック
         </h2>

@@ -288,7 +288,7 @@ export default function EbookComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -575,7 +575,7 @@ export default function EbookComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {ebook.bestFor}
@@ -778,7 +778,7 @@ export default function EbookComparisonPage() {
             電子書籍はセール・クーポンを活用すれば紙の本よりもはるかにお得に読書を楽しめます。複数サービスの初回特典を使い分けるのが最もお得な始め方です。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 Kindle
               </span>
@@ -794,7 +794,7 @@ export default function EbookComparisonPage() {
                 → 楽天ポイント＋毎週クーポン。楽天経済圏ならこれ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 BookLive!
               </span>
@@ -826,7 +826,7 @@ export default function EbookComparisonPage() {
       </section>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           便利ツールもチェック
         </h2>

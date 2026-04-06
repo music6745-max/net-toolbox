@@ -308,7 +308,7 @@ export default function DeveloperToolsGuidePage() {
           6. 開発ワークフローに組み込むコツ
         </h2>
         <div className="space-y-4">
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               ブラウザのピン留めタブを活用する
             </h3>
@@ -316,7 +316,7 @@ export default function DeveloperToolsGuidePage() {
               JSON整形や正規表現テスターなど、頻繁に使うツールはブラウザのピン留めタブにしておくと便利です。開発中にいつでもすぐアクセスでき、作業のコンテキストスイッチを最小限にできます。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               ブックマークフォルダでツールを整理する
             </h3>
@@ -324,7 +324,7 @@ export default function DeveloperToolsGuidePage() {
               開発ツール用のブックマークフォルダを作成し、プロジェクトで使うツールをまとめて管理しましょう。チーム共有のブックマークとして活用すれば、メンバー間で同じツールセットを使えます。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               コードレビューで活用する
             </h3>

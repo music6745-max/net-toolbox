@@ -235,7 +235,7 @@ export default function AccountingSoftwareComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：迷ったらこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -600,7 +600,7 @@ export default function AccountingSoftwareComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {soft.bestFor}
@@ -776,7 +776,7 @@ export default function AccountingSoftwareComparisonPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-xl p-4">
             <p className="text-sm font-bold text-green-700 dark:text-green-300 mb-2">
               白色申告におすすめのソフト
             </p>
@@ -794,7 +794,7 @@ export default function AccountingSoftwareComparisonPage() {
             </a>
           </div>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
+          <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-4">
             <p className="text-sm font-bold text-blue-700 dark:text-blue-300 mb-2">
               青色申告におすすめのソフト
             </p>
@@ -957,7 +957,7 @@ export default function AccountingSoftwareComparisonPage() {
             確定申告ソフトは、フリーランス・個人事業主・副業をしている方にとって欠かせないツールです。この記事で比較した3社は、いずれも信頼性が高く無料お試し期間があるため、安心して試すことができます。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 freee会計
               </span>
@@ -966,7 +966,7 @@ export default function AccountingSoftwareComparisonPage() {
                 初心者No.1。簿記知識不要で直感的に操作でき、スマホ完結も可能。迷ったらこれ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 弥生会計
               </span>
@@ -992,7 +992,7 @@ export default function AccountingSoftwareComparisonPage() {
       </section>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           副業に役立つツールもチェック
         </h2>

@@ -192,7 +192,7 @@ export default function WebToolsForWorkPage() {
       </div>
 
       {/* Intro */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
         <p className="text-sm font-medium mb-1">このガイドの特徴</p>
         <ul className="text-sm text-muted space-y-1">
           <li>・ すべて無料・登録不要で利用可能</li>
@@ -242,7 +242,7 @@ export default function WebToolsForWorkPage() {
           6. ツール活用のコツ
         </h2>
         <div className="space-y-4">
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               ブックマークに登録しておく
             </h3>
@@ -250,7 +250,7 @@ export default function WebToolsForWorkPage() {
               よく使うツールはブラウザのブックマークバーに登録しておきましょう。必要なときにワンクリックでアクセスでき、作業の中断を最小限に抑えられます。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               チームに共有する
             </h3>
@@ -258,7 +258,7 @@ export default function WebToolsForWorkPage() {
               便利なツールはチームメンバーにも共有しましょう。全員の作業効率が上がれば、チーム全体の生産性向上につながります。SlackやTeamsでURLを共有するだけでOKです。
             </p>
           </div>
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div className="bg-green-50 dark:bg-green-900/40 border border-green-200 dark:border-green-800 rounded-lg p-4">
             <h3 className="font-bold text-sm mb-2">
               データの安全性を確認する
             </h3>

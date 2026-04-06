@@ -211,6 +211,56 @@ const guides = [
     readTime: "15分",
     icon: "📚",
   },
+  {
+    slug: "fitness-app-comparison",
+    title:
+      "【2026年最新】フィットネスアプリ比較おすすめ5選｜機能・料金・目的別に徹底解説",
+    description:
+      "Nike Training Club・MyFitnessPal・FiNC・あすけん・Freeleticsの機能・料金・ワークアウト内容を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💪",
+  },
+  {
+    slug: "photo-editing-comparison",
+    title:
+      "【2026年最新】写真編集ソフト比較おすすめ5選｜機能・料金・初心者向けを徹底解説",
+    description:
+      "Adobe Lightroom・Canva・GIMP・Pixlr・Fotorの機能・料金・AI機能を徹底比較。初心者からプロまで最適なソフトが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📷",
+  },
+  {
+    slug: "video-editing-comparison",
+    title:
+      "【2026年最新】動画編集ソフト比較おすすめ5選｜機能・料金・初心者〜プロ向けを徹底解説",
+    description:
+      "Adobe Premiere Pro・DaVinci Resolve・CapCut・Filmora・PowerDirectorの機能・料金を徹底比較。YouTube・SNS動画制作に最適。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🎥",
+  },
+  {
+    slug: "project-management-comparison",
+    title:
+      "【2026年最新】プロジェクト管理ツール比較おすすめ5選｜機能・料金・チーム規模別に徹底解説",
+    description:
+      "Notion・Asana・Trello・Backlog・Jiraの機能・料金・使いやすさを徹底比較。個人からチームまで最適なツールが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📋",
+  },
+  {
+    slug: "note-taking-app-comparison",
+    title:
+      "【2026年最新】メモ・ノートアプリ比較おすすめ5選｜機能・料金・同期・整理術を徹底解説",
+    description:
+      "Notion・Obsidian・Evernote・Apple Notes・Google Keepの機能・料金・同期を徹底比較。あなたに最適なアプリが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📝",
+  },
 ];
 
 const categoryColors: Record<string, string> = {

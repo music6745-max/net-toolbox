@@ -274,7 +274,7 @@ export default function OnlineEnglishComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3">結論：迷ったらこれ！</h2>
         <div className="space-y-2 text-sm">
           <p>
@@ -605,7 +605,7 @@ export default function OnlineEnglishComparisonPage() {
               </div>
 
               {/* Best For */}
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {svc.bestFor}
@@ -847,7 +847,7 @@ export default function OnlineEnglishComparisonPage() {
             オンライン英会話は、自宅から手軽に英語を学べるコスパ抜群の学習方法です。この記事で比較した5社は、いずれも実績のある信頼性の高いサービスで、無料体験（または格安のお試しレッスン）が用意されています。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/40 rounded-lg">
               <span className="font-bold text-blue-700 dark:text-blue-300 flex-shrink-0">
                 DMM英会話
               </span>
@@ -855,7 +855,7 @@ export default function OnlineEnglishComparisonPage() {
                 → 12,000以上の教材と120カ国の講師。教材の豊富さで選ぶならこれ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/40 rounded-lg">
               <span className="font-bold text-green-700 dark:text-green-300 flex-shrink-0">
                 NativeCamp
               </span>
@@ -942,7 +942,7 @@ export default function OnlineEnglishComparisonPage() {
       </section>
 
       {/* Related Tool CTA */}
-      <section className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">
           英語学習に役立つツールもチェック
         </h2>
