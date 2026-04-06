@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -899,6 +900,13 @@ export default function EbookComparisonPage() {
           </a>
         </div>
       </section>
+
+      {/* Affiliate CTAs */}
+      <div className="space-y-6 my-8">
+        <h3 className="text-xl font-bold text-center">おすすめ電子書籍ストア</h3>
+        <AffiliateCTA serviceName="Renta!" url="https://renta.papy.co.jp/" badge="レンタル" description="お得なレンタル作品多数・漫画読むならRenta!" color="red" />
+        <AffiliateCTA serviceName="BOOK☆WALKER" url="https://bookwalker.jp/" badge="角川系" description="KADOKAWA直営・ライトノベル充実" color="purple" />
+      </div>
     </div>
   );
 }

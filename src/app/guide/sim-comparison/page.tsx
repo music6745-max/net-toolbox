@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -1028,6 +1029,12 @@ export default function SimComparisonPage() {
           </a>
         </div>
       </section>
+
+      {/* Affiliate CTAs */}
+      <div className="space-y-6 my-8">
+        <h3 className="text-xl font-bold text-center">おすすめ格安SIM</h3>
+        <AffiliateCTA serviceName="ワイモバイル" url="https://www.ymobile.jp/" badge="ソフトバンク系" description="通信品質◎・家族割でさらにお得" color="red" />
+      </div>
     </div>
   );
 }

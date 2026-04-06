@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "副業に必要なWebツール完全ガイド｜無料で始める",
@@ -423,6 +424,11 @@ export default function SideBusinessToolsPage() {
           ]}
         />
       </section>
+
+      {/* CrowdWorks CTA */}
+      <div className="space-y-6 my-8">
+        <AffiliateCTA serviceName="クラウドワークス" url="https://crowdworks.jp/" badge="副業" description="日本最大級のクラウドソーシング" color="blue" />
+      </div>
 
       {/* Roadmap section */}
       <section id="roadmap" className="mb-10">

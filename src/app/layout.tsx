@@ -81,6 +81,13 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6483317297217533"
           crossOrigin="anonymous"
         />
+        <script
+          dangerouslySetInnerHTML={{ __html: 'var vc_pid = "892589513";' }}
+        />
+        <script
+          async
+          src="//aml.valuecommerce.com/vcdal.js"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <WebSiteJsonLd
