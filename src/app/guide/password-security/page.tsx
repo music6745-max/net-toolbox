@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "安全なパスワードの作り方｜セキュリティ対策ガイド",
@@ -381,6 +382,14 @@ export default function PasswordSecurityPage() {
           ))}
         </div>
       </section>
+
+      {/* Affiliate CTA */}
+      <div className="space-y-6 my-8">
+        <h3 className="text-xl font-bold text-center">セキュリティ強化におすすめのVPN</h3>
+        <AffiliateCTA serviceName="MillenVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6" badge="国産No.1" description="確定率99%・日本語サポート充実" color="blue" />
+        <AffiliateCTA serviceName="NordVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ" badge="世界最大手" description="高速通信・5,000+サーバー" color="purple" />
+        <AffiliateCTA serviceName="ExpressVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE" badge="高速" description="業界最速クラスの通信速度" color="green" />
+      </div>
 
       {/* CTA */}
       <section className="bg-card-bg border border-card-border rounded-xl p-8 text-center">

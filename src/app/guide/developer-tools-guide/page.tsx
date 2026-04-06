@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "Web開発者向け便利ツール活用ガイド",
@@ -351,6 +352,13 @@ export default function DeveloperToolsGuidePage() {
           ))}
         </div>
       </section>
+
+      {/* Affiliate CTA */}
+      <div className="space-y-6 my-8">
+        <h3 className="text-xl font-bold text-center">開発環境におすすめのレンタルサーバー</h3>
+        <AffiliateCTA serviceName="ConoHa WING" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT" badge="高速" description="国内最速級・開発者に人気のレンタルサーバー" color="blue" />
+        <AffiliateCTA serviceName="エックスサーバー" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1" badge="定番" description="安定性抜群・サポート充実のレンタルサーバー" color="orange" />
+      </div>
 
       {/* CTA */}
       <section className="bg-card-bg border border-card-border rounded-xl p-8 text-center">

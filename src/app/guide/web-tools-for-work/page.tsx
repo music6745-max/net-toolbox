@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "仕事効率化に使える無料Webツール15選",
@@ -267,6 +268,13 @@ export default function WebToolsForWorkPage() {
           </div>
         </div>
       </section>
+
+      {/* Affiliate CTA */}
+      <div className="space-y-6 my-8">
+        <h3 className="text-xl font-bold text-center">ビジネスにおすすめのサービス</h3>
+        <AffiliateCTA serviceName="弥生シリーズ" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU" badge="会計" description="確定申告・経理の定番ソフト" color="green" />
+        <AffiliateCTA serviceName="ConoHa WING" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT" badge="サーバー" description="ビジネスサイト構築に最適" color="blue" />
+      </div>
 
       {/* CTA */}
       <section className="bg-card-bg border border-card-border rounded-xl p-8 text-center">
