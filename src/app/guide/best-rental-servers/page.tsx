@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年】レンタルサーバーおすすめ比較5選｜初心者向け",
@@ -507,6 +508,35 @@ export default function BestRentalServersPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Comparison Table CTA */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">おすすめサーバー比較表</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "ConoHa WING",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+              highlight: "国内最速・確定率94%",
+              price: "月687円〜",
+              badge: "おすすめ",
+            },
+            {
+              name: "エックスサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+              highlight: "20年以上の安定実績",
+              price: "月990円〜",
+              badge: "定番",
+            },
+            {
+              name: "ロリポップ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1AFTYQ+348+5YZ76",
+              highlight: "初心者向け低価格",
+              price: "月99円〜",
+            },
+          ]}
+        />
       </section>
 
       {/* CTA */}

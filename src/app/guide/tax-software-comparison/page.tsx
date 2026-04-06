@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年】確定申告ソフト比較｜フリーランス・副業向けおすすめ",
@@ -538,6 +539,28 @@ export default function TaxSoftwareComparisonPage() {
         >
           税金計算ツールを使う
         </Link>
+      </section>
+
+      {/* Comparison Table CTA */}
+      <section className="mb-8">
+        <h2 className="text-lg font-bold mb-4">確定申告ソフトを今すぐ比較・申し込み</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "弥生シリーズ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+              highlight: "確定率91.74%の安心実績",
+              price: "無料〜年26,000円",
+              badge: "高確定率",
+            },
+            {
+              name: "freee会計",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+              highlight: "クラウド会計シェアNo.1",
+              price: "月1,180円〜",
+            },
+          ]}
+        />
       </section>
 
       {/* CTA */}

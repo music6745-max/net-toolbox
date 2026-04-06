@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "副業に必要なWebツール完全ガイド｜無料で始める",
@@ -378,6 +379,50 @@ export default function SideBusinessToolsPage() {
           )}
         </section>
       ))}
+
+      {/* Accounting CTA */}
+      <section className="mb-12">
+        <h3 className="text-lg font-bold mb-4">会計ソフトを比較して選ぶ</h3>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "やよいの青色申告",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+              highlight: "確定率91.74%",
+              price: "無料〜",
+              badge: "定番",
+            },
+            {
+              name: "freee（フリー）",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+              highlight: "スマホで確定申告",
+              price: "月1,180円〜",
+            },
+          ]}
+        />
+      </section>
+
+      {/* Rental Server CTA */}
+      <section className="mb-12">
+        <h3 className="text-lg font-bold mb-4">レンタルサーバーを比較して選ぶ</h3>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "ConoHa WING",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT",
+              highlight: "国内最速",
+              price: "月687円〜",
+              badge: "おすすめ",
+            },
+            {
+              name: "エックスサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1",
+              highlight: "安定実績20年",
+              price: "月990円〜",
+            },
+          ]}
+        />
+      </section>
 
       {/* Roadmap section */}
       <section id="roadmap" className="mb-10">

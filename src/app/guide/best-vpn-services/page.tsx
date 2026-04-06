@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年】VPNおすすめ比較｜安全なインターネット利用に",
@@ -537,6 +538,38 @@ export default function BestVpnServicesPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* VPN Comparison Table CTA */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">VPNサービス比較表</h2>
+        <p className="text-sm text-muted mb-4">
+          おすすめ3社の特徴と料金をまとめました。すべて30日間返金保証付きです。
+        </p>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "MillenVPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
+              highlight: "確定率99%・国産VPN",
+              price: "月396円〜",
+              badge: "高確定率",
+            },
+            {
+              name: "NordVPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+              highlight: "世界シェアNo.1",
+              price: "月560円〜",
+              badge: "人気No.1",
+            },
+            {
+              name: "ExpressVPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
+              highlight: "最速通信速度",
+              price: "月899円〜",
+            },
+          ]}
+        />
       </section>
 
       {/* Related tool CTA */}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -1012,6 +1013,28 @@ export default function AccountingSoftwareComparisonPage() {
             レンタルサーバー比較も見る
           </Link>
         </div>
+      </section>
+
+      {/* Comparison Table CTA */}
+      <section className="mb-8">
+        <h2 className="text-lg font-bold mb-4">確定申告ソフトを今すぐ比較・申し込み</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "弥生シリーズ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+              highlight: "確定率91.74%の安心実績",
+              price: "無料〜年26,000円",
+              badge: "高確定率",
+            },
+            {
+              name: "freee会計",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+              highlight: "クラウド会計シェアNo.1",
+              price: "月1,180円〜",
+            },
+          ]}
+        />
       </section>
 
       {/* Final CTA */}
