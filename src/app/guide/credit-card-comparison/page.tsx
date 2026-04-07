@@ -777,7 +777,7 @@ export default function CreditCardComparisonPage() {
             年会費無料のクレジットカードは、正しく選ぶだけで年間数万円分のポイントが貯まります。5枚すべて年会費無料なので、メインとサブで使い分けるのもおすすめです。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/40 rounded-lg">
               <span className="font-bold text-pink-700 dark:text-pink-300 flex-shrink-0">
                 楽天カード
               </span>
@@ -801,7 +801,7 @@ export default function CreditCardComparisonPage() {
                 → Amazon 2.0%・スタバ10.5%。39歳以下なら必見。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 PayPayカード
               </span>
@@ -809,7 +809,7 @@ export default function CreditCardComparisonPage() {
                 → PayPay経済圏で1.0%還元。Yahoo!ショッピングで最大5%。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 dカード
               </span>

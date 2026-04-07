@@ -130,7 +130,7 @@ export default function PasswordSecurityPage() {
         <p className="text-muted leading-relaxed mb-4">
           サイバー攻撃の被害は年々増加しており、その多くがパスワードの脆弱性を突いたものです。一度アカウントが乗っ取られると、個人情報の流出、金銭的被害、なりすまし被害など深刻な問題につながります。
         </p>
-        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
+        <div className="bg-red-50 dark:bg-red-900/40 border border-red-200 dark:border-red-800 rounded-lg p-4 mb-4">
           <p className="text-sm font-medium mb-2">こんな被害が起きています</p>
           <ul className="text-sm text-muted space-y-1">
             <li>
@@ -283,7 +283,7 @@ export default function PasswordSecurityPage() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               覚えやすい基本フレーズに、サービス名の一部を組み合わせる方法です。完全なランダムではないため安全性は劣りますが、使い回しを避ける方法としては有効です。
             </p>
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
+            <div className="bg-yellow-50 dark:bg-yellow-900/40 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
               <p className="text-xs text-muted">
                 注意: この方法は他の方法より安全性が低いため、重要なアカウントには方法1か方法2を推奨します。
               </p>

@@ -745,7 +745,7 @@ export default function TravelBookingComparisonPage() {
           {[
             {
               season: "春（3月〜5月）",
-              color: "bg-pink-50 dark:bg-pink-900/20 border-pink-200 dark:border-pink-800",
+              color: "bg-pink-50 dark:bg-pink-900/40 border-pink-200 dark:border-pink-800",
               titleColor: "text-pink-700 dark:text-pink-300",
               highlights: "桜の名所巡り・花見旅行",
               desc: "桜の開花時期に合わせた旅行は大人気。京都・吉野・弘前など桜の名所は早めの予約が必須です。3月上旬〜中旬なら河津桜（静岡）、4月上旬なら関東・関西の桜が見頃。GW前の平日が比較的空いていておすすめです。",
@@ -761,7 +761,7 @@ export default function TravelBookingComparisonPage() {
             },
             {
               season: "秋（9月〜11月）",
-              color: "bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800",
+              color: "bg-orange-50 dark:bg-orange-900/40 border-orange-200 dark:border-orange-800",
               titleColor: "text-orange-700 dark:text-orange-300",
               highlights: "紅葉・温泉・グルメ旅",
               desc: "紅葉シーズンの京都・日光・箱根は特に人気。温泉旅館でゆっくり紅葉を楽しむプランがおすすめです。一休.comなら高級温泉旅館がタイムセールでお得に予約できることも。食欲の秋を楽しむグルメ旅も人気です。",
@@ -769,7 +769,7 @@ export default function TravelBookingComparisonPage() {
             },
             {
               season: "冬（12月〜2月）",
-              color: "bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800",
+              color: "bg-indigo-50 dark:bg-indigo-900/40 border-indigo-200 dark:border-indigo-800",
               titleColor: "text-indigo-700 dark:text-indigo-300",
               highlights: "スキー・温泉・イルミネーション",
               desc: "スキーリゾートや雪景色の温泉宿が人気。年末年始を除けば冬は比較的お得に旅行できるシーズンです。北海道の雪まつり、各地のイルミネーションイベントも魅力。JTBのスキーパッケージならリフト券付きでお得です。",
@@ -820,7 +820,7 @@ export default function TravelBookingComparisonPage() {
             旅行予約サイトは、それぞれ得意な分野やポイント経済圏が異なります。自分の旅行スタイルや普段使っているポイントに合わせて選ぶことが、お得な旅行への第一歩です。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0">
                 じゃらんnet
               </span>
@@ -828,7 +828,7 @@ export default function TravelBookingComparisonPage() {
                 → 最大10%ポイント還元。口コミ豊富で宿選びに最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 JTB
               </span>
@@ -836,7 +836,7 @@ export default function TravelBookingComparisonPage() {
                 → パッケージツアー充実。対面相談で安心の旅行計画。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 一休.com
               </span>

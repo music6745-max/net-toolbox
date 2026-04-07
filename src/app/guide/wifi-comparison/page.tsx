@@ -787,7 +787,7 @@ export default function WifiComparisonPage() {
                 → キャッシュバック込みで実質最安。持ち運びも自宅も対応。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/40 rounded-lg">
               <span className="font-bold text-pink-700 dark:text-pink-300 flex-shrink-0">
                 楽天モバイル
               </span>
@@ -795,7 +795,7 @@ export default function WifiComparisonPage() {
                 → 縛りなし＋段階制料金。気軽に試せるモバイルWiFi。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 ドコモ home 5G
               </span>
@@ -811,7 +811,7 @@ export default function WifiComparisonPage() {
                 → スマホセット割でトータルコスト削減。SBユーザーに。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 モバレコAir
               </span>

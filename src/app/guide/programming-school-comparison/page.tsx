@@ -826,7 +826,7 @@ export default function ProgrammingSchoolComparisonPage() {
                 → 副業・フリーランス向け。豊富なコースと実案件紹介で収入に直結。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 DMM WEBCAMP
               </span>
@@ -842,7 +842,7 @@ export default function ProgrammingSchoolComparisonPage() {
                 → 本格派向け。1,000時間の学習で実務レベルのスキルを確実に習得。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0">
                 SkillHacks
               </span>

@@ -1021,7 +1021,7 @@ export default function RentalServerComparisonPage() {
                 総合No.1。速度・コスパ・使いやすさのバランスが最も良く、初心者に最もおすすめ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0 whitespace-nowrap">
                 エックスサーバー
               </span>
@@ -1039,7 +1039,7 @@ export default function RentalServerComparisonPage() {
                 最安値。月額220円〜で始められ、ハイスピードプランなら高速サーバーも月額550円。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0 whitespace-nowrap">
                 mixhost
               </span>
@@ -1048,7 +1048,7 @@ export default function RentalServerComparisonPage() {
                 大容量・高機能。ディスク無制限で大規模サイトに最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0 whitespace-nowrap">
                 シンレンタル
               </span>

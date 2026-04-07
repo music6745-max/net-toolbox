@@ -265,7 +265,7 @@ export default function TaxSoftwareComparisonPage() {
             </div>
           ))}
         </div>
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mt-4">
+        <div className="bg-yellow-50 dark:bg-yellow-900/40 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4 mt-4">
           <p className="text-sm font-medium mb-1">青色申告がおすすめ</p>
           <p className="text-sm text-muted">
             開業届と青色申告承認申請書を提出すれば、最大65万円の特別控除が受けられます。確定申告ソフトを使えば、複式簿記も自動で処理してくれるため、青色申告のハードルは大幅に下がります。
@@ -341,7 +341,7 @@ export default function TaxSoftwareComparisonPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3">
+                <div className="bg-red-50 dark:bg-red-900/40 border border-red-200 dark:border-red-800 rounded-lg p-3">
                   <h4 className="text-sm font-bold mb-2 text-red-700 dark:text-red-300">
                     デメリット
                   </h4>

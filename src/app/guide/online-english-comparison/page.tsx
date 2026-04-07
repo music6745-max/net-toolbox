@@ -863,7 +863,7 @@ export default function OnlineEnglishComparisonPage() {
                 → 月額6,480円でレッスン回数無制限。たくさん話したい方に最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0">
                 QQEnglish
               </span>
@@ -871,7 +871,7 @@ export default function OnlineEnglishComparisonPage() {
                 → 月額2,980円〜の最安値。講師全員がTESOL取得のプロ。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 Kimini英会話
               </span>
@@ -879,7 +879,7 @@ export default function OnlineEnglishComparisonPage() {
                 → 学研グループの体系的カリキュラム。初心者に最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 AQUES
               </span>

@@ -810,7 +810,7 @@ export default function StreamingComparisonPage() {
                 → 月額600円でコスパ最強。動画以外の特典も充実。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 Netflix
               </span>
@@ -818,7 +818,7 @@ export default function StreamingComparisonPage() {
                 → オリジナル作品の質No.1。全作品見放題で安心。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 U-NEXT
               </span>

@@ -809,7 +809,7 @@ export default function VpnComparisonPage() {
             </tbody>
           </table>
         </div>
-        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
+        <div className="bg-red-50 dark:bg-red-900/40 border border-red-200 dark:border-red-800 rounded-xl p-4">
           <p className="text-sm font-bold text-red-700 dark:text-red-300 mb-2">
             無料VPNの注意点
           </p>
@@ -914,7 +914,7 @@ export default function VpnComparisonPage() {
                 速度最重視の方に。独自プロトコルで業界最速、規制の厳しい国でも使える。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0">
                 MillenVPN
               </span>

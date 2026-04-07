@@ -871,7 +871,7 @@ export default function JobSiteComparisonPage() {
                 → 総合力No.1。転職サイト＋エージェント一体型で初めての転職にも安心。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 リクルートエージェント
               </span>
@@ -887,7 +887,7 @@ export default function JobSiteComparisonPage() {
                 → 20代・第二新卒に強い。未経験からのキャリアチェンジにも対応。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-orange-50 dark:bg-orange-900/40 rounded-lg">
               <span className="font-bold text-orange-700 dark:text-orange-300 flex-shrink-0">
                 ビズリーチ
               </span>
@@ -895,7 +895,7 @@ export default function JobSiteComparisonPage() {
                 → ハイクラス転職に特化。年収600万円以上の方は登録必須。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 エン転職
               </span>

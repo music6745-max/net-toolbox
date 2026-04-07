@@ -790,7 +790,7 @@ export default function CloudStorageComparisonPage() {
                 → 無料15GBで最大容量。Google連携が便利。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 iCloud+
               </span>
@@ -814,7 +814,7 @@ export default function CloudStorageComparisonPage() {
                 → 同期速度と共有機能が最強。チーム利用に。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 Amazon Drive
               </span>

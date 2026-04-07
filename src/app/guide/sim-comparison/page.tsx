@@ -892,7 +892,7 @@ export default function SimComparisonPage() {
             格安SIMへの乗り換えは、月額料金を大幅に節約できる最も効果的な方法の一つです。この記事で比較した6社は、いずれも契約期間の縛りなし・解約金なしなので、気軽に試すことができます。
           </p>
           <div className="space-y-3 mb-6">
-            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/40 rounded-lg">
               <span className="font-bold text-pink-700 dark:text-pink-300 flex-shrink-0">
                 楽天モバイル
               </span>
@@ -924,7 +924,7 @@ export default function SimComparisonPage() {
                 → 基本料0円。サブ回線やデュアルSIM運用に最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 UQモバイル
               </span>
@@ -932,7 +932,7 @@ export default function SimComparisonPage() {
                 → au品質＋店頭サポート。auからの乗り換えに最適。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 ワイモバイル
               </span>

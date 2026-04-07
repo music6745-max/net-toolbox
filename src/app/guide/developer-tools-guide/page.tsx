@@ -258,7 +258,7 @@ export default function DeveloperToolsGuidePage() {
       </div>
 
       {/* Intro note */}
-      <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mb-8">
+      <div className="bg-purple-50 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mb-8">
         <p className="text-sm font-medium mb-1">開発者にうれしいポイント</p>
         <ul className="text-sm text-muted space-y-1">
           <li>・ すべてブラウザ内で処理 - 機密データも安心</li>

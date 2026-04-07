@@ -786,7 +786,7 @@ export default function EbookComparisonPage() {
                 → 品揃え700万冊最大。Unlimited月額980円で読み放題。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-pink-50 dark:bg-pink-900/40 rounded-lg">
               <span className="font-bold text-pink-700 dark:text-pink-300 flex-shrink-0">
                 楽天Kobo
               </span>
@@ -802,7 +802,7 @@ export default function EbookComparisonPage() {
                 → 毎日クーポンガチャ＋来店ポイント。継続的にお得。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-red-50 dark:bg-red-900/40 rounded-lg">
               <span className="font-bold text-red-700 dark:text-red-300 flex-shrink-0">
                 ebookjapan
               </span>
@@ -810,7 +810,7 @@ export default function EbookComparisonPage() {
                 → 初回70%OFF×6回＋金曜PayPay30%。マンガ最安。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 DMMブックス
               </span>

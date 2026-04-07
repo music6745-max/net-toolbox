@@ -663,7 +663,7 @@ export default function AccountingSoftwareComparisonPage() {
       </section>
 
       {/* Mid CTA Banner */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-10">
+      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/50 dark:to-purple-900/50 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-10">
         <h3 className="text-lg font-bold mb-2 text-center">
           3社とも無料お試しあり！まずは使ってみよう
         </h3>
@@ -975,7 +975,7 @@ export default function AccountingSoftwareComparisonPage() {
                 コスパNo.1。初年度無料、白色申告は永年無料。25年以上の実績で安心。
               </span>
             </div>
-            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-purple-50 dark:bg-purple-900/40 rounded-lg">
               <span className="font-bold text-purple-700 dark:text-purple-300 flex-shrink-0">
                 マネーフォワード
               </span>
