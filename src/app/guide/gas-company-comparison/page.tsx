@@ -230,8 +230,8 @@ export default function GasCompanyComparisonPage() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：タイプ別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-green-700 dark:text-green-300">首都圏で安く → レモンガス</span>（東京ガスより5%安い）</p>
           <p><span className="font-bold text-red-700 dark:text-red-300">首都圏で大手安心 → 東京ガス</span>（パッチョポイント）</p>
           <p><span className="font-bold text-orange-700 dark:text-orange-300">関西エリア → 大阪ガス</span>（電気セット割）</p>

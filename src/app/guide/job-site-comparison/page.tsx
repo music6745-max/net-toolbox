@@ -270,8 +270,8 @@ export default function JobSiteComparisonPage() {
 
       {/* Quick Recommendation */}
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：迷ったらこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：迷ったらこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p>
             <span className="font-bold text-blue-700 dark:text-blue-300">
               総合力で選ぶなら → doda
@@ -660,7 +660,7 @@ export default function JobSiteComparisonPage() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               20代は未経験でも採用される「ポテンシャル採用」が活発な年代です。第二新卒枠も含め、キャリアチェンジのチャンスが最も大きい時期。複数の転職サイトに登録して、できるだけ多くの選択肢を持つことが重要です。
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
               <p>
                 <span className="font-bold text-green-700 dark:text-green-300">第1位：マイナビ転職</span>
                 {" "}― 20代・第二新卒向けの求人が最も充実。未経験歓迎の求人も多数。
@@ -687,7 +687,7 @@ export default function JobSiteComparisonPage() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               30代は即戦力としての採用がメインとなります。これまでの経験やスキルを活かした転職が中心で、年収アップも十分に狙える年代です。エージェントを活用して、非公開求人にアクセスすることが成功のカギになります。
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
               <p>
                 <span className="font-bold text-red-700 dark:text-red-300">第1位：リクルートエージェント</span>
                 {" "}― 業界最大の求人数から即戦力求人を紹介。面接対策も充実。
@@ -714,7 +714,7 @@ export default function JobSiteComparisonPage() {
             <p className="text-sm text-muted leading-relaxed mb-3">
               40代の転職は求人数が限られる一方、専門性やマネジメント経験が高く評価されます。ハイクラス特化型サービスを中心に、管理職・幹部候補のポジションを狙うのがおすすめです。時間がかかる可能性があるため、在職中に余裕を持って活動を始めましょう。
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
               <p>
                 <span className="font-bold text-orange-700 dark:text-orange-300">第1位：ビズリーチ</span>
                 {" "}― 管理職・経営幹部の求人が豊富。年収1,000万円以上も多数。

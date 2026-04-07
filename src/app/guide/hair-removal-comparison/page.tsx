@@ -235,8 +235,8 @@ export default function HairRemovalComparisonPage() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：タイプ別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-red-700 dark:text-red-300">低価格で試したい → ミュゼ</span>（100円キャンペーン）</p>
           <p><span className="font-bold text-blue-700 dark:text-blue-300">全身通い放題 → 銀座カラー</span>（保湿ケア付き）</p>
           <p><span className="font-bold text-purple-700 dark:text-purple-300">痛みが不安 → ストラッシュ</span>（SHR脱毛）</p>

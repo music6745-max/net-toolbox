@@ -235,8 +235,8 @@ export default function CarPurchaseComparisonPage() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：タイプ別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-red-700 dark:text-red-300">最高値を狙う → カーセンサー一括査定</span>（最大30社）</p>
           <p><span className="font-bold text-blue-700 dark:text-blue-300">安心感重視 → ガリバー</span>（実績No.1）</p>
           <p><span className="font-bold text-orange-700 dark:text-orange-300">即日現金化 → ビッグモーター</span>（販売一体型）</p>

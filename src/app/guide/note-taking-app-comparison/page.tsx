@@ -243,8 +243,8 @@ export default function NoteTakingAppComparisonPage() {
 
       {/* Quick Recommendation */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：用途別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：用途別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-purple-700 dark:text-purple-300">メモ+タスク+Wikiを一元管理 → Notion</span>（個人無料・オールインワン）</p>
           <p><span className="font-bold text-blue-700 dark:text-blue-300">知識をネットワーク的に整理 → Obsidian</span>（無料・ローカル保存・プライバシー重視）</p>
           <p><span className="font-bold text-green-700 dark:text-green-300">Web情報の収集・保存 → Evernote</span>（Webクリッパー最強・OCR検索）</p>

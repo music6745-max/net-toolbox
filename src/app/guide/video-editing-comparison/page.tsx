@@ -263,8 +263,8 @@ export default function VideoEditingComparisonPage() {
 
       {/* Quick Recommendation */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：目的別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：目的別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-blue-700 dark:text-blue-300">プロ品質の本格編集 → Adobe Premiere Pro</span>（業界標準・AI字幕が優秀）</p>
           <p><span className="font-bold text-green-700 dark:text-green-300">無料でプロ品質 → DaVinci Resolve</span>（無料でも4K編集可能・カラグレ最強）</p>
           <p><span className="font-bold text-pink-700 dark:text-pink-300">SNSショート動画 → CapCut</span>（無料・AI字幕・テンプレート豊富）</p>

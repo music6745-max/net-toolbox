@@ -230,8 +230,8 @@ export default function SolarPowerComparisonPage() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：タイプ別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-orange-700 dark:text-orange-300">業界最大手 → タイナビ</span>（350社以上）</p>
           <p><span className="font-bold text-green-700 dark:text-green-300">中間マージン0 → ソーラーパートナーズ</span>（自社施工）</p>
           <p><span className="font-bold text-blue-700 dark:text-blue-300">価格重視 → グリエネ</span>（最大100万円差）</p>

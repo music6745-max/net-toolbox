@@ -238,8 +238,8 @@ export default function ProjectManagementComparisonPage() {
 
       {/* Quick Recommendation */}
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：用途別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：用途別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-purple-700 dark:text-purple-300">個人・小規模チームのオールインワン → Notion</span>（タスク+Wiki+ドキュメント）</p>
           <p><span className="font-bold text-pink-700 dark:text-pink-300">中〜大規模チームのタスク管理 → Asana</span>（ワークフロー自動化が強力）</p>
           <p><span className="font-bold text-blue-700 dark:text-blue-300">シンプルなカンバン管理 → Trello</span>（学習コストゼロ・直感操作）</p>

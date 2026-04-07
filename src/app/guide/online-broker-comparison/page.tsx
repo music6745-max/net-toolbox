@@ -230,8 +230,8 @@ export default function OnlineBrokerComparisonPage() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
-        <h2 className="text-lg font-bold mb-3">結論：タイプ別おすすめはこれ！</h2>
-        <div className="space-y-2 text-sm">
+        <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：タイプ別おすすめはこれ！</h2>
+        <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-blue-700 dark:text-blue-300">総合力No.1 → SBI証券</span>（取扱銘柄最多）</p>
           <p><span className="font-bold text-red-700 dark:text-red-300">初心者 → 楽天証券</span>（楽天ポイント投資）</p>
           <p><span className="font-bold text-green-700 dark:text-green-300">米国株 → マネックス証券</span>（約5,000銘柄）</p>
