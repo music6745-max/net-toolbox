@@ -452,6 +452,54 @@ const guides = [
     icon: "💪",
   },
   {
+    slug: "smartphone-comparison",
+    title:
+      "【2026年最新】スマホ機種比較おすすめ5選｜iPhone・Androidを徹底解説",
+    description:
+      "iPhone 16・Galaxy S24・Pixel 8・Xperia 10 VI・AQUOS sense9を価格・カメラ・バッテリーで徹底比較。ライフスタイル別おすすめも紹介。",
+    category: "比較",
+    readTime: "12分",
+    icon: "📱",
+  },
+  {
+    slug: "electricity-saving-tips",
+    title: "【2026年最新】電気代節約完全ガイド｜今日からできる10の方法",
+    description:
+      "値上がりが続く電気代を月3,000円以上節約する具体策を徹底解説。エアコン・冷蔵庫・待機電力の見直しから電力会社切替まで。",
+    category: "実践ガイド",
+    readTime: "10分",
+    icon: "⚡",
+  },
+  {
+    slug: "online-counseling-comparison",
+    title:
+      "【2026年最新】オンラインカウンセリング比較おすすめ5選｜料金・特徴を徹底解説",
+    description:
+      "cotree・Unlace・メザニン・うららか相談室・Awarefyの料金・カウンセラー・対応形式を徹底比較。在宅で相談できるサービスの選び方を解説。",
+    category: "比較",
+    readTime: "12分",
+    icon: "💬",
+  },
+  {
+    slug: "subscription-management",
+    title: "【2026年最新】サブスク管理術完全ガイド｜年5万円節約する見直し方法",
+    description:
+      "増えすぎたサブスクを賢く整理し年5万円以上節約する具体策。家計簿アプリの活用、解約タイミング、固定費見直しのコツまで解説。",
+    category: "実践ガイド",
+    readTime: "10分",
+    icon: "📋",
+  },
+  {
+    slug: "housing-loan-comparison",
+    title:
+      "【2026年最新】住宅ローン比較おすすめ5選｜金利・手数料・団信を徹底解説",
+    description:
+      "auじぶん銀行・住信SBI・PayPay銀行・三井住友信託・ARUHIフラット35の金利・手数料・団信を徹底比較。借り換えで総返済額を削減するコツも。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🏠",
+  },
+  {
     slug: "marriage-agency-comparison",
     title:
       "【2026年最新】結婚相談所比較おすすめ5選｜料金・会員数・成婚率を徹底解説",
