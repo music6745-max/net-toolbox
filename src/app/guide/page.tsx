@@ -500,6 +500,56 @@ const guides = [
     icon: "🏠",
   },
   {
+    slug: "bicycle-insurance-comparison",
+    title:
+      "【2026年最新】自転車保険比較おすすめ5選｜義務化対応・保険料・補償内容を徹底解説",
+    description:
+      "au損保・セブン-イレブン・楽天損保・ZuttoRide・三井住友海上の自転車保険を保険料・補償・示談交渉サービスで徹底比較。義務化エリアと加入のポイントも解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚲",
+  },
+  {
+    slug: "pet-food-comparison",
+    title:
+      "【2026年最新】プレミアムペットフード比較おすすめ5選｜原材料・価格・安全性を徹底解説",
+    description:
+      "モグワン・カナガン・ピッコロ・ファインペッツ・ヤラーのプレミアムフードを原材料・価格・安全性で徹底比較。愛犬・愛猫の健康を守る選び方も解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🐾",
+  },
+  {
+    slug: "meal-kit-comparison",
+    title:
+      "【2026年最新】ミールキット比較おすすめ5選｜オイシックス・ヨシケイ・パルシステムを徹底解説",
+    description:
+      "Oisix・ヨシケイ・パルシステム・らでぃっしゅぼーや・ワタミの宅食ダイレクトを料金・調理時間・品質で徹底比較。共働き家庭の時短調理を支援。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🍱",
+  },
+  {
+    slug: "online-fitness-comparison",
+    title:
+      "【2026年最新】オンラインフィットネス比較おすすめ5選｜LEAN BODY・SOELU・LIVE FITを徹底解説",
+    description:
+      "LEAN BODY・SOELU・LIVE FIT・トルチャ・Nintendo Sports Connectのオンラインフィットネスを月額料金・レッスン内容で徹底比較。在宅運動習慣の作り方を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🧘",
+  },
+  {
+    slug: "baby-goods-comparison",
+    title:
+      "【2026年最新】ベビー用品・おむつ定期便比較おすすめ5選｜Amazon・楽天・コープを徹底解説",
+    description:
+      "Amazonファミリー・楽天ママ割・コープデリ・パルシステム・西松屋のベビー用品定期便を割引率・対応商品・配送エリアで徹底比較。子育て世帯のおむつ購入を最適化。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🍼",
+  },
+  {
     slug: "marriage-agency-comparison",
     title:
       "【2026年最新】結婚相談所比較おすすめ5選｜料金・会員数・成婚率を徹底解説",
