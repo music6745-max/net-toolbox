@@ -311,6 +311,56 @@ const guides = [
     readTime: "15分",
     icon: "📝",
   },
+  {
+    slug: "hikari-fiber-comparison",
+    title:
+      "【2026年最新】光回線比較おすすめ5選｜料金・速度・キャンペーンを徹底解説",
+    description:
+      "NURO光・auひかり・ドコモ光・ソフトバンク光・楽天ひかりの料金・速度・キャンペーン・セット割を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🌐",
+  },
+  {
+    slug: "matching-app-comparison",
+    title:
+      "【2026年最新】マッチングアプリ比較おすすめ5選｜料金・会員数・目的別を徹底解説",
+    description:
+      "Pairs・with・Omiai・タップル・ゼクシィ縁結びの料金・会員数・年齢層を徹底比較。目的別おすすめも紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💕",
+  },
+  {
+    slug: "hair-removal-comparison",
+    title:
+      "【2026年最新】脱毛サロン・医療脱毛比較おすすめ5選｜料金・効果・痛みを徹底解説",
+    description:
+      "ミュゼ・銀座カラー・ストラッシュ・リゼクリニック・湘南美容クリニックの料金・効果・痛み・店舗数を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "✨",
+  },
+  {
+    slug: "moving-company-comparison",
+    title:
+      "【2026年最新】引越し業者比較おすすめ5選｜料金・サービス・一括見積もりを徹底解説",
+    description:
+      "サカイ・アート・アリさんマーク・日本通運・ヤマトホームコンビニエンスの料金とサービスを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📦",
+  },
+  {
+    slug: "car-purchase-comparison",
+    title:
+      "【2026年最新】車買取サービス比較おすすめ5選｜高額査定・一括査定・特徴を徹底解説",
+    description:
+      "カーセンサー・ガリバー・ビッグモーター・アップル・カーネクストの査定額と特徴を徹底比較。高額売却のコツも解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚗",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
