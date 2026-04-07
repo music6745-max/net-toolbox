@@ -361,6 +361,56 @@ const guides = [
     readTime: "15分",
     icon: "🚗",
   },
+  {
+    slug: "electric-company-comparison",
+    title:
+      "【2026年最新】電力会社比較おすすめ5選｜料金・プラン・切り替え方法を徹底解説",
+    description:
+      "Looopでんき・ENEOSでんき・楽天でんき・auでんき・TERASELでんきの料金・特典・切り替え方法を徹底比較。電気代節約に役立ちます。",
+    category: "比較",
+    readTime: "15分",
+    icon: "⚡",
+  },
+  {
+    slug: "online-broker-comparison",
+    title:
+      "【2026年最新】ネット証券比較おすすめ5選｜手数料・NISA・取扱銘柄を徹底解説",
+    description:
+      "SBI証券・楽天証券・マネックス証券・松井証券・auカブコム証券の手数料・NISA対応・取扱銘柄を徹底比較。投資初心者にも最適。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📈",
+  },
+  {
+    slug: "fx-account-comparison",
+    title:
+      "【2026年最新】FX口座比較おすすめ5選｜スプレッド・スワップ・ツールを徹底解説",
+    description:
+      "GMOクリック証券・DMM FX・外為どっとコム・みんなのFX・SBI FXトレードのスプレッド・スワップ・ツールを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💹",
+  },
+  {
+    slug: "pet-insurance-comparison",
+    title:
+      "【2026年最新】ペット保険比較おすすめ5選｜補償内容・保険料・選び方を徹底解説",
+    description:
+      "アニコム・アイペット・PS保険・楽天ペット保険・FPC保険の補償内容・保険料・窓口精算対応を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🐕",
+  },
+  {
+    slug: "marriage-agency-comparison",
+    title:
+      "【2026年最新】結婚相談所比較おすすめ5選｜料金・会員数・成婚率を徹底解説",
+    description:
+      "IBJメンバーズ・パートナーエージェント・ツヴァイ・ゼクシィ縁結びエージェント・オーネットの料金・会員数・成婚率を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💍",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
