@@ -490,7 +490,7 @@ export default function PhotoEditingComparisonPage() {
                 </div>
               </div>
               <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
-                <p className="text-sm">
+                <p className="text-sm text-slate-800 dark:text-slate-100">
                   <span className="font-bold">こんな人におすすめ：</span>
                   {tool.bestFor}
                 </p>
