@@ -402,6 +402,56 @@ const guides = [
     icon: "🐕",
   },
   {
+    slug: "gas-company-comparison",
+    title:
+      "【2026年最新】ガス会社比較おすすめ5選｜料金・プラン・切り替え方法を徹底解説",
+    description:
+      "レモンガス・東京ガス・大阪ガス・東邦ガス・ニチガスの料金・特典・切り替え方法を徹底比較。ガス代節約に役立ちます。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🔥",
+  },
+  {
+    slug: "solar-power-comparison",
+    title:
+      "【2026年最新】太陽光発電比較おすすめ5選｜価格・メーカー・売電を徹底解説",
+    description:
+      "タイナビ・ソーラーパートナーズ・グリエネ・ミツモア・エコ発の太陽光発電一括見積もりサービスを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "☀️",
+  },
+  {
+    slug: "car-insurance-comparison",
+    title:
+      "【2026年最新】自動車保険比較おすすめ5選｜保険料・補償・ロードサービスを徹底解説",
+    description:
+      "ソニー損保・SBI損保・アクサダイレクト・三井ダイレクト・チューリッヒの保険料・補償・ロードサービスを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚙",
+  },
+  {
+    slug: "crypto-exchange-comparison",
+    title:
+      "【2026年最新】仮想通貨取引所比較おすすめ5選｜手数料・取扱通貨・セキュリティを徹底解説",
+    description:
+      "コインチェック・bitFlyer・GMOコイン・bitbank・DMM Bitcoinの手数料・取扱通貨・セキュリティを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "₿",
+  },
+  {
+    slug: "personal-gym-comparison",
+    title:
+      "【2026年最新】パーソナルジム比較おすすめ5選｜料金・効果・特徴を徹底解説",
+    description:
+      "RIZAP・24/7Workout・BEYOND・チキンジム・ASPIの料金・効果・特徴を徹底比較。本気でボディメイクしたい方に。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💪",
+  },
+  {
     slug: "marriage-agency-comparison",
     title:
       "【2026年最新】結婚相談所比較おすすめ5選｜料金・会員数・成婚率を徹底解説",
