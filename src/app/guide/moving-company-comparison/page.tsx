@@ -337,7 +337,7 @@ export default function MovingCompanyComparisonPage() {
                 </div>
               </div>
               <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
-                <p className="text-sm"><span className="font-bold">こんな人におすすめ：</span>{s.bestFor}</p>
+                <p className="text-sm text-slate-800 dark:text-slate-100"><span className="font-bold">こんな人におすすめ：</span>{s.bestFor}</p>
               </div>
               <div className="mb-4">
                 <h4 className="text-sm font-bold mb-2 text-green-600 dark:text-green-400">メリット</h4>
