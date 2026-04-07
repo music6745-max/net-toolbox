@@ -277,7 +277,7 @@ export default function RemoteWorkToolsPage() {
       <div className="space-y-6 my-8">
         <h3 className="text-xl font-bold text-center">リモートワークに必須のツール</h3>
         <AffiliateCTA serviceName="MillenVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6" badge="VPN" description="リモートワークに最適・国産VPN" color="blue" />
-        <AffiliateCTA serviceName="NordVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ" badge="VPN" description="世界最大手・高セキュリティ" color="purple" />
+        <AffiliateCTA serviceName="NordVPN" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD" badge="VPN" description="世界最大手・高セキュリティ" color="purple" />
         <AffiliateCTA serviceName="ConoHa WING" url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT" badge="サーバー" description="副業ブログの立ち上げに最適" color="orange" />
       </div>
 

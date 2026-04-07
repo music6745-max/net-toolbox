@@ -122,7 +122,7 @@ const accountingSoftware = [
     ],
     bestFor:
       "マネーフォワード MEを使っている方、請求書・経費精算もまとめて管理したい方におすすめ。バランスの良い機能と料金が魅力です。",
-    url: "https://biz.moneyforward.com/",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
     badge: "総合管理に強い",
     color: "purple",
     reward: "700〜20,000",
@@ -688,7 +688,7 @@ export default function AccountingSoftwareComparisonPage() {
             弥生会計を試す
           </a>
           <a
-            href="https://biz.moneyforward.com/"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6"
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-block bg-purple-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-purple-700 transition-colors"
@@ -839,7 +839,7 @@ export default function AccountingSoftwareComparisonPage() {
               soft: "マネーフォワード クラウド",
               reason:
                 "確定申告だけでなく、請求書作成・経費精算・給与計算なども同じプラットフォームで一元管理できます。事業が成長して従業員を雇う際にもスムーズに移行できます。",
-              url: "https://biz.moneyforward.com/",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
             },
             {
               scene: "スマホだけで経理と確定申告を済ませたい",
@@ -1033,6 +1033,36 @@ export default function AccountingSoftwareComparisonPage() {
               highlight: "クラウド会計シェアNo.1",
               price: "月1,180円〜",
             },
+            {
+              name: "マネーフォワード クラウド会計",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
+              highlight: "法人・個人事業主向け定番",
+              price: "月2,980円〜",
+            },
+            {
+              name: "マネーフォワード クラウド確定申告",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4VMW8I+4JGQ+BXB8Z",
+              highlight: "個人事業主の確定申告に特化",
+              price: "月800円〜",
+            },
+            {
+              name: "マネーフォワード クラウド(Wiz)",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4WTRG2+3SPO+C8LMIP",
+              highlight: "Wiz経由のMFクラウド申込",
+              price: "月額制",
+            },
+            {
+              name: "freee会計(Wiz)",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+              highlight: "Wiz経由のfreee申込",
+              price: "月額制",
+            },
+            {
+              name: "UMaTレジ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1VA04Y+3SPO+83QM4Y",
+              highlight: "店舗向けクラウドPOSレジ",
+              price: "月額制",
+            },
           ]}
         />
       </section>
@@ -1063,7 +1093,7 @@ export default function AccountingSoftwareComparisonPage() {
             弥生会計（初年度無料）を見る
           </a>
           <a
-            href="https://biz.moneyforward.com/"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6"
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-block border border-card-border px-6 py-2.5 rounded-full text-sm font-medium hover:bg-card-bg transition-colors"

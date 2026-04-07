@@ -71,7 +71,7 @@ const vpnList = [
       "海外から日本の動画サービスを視聴",
       "オンラインプライバシーの保護",
     ],
-    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
     badge: "総合No.1",
     color: "blue",
   },
@@ -464,7 +464,7 @@ export default function BestVpnServicesPage() {
               vpn: "NordVPN",
               reason:
                 "業界最高水準の暗号化技術とノーログポリシーで、公共WiFiでも安心してインターネットを使えます。脅威対策機能で悪質なサイトもブロック。",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
             },
             {
               scene: "海外から日本の動画配信サービスを見たい",
@@ -557,7 +557,7 @@ export default function BestVpnServicesPage() {
             },
             {
               name: "NordVPN",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
               highlight: "世界シェアNo.1",
               price: "月560円〜",
               badge: "人気No.1",
@@ -598,7 +598,7 @@ export default function BestVpnServicesPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <a
-            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD"
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
             className="inline-block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"

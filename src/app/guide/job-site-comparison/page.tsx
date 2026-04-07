@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -967,6 +968,22 @@ export default function JobSiteComparisonPage() {
             ビズリーチに登録する
           </a>
         </div>
+      </section>
+
+      {/* Affiliate Comparison Table CTA */}
+      <section className="mb-8">
+        <h2 className="text-xl font-bold mb-4">専門職向け転職サービス</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "ファルマスタッフ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA",
+              highlight: "薬剤師転職専門・業界トップクラスの求人数",
+              price: "無料登録",
+              badge: "薬剤師向け",
+            },
+          ]}
+        />
       </section>
     </div>
   );

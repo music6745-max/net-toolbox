@@ -139,7 +139,7 @@ const sections = [
         name: "NordVPN",
         desc: "世界で最も信頼されるVPN。公共WiFiでの安全な通信と、海外コンテンツへのアクセスに。",
         price: "月額530円〜",
-        url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+        url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
         tag: "総合No.1",
       },
       {

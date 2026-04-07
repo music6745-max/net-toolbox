@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -1035,6 +1036,58 @@ export default function SimComparisonPage() {
         <h3 className="text-xl font-bold text-center">おすすめ格安SIM</h3>
         <AffiliateCTA serviceName="ワイモバイル" url="https://www.ymobile.jp/" badge="ソフトバンク系" description="通信品質◎・家族割でさらにお得" color="red" />
       </div>
+
+      {/* Affiliate Comparison Table CTA */}
+      <section className="mb-8">
+        <h2 className="text-xl font-bold mb-4">格安SIM・eSIMに申し込む</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "ごえんモバイル",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8LLFCI+424K+TS3OI",
+              highlight: "シンプル・低価格の格安SIM",
+              price: "月額制",
+            },
+            {
+              name: "BB.exciteモバイル Flat",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8NZ5RM+7JY+4ATK5D",
+              highlight: "定額使い放題プラン",
+              price: "月額制",
+            },
+            {
+              name: "BB.exciteモバイル Fit",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8M6UYA+7JY+2BCWEQ",
+              highlight: "段階制プランでムダなく使える",
+              price: "月額制",
+            },
+            {
+              name: "DTI SIM",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8P60Z6+1QFI+2Z68LU",
+              highlight: "ドコモ回線の格安SIM",
+              price: "月額制",
+            },
+            {
+              name: "LIBMO",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8KZZQQ+3UM0+62ENL",
+              highlight: "TOKAIグループの格安SIM",
+              price: "月額制",
+            },
+            {
+              name: "レンシム",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8MSAK2+57X0+HVV0H",
+              highlight: "レンタルSIMサービス",
+              price: "月額制",
+            },
+            {
+              name: "Saily eSIM",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3X3R5E+5L2C+5YJRM",
+              highlight: "海外旅行向けeSIM",
+              price: "従量課金",
+              badge: "海外旅行",
+            },
+          ]}
+        />
+      </section>
     </div>
   );
 }

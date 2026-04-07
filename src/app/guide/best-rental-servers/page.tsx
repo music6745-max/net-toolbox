@@ -535,6 +535,42 @@ export default function BestRentalServersPage() {
               highlight: "初心者向け低価格",
               price: "月99円〜",
             },
+            {
+              name: "シンレンタルサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1F7ASY+5GDG+5ZMCJ",
+              highlight: "高速NVMe・KUSANAGI対応",
+              price: "月770円〜",
+            },
+            {
+              name: "カラフルボックス",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1E0FLE+42SG+661TT",
+              highlight: "柔軟なプラン・アダルトOK",
+              price: "月528円〜",
+            },
+            {
+              name: "ヘテムル",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1GZLMA+348+TWTFM",
+              highlight: "クリエイター向け大容量",
+              price: "月1,100円〜",
+            },
+            {
+              name: "カゴヤ・ジャパン",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1HL182+7YE+674EQ",
+              highlight: "老舗ホスティング事業者",
+              price: "月額制",
+            },
+            {
+              name: "さくらインターネット",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1DEZZM+D8Y+6R9PT",
+              highlight: "国内老舗・安定のインフラ",
+              price: "月131円〜",
+            },
+            {
+              name: "ABLENETレンタルサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1I6GTU+4NIK+BXYE9",
+              highlight: "VPSも選べる総合ホスティング",
+              price: "月額制",
+            },
           ]}
         />
       </section>

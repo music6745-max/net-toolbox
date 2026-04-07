@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 function ArticleJsonLd() {
   const data = {
@@ -899,6 +900,34 @@ export default function WifiComparisonPage() {
             モバレコAir
           </a>
         </div>
+      </section>
+
+      {/* Affiliate Comparison Table CTA */}
+      <section className="mb-8">
+        <h2 className="text-xl font-bold mb-4">WiFi・光回線に申し込む</h2>
+        <ComparisonTableCTA
+          services={[
+            {
+              name: "TCOMヒカリ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8GTYIA+3HKU+1ZG8B6",
+              highlight: "高額キャッシュバック対応の光回線",
+              price: "月額制",
+              badge: "高還元",
+            },
+            {
+              name: "ITSUKI光",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8NDQ5U+4VXM+5YRHE",
+              highlight: "シンプル料金の光回線",
+              price: "月額制",
+            },
+            {
+              name: "リチャージWiFi",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8J7OXE+57FS+5YZ77",
+              highlight: "チャージ式で使いたい分だけ",
+              price: "従量課金",
+            },
+          ]}
+        />
       </section>
     </div>
   );

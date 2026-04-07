@@ -848,7 +848,7 @@ export default function RentalServerComparisonPage() {
               server: "シンレンタルサーバー",
               reason:
                 "エックスサーバーの技術基盤に最新ハードウェアを組み合わせ、月額539円〜で超高速環境を提供。KUSANAGI技術でWordPressも高速に動作します。",
-              url: "https://www.shin-server.jp/",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1F7ASY+5GDG+5ZMCJ",
             },
           ].map((item) => (
             <div
@@ -1113,6 +1113,48 @@ export default function RentalServerComparisonPage() {
               url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1AFTYQ+348+5YZ76",
               highlight: "初心者向け低価格",
               price: "月99円〜",
+            },
+            {
+              name: "シンレンタルサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1F7ASY+5GDG+5ZMCJ",
+              highlight: "エックスサーバー系・高速NVMe",
+              price: "月770円〜",
+            },
+            {
+              name: "お名前.comレンタルサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1823JM+50+354SDD",
+              highlight: "ドメインとセットでお得",
+              price: "月額制",
+            },
+            {
+              name: "カラフルボックス",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1E0FLE+42SG+661TT",
+              highlight: "アダルトOK・柔軟なプラン",
+              price: "月528円〜",
+            },
+            {
+              name: "ヘテムル",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1GZLMA+348+TWTFM",
+              highlight: "クリエイター向け大容量",
+              price: "月1,100円〜",
+            },
+            {
+              name: "カゴヤ・ジャパン",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1HL182+7YE+674EQ",
+              highlight: "老舗ホスティング事業者",
+              price: "月額制",
+            },
+            {
+              name: "さくらインターネット",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1DEZZM+D8Y+6R9PT",
+              highlight: "国内老舗・安定のインフラ",
+              price: "月131円〜",
+            },
+            {
+              name: "ABLENETレンタルサーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1I6GTU+4NIK+BXYE9",
+              highlight: "VPSも選べる総合ホスティング",
+              price: "月額制",
             },
           ]}
         />

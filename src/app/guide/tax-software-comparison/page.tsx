@@ -559,6 +559,18 @@ export default function TaxSoftwareComparisonPage() {
               highlight: "クラウド会計シェアNo.1",
               price: "月1,180円〜",
             },
+            {
+              name: "マネーフォワード クラウド確定申告",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4VMW8I+4JGQ+BXB8Z",
+              highlight: "個人事業主の確定申告に特化",
+              price: "月800円〜",
+            },
+            {
+              name: "マネーフォワード クラウド会計",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
+              highlight: "法人・個人事業主向け定番",
+              price: "月2,980円〜",
+            },
           ]}
         />
       </section>

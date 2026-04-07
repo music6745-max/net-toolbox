@@ -60,7 +60,7 @@ const vpnServices = [
     ],
     bestFor:
       "総合力で選ぶならNordVPNが最もおすすめ。セキュリティ、速度、サーバー数すべてがトップクラスで、初めてのVPN選びに最適です。",
-    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
     badge: "総合No.1おすすめ",
     color: "blue",
     reward: "3,500",
@@ -258,7 +258,7 @@ export default function VpnComparisonPage() {
         </div>
         <div className="mt-4">
           <a
-            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD"
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"
@@ -367,7 +367,7 @@ export default function VpnComparisonPage() {
           公共WiFiのセキュリティが心配な方へ
         </p>
         <a
-          href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ"
+          href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD"
           target="_blank"
           rel="nofollow sponsored noopener noreferrer"
           className="inline-block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"
@@ -640,7 +640,7 @@ export default function VpnComparisonPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <a
-            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD"
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-block bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors"
@@ -678,7 +678,7 @@ export default function VpnComparisonPage() {
               vpn: "NordVPN",
               reason:
                 "業界最高水準の暗号化とノーログポリシー（第三者機関が監査済み）で、公共WiFiでも安心。脅威対策機能がマルウェアやフィッシングサイトもブロックしてくれます。",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
             },
             {
               scene: "海外から日本の動画配信を見たい",
@@ -947,7 +947,7 @@ export default function VpnComparisonPage() {
             },
             {
               name: "NordVPN",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
               highlight: "世界シェアNo.1",
               price: "月560円〜",
               badge: "人気No.1",
@@ -957,6 +957,48 @@ export default function VpnComparisonPage() {
               url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
               highlight: "最速通信速度",
               price: "月899円〜",
+            },
+            {
+              name: "Surfshark Antivirus",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+42GNLE+4LSW+BX3J6",
+              highlight: "VPN+アンチウイルス一体型",
+              price: "月額制",
+            },
+            {
+              name: "セカイVPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3ZHHKI+7QW+1ZGNQQ",
+              highlight: "海外から日本のサービスに接続",
+              price: "月1,100円",
+            },
+            {
+              name: "スイカVPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3VBGC2+4R3G+61JSI",
+              highlight: "50カ国以上のサーバー",
+              price: "月額制",
+            },
+            {
+              name: "マイIP",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3XP6R6+7QW+2HB8GI",
+              highlight: "固定IPアドレス取得",
+              price: "月1,100円",
+            },
+            {
+              name: "MillenVPN 専用サーバー",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3YAMCY+3JTE+15P77L",
+              highlight: "占有型の固定IP VPN",
+              price: "月額制",
+            },
+            {
+              name: "グループ専用VPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+402X6A+7QW+2BCWEQ",
+              highlight: "法人・グループ向けVPN",
+              price: "月額制",
+            },
+            {
+              name: "SUIKA VPN Team IP",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3VWVXU+4R3G+BXYE9",
+              highlight: "チーム共有の固定IP",
+              price: "月額制",
             },
           ]}
         />
@@ -996,7 +1038,7 @@ export default function VpnComparisonPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <a
-            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ"
+            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD"
             target="_blank"
             rel="nofollow sponsored noopener noreferrer"
             className="inline-block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"

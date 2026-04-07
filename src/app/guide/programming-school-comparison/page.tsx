@@ -877,10 +877,19 @@ export default function ProgrammingSchoolComparisonPage() {
       {/* Winスクール Affiliate CTA */}
       <AffiliateCTA
         serviceName="Winスクール"
-        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5YJRM"
+        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH"
         description="全国各地に教室を展開する個人レッスンのプログラミングスクール。資格取得に強く、就転職サポートも充実。"
         badge="全国展開"
         color="blue"
+      />
+
+      {/* Python Winner (Winスクール) Affiliate CTA */}
+      <AffiliateCTA
+        serviceName="Python Winner（Winスクール）"
+        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4EDBOY+529E+HW2Q9"
+        description="Winスクールが提供するPython特化コース。AI・データ分析に必要なスキルを個人レッスンで効率的に習得できます。"
+        badge="Python特化"
+        color="green"
       />
 
       {/* Related Tool CTA */}
