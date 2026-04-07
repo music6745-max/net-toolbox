@@ -252,6 +252,56 @@ const guides = [
     icon: "📋",
   },
   {
+    slug: "furusato-tax-comparison",
+    title:
+      "【2026年最新】ふるさと納税サイト比較おすすめ5選｜還元率・返礼品・ポイントを徹底解説",
+    description:
+      "楽天ふるさと納税・さとふる・ふるなび・ふるさとチョイス・au PAY ふるさと納税の還元率・返礼品数・ポイント還元を徹底比較。タイプ別おすすめも紹介。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🎁",
+  },
+  {
+    slug: "investment-app-comparison",
+    title:
+      "【2026年最新】投資アプリ比較おすすめ5選｜手数料・取扱商品・初心者向けを徹底解説",
+    description:
+      "SBI証券・楽天証券・マネックス証券・松井証券・PayPay証券の手数料・取扱商品・ポイント還元を徹底比較。新NISA対応の証券口座選びに最適。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📈",
+  },
+  {
+    slug: "crowdsourcing-comparison",
+    title:
+      "【2026年最新】クラウドソーシング比較おすすめ5選｜手数料・案件数・初心者向けを徹底解説",
+    description:
+      "クラウドワークス・ランサーズ・ココナラ・シュフティ・Bizseekの手数料・案件数・特徴を徹底比較。在宅副業におすすめのサイトが見つかります。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💻",
+  },
+  {
+    slug: "water-server-comparison",
+    title:
+      "【2026年最新】ウォーターサーバー比較おすすめ5選｜料金・水質・サイズを徹底解説",
+    description:
+      "プレミアムウォーター・コスモウォーター・フレシャス・アクアクララ・クリクラの料金・水質・解約金・サイズを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💧",
+  },
+  {
+    slug: "food-delivery-comparison",
+    title:
+      "【2026年最新】食材宅配サービス比較おすすめ5選｜料金・品質・配送エリアを徹底解説",
+    description:
+      "Oisix・らでぃっしゅぼーや・パルシステム・コープデリ・ヨシケイの料金・品質・ミールキット・配送エリアを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🥬",
+  },
+  {
     slug: "note-taking-app-comparison",
     title:
       "【2026年最新】メモ・ノートアプリ比較おすすめ5選｜機能・料金・同期・整理術を徹底解説",
