@@ -738,7 +738,7 @@ export default function FitnessAppComparisonPage() {
             どのアプリも無料プランで基本的な機能を試せるので、まずはダウンロードして自分に合うか確認してみましょう。大切なのは継続すること。自分が使いやすいと感じるアプリを選んで、健康的な生活を始めてみてください。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・ダイエットなら食事管理が充実した「あすけん」（月額480円）</li>
               <li>・無料で本格トレーニングなら「Nike Training Club」</li>

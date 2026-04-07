@@ -410,7 +410,7 @@ export default function HairRemovalComparisonPage() {
             脱毛サロン・医療脱毛は目的と予算で選ぶのが基本です。低価格で試すならミュゼ、全身通い放題なら銀座カラー、痛みが気になるならストラッシュ、永久脱毛効果ならリゼクリニック、通いやすさ重視なら湘南美容クリニックがおすすめ。無料カウンセリングで複数を比較してから決めましょう。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・低価格なら「ミュゼ」</li>
               <li>・全身通い放題なら「銀座カラー」</li>

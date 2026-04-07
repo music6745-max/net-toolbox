@@ -405,7 +405,7 @@ export default function CryptoExchangeComparisonPage() {
             暗号資産取引所はセキュリティ・手数料・使いやすさで選ぶのが基本です。初心者ならコインチェック、セキュリティ重視ならbitFlyer、手数料節約ならGMOコインがおすすめです。投資は必ず余剰資金で行いましょう。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・初心者は「コインチェック」</li>
               <li>・セキュリティ重視は「bitFlyer」</li>

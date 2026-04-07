@@ -409,7 +409,7 @@ export default function FurusatoTaxComparisonPage() {
             ふるさと納税は実質負担2,000円で全国の特産品が受け取れるお得な制度です。サイト選びで実質還元率が大きく変わるため、自分のライフスタイルに合ったサイトを選びましょう。楽天経済圏なら「楽天ふるさと納税」、初心者なら「さとふる」、家電狙いなら「ふるなび」がおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・実質還元率最強なら「楽天ふるさと納税」（SPU併用）</li>
               <li>・初心者には「さとふる」（最速配送・PayPay還元）</li>

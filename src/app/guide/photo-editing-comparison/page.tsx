@@ -588,7 +588,7 @@ export default function PhotoEditingComparisonPage() {
             多くのソフトには無料プランや無料体験が用意されているので、まずは試してみて自分に合うか確認しましょう。AI機能の進化により、専門知識がなくてもプロ品質の編集ができる時代です。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・RAW現像のプロ品質なら「Adobe Lightroom」（月額1,180円〜）</li>
               <li>・初心者・SNS画像作成なら「Canva」（無料で使える）</li>

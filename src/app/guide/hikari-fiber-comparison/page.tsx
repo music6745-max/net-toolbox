@@ -410,7 +410,7 @@ export default function HikariFiberComparisonPage() {
             光回線はスマホキャリアとのセット割と提供エリアで選ぶのが基本です。速度重視ならNURO光、auユーザーならauひかり、全国対応ならドコモ光、乗換ならソフトバンク光、楽天経済圏なら楽天ひかりがおすすめです。実質料金と3年総額で比較しましょう。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・速度最速なら「NURO光」（下り2Gbps）</li>
               <li>・auユーザーは「auひかり」でスマートバリュー</li>

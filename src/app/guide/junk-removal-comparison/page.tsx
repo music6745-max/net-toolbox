@@ -405,7 +405,7 @@ export default function JunkRemovalComparisonPage() {
             不用品回収業者は料金・対応エリア・サービス内容で選ぶのが基本です。料金重視ならエコノバ、安心感なら片付け堂、買取併用ならKADODE、即日対応ならECOクリーン、遺品整理なら不用品回収センターがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・料金重視なら「エコノバ」の一括見積もり</li>
               <li>・全国チェーンの安心なら「片付け堂」</li>

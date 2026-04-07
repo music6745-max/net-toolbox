@@ -412,7 +412,7 @@ export default function InvestmentAppComparisonPage() {
             すべて口座開設無料・維持費無料なので、まずは気になる証券会社で口座を開いて少額から始めてみましょう。新NISAを活用すれば非課税で長期資産形成ができます。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・本格派は「SBI証券」（取扱商品最多・手数料0円）</li>
               <li>・楽天派は「楽天証券」（楽天ポイント連携）</li>

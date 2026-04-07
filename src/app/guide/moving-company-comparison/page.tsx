@@ -410,7 +410,7 @@ export default function MovingCompanyComparisonPage() {
             引越し業者は品質と料金のバランスで選ぶのが基本です。品質ならサカイ、女性安心ならアート、コスパならアリさん、単身者なら日通、小荷物ならヤマトがおすすめ。必ず3社以上から相見積もりを取り、繁忙期を避けて予約しましょう。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・品質重視なら「サカイ引越センター」</li>
               <li>・一人暮らし女性は「アート」のレディースパック</li>

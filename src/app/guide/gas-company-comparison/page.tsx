@@ -405,7 +405,7 @@ export default function GasCompanyComparisonPage() {
             ガス会社はエリアと料金、そしてサポート内容で選ぶのが基本です。首都圏で節約したいならレモンガス、大手の安心感なら東京ガス、関西なら大阪ガス、中部なら東邦ガスがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・首都圏で安いなら「レモンガス」</li>
               <li>・大手安心なら「東京ガス」</li>

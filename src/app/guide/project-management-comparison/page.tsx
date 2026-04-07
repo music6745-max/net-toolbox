@@ -237,7 +237,7 @@ export default function ProjectManagementComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：用途別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-purple-700 dark:text-purple-300">個人・小規模チームのオールインワン → Notion</span>（タスク+Wiki+ドキュメント）</p>
@@ -346,7 +346,7 @@ export default function ProjectManagementComparisonPage() {
                   <p className="text-muted"><span className="font-medium">連携：</span>{tool.integration}</p>
                 </div>
               </div>
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm text-slate-800 dark:text-slate-100"><span className="font-bold">こんな人におすすめ：</span>{tool.bestFor}</p>
               </div>
               <div className="mb-4">
@@ -426,8 +426,8 @@ export default function ProjectManagementComparisonPage() {
           <p className="text-muted leading-relaxed mb-4">
             5つすべてに無料プランがあるので、まずは試してみてチームに合うか確認しましょう。ツールの導入はゴールではなく、チームの生産性向上のための手段です。シンプルに始めて、必要に応じて機能を拡張していくのがおすすめです。
           </p>
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+          <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・個人・オールインワンなら「Notion」（個人無料）</li>
               <li>・チーム管理特化なら「Asana」（ワークフロー自動化が強力）</li>

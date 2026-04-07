@@ -410,7 +410,7 @@ export default function CarPurchaseComparisonPage() {
             車を少しでも高く売るには複数社の相見積もりが鉄則です。最高値を狙うならカーセンサー一括査定、安心感ならガリバー、即日現金化ならビッグモーター、直販型高額査定ならアップル、廃車・事故車ならカーネクストがおすすめ。査定前の洗車・清掃も査定額アップに効果的です。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・最高値を狙うなら「カーセンサー一括査定」</li>
               <li>・大手安心感なら「ガリバー」</li>

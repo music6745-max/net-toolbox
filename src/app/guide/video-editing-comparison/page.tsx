@@ -262,7 +262,7 @@ export default function VideoEditingComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：目的別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-blue-700 dark:text-blue-300">プロ品質の本格編集 → Adobe Premiere Pro</span>（業界標準・AI字幕が優秀）</p>
@@ -371,7 +371,7 @@ export default function VideoEditingComparisonPage() {
                   <p className="text-muted"><span className="font-medium">AI機能：</span>{tool.aiFeatures}</p>
                 </div>
               </div>
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm text-slate-800 dark:text-slate-100"><span className="font-bold">こんな人におすすめ：</span>{tool.bestFor}</p>
               </div>
               <div className="mb-4">
@@ -451,8 +451,8 @@ export default function VideoEditingComparisonPage() {
           <p className="text-muted leading-relaxed mb-4">
             2026年はAI機能の進化が目覚ましく、自動字幕・自動カット・AI音声分離など、以前はプロにしかできなかった編集が誰でも簡単にできるようになりました。まずは無料ソフトから始めて、動画制作の楽しさを体験してみてください。
           </p>
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+          <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・プロ品質の業界標準なら「Adobe Premiere Pro」（月額2,728円）</li>
               <li>・無料でプロ品質なら「DaVinci Resolve」（カラグレ最強）</li>

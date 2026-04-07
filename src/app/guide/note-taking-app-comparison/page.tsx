@@ -242,7 +242,7 @@ export default function NoteTakingAppComparisonPage() {
       </div>
 
       {/* Quick Recommendation */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
+      <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-3 text-slate-900 dark:text-white">結論：用途別おすすめはこれ！</h2>
         <div className="space-y-2 text-sm text-slate-800 dark:text-slate-100">
           <p><span className="font-bold text-purple-700 dark:text-purple-300">メモ+タスク+Wikiを一元管理 → Notion</span>（個人無料・オールインワン）</p>
@@ -352,7 +352,7 @@ export default function NoteTakingAppComparisonPage() {
                   <p className="text-muted"><span className="font-medium">ストレージ：</span>{app.storage}</p>
                 </div>
               </div>
-              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
+              <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-5">
                 <p className="text-sm text-slate-800 dark:text-slate-100"><span className="font-bold">こんな人におすすめ：</span>{app.bestFor}</p>
               </div>
               <div className="mb-4">
@@ -432,8 +432,8 @@ export default function NoteTakingAppComparisonPage() {
           <p className="text-muted leading-relaxed mb-4">
             ほとんどのアプリが無料で使えるので、気になるものをまずは試してみましょう。大切なのは自分に合ったアプリを見つけて、メモする習慣を続けること。情報を記録し整理する力は、仕事でもプライベートでも大きな武器になります。
           </p>
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+          <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・オールインワンなら「Notion」（個人無料・メモ+タスク+Wiki）</li>
               <li>・知識管理・第二の脳なら「Obsidian」（無料・ローカル保存）</li>

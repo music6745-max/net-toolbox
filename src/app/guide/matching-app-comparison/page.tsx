@@ -410,7 +410,7 @@ export default function MatchingAppComparisonPage() {
             マッチングアプリは目的と年齢層で選ぶのが基本です。初心者や母数重視ならPairs、20代で内面重視ならwith、真剣交際ならOmiai、気軽な恋活ならタップル、結婚前提ならゼクシィ縁結びがおすすめ。複数併用で出会いの母数を増やすのも効果的です。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・迷ったら「Pairs」で間違いなし</li>
               <li>・20代で内面重視なら「with」</li>

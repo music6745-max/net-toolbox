@@ -405,7 +405,7 @@ export default function PersonalGymComparisonPage() {
             パーソナルジムは料金・指導方針・通いやすさで選ぶのが基本です。本気派ならRIZAP、コスパ重視なら24/7Workout、初心者ならチキンジム、女性ならASPIがおすすめです。まずは無料カウンセリングで雰囲気を確認しましょう。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・本気派は「RIZAP」</li>
               <li>・コスパ重視は「24/7Workout」</li>

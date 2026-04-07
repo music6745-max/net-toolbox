@@ -405,7 +405,7 @@ export default function CancerInsuranceComparisonPage() {
             がん保険は保障内容と保険料のバランスで選ぶのが基本です。大手の安心感ならアフラック、治療重視ならチューリッヒ、コスパならオリックス、保険料の安さならライフネット、自由設計ならメットライフがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・大手安心なら「アフラック」</li>
               <li>・治療重視なら「チューリッヒ」</li>

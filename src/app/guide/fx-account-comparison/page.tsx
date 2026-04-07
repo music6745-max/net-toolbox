@@ -405,7 +405,7 @@ export default function FxAccountComparisonPage() {
             FX口座はスプレッド・スワップ・取引単位・サポートで選ぶのが基本です。総合力ならGMOクリック証券、初心者はDMM FX、情報重視は外為どっとコム、スワップ派はみんなのFX、少額派はSBI FXトレードがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・総合力は「GMOクリック証券」(世界No.1)</li>
               <li>・初心者は「DMM FX」のLINEサポート</li>

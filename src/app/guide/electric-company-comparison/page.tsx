@@ -405,7 +405,7 @@ export default function ElectricCompanyComparisonPage() {
             電力会社は使用量とライフスタイル、そして貯めているポイントで選ぶのが基本です。シンプルならLooopでんき、大手安心ならENEOSでんき、楽天ユーザーなら楽天でんき、auユーザーならauでんきがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・基本料0円なら「Looopでんき」</li>
               <li>・大手安心なら「ENEOSでんき」の2年割</li>

@@ -405,7 +405,7 @@ export default function OnlineBrokerComparisonPage() {
             ネット証券は手数料の安さと取扱商品、ポイント還元で選ぶのが基本です。総合力ならSBI証券、楽天ユーザーなら楽天証券、米国株ならマネックス証券、サポート重視なら松井証券、auユーザーならauカブコム証券がおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・総合力なら「SBI証券」(口座数No.1)</li>
               <li>・初心者は「楽天証券」でポイント投資</li>

@@ -405,7 +405,7 @@ export default function MarriageAgencyComparisonPage() {
             結婚相談所は料金・会員数・サポートの手厚さで選ぶのが基本です。成婚率重視ならIBJメンバーズ、効率婚活ならパートナーエージェント、大手安心ならツヴァイ、コスパ重視ならゼクシィ縁結び、老舗ならオーネットがおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・成婚率なら「IBJメンバーズ」50%超</li>
               <li>・効率派は「パートナーエージェント」</li>

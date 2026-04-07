@@ -412,7 +412,7 @@ export default function CrowdsourcingComparisonPage() {
             複数サイトに登録して案件の比較から始めるのも良い方法です。実績を積めば月10万円・20万円と収入アップも夢ではありません。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・初心者は「クラウドワークス」（業界最大手）</li>
               <li>・本格派は「ランサーズ」（認定ランサー制度）</li>

@@ -405,7 +405,7 @@ export default function PetInsuranceComparisonPage() {
             ペット保険は補償割合・窓口精算対応・保険料で選ぶのが基本です。手間を減らすならアニコム、バランス重視ならアイペット、保険料最安ならPS保険、楽天経済圏なら楽天ペット保険、シンプル重視ならFPC保険がおすすめです。
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-            <p className="text-sm font-bold mb-2">この記事のポイント</p>
+            <p className="text-sm font-bold mb-2 text-slate-900 dark:text-white">この記事のポイント</p>
             <ul className="text-sm text-muted space-y-1">
               <li>・窓口精算重視は「アニコム損保」</li>
               <li>・バランスなら「アイペット損保」70%</li>
