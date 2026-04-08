@@ -665,6 +665,11 @@ export const tools: Tool[] = [
   { slug: "focus-timer-extended", name: "集中タイマー（ポモドーロ拡張版）", description: "4セッションごとに長休憩を挟むポモドーロ拡張タイマー。累計集中時間・セッション数の統計表示付き。", icon: "⏱️", category: "日常ツール" },
   { slug: "memory-card-game", name: "神経衰弱メモリーゲーム", description: "4×4 / 6×6から選べるカードマッチングゲーム。ターン数・タイムを計測してスコアを競える脳トレ。", icon: "🃏", category: "日常ツール" },
   { slug: "random-question-picker", name: "ランダム質問ピッカー", description: "チームミーティング用アイスブレイクや学習質問をランダムに提示。自作質問の追加・カテゴリ選択可能。", icon: "❓", category: "日常ツール" },
+  { slug: "resume-builder-helper", name: "履歴書フォーマットチェッカー", description: "履歴書の必須項目と任意項目をチェックリスト化。記入漏れを防ぎ転職活動を効率化。", icon: "📄", category: "日常ツール" },
+  { slug: "interview-prep-checklist", name: "面接準備チェックリスト", description: "事前準備・想定質問・逆質問・当日持ち物を網羅した転職面接用チェックリスト。", icon: "🎯", category: "日常ツール" },
+  { slug: "salary-comparison", name: "業界別年収比較ツール", description: "自分の年収を12業界の平均・上位25%・下位25%と比較。転職時の年収交渉の参考に。", icon: "💰", category: "日常ツール" },
+  { slug: "commute-time-budget", name: "通勤時間予算計算", description: "通勤時間を時給換算し、長期的な機会損失を可視化。転職・引越しの判断材料に。", icon: "🚃", category: "日常ツール" },
+  { slug: "work-from-home-setup-cost", name: "在宅勤務環境構築費用シミュレーター", description: "デスク・チェア・モニターなど在宅勤務に必要な環境構築費用を品質レベル別に試算。", icon: "🏠", category: "日常ツール" },
 ];
 
 export const siteConfig = {

@@ -1294,6 +1294,51 @@ export const guides: Guide[] = [
     readTime: "13分",
     icon: "📓",
   },
+  {
+    slug: "it-job-comparison",
+    title: "【2026年最新】IT・エンジニア転職サイト比較5選｜求人数・年収・サポート徹底解説",
+    description:
+      "レバテックキャリア・マイナビIT・type・Green・paizaなどIT・エンジニア特化の転職サービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "💻",
+  },
+  {
+    slug: "nursing-job-comparison",
+    title: "【2026年最新】看護師転職サイト比較5選｜求人数・サポート・祝い金を徹底解説",
+    description:
+      "看護roo!・レバウェル看護・マイナビ看護師・ナースではたらこ・看護プロなど看護師特化の転職サービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "🏥",
+  },
+  {
+    slug: "teacher-job-comparison",
+    title: "【2026年最新】教員転職サイト比較5選｜公立・私立・塾講師の求人徹底解説",
+    description:
+      "教員人材センター・イーキャリア・マイナビ教員・教育人材バンク・Education Careerなど教員特化の転職サービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "🏫",
+  },
+  {
+    slug: "women-job-comparison",
+    title: "【2026年最新】女性向け転職エージェント比較5選｜ワーママ・ハイキャリア対応",
+    description:
+      "type女性・LIBZ・マイナビAGENT・dodaウーマンキャリア・エンウィメンズワークなど女性特化の転職サービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "👩‍💼",
+  },
+  {
+    slug: "executive-job-comparison",
+    title: "【2026年最新】管理職・エグゼクティブ転職比較5選｜年収1000万以上のハイクラス求人",
+    description:
+      "ビズリーチ・JAC Recruitment・リクルートダイレクトスカウト・dodaX・エンワールドなど管理職・エグゼクティブ向け転職サービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "👔",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1473,6 +1518,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "recommended-books-business": "仕事・スキル",
   "recommended-books-self-development": "エンタメ",
   "recommended-books-health": "健康・美容",
+
+  // 転職系新規
+  "it-job-comparison": "仕事・スキル",
+  "nursing-job-comparison": "仕事・スキル",
+  "teacher-job-comparison": "仕事・スキル",
+  "women-job-comparison": "仕事・スキル",
+  "executive-job-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {
