@@ -740,6 +740,11 @@ export const tools: Tool[] = [
   { slug: "birth-cost-simulator", name: "出産費用シミュレーター", description: "分娩方法・入院日数・部屋タイプから出産費用を試算。出産育児一時金50万円の差引後自己負担も表示。", icon: "🤱", category: "日常ツール" },
   { slug: "moving-cost-detail-simulator", name: "引越し費用詳細見積もり", description: "荷物量・距離・時期から引越し費用の概算と見積もりレンジを算出。繁忙期/閑散期の料金差も確認。", icon: "📦", category: "日常ツール" },
   { slug: "car-expense-yearly-calculator", name: "自動車年間維持費計算", description: "自動車税・任意保険・車検・燃料費・駐車場代から年間・月額維持費を一括試算。", icon: "🚗", category: "日常ツール" },
+  { slug: "lucky-color-of-day", name: "今日のラッキーカラー診断", description: "生年月日と今日の日付から今日のラッキーカラーを診断。SNSシェアで友達と盛り上がろう。", icon: "🌈", category: "日常ツール" },
+  { slug: "work-life-balance-checker", name: "ワークライフバランス診断", description: "労働時間・残業・休日・通勤時間から総合スコアであなたのWLBを診断。改善アドバイス付き。", icon: "⚖️", category: "日常ツール" },
+  { slug: "personality-quick-test", name: "16タイプ性格診断（簡易版）", description: "8問の質問に答えるだけで16タイプの性格を簡易診断。MBTI風の自己分析ツール。", icon: "🧠", category: "日常ツール" },
+  { slug: "screen-time-calculator", name: "スクリーンタイム健康度診断", description: "スマホ・PC・TVの1日使用時間から健康影響度をスコア化。デジタルデトックスの目安に。", icon: "📱", category: "日常ツール" },
+  { slug: "food-calorie-quick-lookup", name: "主要食品カロリー早見表", description: "ご飯・パン・麺・肉・魚など50品目以上のカロリーを検索ボックスで素早く確認。", icon: "🍱", category: "日常ツール" },
 ];
 
 export const siteConfig = {
