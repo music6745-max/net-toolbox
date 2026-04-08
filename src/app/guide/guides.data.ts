@@ -1438,6 +1438,51 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🎓",
   },
+  {
+    slug: "nursing-home-comparison",
+    title: "【2026年最新】老人ホーム・介護施設比較5選｜種類・費用・選び方を徹底解説",
+    description:
+      "LIFULL介護・みんなの介護・きらケア施設・かいごDB・OZの介護施設紹介サービス5社を徹底比較。費用相場や施設選びのコツも解説。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🏥",
+  },
+  {
+    slug: "pet-clinic-comparison",
+    title: "【2026年最新】ペット保険比較5選｜補償範囲・料金・口コミを徹底解説",
+    description:
+      "アニコム損保・アイペット・楽天少短・FPC・SBIプリズム少短のペット保険5社を補償範囲・料金・口コミで徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🐾",
+  },
+  {
+    slug: "language-school-comparison",
+    title: "【2026年最新】英会話スクール比較5選｜駅前・オンライン・コーチング型を徹底解説",
+    description:
+      "ベルリッツ・ECC外語学院・GABA・PROGRIT・トライズの英会話スクール5社を駅前・オンライン・コーチングの観点で徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🗣️",
+  },
+  {
+    slug: "kei-car-comparison",
+    title: "【2026年最新】軽自動車おすすめ比較5選｜N-BOX/タント/スペーシア/ハスラー/ワゴンR",
+    description:
+      "N-BOX・タント・スペーシア・ハスラー・ワゴンRの人気軽自動車5車種を価格・燃費・室内空間で徹底比較。中古と新車の選び方も解説。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🚗",
+  },
+  {
+    slug: "esign-comparison",
+    title: "【2026年最新】電子契約サービス比較5選｜法人向け料金・機能・連携を徹底解説",
+    description:
+      "クラウドサイン・freeeサイン・GMOサイン・ドキュサイン・電子印鑑GMOの電子契約サービス5社を料金・機能・連携で徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🖋️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1639,6 +1684,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "renovation-comparison": "生活",
   "fire-insurance-comparison": "金融",
   "education-insurance-comparison": "金融",
+
+  // 介護・ペット・語学・自動車・電子契約
+  "nursing-home-comparison": "生活",
+  "pet-clinic-comparison": "生活",
+  "language-school-comparison": "仕事・スキル",
+  "kei-car-comparison": "生活",
+  "esign-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {
