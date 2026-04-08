@@ -817,6 +817,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "💒",
   },
+  {
+    slug: "amazon-prime-vs-rakuten",
+    title: "Amazonプライム vs 楽天プレミアム徹底比較【2026年最新】どちらがお得？",
+    description:
+      "Amazonプライムと楽天プレミアム（楽天市場優待）を会費・特典・配送・動画見放題・ポイント還元で徹底比較。あなたのライフスタイルに合うのはどちら？使い分けのコツも解説します。",
+    category: "比較",
+    readTime: "10分",
+    icon: "📦",
+  },
+  {
+    slug: "credit-card-platinum-comparison",
+    title: "プラチナ・ゴールドカード徹底比較【2026年最新】厳選5枚",
+    description:
+      "アメックス・JCB・三井住友・楽天のプラチナ/ゴールドカードを年会費・ポイント還元・空港ラウンジ・コンシェルジュ・旅行保険で徹底比較。ステータスと実利のバランスから最適な1枚を解説します。",
+    category: "比較",
+    readTime: "12分",
+    icon: "💎",
+  },
+  {
+    slug: "iphone-vs-android",
+    title: "iPhone vs Android徹底比較【2026年最新】どっちを選ぶべき？",
+    description:
+      "iPhoneとAndroidを価格・カメラ・バッテリー・セキュリティ・アプリ・リセールバリューで徹底比較。初心者から上級者まで自分に合った機種選びの決定版ガイドです。",
+    category: "比較",
+    readTime: "10分",
+    icon: "📱",
+  },
+  {
+    slug: "paypay-vs-rakutenpay",
+    title: "QRコード決済徹底比較【2026年】PayPay・楽天ペイ・d払い・au PAYどれが得？",
+    description:
+      "PayPay・楽天ペイ・d払い・au PAYの4大QRコード決済を還元率・加盟店・チャージ方法・連携カード・キャンペーンで徹底比較。あなたに最適な決済アプリが分かります。",
+    category: "比較",
+    readTime: "10分",
+    icon: "💳",
+  },
+  {
+    slug: "tax-saving-tips",
+    title: "個人事業主の節税完全ガイド【2026年最新】今すぐ使える15の節税テクニック",
+    description:
+      "個人事業主・フリーランス向けの節税テクニックを2026年度の最新税制に合わせて徹底解説。青色申告65万円控除・経費計上・小規模企業共済・iDeCo・ふるさと納税・インボイス対応まで網羅します。",
+    category: "副業・税金",
+    readTime: "15分",
+    icon: "💴",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -929,6 +974,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   // その他 (tools / security / guides)
   "qr-code-howto": "その他",
   "password-security": "その他",
+
+  // 新規ガイド
+  "amazon-prime-vs-rakuten": "生活",
+  "credit-card-platinum-comparison": "金融",
+  "iphone-vs-android": "通信",
+  "paypay-vs-rakutenpay": "金融",
+  "tax-saving-tips": "金融",
 };
 
 export function genreOf(slug: string): Genre {
