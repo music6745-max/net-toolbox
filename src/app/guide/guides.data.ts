@@ -1159,6 +1159,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "✈️",
   },
+  {
+    slug: "car-loan-rate-comparison",
+    title: "【2026年最新】自動車ローン金利徹底比較｜銀行・ディーラー・残価設定を解説",
+    description:
+      "銀行マイカーローン・ディーラーローン・残価設定型クレジットの金利・手数料・審査基準を徹底比較。総支払額を数十万円圧縮するための賢い借り方を解説します。",
+    category: "金融",
+    readTime: "15分",
+    icon: "🚗",
+  },
+  {
+    slug: "mortgage-rate-comparison",
+    title: "【2026年最新】住宅ローン金利徹底比較｜固定vs変動・主要5行を解説",
+    description:
+      "auじぶん銀行・住信SBI・PayPay銀行・三井住友信託・ARUHIフラット35の金利を徹底比較。固定vs変動の選び方、借り換えで総返済額を数百万円削減するコツを解説します。",
+    category: "金融",
+    readTime: "15分",
+    icon: "🏠",
+  },
+  {
+    slug: "card-loan-low-rate",
+    title: "【2026年最新】低金利カードローン比較おすすめ5選｜銀行系・消費者金融を解説",
+    description:
+      "銀行系カードローンと消費者金融の金利・限度額・審査スピードを徹底比較。総返済額を最小化する低金利カードローンの選び方と注意点を解説します。",
+    category: "金融",
+    readTime: "12分",
+    icon: "💳",
+  },
+  {
+    slug: "business-card-platinum",
+    title: "【2026年最新】個人事業主のクレジットカード比較｜プラチナ・ビジネスカード徹底解説",
+    description:
+      "個人事業主・フリーランス向けのクレジットカードをポイント還元率・年会費・特典・経費管理機能で徹底比較。会計ソフト連携で経理を効率化するベストカードを紹介します。",
+    category: "仕事・スキル",
+    readTime: "14分",
+    icon: "💼",
+  },
+  {
+    slug: "accountant-cloud-comparison",
+    title: "【2026年最新】会計事務所クラウド連携比較｜freee・弥生・マネフォを徹底解説",
+    description:
+      "顧問税理士・会計事務所と顧問先がクラウド会計でデータ共有する方法を解説。freee・弥生・マネーフォワードの連携機能・料金・対応事務所数を徹底比較します。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "🧾",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1317,6 +1362,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "sport-club-comparison": "健康・美容",
   "e-bike-comparison": "生活",
   "travel-app-comparison": "生活",
+
+  // 金融・仕事スキル系（追加）
+  "car-loan-rate-comparison": "金融",
+  "mortgage-rate-comparison": "金融",
+  "card-loan-low-rate": "金融",
+  "business-card-platinum": "仕事・スキル",
+  "accountant-cloud-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {

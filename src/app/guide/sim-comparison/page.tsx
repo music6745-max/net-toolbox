@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
@@ -1107,7 +1108,14 @@ export default function SimComparisonPage() {
           <p className="text-xs text-muted">データ容量・通話オプション・家族回線数から月額と年間コストを即試算 →</p>
         </Link>
       </section>
+      <section className="mb-10">
+        <Link href="/tools/mobile-rate-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">大手キャリア＋MVNO 10社の比較シミュレーター</div>
+          <p className="text-xs text-muted">データ容量別に主要10社の月額をランキング表示 →</p>
+        </Link>
+      </section>
       <GuideRelatedLinks currentSlug="sim-comparison" />
+      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
     </div>
   );
 }

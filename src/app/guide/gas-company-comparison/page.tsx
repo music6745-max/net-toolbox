@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 function ArticleJsonLd() {
   const data = {
@@ -418,6 +419,13 @@ export default function GasCompanyComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/gas-fee-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">都市ガス料金シミュレーターを使う</div>
+          <p className="text-xs text-muted">地域・使用量から月額・年間ガス代と切替時の節約額を即試算 →</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/electric-company-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -430,6 +438,8 @@ export default function GasCompanyComparisonPage() {
           </Link>
         </div>
       </section>
+
+      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
     </div>
   );
 }

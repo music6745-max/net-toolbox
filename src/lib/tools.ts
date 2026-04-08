@@ -745,6 +745,11 @@ export const tools: Tool[] = [
   { slug: "personality-quick-test", name: "16タイプ性格診断（簡易版）", description: "8問の質問に答えるだけで16タイプの性格を簡易診断。MBTI風の自己分析ツール。", icon: "🧠", category: "日常ツール" },
   { slug: "screen-time-calculator", name: "スクリーンタイム健康度診断", description: "スマホ・PC・TVの1日使用時間から健康影響度をスコア化。デジタルデトックスの目安に。", icon: "📱", category: "日常ツール" },
   { slug: "food-calorie-quick-lookup", name: "主要食品カロリー早見表", description: "ご飯・パン・麺・肉・魚など50品目以上のカロリーを検索ボックスで素早く確認。", icon: "🍱", category: "日常ツール" },
+  { slug: "gas-fee-simulator", name: "都市ガス料金シミュレーター", description: "地域・使用量から都市ガス代の月額・年間コストを試算。新ガス会社切替時の節約額もわかる。", icon: "🔥", category: "日常ツール" },
+  { slug: "electricity-rate-simulator", name: "電気料金プラン比較シミュレーター", description: "従量電灯・時間帯別・オール電化プランを月間使用量から比較。最適なプランを提案。", icon: "⚡", category: "日常ツール" },
+  { slug: "mobile-rate-simulator", name: "携帯料金シミュレーター", description: "大手キャリア・オンライン専用ブランド・MVNO 10社の月額をデータ容量別に比較。", icon: "📱", category: "日常ツール" },
+  { slug: "internet-speed-grade-checker", name: "通信速度の用途適性チェッカー", description: "Mbpsを入力するだけで動画・ゲーム・会議など用途別に適性を3段階判定。", icon: "📶", category: "日常ツール" },
+  { slug: "broadband-comparison-tool", name: "光回線×スマホセット割シミュレーター", description: "光回線とスマホをセット契約したときの月額・年間トータル通信費をランキング表示。", icon: "🌐", category: "日常ツール" },
 ];
 
 export const siteConfig = {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 function ArticleJsonLd() {
   const data = {
@@ -436,6 +437,15 @@ export default function ElectricCompanyComparisonPage() {
           </Link>
         </div>
       </section>
+
+      <section className="mb-10">
+        <Link href="/tools/electricity-rate-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">電気料金プラン比較シミュレーターを使う</div>
+          <p className="text-xs text-muted">従量電灯・時間帯別・オール電化を月間使用量から比較 →</p>
+        </Link>
+      </section>
+
+      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 export const metadata: Metadata = {
   title: "クレジットカードおすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -913,6 +914,7 @@ export default function CreditCardComparisonPage() {
         </div>
       </section>
       <GuideRelatedLinks currentSlug="credit-card-comparison" />
+      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
     </div>
   );
 }

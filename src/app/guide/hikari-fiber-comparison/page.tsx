@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
+import { AdSenseUnit } from "@/components/AdSenseUnit";
 
 export const metadata: Metadata = {
   title: "光回線おすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -454,6 +455,19 @@ export default function HikariFiberComparisonPage() {
           </Link>
         </div>
       </section>
+
+      <section className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <Link href="/tools/internet-speed-grade-checker" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">通信速度の用途適性チェッカーを使う</div>
+          <p className="text-xs text-muted">Mbps入力で動画・ゲーム・会議の可否を判定 →</p>
+        </Link>
+        <Link href="/tools/broadband-comparison-tool" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">光回線×スマホセット割シミュレーター</div>
+          <p className="text-xs text-muted">トータル通信費をランキング表示 →</p>
+        </Link>
+      </section>
+
+      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
     </div>
   );
 }
