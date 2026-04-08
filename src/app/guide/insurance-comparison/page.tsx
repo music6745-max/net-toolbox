@@ -788,6 +788,17 @@ export default function InsuranceComparisonPage() {
         </div>
       </section>
 
+      <section className="mb-10">
+        <Link href="/tools/insurance-need-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">必要保障額計算ツールを使う</div>
+          <p className="text-xs text-muted">家族構成・収入・住宅ローンを入力するだけで、あなたに必要な生命保険の保障額を自動計算できます →</p>
+        </Link>
+        <Link href="/tools/education-cost-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors mt-3">
+          <div className="font-bold text-sm mb-1">教育費シミュレーターを使う</div>
+          <p className="text-xs text-muted">幼稚園〜大学まで公立／私立別に累積教育費の目安を試算できます →</p>
+        </Link>
+      </section>
+
       {/* Section 8 - Summary */}
       <section id="summary" className="mb-10">
         <h2 className="text-2xl font-bold mb-4">8. まとめ</h2>

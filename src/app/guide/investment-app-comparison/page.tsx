@@ -434,6 +434,13 @@ export default function InvestmentAppComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/retirement-savings-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">老後資金シミュレーターを使う</div>
+          <p className="text-xs text-muted">目標金額と想定利回りから必要な月額積立額を自動計算。投資アプリ選びの判断材料に →</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">

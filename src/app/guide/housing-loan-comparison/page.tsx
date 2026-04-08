@@ -167,6 +167,13 @@ export default function HousingLoanComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/rent-budget-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">家賃適正額計算ツールを使う</div>
+          <p className="text-xs text-muted">年収から無理のない住居費の目安を自動計算。購入前の予算検討にも活用できます →</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">

@@ -710,6 +710,11 @@ export const tools: Tool[] = [
   { slug: "fiber-fee-simulator", name: "光回線料金シミュレーター", description: "速度プラン・家族人数・スマホ割引から光回線の月額を試算。", icon: "🌐", category: "日常ツール" },
   { slug: "sim-fee-simulator", name: "格安SIM料金シミュレーター", description: "データ容量・通話オプション・家族回線数から月額コストを試算。", icon: "📱", category: "日常ツール" },
   { slug: "vpn-cost-simulator", name: "VPN料金シミュレーター", description: "契約期間・同時接続数から主要VPNの年間コストを比較。", icon: "🛡️", category: "セキュリティ" },
+  { slug: "car-loan-simulator", name: "自動車ローンシミュレーター", description: "車両価格・頭金・金利・期間から月々の返済額と総返済額を試算。", icon: "🚗", category: "日常ツール" },
+  { slug: "rent-budget-calculator", name: "家賃適正額計算ツール", description: "年収から無理のない適正家賃（手取りの25〜33%）を自動計算。", icon: "🏠", category: "日常ツール" },
+  { slug: "education-cost-simulator", name: "教育費シミュレーター", description: "幼稚園から大学まで公立／私立別に累積教育費の目安を試算。", icon: "🎓", category: "日常ツール" },
+  { slug: "retirement-savings-calculator", name: "老後資金シミュレーター", description: "現在年齢・目標額・想定利回りから必要な月額積立を自動計算。", icon: "👵", category: "日常ツール" },
+  { slug: "insurance-need-calculator", name: "必要保障額計算ツール", description: "家族構成・収入・住宅ローンから生命保険の必要保障額を算出。", icon: "🛟", category: "日常ツール" },
 ];
 
 export const siteConfig = {

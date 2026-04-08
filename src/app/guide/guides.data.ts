@@ -767,6 +767,56 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "📈",
   },
+  {
+    slug: "dental-clinic-comparison",
+    title:
+      "【2026年最新】歯科クリニック比較おすすめ5選｜インプラント・矯正歯科を徹底解説",
+    description:
+      "インプラント・マウスピース矯正・ワイヤー矯正・ホワイトニングを提供する主要歯科クリニックを料金・症例数・保証で徹底比較。失敗しない歯科選びのポイントを解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🦷",
+  },
+  {
+    slug: "eye-clinic-comparison",
+    title:
+      "【2026年最新】眼科クリニック比較おすすめ5選｜レーシック・コンタクト処方を徹底解説",
+    description:
+      "レーシック・ICL・オルソケラトロジー・コンタクト処方を扱う主要眼科クリニックを料金・症例数・保証期間で徹底比較。視力矯正手術の選び方を詳しく解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "👁️",
+  },
+  {
+    slug: "clinic-online-comparison",
+    title:
+      "【2026年最新】オンライン診療サービス比較おすすめ5選｜料金・診療科・処方薬を徹底解説",
+    description:
+      "オンライン診療サービス5社を料金・診療科・処方薬・配送スピードで徹底比較。AGA・ED・ピル・花粉症まで自宅で完結する診療サービスの選び方を詳しく解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💊",
+  },
+  {
+    slug: "supplement-comparison",
+    title:
+      "【2026年最新】プロテイン・サプリメント比較おすすめ5選｜成分・コスパ・安全性を徹底解説",
+    description:
+      "プロテイン・マルチビタミン・EAA・クレアチンなど人気サプリメントを成分・コスパ・製造品質で徹底比較。初心者にも選びやすい5ブランドを紹介します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💪",
+  },
+  {
+    slug: "wedding-venue-comparison",
+    title:
+      "【2026年最新】結婚式場・ウェディング比較おすすめ5選｜費用・スタイル・特典を徹底解説",
+    description:
+      "ホテル・ゲストハウス・専門式場・レストラン・少人数婚など主要ウェディングサービスを費用・特典・口コミで徹底比較。後悔しない式場選びのコツを解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💒",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -870,6 +920,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "smart-watch-comparison": "健康・美容",
   "golf-school-comparison": "健康・美容",
   "online-counseling-comparison": "健康・美容",
+  "dental-clinic-comparison": "健康・美容",
+  "eye-clinic-comparison": "健康・美容",
+  "clinic-online-comparison": "健康・美容",
+  "supplement-comparison": "健康・美容",
+  "wedding-venue-comparison": "生活",
 
   // その他 (tools / security / guides)
   "qr-code-howto": "その他",
