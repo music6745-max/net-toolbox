@@ -1,10 +1,26 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
 import { WebSiteJsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
 
 export const metadata: Metadata = {
   title: {
@@ -69,8 +85,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className="h-full antialiased">
+    <html lang="ja" className={`h-full antialiased ${inter.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://aml.valuecommerce.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         {/* Google Analytics */}
         <script
           async
@@ -104,6 +124,19 @@ export default function RootLayout({
           url={siteConfig.url}
           name={siteConfig.name}
           description={siteConfig.description}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: siteConfig.name,
+              url: siteConfig.url,
+              logo: `${siteConfig.url}/favicon.ico`,
+              sameAs: ["https://x.com/net_toolbox_jp"],
+            }),
+          }}
         />
         <header className="bg-card-bg border-b border-card-border sticky top-0 z-50">
           <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
