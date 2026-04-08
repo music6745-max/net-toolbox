@@ -1339,6 +1339,60 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "👔",
   },
+  {
+    slug: "aga-clinic-comparison",
+    title: "【2026年最新】AGA治療クリニック比較5選｜料金・効果・オンライン対応を徹底解説",
+    description:
+      "AGAスキンクリニック・湘南美容クリニック・クリニックフォア・DMMオンラインクリニック・Bezクリニックを料金・効果・オンライン対応で徹底比較。",
+    category: "健康・美容",
+    readTime: "12分",
+    icon: "💊",
+  },
+  {
+    slug: "resignation-service-comparison",
+    title: "【2026年最新】退職代行サービス比較5選｜料金・対応範囲・成功率を徹底解説",
+    description:
+      "退職代行モームリ・ガーディアン・SARABA・退職代行Jobs・弁護士法人みやびを料金・対応範囲・成功率で徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🚪",
+  },
+  {
+    slug: "career-coaching-comparison",
+    title: "【2026年最新】キャリアコーチング比較5選｜料金・期間・強みを徹底解説",
+    description:
+      "ポジウィルキャリア・マジキャリ・キャリドラ・きづく。転職相談・ライフシフトラボのキャリアコーチング5社を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🎯",
+  },
+  {
+    slug: "whitening-clinic-comparison",
+    title: "【2026年最新】ホワイトニング歯科クリニック比較5選｜料金・効果・通いやすさを徹底解説",
+    description:
+      "ホワイトニング東京・スターホワイトニング・ホワイトエッセンス他、主要5院を料金・効果・通いやすさで徹底比較。",
+    category: "健康・美容",
+    readTime: "10分",
+    icon: "🦷",
+  },
+  {
+    slug: "diet-program-comparison",
+    title: "【2026年最新】パーソナルダイエットプログラム比較5選｜料金・効果・サポートを徹底解説",
+    description:
+      "ライザップ・チョコザップ・24/7Workout・BEYOND・OUTLINEのパーソナルダイエットプログラムを徹底比較。",
+    category: "健康・美容",
+    readTime: "12分",
+    icon: "🏋️",
+  },
+  {
+    slug: "online-pill-comparison",
+    title: "【2026年最新】低用量ピルオンライン処方比較5選｜料金・配送・サポートを徹底解説",
+    description:
+      "クリニックフォア・mederi Pill・スマルナ・DMMオンラインクリニック・ルナルナオンライン診療を徹底比較。",
+    category: "健康・美容",
+    readTime: "10分",
+    icon: "💗",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1525,6 +1579,14 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "teacher-job-comparison": "仕事・スキル",
   "women-job-comparison": "仕事・スキル",
   "executive-job-comparison": "仕事・スキル",
+
+  // 高単価ガイド追加
+  "aga-clinic-comparison": "健康・美容",
+  "resignation-service-comparison": "仕事・スキル",
+  "career-coaching-comparison": "仕事・スキル",
+  "whitening-clinic-comparison": "健康・美容",
+  "diet-program-comparison": "健康・美容",
+  "online-pill-comparison": "健康・美容",
 };
 
 export function genreOf(slug: string): Genre {
