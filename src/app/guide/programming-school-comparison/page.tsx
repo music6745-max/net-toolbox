@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+
+export const metadata: Metadata = {
+  title: "プログラミングスクールおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "独学に挫折した方へ。テックアカデミー・DMM WEBCAMP・RUNTEQ・SkillHacks・Progateを料金/言語/転職支援で徹底比較し最適なスクールを解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/programming-school-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

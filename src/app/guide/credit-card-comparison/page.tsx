@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "クレジットカードおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "年会費とポイント還元で迷う方へ。楽天カード・三井住友カード(NL)・JCBカードW・PayPayカード・dカードを年会費/還元率/特典で徹底比較し最適な1枚を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/credit-card-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

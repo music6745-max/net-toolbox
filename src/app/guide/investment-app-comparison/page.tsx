@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "投資アプリおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "資産形成を始めたい初心者へ。SBI証券・楽天証券・マネックス証券・松井証券・PayPay証券を手数料/取扱商品/操作性で徹底比較し最初の1社を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/investment-app-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

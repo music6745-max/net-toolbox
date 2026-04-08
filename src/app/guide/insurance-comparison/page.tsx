@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "ネット保険おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "保険料が高い・内容がよく分からない方へ。ライフネット生命・SBI生命・アクサダイレクト・チューリッヒ・オリックス生命を保険料/保障/特約で徹底比較し最適な1社を解説。",
+  alternates: { canonical: `${siteConfig.url}/guide/insurance-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

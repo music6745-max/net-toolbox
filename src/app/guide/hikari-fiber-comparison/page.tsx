@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "光回線おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "ネットが遅い・料金を見直したい方へ。NURO光・auひかり・ドコモ光・ソフトバンク光・楽天ひかりを速度/料金/キャンペーンで徹底比較し最適な1社を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/hikari-fiber-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

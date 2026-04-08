@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "ふるさと納税サイトおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "節税と返礼品でお得したい方へ。楽天ふるさと納税・さとふる・ふるなび・ふるさとチョイス・au PAYふるさと納税を還元率/返礼品/ポイントで徹底比較し最適な1社を解説。",
+  alternates: { canonical: `${siteConfig.url}/guide/furusato-tax-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

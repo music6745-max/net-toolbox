@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+
+export const metadata: Metadata = {
+  title: "VPNおすすめ3選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "公共Wi-Fiや海外接続が不安な方へ。NordVPN・ExpressVPN・MillenVPNを料金/速度/セキュリティで徹底比較し、安全なネット利用に最適な1社を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/vpn-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

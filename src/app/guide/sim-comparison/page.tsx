@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+
+export const metadata: Metadata = {
+  title: "格安SIMおすすめ6選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "毎月のスマホ代を抑えたい方へ。楽天モバイル・ahamo・LINEMO・povo・UQモバイル・ワイモバイルを料金/速度/通話プランで徹底比較し乗換先を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/sim-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

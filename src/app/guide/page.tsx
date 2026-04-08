@@ -550,6 +550,51 @@ const guides = [
     icon: "🍼",
   },
   {
+    slug: "tablet-comparison",
+    title: "タブレットおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description:
+      "iPad・Surface・Galaxy Tab・Lenovoの主要5モデルを性能・価格・SIM対応で徹底比較。仕事・学習・動画視聴それぞれの最適解を解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📱",
+  },
+  {
+    slug: "smart-watch-comparison",
+    title: "スマートウォッチおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description:
+      "Apple Watch・Garmin・Fitbit・Galaxy Watchの主要5モデルをバッテリー・健康機能・対応OSで徹底比較し、ライフスタイル別の最適解を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "⌚",
+  },
+  {
+    slug: "air-purifier-comparison",
+    title: "空気清浄機おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description:
+      "シャープ・ダイキン・パナソニック・ダイソン・Levoitの主要5モデルを集塵性能・加湿・電気代で徹底比較し、部屋に合う1台を解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🌬️",
+  },
+  {
+    slug: "cordless-cleaner-comparison",
+    title: "コードレス掃除機おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description:
+      "ダイソン・マキタ・シャーク・パナソニック・アイリスオーヤマの主要5モデルを吸引力・重量・バッテリーで徹底比較し、生活スタイル別に最適解を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🧹",
+  },
+  {
+    slug: "rice-cooker-comparison",
+    title: "炊飯器おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+    description:
+      "象印・タイガー・パナソニック・三菱・アイリスオーヤマの主要5モデルを加熱方式・内釜・炊き分け機能で徹底比較し、家族構成別に最適解を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🍚",
+  },
+  {
     slug: "marriage-agency-comparison",
     title:
       "【2026年最新】結婚相談所比較おすすめ5選｜料金・会員数・成婚率を徹底解説",

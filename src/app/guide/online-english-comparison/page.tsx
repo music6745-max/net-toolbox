@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+
+export const metadata: Metadata = {
+  title: "オンライン英会話おすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  description:
+    "英語学習が続かない方へ。DMM英会話・NativeCamp・QQEnglish・Kimini英会話・AQUESを料金/講師/カリキュラムで徹底比較し挫折しない1社を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/online-english-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {
