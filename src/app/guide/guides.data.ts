@@ -1069,6 +1069,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "🏖️",
   },
+  {
+    slug: "small-business-software",
+    title: "【2026年最新】個人事業主向けクラウドソフト総合比較｜会計・請求書・勤怠を徹底解説",
+    description:
+      "個人事業主・フリーランスが導入すべきクラウドソフトを会計・請求書・勤怠・経費精算の4領域で徹底比較。freee・弥生・マネーフォワードの選び方と料金・連携機能を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🧮",
+  },
+  {
+    slug: "crypto-tax-comparison",
+    title: "【2026年最新】仮想通貨の税金計算ソフト比較｜Cryptact・Gtaxなど5選を徹底解説",
+    description:
+      "暗号資産の損益計算を自動化する税金計算ソフトを徹底比較。Cryptact・Gtax・CryptoLinC・koinly・CoinToolの料金・対応取引所・DeFi対応を網羅。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💹",
+  },
+  {
+    slug: "nft-marketplace-comparison",
+    title: "【2026年最新】NFTマーケットプレイス比較おすすめ5選｜手数料・対応チェーンを徹底解説",
+    description:
+      "OpenSea・Magic Eden・Blur・Rarible・Coincheck NFTの手数料・対応チェーン・取扱ジャンルを徹底比較。初心者のNFT売買と税金の考え方まで解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🎨",
+  },
+  {
+    slug: "dapps-wallet-comparison",
+    title: "【2026年最新】暗号資産ウォレット・DeFi比較おすすめ5選｜MetaMask・Ledgerを徹底解説",
+    description:
+      "MetaMask・Phantom・Ledger・Trust Wallet・Rabbyの使い勝手・対応チェーン・セキュリティを徹底比較。DeFi・NFT・ステーキングの始め方も解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "👛",
+  },
+  {
+    slug: "side-business-fee-comparison",
+    title: "【2026年最新】副業向け確定申告サービス比較おすすめ5選｜料金・サポートを徹底解説",
+    description:
+      "副業の確定申告を自分で・依頼する場合のサービス料金を徹底比較。freee・弥生・マネーフォワードからオンライン税理士まで、副業サラリーマン向けの選び方を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📝",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1213,6 +1258,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "winter-heating-comparison": "生活",
   "new-graduate-financial-tips": "金融",
   "retirement-preparation-guide": "金融",
+
+  // 新着: 副業・暗号資産関連
+  "small-business-software": "仕事・スキル",
+  "crypto-tax-comparison": "金融",
+  "nft-marketplace-comparison": "金融",
+  "dapps-wallet-comparison": "金融",
+  "side-business-fee-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {
