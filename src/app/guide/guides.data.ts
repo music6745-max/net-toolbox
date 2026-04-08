@@ -1024,6 +1024,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "🏢",
   },
+  {
+    slug: "spring-job-change-tips",
+    title: "【2026年最新】春の転職完全ガイド｜ベストタイミングと成功手順を徹底解説",
+    description:
+      "3月〜5月は求人数が年間最大級。春の転職を成功させるタイミング・準備・書類作成・面接対策・内定後の手順までを完全ガイド。",
+    category: "仕事術",
+    readTime: "15分",
+    icon: "🌸",
+  },
+  {
+    slug: "summer-electricity-saving",
+    title: "【2026年最新】夏の電気代節約ガイド｜エアコン徹底活用で月3000円カット",
+    description:
+      "猛暑でも電気代を抑える夏の節約術を徹底解説。エアコンの設定温度・扇風機併用・冷蔵庫・待機電力まで網羅。",
+    category: "実践ガイド",
+    readTime: "12分",
+    icon: "☀️",
+  },
+  {
+    slug: "winter-heating-comparison",
+    title: "【2026年最新】冬の暖房器具比較ガイド｜電気・ガス・灯油のコストと選び方",
+    description:
+      "エアコン・石油ファンヒーター・ガスファンヒーター・こたつ・電気ストーブを光熱費・暖房能力・安全性で徹底比較。",
+    category: "比較",
+    readTime: "14分",
+    icon: "🔥",
+  },
+  {
+    slug: "new-graduate-financial-tips",
+    title: "【2026年最新】新社会人のお金管理完全ガイド｜口座・家計簿・投資の始め方",
+    description:
+      "初任給を受け取る新社会人向けに、銀行口座・クレカ・家計簿アプリ・積立NISA・保険の選び方を徹底解説。",
+    category: "金融",
+    readTime: "15分",
+    icon: "💴",
+  },
+  {
+    slug: "retirement-preparation-guide",
+    title: "【2026年最新】定年退職前後のお金管理ガイド｜年金・退職金・健康保険を徹底解説",
+    description:
+      "50代から始める定年退職の準備を完全ガイド。年金受取・退職金運用・健康保険切替・確定申告まで損しないポイントを解説。",
+    category: "金融",
+    readTime: "15分",
+    icon: "🏖️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1161,6 +1206,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "invoice-system-comparison": "金融",
   "corporate-vpn-comparison": "仕事・スキル",
   "shared-office-comparison": "仕事・スキル",
+
+  // 季節・ライフイベント系
+  "spring-job-change-tips": "仕事・スキル",
+  "summer-electricity-saving": "生活",
+  "winter-heating-comparison": "生活",
+  "new-graduate-financial-tips": "金融",
+  "retirement-preparation-guide": "金融",
 };
 
 export function genreOf(slug: string): Genre {
