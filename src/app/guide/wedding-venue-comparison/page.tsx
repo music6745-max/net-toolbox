@@ -149,6 +149,13 @@ export default function WeddingVenueComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/wedding-cost-detail-simulator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors">
+          <div className="text-sm font-bold text-primary mb-1">結婚式費用詳細シミュレーターを使う</div>
+          <p className="text-xs text-muted">招待人数・地域・スタイルから総費用と自己負担額を試算</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">

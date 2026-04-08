@@ -423,6 +423,10 @@ export default function MovingCompanyComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/moving-cost-detail-simulator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors mb-6">
+          <div className="text-sm font-bold text-primary mb-1">引越し費用詳細見積もりシミュレーターを使う</div>
+          <p className="text-xs text-muted">距離・荷物量・時期で概算と見積もりレンジを確認</p>
+        </Link>
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/hikari-fiber-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">

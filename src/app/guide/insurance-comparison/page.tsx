@@ -933,6 +933,19 @@ export default function InsuranceComparisonPage() {
           </a>
         </div>
       </section>
+      <section className="mb-10">
+        <h2 className="text-lg font-bold mb-4">関連シミュレーター</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/tools/child-allowance-simulator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors">
+            <div className="text-sm font-bold text-primary mb-1">児童手当受給額シミュレーターを使う</div>
+            <p className="text-xs text-muted">月額・年額・累計を試算</p>
+          </Link>
+          <Link href="/tools/birth-cost-simulator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors">
+            <div className="text-sm font-bold text-primary mb-1">出産費用シミュレーターを使う</div>
+            <p className="text-xs text-muted">一時金差引後の自己負担額を試算</p>
+          </Link>
+        </div>
+      </section>
       <GuideRelatedLinks currentSlug="insurance-comparison" />
     </div>
   );

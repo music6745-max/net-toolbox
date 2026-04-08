@@ -423,6 +423,10 @@ export default function CarPurchaseComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/car-expense-yearly-calculator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors mb-6">
+          <div className="text-sm font-bold text-primary mb-1">自動車年間維持費計算ツールを使う</div>
+          <p className="text-xs text-muted">購入後のランニングコストを年間・月額で把握</p>
+        </Link>
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">

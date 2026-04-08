@@ -255,6 +255,10 @@ export default function BabysitterComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/child-allowance-simulator" className="block bg-primary/10 border-2 border-primary rounded-xl p-5 text-center hover:bg-primary/20 transition-colors mb-6">
+          <div className="text-sm font-bold text-primary mb-1">児童手当受給額シミュレーターを使う</div>
+          <p className="text-xs text-muted">月額・年額・18歳までの累計受給額を試算</p>
+        </Link>
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/cleaning-service-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">

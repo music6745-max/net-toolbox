@@ -735,6 +735,11 @@ export const tools: Tool[] = [
   { slug: "vat-calculator", name: "消費税計算（内税・外税対応）", description: "税抜⇔税込の双方向変換に対応した消費税計算ツール。標準税率10%・軽減税率8%対応。", icon: "💴", category: "日常ツール" },
   { slug: "business-trip-allowance-calculator", name: "出張旅費・日当計算", description: "役職・国内外・日数・宿泊数から日当と宿泊費の合計を計算。旅費規程の整備や経費精算に。", icon: "✈️", category: "日常ツール" },
   { slug: "annual-leave-calculator", name: "有給休暇付与日数計算", description: "労働基準法に基づき勤続年数と週の所定労働日数から年次有給休暇の付与日数を計算。", icon: "📅", category: "日常ツール" },
+  { slug: "wedding-cost-detail-simulator", name: "結婚式費用詳細シミュレーター", description: "招待人数・地域・挙式スタイルから結婚式の総費用・内訳・自己負担額を詳細に試算。", icon: "💒", category: "日常ツール" },
+  { slug: "child-allowance-simulator", name: "児童手当受給額シミュレーター", description: "子供の年齢・人数から児童手当の月額・年額・累計受給額を試算。2024年拡充後の最新制度対応。", icon: "👶", category: "日常ツール" },
+  { slug: "birth-cost-simulator", name: "出産費用シミュレーター", description: "分娩方法・入院日数・部屋タイプから出産費用を試算。出産育児一時金50万円の差引後自己負担も表示。", icon: "🤱", category: "日常ツール" },
+  { slug: "moving-cost-detail-simulator", name: "引越し費用詳細見積もり", description: "荷物量・距離・時期から引越し費用の概算と見積もりレンジを算出。繁忙期/閑散期の料金差も確認。", icon: "📦", category: "日常ツール" },
+  { slug: "car-expense-yearly-calculator", name: "自動車年間維持費計算", description: "自動車税・任意保険・車検・燃料費・駐車場代から年間・月額維持費を一括試算。", icon: "🚗", category: "日常ツール" },
 ];
 
 export const siteConfig = {
