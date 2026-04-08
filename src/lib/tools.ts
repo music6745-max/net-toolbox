@@ -750,6 +750,11 @@ export const tools: Tool[] = [
   { slug: "mobile-rate-simulator", name: "携帯料金シミュレーター", description: "大手キャリア・オンライン専用ブランド・MVNO 10社の月額をデータ容量別に比較。", icon: "📱", category: "日常ツール" },
   { slug: "internet-speed-grade-checker", name: "通信速度の用途適性チェッカー", description: "Mbpsを入力するだけで動画・ゲーム・会議など用途別に適性を3段階判定。", icon: "📶", category: "日常ツール" },
   { slug: "broadband-comparison-tool", name: "光回線×スマホセット割シミュレーター", description: "光回線とスマホをセット契約したときの月額・年間トータル通信費をランキング表示。", icon: "🌐", category: "日常ツール" },
+  { slug: "travel-budget-simulator", name: "旅行予算シミュレーター", description: "人数・宿泊日数・宿泊ランク・交通費・食費から旅行の総予算と1人あたり金額を自動計算。", icon: "🧳", category: "日常ツール" },
+  { slug: "flight-mile-calculator", name: "マイル計算ツール", description: "航空会社・区間距離・座席クラスからフライトで貯まるマイル数を積算率込みで試算。", icon: "✈️", category: "日常ツール" },
+  { slug: "hotel-night-saver", name: "ホテル料金節約計算", description: "連泊割引・早期予約割引・平日割引を適用したホテル宿泊料金と節約額を一発計算。", icon: "🏨", category: "日常ツール" },
+  { slug: "currency-cash-needed", name: "旅行用現金額計算", description: "渡航先・滞在日数・旅行スタイル・カード決済比率から持参すべき現金額を日本円と現地通貨で試算。", icon: "💴", category: "日常ツール" },
+  { slug: "luggage-weight-checker", name: "荷物重量計算ツール", description: "ANA/JAL/LCC各社の荷物制限を基準に預け入れ・機内持込の超過料金を予測。", icon: "🧳", category: "日常ツール" },
 ];
 
 export const siteConfig = {
