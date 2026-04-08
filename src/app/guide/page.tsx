@@ -644,6 +644,46 @@ const guides = [
     readTime: "15分",
     icon: "🎓",
   },
+  {
+    slug: "uber-eats-delivery-comparison",
+    title: "【2026年最新】フードデリバリーアプリ比較おすすめ4選｜Uber Eats・出前館・menu・Wolt",
+    description: "Uber Eats・出前館・menu・Woltの配達料・手数料・加盟店数・クーポン・対応エリアを徹底比較。シーン別・お得度別の選び方を解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🍔",
+  },
+  {
+    slug: "golf-school-comparison",
+    title: "【2026年最新】ゴルフスクール比較おすすめ5選｜ライザップゴルフ・ゴルフパフォーマンス他",
+    description: "ライザップゴルフ・ゴルフパフォーマンス・サンクチュアリゴルフ・チキンゴルフ・ゴルテックを料金・レッスン内容・成果保証で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "⛳",
+  },
+  {
+    slug: "beauty-clinic-comparison",
+    title: "【2026年最新】美容皮膚科・医療ダイエット比較おすすめ5選｜料金・施術メニューを徹底解説",
+    description: "湘南美容クリニック・TCB・品川美容外科・東京美容外科・DIOクリニックの料金・人気施術・医療ダイエットを徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💆",
+  },
+  {
+    slug: "lasik-ico-comparison",
+    title: "【2026年最新】レーシック・ICL比較おすすめ5選｜料金・術式・保証を徹底解説",
+    description: "品川近視クリニック・新宿近視クリニック・神戸神奈川アイクリニック・先進会眼科・錦糸眼科のレーシック・ICL料金・術式・保証を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "👁️",
+  },
+  {
+    slug: "wedding-ring-comparison",
+    title: "【2026年最新】結婚指輪・婚約指輪ブランド比較おすすめ5選｜価格・デザイン・品質を徹底解説",
+    description: "カルティエ・ティファニー・4℃・アイプリモ・ケイウノの結婚指輪・婚約指輪を価格・デザイン・素材・サービスで徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💍",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
