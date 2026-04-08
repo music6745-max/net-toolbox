@@ -812,6 +812,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "accounting-software-comparison": "金融",
   "furusato-tax-comparison": "金融",
   "subscription-management": "金融",
+  "tax-accountant-comparison": "金融",
+  "legal-consultation-comparison": "仕事・スキル",
+  "car-loan-comparison": "金融",
+  "business-loan-comparison": "金融",
+  "nisa-comparison": "金融",
 
   // 仕事・スキル
   "job-site-comparison": "仕事・スキル",
