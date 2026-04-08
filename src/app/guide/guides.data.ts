@@ -952,6 +952,33 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🧹",
   },
+  {
+    slug: "fuel-economy-guide",
+    title: "燃費計算ツール完全ガイド｜km/L計算式とガソリン代節約術【2026年最新】",
+    description:
+      "燃費計算サイトの使い方、km/L計算式、満タン法による正確な測定、ガソリン代節約術まで完全解説。無料の燃費計算ツールも紹介。",
+    category: "ガイド",
+    readTime: "10分",
+    icon: "⛽",
+  },
+  {
+    slug: "twitter-preview-guide",
+    title: "Twitter(X) プレビュー確認完全ガイド｜投稿前チェックとOGP表示の仕組み",
+    description:
+      "Twitter/X の投稿プレビューを事前確認する方法を解説。OGP画像表示、Twitter Card、文字数カウント、リンクカードの仕組みを実例つきで紹介。",
+    category: "ガイド",
+    readTime: "10分",
+    icon: "🐦",
+  },
+  {
+    slug: "mojibake-fix-guide",
+    title: "文字化け修復完全ガイド｜原因・文字コード判定・直し方【2026年最新】",
+    description:
+      "文字化けの原因と直し方を徹底解説。UTF-8・Shift_JIS・EUC-JPの違い、文字コード自動判定、メール/CSV/ZIPの修復まで無料ツール付きで紹介。",
+    category: "ガイド",
+    readTime: "12分",
+    icon: "🔤",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1064,6 +1091,9 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   // その他 (tools / security / guides)
   "qr-code-howto": "その他",
   "password-security": "その他",
+  "fuel-economy-guide": "その他",
+  "twitter-preview-guide": "その他",
+  "mojibake-fix-guide": "その他",
 
   // 新規ガイド
   "amazon-prime-vs-rakuten": "生活",
