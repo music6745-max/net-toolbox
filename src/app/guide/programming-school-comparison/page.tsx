@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
@@ -244,6 +244,10 @@ export default function ProgrammingSchoolComparisonPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <ArticleJsonLd />
+      <ItemListJsonLd
+        name="プログラミングスクールおすすめ比較"
+        items={schools.map((s) => ({ name: s.name, url: s.url }))}
+      />
       <BreadcrumbJsonLd
         items={[
           { name: "ホーム", url: siteConfig.url },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
@@ -188,6 +188,10 @@ export default function AccountingSoftwareComparisonPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <ArticleJsonLd />
+      <ItemListJsonLd
+        name="会計ソフトおすすめ比較"
+        items={accountingSoftware.map((s) => ({ name: s.name, url: s.url }))}
+      />
       <BreadcrumbJsonLd
         items={[
           { name: "ホーム", url: siteConfig.url },

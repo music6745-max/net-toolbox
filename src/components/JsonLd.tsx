@@ -8,7 +8,10 @@ export function WebSiteJsonLd({ url, name, description }: { url: string; name: s
     inLanguage: "ja",
     potentialAction: {
       "@type": "SearchAction",
-      target: `${url}/?q={search_term_string}`,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${url}/search?q={search_term_string}`,
+      },
       "query-input": "required name=search_term_string",
     },
   };
@@ -101,6 +104,36 @@ export function ArticleJsonLd({
     dateModified,
     mainEntityOfPage: url,
     inLanguage: "ja",
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+export function ItemListJsonLd({
+  name,
+  items,
+}: {
+  name: string;
+  items: { name: string; url?: string; description?: string }[];
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Product",
+        name: item.name,
+        ...(item.description ? { description: item.description } : {}),
+        ...(item.url ? { url: item.url } : {}),
+      },
+    })),
   };
   return (
     <script

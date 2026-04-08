@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
@@ -203,6 +203,10 @@ export default function InsuranceComparisonPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <ArticleJsonLd />
+      <ItemListJsonLd
+        name="ネット保険おすすめ比較"
+        items={insuranceServices.map((s) => ({ name: s.name, url: s.url }))}
+      />
       <BreadcrumbJsonLd
         items={[
           { name: "ホーム", url: siteConfig.url },

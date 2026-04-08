@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "ふるさと納税サイトおすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -211,6 +211,10 @@ export default function FurusatoTaxComparisonPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <ArticleJsonLd />
+      <ItemListJsonLd
+        name="ふるさと納税サイトおすすめ比較"
+        items={services.map((s) => ({ name: s.name, url: s.url }))}
+      />
       <BreadcrumbJsonLd
         items={[
           { name: "ホーム", url: siteConfig.url },
