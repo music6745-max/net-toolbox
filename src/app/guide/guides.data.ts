@@ -979,6 +979,51 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🔤",
   },
+  {
+    slug: "company-credit-card-comparison",
+    title: "【2026年最新】法人クレジットカード比較おすすめ5選｜年会費・限度額・ポイント還元を徹底解説",
+    description:
+      "法人・個人事業主向けクレジットカードを年会費・利用限度額・ポイント還元・追加カード発行枚数・ビジネス特典で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "💳",
+  },
+  {
+    slug: "business-bank-comparison",
+    title: "【2026年最新】ビジネス銀行口座比較おすすめ5選｜振込手数料・API連携・開設スピードを徹底解説",
+    description:
+      "法人・個人事業主向けビジネス銀行口座を振込手数料・会計ソフトAPI連携・開設スピード・デビットカード発行可否で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🏦",
+  },
+  {
+    slug: "invoice-system-comparison",
+    title: "【2026年最新】請求書・電子インボイス比較おすすめ5選｜料金・インボイス制度対応・会計連携を徹底解説",
+    description:
+      "インボイス制度・電子帳簿保存法対応の請求書発行サービスを料金・機能・会計ソフト連携で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🧾",
+  },
+  {
+    slug: "corporate-vpn-comparison",
+    title: "【2026年最新】法人向けVPN比較おすすめ5選｜拠点間接続・リモートアクセス・ゼロトラストを徹底解説",
+    description:
+      "法人向けVPNを拠点間接続・リモートアクセス・ゼロトラスト対応・管理コンソール・価格で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🔒",
+  },
+  {
+    slug: "shared-office-comparison",
+    title: "【2026年最新】コワーキング・シェアオフィス比較おすすめ5選｜料金・拠点数・法人登記対応を徹底解説",
+    description:
+      "WeWork・Regus・THE HUBなど主要シェアオフィス/コワーキング5社を料金・拠点数・法人登記可否で徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🏢",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1111,6 +1156,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "cooking-school-comparison": "仕事・スキル",
   "babysitter-comparison": "生活",
   "cleaning-service-comparison": "生活",
+  "company-credit-card-comparison": "金融",
+  "business-bank-comparison": "金融",
+  "invoice-system-comparison": "金融",
+  "corporate-vpn-comparison": "仕事・スキル",
+  "shared-office-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {

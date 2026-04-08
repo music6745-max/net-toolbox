@@ -730,6 +730,11 @@ export const tools: Tool[] = [
   { slug: "inheritance-tax-simulator", name: "相続税シミュレーター", description: "資産総額・法定相続人数から相続税の基礎控除額と概算税額を試算。", icon: "📜", category: "日常ツール" },
   { slug: "company-savings-simulator", name: "企業型DCシミュレーター", description: "会社拠出＋マッチング拠出による確定拠出年金の将来資産と節税額を試算。", icon: "🏢", category: "日常ツール" },
   { slug: "tax-bracket-calculator", name: "所得税ブラケット計算", description: "年収から課税所得・適用税率・所得税・住民税の概算を表示。", icon: "📊", category: "日常ツール" },
+  { slug: "invoice-tax-calculator", name: "インボイス税額計算", description: "適格請求書発行事業者・非適格事業者との取引における消費税の仕入税額控除差額を計算。経過措置にも対応。", icon: "🧾", category: "日常ツール" },
+  { slug: "withholding-tax-calculator", name: "源泉徴収税額計算", description: "報酬・料金等から源泉徴収すべき所得税額を自動計算。原稿料・司法書士報酬・配当金など複数パターンに対応。", icon: "💼", category: "日常ツール" },
+  { slug: "vat-calculator", name: "消費税計算（内税・外税対応）", description: "税抜⇔税込の双方向変換に対応した消費税計算ツール。標準税率10%・軽減税率8%対応。", icon: "💴", category: "日常ツール" },
+  { slug: "business-trip-allowance-calculator", name: "出張旅費・日当計算", description: "役職・国内外・日数・宿泊数から日当と宿泊費の合計を計算。旅費規程の整備や経費精算に。", icon: "✈️", category: "日常ツール" },
+  { slug: "annual-leave-calculator", name: "有給休暇付与日数計算", description: "労働基準法に基づき勤続年数と週の所定労働日数から年次有給休暇の付与日数を計算。", icon: "📅", category: "日常ツール" },
 ];
 
 export const siteConfig = {
