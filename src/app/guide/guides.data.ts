@@ -907,6 +907,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "✈️",
   },
+  {
+    slug: "seven-day-fitness-comparison",
+    title: "【2026年最新】24時間ジム比較おすすめ5選｜エニタイム・JOYFIT・FIT24徹底解説",
+    description:
+      "エニタイムフィットネス・JOYFIT24・FIT24・chocoZAP・ゴールドジムを月額・店舗数・設備で徹底比較。深夜・早朝に通える24時間営業ジムが見つかります。",
+    category: "比較",
+    readTime: "12分",
+    icon: "🏋️",
+  },
+  {
+    slug: "yoga-studio-comparison",
+    title: "【2026年最新】ヨガスタジオ・オンラインヨガ比較おすすめ5選",
+    description:
+      "LAVA・CALDO・zen place・SOELU・LEAN BODYのスタジオ＆オンラインヨガを料金・レッスン数・特徴で徹底比較。",
+    category: "比較",
+    readTime: "12分",
+    icon: "🧘",
+  },
+  {
+    slug: "cooking-school-comparison",
+    title: "【2026年最新】料理教室・オンライン料理比較おすすめ5選",
+    description:
+      "ABCクッキング・ベターホーム・ホームメイドクッキング・CookLIVE・クラシルを料金・カリキュラムで徹底比較。",
+    category: "比較",
+    readTime: "12分",
+    icon: "🍳",
+  },
+  {
+    slug: "babysitter-comparison",
+    title: "【2026年最新】ベビーシッターサービス比較おすすめ5選",
+    description:
+      "キッズライン・ポピンズシッター・スマートシッター・ル・アンジェ・ノーベルを料金・対応エリア・サポート体制で徹底比較。",
+    category: "比較",
+    readTime: "12分",
+    icon: "👶",
+  },
+  {
+    slug: "cleaning-service-comparison",
+    title: "【2026年最新】家事代行・ハウスクリーニング比較おすすめ5選",
+    description:
+      "CaSy・ベアーズ・ダスキン・タスカジ・カジタクの家事代行・ハウスクリーニングを料金・対応エリア・サービス内容で徹底比較。",
+    category: "比較",
+    readTime: "12分",
+    icon: "🧹",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1031,6 +1076,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "used-car-comparison": "生活",
   "car-rental-comparison": "生活",
   "travel-insurance-comparison": "金融",
+  "seven-day-fitness-comparison": "健康・美容",
+  "yoga-studio-comparison": "健康・美容",
+  "cooking-school-comparison": "仕事・スキル",
+  "babysitter-comparison": "生活",
+  "cleaning-service-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
