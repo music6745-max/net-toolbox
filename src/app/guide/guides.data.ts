@@ -1483,6 +1483,51 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🖋️",
   },
+  {
+    slug: "online-high-school-comparison",
+    title: "【2026年最新】通信制高校おすすめ比較5選｜学費・サポート・進学実績を徹底解説",
+    description:
+      "N高・S高・第一学院・ルネサンス・クラーク記念国際高校の通信制高校5校を学費・サポート・進学実績で徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🎓",
+  },
+  {
+    slug: "esim-comparison",
+    title: "【2026年最新】eSIM比較5選｜国内・海外旅行向けおすすめプランを徹底解説",
+    description:
+      "楽天モバイル・povo・ahamo・Airalo・Holaflyの国内＆海外向けeSIM5種を徹底比較。即時開通・物理SIM不要のeSIMを選ぶコツ。",
+    category: "比較",
+    readTime: "10分",
+    icon: "📲",
+  },
+  {
+    slug: "delivery-driver-comparison",
+    title: "【2026年最新】フードデリバリー配達員比較5選｜時給・配達単価・働きやすさを徹底解説",
+    description:
+      "Uber Eats・出前館・Wolt・menu・楽天デリバリーの配達員サービス5社を時給・配達単価・働きやすさで徹底比較。",
+    category: "副業・税金",
+    readTime: "12分",
+    icon: "🛵",
+  },
+  {
+    slug: "fx-broker-comparison",
+    title: "【2026年最新】FX会社おすすめ比較5選｜スプレッド・スワップ・取引ツールを徹底解説",
+    description:
+      "DMM FX・GMOクリック証券・外為どっとコム・SBI FX・みんなのFXのFX会社5社をスプレッド・スワップ・取引ツールで徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "💱",
+  },
+  {
+    slug: "online-doctor-comparison",
+    title: "【2026年最新】オンライン診療アプリ比較5選｜診療科目・料金・処方薬の即日配送を徹底解説",
+    description:
+      "クリニクス・curon・ファストドクター・SOKUYAKU・LINEドクターのオンライン診療アプリ5社を診療科目・料金・処方薬配送で徹底比較。",
+    category: "健康・美容",
+    readTime: "10分",
+    icon: "🩺",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1691,6 +1736,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "language-school-comparison": "仕事・スキル",
   "kei-car-comparison": "生活",
   "esign-comparison": "仕事・スキル",
+
+  // 教育・通信・副業・FX・診療
+  "online-high-school-comparison": "仕事・スキル",
+  "esim-comparison": "生活",
+  "delivery-driver-comparison": "仕事・スキル",
+  "fx-broker-comparison": "金融",
+  "online-doctor-comparison": "健康・美容",
 };
 
 export function genreOf(slug: string): Genre {
