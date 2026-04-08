@@ -1,61 +1,42 @@
 import type { MetadataRoute } from "next";
 import { tools, siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
+import { guides } from "./guide/guides.data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+
   const toolPages = tools.map((tool) => ({
     url: `${siteConfig.url}/tools/${tool.slug}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "monthly" as const,
-    priority: 0.8,
+    priority: 0.7,
   }));
 
   const categoryPages = categories.map((cat) => ({
     url: `${siteConfig.url}/category/${encodeURIComponent(cat.slug)}`,
-    lastModified: new Date(),
+    lastModified: now,
     changeFrequency: "weekly" as const,
-    priority: 0.9,
+    priority: 0.8,
   }));
 
-  const guidePages = [
-    "qr-code-howto",
-    "password-security",
-    "web-tools-for-work",
-    "developer-tools-guide",
-    "best-rental-servers",
-    "tax-software-comparison",
-    "best-vpn-services",
-    "vpn-comparison",
-    "rental-server-comparison",
-    "side-business-tools",
-    "remote-work-tools",
-    "accounting-software-comparison",
-    "job-site-comparison",
-    "sim-comparison",
-    "online-english-comparison",
-    "programming-school-comparison",
-  ].map((slug) => ({
-    url: `${siteConfig.url}/guide/${slug}`,
-    lastModified: new Date(),
+  const guidePages = guides.map((g) => ({
+    url: `${siteConfig.url}/guide/${g.slug}`,
+    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  return [
-    {
-      url: siteConfig.url,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${siteConfig.url}/guide`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    ...guidePages,
-    ...categoryPages,
-    ...toolPages,
-  ];
+  const staticPages = [
+    { url: siteConfig.url, priority: 1, changeFrequency: "weekly" as const },
+    { url: `${siteConfig.url}/guide`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${siteConfig.url}/rankings`, priority: 0.7, changeFrequency: "weekly" as const },
+    { url: `${siteConfig.url}/search`, priority: 0.5, changeFrequency: "monthly" as const },
+    { url: `${siteConfig.url}/about`, priority: 0.4, changeFrequency: "yearly" as const },
+    { url: `${siteConfig.url}/contact`, priority: 0.4, changeFrequency: "yearly" as const },
+    { url: `${siteConfig.url}/privacy`, priority: 0.3, changeFrequency: "yearly" as const },
+    { url: `${siteConfig.url}/terms`, priority: 0.3, changeFrequency: "yearly" as const },
+  ].map((p) => ({ ...p, lastModified: now }));
+
+  return [...staticPages, ...guidePages, ...categoryPages, ...toolPages];
 }

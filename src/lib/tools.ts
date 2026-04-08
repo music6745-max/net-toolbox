@@ -720,6 +720,11 @@ export const tools: Tool[] = [
   { slug: "investment-fund-simulator", name: "積立投資シミュレーター", description: "毎月積立額・利回り・期間から複利運用後の将来資産をグラフ表示で試算。", icon: "📈", category: "日常ツール" },
   { slug: "smart-tax-saving-checker", name: "節税チェックリスト", description: "ふるさと納税・iDeCoなど所得控除を網羅チェック。節税ポテンシャルを可視化。", icon: "✅", category: "日常ツール" },
   { slug: "electricity-saving-calculator", name: "電気代節約シミュレーター", description: "家電別の使用時間から月間電気代と年間節約可能額を算出。", icon: "💡", category: "日常ツール" },
+  { slug: "bmi-detail-calculator", name: "BMI詳細計算（体脂肪率・基礎代謝・必要カロリー）", description: "BMIに加え体脂肪率・基礎代謝・1日の必要カロリーをまとめて算出。", icon: "🏋️", category: "日常ツール" },
+  { slug: "work-hour-calculator", name: "労働時間・残業代計算", description: "出退勤時刻・休憩・賃金から労働時間と残業代（割増率込み）を自動計算。", icon: "⏰", category: "日常ツール" },
+  { slug: "age-in-detail-calculator", name: "年齢詳細計算（和暦・干支・星座）", description: "生年月日から満年齢・数え年・和暦・干支・星座・誕生日までの日数を表示。", icon: "🎂", category: "日常ツール" },
+  { slug: "password-strength-tester", name: "パスワード強度テスター", description: "リアルタイムでパスワードの強度・エントロピー・推定解析時間を評価。", icon: "🛡️", category: "セキュリティ" },
+  { slug: "url-shortener-info", name: "URL短縮サービス比較", description: "Bitly・TinyURL・is.gd等の特徴を比較。各公式サービスへワンクリックで誘導。", icon: "🔗", category: "開発ツール" },
 ];
 
 export const siteConfig = {
