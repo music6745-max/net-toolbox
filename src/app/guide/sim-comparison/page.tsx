@@ -1097,6 +1097,12 @@ export default function SimComparisonPage() {
           ]}
         />
       </section>
+      <section className="mb-10">
+        <Link href="/tools/sim-fee-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">料金シミュレーターを使う</div>
+          <p className="text-xs text-muted">データ容量・通話オプション・家族回線数から月額と年間コストを即試算 →</p>
+        </Link>
+      </section>
       <GuideRelatedLinks currentSlug="sim-comparison" />
     </div>
   );

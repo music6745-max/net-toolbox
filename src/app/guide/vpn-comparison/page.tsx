@@ -1082,6 +1082,12 @@ export default function VpnComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <section className="mb-10">
+        <Link href="/tools/vpn-cost-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">料金シミュレーターを使う</div>
+          <p className="text-xs text-muted">契約期間・同時接続台数から主要VPNの年間コストを一覧比較できます →</p>
+        </Link>
+      </section>
       <GuideRelatedLinks currentSlug="vpn-comparison" />
     </div>
   );

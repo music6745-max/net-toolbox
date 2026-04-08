@@ -707,6 +707,9 @@ export const tools: Tool[] = [
   { slug: "vpn-speed-test-guide", name: "VPN速度テストガイド", description: "VPN接続時の速度を測定する方法を解説。", icon: "🌐", category: "セキュリティ" },
   { slug: "phishing-checker", name: "フィッシング判定ガイド", description: "怪しいメール・URLの見分け方を解説。チェックリスト付き。", icon: "🎣", category: "セキュリティ" },
   { slug: "cookie-consent-guide", name: "Cookie管理ガイド", description: "ブラウザのCookie設定と管理方法を解説。", icon: "🍪", category: "セキュリティ" },
+  { slug: "fiber-fee-simulator", name: "光回線料金シミュレーター", description: "速度プラン・家族人数・スマホ割引から光回線の月額を試算。", icon: "🌐", category: "日常ツール" },
+  { slug: "sim-fee-simulator", name: "格安SIM料金シミュレーター", description: "データ容量・通話オプション・家族回線数から月額コストを試算。", icon: "📱", category: "日常ツール" },
+  { slug: "vpn-cost-simulator", name: "VPN料金シミュレーター", description: "契約期間・同時接続数から主要VPNの年間コストを比較。", icon: "🛡️", category: "セキュリティ" },
 ];
 
 export const siteConfig = {

@@ -431,6 +431,13 @@ export default function HikariFiberComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <Link href="/tools/fiber-fee-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">料金シミュレーターを使う</div>
+          <p className="text-xs text-muted">速度プラン・家族人数・スマホ割引を入力するだけで、月額・年間・3年総額を試算できます →</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/wifi-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
