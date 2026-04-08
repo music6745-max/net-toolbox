@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -102,6 +102,7 @@ export default function PetFoodComparisonPage() {
           { name: "プレミアムペットフード比較", url: `${siteConfig.url}/guide/pet-food-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】プレミアムペットフード比較おすすめ5選｜原材料・価格・安全性を徹底解説" description="モグワン・カナガン・ピッコロ・ファインペッツ・ヤラーのプレミアムドッグフード／キャットフードを原材料・価格・安全性で徹底比較。愛犬・愛猫の健康を守る選び方も解説。" url={`${siteConfig.url}/guide/pet-food-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

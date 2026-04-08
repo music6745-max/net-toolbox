@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -53,6 +53,7 @@ export default function SubscriptionManagementPage() {
           { name: "サブスク管理術", url: `${siteConfig.url}/guide/subscription-management` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】サブスク管理術完全ガイド｜年5万円節約する見直し方法" description="増えすぎたサブスクを賢く管理し、年5万円以上節約する具体的な方法を解説。家計簿アプリの活用、解約タイミング、固定費見直しのコツまで。" url={`${siteConfig.url}/guide/subscription-management`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

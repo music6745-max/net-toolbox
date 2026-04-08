@@ -3,11 +3,12 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "【2026年】VPNおすすめ比較｜安全なインターネット利用に",
+  title: "VPNおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "2026年最新のVPNサービスを徹底比較。NordVPN・ExpressVPN・MillenVPNなどおすすめ5社の料金・速度・セキュリティ機能を解説。公共WiFi保護や海外利用に最適なVPNが見つかります。",
+    "公共WiFiでの情報漏洩や海外サイト視聴で困っていませんか。NordVPN・ExpressVPN・MillenVPN・Surfshark・CyberGhostを料金/速度/機能で徹底比較し最適なVPN選びを解説します。",
   keywords: [
     "VPN",
     "おすすめ",
@@ -625,6 +626,7 @@ export default function BestVpnServicesPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="best-vpn-services" />
     </div>
   );
 }

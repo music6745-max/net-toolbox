@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -102,6 +102,7 @@ export default function BicycleInsuranceComparisonPage() {
           { name: "自転車保険比較", url: `${siteConfig.url}/guide/bicycle-insurance-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】自転車保険比較おすすめ5選｜義務化対応・保険料・補償内容を徹底解説" description="au損保・セブン-イレブン・楽天損保・ZuttoRide・三井住友海上の自転車保険を保険料・補償・示談交渉サービスで徹底比較。義務化エリアと加入のポイントも解説。" url={`${siteConfig.url}/guide/bicycle-insurance-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

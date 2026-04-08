@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 function ArticleJsonLd() {
   const data = {
@@ -952,6 +953,7 @@ export default function TravelBookingComparisonPage() {
           </a>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="travel-booking-comparison" />
     </div>
   );
 }

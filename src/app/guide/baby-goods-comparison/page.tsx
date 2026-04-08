@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -102,6 +102,7 @@ export default function BabyGoodsComparisonPage() {
           { name: "ベビー用品比較", url: `${siteConfig.url}/guide/baby-goods-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】ベビー用品・おむつ定期便比較おすすめ5選｜Amazon・楽天・コープを徹底解説" description="Amazonファミリー・楽天ママ割・コープデリ・パルシステム・西松屋アプリのベビー用品定期便を割引率・対応商品・配送エリアで徹底比較。子育て世帯のおむつ購入を最適化。" url={`${siteConfig.url}/guide/baby-goods-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

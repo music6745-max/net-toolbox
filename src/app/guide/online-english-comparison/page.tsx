@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
   title: "オンライン英会話おすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -1044,6 +1045,7 @@ export default function OnlineEnglishComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="online-english-comparison" />
     </div>
   );
 }

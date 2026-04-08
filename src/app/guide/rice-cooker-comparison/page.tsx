@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function RiceCookerComparisonPage() {
           { name: "炊飯器比較", url: `${siteConfig.url}/guide/rice-cooker-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="炊飯器おすすめ5選【2026年最新】徹底比較｜選び方も解説" description="ご飯のおいしさを引き上げたい方へ。象印・タイガー・パナソニック・三菱など人気5モデルを加熱方式・容量・価格で徹底比較し、家族構成別の最適解を解説します。" url={`${siteConfig.url}/guide/rice-cooker-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -102,6 +102,7 @@ export default function MealKitComparisonPage() {
           { name: "ミールキット比較", url: `${siteConfig.url}/guide/meal-kit-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】ミールキット比較おすすめ5選｜オイシックス・ヨシケイ・パルシステムを徹底解説" description="Oisix(Kit Oisix)・ヨシケイ・パルシステム・らでぃっしゅぼーや・ワタミの宅食ダイレクトのミールキットを料金・調理時間・品質で徹底比較。共働き家庭の時短調理を支援します。" url={`${siteConfig.url}/guide/meal-kit-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

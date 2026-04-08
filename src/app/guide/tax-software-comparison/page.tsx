@@ -3,11 +3,12 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "【2026年】確定申告ソフト比較｜フリーランス・副業向けおすすめ",
+  title: "確定申告ソフトおすすめ3選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "2026年最新の確定申告ソフトを徹底比較。freee・弥生・マネーフォワードの料金プラン・特徴・メリットデメリットを解説。副業やフリーランスの確定申告に最適なソフトが見つかります。",
+    "副業やフリーランスの確定申告で悩む方へ。freee・弥生・マネーフォワードの料金プラン・特徴・青色申告対応を徹底比較し、最適な確定申告ソフトの選び方を解説します。",
   keywords: [
     "確定申告ソフト",
     "比較",
@@ -605,6 +606,7 @@ export default function TaxSoftwareComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="tax-software-comparison" />
     </div>
   );
 }

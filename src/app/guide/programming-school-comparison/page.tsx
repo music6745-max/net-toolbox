@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
   title: "プログラミングスクールおすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -962,6 +963,7 @@ export default function ProgrammingSchoolComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="programming-school-comparison" />
     </div>
   );
 }

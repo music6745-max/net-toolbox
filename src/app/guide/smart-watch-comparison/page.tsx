@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function SmartWatchComparisonPage() {
           { name: "スマートウォッチ比較", url: `${siteConfig.url}/guide/smart-watch-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="スマートウォッチおすすめ5選【2026年最新】徹底比較｜選び方も解説" description="健康管理や運動を続けたい方へ。Apple Watch・Garmin・Fitbitなど人気5モデルのバッテリー・機能・対応OSを徹底比較し、ライフスタイル別に最適な1本を解説します。" url={`${siteConfig.url}/guide/smart-watch-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function HousingLoanComparisonPage() {
           { name: "住宅ローン比較", url: `${siteConfig.url}/guide/housing-loan-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】住宅ローン比較おすすめ5選｜金利・手数料・団信を徹底解説" description="ネット銀行・メガバンク・フラット35の住宅ローンを金利・手数料・団信・審査基準で徹底比較。借り換えで総返済額を数百万円削減するコツも解説。" url={`${siteConfig.url}/guide/housing-loan-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

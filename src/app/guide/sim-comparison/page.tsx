@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
   title: "格安SIMおすすめ6選【2026年最新】徹底比較｜選び方も解説",
@@ -1096,6 +1097,7 @@ export default function SimComparisonPage() {
           ]}
         />
       </section>
+      <GuideRelatedLinks currentSlug="sim-comparison" />
     </div>
   );
 }

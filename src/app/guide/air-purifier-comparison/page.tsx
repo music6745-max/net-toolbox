@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function AirPurifierComparisonPage() {
           { name: "空気清浄機比較", url: `${siteConfig.url}/guide/air-purifier-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="空気清浄機おすすめ5選【2026年最新】徹底比較｜選び方も解説" description="花粉・PM2.5・ハウスダストに悩む方へ。シャープ・ダイキン・パナソニック・ダイソンなど人気5モデルの集塵性能・加湿機能・電気代を徹底比較し、部屋に合う1台を解説します。" url={`${siteConfig.url}/guide/air-purifier-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

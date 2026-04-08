@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "安全なパスワードの作り方｜セキュリティ対策ガイド",
+  title: "安全なパスワードの作り方おすすめ7選【2026年最新】徹底解説｜セキュリティ対策",
   description:
-    "安全なパスワードの作り方を徹底解説。よくある危険なパスワード例、強力なパスワードの条件、パスワードマネージャーの活用法まで、セキュリティ対策の基本を紹介します。",
+    "アカウント乗っ取りや情報漏洩に不安はありませんか。安全なパスワードの作り方・危険な例・1Password等のパスワードマネージャー活用法まで、最新のセキュリティ対策を徹底解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/password-security`,
   },
@@ -49,6 +50,7 @@ export default function PasswordSecurityPage() {
           },
         ]}
       />
+      <ArticleJsonLd headline="安全なパスワードの作り方おすすめ7選【2026年最新】徹底解説｜セキュリティ対策" description="アカウント乗っ取りや情報漏洩に不安はありませんか。安全なパスワードの作り方・危険な例・1Password等のパスワードマネージャー活用法まで、最新のセキュリティ対策を徹底解説します。" url={`${siteConfig.url}/guide/password-security`} />
       <FAQJsonLd items={faqItems} />
 
       {/* Breadcrumb */}
@@ -414,6 +416,7 @@ export default function PasswordSecurityPage() {
           </Link>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="password-security" />
     </div>
   );
 }

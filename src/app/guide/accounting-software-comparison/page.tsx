@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
   title: "確定申告ソフトおすすめ3選【2026年最新】徹底比較｜選び方も解説",
@@ -1113,6 +1114,7 @@ export default function AccountingSoftwareComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="accounting-software-comparison" />
     </div>
   );
 }

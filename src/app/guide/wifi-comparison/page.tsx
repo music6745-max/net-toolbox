@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 function ArticleJsonLd() {
   const data = {
@@ -929,6 +930,7 @@ export default function WifiComparisonPage() {
           ]}
         />
       </section>
+      <GuideRelatedLinks currentSlug="wifi-comparison" />
     </div>
   );
 }

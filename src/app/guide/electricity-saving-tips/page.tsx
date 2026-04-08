@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -57,6 +57,7 @@ export default function ElectricitySavingTipsPage() {
           { name: "電気代節約", url: `${siteConfig.url}/guide/electricity-saving-tips` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】電気代節約完全ガイド｜今日からできる10の方法" description="電気代を月3,000円以上節約する具体策を徹底解説。エアコン・冷蔵庫・待機電力の見直しから電力会社切替まで、家計に効くテクニックをまとめました。" url={`${siteConfig.url}/guide/electricity-saving-tips`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

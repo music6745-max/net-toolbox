@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -102,6 +102,7 @@ export default function OnlineFitnessComparisonPage() {
           { name: "オンラインフィットネス比較", url: `${siteConfig.url}/guide/online-fitness-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】オンラインフィットネス比較おすすめ5選｜LEAN BODY・SOELU・LIVE FITを徹底解説" description="LEAN BODY・SOELU・LIVE FIT・トルチャ・Nintendo Sports Connectのオンラインフィットネスを月額料金・レッスン内容・形式で徹底比較。在宅で続けられる運動習慣の選び方を解説。" url={`${siteConfig.url}/guide/online-fitness-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function TabletComparisonPage() {
           { name: "タブレット比較", url: `${siteConfig.url}/guide/tablet-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="タブレットおすすめ5選【2026年最新】徹底比較｜選び方も解説" description="用途に合うタブレットが選べず迷っている方へ。iPad・Surface・Galaxy Tabなど人気5モデルの性能・価格・SIM対応を徹底比較し、仕事・学習・動画視聴それぞれの最適解を解説します。" url={`${siteConfig.url}/guide/tablet-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

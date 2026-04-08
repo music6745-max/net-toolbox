@@ -77,6 +77,39 @@ export function SoftwareAppJsonLd({
   );
 }
 
+export function ArticleJsonLd({
+  headline,
+  description,
+  url,
+  datePublished = "2026-04-01",
+  dateModified = "2026-04-08",
+}: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+  dateModified?: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    author: { "@type": "Organization", name: "Net Toolbox", url: "https://net-toolbox.jp" },
+    publisher: { "@type": "Organization", name: "Net Toolbox", url: "https://net-toolbox.jp" },
+    datePublished,
+    dateModified,
+    mainEntityOfPage: url,
+    inLanguage: "ja",
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export function FAQJsonLd({ items }: { items: { question: string; answer: string }[] }) {
   const data = {
     "@context": "https://schema.org",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function OnlineCounselingComparisonPage() {
           { name: "オンラインカウンセリング比較", url: `${siteConfig.url}/guide/online-counseling-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】オンラインカウンセリング比較おすすめ5選｜料金・特徴を徹底解説" description="オンラインカウンセリングサービス5社を料金・カウンセラー数・対応形式で徹底比較。在宅で相談できる安心サービスの選び方を解説します。" url={`${siteConfig.url}/guide/online-counseling-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

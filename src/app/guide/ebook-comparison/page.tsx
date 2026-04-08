@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 function ArticleJsonLd() {
   const data = {
@@ -908,6 +909,7 @@ export default function EbookComparisonPage() {
         <AffiliateCTA serviceName="BOOK☆WALKER" url="https://bookwalker.jp/" badge="角川系" description="KADOKAWA直営・ライトノベル充実" color="purple" />
         <AffiliateCTA serviceName="楽天Kobo" url="https://af.moshimo.com/af/c/click?a_id=5465446&p_id=54&pc_id=54&pl_id=616&url=https%3A%2F%2Fbooks.rakuten.co.jp%2F" badge="楽天ポイント" description="楽天ポイントが貯まる・使える電子書籍ストア" color="red" />
       </div>
+      <GuideRelatedLinks currentSlug="ebook-comparison" />
     </div>
   );
 }

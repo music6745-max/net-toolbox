@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "Web開発者向け便利ツール活用ガイド",
+  title: "Web開発者向け便利ツールおすすめ10選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "JSON整形、Base64変換、正規表現テスト、ハッシュ生成など、Web開発で日常的に使うオンラインツールの活用法を詳しく解説。すべて無料・登録不要で使えます。",
+    "コーディングを効率化したい方へ。JSON整形・Base64変換・正規表現テスト・ハッシュ生成など、Web開発で必須のオンラインツールを徹底比較し用途別に最適なツール選びを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/developer-tools-guide`,
   },
@@ -199,6 +200,7 @@ export default function DeveloperToolsGuidePage() {
           },
         ]}
       />
+      <ArticleJsonLd headline="Web開発者向け便利ツールおすすめ10選【2026年最新】徹底比較｜選び方も解説" description="コーディングを効率化したい方へ。JSON整形・Base64変換・正規表現テスト・ハッシュ生成など、Web開発で必須のオンラインツールを徹底比較し用途別に最適なツール選びを解説します。" url={`${siteConfig.url}/guide/developer-tools-guide`} />
       <FAQJsonLd items={faqItems} />
 
       {/* Breadcrumb */}
@@ -389,6 +391,7 @@ export default function DeveloperToolsGuidePage() {
           </Link>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="developer-tools-guide" />
     </div>
   );
 }

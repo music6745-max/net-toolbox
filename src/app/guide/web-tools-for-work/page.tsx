@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "仕事効率化に使える無料Webツール15選",
+  title: "仕事効率化Webツールおすすめ15選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "仕事の効率化に役立つ無料Webツール15個を厳選紹介。テキスト処理、データ変換、計算、デザイン補助まで、登録不要で今すぐ使えるツールをカテゴリ別にまとめました。",
+    "業務時間を短縮したい方へ。テキスト処理・データ変換・計算・デザイン補助まで、登録不要で使える無料Webツール15個を徹底比較し、用途別に最適なツール選びを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/web-tools-for-work`,
   },
@@ -139,6 +140,7 @@ export default function WebToolsForWorkPage() {
           },
         ]}
       />
+      <ArticleJsonLd headline="仕事効率化Webツールおすすめ15選【2026年最新】徹底比較｜選び方も解説" description="業務時間を短縮したい方へ。テキスト処理・データ変換・計算・デザイン補助まで、登録不要で使える無料Webツール15個を徹底比較し、用途別に最適なツール選びを解説します。" url={`${siteConfig.url}/guide/web-tools-for-work`} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-muted mb-6">
@@ -305,6 +307,7 @@ export default function WebToolsForWorkPage() {
           </Link>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="web-tools-for-work" />
     </div>
   );
 }

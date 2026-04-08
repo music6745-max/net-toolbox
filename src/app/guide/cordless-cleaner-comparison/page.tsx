@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -52,6 +52,7 @@ export default function CordlessCleanerComparisonPage() {
           { name: "コードレス掃除機比較", url: `${siteConfig.url}/guide/cordless-cleaner-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="コードレス掃除機おすすめ5選【2026年最新】徹底比較｜選び方も解説" description="重い掃除機にうんざりな方へ。ダイソン・マキタ・シャーク・パナソニックなど人気5モデルの吸引力・バッテリー・重量を徹底比較し、生活スタイル別の最適解を解説します。" url={`${siteConfig.url}/guide/cordless-cleaner-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

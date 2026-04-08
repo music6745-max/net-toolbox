@@ -3,11 +3,12 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "【2026年】レンタルサーバーおすすめ比較5選｜初心者向け",
+  title: "レンタルサーバーおすすめ5選【2026年最新】徹底比較｜選び方も解説",
   description:
-    "2026年最新のレンタルサーバーを徹底比較。ConoHa WING・エックスサーバー・ロリポップなど初心者向けにおすすめ5社の料金・速度・WordPress対応を解説します。",
+    "WordPressブログを始めたい方へ。ConoHa WING・エックスサーバー・ロリポップ・mixhost・カラフルボックスを料金/速度/サポートで徹底比較し最適なサーバー選びを解説します。",
   keywords: [
     "レンタルサーバー",
     "おすすめ",
@@ -603,6 +604,7 @@ export default function BestRentalServersPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="best-rental-servers" />
     </div>
   );
 }

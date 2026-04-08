@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "リモートワークに必須の無料ツール10選｜在宅勤務を効率化",
+  title: "リモートワークツールおすすめ10選【2026年最新】徹底比較｜在宅勤務効率化",
   description:
-    "リモートワーク・在宅勤務に役立つ無料Webツール10選を紹介。ポモドーロタイマー・世界時計・タイムゾーン変換・パスワード生成・QRコードなど、登録不要ですぐに使えるツールを厳選。",
+    "在宅勤務の効率を上げたい方へ。ポモドーロタイマー・世界時計・タイムゾーン変換・パスワード生成・QRコード等の無料ツールを徹底比較し、最適なリモートワーク環境を解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/remote-work-tools`,
   },
@@ -126,6 +127,7 @@ export default function RemoteWorkToolsPage() {
           },
         ]}
       />
+      <ArticleJsonLd headline="リモートワークツールおすすめ10選【2026年最新】徹底比較｜在宅勤務効率化" description="在宅勤務の効率を上げたい方へ。ポモドーロタイマー・世界時計・タイムゾーン変換・パスワード生成・QRコード等の無料ツールを徹底比較し、最適なリモートワーク環境を解説します。" url={`${siteConfig.url}/guide/remote-work-tools`} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-muted mb-6">
@@ -310,6 +312,7 @@ export default function RemoteWorkToolsPage() {
           </Link>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="remote-work-tools" />
     </div>
   );
 }

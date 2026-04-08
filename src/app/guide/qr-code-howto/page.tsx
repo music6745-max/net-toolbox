@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ArticleJsonLd } from "@/components/JsonLd";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "【完全ガイド】QRコードの作り方と活用術",
+  title: "QRコードの作り方おすすめ5選【2026年最新】徹底解説｜無料ツール活用術",
   description:
-    "QRコードの作成方法を初心者向けに徹底解説。URL・テキスト・WiFi・名刺など用途別の活用術や、無料ツールを使った簡単な作り方を紹介します。",
+    "名刺やイベントでQRコードを使いたい方へ。URL・テキスト・WiFi・名刺など用途別の作成方法と、無料QRコード作成ツールを徹底比較し最適なツール選びを解説します。",
   alternates: {
     canonical: `${siteConfig.url}/guide/qr-code-howto`,
   },
@@ -64,6 +65,7 @@ export default function QrCodeHowtoPage() {
           },
         ]}
       />
+      <ArticleJsonLd headline="QRコードの作り方おすすめ5選【2026年最新】徹底解説｜無料ツール活用術" description="名刺やイベントでQRコードを使いたい方へ。URL・テキスト・WiFi・名刺など用途別の作成方法と、無料QRコード作成ツールを徹底比較し最適なツール選びを解説します。" url={`${siteConfig.url}/guide/qr-code-howto`} />
 
       {/* Breadcrumb */}
       <nav className="text-sm text-muted mb-6">
@@ -358,6 +360,7 @@ export default function QrCodeHowtoPage() {
           </Link>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="qr-code-howto" />
     </div>
   );
 }

@@ -4,11 +4,12 @@ import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 import { AffiliateCTA } from "@/components/AffiliateCTA";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "副業に必要なWebツール完全ガイド｜無料で始める",
+  title: "副業向けWebツールおすすめ10選【2026年最新】徹底比較｜無料で始める",
   description:
-    "副業を始めるのに必要なWebツールを完全網羅。ブログ開設のレンタルサーバー、確定申告ソフト、VPN、画像作成、文章作成まで。無料で使えるツールも多数紹介。",
+    "副業を始めたい方へ。ブログ開設のレンタルサーバー・確定申告ソフト・VPN・画像作成・文章作成ツールを徹底比較し、無料から使える副業必須ツールの選び方を解説します。",
   keywords: [
     "副業",
     "Webツール",
@@ -523,6 +524,7 @@ export default function SideBusinessToolsPage() {
           ※ 一部のサービス紹介にはアフィリエイトリンクを含みます。
         </p>
       </section>
+      <GuideRelatedLinks currentSlug="side-business-tools" />
     </div>
   );
 }

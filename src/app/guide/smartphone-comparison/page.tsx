@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
-import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
@@ -107,6 +107,7 @@ export default function SmartphoneComparisonPage() {
           { name: "スマホ機種比較", url: `${siteConfig.url}/guide/smartphone-comparison` },
         ]}
       />
+      <ArticleJsonLd headline="【2026年最新】スマホ機種比較おすすめ5選｜iPhone・Androidを徹底解説" description="iPhone・Galaxy・Pixel・Xperia・AQUOSの最新スマホ機種を価格・カメラ・バッテリーで徹底比較。ライフスタイル別おすすめも紹介。" url={`${siteConfig.url}/guide/smartphone-comparison`} />
       <FAQJsonLd items={faqItems.map((i) => ({ question: i.question, answer: i.answer }))} />
 
       <nav className="text-sm text-muted mb-6">

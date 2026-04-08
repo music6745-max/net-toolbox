@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 function ArticleJsonLd() {
   const data = {
@@ -958,6 +959,7 @@ export default function StreamingComparisonPage() {
           </a>
         </div>
       </section>
+      <GuideRelatedLinks currentSlug="streaming-comparison" />
     </div>
   );
 }
