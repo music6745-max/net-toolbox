@@ -67,8 +67,7 @@ export default function Page() {
         <h2 className="text-lg font-bold mb-3">海外旅行の準備チェック</h2>
         <p className="text-sm text-muted mb-4">現金と同時に、保険や予約サイト選びも忘れずに。</p>
         <div className="flex flex-wrap gap-3">
-          <Link href="/guide/travel-insurance-comparison" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">海外旅行保険比較</Link>
-          <Link href="/guide/travel-booking-comparison" className="inline-flex items-center px-4 py-2 border border-card-border rounded-lg text-sm font-medium hover:bg-background">旅行予約サイト比較</Link>
+          <Link href="/guide/overseas-travel-guide" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">海外旅行ガイド</Link>
         </div>
       </section>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>渡航先・滞在日数・スタイル・カード決済比率を入力すると、持参すべき現金額を日本円と現地通貨で試算します。為替レートは概算値のため実際の両替レートとは異なります。</p></div></section>

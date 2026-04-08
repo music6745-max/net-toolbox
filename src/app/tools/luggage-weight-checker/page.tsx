@@ -53,8 +53,7 @@ export default function Page() {
         <h2 className="text-lg font-bold mb-3">海外旅行前のチェック</h2>
         <p className="text-sm text-muted mb-4">荷物と一緒に、保険や予約サイトの準備も忘れずに。</p>
         <div className="flex flex-wrap gap-3">
-          <Link href="/guide/travel-insurance-comparison" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">海外旅行保険比較</Link>
-          <Link href="/guide/travel-booking-comparison" className="inline-flex items-center px-4 py-2 border border-card-border rounded-lg text-sm font-medium hover:bg-background">旅行予約サイト比較</Link>
+          <Link href="/guide/overseas-travel-guide" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">海外旅行ガイド</Link>
         </div>
       </section>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>航空会社・路線を選び、預け入れ荷物と機内持込荷物の重量を入力すると、超過分と追加料金の目安を表示します。制限値は2024年時点の標準運賃クラスを参考にしています。</p></div></section>

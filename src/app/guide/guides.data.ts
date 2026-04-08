@@ -1204,6 +1204,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "🧾",
   },
+  {
+    slug: "domestic-travel-guide",
+    title: "【2026年最新】国内旅行プラン完全ガイド｜予約サイト比較と費用節約術",
+    description:
+      "じゃらん・JTB・一休・Yahoo!トラベルなど主要予約サイトを徹底比較。国内旅行のプランニング・費用節約・予約のコツを完全ガイド。",
+    category: "実践ガイド",
+    readTime: "15分",
+    icon: "🗾",
+  },
+  {
+    slug: "overseas-travel-guide",
+    title: "【2026年最新】海外旅行準備完全ガイド｜パスポート・保険・予約サイト活用術",
+    description:
+      "海外旅行の準備をステップ別に完全解説。パスポート・ビザ・海外旅行保険・航空券・宿泊予約・両替・通信手段まで網羅。",
+    category: "実践ガイド",
+    readTime: "15分",
+    icon: "✈️",
+  },
+  {
+    slug: "ryokan-comparison",
+    title: "【2026年最新】旅館・ホテル予約サイト徹底比較6選｜じゃらん・JTB・一休ほか",
+    description:
+      "じゃらん・JTB・一休.com・Yahoo!トラベル・楽天トラベル・Booking.comを料金・ポイント・プランで徹底比較し用途別に解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🏨",
+  },
+  {
+    slug: "business-trip-comparison",
+    title: "【2026年最新】出張に便利な予約サイト比較｜領収書・法人契約・ポイント還元",
+    description:
+      "出張族必見。主要予約サイトの領収書発行・インボイス対応・ポイント還元を徹底比較し経費精算の効率化も解説。",
+    category: "比較",
+    readTime: "13分",
+    icon: "💼",
+  },
+  {
+    slug: "solo-travel-guide",
+    title: "【2026年最新】一人旅向け予約サービス比較｜じゃらん・JTB・一休ほか",
+    description:
+      "一人旅に特化した宿探し。シングル対応・安全面・料金で予約サイトを徹底比較。ソロトラベラー向け完全ガイド。",
+    category: "比較",
+    readTime: "13分",
+    icon: "🎒",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1369,6 +1414,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "card-loan-low-rate": "金融",
   "business-card-platinum": "仕事・スキル",
   "accountant-cloud-comparison": "仕事・スキル",
+
+  // 旅行系（追加）
+  "domestic-travel-guide": "生活",
+  "overseas-travel-guide": "生活",
+  "ryokan-comparison": "生活",
+  "business-trip-comparison": "仕事・スキル",
+  "solo-travel-guide": "エンタメ",
 };
 
 export function genreOf(slug: string): Genre {

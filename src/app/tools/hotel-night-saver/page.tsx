@@ -52,8 +52,7 @@ export default function Page() {
         <h2 className="text-lg font-bold mb-3">宿泊先選びの参考に</h2>
         <p className="text-sm text-muted mb-4">旅館・ホテルのお得な選び方はこちらの比較記事もチェック。</p>
         <div className="flex flex-wrap gap-3">
-          <Link href="/guide/travel-booking-comparison" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">旅行予約サイト比較</Link>
-          <Link href="/guide/travel-insurance-comparison" className="inline-flex items-center px-4 py-2 border border-card-border rounded-lg text-sm font-medium hover:bg-background">旅行保険比較</Link>
+          <Link href="/guide/ryokan-comparison" className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:opacity-90">旅館比較ガイド</Link>
         </div>
       </section>
       <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>1泊の定価・泊数・各種割引率を入力すると、早期割引 → 連泊割引 → 平日割引の順で計算した割引後合計と節約額を表示します。</p></div></section>
