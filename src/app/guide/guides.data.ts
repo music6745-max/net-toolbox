@@ -1249,6 +1249,51 @@ export const guides: Guide[] = [
     readTime: "13分",
     icon: "🎒",
   },
+  {
+    slug: "recommended-books-it",
+    title: "【2026年最新】IT・プログラミング学習おすすめ書籍10選｜初心者〜中級者向け",
+    description:
+      "プログラミング未経験からWebエンジニアを目指す人向けに、IT・プログラミング学習の定番書籍を厳選。Python・JavaScript・アルゴリズム・設計・インフラまで網羅。",
+    category: "仕事・スキル",
+    readTime: "15分",
+    icon: "📘",
+  },
+  {
+    slug: "recommended-books-finance",
+    title: "【2026年最新】投資・お金の勉強おすすめ書籍10選｜初心者〜中級者向け",
+    description:
+      "新NISA・iDeCo・インデックス投資・FIRE・家計管理まで、お金の勉強を始める人向けに定番書籍を厳選。読む順番付きで解説。",
+    category: "副業・税金",
+    readTime: "15分",
+    icon: "📗",
+  },
+  {
+    slug: "recommended-books-business",
+    title: "【2026年最新】ビジネス書おすすめ10選｜ビジネスパーソン必読の定番",
+    description:
+      "若手〜中堅ビジネスパーソン向けに、マネジメント・戦略・思考法・マーケティングの定番ビジネス書を厳選。キャリア段階別おすすめ付き。",
+    category: "仕事・スキル",
+    readTime: "13分",
+    icon: "📕",
+  },
+  {
+    slug: "recommended-books-self-development",
+    title: "【2026年最新】自己啓発おすすめ書籍10選｜人生と習慣を変える名著",
+    description:
+      "習慣・マインドセット・モチベーション・目標達成の定番自己啓発書を厳選。読む順番と実践のコツも紹介します。",
+    category: "実践ガイド",
+    readTime: "13分",
+    icon: "📙",
+  },
+  {
+    slug: "recommended-books-health",
+    title: "【2026年最新】健康・ダイエットおすすめ書籍10選｜科学的エビデンス重視",
+    description:
+      "ダイエット・食事・運動・睡眠・メンタルまで、科学的根拠に基づいた健康書籍を厳選。一生使える健康知識が身につきます。",
+    category: "健康・美容",
+    readTime: "13分",
+    icon: "📓",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1421,6 +1466,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "ryokan-comparison": "生活",
   "business-trip-comparison": "仕事・スキル",
   "solo-travel-guide": "エンタメ",
+
+  // 書籍紹介ガイド
+  "recommended-books-it": "仕事・スキル",
+  "recommended-books-finance": "金融",
+  "recommended-books-business": "仕事・スキル",
+  "recommended-books-self-development": "エンタメ",
+  "recommended-books-health": "健康・美容",
 };
 
 export function genreOf(slug: string): Genre {
