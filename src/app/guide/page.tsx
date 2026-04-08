@@ -604,6 +604,46 @@ const guides = [
     readTime: "15分",
     icon: "💍",
   },
+  {
+    slug: "auto-lease-comparison",
+    title: "【2026年最新】カーリース比較おすすめ5選｜頭金0円・月額料金・契約期間を徹底解説",
+    description: "ニコノリ・KINTO・定額カルモくん・コスモMyカーリース・SOMPOで乗ーるなど主要カーリース5社の月額料金・契約年数・走行距離制限・残価設定を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚗",
+  },
+  {
+    slug: "mobile-router-comparison",
+    title: "【2026年最新】モバイルWi-Fi・ポケットWi-Fi比較おすすめ5選｜料金・速度・データ容量を徹底解説",
+    description: "WiMAX・楽天モバイル・どこよりもWiFi・MUGEN WiFi・ZEUS WiFiなど主要モバイルWi-Fi5社を料金・速度・データ容量・縛りで徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "📡",
+  },
+  {
+    slug: "home-security-comparison",
+    title: "【2026年最新】ホームセキュリティ比較おすすめ5選｜SECOM・ALSOK・料金・補償を徹底解説",
+    description: "SECOM・ALSOK・関電SOS・CSP・Panasonicなど主要ホームセキュリティ5社の月額料金・初期費用・駆けつけ時間・補償内容を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🔐",
+  },
+  {
+    slug: "funeral-service-comparison",
+    title: "【2026年最新】葬儀・お葬式の事前相談比較おすすめ5選｜料金・プラン・口コミを徹底解説",
+    description: "小さなお葬式・よりそうお葬式・イオンのお葬式・公益社・お花のはなぞのなど主要葬儀サービス5社のプラン料金・対応エリア・追加費用を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🕊️",
+  },
+  {
+    slug: "tutoring-comparison",
+    title: "【2026年最新】オンライン家庭教師・塾比較おすすめ5選｜料金・指導科目・合格実績を徹底解説",
+    description: "オンライン家庭教師ピース・家庭教師のトライ・スタディサプリ・東進オンライン学校・進研ゼミなど主要オンライン学習サービス5社を徹底比較。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🎓",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
