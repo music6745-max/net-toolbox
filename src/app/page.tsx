@@ -46,6 +46,70 @@ export default function Home() {
 
       <ToolSearch />
 
+      {/* Popular tools CTA */}
+      <section className="mb-10 mt-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold">🔥 人気のツール</h2>
+          <Link href="/tools" className="text-sm text-primary hover:underline">
+            全{tools.length}ツールを見る →
+          </Link>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {[
+            "qr-code",
+            "character-count",
+            "password-generator",
+            "json-formatter",
+            "color-picker",
+            "bmi-calculator",
+            "base64",
+            "image-compressor",
+            "markdown-preview",
+            "regex-tester",
+          ]
+            .map((slug) => tools.find((t) => t.slug === slug))
+            .filter((t): t is NonNullable<typeof t> => Boolean(t))
+            .map((tool) => (
+              <Link
+                key={tool.slug}
+                href={`/tools/${tool.slug}`}
+                className="inline-flex items-center gap-1.5 bg-card-bg border border-card-border rounded-full px-4 py-2 text-sm hover:border-primary/40 hover:text-primary transition-all"
+              >
+                <span>{tool.icon}</span>
+                <span>{tool.name}</span>
+              </Link>
+            ))}
+        </div>
+      </section>
+
+      {/* Popular guides CTA */}
+      <section className="mb-10">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold">📊 人気の比較ガイド</h2>
+          <Link href="/guide" className="text-sm text-primary hover:underline">
+            すべての比較ガイドを見る →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+          {[
+            { slug: "rental-server-comparison", label: "レンタルサーバー", icon: "🖥️" },
+            { slug: "sim-comparison", label: "格安SIM", icon: "📱" },
+            { slug: "credit-card-comparison", label: "クレジットカード", icon: "💳" },
+            { slug: "vpn-comparison", label: "VPN", icon: "🛡️" },
+            { slug: "nisa-comparison", label: "NISA口座", icon: "💰" },
+          ].map((g) => (
+            <Link
+              key={g.slug}
+              href={`/guide/${g.slug}`}
+              className="block bg-card-bg border border-card-border rounded-lg p-3 text-center hover:border-primary/40 hover:shadow-sm transition-all"
+            >
+              <div className="text-2xl mb-1">{g.icon}</div>
+              <div className="text-xs font-medium">{g.label}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Category navigation */}
       <nav className="flex flex-wrap justify-center gap-2 mb-10">
         {categories.map((cat) => (
