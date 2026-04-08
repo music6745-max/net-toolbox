@@ -755,6 +755,11 @@ export const tools: Tool[] = [
   { slug: "hotel-night-saver", name: "ホテル料金節約計算", description: "連泊割引・早期予約割引・平日割引を適用したホテル宿泊料金と節約額を一発計算。", icon: "🏨", category: "日常ツール" },
   { slug: "currency-cash-needed", name: "旅行用現金額計算", description: "渡航先・滞在日数・旅行スタイル・カード決済比率から持参すべき現金額を日本円と現地通貨で試算。", icon: "💴", category: "日常ツール" },
   { slug: "luggage-weight-checker", name: "荷物重量計算ツール", description: "ANA/JAL/LCC各社の荷物制限を基準に預け入れ・機内持込の超過料金を予測。", icon: "🧳", category: "日常ツール" },
+  { slug: "isbn-lookup", name: "ISBN書籍情報検索", description: "ISBN番号から書籍タイトル・著者・出版社・表紙画像をGoogle Books APIで検索。読書管理や書誌調査に。", icon: "📚", category: "日常ツール" },
+  { slug: "typing-speed-test", name: "英文タイピング速度テスト（WPM）", description: "英文テキストでタイピング速度をWPM（1分あたり単語数）で測定。30秒/60秒モード対応、正確率も算出。", icon: "⌨️", category: "日常ツール" },
+  { slug: "focus-timer-extended", name: "集中タイマー（ポモドーロ拡張版）", description: "4セッションごとに長休憩を挟むポモドーロ拡張タイマー。累計集中時間・セッション数の統計表示付き。", icon: "⏱️", category: "日常ツール" },
+  { slug: "memory-card-game", name: "神経衰弱メモリーゲーム", description: "4×4 / 6×6から選べるカードマッチングゲーム。ターン数・タイムを計測してスコアを競える脳トレ。", icon: "🃏", category: "日常ツール" },
+  { slug: "random-question-picker", name: "ランダム質問ピッカー", description: "チームミーティング用アイスブレイクや学習質問をランダムに提示。自作質問の追加・カテゴリ選択可能。", icon: "❓", category: "日常ツール" },
 ];
 
 export const siteConfig = {
