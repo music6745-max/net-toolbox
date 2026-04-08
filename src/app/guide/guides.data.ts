@@ -862,6 +862,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "💴",
   },
+  {
+    slug: "cashing-comparison",
+    title: "【2026年最新】カードローン・キャッシング比較おすすめ5選｜金利・審査・即日融資を徹底解説",
+    description:
+      "プロミス・アコム・SMBCモビット・アイフル・楽天銀行スーパーローンを金利・審査スピード・無利息期間で徹底比較。即日融資・在籍確認なしの選び方まで解説します。",
+    category: "金融",
+    readTime: "15分",
+    icon: "💳",
+  },
+  {
+    slug: "debt-consolidation-comparison",
+    title: "【2026年最新】おまとめローン比較おすすめ5選｜金利・返済額を一本化で大幅削減",
+    description:
+      "東京スター銀行・住信SBI・三井住友銀行・横浜銀行・アイフルおまとめMAXのおまとめローンを金利・限度額・審査基準で徹底比較。",
+    category: "金融",
+    readTime: "15分",
+    icon: "💰",
+  },
+  {
+    slug: "used-car-comparison",
+    title: "【2026年最新】中古車購入サービス比較おすすめ5選｜ガリバー・ネクステージ・カーセンサー徹底比較",
+    description:
+      "ガリバー・ネクステージ・カーセンサー・グーネット・USS中古車サイトの料金体系・在庫数・保証内容を徹底比較。中古車購入で失敗しないコツも解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚗",
+  },
+  {
+    slug: "car-rental-comparison",
+    title: "【2026年最新】レンタカー・カーシェア比較おすすめ5選｜料金・予約しやすさを徹底解説",
+    description:
+      "ニッポン・トヨタレンタカー・タイムズカー・カレコ・dカーシェアを料金・ステーション数・予約方法で徹底比較。短時間・長距離それぞれの最適解を解説。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚙",
+  },
+  {
+    slug: "travel-insurance-comparison",
+    title: "【2026年最新】海外旅行保険比較おすすめ5選｜AIG・損保ジャパン・たびほ徹底解説",
+    description:
+      "AIG損保・損保ジャパン・東京海上・たびほ・エポスカード付帯保険の補償内容・保険料・キャッシュレス対応を徹底比較。",
+    category: "保険",
+    readTime: "15分",
+    icon: "✈️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -981,6 +1026,11 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "iphone-vs-android": "通信",
   "paypay-vs-rakutenpay": "金融",
   "tax-saving-tips": "金融",
+  "cashing-comparison": "金融",
+  "debt-consolidation-comparison": "金融",
+  "used-car-comparison": "生活",
+  "car-rental-comparison": "生活",
+  "travel-insurance-comparison": "金融",
 };
 
 export function genreOf(slug: string): Genre {
