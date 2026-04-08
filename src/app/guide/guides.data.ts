@@ -1114,6 +1114,51 @@ export const guides: Guide[] = [
     readTime: "15分",
     icon: "📝",
   },
+  {
+    slug: "medical-checkup-comparison",
+    title: "【2026年最新】人間ドック・健康診断比較おすすめ5選｜料金・検査項目・受診方法を徹底解説",
+    description:
+      "人間ドック・脳ドック・PET検査・基本健診など主要コースを料金・検査項目・所要時間で徹底比較。会社員から自営業まで、目的別の賢い選び方と受診タイミングを解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🩺",
+  },
+  {
+    slug: "dental-insurance-comparison",
+    title: "【2026年最新】歯科保険比較おすすめ5選｜保障内容・保険料・選び方を徹底解説",
+    description:
+      "インプラント・矯正・セラミック治療まで保障される歯科保険を保険料・給付金・加入条件で徹底比較。公的保険でカバーされない自由診療の備え方を解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🦷",
+  },
+  {
+    slug: "sport-club-comparison",
+    title: "【2026年最新】スポーツクラブ・スイミングスクール比較おすすめ5選｜料金・設備・プログラムを徹底解説",
+    description:
+      "コナミ・セントラル・ティップネス・ルネサンス・メガロスなど総合スポーツクラブを料金・プール・プログラムで徹底比較。子ども向けスイミングスクールの選び方も解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🏊",
+  },
+  {
+    slug: "e-bike-comparison",
+    title: "【2026年最新】電動アシスト自転車・E-bike比較おすすめ5選｜価格・航続距離・用途別を徹底解説",
+    description:
+      "パナソニック・ブリヂストン・ヤマハ・トレック・BESVなど電動アシスト自転車とE-bikeを価格・バッテリー・航続距離で徹底比較。通勤・子育て・スポーツ用途別の選び方を解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "🚲",
+  },
+  {
+    slug: "travel-app-comparison",
+    title: "【2026年最新】旅行予約アプリ徹底比較おすすめ5選｜国内・海外・ホテル・航空券を解説",
+    description:
+      "じゃらん・楽天トラベル・Booking.com・Agoda・エクスペディアの旅行予約アプリを料金・品揃え・ポイント還元で徹底比較。国内外の最安予約のコツとキャンセル規定も解説します。",
+    category: "比較",
+    readTime: "15分",
+    icon: "✈️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1265,6 +1310,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "nft-marketplace-comparison": "金融",
   "dapps-wallet-comparison": "金融",
   "side-business-fee-comparison": "仕事・スキル",
+
+  // 健康・趣味系ガイド
+  "medical-checkup-comparison": "健康・美容",
+  "dental-insurance-comparison": "金融",
+  "sport-club-comparison": "健康・美容",
+  "e-bike-comparison": "生活",
+  "travel-app-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
