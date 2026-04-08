@@ -568,6 +568,13 @@ export default function BestVpnServicesPage() {
               highlight: "最速通信速度",
               price: "月899円〜",
             },
+            {
+              name: "Glocal VPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3YW1YQ+50C8+5YJRM",
+              highlight: "海外から日本の動画視聴に特化",
+              price: "月額制",
+              badge: "動画特化",
+            },
           ]}
         />
       </section>

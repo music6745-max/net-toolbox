@@ -857,6 +857,24 @@ export default function StreamingComparisonPage() {
         </div>
       </section>
 
+      {/* Overseas viewing CTA - Glocal VPN */}
+      <section className="bg-amber-50 dark:bg-amber-900/40 border border-amber-200 dark:border-amber-800 rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">
+          海外から日本の動画配信を観たい方へ
+        </h2>
+        <p className="text-sm text-slate-700 dark:text-slate-200 mb-3">
+          Netflix・U-NEXT・Hulu などの日本の動画サービスは、海外からアクセスすると地域制限で視聴できないことがあります。動画視聴に特化した「Glocal VPN」なら、海外赴任・出張・旅行先からでも日本の動画コンテンツをスマートに楽しめます。
+        </p>
+        <a
+          href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3YW1YQ+50C8+5YJRM"
+          target="_blank"
+          rel="noopener noreferrer nofollow sponsored"
+          className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors"
+        >
+          Glocal VPN公式サイトを見る
+        </a>
+      </section>
+
       {/* Related Tool CTA */}
       <section className="bg-blue-50 dark:bg-blue-900/40 border border-blue-200 dark:border-blue-800 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold mb-2">

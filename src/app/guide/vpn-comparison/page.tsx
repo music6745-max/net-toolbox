@@ -971,6 +971,13 @@ export default function VpnComparisonPage() {
               price: "月1,100円",
             },
             {
+              name: "Glocal VPN",
+              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3YW1YQ+50C8+5YJRM",
+              highlight: "海外から日本の動画視聴に特化",
+              price: "月額制",
+              badge: "動画特化",
+            },
+            {
               name: "スイカVPN",
               url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3VBGC2+4R3G+61JSI",
               highlight: "50カ国以上のサーバー",
