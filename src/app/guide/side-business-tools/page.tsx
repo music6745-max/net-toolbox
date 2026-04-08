@@ -524,6 +524,11 @@ export default function SideBusinessToolsPage() {
           ※ 一部のサービス紹介にはアフィリエイトリンクを含みます。
         </p>
       </section>
+      <section className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold mb-2">副業がバレるかシミュレーション</h2>
+        <p className="text-sm text-muted mb-3">副業の所得額から確定申告の要否と住民税への影響を判定します。</p>
+        <Link href="/tools/side-business-tax-calculator" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">副業バレない収入シミュレーターを使う</Link>
+      </section>
       <GuideRelatedLinks currentSlug="side-business-tools" />
     </div>
   );

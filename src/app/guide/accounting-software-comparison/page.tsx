@@ -1114,6 +1114,11 @@ export default function AccountingSoftwareComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <section className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold mb-2">税額シミュレーター</h2>
+        <p className="text-sm text-muted mb-3">フリーランスの所得税・住民税・国保・年金をまとめて試算できます。</p>
+        <Link href="/tools/freelance-tax-calculator" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">フリーランス税金計算ツールを使う</Link>
+      </section>
       <GuideRelatedLinks currentSlug="accounting-software-comparison" />
     </div>
   );

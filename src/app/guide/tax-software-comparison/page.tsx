@@ -606,6 +606,14 @@ export default function TaxSoftwareComparisonPage() {
           ※ 本記事はアフィリエイトプログラムに参加しています。
         </p>
       </section>
+      <section className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-8">
+        <h2 className="text-lg font-bold mb-2">税額を今すぐシミュレーション</h2>
+        <p className="text-sm text-muted mb-3">フリーランス税金計算・節税チェックリストで、あなたの節税ポテンシャルを可視化しましょう。</p>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/tools/freelance-tax-calculator" className="inline-block bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">フリーランス税金計算ツールを使う</Link>
+          <Link href="/tools/smart-tax-saving-checker" className="inline-block bg-primary text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">節税チェックリストを使う</Link>
+        </div>
+      </section>
       <GuideRelatedLinks currentSlug="tax-software-comparison" />
     </div>
   );

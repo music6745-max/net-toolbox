@@ -162,6 +162,12 @@ export default function ElectricitySavingTipsPage() {
         />
       </section>
 
+      <section className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-10">
+        <h2 className="text-lg font-bold mb-2">電気代節約シミュレーター</h2>
+        <p className="text-sm text-muted mb-3">家電別の使用時間を入力して、節約できる電気代を試算できます。</p>
+        <Link href="/tools/electricity-saving-calculator" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">電気代節約シミュレーターを使う</Link>
+      </section>
+
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

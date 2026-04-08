@@ -440,6 +440,12 @@ export default function InvestmentAppComparisonPage() {
         </Link>
       </section>
 
+      <section className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-xl p-6 mb-10">
+        <h2 className="text-lg font-bold mb-2">積立シミュレーター</h2>
+        <p className="text-sm text-muted mb-3">毎月の積立額と想定利回りから、将来資産をグラフで可視化します。</p>
+        <Link href="/tools/investment-fund-simulator" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">積立投資シミュレーターを使う</Link>
+      </section>
+
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

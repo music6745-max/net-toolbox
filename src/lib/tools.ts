@@ -715,6 +715,11 @@ export const tools: Tool[] = [
   { slug: "education-cost-simulator", name: "教育費シミュレーター", description: "幼稚園から大学まで公立／私立別に累積教育費の目安を試算。", icon: "🎓", category: "日常ツール" },
   { slug: "retirement-savings-calculator", name: "老後資金シミュレーター", description: "現在年齢・目標額・想定利回りから必要な月額積立を自動計算。", icon: "👵", category: "日常ツール" },
   { slug: "insurance-need-calculator", name: "必要保障額計算ツール", description: "家族構成・収入・住宅ローンから生命保険の必要保障額を算出。", icon: "🛟", category: "日常ツール" },
+  { slug: "freelance-tax-calculator", name: "フリーランス税金計算", description: "年収・経費から所得税・住民税・国民健康保険・国民年金の概算と手取りを試算。", icon: "💼", category: "日常ツール" },
+  { slug: "side-business-tax-calculator", name: "副業バレない収入シミュレーター", description: "副業所得から確定申告の要否・住民税の追加額・バレ対策を判定。", icon: "🤫", category: "日常ツール" },
+  { slug: "investment-fund-simulator", name: "積立投資シミュレーター", description: "毎月積立額・利回り・期間から複利運用後の将来資産をグラフ表示で試算。", icon: "📈", category: "日常ツール" },
+  { slug: "smart-tax-saving-checker", name: "節税チェックリスト", description: "ふるさと納税・iDeCoなど所得控除を網羅チェック。節税ポテンシャルを可視化。", icon: "✅", category: "日常ツール" },
+  { slug: "electricity-saving-calculator", name: "電気代節約シミュレーター", description: "家電別の使用時間から月間電気代と年間節約可能額を算出。", icon: "💡", category: "日常ツール" },
 ];
 
 export const siteConfig = {
