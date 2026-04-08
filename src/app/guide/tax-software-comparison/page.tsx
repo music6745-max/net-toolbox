@@ -234,6 +234,17 @@ export default function TaxSoftwareComparisonPage() {
         </ul>
       </div>
 
+      <section className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <Link href="/tools/tax-bracket-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">所得税ブラケット計算ツールを使う</div>
+          <p className="text-xs text-muted">年収から課税所得・適用税率・所得税・住民税の概算を表示します →</p>
+        </Link>
+        <Link href="/tools/inheritance-tax-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">相続税シミュレーターを使う</div>
+          <p className="text-xs text-muted">資産総額・法定相続人数から相続税の概算を試算できます →</p>
+        </Link>
+      </section>
+
       {/* Section 1 - Who needs tax filing */}
       <section id="who-needs" className="mb-10">
         <h2 className="text-2xl font-bold mb-4">

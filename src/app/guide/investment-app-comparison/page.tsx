@@ -269,6 +269,13 @@ export default function InvestmentAppComparisonPage() {
         </ul>
       </div>
 
+      <section className="mb-10">
+        <Link href="/tools/ideco-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">iDeCoシミュレーターを使う</div>
+          <p className="text-xs text-muted">毎月の積立額・年収・職業区分から、年間節税額と将来資産を試算できます →</p>
+        </Link>
+      </section>
+
       <section id="why-invest" className="mb-10">
         <h2 className="text-2xl font-bold mb-4">1. 投資アプリを使うメリット</h2>
         <p className="text-muted leading-relaxed mb-4">スマホ完結の投資アプリで、誰でも気軽に資産運用を始められる時代になりました。</p>

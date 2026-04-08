@@ -71,6 +71,17 @@ export default function NisaComparisonPage() {
         </div>
       </div>
 
+      <section className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <Link href="/tools/ideco-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">iDeCoシミュレーターを使う</div>
+          <p className="text-xs text-muted">毎月の積立額・年収・職業区分から、年間節税額と将来資産を試算できます →</p>
+        </Link>
+        <Link href="/tools/company-savings-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">企業型DCシミュレーターを使う</div>
+          <p className="text-xs text-muted">会社拠出＋マッチング拠出による将来資産と節税額を試算できます →</p>
+        </Link>
+      </section>
+
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">NISA口座選びの基本</h2>
         <p className="text-muted leading-relaxed mb-4">

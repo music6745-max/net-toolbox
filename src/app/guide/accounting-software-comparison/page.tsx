@@ -335,6 +335,13 @@ export default function AccountingSoftwareComparisonPage() {
         </ul>
       </div>
 
+      <section className="mb-10">
+        <Link href="/tools/tax-bracket-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">所得税ブラケット計算ツールを使う</div>
+          <p className="text-xs text-muted">年収から課税所得・適用税率・所得税・住民税の概算を表示します →</p>
+        </Link>
+      </section>
+
       {/* Section 1 - Why Accounting Software */}
       <section id="why-accounting" className="mb-10">
         <h2 className="text-2xl font-bold mb-4">

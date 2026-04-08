@@ -269,6 +269,13 @@ export default function FurusatoTaxComparisonPage() {
         </ul>
       </div>
 
+      <section className="mb-10">
+        <Link href="/tools/furusato-tax-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">ふるさと納税限度額シミュレーターを使う</div>
+          <p className="text-xs text-muted">年収・家族構成を入力するだけで、自己負担2,000円で済む寄付上限額の目安を試算できます →</p>
+        </Link>
+      </section>
+
       <section id="why-furusato" className="mb-10">
         <h2 className="text-2xl font-bold mb-4">1. ふるさと納税のメリット</h2>
         <p className="text-muted leading-relaxed mb-4">ふるさと納税は、実質負担2,000円で全国の特産品を受け取れるお得な制度です。</p>

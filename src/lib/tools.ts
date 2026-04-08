@@ -725,6 +725,11 @@ export const tools: Tool[] = [
   { slug: "age-in-detail-calculator", name: "年齢詳細計算（和暦・干支・星座）", description: "生年月日から満年齢・数え年・和暦・干支・星座・誕生日までの日数を表示。", icon: "🎂", category: "日常ツール" },
   { slug: "password-strength-tester", name: "パスワード強度テスター", description: "リアルタイムでパスワードの強度・エントロピー・推定解析時間を評価。", icon: "🛡️", category: "セキュリティ" },
   { slug: "url-shortener-info", name: "URL短縮サービス比較", description: "Bitly・TinyURL・is.gd等の特徴を比較。各公式サービスへワンクリックで誘導。", icon: "🔗", category: "開発ツール" },
+  { slug: "furusato-tax-simulator", name: "ふるさと納税限度額シミュレーター", description: "年収・家族構成から自己負担2,000円で済む寄付上限額の目安を試算。", icon: "🎁", category: "日常ツール" },
+  { slug: "ideco-simulator", name: "iDeCoシミュレーター", description: "毎月積立額・年収・職業区分から、年間節税額と将来資産を試算。", icon: "🏦", category: "日常ツール" },
+  { slug: "inheritance-tax-simulator", name: "相続税シミュレーター", description: "資産総額・法定相続人数から相続税の基礎控除額と概算税額を試算。", icon: "📜", category: "日常ツール" },
+  { slug: "company-savings-simulator", name: "企業型DCシミュレーター", description: "会社拠出＋マッチング拠出による確定拠出年金の将来資産と節税額を試算。", icon: "🏢", category: "日常ツール" },
+  { slug: "tax-bracket-calculator", name: "所得税ブラケット計算", description: "年収から課税所得・適用税率・所得税・住民税の概算を表示。", icon: "📊", category: "日常ツール" },
 ];
 
 export const siteConfig = {

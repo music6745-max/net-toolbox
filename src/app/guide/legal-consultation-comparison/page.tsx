@@ -72,6 +72,13 @@ export default function LegalConsultationComparisonPage() {
       </div>
 
       <section className="mb-10">
+        <Link href="/tools/inheritance-tax-simulator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">相続税シミュレーターを使う</div>
+          <p className="text-xs text-muted">資産総額・法定相続人数から相続税の基礎控除額と概算税額を試算できます →</p>
+        </Link>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">オンライン法律相談の基本</h2>
         <p className="text-muted leading-relaxed mb-4">
           オンライン法律相談は、ビデオ通話・電話・チャットで弁護士とやり取りできるサービスです。2020年以降急速に普及し、現在では大手事務所から個人事務所まで幅広く導入されています。料金は「初回30分無料」「1回5,000円」「月額330円で相談し放題」などパターンが複数あり、相談内容と頻度で選び分けるのがコツ。着手金が発生する本格的な依頼は別途見積りになりますが、相談段階では大半が数千円以内で完結します。弁護士には守秘義務があるため、誰にも話せない悩みも安心して相談できます。
