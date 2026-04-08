@@ -1393,6 +1393,51 @@ export const guides: Guide[] = [
     readTime: "10分",
     icon: "💗",
   },
+  {
+    slug: "home-builder-comparison",
+    title: "【2026年最新】注文住宅ハウスメーカー比較5選｜価格・性能・保証を徹底解説",
+    description:
+      "積水ハウス・住友林業・一条工務店・タマホーム・アイフルホームの注文住宅ハウスメーカー5社を価格・性能・保証で徹底比較。",
+    category: "生活",
+    readTime: "15分",
+    icon: "🏡",
+  },
+  {
+    slug: "real-estate-sale-comparison",
+    title: "【2026年最新】不動産売却一括査定サイト比較5選｜高く売るコツも解説",
+    description:
+      "すまいValue・HOME4U・イエウール・LIFULL HOME'S・SUUMO売却査定の不動産売却一括査定サイト5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🏘️",
+  },
+  {
+    slug: "renovation-comparison",
+    title: "【2026年最新】リフォーム会社一括見積もりサイト比較5選｜失敗しない選び方も解説",
+    description:
+      "ホームプロ・タウンライフリフォーム・リショップナビ・SUUMOリフォーム・LIFULLリフォームの5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🔨",
+  },
+  {
+    slug: "fire-insurance-comparison",
+    title: "【2026年最新】火災保険一括見積もり比較5選｜安く・補償充実の選び方を解説",
+    description:
+      "保険スクエアbang!・住宅本舗・i保険・インズウェブ・SBIホールディングスの火災保険一括見積もりサイトを徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "🔥",
+  },
+  {
+    slug: "education-insurance-comparison",
+    title: "【2026年最新】学資保険比較5選｜返戻率・保障内容を徹底解説",
+    description:
+      "ソニー生命・明治安田生命・フコク生命・日本生命・第一生命の学資保険5社を返戻率・保障内容で徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "🎓",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1587,6 +1632,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "whitening-clinic-comparison": "健康・美容",
   "diet-program-comparison": "健康・美容",
   "online-pill-comparison": "健康・美容",
+
+  // 住宅・保険系
+  "home-builder-comparison": "生活",
+  "real-estate-sale-comparison": "生活",
+  "renovation-comparison": "生活",
+  "fire-insurance-comparison": "金融",
+  "education-insurance-comparison": "金融",
 };
 
 export function genreOf(slug: string): Genre {
