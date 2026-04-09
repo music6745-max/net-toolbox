@@ -707,6 +707,9 @@ export const tools: Tool[] = [
   { slug: "wedding-budget-split", name: "結婚式 自己負担額計算", description: "総費用・ご祝儀・親援助から自己負担額を計算。", icon: "💒", category: "日常ツール" },
   { slug: "savings-goal", name: "貯金目標シミュレーター", description: "目標額と期間から毎月・毎日の貯金額を計算。", icon: "🎯", category: "日常ツール" },
   { slug: "cooking-unit-converter", name: "料理の計量単位変換", description: "カップ・大さじ・小さじをml・グラムに変換。", icon: "🍳", category: "日常ツール" },
+  { slug: "calorie-meal-calc", name: "食事カロリー合計計算", description: "食べたものを入力して1食分の合計カロリーを計算。", icon: "🍽️", category: "日常ツール" },
+  { slug: "screen-break-timer", name: "画面休憩タイマー", description: "PC作業中の眼精疲労を防ぐ休憩タイマー。", icon: "👁️", category: "日常ツール" },
+  { slug: "commute-cost-calc", name: "通勤費・定期券お得度計算", description: "片道運賃と出勤日数から通勤費を計算。定期券と比較。", icon: "🚃", category: "日常ツール" },
 ];
 
 export const siteConfig = {
