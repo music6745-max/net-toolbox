@@ -713,6 +713,7 @@ export const tools: Tool[] = [
   { slug: "birthday-zodiac", name: "誕生日から星座・干支・年齢", description: "生年月日から星座・干支・現在の年齢を表示。", icon: "⭐", category: "日常ツール" },
   { slug: "love-compatibility", name: "名前で相性診断", description: "2人の名前から相性スコアを算出。エンタメ。", icon: "💕", category: "日常ツール" },
   { slug: "wifi-speed-guide", name: "WiFi速度で何ができるかチェック", description: "回線速度から各用途で快適に使えるかを判定。", icon: "📶", category: "日常ツール" },
+  { slug: "lucky-number", name: "ラッキーナンバー・抽選番号生成", description: "重複なしのランダム番号を生成。宝くじ・ビンゴに。", icon: "🎲", category: "日常ツール" },
 ];
 
 export const siteConfig = {
