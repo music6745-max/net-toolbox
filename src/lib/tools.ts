@@ -705,6 +705,8 @@ export const tools: Tool[] = [
   { slug: "subscription-cost-calc", name: "サブスク月額合計計算", description: "契約中のサブスクの月額・年間合計を可視化。見直しに。", icon: "📋", category: "日常ツール" },
   { slug: "baby-growth-tracker", name: "赤ちゃん成長チェック", description: "月齢・体重・身長をWHO基準の平均値と比較。", icon: "👶", category: "日常ツール" },
   { slug: "wedding-budget-split", name: "結婚式 自己負担額計算", description: "総費用・ご祝儀・親援助から自己負担額を計算。", icon: "💒", category: "日常ツール" },
+  { slug: "savings-goal", name: "貯金目標シミュレーター", description: "目標額と期間から毎月・毎日の貯金額を計算。", icon: "🎯", category: "日常ツール" },
+  { slug: "cooking-unit-converter", name: "料理の計量単位変換", description: "カップ・大さじ・小さじをml・グラムに変換。", icon: "🍳", category: "日常ツール" },
 ];
 
 export const siteConfig = {
