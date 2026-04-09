@@ -1771,6 +1771,24 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🕵️",
   },
+  {
+    slug: "side-business-ranking-2026",
+    title: "【2026年最新】おすすめ副業ランキングTOP10｜初心者でも月5万円を目指せる",
+    description:
+      "2026年最新のおすすめ副業TOP10をランキング形式で紹介。初心者でも始めやすく、月5〜10万円を目指せる副業を厳選。",
+    category: "副業・税金",
+    readTime: "15分",
+    icon: "🏆",
+  },
+  {
+    slug: "saving-app-ranking-2026",
+    title: "【2026年最新】家計簿・節約アプリおすすめランキングTOP10",
+    description:
+      "2026年最新の家計簿・節約アプリTOP10をランキング形式で紹介。マネーフォワード・Zaim・Moneytree等を徹底比較。",
+    category: "金融",
+    readTime: "10分",
+    icon: "💰",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
