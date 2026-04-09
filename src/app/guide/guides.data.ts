@@ -1867,6 +1867,30 @@ export const guides: Guide[] = [
     readTime: "10分",
     icon: "🐾",
   },
+  {
+    slug: "job-agent-ranking-2026",
+    title: "【2026年最新】転職エージェントおすすめランキングTOP10｜20代/30代/ハイクラス",
+    description: "リクルートエージェント・doda・ビズリーチ等、20代・30代・ハイクラス向けに最適なサービスを徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "💼",
+  },
+  {
+    slug: "beauty-clinic-ranking-2026",
+    title: "【2026年最新】美容クリニックおすすめランキングTOP10｜脱毛・美肌・痩身",
+    description: "湘南美容クリニック・TCB・リゼクリニック等、脱毛・美肌・美容整形で人気のクリニックを徹底比較。",
+    category: "健康・美容",
+    readTime: "12分",
+    icon: "💄",
+  },
+  {
+    slug: "matching-app-ranking-2026",
+    title: "【2026年最新】マッチングアプリおすすめランキングTOP10｜真剣・婚活・恋活",
+    description: "Pairs・with・Omiai・マリッシュ等、目的別に最適なマッチングアプリを徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "💕",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
