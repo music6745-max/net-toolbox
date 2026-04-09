@@ -678,6 +678,17 @@ export const tools: Tool[] = [
   { slug: "shoe-size-converter", name: "靴サイズ変換（JP/US/EU/UK）", description: "日本サイズから米国・欧州・英国の靴サイズに即変換。", icon: "👟", category: "日常ツール" },
   { slug: "water-intake-calculator", name: "1日の水分摂取量計算（活動量別）", description: "体重と活動量から1日に必要な水分量を計算。", icon: "🚰", category: "日常ツール" },
   { slug: "paint-amount-calculator", name: "塗料必要量計算（DIY）", description: "壁の幅・高さ・塗り回数から必要な塗料量(L)を計算。", icon: "🎨", category: "日常ツール" },
+  { slug: "hourly-wage-calculator", name: "年収・時給換算計算", description: "年収から時給・日給・月給を逆算。転職時の年収交渉に。", icon: "⏰", category: "日常ツール" },
+  { slug: "nisa-simulator", name: "新NISA積立シミュレーター", description: "毎月の積立額・期間・利回りから将来の資産額を試算。", icon: "📈", category: "日常ツール" },
+  { slug: "credit-card-points-calculator", name: "クレカポイント還元計算", description: "月の利用額と還元率から獲得ポイントを計算。", icon: "💳", category: "日常ツール" },
+  { slug: "basal-metabolic-rate", name: "基礎代謝(BMR)・消費カロリー計算", description: "Harris-Benedict式で基礎代謝量と1日の消費カロリーを算出。", icon: "🔥", category: "日常ツール" },
+  { slug: "monthly-gas-cost", name: "月間ガソリン代計算", description: "月間走行距離・燃費・単価からガソリン代を計算。", icon: "⛽", category: "日常ツール" },
+  { slug: "alcohol-calculator", name: "アルコール分解時間計算", description: "飲酒量・体重から推定血中濃度と分解時間を計算。", icon: "🍺", category: "日常ツール" },
+  { slug: "pregnancy-week-calculator", name: "妊娠週数・出産予定日計算", description: "最終月経日から現在の妊娠週数と予定日を計算。", icon: "🤰", category: "日常ツール" },
+  { slug: "housing-loan-simulator", name: "住宅ローン返済シミュレーター", description: "借入額・金利・期間から毎月返済額と総返済額を計算。", icon: "🏠", category: "日常ツール" },
+  { slug: "shipping-cost-comparator", name: "宅配便料金比較", description: "サイズ・重量からヤマト・佐川・ゆうパックの料金を比較。", icon: "📦", category: "日常ツール" },
+  { slug: "dog-cat-age", name: "犬猫の年齢換算", description: "ペットの年齢を人間の年齢に換算。小型犬・大型犬・猫別。", icon: "🐕", category: "日常ツール" },
+  { slug: "furusato-limit", name: "ふるさと納税 上限額の目安計算", description: "年収と家族構成から、自己負担2,000円で済む上限額を計算。", icon: "🎁", category: "日常ツール" },
 ];
 
 export const siteConfig = {
