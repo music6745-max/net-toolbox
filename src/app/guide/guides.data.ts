@@ -1843,6 +1843,30 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🗣️",
   },
+  {
+    slug: "wifi-ranking-2026",
+    title: "【2026年最新】ポケットWiFi・クラウドWiFiおすすめランキングTOP10",
+    description: "月額料金・速度・データ容量で厳選。楽天モバイル・WiMAX・MUGEN WiFi等を徹底比較。",
+    category: "通信",
+    readTime: "12分",
+    icon: "📶",
+  },
+  {
+    slug: "insurance-ranking-2026",
+    title: "【2026年最新】生命保険おすすめランキングTOP10｜死亡保障・医療保障で厳選",
+    description: "死亡保障・医療保障・終身・定期の人気生命保険10商品を徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "🛡️",
+  },
+  {
+    slug: "pet-insurance-ranking-2026",
+    title: "【2026年最新】ペット保険おすすめランキングTOP10｜犬猫の医療費に備える",
+    description: "アニコム・アイペット・FPC等、人気ペット保険10商品を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "🐾",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
