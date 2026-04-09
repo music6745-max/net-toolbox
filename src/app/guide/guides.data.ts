@@ -1816,6 +1816,33 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "💻",
   },
+  {
+    slug: "rental-server-ranking-2026",
+    title: "【2026年最新】レンタルサーバーおすすめランキングTOP10｜WordPress/速度/料金",
+    description:
+      "2026年最新のレンタルサーバーランキングTOP10。ConoHa WING・エックスサーバー等を徹底比較。",
+    category: "通信",
+    readTime: "12分",
+    icon: "🖥️",
+  },
+  {
+    slug: "vpn-ranking-2026",
+    title: "【2026年最新】VPNおすすめランキングTOP10｜安全性・速度・料金で厳選",
+    description:
+      "2026年最新のVPNおすすめランキングTOP10。NordVPN・ExpressVPN・Surfshark等を徹底比較。",
+    category: "通信",
+    readTime: "12分",
+    icon: "🛡️",
+  },
+  {
+    slug: "english-school-ranking-2026",
+    title: "【2026年最新】オンライン英会話おすすめランキングTOP10",
+    description:
+      "2026年最新のオンライン英会話ランキングTOP10。ネイティブキャンプ・DMM英会話・Bizmates等を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🗣️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
