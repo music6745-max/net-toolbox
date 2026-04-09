@@ -5,9 +5,9 @@ import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd"
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "文字化け修復完全ガイド｜原因・文字コード判定・直し方【2026年最新】",
+  title: "【無料】文字化け変換・復元ツール＆原因と直し方ガイド【2026年最新】",
   description:
-    "文字化けの原因と直し方を徹底解説。UTF-8・Shift_JIS・EUC-JPの違い、文字コード自動判定、リアルタイム修復、メール/CSV/ZIPの文字化け対策まで無料ツール付きで紹介。",
+    "文字化けの変換・復元がワンクリックで可能。UTF-8・Shift_JIS・EUC-JPの文字コード自動判定、メール/CSV/ZIPの文字化けを無料で修復できるツール＆原因と直し方を徹底解説。",
   alternates: {
     canonical: `${siteConfig.url}/guide/mojibake-fix-guide`,
   },

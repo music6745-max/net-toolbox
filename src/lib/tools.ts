@@ -364,7 +364,7 @@ export const tools: Tool[] = [
   { slug: "speed-calculator", name: "速度計算", description: "距離・時間・速度を相互計算。", icon: "🚗", category: "日常ツール" },
   { slug: "electricity-calculator", name: "電気料金計算", description: "電化製品の月間・年間電気代を計算。", icon: "💡", category: "日常ツール" },
   { slug: "calorie-calculator", name: "基礎代謝計算", description: "年齢・性別・体格から1日の消費カロリーを計算。", icon: "🔥", category: "日常ツール" },
-  { slug: "fuel-calculator", name: "燃費計算", description: "走行距離と給油量から燃費を計算。", icon: "⛽", category: "日常ツール" },
+  { slug: "fuel-calculator", name: "燃費計算ツール【無料】", description: "走行距離と給油量から燃費(km/L)を計算。ガソリン代の目安も算出できる無料燃費計算サイト。", icon: "⛽", category: "日常ツール" },
   { slug: "area-calculator", name: "面積計算", description: "円・長方形・三角形・台形の面積を計算。", icon: "📐", category: "日常ツール" },
   { slug: "volume-calculator", name: "体積計算", description: "直方体・球・円柱・円錐の体積を計算。", icon: "📦", category: "日常ツール" },
   { slug: "line-number", name: "行番号付与", description: "テキストの各行に行番号を追加。", icon: "🔢", category: "テキスト" },
