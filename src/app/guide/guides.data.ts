@@ -1663,6 +1663,42 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🏠",
   },
+  {
+    slug: "bridal-dress-comparison",
+    title: "【2026年最新】ウエディングドレスレンタル比較5選｜価格・デザイン・サイズ展開を徹底解説",
+    description:
+      "ハツコエンドウ・キヤノットマリアージュ・タカミブライダル・ノバレーゼ・ザ・トリート・ドレッシングのドレスサロン5社を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "👰",
+  },
+  {
+    slug: "baby-photo-comparison",
+    title: "【2026年最新】ニューボーンフォト・出張撮影比較5選｜料金・撮影スタイルを徹底解説",
+    description:
+      "fotowa・OurPhoto・LOVEGRAPH・スタジオアリス・スタジオマリオのベビーフォト5社を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "👶",
+  },
+  {
+    slug: "preschool-comparison",
+    title: "【2026年最新】幼児教材・通信教育比較5選｜こどもちゃれんじ・ポピー・Z会・スマイルゼミ・ワンダーボックス",
+    description:
+      "0〜6歳向け幼児通信教育5社を徹底比較。こどもちゃれんじ・幼児ポピー・Z会幼児・スマイルゼミ幼児・ワンダーボックスの料金・特徴を解説。",
+    category: "仕事・スキル",
+    readTime: "10分",
+    icon: "🧒",
+  },
+  {
+    slug: "drinking-water-delivery-comparison",
+    title: "【2026年最新】ウォーターサーバー定額制比較5選｜赤ちゃんに優しい天然水・RO水",
+    description:
+      "プレミアムウォーター・コスモウォーター・アクアクララ・フレシャス・サントリー天然水のウォーターサーバー5社を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "💧",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1899,6 +1935,12 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "mutual-fund-comparison": "金融",
   "kids-lesson-comparison": "仕事・スキル",
   "rental-house-comparison": "生活",
+
+  // ドレス・ベビー写真・幼児教材・WSサーバー
+  "bridal-dress-comparison": "生活",
+  "baby-photo-comparison": "生活",
+  "preschool-comparison": "仕事・スキル",
+  "drinking-water-delivery-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
