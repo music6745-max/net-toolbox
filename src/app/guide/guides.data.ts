@@ -1618,6 +1618,51 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🍱",
   },
+  {
+    slug: "security-camera-comparison",
+    title: "【2026年最新】防犯カメラ・スマートホームカメラ比較5選",
+    description:
+      "Tapo・Google Nest Cam・Amazon Blink・SwitchBot・Aqaraの家庭用防犯カメラ5社を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "📹",
+  },
+  {
+    slug: "water-filter-comparison",
+    title: "【2026年最新】浄水器おすすめ比較5選｜据置・蛇口直結・ポット型を徹底解説",
+    description:
+      "クリンスイ・ブリタ・トレビーノ・パナソニック・Amway eSpringの浄水器5社を徹底比較。",
+    category: "生活",
+    readTime: "10分",
+    icon: "🚰",
+  },
+  {
+    slug: "mutual-fund-comparison",
+    title: "【2026年最新】投資信託おすすめ比較5選｜信託報酬・運用実績・人気銘柄を徹底解説",
+    description:
+      "eMAXIS Slim・SBI・楽天・ニッセイ・iFreeの投資信託を信託報酬・運用実績・人気銘柄で徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "📊",
+  },
+  {
+    slug: "kids-lesson-comparison",
+    title: "【2026年最新】子供向けオンライン習い事比較5選｜英会話・プログラミング・学習を徹底解説",
+    description:
+      "Cambly Kids・QQ Kids・QUREO・Tech Kids School・スマイルゼミの子供向けオンライン習い事5社を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "👦",
+  },
+  {
+    slug: "rental-house-comparison",
+    title: "【2026年最新】賃貸物件サイト比較5選｜SUUMO/HOME'S/at home/CHINTAI/エイブル",
+    description:
+      "SUUMO・LIFULL HOME'S・at home・CHINTAI・エイブルの賃貸物件サイト5社を物件数・検索性・特典で徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🏠",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1847,6 +1892,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "bike-buyback-comparison": "生活",
   "photo-studio-comparison": "生活",
   "meal-delivery-senior-comparison": "生活",
+
+  // 防犯・浄水器・投信・子供習い事・賃貸
+  "security-camera-comparison": "生活",
+  "water-filter-comparison": "生活",
+  "mutual-fund-comparison": "金融",
+  "kids-lesson-comparison": "仕事・スキル",
+  "rental-house-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
