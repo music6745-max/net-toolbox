@@ -696,6 +696,9 @@ export const tools: Tool[] = [
   { slug: "deposit-interest-calc", name: "定期預金・複利計算", description: "元本・金利・期間から満期額を計算。税引後額も表示。", icon: "🏦", category: "日常ツール" },
   { slug: "date-countdown", name: "日付カウントダウン", description: "指定した日までの残日数/経過日数を計算。", icon: "📆", category: "日常ツール" },
   { slug: "heart-lung-age", name: "健康年齢簡易診断", description: "生活習慣から体年齢を推定。健康チェックに。", icon: "❤️‍🩹", category: "日常ツール" },
+  { slug: "take-home-pay", name: "月給の手取り額計算", description: "額面月給から保険料・税金を差し引いた手取り額を概算。", icon: "💸", category: "日常ツール" },
+  { slug: "unemployment-benefit", name: "失業手当給付額シミュレーター", description: "離職時の給与・勤続年数から失業手当の給付額・日数を概算。", icon: "📋", category: "日常ツール" },
+  { slug: "home-buying-budget", name: "住宅購入 予算算出", description: "年収と返済負担率から借入可能額を逆算。", icon: "🏡", category: "日常ツール" },
 ];
 
 export const siteConfig = {
