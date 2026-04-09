@@ -1699,6 +1699,42 @@ export const guides: Guide[] = [
     readTime: "10分",
     icon: "💧",
   },
+  {
+    slug: "hairloss-women-comparison",
+    title: "【2026年最新】女性の薄毛治療クリニック比較5選｜FAGA・びまん性脱毛症対策",
+    description:
+      "クリニックフォア・湘南美容クリニック・東京ビューティークリニック・銀座総合美容クリニック・AGAスキンクリニックレディースの女性薄毛5院を徹底比較。",
+    category: "健康・美容",
+    readTime: "12分",
+    icon: "💇",
+  },
+  {
+    slug: "hellowork-comparison",
+    title: "【2026年最新】公務員試験対策スクール比較5選｜独学・通信・通学を徹底解説",
+    description:
+      "クレアール・LEC・TAC・伊藤塾・大原の公務員試験対策スクール5社を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🏛️",
+  },
+  {
+    slug: "bookkeeping-school-comparison",
+    title: "【2026年最新】簿記講座おすすめ比較5選｜2級・3級対策をオンラインで",
+    description:
+      "クレアール・スタディング・フォーサイト・ユーキャン・大原の簿記講座5社を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "10分",
+    icon: "📒",
+  },
+  {
+    slug: "bookkeeping-2-comparison",
+    title: "【2026年最新】MBA・ビジネススクール比較5選｜国内・オンラインで学ぶ経営学",
+    description:
+      "グロービス・KBS・WBS・ABS・BBT大学院のMBA・ビジネススクール5社を徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "🎓",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1941,6 +1977,12 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "baby-photo-comparison": "生活",
   "preschool-comparison": "仕事・スキル",
   "drinking-water-delivery-comparison": "生活",
+
+  // 女性薄毛・公務員・簿記・MBA
+  "hairloss-women-comparison": "健康・美容",
+  "hellowork-comparison": "仕事・スキル",
+  "bookkeeping-school-comparison": "仕事・スキル",
+  "bookkeeping-2-comparison": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {
