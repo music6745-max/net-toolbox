@@ -693,6 +693,9 @@ export const tools: Tool[] = [
   { slug: "minimum-wage-checker", name: "都道府県別 最低賃金チェッカー", description: "全国47都道府県の最低賃金を即確認。", icon: "💴", category: "日常ツール" },
   { slug: "overtime-calculator", name: "残業代・深夜・休日労働計算", description: "時給から残業代(1.25倍)・深夜手当・休日手当を計算。", icon: "🌙", category: "日常ツール" },
   { slug: "appliance-electricity-cost", name: "家電の電気代計算", description: "消費電力・使用時間から電気代を計算。節約の検討に。", icon: "💡", category: "日常ツール" },
+  { slug: "deposit-interest-calc", name: "定期預金・複利計算", description: "元本・金利・期間から満期額を計算。税引後額も表示。", icon: "🏦", category: "日常ツール" },
+  { slug: "date-countdown", name: "日付カウントダウン", description: "指定した日までの残日数/経過日数を計算。", icon: "📆", category: "日常ツール" },
+  { slug: "heart-lung-age", name: "健康年齢簡易診断", description: "生活習慣から体年齢を推定。健康チェックに。", icon: "❤️‍🩹", category: "日常ツール" },
 ];
 
 export const siteConfig = {
