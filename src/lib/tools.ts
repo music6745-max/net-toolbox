@@ -670,6 +670,14 @@ export const tools: Tool[] = [
   { slug: "salary-comparison", name: "業界別年収比較ツール", description: "自分の年収を12業界の平均・上位25%・下位25%と比較。転職時の年収交渉の参考に。", icon: "💰", category: "日常ツール" },
   { slug: "commute-time-budget", name: "通勤時間予算計算", description: "通勤時間を時給換算し、長期的な機会損失を可視化。転職・引越しの判断材料に。", icon: "🚃", category: "日常ツール" },
   { slug: "work-from-home-setup-cost", name: "在宅勤務環境構築費用シミュレーター", description: "デスク・チェア・モニターなど在宅勤務に必要な環境構築費用を品質レベル別に試算。", icon: "🏠", category: "日常ツール" },
+  { slug: "running-pace-calculator", name: "ランニングペース計算", description: "距離とタイムからkmあたりのペースと時速を算出。マラソントレーニングに。", icon: "🏃", category: "日常ツール" },
+  { slug: "heart-rate-zone", name: "心拍ゾーン計算（カルボーネン法）", description: "年齢と安静時心拍からトレーニング心拍ゾーン5段階を算出。", icon: "❤️", category: "日常ツール" },
+  { slug: "sleep-cycle-calculator", name: "睡眠サイクル計算", description: "起床時刻から逆算して90分サイクルに合わせた最適な就寝時刻を提示。", icon: "😴", category: "日常ツール" },
+  { slug: "body-fat-calculator", name: "体脂肪率計算（米海軍法）", description: "腹囲・首周り・身長から体脂肪率を推定。性別別評価付き。", icon: "💪", category: "日常ツール" },
+  { slug: "coffee-ratio", name: "コーヒー抽出比率計算", description: "お湯の量と抽出比率からコーヒー豆の必要量を計算。", icon: "☕", category: "日常ツール" },
+  { slug: "shoe-size-converter", name: "靴サイズ変換（JP/US/EU/UK）", description: "日本サイズから米国・欧州・英国の靴サイズに即変換。", icon: "👟", category: "日常ツール" },
+  { slug: "water-intake-calculator", name: "1日の水分摂取量計算（活動量別）", description: "体重と活動量から1日に必要な水分量を計算。", icon: "🚰", category: "日常ツール" },
+  { slug: "paint-amount-calculator", name: "塗料必要量計算（DIY）", description: "壁の幅・高さ・塗り回数から必要な塗料量(L)を計算。", icon: "🎨", category: "日常ツール" },
 ];
 
 export const siteConfig = {
