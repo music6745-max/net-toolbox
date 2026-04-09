@@ -699,6 +699,10 @@ export const tools: Tool[] = [
   { slug: "take-home-pay", name: "月給の手取り額計算", description: "額面月給から保険料・税金を差し引いた手取り額を概算。", icon: "💸", category: "日常ツール" },
   { slug: "unemployment-benefit", name: "失業手当給付額シミュレーター", description: "離職時の給与・勤続年数から失業手当の給付額・日数を概算。", icon: "📋", category: "日常ツール" },
   { slug: "home-buying-budget", name: "住宅購入 予算算出", description: "年収と返済負担率から借入可能額を逆算。", icon: "🏡", category: "日常ツール" },
+  { slug: "annual-income-from-hourly", name: "時給から年収・月収計算", description: "パート・アルバイトの時給から年収・月収を計算。扶養内目安も表示。", icon: "💰", category: "日常ツール" },
+  { slug: "tax-withholding-checker", name: "所得税・住民税 概算計算", description: "年収と控除額から所得税・住民税・実効税率を概算。", icon: "🧾", category: "日常ツール" },
+  { slug: "electricity-saving-calc", name: "電気代節約シミュレーション", description: "現在の電気代と節約率から月・年・5年の節約額を計算。", icon: "💡", category: "日常ツール" },
+  { slug: "subscription-cost-calc", name: "サブスク月額合計計算", description: "契約中のサブスクの月額・年間合計を可視化。見直しに。", icon: "📋", category: "日常ツール" },
 ];
 
 export const siteConfig = {
