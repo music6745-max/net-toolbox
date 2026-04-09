@@ -689,6 +689,10 @@ export const tools: Tool[] = [
   { slug: "shipping-cost-comparator", name: "宅配便料金比較", description: "サイズ・重量からヤマト・佐川・ゆうパックの料金を比較。", icon: "📦", category: "日常ツール" },
   { slug: "dog-cat-age", name: "犬猫の年齢換算", description: "ペットの年齢を人間の年齢に換算。小型犬・大型犬・猫別。", icon: "🐕", category: "日常ツール" },
   { slug: "furusato-limit", name: "ふるさと納税 上限額の目安計算", description: "年収と家族構成から、自己負担2,000円で済む上限額を計算。", icon: "🎁", category: "日常ツール" },
+  { slug: "bmi-ideal-weight", name: "理想体重・標準体重計算", description: "身長から理想体重(BMI22)と標準範囲(BMI18.5〜25)を計算。", icon: "⚖️", category: "日常ツール" },
+  { slug: "minimum-wage-checker", name: "都道府県別 最低賃金チェッカー", description: "全国47都道府県の最低賃金を即確認。", icon: "💴", category: "日常ツール" },
+  { slug: "overtime-calculator", name: "残業代・深夜・休日労働計算", description: "時給から残業代(1.25倍)・深夜手当・休日手当を計算。", icon: "🌙", category: "日常ツール" },
+  { slug: "appliance-electricity-cost", name: "家電の電気代計算", description: "消費電力・使用時間から電気代を計算。節約の検討に。", icon: "💡", category: "日常ツール" },
 ];
 
 export const siteConfig = {
