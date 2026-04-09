@@ -82,6 +82,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 2026年おすすめランキング */}
+      <section className="mb-10">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-bold">🏆 2026年おすすめランキング</h2>
+          <Link href="/guide" className="text-sm text-primary hover:underline">
+            すべて見る →
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          {[
+            { slug: "side-business-ranking-2026", label: "副業おすすめTOP10", icon: "🏆", desc: "月5万円を目指す副業" },
+            { slug: "credit-card-ranking-2026", label: "クレジットカードTOP10", icon: "💳", desc: "還元率で厳選" },
+            { slug: "online-broker-ranking-2026", label: "ネット証券TOP10", icon: "📊", desc: "新NISA対応" },
+            { slug: "programming-school-ranking-2026", label: "プログラミングスクールTOP10", icon: "💻", desc: "転職保証付き" },
+            { slug: "saving-app-ranking-2026", label: "家計簿アプリTOP10", icon: "💰", desc: "無料で使える定番" },
+          ].map((g) => (
+            <Link
+              key={g.slug}
+              href={`/guide/${g.slug}`}
+              className="block bg-gradient-to-br from-primary/5 to-primary/0 border border-primary/20 rounded-lg p-4 hover:border-primary/40 hover:shadow-sm transition-all"
+            >
+              <div className="flex items-start gap-2">
+                <span className="text-2xl">{g.icon}</span>
+                <div>
+                  <div className="text-sm font-bold">{g.label}</div>
+                  <div className="text-xs text-muted mt-0.5">{g.desc}</div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Popular guides CTA */}
       <section className="mb-10">
         <div className="flex items-center justify-between mb-4">
