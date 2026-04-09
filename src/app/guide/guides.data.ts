@@ -1573,6 +1573,51 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🏢",
   },
+  {
+    slug: "mens-hair-removal-comparison",
+    title: "【2026年最新】メンズ医療脱毛クリニック比較5選｜料金・効果・通いやすさを徹底解説",
+    description:
+      "ゴリラクリニック・湘南美容クリニック・メンズリゼ・メンズエミナル・ドクターコバのメンズ医療脱毛5院を徹底比較。",
+    category: "健康・美容",
+    readTime: "12分",
+    icon: "🪒",
+  },
+  {
+    slug: "solar-battery-comparison",
+    title: "【2026年最新】太陽光・蓄電池一括見積もりサイト比較5選",
+    description:
+      "タイナビ・グリエネ・ソーラーパートナーズ・エコ発・タイナビ蓄電池の一括見積サイト5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "☀️",
+  },
+  {
+    slug: "bike-buyback-comparison",
+    title: "【2026年最新】バイク買取一括査定比較5選｜高く売るコツも徹底解説",
+    description:
+      "バイクワン・KATIX・バイク王・MOTOBANK・バイクブロスのバイク買取一括査定5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🏍️",
+  },
+  {
+    slug: "photo-studio-comparison",
+    title: "【2026年最新】フォトスタジオ比較5選｜七五三・お宮参り・成人式の写真スタジオ徹底解説",
+    description:
+      "スタジオアリス・スタジオマリオ・スタジオキャラット・ライフスタジオ・PHOTORENTのフォトスタジオ5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "📷",
+  },
+  {
+    slug: "meal-delivery-senior-comparison",
+    title: "【2026年最新】高齢者向け宅配弁当比較5選｜栄養バランス・料金・配送エリアを徹底解説",
+    description:
+      "ワタミの宅食・ヨシケイ・ナッシュ・食宅便・まごころ弁当の高齢者向け宅配弁当5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🍱",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1795,6 +1840,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "car-purchase-buyback-comparison": "生活",
   "bridal-jewelry-comparison": "生活",
   "used-property-investment-comparison": "金融",
+
+  // メンズ脱毛・太陽光・バイク・フォト・宅配弁当
+  "mens-hair-removal-comparison": "健康・美容",
+  "solar-battery-comparison": "生活",
+  "bike-buyback-comparison": "生活",
+  "photo-studio-comparison": "生活",
+  "meal-delivery-senior-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
