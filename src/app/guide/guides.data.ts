@@ -1735,6 +1735,42 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "🎓",
   },
+  {
+    slug: "smartphone-buyback-comparison",
+    title: "【2026年最新】スマホ買取サービス比較5選｜iPhone高額査定のコツ",
+    description:
+      "ゲオモバイル・じゃんぱら・ブックオフ・iPhone買取専門店・モバックスのスマホ買取5社を徹底比較。",
+    category: "通信",
+    readTime: "10分",
+    icon: "📱",
+  },
+  {
+    slug: "used-smartphone-comparison",
+    title: "【2026年最新】中古スマホ購入サイト比較5選｜iPhone・Android安心ショップ",
+    description:
+      "イオシス・じゃんぱら・ゲオモバイル・にこスマ・楽天市場の中古スマホ購入サイト5社を徹底比較。",
+    category: "通信",
+    readTime: "10分",
+    icon: "📲",
+  },
+  {
+    slug: "bank-account-comparison",
+    title: "【2026年最新】ネット銀行口座開設キャンペーン比較5選｜金利・手数料・特典を徹底解説",
+    description:
+      "住信SBIネット銀行・楽天銀行・PayPay銀行・auじぶん銀行・ソニー銀行の5社を徹底比較。",
+    category: "金融",
+    readTime: "10分",
+    icon: "🏦",
+  },
+  {
+    slug: "detective-comparison",
+    title: "【2026年最新】探偵事務所比較5選｜浮気調査・身辺調査の料金を徹底解説",
+    description:
+      "原一探偵事務所・HAL探偵社・MR探偵社・さくら幸子探偵事務所・総合探偵社TS事務所の探偵5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🕵️",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1983,6 +2019,12 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "hellowork-comparison": "仕事・スキル",
   "bookkeeping-school-comparison": "仕事・スキル",
   "bookkeeping-2-comparison": "仕事・スキル",
+
+  // スマホ買取・中古スマホ・銀行・探偵
+  "smartphone-buyback-comparison": "通信",
+  "used-smartphone-comparison": "通信",
+  "bank-account-comparison": "金融",
+  "detective-comparison": "生活",
 };
 
 export function genreOf(slug: string): Genre {
