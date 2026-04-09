@@ -703,6 +703,8 @@ export const tools: Tool[] = [
   { slug: "tax-withholding-checker", name: "所得税・住民税 概算計算", description: "年収と控除額から所得税・住民税・実効税率を概算。", icon: "🧾", category: "日常ツール" },
   { slug: "electricity-saving-calc", name: "電気代節約シミュレーション", description: "現在の電気代と節約率から月・年・5年の節約額を計算。", icon: "💡", category: "日常ツール" },
   { slug: "subscription-cost-calc", name: "サブスク月額合計計算", description: "契約中のサブスクの月額・年間合計を可視化。見直しに。", icon: "📋", category: "日常ツール" },
+  { slug: "baby-growth-tracker", name: "赤ちゃん成長チェック", description: "月齢・体重・身長をWHO基準の平均値と比較。", icon: "👶", category: "日常ツール" },
+  { slug: "wedding-budget-split", name: "結婚式 自己負担額計算", description: "総費用・ご祝儀・親援助から自己負担額を計算。", icon: "💒", category: "日常ツール" },
 ];
 
 export const siteConfig = {
