@@ -1789,6 +1789,33 @@ export const guides: Guide[] = [
     readTime: "10分",
     icon: "💰",
   },
+  {
+    slug: "credit-card-ranking-2026",
+    title: "【2026年最新】クレジットカードおすすめランキングTOP10｜還元率・年会費・特典で厳選",
+    description:
+      "2026年最新のクレジットカードおすすめランキングTOP10。還元率・年会費・特典で厳選した人気カードを徹底比較。",
+    category: "金融",
+    readTime: "15分",
+    icon: "💳",
+  },
+  {
+    slug: "online-broker-ranking-2026",
+    title: "【2026年最新】ネット証券おすすめランキングTOP10｜新NISA対応の人気口座",
+    description:
+      "2026年最新のネット証券TOP10。SBI証券・楽天証券・マネックス証券等、新NISA対応の人気証券口座を徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "📊",
+  },
+  {
+    slug: "programming-school-ranking-2026",
+    title: "【2026年最新】プログラミングスクールおすすめランキングTOP10｜未経験から転職",
+    description:
+      "2026年最新のプログラミングスクールTOP10。未経験から転職成功した受講生の声・料金・カリキュラムで徹底比較。",
+    category: "仕事・スキル",
+    readTime: "12分",
+    icon: "💻",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
