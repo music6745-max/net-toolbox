@@ -1528,6 +1528,51 @@ export const guides: Guide[] = [
     readTime: "10分",
     icon: "🩺",
   },
+  {
+    slug: "matchmaking-comparison",
+    title: "【2026年最新】結婚相談所おすすめ比較5選｜料金・成婚率・サポートを徹底解説",
+    description:
+      "IBJメンバーズ・パートナーエージェント・サンマリエ・ツヴァイ・ゼクシィ縁結びエージェントの結婚相談所5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "💍",
+  },
+  {
+    slug: "life-insurance-review-comparison",
+    title: "【2026年最新】保険見直し相談サービス比較5選｜FP無料相談で家計改善",
+    description:
+      "保険チャンネル・保険見直しラボ・ほけんのぜんぶ・ほけんの窓口・マネードクターの保険見直し無料相談5社を徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "📋",
+  },
+  {
+    slug: "car-purchase-buyback-comparison",
+    title: "【2026年最新】車買取一括査定サービス比較5選｜高く売るコツも解説",
+    description:
+      "ガリバー・カーセンサー・ナビクル・ユーカーパック・MOTAの車買取一括査定サービス5社を徹底比較。少しでも高く売るコツも解説。",
+    category: "生活",
+    readTime: "12分",
+    icon: "🚙",
+  },
+  {
+    slug: "bridal-jewelry-comparison",
+    title: "【2026年最新】婚約指輪ブランド比較5選｜価格・デザイン・アフターサービスを徹底解説",
+    description:
+      "ティファニー・カルティエ・俄(ニワカ)・銀座ダイヤモンドシライシ・I-PRIMOの婚約指輪ブランド5社を徹底比較。",
+    category: "生活",
+    readTime: "12分",
+    icon: "💎",
+  },
+  {
+    slug: "used-property-investment-comparison",
+    title: "【2026年最新】不動産投資クラウドファンディング比較5選｜利回り・安全性・最低投資額を徹底解説",
+    description:
+      "COZUCHI・CREAL・FUNDROP・利回りくん・OwnersBookの不動産投資クラウドファンディング5社を徹底比較。",
+    category: "金融",
+    readTime: "12分",
+    icon: "🏢",
+  },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -1743,6 +1788,13 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "delivery-driver-comparison": "仕事・スキル",
   "fx-broker-comparison": "金融",
   "online-doctor-comparison": "健康・美容",
+
+  // 結婚・保険見直し・車買取・婚約指輪・不動産クラファン
+  "matchmaking-comparison": "生活",
+  "life-insurance-review-comparison": "金融",
+  "car-purchase-buyback-comparison": "生活",
+  "bridal-jewelry-comparison": "生活",
+  "used-property-investment-comparison": "金融",
 };
 
 export function genreOf(slug: string): Genre {
