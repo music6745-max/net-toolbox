@@ -714,6 +714,9 @@ export const tools: Tool[] = [
   { slug: "love-compatibility", name: "名前で相性診断", description: "2人の名前から相性スコアを算出。エンタメ。", icon: "💕", category: "日常ツール" },
   { slug: "wifi-speed-guide", name: "WiFi速度で何ができるかチェック", description: "回線速度から各用途で快適に使えるかを判定。", icon: "📶", category: "日常ツール" },
   { slug: "lucky-number", name: "ラッキーナンバー・抽選番号生成", description: "重複なしのランダム番号を生成。宝くじ・ビンゴに。", icon: "🎲", category: "日常ツール" },
+  { slug: "paper-size-guide", name: "用紙サイズ一覧(A判/B判)", description: "A0〜A6、B0〜B6、はがき、名刺の用紙サイズ一覧。", icon: "📄", category: "日常ツール" },
+  { slug: "katakana-to-romaji", name: "カタカナ→ローマ字変換", description: "カタカナをヘボン式ローマ字に変換。パスポート申請に。", icon: "🔤", category: "テキストツール" },
+  { slug: "email-subject-generator", name: "ビジネスメール件名ジェネレーター", description: "トピックから件名候補を自動生成。", icon: "📧", category: "テキストツール" },
 ];
 
 export const siteConfig = {
