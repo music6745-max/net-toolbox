@@ -721,6 +721,8 @@ export const tools: Tool[] = [
   { slug: "business-card-checker", name: "名刺情報チェッカー", description: "名刺に必要な情報の記入漏れをチェック。", icon: "🪪", category: "日常ツール" },
   { slug: "interest-rate-comparison", name: "金利差シミュレーション", description: "2つの金利で預けた場合の差額を計算。", icon: "💹", category: "日常ツール" },
   { slug: "daily-water-log", name: "水分摂取記録", description: "1日の水分摂取量を記録して目標達成を管理。", icon: "🥤", category: "日常ツール" },
+  { slug: "blood-type-diet", name: "血液型ダイエット診断", description: "血液型から合う食事・運動を表示。エンタメ。", icon: "🩸", category: "日常ツール" },
+  { slug: "name-counter", name: "名前の画数チェック", description: "名前の推定画数と運勢を表示。エンタメ。", icon: "✏️", category: "日常ツール" },
 ];
 
 export const siteConfig = {
