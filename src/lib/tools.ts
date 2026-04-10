@@ -719,6 +719,8 @@ export const tools: Tool[] = [
   { slug: "email-subject-generator", name: "ビジネスメール件名ジェネレーター", description: "トピックから件名候補を自動生成。", icon: "📧", category: "テキストツール" },
   { slug: "random-name-picker", name: "ランダム名前ピッカー", description: "名前リストからランダムに1人を選出。順番決め・抽選に。", icon: "🎯", category: "日常ツール" },
   { slug: "business-card-checker", name: "名刺情報チェッカー", description: "名刺に必要な情報の記入漏れをチェック。", icon: "🪪", category: "日常ツール" },
+  { slug: "interest-rate-comparison", name: "金利差シミュレーション", description: "2つの金利で預けた場合の差額を計算。", icon: "💹", category: "日常ツール" },
+  { slug: "daily-water-log", name: "水分摂取記録", description: "1日の水分摂取量を記録して目標達成を管理。", icon: "🥤", category: "日常ツール" },
 ];
 
 export const siteConfig = {
