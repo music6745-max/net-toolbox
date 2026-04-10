@@ -717,6 +717,8 @@ export const tools: Tool[] = [
   { slug: "paper-size-guide", name: "用紙サイズ一覧(A判/B判)", description: "A0〜A6、B0〜B6、はがき、名刺の用紙サイズ一覧。", icon: "📄", category: "日常ツール" },
   { slug: "katakana-to-romaji", name: "カタカナ→ローマ字変換", description: "カタカナをヘボン式ローマ字に変換。パスポート申請に。", icon: "🔤", category: "テキストツール" },
   { slug: "email-subject-generator", name: "ビジネスメール件名ジェネレーター", description: "トピックから件名候補を自動生成。", icon: "📧", category: "テキストツール" },
+  { slug: "random-name-picker", name: "ランダム名前ピッカー", description: "名前リストからランダムに1人を選出。順番決め・抽選に。", icon: "🎯", category: "日常ツール" },
+  { slug: "business-card-checker", name: "名刺情報チェッカー", description: "名刺に必要な情報の記入漏れをチェック。", icon: "🪪", category: "日常ツール" },
 ];
 
 export const siteConfig = {
