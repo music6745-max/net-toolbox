@@ -729,6 +729,7 @@ export const tools: Tool[] = [
   { slug: "speed-reading-test", name: "読書速度テスト", description: "日本語テキストの読書速度(文字/分)を測定。", icon: "📖", category: "日常ツール" },
   { slug: "meeting-cost-calc", name: "会議コスト計算", description: "参加人数・時間・月給から会議の人件費を可視化。", icon: "🏢", category: "日常ツール" },
   { slug: "investment-return-calc", name: "投資リターン計算", description: "購入額と売却額からリターン率・年率・税引後利益を計算。", icon: "📈", category: "日常ツール" },
+  { slug: "rain-probability-outfit", name: "気温・降水確率から服装提案", description: "気温と降水確率から今日の服装を提案。", icon: "👔", category: "日常ツール" },
 ];
 
 export const siteConfig = {
