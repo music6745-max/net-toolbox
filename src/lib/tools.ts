@@ -736,6 +736,8 @@ export const tools: Tool[] = [
   { slug: "habit-tracker", name: "週間習慣トラッカー", description: "習慣を毎日チェックして継続を可視化。達成率自動計算。", icon: "✅", category: "日常ツール" },
   { slug: "wifi-password-generator", name: "WiFi用安全パスワード生成", description: "紛らわしい文字を除外した安全なWiFiパスワードを生成。", icon: "🔑", category: "日常ツール" },
   { slug: "exercise-calorie-burn", name: "運動消費カロリー計算", description: "体重・運動・時間から消費カロリーを計算。", icon: "🏃", category: "日常ツール" },
+  { slug: "recipe-unit-converter", name: "料理の計量単位変換", description: "カップ・大さじ・小さじ・ml・オンスを相互変換。", icon: "🍳", category: "日常ツール" },
+  { slug: "mortgage-affordability", name: "住宅購入力診断", description: "年収・年齢・頭金から購入可能な住宅価格を計算。", icon: "🏠", category: "日常ツール" },
   { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を計算。", icon: "📝", category: "日常ツール" },
 ];
 
