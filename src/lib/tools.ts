@@ -741,6 +741,7 @@ export const tools: Tool[] = [
   { slug: "noise-level-guide", name: "騒音レベル(dB)早見表", description: "デシベル値から騒音レベルと身近な例を確認。", icon: "🔊", category: "日常ツール" },
   { slug: "meeting-cost-calculator", name: "会議コスト計算", description: "参加人数・時間・月給から会議の人件費を可視化。", icon: "💼", category: "日常ツール" },
   { slug: "freelance-rate-calc", name: "フリーランス適正単価計算", description: "目標年収から適正な日単価・時間単価を逆算。", icon: "💻", category: "日常ツール" },
+  { slug: "youtube-thumbnail-size", name: "SNS推奨画像サイズ一覧", description: "YouTube/Instagram/TikTok/X等の推奨画像サイズ一覧。", icon: "📐", category: "日常ツール" },
   { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を計算。", icon: "📝", category: "日常ツール" },
 ];
 
