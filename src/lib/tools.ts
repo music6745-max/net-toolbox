@@ -738,6 +738,7 @@ export const tools: Tool[] = [
   { slug: "exercise-calorie-burn", name: "運動消費カロリー計算", description: "体重・運動・時間から消費カロリーを計算。", icon: "🏃", category: "日常ツール" },
   { slug: "recipe-unit-converter", name: "料理の計量単位変換", description: "カップ・大さじ・小さじ・ml・オンスを相互変換。", icon: "🍳", category: "日常ツール" },
   { slug: "mortgage-affordability", name: "住宅購入力診断", description: "年収・年齢・頭金から購入可能な住宅価格を計算。", icon: "🏠", category: "日常ツール" },
+  { slug: "noise-level-guide", name: "騒音レベル(dB)早見表", description: "デシベル値から騒音レベルと身近な例を確認。", icon: "🔊", category: "日常ツール" },
   { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を計算。", icon: "📝", category: "日常ツール" },
 ];
 
