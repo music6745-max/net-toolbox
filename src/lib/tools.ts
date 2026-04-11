@@ -732,6 +732,8 @@ export const tools: Tool[] = [
   { slug: "rain-probability-outfit", name: "気温・降水確率から服装提案", description: "気温と降水確率から今日の服装を提案。", icon: "👔", category: "日常ツール" },
   { slug: "study-timer", name: "勉強時間記録タイマー", description: "科目別に勉強時間を計測・記録。合計学習時間管理。", icon: "📚", category: "日常ツール" },
   { slug: "gift-budget-calc", name: "プレゼント予算の目安", description: "シーン・相手別にプレゼントの予算相場を表示。", icon: "🎁", category: "日常ツール" },
+  { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を自動計算。", icon: "📝", category: "日常ツール" },
+  { slug: "habit-tracker", name: "週間習慣トラッカー", description: "習慣を毎日チェックして継続を可視化。達成率自動計算。", icon: "✅", category: "日常ツール" },
 ];
 
 export const siteConfig = {
