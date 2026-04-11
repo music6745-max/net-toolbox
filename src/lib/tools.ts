@@ -727,6 +727,8 @@ export const tools: Tool[] = [
   { slug: "age-retirement-calc", name: "定年準備シミュレーター", description: "老後に必要な資金と年金不足額を概算。", icon: "🏖️", category: "日常ツール" },
   { slug: "savings-goal-calc", name: "貯金目標達成シミュレーター", description: "目標額と期間から毎月・毎週・毎日の貯金額を計算。", icon: "🐷", category: "日常ツール" },
   { slug: "speed-reading-test", name: "読書速度テスト", description: "日本語テキストの読書速度(文字/分)を測定。", icon: "📖", category: "日常ツール" },
+  { slug: "meeting-cost-calc", name: "会議コスト計算", description: "参加人数・時間・月給から会議の人件費を可視化。", icon: "🏢", category: "日常ツール" },
+  { slug: "investment-return-calc", name: "投資リターン計算", description: "購入額と売却額からリターン率・年率・税引後利益を計算。", icon: "📈", category: "日常ツール" },
 ];
 
 export const siteConfig = {
