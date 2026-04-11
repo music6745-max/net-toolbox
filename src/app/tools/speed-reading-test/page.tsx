@@ -1,0 +1,60 @@
+"use client";
+import { useState, useRef } from "react";
+import Link from "next/link";
+import { AffiliateSection } from "@/components/AffiliateSection";
+import { RelatedTools } from "@/components/RelatedTools";
+
+const sampleText = "テクノロジーの進化は、私たちの日常生活を大きく変えています。スマートフォンの普及により、いつでもどこでもインターネットにアクセスできるようになりました。AIの発展は、医療、教育、ビジネスなど幅広い分野に革新をもたらしています。クラウドコンピューティングの普及で、データの保存や処理が効率的になりました。IoTデバイスは家電製品をスマート化し、エネルギー効率の向上に貢献しています。5G通信の展開により、大容量データの高速通信が可能になりました。量子コンピュータの研究は、従来のコンピュータでは解けない複雑な問題を解決する可能性を秘めています。ブロックチェーン技術は金融取引の透明性と安全性を高めています。自動運転技術の進歩は、交通事故の削減と移動の効率化を目指しています。宇宙開発の民間参入により、宇宙旅行が現実味を帯びてきました。";
+
+export default function Page() {
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
+  const [startTime, setStartTime] = useState(0);
+  const [wpm, setWpm] = useState(0);
+
+  const charCount = sampleText.length;
+
+  const start = () => {
+    setStarted(true);
+    setFinished(false);
+    setStartTime(Date.now());
+  };
+
+  const finish = () => {
+    const elapsed = (Date.now() - startTime) / 1000 / 60;
+    setWpm(Math.round(charCount / elapsed));
+    setFinished(true);
+  };
+
+  const evaluation = wpm >= 1200 ? "速読レベル" : wpm >= 800 ? "速い" : wpm >= 500 ? "標準" : wpm >= 300 ? "ゆっくり" : "じっくり派";
+
+  return (
+    <div className="max-w-3xl mx-auto px-4 py-10">
+      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>読書速度テスト</span></nav>
+      <h1 className="text-2xl font-bold mb-2">読書速度テスト（日本語）</h1>
+      <p className="text-muted mb-8">テキストを読む速度を測定。文字/分を計算します。</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-4">
+        {!started ? (
+          <button onClick={start} className="w-full py-4 bg-primary text-white rounded-lg font-bold">テスト開始</button>
+        ) : !finished ? (
+          <>
+            <div className="text-sm leading-relaxed p-4 bg-background rounded-lg">{sampleText}</div>
+            <p className="text-xs text-muted">上のテキストを最後まで読んだら下のボタンを押してください</p>
+            <button onClick={finish} className="w-full py-4 bg-green-500 text-white rounded-lg font-bold">読み終わった</button>
+          </>
+        ) : (
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-primary/10 rounded-lg p-6 text-center"><div className="text-xs text-muted mb-1">読書速度</div><div className="text-3xl font-bold text-primary">{wpm} 文字/分</div></div>
+              <div className="bg-background rounded-lg p-6 text-center"><div className="text-xs text-muted mb-1">評価</div><div className="text-2xl font-bold">{evaluation}</div></div>
+            </div>
+            <div className="text-xs text-muted">日本人の平均読書速度は約400〜600文字/分です。</div>
+            <button onClick={() => { setStarted(false); setFinished(false); }} className="w-full py-3 bg-card-bg border border-card-border rounded-lg text-sm font-bold">もう一度</button>
+          </>
+        )}
+      </div>
+      <AffiliateSection slug="speed-reading-test" category="日常ツール" />
+      <RelatedTools currentSlug="speed-reading-test" category="日常ツール" />
+    </div>
+  );
+}
