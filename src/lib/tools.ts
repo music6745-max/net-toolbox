@@ -723,6 +723,8 @@ export const tools: Tool[] = [
   { slug: "daily-water-log", name: "水分摂取記録", description: "1日の水分摂取量を記録して目標達成を管理。", icon: "🥤", category: "日常ツール" },
   { slug: "blood-type-diet", name: "血液型ダイエット診断", description: "血液型から合う食事・運動を表示。エンタメ。", icon: "🩸", category: "日常ツール" },
   { slug: "name-counter", name: "名前の画数チェック", description: "名前の推定画数と運勢を表示。エンタメ。", icon: "✏️", category: "日常ツール" },
+  { slug: "packing-checklist", name: "旅行持ち物チェックリスト", description: "カテゴリ別の旅行持ち物チェックリスト。忘れ物防止。", icon: "🧳", category: "日常ツール" },
+  { slug: "age-retirement-calc", name: "定年準備シミュレーター", description: "老後に必要な資金と年金不足額を概算。", icon: "🏖️", category: "日常ツール" },
 ];
 
 export const siteConfig = {
