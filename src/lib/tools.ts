@@ -743,6 +743,7 @@ export const tools: Tool[] = [
   { slug: "freelance-rate-calc", name: "フリーランス適正単価計算", description: "目標年収から適正な日単価・時間単価を逆算。", icon: "💻", category: "日常ツール" },
   { slug: "youtube-thumbnail-size", name: "SNS推奨画像サイズ一覧", description: "YouTube/Instagram/TikTok/X等の推奨画像サイズ一覧。", icon: "📐", category: "日常ツール" },
   { slug: "invoice-number-generator", name: "請求書番号ジェネレーター", description: "プレフィックス・年月・連番から請求書番号を生成。", icon: "🧾", category: "日常ツール" },
+  { slug: "electricity-bill-compare", name: "電気料金シミュレーション", description: "使用量とアンペアから電気代を概算。新電力と比較。", icon: "⚡", category: "日常ツール" },
   { slug: "electricity-bill-split", name: "シェアハウス光熱費按分", description: "光熱費を部屋の広さで按分計算。ルームシェアに。", icon: "🏠", category: "日常ツール" },
   { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を計算。", icon: "📝", category: "日常ツール" },
 ];
