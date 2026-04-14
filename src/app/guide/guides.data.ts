@@ -1905,7 +1905,11 @@ export const GENRES = [
   "その他",
 ] as const;
 
-export type Genre = (typeof GENRES)[number];
+export type Genre = (typeof GENRES)[number
+  { slug: "ideco-comparison", title: "iDeCo(イデコ)おすすめ金融機関5選", description: "SBI・楽天・マネックス・松井を手数料・商品数・節税で比較", category: "マネー", readTime: "10分", icon: "🏦" },
+  { slug: "qr-pay-comparison", title: "QRコード決済おすすめ5選", description: "PayPay・楽天ペイ・d払い・au PAY・メルペイを還元率で比較", category: "マネー", readTime: "10分", icon: "📱" },
+  { slug: "budget-sim-comparison", title: "格安SIM(MVNO)おすすめ10選", description: "ahamo・LINEMO・povo・UQ・楽天モバイル・IIJmioを料金・速度で比較", category: "通信", readTime: "12分", icon: "📶" },
+];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
   // 通信
