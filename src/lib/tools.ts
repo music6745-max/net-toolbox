@@ -747,6 +747,10 @@ export const tools: Tool[] = [
   { slug: "tax-deduction-checker", name: "確定申告 控除チェックリスト", description: "適用できる控除を一覧でチェック。節税漏れを防止。", icon: "📋", category: "日常ツール" },
   { slug: "electricity-bill-split", name: "シェアハウス光熱費按分", description: "光熱費を部屋の広さで按分計算。ルームシェアに。", icon: "🏠", category: "日常ツール" },
   { slug: "study-plan-generator", name: "学習計画ジェネレーター", description: "試験日・勉強時間・科目から残り時間と配分を計算。", icon: "📝", category: "日常ツール" },
+
+  { slug: "parking-cost-calculator", name: "駐車場料金計算", description: "時間貸し駐車場の料金を計算。最大料金との比較も", icon: "🅿️", category: "日常ツール" },
+  { slug: "water-bill-calculator", name: "水道料金計算", description: "月間使用量から水道料金を概算。東京都の料金ベース", icon: "🚰", category: "日常ツール" },
+  { slug: "pension-calculator", name: "年金受給額シミュレーター", description: "将来の年金受給額を概算。国民年金と厚生年金の目安", icon: "👴", category: "日常ツール" },
 ];
 
 export const siteConfig = {
