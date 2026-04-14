@@ -754,6 +754,8 @@ export const tools: Tool[] = [
 
   { slug: "grocery-budget-calculator", name: "食費計算ツール", description: "世帯人数と生活スタイルから月間食費を概算", icon: "🛒", category: "日常ツール" },
   { slug: "commute-distance-calc", name: "通勤距離・交通費計算", description: "通勤距離と手段から交通費と通勤時間を計算", icon: "🚃", category: "日常ツール" },
+
+  { slug: "image-weight-reducer", name: "画像軽量化チェッカー", description: "画像サイズと用途から最適なファイルサイズと形式を提案", icon: "🖼️", category: "Web開発ツール" },
 ];
 
 export const siteConfig = {
