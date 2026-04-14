@@ -751,6 +751,9 @@ export const tools: Tool[] = [
   { slug: "parking-cost-calculator", name: "駐車場料金計算", description: "時間貸し駐車場の料金を計算。最大料金との比較も", icon: "🅿️", category: "日常ツール" },
   { slug: "water-bill-calculator", name: "水道料金計算", description: "月間使用量から水道料金を概算。東京都の料金ベース", icon: "🚰", category: "日常ツール" },
   { slug: "pension-calculator", name: "年金受給額シミュレーター", description: "将来の年金受給額を概算。国民年金と厚生年金の目安", icon: "👴", category: "日常ツール" },
+
+  { slug: "grocery-budget-calculator", name: "食費計算ツール", description: "世帯人数と生活スタイルから月間食費を概算", icon: "🛒", category: "日常ツール" },
+  { slug: "commute-distance-calc", name: "通勤距離・交通費計算", description: "通勤距離と手段から交通費と通勤時間を計算", icon: "🚃", category: "日常ツール" },
 ];
 
 export const siteConfig = {

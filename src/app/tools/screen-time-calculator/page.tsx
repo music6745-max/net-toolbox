@@ -1,86 +1,77 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 
 export default function Page() {
-  const [phone, setPhone] = useState("4");
-  const [pc, setPc] = useState("6");
+  const [work, setWork] = useState("8");
+  const [phone, setPhone] = useState("3");
   const [tv, setTv] = useState("2");
-  const [sleep, setSleep] = useState("6");
+  const [game, setGame] = useState("1");
 
-  const result = useMemo(() => {
-    const p = parseFloat(phone) || 0;
-    const c = parseFloat(pc) || 0;
-    const t = parseFloat(tv) || 0;
-    const s = parseFloat(sleep) || 0;
-    const total = p + c + t;
+  const w = parseFloat(work) || 0;
+  const p = parseFloat(phone) || 0;
+  const t = parseFloat(tv) || 0;
+  const g = parseFloat(game) || 0;
 
-    let score = 100;
-    score -= Math.max(0, total - 6) * 6;
-    score -= Math.max(0, p - 3) * 4;
-    score -= Math.max(0, 7 - s) * 5;
-    score = Math.max(0, Math.min(100, Math.round(score)));
+  const totalDaily = w + p + t + g;
+  const weeklyHours = Math.round(totalDaily * 7 * 10) / 10;
+  const monthlyHours = Math.round(totalDaily * 30 * 10) / 10;
+  const yearlyHours = Math.round(totalDaily * 365 * 10) / 10;
+  const yearlyDays = Math.round(yearlyHours / 24 * 10) / 10;
 
-    let level = "健康的", color = "#16a34a", advice = "現在のバランスを維持しましょう。";
-    if (score < 80) { level = "やや注意"; color = "#eab308"; advice = "休憩を挟み、目を休める時間を確保しましょう。"; }
-    if (score < 60) { level = "注意"; color = "#f97316"; advice = "寝る1時間前はスクリーンを避け、姿勢にも気をつけて。"; }
-    if (score < 40) { level = "要改善"; color = "#ef4444"; advice = "デジタルデトックスを。オンラインカウンセリングの利用も検討を。"; }
-
-    return { total, score, level, color, advice };
-  }, [phone, pc, tv, sleep]);
-
-  const shareText = `私のスクリーンタイム健康度は${result.score}点（${result.level}）でした！ 合計${result.total}時間/日 #スクリーンタイム診断 #ネットツールボックス`;
-  const shareUrl = "https://net-toolbox.jp/tools/screen-time-calculator";
-  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+  const levelColor = totalDaily < 8 ? "text-green-600" : totalDaily <= 12 ? "text-yellow-600" : "text-red-600";
+  const levelBg = totalDaily < 8 ? "bg-green-50" : totalDaily <= 12 ? "bg-yellow-50" : "bg-red-50";
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>スクリーンタイム健康度診断</span></nav>
-      <h1 className="text-2xl font-bold mb-2">スクリーンタイム健康度診断</h1>
-      <p className="text-muted mb-8">デバイス使用時間から健康影響度をスコア化します。</p>
-
-      <div className="bg-card-bg border border-card-border rounded-xl p-6">
-        <div className="space-y-4">
-          <div><label className="block text-sm font-medium mb-2">スマホ使用時間（h/日）</label><input type="number" value={phone} onChange={e => setPhone(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30" /></div>
-          <div><label className="block text-sm font-medium mb-2">PC使用時間（h/日）</label><input type="number" value={pc} onChange={e => setPc(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30" /></div>
-          <div><label className="block text-sm font-medium mb-2">TV視聴時間（h/日）</label><input type="number" value={tv} onChange={e => setTv(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30" /></div>
-          <div><label className="block text-sm font-medium mb-2">睡眠時間（h/日）</label><input type="number" value={sleep} onChange={e => setSleep(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary/30" /></div>
+      <nav className="text-sm text-muted mb-6"><Link href="/" className="hover:text-primary">トップ</Link><span className="mx-2">/</span><span>スクリーンタイム計算</span></nav>
+      <h1 className="text-2xl font-bold mb-2">スクリーンタイム計算</h1>
+      <p className="text-muted mb-8">1日の画面利用時間を入力して、週間・月間・年間の合計スクリーンタイムを把握しましょう。</p>
+      <div className="bg-card-bg border border-card-border rounded-xl p-6 space-y-4">
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">仕事のPC時間／日（時間）</label>
+            <input type="number" value={work} onChange={e => setWork(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">スマホ時間／日（時間）</label>
+            <input type="number" value={phone} onChange={e => setPhone(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">テレビ・動画／日（時間）</label>
+            <input type="number" value={tv} onChange={e => setTv(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2">ゲーム／日（時間）</label>
+            <input type="number" value={game} onChange={e => setGame(e.target.value)} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm" />
+          </div>
         </div>
-
-        <div className="mt-6 rounded-lg p-6 text-center" style={{ background: result.color + "1A", border: `1px solid ${result.color}` }}>
-          <div className="text-xs text-muted mb-1">健康度スコア</div>
-          <div className="text-5xl font-bold" style={{ color: result.color }}>{result.score}<span className="text-xl">/100</span></div>
-          <div className="mt-2 text-lg font-semibold">{result.level}</div>
-          <div className="text-sm text-muted mt-1">1日合計スクリーンタイム: {result.total}時間</div>
-          <p className="text-sm mt-3">{result.advice}</p>
+        <div className={`${levelBg} rounded-lg p-4 text-center mt-4`}>
+          <div className="text-xs text-muted mb-1">1日合計スクリーンタイム</div>
+          <div className={`text-2xl font-bold ${levelColor}`}>{totalDaily}時間</div>
         </div>
-
-        <div className="mt-6 flex flex-wrap gap-3 justify-center">
-          <a href={xHref} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-black text-white text-sm font-medium hover:opacity-80">Xで結果をシェア</a>
-          <button onClick={() => { navigator.clipboard?.writeText(shareText + " " + shareUrl); }} className="px-4 py-2 rounded-lg border border-card-border text-sm font-medium hover:bg-background">結果をコピー</button>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">週間</div><div className="text-lg font-bold">{weeklyHours}時間</div></div>
+          <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">月間</div><div className="text-lg font-bold">{monthlyHours}時間</div></div>
+          <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">年間</div><div className="text-lg font-bold">{yearlyHours}時間</div></div>
+          <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">年間（日数換算）</div><div className="text-lg font-bold text-primary">{yearlyDays}日</div></div>
         </div>
+        {totalDaily > 10 && (
+          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-2">
+            <p className="text-sm text-red-700 font-medium">画面時間が長めです。目の休憩を意識しましょう。</p>
+            <ul className="text-sm text-red-600 mt-1 space-y-1">
+              <li>・20分ごとに20秒間、6m先を見る（20-20-6ルール）</li>
+              <li>・1時間に1回は立ち上がってストレッチ</li>
+              <li>・就寝1時間前はブルーライトを避ける</li>
+            </ul>
+          </div>
+        )}
+        <p className="text-xs text-muted mt-2">※ 概算値です。実際の利用時間はデバイスの記録機能でご確認ください。</p>
       </div>
-
-      <div className="mt-8">
-        <Link href="/guide/online-counseling-comparison" className="block bg-card-bg border border-card-border rounded-xl p-5 hover:border-primary transition">
-          <div className="text-sm text-primary font-semibold mb-1">関連ガイド</div>
-          <div className="font-bold">オンラインカウンセリング比較</div>
-          <div className="text-xs text-muted mt-1">スマホ疲れ・ストレスを感じたらプロに相談</div>
-        </Link>
-      </div>
-
-      <section className="mt-10">
-        <h2 className="text-lg font-bold mb-3">使い方</h2>
-        <div className="text-sm text-muted space-y-2">
-          <p>スマホ・PC・TVの使用時間と睡眠時間を入力すると、健康への影響度を100点満点でスコア化します。</p>
-          <p>本ツールは簡易的な目安です。体調不良が続く場合は医療機関にご相談ください。</p>
-        </div>
-      </section>
-
-      <AffiliateSection slug="screen-time-calculator" category="日常ツール" />
-      <RelatedTools currentSlug="screen-time-calculator" category="日常ツール" />
+      <AffiliateSection slug="screen-time-calculator" category="健康ツール" />
+      <RelatedTools currentSlug="screen-time-calculator" category="健康ツール" />
     </div>
   );
 }
