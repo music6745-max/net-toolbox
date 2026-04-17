@@ -1909,6 +1909,12 @@ export type Genre = (typeof GENRES)[number
   { slug: "ideco-comparison", title: "iDeCo(イデコ)おすすめ金融機関5選", description: "SBI・楽天・マネックス・松井を手数料・商品数・節税で比較", category: "マネー", readTime: "10分", icon: "🏦" },
   { slug: "qr-pay-comparison", title: "QRコード決済おすすめ5選", description: "PayPay・楽天ペイ・d払い・au PAY・メルペイを還元率で比較", category: "マネー", readTime: "10分", icon: "📱" },
   { slug: "budget-sim-comparison", title: "格安SIM(MVNO)おすすめ10選", description: "ahamo・LINEMO・povo・UQ・楽天モバイル・IIJmioを料金・速度で比較", category: "通信", readTime: "12分", icon: "📶" },
+
+  { slug: "programming-school-for-beginners", title: "未経験から学べるプログラミングスクールおすすめ5選", description: "完全未経験から学べるスクール5選。挫折しない選び方・転職成功率を解説", category: "学習", readTime: "10分", icon: "💻" },
+  { slug: "job-agent-for-20s", title: "20代におすすめ転職エージェント5選", description: "20代の転職に強いエージェント5社を徹底比較。第二新卒・未経験OK向け", category: "転職", readTime: "10分", icon: "💼" },
+  { slug: "fx-for-beginners", title: "FX初心者におすすめの口座5選", description: "FX初心者が最初に選ぶべき口座5選。少額・デモ口座で徹底比較", category: "マネー", readTime: "10分", icon: "📈" },
+  { slug: "credit-card-for-students", title: "学生向けクレジットカードおすすめ5選", description: "18歳から発行可能な学生向けクレカ5選を徹底比較", category: "マネー", readTime: "10分", icon: "💳" },
+  { slug: "wifi-for-one-person", title: "一人暮らしにおすすめのWiFi5選", description: "工事不要・契約期間なしの一人暮らし向けWiFiを比較", category: "通信", readTime: "10分", icon: "📶" },
 ];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
