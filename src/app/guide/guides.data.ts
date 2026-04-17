@@ -1891,21 +1891,6 @@ export const guides: Guide[] = [
     readTime: "12分",
     icon: "💕",
   },
-];
-
-// Genre mapping: maps slug to one of the top-level genres used in the filter UI.
-// Order of checks matters — earlier matches win.
-export const GENRES = [
-  "通信",
-  "金融",
-  "仕事・スキル",
-  "生活",
-  "エンタメ",
-  "健康・美容",
-  "その他",
-] as const;
-
-export type Genre = (typeof GENRES)[number
   { slug: "ideco-comparison", title: "iDeCo(イデコ)おすすめ金融機関5選", description: "SBI・楽天・マネックス・松井を手数料・商品数・節税で比較", category: "マネー", readTime: "10分", icon: "🏦" },
   { slug: "qr-pay-comparison", title: "QRコード決済おすすめ5選", description: "PayPay・楽天ペイ・d払い・au PAY・メルペイを還元率で比較", category: "マネー", readTime: "10分", icon: "📱" },
   { slug: "budget-sim-comparison", title: "格安SIM(MVNO)おすすめ10選", description: "ahamo・LINEMO・povo・UQ・楽天モバイル・IIJmioを料金・速度で比較", category: "通信", readTime: "12分", icon: "📶" },
@@ -1922,6 +1907,20 @@ export type Genre = (typeof GENRES)[number
   { slug: "credit-card-for-gold-beginner", title: "初めて作るゴールドカードおすすめ5選", description: "ゴールドカードデビューにおすすめの5枚を徹底比較", category: "マネー", readTime: "10分", icon: "🏆" },
   { slug: "nisa-for-beginners", title: "NISA初心者におすすめの始め方5ステップ", description: "証券会社選びから運用まで初心者向け完全ガイド", category: "マネー", readTime: "12分", icon: "📊" },
 ];
+
+// Genre mapping: maps slug to one of the top-level genres used in the filter UI.
+// Order of checks matters — earlier matches win.
+export const GENRES = [
+  "通信",
+  "金融",
+  "仕事・スキル",
+  "生活",
+  "エンタメ",
+  "健康・美容",
+  "その他",
+] as const;
+
+export type Genre = (typeof GENRES)[number];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
   // 通信
