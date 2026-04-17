@@ -1915,6 +1915,12 @@ export type Genre = (typeof GENRES)[number
   { slug: "fx-for-beginners", title: "FX初心者におすすめの口座5選", description: "FX初心者が最初に選ぶべき口座5選。少額・デモ口座で徹底比較", category: "マネー", readTime: "10分", icon: "📈" },
   { slug: "credit-card-for-students", title: "学生向けクレジットカードおすすめ5選", description: "18歳から発行可能な学生向けクレカ5選を徹底比較", category: "マネー", readTime: "10分", icon: "💳" },
   { slug: "wifi-for-one-person", title: "一人暮らしにおすすめのWiFi5選", description: "工事不要・契約期間なしの一人暮らし向けWiFiを比較", category: "通信", readTime: "10分", icon: "📶" },
+
+  { slug: "programming-school-for-women", title: "女性におすすめプログラミングスクール5選", description: "女性向けスクール5選を比較。SHElikes・Ms.Engineer他", category: "学習", readTime: "10分", icon: "👩‍💻" },
+  { slug: "free-programming-school", title: "無料プログラミングスクール5選", description: "就職・転職を条件に受講料0円のスクール5選", category: "学習", readTime: "10分", icon: "🎓" },
+  { slug: "job-agent-for-engineers", title: "ITエンジニア向け転職エージェント5選", description: "IT特化エージェント5選を年収UP実績・求人数で比較", category: "転職", readTime: "10分", icon: "👨‍💻" },
+  { slug: "credit-card-for-gold-beginner", title: "初めて作るゴールドカードおすすめ5選", description: "ゴールドカードデビューにおすすめの5枚を徹底比較", category: "マネー", readTime: "10分", icon: "🏆" },
+  { slug: "nisa-for-beginners", title: "NISA初心者におすすめの始め方5ステップ", description: "証券会社選びから運用まで初心者向け完全ガイド", category: "マネー", readTime: "12分", icon: "📊" },
 ];
 
 const GENRE_BY_SLUG: Record<string, Genre> = {
