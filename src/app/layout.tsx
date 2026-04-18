@@ -199,15 +199,23 @@ export default function RootLayout({
               <Link href="/terms" className="hover:text-primary">利用規約</Link>
               <Link href="/contact" className="hover:text-primary">お問い合わせ</Link>
             </div>
-            <div className="text-center mb-4">
-              <span className="text-xs">姉妹サイト: </span>
+            <div className="text-center mb-4 flex flex-wrap justify-center gap-x-4 gap-y-1">
+              <span className="text-xs">姉妹サイト:</span>
               <a
-                href="https://ai-tools-navi-navy.vercel.app"
+                href="https://ai-tools-navi.jp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs hover:text-primary"
               >
-                🤖 AIツールナビ - AIツール比較・おすすめガイド
+                🤖 AIツールナビ
+              </a>
+              <a
+                href="https://toshi-navi.jp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs hover:text-primary"
+              >
+                💰 投資ナビJP
               </a>
             </div>
             <p className="text-center">&copy; 2026 {siteConfig.name}. All rights reserved.</p>
