@@ -268,31 +268,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sister Site Section */}
+      {/* Sister Site Section - AI Tools Navi */}
       <section className="mt-8 rounded-xl p-8" style={{ background: "linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)", color: "#ffffff" }}>
         <div className="flex items-center gap-4 mb-4">
           <span className="text-4xl">🤖</span>
           <div>
             <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>AIツールもお探しですか？</h2>
-            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「AIツールナビ」で115以上のAIツールを比較・解説</p>
+            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「AIツールナビ」で150以上のAIツールを比較・解説</p>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-          <a href="https://ai-tools-navi-navy.vercel.app/compare" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+          <a href="https://ai-tools-navi.jp/compare" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
             <div className="text-sm font-medium" style={{ color: "#ffffff" }}>ChatGPT vs Claude</div>
             <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIチャット比較</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+          <a href="https://ai-tools-navi.jp/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
             <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI英語学習ガイド</div>
             <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIで英語力UP</div>
           </a>
-          <a href="https://ai-tools-navi-navy.vercel.app/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+          <a href="https://ai-tools-navi.jp/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
             <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI副業ガイド</div>
             <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>月5万円を目指す</div>
           </a>
         </div>
-        <a href="https://ai-tools-navi-navy.vercel.app" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#7c3aed" }}>
+        <a href="https://ai-tools-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#7c3aed" }}>
           AIツールナビを見る →
+        </a>
+      </section>
+
+      {/* Sister Site Section - Toshi Navi JP */}
+      <section className="mt-6 rounded-xl p-8" style={{ background: "linear-gradient(135deg, #059669 0%, #0891b2 100%)", color: "#ffffff" }}>
+        <div className="flex items-center gap-4 mb-4">
+          <span className="text-4xl">💰</span>
+          <div>
+            <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>お金の悩みはこちらで解決</h2>
+            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「投資ナビJP」で新NISA・iDeCo・副業・節税を徹底解説</p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
+          <a href="https://toshi-navi.jp/guide/nisa-broker-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>新NISA証券会社TOP5</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>ポイント還元で選ぶ</div>
+          </a>
+          <a href="https://toshi-navi.jp/guide/side-business-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>副業ランキングTOP10</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>月5万円から稼ぐ</div>
+          </a>
+          <a href="https://toshi-navi.jp/guide/furusato-tax-guide-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
+            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>ふるさと納税2026</div>
+            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>限度額・おすすめサイト</div>
+          </a>
+        </div>
+        <a href="https://toshi-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#059669" }}>
+          投資ナビJPを見る →
         </a>
       </section>
 
