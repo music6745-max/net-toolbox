@@ -1906,6 +1906,7 @@ export const guides: Guide[] = [
   { slug: "job-agent-for-engineers", title: "ITエンジニア向け転職エージェント5選", description: "IT特化エージェント5選を年収UP実績・求人数で比較", category: "転職", readTime: "10分", icon: "👨‍💻" },
   { slug: "credit-card-for-gold-beginner", title: "初めて作るゴールドカードおすすめ5選", description: "ゴールドカードデビューにおすすめの5枚を徹底比較", category: "マネー", readTime: "10分", icon: "🏆" },
   { slug: "nisa-for-beginners", title: "NISA初心者におすすめの始め方5ステップ", description: "証券会社選びから運用まで初心者向け完全ガイド", category: "マネー", readTime: "12分", icon: "📊" },
+  { slug: "freelance-startup-bundle-2026", title: "【2026年】フリーランス独立スタートアップ完全バンドル", description: "会計ソフト・ビジネスカード・サーバー・FP相談・iDeCo等、独立に必要な10サービスを完全網羅", category: "独立・フリーランス", readTime: "15分", icon: "🚀" },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -2160,6 +2161,9 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "used-smartphone-comparison": "通信",
   "bank-account-comparison": "金融",
   "detective-comparison": "生活",
+
+  // フリーランス独立バンドル
+  "freelance-startup-bundle-2026": "仕事・スキル",
 };
 
 export function genreOf(slug: string): Genre {
