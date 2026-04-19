@@ -429,6 +429,7 @@ export default function SideBusinessToolsPage() {
       {/* CrowdWorks CTA */}
       <div className="space-y-6 my-8">
         <AffiliateCTA serviceName="クラウドワークス" url="https://crowdworks.jp/" badge="副業" description="日本最大級のクラウドソーシング" color="blue" />
+        <AffiliateCTA serviceName="マクロミル" url="https://px.a8.net/svt/ejp?a8mat=4B1O1P+8XJMI+2WL0+CLYLD" badge="アンケート" description="スキマ時間で月5,000〜15,000円のアンケートモニター副業。登録無料。" color="blue" />
       </div>
 
       {/* Roadmap section */}

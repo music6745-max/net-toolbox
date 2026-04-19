@@ -72,6 +72,7 @@ export default function CreditCardRankingPage() {
             { name: "三井住友カード(NL)", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "コンビニ最大7%還元", price: "年会費永年無料", badge: "人気No.1" },
             { name: "楽天カード", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "楽天市場3%還元", price: "年会費永年無料" },
             { name: "JCB CARD W", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "39歳以下で2倍還元", price: "年会費永年無料" },
+            { name: "エポスカード", url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+MMIJE+38L8+BY641", highlight: "即日発行・マルイ10%OFF・海外旅行保険自動付帯", price: "年会費永年無料", badge: "旅行強い" },
           ]}
         />
       </section>
