@@ -1908,6 +1908,8 @@ export const guides: Guide[] = [
   { slug: "nisa-for-beginners", title: "NISA初心者におすすめの始め方5ステップ", description: "証券会社選びから運用まで初心者向け完全ガイド", category: "マネー", readTime: "12分", icon: "📊" },
   { slug: "freelance-startup-bundle-2026", title: "【2026年】フリーランス独立スタートアップ完全バンドル", description: "会計ソフト・ビジネスカード・サーバー・FP相談・iDeCo等、独立に必要な10サービスを完全網羅", category: "独立・フリーランス", readTime: "15分", icon: "🚀" },
   { slug: "inheritance-tax-preparation", title: "【2026年】相続税対策完全ガイド｜税理士費用と節税ワザ", description: "相続税の基礎・税理士費用相場・生前贈与・生命保険の非課税枠まで網羅", category: "相続・終活", readTime: "15分", icon: "📋" },
+  { slug: "tax-accountant-referral-comparison", title: "【2026年】税理士無料紹介サービス比較5選", description: "税理士ドットコム・freee税理士検索等、5サービスの選び方と費用相場を解説", category: "税務", readTime: "12分", icon: "👔" },
+  { slug: "business-credit-card-comparison-2026", title: "【2026年】法人・個人事業主向けビジネスクレジットカード比較10選", description: "三井住友ビジネスオーナーズ・freeeカード・楽天ビジネス・UPSIDER等を徹底比較", category: "決済", readTime: "13分", icon: "🏢" },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -2168,6 +2170,10 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
 
   // 相続税対策
   "inheritance-tax-preparation": "金融",
+
+  // 税務・法人決済
+  "tax-accountant-referral-comparison": "仕事・スキル",
+  "business-credit-card-comparison-2026": "金融",
 };
 
 export function genreOf(slug: string): Genre {
