@@ -5,9 +5,9 @@ import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
-  title: "【2026年最新】ホームセキュリティ比較おすすめ5選｜SECOM・ALSOK・料金・補償を徹底解説",
+  title: "【2026年最新】ホームセキュリティ比較おすすめ5社｜月額3,000円〜・SECOMとALSOKどっちがお得？",
   description:
-    "SECOM・ALSOK・関電SOS・セコム・ジャパン・CSPなど主要ホームセキュリティ5社の月額料金・初期費用・駆けつけ時間・補償内容を徹底比較。戸建て・マンション・一人暮らし向けの選び方を解説。",
+    "SECOM・ALSOK・関電SOS・CSPなど主要ホームセキュリティ5社を月額料金・駆けつけ時間・補償内容で徹底比較。戸建て/マンション/一人暮らし別の最適プランと、初期費用0円で始めるレンタル型の裏技も解説。",
   alternates: { canonical: `${siteConfig.url}/guide/home-security-comparison` },
 };
 

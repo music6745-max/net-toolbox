@@ -6,9 +6,9 @@ import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 
 export const metadata: Metadata = {
-  title: "確定申告ソフトおすすめ3選【2026年最新】徹底比較｜選び方も解説",
+  title: "【2026年最新】確定申告ソフトおすすめ比較7選｜個人事業主の失敗しない選び方",
   description:
-    "確定申告に追われる個人事業主・副業の方へ。freee・弥生会計・マネーフォワードを料金/機能/e-Tax対応で徹底比較し作業を半減できる1本を解説します。",
+    "個人事業主・副業フリーランス向け、確定申告ソフト7選を料金・e-Tax対応・AI仕訳精度・インボイス対応で徹底比較。freee・弥生・マネフォの無料プランから法人向けまで、年5〜15万円の税理士費用を節約する選び方を公開。",
   alternates: { canonical: `${siteConfig.url}/guide/accounting-software-comparison` },
 };
 

@@ -4,9 +4,9 @@ import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "投資アプリおすすめ5選【2026年最新】徹底比較｜選び方も解説",
+  title: "【2026年最新】投資アプリ・投資信託比較おすすめ5選｜新NISA対応・初心者の失敗しない選び方",
   description:
-    "資産形成を始めたい初心者へ。SBI証券・楽天証券・マネックス証券・松井証券・PayPay証券を手数料/取扱商品/操作性で徹底比較し最初の1社を解説します。",
+    "投資信託を始めたい初心者必読。SBI証券・楽天証券・マネックス証券・松井証券・PayPay証券のクレカ積立還元率・取扱信託・新NISA対応を徹底比較。月3万円積立の20年後シミュレーションも解説。",
   alternates: { canonical: `${siteConfig.url}/guide/investment-app-comparison` },
 };
 
