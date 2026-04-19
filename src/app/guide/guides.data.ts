@@ -1907,6 +1907,7 @@ export const guides: Guide[] = [
   { slug: "credit-card-for-gold-beginner", title: "初めて作るゴールドカードおすすめ5選", description: "ゴールドカードデビューにおすすめの5枚を徹底比較", category: "マネー", readTime: "10分", icon: "🏆" },
   { slug: "nisa-for-beginners", title: "NISA初心者におすすめの始め方5ステップ", description: "証券会社選びから運用まで初心者向け完全ガイド", category: "マネー", readTime: "12分", icon: "📊" },
   { slug: "freelance-startup-bundle-2026", title: "【2026年】フリーランス独立スタートアップ完全バンドル", description: "会計ソフト・ビジネスカード・サーバー・FP相談・iDeCo等、独立に必要な10サービスを完全網羅", category: "独立・フリーランス", readTime: "15分", icon: "🚀" },
+  { slug: "inheritance-tax-preparation", title: "【2026年】相続税対策完全ガイド｜税理士費用と節税ワザ", description: "相続税の基礎・税理士費用相場・生前贈与・生命保険の非課税枠まで網羅", category: "相続・終活", readTime: "15分", icon: "📋" },
 ];
 
 // Genre mapping: maps slug to one of the top-level genres used in the filter UI.
@@ -2164,6 +2165,9 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
 
   // フリーランス独立バンドル
   "freelance-startup-bundle-2026": "仕事・スキル",
+
+  // 相続税対策
+  "inheritance-tax-preparation": "金融",
 };
 
 export function genreOf(slug: string): Genre {
