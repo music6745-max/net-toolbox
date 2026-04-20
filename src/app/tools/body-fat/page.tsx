@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [height, setHeight] = useState("170");
@@ -34,7 +35,33 @@ export default function Page() {
           <p className="text-xs text-muted mt-2">※BMI法による推定値です。正確な測定には体組成計をご使用ください。</p>
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>身長・体重・年齢・性別からBMI法で体脂肪率を推定。健康管理に。</p></div></section>
+      <ToolFAQSection
+        toolName="体脂肪率計算"
+        howTo={[
+          "身長・体重・年齢・性別を入力する",
+          "BMI法の計算式で推定体脂肪率が算出される",
+          "性別別の基準値と比較して健康状態を確認する",
+          "正確な測定には体組成計（家庭用1〜3万円）の使用を推奨",
+        ]}
+        faqs={[
+          {
+            question: "体脂肪率の健康基準値は？",
+            answer: "男性：痩せ10〜15%・標準15〜20%・軽肥満20〜25%・肥満25%以上。女性：痩せ20〜25%・標準25〜30%・軽肥満30〜35%・肥満35%以上。アスリートはさらに低い（男性5〜12%・女性12〜20%）。健康維持の目安は男性15〜20%・女性25〜30%が理想ゾーンです。",
+          },
+          {
+            question: "BMI法と体組成計どっちが正確？",
+            answer: "体組成計の方が圧倒的に正確。BMI法は身長・体重・年齢から統計的推定だが、筋肉量を考慮できない（筋肉質の人は過大評価される）。体組成計は生体インピーダンス法で電気抵抗を測定し精度高い、ただし水分量の影響があり入浴後・運動後は変動。毎朝同じ条件で測定が精度アップのコツです。",
+          },
+          {
+            question: "体脂肪を減らすベストな方法は？",
+            answer: "①カロリー赤字（消費>摂取）を1日300〜500kcal維持②有酸素運動（週3回×30〜60分のジョギング・ウォーキング）③筋トレ（週2回で基礎代謝UP）④高タンパク質食（体重×1.5〜2g/日）⑤糖質・脂質の過剰摂取避ける。月0.5〜1kgの体脂肪減が健康的、急激な減量はリバウンド・筋肉減リスクです。",
+          },
+          {
+            question: "男女で体脂肪率の基準が違うのはなぜ？",
+            answer: "女性は妊娠・授乳に備え、男性より体脂肪を多く蓄える生理的特性があります。女性ホルモン（エストロゲン）の影響で皮下脂肪が多く、男性は内臓脂肪（腹部）が多い傾向。同じBMI値でも体脂肪率は女性が5〜10%高いため、BMI法の計算式も性別で調整されています。",
+          },
+        ]}
+      />
       <AffiliateSection slug="body-fat" category="日常ツール" />
 
       <RelatedTools currentSlug="body-fat" category="日常ツール" />

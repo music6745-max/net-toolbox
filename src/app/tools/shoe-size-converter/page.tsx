@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [jp, setJp] = useState("26");
@@ -33,6 +34,33 @@ export default function Page() {
           <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">UK</div><div className="text-xl font-bold">{uk.toFixed(1)}</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="靴サイズ変換"
+        howTo={[
+          "性別を選択する（男性・女性で変換式が異なる）",
+          "日本サイズ（cm）を入力する",
+          "US・EU・UKのサイズが自動計算される",
+          "海外通販・旅行時の靴購入に活用する",
+        ]}
+        faqs={[
+          {
+            question: "日本と海外サイズの対応表は？",
+            answer: "男性：26cm→US 8.0・EU 42・UK 7.5。27cm→US 9.0・EU 43・UK 8.5。女性：23cm→US 6.5・EU 36.5・UK 6.0。24cm→US 7.5・EU 37.5・UK 7.0。ブランドによって1〜1.5サイズの誤差があるため、購入前にブランド公式のサイズ表で確認必須です。",
+          },
+          {
+            question: "サイズは靴の形状で変わりますか？",
+            answer: "変わります。同じサイズでもナイキ・アディダス・ニューバランス・バンズで足長・足幅が異なり、1サイズ上下で調整が必要な場合あり。特にナイキはやや細め、ニューバランスは幅広め。スポーツシューズは運動時の動きでワンサイズ大きめ選ぶのが一般的です。",
+          },
+          {
+            question: "海外通販で失敗しないコツは？",
+            answer: "①公式サイトのサイズガイドを必ず確認（ブランドごとに異なる）②レビューで「普段◯cmだが、このモデルは△cmがジャスト」等のコメントを参考に③返品可能なショップ（Amazon・Zappos等）を選ぶ④新品で初回購入時はワンサイズ多めに注文、家で試し履きが安全策です。",
+          },
+          {
+            question: "足長と靴サイズの関係は？",
+            answer: "日本は足長（cm）＝靴サイズ（cm）が基本。実際の足長よりも5〜10mm大きい靴を選ぶのが快適性のコツ（つま先に1cmの余裕）。幅広の方はEE・EEEサイズ、甲高の方はワイズ表示のあるブランド（ミズノ・アシックス・ヨネックス等の日本ブランド）がおすすめです。",
+          },
+        ]}
+      />
       <AffiliateSection slug="shoe-size-converter" category="日常ツール" />
       <RelatedTools currentSlug="shoe-size-converter" category="日常ツール" />
     </div>

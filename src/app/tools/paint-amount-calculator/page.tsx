@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [width, setWidth] = useState("4");
@@ -34,6 +35,33 @@ export default function Page() {
           <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">必要な塗料</div><div className="text-xl font-bold text-primary">{liters.toFixed(2)} L</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="塗料必要量計算"
+        howTo={[
+          "塗装面の幅（m）と高さ（m）を入力する",
+          "塗り回数を入力する（通常2回・耐久性重視なら3回）",
+          "塗料の塗布面積（m²/L）を入力する（缶に記載、水性塗料は8m²/L程度）",
+          "必要な塗料量（L）が自動計算される、余裕を見て1割多めに購入推奨",
+        ]}
+        faqs={[
+          {
+            question: "塗料の塗り回数は何回が良い？",
+            answer: "下塗り→中塗り→上塗りの3回塗りが基本（外壁・屋根）、室内なら下塗り＋上塗りの2回でOK。1回塗りではムラ・塗膜厚不足で耐久性大幅低下、プロの仕上がりには3回塗り推奨。エマルションペイント（水性）は2回、油性塗料・錆止め塗料は3回がスタンダードです。",
+          },
+          {
+            question: "塗料の種類による塗布面積の違いは？",
+            answer: "水性エマルションペイント：7〜10m²/L、油性ペイント：8〜12m²/L、シリコン塗料：6〜8m²/L、フッ素塗料：4〜6m²/L（高耐久）。凹凸の多い外壁は塗布面積が小さくなる（実質-20〜30%）、平滑な室内壁は仕様通り塗れます。",
+          },
+          {
+            question: "DIY塗装の費用相場は？",
+            answer: "室内壁（10㎡）塗り替え：塗料3L（5,000〜10,000円）＋ローラー・マスキングテープ（3,000円）＝計8,000〜13,000円。プロ施工なら3〜5万円、DIYで2〜4万円節約可能。外壁塗装は足場設置必要でDIY困難、プロ（100〜150万円）に依頼推奨です。",
+          },
+          {
+            question: "塗装に必要な道具は？",
+            answer: "①ローラー（大面積）・ハケ（細部）②マスキングテープ（養生）③養生シート（床・家具保護）④トレー（塗料注ぎ込み）⑤脚立（高所）⑥下地処理用（サンドペーパー・パテ）⑦ペイントうすめ液（油性塗料の場合）。ホームセンターで全部揃えて5,000〜10,000円、再利用可能なので長期的にはお得です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="paint-amount-calculator" category="日常ツール" />
       <RelatedTools currentSlug="paint-amount-calculator" category="日常ツール" />
     </div>
