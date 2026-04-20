@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 const escapeHtml = (s: string) => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
 const unescapeHtml = (s: string) => s.replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#039;/g,"'");
@@ -32,7 +33,33 @@ export default function HtmlEscapePage() {
           </div>
         )}
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">HTMLエスケープツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>HTMLコードを入力し、「エスケープ」で特殊文字を安全な文字参照に変換します。</p><p>「アンエスケープ」で文字参照を元の文字に戻します。XSS対策やブログ記事の作成に便利です。</p></div></section>
+      <ToolFAQSection
+        toolName="HTMLエスケープ"
+        howTo={[
+          "テキストエリアにHTMLコードまたはエスケープ済み文字列を入力する",
+          "「エスケープ」で特殊文字（＜・＞・&・\"・'）を安全な文字参照に変換する",
+          "「アンエスケープ」で文字参照を元の文字に戻す",
+          "出力結果を「コピー」ボタンでクリップボードにコピーして活用する",
+        ]}
+        faqs={[
+          {
+            question: "HTMLエスケープとは何ですか？",
+            answer: "HTMLエスケープとは、HTML上で特別な意味を持つ文字（＜・＞・&等）を文字参照（&lt;・&gt;・&amp;等）に変換すること。これによりブラウザが記号をタグや属性の一部ではなく単なる文字として表示するようになります。XSS（クロスサイトスクリプティング）攻撃の防止、プログラムコードのブログ記事化等、Web開発に必須の処理です。",
+          },
+          {
+            question: "どんな時にエスケープが必要？",
+            answer: "①ユーザー入力をHTMLに表示する時（XSS対策として必須）②ブログ記事でHTMLコードを紹介する時③JSONやXMLの中にHTMLを入れる時④メールHTMLでコード引用する時。エスケープしないと、スクリプト実行・表示崩れ・セキュリティホールが発生します。",
+          },
+          {
+            question: "主要な文字参照の一覧は？",
+            answer: "&lt;（＜）・&gt;（＞）・&amp;（&）・&quot;（\"）・&#039;（'）が基本5文字。ほかに&nbsp;（半角スペース）・&copy;（©）・&reg;（®）・&trade;（™）・&yen;（¥）・&middot;（・）等。日本語テキストも文字参照（&#x3042;等）で表現可能ですが、UTF-8ならそのまま使用できます。",
+          },
+          {
+            question: "React・Vue等のフレームワークでも必要？",
+            answer: "React・Vue・Angular等のモダンフレームワークは自動エスケープ機能あり、`{text}`と書けば自動的にエスケープ（XSS防止）。ただし`dangerouslySetInnerHTML`（React）・`v-html`（Vue）を使う場合は手動エスケープ必須。ユーザー入力を HTML として解釈させる時は、DOMPurify 等のサニタイズライブラリ併用が安全です。",
+          },
+        ]}
+      />
 
 
       <AffiliateSection slug="html-escape" category="開発ツール" />

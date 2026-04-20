@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [pref, setPref] = useState("東京");
@@ -38,6 +39,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 2024年10月改定ベース。最新情報は厚生労働省発表をご確認ください。</p>
       </div>
+      <ToolFAQSection
+        toolName="都道府県別最低賃金チェック"
+        howTo={[
+          "都道府県をプルダウンから選ぶ",
+          "選んだ地域の最低賃金（時給）が表示される",
+          "アルバイト・パートの時給が法定最低賃金以上か確認する",
+          "転職・引越し時の時給相場の参考にも活用できる",
+        ]}
+        faqs={[
+          {
+            question: "最低賃金は誰に適用される？",
+            answer: "全ての労働者（正社員・パート・アルバイト・契約社員・派遣社員）に適用されます。フリーランス（業務委託契約）は対象外、副業の成果報酬型も対象外。違反した企業は労働基準監督署の指導・是正勧告、悪質な場合は罰則（50万円以下の罰金）。給与明細で時給換算をチェックする習慣が重要です。",
+          },
+          {
+            question: "地域別の最低賃金格差は？",
+            answer: "2024年10月改定：最高東京1,163円・最低沖縄896円で差267円（30%差）。フルタイム（月160時間）なら月5万円・年60万円の地域差。転職時には地域差を考慮、首都圏・大阪周辺が高時給、地方は低めだが家賃・生活費も安いため、生活コスト込みで比較する必要があります。",
+          },
+          {
+            question: "最低賃金はいつ改定される？",
+            answer: "毎年10月1日前後に改定（厚生労働省発表）。近年は毎年3〜5%の上昇トレンド、2024年は+51円（東京）の大幅アップ。物価上昇・人手不足を背景に今後も引上げ予想、2030年までに全国加重平均1,500円超が政府目標。企業側は時給競争でさらなる引上げ圧力。",
+          },
+          {
+            question: "時給が最低賃金を下回ったら？",
+            answer: "労働基準法違反、企業側に是正義務。対処法：①労働基準監督署に相談（無料・匿名可）②時給の差額請求（過去2年分）③不利益取扱い禁止条項で守られる。最低賃金+100〜200円が一般的なパート時給相場、大幅に下回る場合は転職検討も合理的です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="minimum-wage-checker" category="日常ツール" />
       <RelatedTools currentSlug="minimum-wage-checker" category="日常ツール" />
     </div>

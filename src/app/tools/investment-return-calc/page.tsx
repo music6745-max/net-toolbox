@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [buy, setBuy] = useState("1000000");
@@ -37,6 +38,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted">※ 税率20.315%で計算。NISA口座なら非課税。</p>
       </div>
+      <ToolFAQSection
+        toolName="投資リターン計算"
+        howTo={[
+          "購入額（円）を入力する",
+          "売却額（円）を入力する",
+          "保有年数を入力する",
+          "損益・トータルリターン・年率リターン・税引後利益が自動計算される",
+        ]}
+        faqs={[
+          {
+            question: "年率リターンの計算式は？",
+            answer: "(売却額/購入額)^(1/保有年数) - 1 で計算（幾何平均）。例：100万円→130万円・3年なら、(130/100)^(1/3)-1＝9.14%。トータルリターン30%は年率リターン9.14%に相当、複利ベースの年率。投資信託の運用報告書でも同じ式で計算されます。",
+          },
+          {
+            question: "株式投資の平均リターンは？",
+            answer: "S&P500（米国株）：年平均10〜11%（1970〜2024年）、全世界株：年平均8〜9%、日経平均：年平均5〜7%。配当込みリターンなら+2〜3%加算、新NISA口座で運用すれば非課税で最大化。ただし過去実績は将来を保証しないため、長期分散投資＋下落耐性が重要です。",
+          },
+          {
+            question: "NISA口座の税金メリットは？",
+            answer: "新NISA口座内の売却益・配当は全額非課税（通常20.315%課税）。1000万円の利益なら、通常課税で203万円の税金、NISA口座なら0円。30年複利運用で比較すると、NISA組の資産は通常課税組の1.3〜1.5倍に。年360万円・生涯1800万円の枠をフル活用が資産形成の鉄則です。",
+          },
+          {
+            question: "投資リターンを最大化する方法は？",
+            answer: "①新NISA・iDeCo満額活用（非課税効果）②低コスト投資信託選定（信託報酬0.1%以下）③長期保有（複利効果最大化）④ドルコスト平均法（高値掴み回避）⑤再投資（配当・分配金で複利加速）⑥税引き後の最終利益で評価。短期売買より長期分散が圧倒的に有利な理由です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="investment-return-calc" category="日常ツール" />
       <RelatedTools currentSlug="investment-return-calc" category="日常ツール" />
     </div>
