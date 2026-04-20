@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [gender, setGender] = useState("male");
@@ -51,6 +52,33 @@ export default function Page() {
           <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">消費カロリー(TDEE)</div><div className="text-xl font-bold text-primary">{Math.round(tdee)} kcal/日</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="基礎代謝量(BMR)・消費カロリー計算"
+        howTo={[
+          "性別・体重・身長・年齢を入力",
+          "活動レベルを選択（デスクワークは1.2、週3-5回運動は1.55等）",
+          "基礎代謝（BMR）と1日の総消費カロリー（TDEE）が自動計算される",
+          "ダイエット時は摂取カロリー<TDEE、増量時は摂取>TDEEに設定",
+        ]}
+        faqs={[
+          {
+            question: "Harris-Benedict式と国立健康・栄養研究所式どちらが正確？",
+            answer: "日本人にはNIH式（国立健康・栄養研究所式）がより適合的と言われますが、Harris-Benedict式も国際標準で広く使われます。実測値との誤差は±10%程度、ダイエット・増量の参考値として十分な精度です。",
+          },
+          {
+            question: "基礎代謝(BMR)と消費カロリー(TDEE)の違いは？",
+            answer: "BMRは「何もしない状態（寝ている）」で消費する最低カロリー、TDEEはBMR×活動係数で「実際の1日の消費カロリー」。ダイエットはTDEE基準で計画、BMR以下に摂取カロリーを下げると代謝低下リスク。",
+          },
+          {
+            question: "1kg減量に必要なカロリーは？",
+            answer: "体脂肪1kg=約7200kcal。月1kg減量なら日240kcal減、月2kg減量なら日480kcal減。TDEE2000kcalの人なら、1600〜1760kcal摂取＋有酸素運動で月1〜2kg減量が健康的ペース（体重の3%以内）です。",
+          },
+          {
+            question: "活動レベルの判定基準は？",
+            answer: "1.2：デスクワーク中心・運動ほぼなし。1.375：週1-3回の軽い運動（ウォーキング等）。1.55：週3-5回の普通の運動（ジョギング・筋トレ等）。1.725：週6-7回の激しい運動。1.9：肉体労働・アスリート級。過大評価しがちなので1段階控えめに設定推奨です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="basal-metabolic-rate" category="日常ツール" />
       <RelatedTools currentSlug="basal-metabolic-rate" category="日常ツール" />
     </div>

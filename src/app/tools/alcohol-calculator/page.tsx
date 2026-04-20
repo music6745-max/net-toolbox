@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [weight, setWeight] = useState("60");
@@ -53,6 +54,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 参考値です。個人差があります。飲酒運転は法律で禁止されています。</p>
       </div>
+      <ToolFAQSection
+        toolName="アルコール分解時間計算"
+        howTo={[
+          "体重・性別を入力",
+          "お酒の種類（ビール・日本酒・焼酎等）を選択",
+          "飲酒量（ml）を入力",
+          "純アルコール量・推定血中濃度・分解時間目安が自動計算される",
+        ]}
+        faqs={[
+          {
+            question: "アルコール分解時間の計算式は？",
+            answer: "Widmark（ウィドマーク）法を使用：血中濃度 = 純アルコール量 ÷ (体重 × 性別係数) ×100。男性0.68・女性0.55、分解速度は平均時速0.015%。実際は肝機能・体調・飲食状況で±30%変動するため参考値です。",
+          },
+          {
+            question: "飲酒運転の基準は？",
+            answer: "呼気アルコール濃度0.15mg/L以上で酒気帯び運転、0.25mg/L以上で重い罰則（免許取消・最高懲役5年）。血中濃度換算で0.03〜0.05%。ビール中瓶1本（500ml）で約0.05%に達することもあり、「1杯だけ」でも運転NG。",
+          },
+          {
+            question: "時間経過で必ず抜けますか？",
+            answer: "時速0.015%（血中濃度）の分解速度は平均で、個人差・食事・水分で前後。加齢・肝機能低下で分解遅くなる傾向。翌朝までアルコール残存する「二日酔い運転」で事故・検挙される事例多発、前夜の飲酒量にも注意が必要です。",
+          },
+          {
+            question: "適正飲酒量は？",
+            answer: "厚労省「健康日本21」では、純アルコール量20g/日（ビール500ml・日本酒1合・ワイン200ml）が節度ある飲酒量。週150g以下が健康リスク低い範囲、超過で肝臓・高血圧・がんリスク増。休肝日（週2日以上）も推奨されます。",
+          },
+        ]}
+      />
       <AffiliateSection slug="alcohol-calculator" category="日常ツール" />
       <RelatedTools currentSlug="alcohol-calculator" category="日常ツール" />
     </div>

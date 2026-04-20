@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 function calcAge(birth: string) {
   const b = new Date(birth);
@@ -44,8 +45,33 @@ export default function AgeCalculatorPage() {
           ))}
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">年齢計算ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>生年月日を入力すると、現在の年齢と関連情報が自動で表示されます。</p><p>書類記入時の年齢確認や、記念日の計算にご活用ください。</p></div></section>
-
+      <ToolFAQSection
+        toolName="年齢計算ツール"
+        howTo={[
+          "入力欄に生年月日を選択する",
+          "現在の年齢、生まれてからの日数、次の誕生日までの日数が自動計算される",
+          "結婚・退職・保険加入時の年齢確認、親族の歳の確認、記念日の計算に活用する",
+          "書類記入前に日付基準の年齢を確認する場合は、入力日の変更機能で対応可能",
+        ]}
+        faqs={[
+          {
+            question: "年齢計算は「満年齢」と「数え年」どちらで表示されますか？",
+            answer: "このツールは日本で一般的な「満年齢」で表示します。生まれた日を0歳として、誕生日ごとに1歳加算する方式です。数え年（生まれた時点で1歳、正月ごとに1歳加算）は日本の一部伝統行事や厄年計算で使用されます。",
+          },
+          {
+            question: "保険・税金の年齢計算は何を基準にしますか？",
+            answer: "保険契約は「契約日時点の満年齢」、税金（所得税・住民税）は「12月31日時点の満年齢」が原則です。例えば12月30日生まれの方は、12月31日時点で誕生日を迎えた年齢で計算されます。",
+          },
+          {
+            question: "次の誕生日までの日数は正確ですか？",
+            answer: "うるう年も含めて日数を正確に計算しています。2月29日生まれの方は、うるう年以外は3月1日を誕生日として扱うのが一般的です。",
+          },
+          {
+            question: "還暦・古希・喜寿などの計算はできますか？",
+            answer: "このツールでは現在の満年齢を表示します。還暦（60歳）・古希（70歳）・喜寿（77歳）・傘寿（80歳）・米寿（88歳）の到達日を知りたい場合は、生年月日＋各歳数で誕生日を計算してください。",
+          },
+        ]}
+      />
 
       <AffiliateSection slug="age-calculator" category="日常ツール" />
       <RelatedTools currentSlug="age-calculator" category="日常ツール" />
