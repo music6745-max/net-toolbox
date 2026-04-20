@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [dist, setDist] = useState("42.195");
@@ -31,7 +32,33 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>距離・タイムからペース(分/km)を計算。マラソン・ジョギングの記録管理に。</p></div></section>
+      <ToolFAQSection
+        toolName="ランニングペース計算"
+        howTo={[
+          "走った距離（km）を入力する（フルマラソン42.195km、ハーフ21.1km、10km等）",
+          "タイム（時間・分）を入力する",
+          "1kmあたりのペース（分/km）と平均速度（km/h）が自動計算される",
+          "目標タイムから必要ペースを逆算して、トレーニングプランに活用する",
+        ]}
+        faqs={[
+          {
+            question: "フルマラソンの目標タイム別ペースは？",
+            answer: "サブ3（2時間59分59秒以内）：ペース4分15秒/km・平均14.0km/h。サブ3.5：4分58秒/km・12.0km/h。サブ4（4時間以内）：5分41秒/km・10.6km/h。サブ4.5：6分24秒/km・9.4km/h。サブ5：7分06秒/km・8.5km/h。初心者の完走目標（6時間）：8分32秒/km・7.0km/h。練習時の目標ペースの目安として活用してください。",
+          },
+          {
+            question: "ジョギングの理想ペースは？",
+            answer: "初心者：6〜7分/km（9〜10km/h）が会話できる程度の有酸素運動ペース。中級者：5〜6分/km、上級者：4〜5分/km。「息が弾む程度＆会話できる」ペースが有酸素運動のスイートスポット、脂肪燃焼＆心肺機能向上に最適。最大心拍数の60〜70%（180-年齢を目安に）で走るのがジョギングです。",
+          },
+          {
+            question: "ペースを上げるトレーニング方法は？",
+            answer: "①インターバル走：1km全力×3〜5本＋ジョグ回復（週1回）②ビルドアップ走：徐々にペースを上げる（週1回）③閾値走：レースペースより10秒遅いペースで30〜60分（週1回）④ロング走：LSDペース（7〜8分/km）で90分以上（週1回）。週4〜5回の練習でサブ4達成まで6ヶ月〜1年、サブ3には2〜3年の継続が目安です。",
+          },
+          {
+            question: "マラソンの世界記録・日本記録は？",
+            answer: "世界記録（男子）：2時間00分35秒（ケルビン・キプタム・2023年シカゴ）、平均ペース2分51秒/km・21.0km/h。世界記録（女子）：2時間11分53秒（ルース・チェプンゲティッチ・2024年シカゴ）。日本記録（男子）：2時間04分56秒（鈴木健吾・2021年）、日本記録（女子）：2時間18分59秒（野口みずき・2005年）。人類の限界に挑戦する超人ペースです。",
+          },
+        ]}
+      />
       <AffiliateSection slug="pace-calculator" category="日常ツール" />
 
       <RelatedTools currentSlug="pace-calculator" category="日常ツール" />

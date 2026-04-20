@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
 
@@ -24,7 +24,34 @@ export default function Page() {
           </table>
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>A判・B判・はがき等の用紙サイズをmm/inch/pxで一覧表示。印刷に便利。</p></div></section>
+      <ToolFAQSection
+        toolName="用紙サイズ一覧"
+        howTo={[
+          "一覧表から使用したい用紙規格（A4・B5・はがき等）を選ぶ",
+          "mm単位の寸法で印刷機のプロパティや用紙設定に入力する",
+          "インチ表記が必要な海外向け印刷物は右列のinch値を参考にする",
+          "名刺・はがき等の既定サイズも含むため、テンプレート作成時の参照に活用できる",
+        ]}
+        faqs={[
+          {
+            question: "A判とB判の違いは何ですか？",
+            answer: "A判はISO国際規格（ドイツ発祥）、B判は日本独自のJIS規格（美濃紙サイズ由来）です。A4（210×297mm）は世界標準のオフィス用紙、B5（182×257mm）は日本のノートや学校配布物でよく使われます。A0とB0の面積比はおよそ1:1.5で、B判のほうが若干大きい構成になっています。",
+          },
+          {
+            question: "A4用紙の正確な寸法は？",
+            answer: "A4は210×297mm（縦長）、面積は62,370平方mmです。ピクセル換算は印刷時DPIによって異なり、一般的な300DPIなら2480×3508px、72DPI（Web向け）なら595×842pxとなります。Microsoft Word・Excel・PDFはデフォルトでA4対応です。",
+          },
+          {
+            question: "はがき・名刺の標準サイズは？",
+            answer: "日本の郵便はがきは100×148mm（A6とほぼ同サイズ）、名刺は55×91mm（4号サイズ）が標準です。海外名刺は国によって異なり、アメリカは2×3.5インチ（約51×89mm）、ヨーロッパは85×55mm（クレジットカードサイズ）が一般的です。",
+          },
+          {
+            question: "印刷時の余白はどれくらい必要ですか？",
+            answer: "一般的な家庭用プリンターは上下左右3〜5mmの余白が必要です。業務用プリンター・印刷会社に依頼する場合は「フチなし印刷」も可能ですが、その場合は用紙サイズより3mm程度大きくデザインし「トンボ」を付ける必要があります。冊子製本時は綴じ代として15〜20mm余分に確保してください。",
+          },
+        ]}
+      />
+
       <AffiliateSection slug="paper-size" category="日常ツール" />
 
       <RelatedTools currentSlug="paper-size" category="日常ツール" />
