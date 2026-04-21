@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [size, setSize] = useState("60");
@@ -41,6 +42,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 目安です。実際の料金は配送会社・地域・キャンペーンで変動します。</p>
       </div>
+      <ToolFAQSection
+        toolName="宅配便料金比較"
+        howTo={[
+          "荷物のサイズ（3辺合計：60〜200）を選択",
+          "重量（kg）を入力",
+          "ヤマト運輸・佐川急便・ゆうパックの料金が並んで表示",
+          "最安の業者を選んで送料節約",
+        ]}
+        faqs={[
+          {
+            question: "サイズはどう測る？",
+            answer: "縦・横・高さの3辺合計（cm）。60サイズ（3辺合計60cm以内）、80サイズ（80cm以内）、100サイズ、120サイズと段階的。1辺でも限界超えなら1つ上のサイズになる。重量も制限あり、60サイズ2kg・80サイズ5kg・100サイズ10kgが目安、サイズ＆重量両方チェックが必要です。",
+          },
+          {
+            question: "メルカリ・ラクマの配送はどれが安い？",
+            answer: "メルカリ：らくらくメルカリ便（ヤマト提携）・ゆうゆうメルカリ便（日本郵便提携）で大幅割引。60サイズ750円、80サイズ870円、100サイズ1070円。通常料金の半額程度で、出品者・購入者とも送料削減、匿名配送も可能、個人間取引の定番です。",
+          },
+          {
+            question: "大型荷物（200サイズ超）は？",
+            answer: "200サイズ超・重量30kg超は特別配送サービスが必要。ヤマト「らくらく家財宅急便」、佐川「家財便」等で家具・家電対応、設置サービス込み（+3000〜5000円）も選択可。大型家具引越しはクロネコヤマト・サカイ引越センターの単品配送プランがコスパ良いです。",
+          },
+          {
+            question: "国際配送の料金は？",
+            answer: "EMS（日本郵便）：アメリカまで1kg 3,900円、ヨーロッパ4,400円。DHL Express：1kg 6,000〜8,000円（早い）。FedEx：1kg 5,000〜7,000円。価格はEMS最安、スピードはDHL最速。文書・小型物はEMS、大型・急ぎはDHLが一般的な使い分けです。",
+          },
+        ]}
+      />
       <AffiliateSection slug="shipping-cost-comparator" category="日常ツール" />
       <RelatedTools currentSlug="shipping-cost-comparator" category="日常ツール" />
     </div>

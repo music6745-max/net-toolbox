@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [income, setIncome] = useState("5000000");
@@ -42,7 +43,33 @@ export default function Page() {
         </Link>
       </section>
 
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>年収を入力すると手取り月収（額面の約80%）から家賃の目安を計算します。一般的に手取りの25%以内が安全圏、33%が上限とされています。</p></div></section>
+      <ToolFAQSection
+        toolName="家賃適正額計算"
+        howTo={[
+          "年収（額面・円）を入力",
+          "希望の家賃比率（%）を入力（25%が安全圏）",
+          "推奨家賃・安全圏（25%）・上限（33%）が計算",
+          "引越し・更新のタイミングで家賃見直し",
+        ]}
+        faqs={[
+          {
+            question: "家賃は年収の何割が適正？",
+            answer: "手取り月収の25%が安全圏、30%超は危険圏。額面年収500万なら手取り月33万円、適正家賃8〜10万円。生活費・貯蓄・娯楽のバランスを考慮し、25%以内を維持すると家計が安定。家賃が高すぎると投資・貯蓄に回せない悪循環、慎重な物件選びが重要です。",
+          },
+          {
+            question: "首都圏の家賃相場は？",
+            answer: "東京23区：1R 8〜12万円、1LDK 12〜18万円、2LDK 18〜30万円。都心3区（千代田・中央・港）：1R 12〜15万円。郊外（23区外・神奈川・埼玉）：1R 6〜9万円。会社から遠いと通勤手当もらえる範囲で家賃節約、徒歩10分以内駅近で利便性確保する選択が多数派です。",
+          },
+          {
+            question: "家賃節約のコツは？",
+            answer: "①駅徒歩10〜15分物件で1〜2割安く②築15年以上で2〜3割安く③UR賃貸（敷礼・更新料・仲介なし）④都営住宅・公社住宅（所得制限内）⑤フリーレント物件（初月家賃無料）⑥更新時の家賃交渉（周辺相場下落時）。月1万円の家賃削減で年12万円、新NISAに回せば資産形成加速します。",
+          },
+          {
+            question: "賃貸vs持家どっち？",
+            answer: "子育て前・転勤族なら賃貸、定住＆資産形成なら持家。30年ローン3500万円の住宅（月10万円返済）vs 賃貸12万円の比較、ローン控除・住宅資産価値を入れると持家が20〜30年で有利。ただし住宅ローンは固定費で身動き取りにくい、柔軟性重視なら賃貸も有力です。",
+          },
+        ]}
+      />
 
       <AffiliateSection slug="rent-budget-calculator" category="日常ツール" />
       <RelatedTools currentSlug="rent-budget-calculator" category="日常ツール" />

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [principal, setPrincipal] = useState("1000000");
@@ -43,6 +44,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 税率は20.315%で計算。マル優等の非課税制度は考慮していません。</p>
       </div>
+      <ToolFAQSection
+        toolName="定期預金・複利計算"
+        howTo={[
+          "元本（預入額・円）を入力",
+          "年利（%）を入力（普通預金0.001%・定期1%前後）",
+          "期間（年）・複利頻度を選択",
+          "税引後の満期額が自動計算",
+        ]}
+        faqs={[
+          {
+            question: "主要銀行の定期預金金利は？",
+            answer: "2026年時点：メガバンク（三菱UFJ・みずほ・三井住友）年0.002〜0.02%、ネット銀行（あおぞら銀行 BANK支店・住信SBI・楽天）年0.2〜0.5%、一部キャンペーンで1%超（スタートアップ定期・楽天定期預金特別金利）。金利差100倍以上、ネット銀行一択が合理的です。",
+          },
+          {
+            question: "複利と単利の違いは？",
+            answer: "単利：元本のみに利息計算、毎年同額の利息。複利：利息を元本に組入れて計算、時間とともに元本が増加。100万円×年1%×30年なら、単利130万円・複利135万円。年利5%なら単利250万円・複利432万円と差が急拡大、長期運用ほど複利の恩恵が大きいです。",
+          },
+          {
+            question: "預金と投資どっちが良い？",
+            answer: "短期（〜3年）の使途決まった資金は預金、長期（10年以上）は投資が鉄則。100万円を20年運用で、預金（年0.5%）110万円 vs 新NISA（年7%）386万円、差額276万円。ただし生活防衛資金6ヶ月分は投資せず預金、残りを投資に回す配分が王道戦略です。",
+          },
+          {
+            question: "定期預金の税金は？",
+            answer: "利息に20.315%課税（所得税15.315%＋住民税5%）源泉徴収。100万円×年1%×1年の利息1万円に2031円の税金、手取り7,969円。新NISA口座なら非課税だが定期預金はNISA対象外、マル優（高齢者・障害者の非課税枠350万円）のみ例外的に非課税となります。",
+          },
+        ]}
+      />
       <AffiliateSection slug="deposit-interest-calc" category="日常ツール" />
       <RelatedTools currentSlug="deposit-interest-calc" category="日常ツール" />
     </div>
