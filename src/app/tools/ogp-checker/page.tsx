@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function OgpCheckerPage() {
   const [url, setUrl] = useState("");
@@ -49,7 +50,33 @@ export default function OgpCheckerPage() {
           </div>
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">OGP確認ツールの使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>OGP（Open Graph Protocol）は、SNSでURLをシェアした際の表示内容を制御するメタタグです。</p><p>Facebook DebuggerでURLを入力すると、実際のOGP表示を確認できます。</p></div></section>
+      <ToolFAQSection
+        toolName="OGP確認"
+        howTo={[
+          "確認したいURLを入力",
+          "Facebook Debuggerで実際のOGP表示をチェック",
+          "必須OGPタグの実装例を参照",
+          "SNSシェア時の表示改善に活用",
+        ]}
+        faqs={[
+          {
+            question: "OGPタグが設定されないと？",
+            answer: "SNSでURLシェア時、画像なしのテキストリンクのみ表示、クリック率が50%以上低下。Twitter/X、Facebook、LINE、Slack等で自動的にOGPデータ取得＆カード表示、CTR向上のため全Webサイトで必須設定。WordPressならYoast SEO・All in One SEOプラグインで自動設定可能です。",
+          },
+          {
+            question: "画像サイズの推奨は？",
+            answer: "1200×630px（1.91:1比率）、ファイルサイズ300KB以内が理想。Twitter/X：1200×675px、LinkedIn：1200×627px、WhatsApp：300×200px以上。デフォルト画像を用意＋記事ごとに個別画像（eyecatch）設定で、SNSでの視認性大幅向上、ブログ記事のCTR+20〜30%UP実証されています。",
+          },
+          {
+            question: "必須タグは？",
+            answer: "og:title（タイトル）、og:description（説明）、og:image（画像URL）、og:url（ページURL）、og:type（website・article等）。Twitter Cardも別途設定（twitter:card・twitter:site）、SNSプラットフォームごとの最適化が重要。最低限のOGPセット＋Twitter Card実装で、SNS経由トラフィック最大化できます。",
+          },
+          {
+            question: "確認ツールは何を使う？",
+            answer: "Facebook Sharing Debugger（最定番）、Twitter Card Validator（Twitter用）、LinkedIn Post Inspector、Open Graph Check（ogp.buka.jp）等。キャッシュクリア機能も重要、OGP更新後は「Scrape Again」でキャッシュリセット必須。本ツールから主要サービスへのリンク提供しています。",
+          },
+        ]}
+      />
       <AffiliateSection slug="ogp-checker" category="開発ツール" />
       <RelatedTools currentSlug="ogp-checker" category="開発ツール" />
     </div>

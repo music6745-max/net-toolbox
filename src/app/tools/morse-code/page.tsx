@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 const MORSE: Record<string, string> = {
   A: ".-", B: "-...", C: "-.-.", D: "-..", E: ".", F: "..-.", G: "--.",
@@ -43,14 +44,33 @@ export default function Page() {
         <textarea value={input} onChange={e => setInput(e.target.value)} placeholder={mode === "toMorse" ? "テキストを入力..." : "モールス信号を入力（スペース区切り）..."} className="w-full border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" rows={3} />
         {input && <div className="mt-4 p-4 bg-background rounded-lg"><p className="text-sm font-mono break-all">{convert()}</p></div>}
       </div>
-      <section className="mt-10">
-        <h2 className="text-lg font-bold mb-3">使い方</h2>
-        <div className="text-sm text-muted space-y-2">
-          <p>1. 変換モードを選択します（テキスト→モールス or モールス→テキスト）</p>
-          <p>2. テキストまたはモールス信号を入力すると、リアルタイムで変換されます。</p>
-          <p>3. モールス信号の各文字はスペースで区切り、単語は「/」で区切ります。</p>
-        </div>
-      </section>
+      <ToolFAQSection
+        toolName="モールス信号変換"
+        howTo={[
+          "変換モード（テキスト→モールス or モールス→テキスト）を選択",
+          "テキスト or モールス信号を入力",
+          "リアルタイムで変換結果を表示",
+          "モールス信号は文字間スペース、単語間「/」で区切る",
+        ]}
+        faqs={[
+          {
+            question: "モールス信号の歴史は？",
+            answer: "1836年サミュエル・モールス考案、1840年に電信で実用化。第一次世界大戦・第二次世界大戦で軍事通信の主流、船舶の遭難信号（SOS：...−−−...）として国際標準化。現在はGPS・衛星通信に置換されたが、アマチュア無線・非常通信で今も使用、緊急時の「覚えていて損しない知識」です。",
+          },
+          {
+            question: "SOSはなぜ...−−−...？",
+            answer: "打電しやすく・聞き取りやすいシンプルな信号として国際協定で採用（1908年）。S（...）・O（---）・S（...）は明確な区別、遭難信号として標準化。「Save Our Souls」「Save Our Ship」は後付けの解釈、本来は「救助信号として識別しやすい」純粋な技術的理由で選定された記号です。",
+          },
+          {
+            question: "覚えるコツは？",
+            answer: "①よく使う文字から覚える（E=.、T=-、S=...等）②リズムで覚える（トン・ツー・トントン等）③アプリ（Morse Trainer・Ham Radio Prep）で練習④自分の名前をモールス変換して反復。1日15分練習で1ヶ月で全アルファベット習得可能、アマチュア無線資格取得にも直結する知識です。",
+          },
+          {
+            question: "実用的な使い道は？",
+            answer: "①アマチュア無線通信（CQ呼出等）②緊急時の光信号（懐中電灯でSOS）③軍用訓練④スマホ通知音のカスタマイズ⑤エンタメ（映画・ゲームの演出）。実用性は限定的だが、知っていると非常時の自己救済に役立つ、サバイバル知識として教える学校も増加中です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="morse-code" category="テキスト" />
 
       <RelatedTools currentSlug="morse-code" category="テキスト" />

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [oneway, setOneway] = useState("60");
@@ -42,14 +43,33 @@ export default function Page() {
         </div>
       </div>
 
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>通勤時間を時給換算することで、長時間通勤の本当のコストが見えてきます。リモートワーク可能な転職や職住近接への引越し判断の参考にしてください。</p></div></section>
-
-      <section className="mt-10 mb-6">
-        <Link href="/guide/women-job-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
-          <div className="font-bold text-sm mb-1">働き方を見直す転職ガイドを読む</div>
-          <p className="text-xs text-muted">リモート・時短対応の求人情報 →</p>
-        </Link>
-      </section>
+      <ToolFAQSection
+        toolName="通勤時間予算計算"
+        howTo={[
+          "片道通勤時間（分）を入力",
+          "週の出社日数を入力",
+          "あなたの時給換算（年収÷1800時間）を入力",
+          "想定勤続年数を入力、機会損失額が計算される",
+        ]}
+        faqs={[
+          {
+            question: "長時間通勤の経済損失は？",
+            answer: "片道1時間・週5日×10年の場合、年間通勤時間480時間＝60労働日分、時給2,500円で1,200万円の機会損失。睡眠・家族時間・自己投資時間も失う、健康面でも心臓病・うつ病リスク30%UP（米国研究）。職住近接or リモートワークで年数百万円の時間価値を取り戻せます。",
+          },
+          {
+            question: "リモートワーク転職のメリットは？",
+            answer: "①通勤時間ゼロ＝年480時間の自由時間②昼休み活用（家事・ジム）③服装自由で被服費削減④ランチ代削減（年20〜30万円）⑤家賃安い郊外住まい可能⑥家族との時間増加。年収下がっても総合的な生活価値UP、20〜30代の転職先選定ポイントとして重要視されています。",
+          },
+          {
+            question: "職住近接のメリットは？",
+            answer: "徒歩通勤10分：年2,000時間の自由時間、健康効果も（毎日運動）。ただし都心部家賃高い（月15〜25万円）、通勤1時間圏の郊外（月8〜12万円）との差額年100万円。通勤時間×時給で損益分岐点計算、本ツールで数値化して最適な住居選びできます。",
+          },
+          {
+            question: "時給換算の計算方法は？",
+            answer: "年収÷年間労働時間（約1800時間）。年収400万→時給2,222円、年収600万→3,333円、年収800万→4,444円、年収1000万→5,555円。残業・副業込みなら実質時給はさらに低下、正確な評価には総労働時間での再計算が必要、キャリアアップ判断の基準になります。",
+          },
+        ]}
+      />
 
       <AffiliateSection slug="commute-time-budget" category="日常ツール" />
       <RelatedTools currentSlug="commute-time-budget" category="日常ツール" />
