@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [target, setTarget] = useState("2027-01-01");
@@ -41,6 +42,33 @@ export default function Page() {
           </>
         )}
       </div>
+      <ToolFAQSection
+        toolName="日付カウントダウン"
+        howTo={[
+          "対象日付を選択（誕生日・記念日・イベント・試験日等）",
+          "現在日からの残り日数／経過日数が自動計算",
+          "週数・月数でも表示、中期・長期の計画立てに活用",
+          "ブラウザブックマークで毎日チェックも",
+        ]}
+        faqs={[
+          {
+            question: "どんな場面で使う？",
+            answer: "①誕生日・記念日までの日数②結婚式・卒業式・入学式まで③受験・資格試験まで④旅行・イベント出発まで⑤ダイエット・目標達成の期限管理⑥赤ちゃんの出産予定日まで⑦新居引越しまで。人生の節目・目標管理・モチベーション維持に役立ちます。",
+          },
+          {
+            question: "日付管理アプリのおすすめは？",
+            answer: "Googleカレンダー（無料・共有可能）、Apple純正カレンダー（iOS統合）、Timepage（ビジュアル重視）、Calendly（予約・会議調整）、Notion（タスク統合）。日常のスケジュール管理はGoogleカレンダー、仕事の予約調整はCalendlyが定番、用途別の使い分けが効率的です。",
+          },
+          {
+            question: "目標達成のコツは？",
+            answer: "①期限を決める（「いつまで」を明確に）②目標を小さく分解（週次・日次）③カウントダウンで視覚化（このツール活用）④週1回の振り返り⑤仲間と共有（SNS・アプリ）⑥達成時のご褒美設定。脳科学的にも期限付き目標は達成率が3倍に上がる効果確認されています。",
+          },
+          {
+            question: "長期目標の立て方は？",
+            answer: "5年後・10年後の理想像から逆算。資産2000万円を10年で達成→月16.6万円の積立＋投資が必要。FIRE（5000万円・20年）→月20万円＋年7%運用。大きな目標ほど具体的な数値・期限・方法に分解、このツールで進捗を定期的に確認するのが成功の鉄則です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="date-countdown" category="日常ツール" />
       <RelatedTools currentSlug="date-countdown" category="日常ツール" />
     </div>

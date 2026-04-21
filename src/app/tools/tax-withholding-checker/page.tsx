@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [income, setIncome] = useState("5000000");
@@ -40,6 +41,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 概算です。給与所得控除・復興特別所得税等は簡略化しています。正確な計算は税理士にご相談ください。</p>
       </div>
+      <ToolFAQSection
+        toolName="所得税・住民税概算計算"
+        howTo={[
+          "年収（円）を入力する（総支給額・額面年収）",
+          "控除合計（社会保険料・生命保険料等）を入力",
+          "課税所得・所得税・住民税・実効税率が自動計算",
+          "確定申告前の目安として活用、節税プランの検討に",
+        ]}
+        faqs={[
+          {
+            question: "年収別の税負担は？",
+            answer: "年収400万：所得税9万＋住民税20万＝計29万（実効7%）。年収600万：所得税20万＋住民税30万＝計50万（8%）。年収800万：所得税50万＋住民税45万＝計95万（12%）。年収1000万：所得税94万＋住民税60万＝計154万（15%）。累進課税で年収1200万超から実効税率20%超となります。",
+          },
+          {
+            question: "控除を増やして節税するには？",
+            answer: "①iDeCo（年最大27.6万円）②生命保険料控除（年12万円）③ふるさと納税（年収別上限）④医療費控除（年10万円超）⑤特定支出控除⑥副業の経費計上。年収600万円なら合計年20〜30万円の控除追加で、年5〜10万円の節税効果が現実的です。",
+          },
+          {
+            question: "住民税の計算方法は？",
+            answer: "住民税=所得割（課税所得×10%）＋均等割（5,000円前後）。所得税と違って累進課税ではなく一律10%、高所得者には負担感小さい。住民税は前年所得に基づくため退職・転職時は要注意、退職金課税や退職翌年の住民税負担で混乱するケース多発しています。",
+          },
+          {
+            question: "副業の確定申告は？",
+            answer: "会社員の副業収入が年20万円超で確定申告必要。雑所得扱いなら基礎控除48万円適用後に所得税＋住民税。事業所得なら青色申告65万円控除＋必要経費も計上可、税金負担大幅軽減。freee会計・マネーフォワードで簡単に申告書作成可能、税理士ドットコムの無料相談も活用できます。",
+          },
+        ]}
+      />
       <AffiliateSection slug="tax-withholding-checker" category="日常ツール" />
       <RelatedTools currentSlug="tax-withholding-checker" category="日常ツール" />
     </div>
