@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 const sizes = [
   { name: "A0", w: 841, h: 1189, use: "ポスター・掲示" },
@@ -46,6 +47,33 @@ export default function Page() {
           </table>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="用紙サイズ一覧"
+        howTo={[
+          "A判・B判・はがき・名刺・L判の寸法を一覧表示",
+          "用途別に適切なサイズを選択",
+          "印刷物・デザイン制作時のサイズ指定に活用",
+          "mm単位で正確な寸法を確認",
+        ]}
+        faqs={[
+          {
+            question: "A判とB判の違いは？",
+            answer: "A判：ISO国際規格（ドイツ発祥、A0=1平方メートル）、Bは日本のJIS規格（B0=1.5平方メートル）。A4（210×297mm）は世界標準、B5（182×257mm）は日本のノート・書籍でよく使われる。オフィス文書はA4、雑誌・教科書はB5、チラシはB4・A3等、用途で使い分けが常識です。",
+          },
+          {
+            question: "各サイズの代表的な用途は？",
+            answer: "A0：ポスター・建築図面、A1：大判ポスター、A2：設計図、A3：プレゼン資料、A4：オフィス文書・チラシ、A5：手帳・パンフレット、A6：はがき相当・手帳。B2：駅ポスター、B3：チラシ、B4：新聞折込、B5：雑誌・教科書、B6：文庫本。用途で適切なサイズを選択します。",
+          },
+          {
+            question: "はがきの規定サイズは？",
+            answer: "日本郵便の通常はがき：100×148mm（A6とほぼ同サイズ）。大型はがき（往復はがき開いた状態）：148×200mm。最低サイズ90×140mm、最大サイズ107×154mmの範囲内で郵便料金63円適用。私製はがき（年賀状・ポストカード）もこの規格内が原則です。",
+          },
+          {
+            question: "名刺サイズの国際比較は？",
+            answer: "日本名刺：55×91mm（4号）が標準、小振り3号（49×85mm）もあり。米国：51×89mm（2×3.5インチ）、欧州：85×55mm（クレジットカードサイズ）。国際ビジネスの名刺交換は55×91mm日本標準で通用、アメリカ・欧州でも違和感なし、共通サイズとして使えます。",
+          },
+        ]}
+      />
       <AffiliateSection slug="paper-size-guide" category="日常ツール" />
       <RelatedTools currentSlug="paper-size-guide" category="日常ツール" />
     </div>

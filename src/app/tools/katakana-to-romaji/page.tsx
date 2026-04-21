@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [input, setInput] = useState("");
@@ -46,6 +47,33 @@ export default function Page() {
           <div className="text-xl font-bold text-primary tracking-wider">{convert(input).toUpperCase()}</div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="カタカナ→ローマ字変換"
+        howTo={[
+          "カタカナで名前や地名を入力",
+          "ヘボン式ローマ字への変換結果を自動表示",
+          "パスポート・クレジットカード・海外送金の名前入力に活用",
+          "コピーで各種書類に貼り付け可能",
+        ]}
+        faqs={[
+          {
+            question: "ヘボン式ローマ字とは？",
+            answer: "英語話者にとって最も自然に読めるローマ字表記方式。1867年ヘボンが考案、パスポート・空港・国際規格で採用。訓令式（例：「し」＝si）と違い、ヘボン式（shi）は実際の発音に近い表記。パスポート申請・クレジットカード・海外送金はヘボン式統一が必須、本ツール利用で失敗なし。",
+          },
+          {
+            question: "「ん」の扱い方は？",
+            answer: "基本的に「n」に変換。ただし「b/m/p」の前では「m」に変化（例：「しんばし」→「SHIMBASHI」）。外務省パスポートはヘボン式準拠だが、「n」で統一も許容。不明な場合は外務省の公式変換ルール確認、本ツールは標準ヘボン式で変換、一般用途に問題ありません。",
+          },
+          {
+            question: "パスポートの名前表記は？",
+            answer: "ヘボン式ローマ字が原則。姓・名の間はスペース、全て大文字。例：「山田 太郎」→「YAMADA TARO」。「とおる」「ゆうこ」等の長音は「TORU」「YUKO」（O・Uで延長表記可、省略も可）。申請時は一度決めた表記が基本固定、慎重に決めるのが重要です。",
+          },
+          {
+            question: "クレジットカードの名前入力ミスは？",
+            answer: "ECサイト・海外通販でのクレカ名前入力ミスは取引エラーの原因。カード表面の英字表記と完全一致が必要、スペース・大文字小文字・ミドルネームも同じに。海外ホテル予約（Booking.com等）も同様、本ツールで正確な名前表記を取得し、各サービスで統一入力を推奨します。",
+          },
+        ]}
+      />
       <AffiliateSection slug="katakana-to-romaji" category="テキストツール" />
       <RelatedTools currentSlug="katakana-to-romaji" category="テキストツール" />
     </div>

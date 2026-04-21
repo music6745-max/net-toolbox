@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [total, setTotal] = useState("15000");
@@ -50,6 +51,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted">※ 共用部分40% + 部屋面積比60%で按分</p>
       </div>
+      <ToolFAQSection
+        toolName="光熱費按分計算"
+        howTo={[
+          "光熱費合計（円）を入力",
+          "各部屋の名前と面積（畳）を入力、追加・削除も可",
+          "共用40%＋部屋面積60%の按分比で自動計算",
+          "各部屋の公平な負担額が表示、シェアハウス・ルームシェアに活用",
+        ]}
+        faqs={[
+          {
+            question: "シェアハウスの光熱費按分ルールは？",
+            answer: "一般的な方法：①完全均等割（人数割り、シンプル）②部屋面積比（大きい部屋が多く払う）③使用量ベース（各自メーター付き）④共用＋部屋面積比（本ツール方式、最も公平）。シェアハウス運営会社（オークハウス等）は共用込みの家賃一律が多く、個人運営は按分計算が必要です。",
+          },
+          {
+            question: "電気代の相場は？",
+            answer: "シェアハウス5人・100㎡で月2〜3万円（夏冬4〜5万円）、1人あたり4,000〜10,000円。エアコン・冷蔵庫・電子レンジ・洗濯機等の共用家電が大きな割合。節電意識（エアコン温度・待機電力）で年数万円削減可能、新電力乗換え（Looopでんき・楽天でんき）で10〜15%削減も現実的です。",
+          },
+          {
+            question: "ガス代・水道代の按分は？",
+            answer: "電気代と同じ考え方で按分可能。ガス代：料理頻度で差が出る（キッチン使用時間比で追加按分も可）。水道代：シャワー時間・洗濯頻度で差、単純な均等割りでも問題少なめ。月額料金の固定部分（基本料金）は均等割り、従量部分は使用量or面積比の按分が公平です。",
+          },
+          {
+            question: "契約者は誰が良い？",
+            answer: "シェアハウス代表者（家主・管理人）が契約、光熱費を集金する方式が一般的。代表者は責任と手間はあるが、基本料金の割引（家族料金プラン）適用可能。メンバー全員で契約者を交代する方式も、退去時の手続きも代表者の役割、明確な役割分担が重要です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="electricity-bill-split" category="日常ツール" />
       <RelatedTools currentSlug="electricity-bill-split" category="日常ツール" />
     </div>

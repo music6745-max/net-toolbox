@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function RentSplitPage() {
   const [total, setTotal] = useState(10000);
@@ -46,7 +47,33 @@ export default function RentSplitPage() {
           <p className="text-sm text-muted text-center">※ 割り切れないため、{people - 1}人が¥{perPerson.toLocaleString()}、1人が¥{lastPerson.toLocaleString()}を支払うと丁度になります。</p>
         )}
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">割り勘計算の使い方</h2><div className="text-sm text-muted leading-relaxed space-y-2"><p>合計金額と人数を入力すると、1人あたりの金額と端数を計算します。</p><p>飲み会やイベントの精算にお使いください。</p></div></section>
+      <ToolFAQSection
+        toolName="割り勘計算"
+        howTo={[
+          "合計金額を入力",
+          "人数を入力",
+          "1人あたりの金額が自動計算",
+          "端数は最後の1人が調整、指示も自動表示",
+        ]}
+        faqs={[
+          {
+            question: "端数の分担方法は？",
+            answer: "端数は幹事が多く払う、全員で1円単位で割り勘、四捨五入で100円単位等の方法あり。このツールは「端数を1人が多く払う」方式。公平性重視なら全員100円単位で切り上げ、手軽さ重視ならPayPay等のキャッシュレス決済で1円単位送金、最近のスタンダード方法になっています。",
+          },
+          {
+            question: "キャッシュレス割り勘のコツは？",
+            answer: "PayPay送る：手数料無料、即時送金、QRコード読取で簡単。LINE Pay：LINEユーザー同士で送金、手数料無料。ゆうちょペイ：銀行振込より安い。PayPay「かんたん送金」「集金機能」は幹事がまとめて集金する便利機能、飲み会・送別会の支払いは全てキャッシュレスが主流に。",
+          },
+          {
+            question: "幹事は自分多めに払うべき？",
+            answer: "完全平等でも問題ないが、幹事の労力（予約・出欠確認・店の選定・会計）に対する感謝として、他メンバーが100〜500円ずつ多めに払う習慣もあり。逆に幹事が「端数丸めて全員同額にする」のも好印象。事前に集金方式（割り勘・定額・多め負担）を決めておくのがスムーズ運営のコツです。",
+          },
+          {
+            question: "割り勘アプリのおすすめは？",
+            answer: "PayPay（キャッシュレス＋送金）、Splitwise（多人数グループでの精算記録）、LINE Pay、Kyash、paymo by AnyPay（2026年時点対応）。旅行・合宿の複数回立替は精算アプリが便利、最終日にまとめて1回送金で完結、誰がいくら立て替えたかを全員で共有できます。",
+          },
+        ]}
+      />
       <AffiliateSection slug="rent-split" category="日常ツール" />
       <RelatedTools currentSlug="rent-split" category="日常ツール" />
     </div>
