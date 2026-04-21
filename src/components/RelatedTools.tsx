@@ -9,14 +9,23 @@ export function RelatedTools({ currentSlug, category }: { currentSlug: string; c
     (t) => t.category === category && t.slug !== currentSlug
   );
 
-  const related = sameCategoryTools.length >= 6
-    ? sameCategoryTools.slice(0, 6)
+  // Primary: 12 related tools (up from 6) for improved internal linking / SEO
+  const related = sameCategoryTools.length >= 12
+    ? sameCategoryTools.slice(0, 12)
     : [
         ...sameCategoryTools,
         ...tools
           .filter((t) => t.category !== category && t.slug !== currentSlug)
-          .slice(0, 6 - sameCategoryTools.length),
+          .slice(0, 12 - sameCategoryTools.length),
       ];
+
+  // Secondary: tools grouped by category (for site-wide navigation)
+  const byCategory: Record<string, Tool[]> = {};
+  tools.forEach((t) => {
+    if (t.slug === currentSlug) return;
+    if (!byCategory[t.category]) byCategory[t.category] = [];
+    byCategory[t.category].push(t);
+  });
 
   return (
     <section className="mt-10">
@@ -45,6 +54,32 @@ export function RelatedTools({ currentSlug, category }: { currentSlug: string; c
         >
           「{category}」のツールをすべて見る →
         </Link>
+      </div>
+
+      {/* Additional: Category-based site navigation (all sub-category tools) */}
+      <div className="mt-10 pt-6 border-t border-card-border">
+        <h3 className="text-base font-bold mb-4">🗂️ カテゴリから他のツールを探す</h3>
+        <div className="space-y-4">
+          {Object.entries(byCategory)
+            .filter(([catKey]) => catKey !== category)
+            .slice(0, 5)
+            .map(([catKey, catTools]) => (
+              <div key={catKey}>
+                <h4 className="text-xs font-semibold mb-2 text-muted">{catKey}</h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {catTools.slice(0, 10).map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={`/tools/${t.slug}`}
+                      className="text-xs px-2.5 py-1 rounded-full border border-card-border bg-card-bg hover:border-primary/40 hover:bg-primary/5 transition-all"
+                    >
+                      {t.icon} {t.name.slice(0, 20)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+        </div>
       </div>
     </section>
   );
