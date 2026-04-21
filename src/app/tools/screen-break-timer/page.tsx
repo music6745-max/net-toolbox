@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [workMin, setWorkMin] = useState(25);
@@ -50,6 +51,33 @@ export default function Page() {
           <button onClick={reset} className="px-6 py-2 bg-card-bg border border-card-border rounded-lg text-sm">リセット</button>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="画面休憩タイマー"
+        howTo={[
+          "作業時間（デフォルト25分）と休憩時間（5分）を設定",
+          "スタートで作業タイマー開始",
+          "時間経過後、自動で休憩モードに切替",
+          "1日4〜8ポモドーロで生産性＋健康を両立",
+        ]}
+        faqs={[
+          {
+            question: "ポモドーロ・テクニックとは？",
+            answer: "25分作業＋5分休憩を1セット、4セットごとに15〜30分の長い休憩。1980年代イタリアのフランチェスコ・シリロ考案、集中力持続＋疲労軽減の科学的手法。プログラマー・ライター・学生に人気、連続3時間作業より、25分×6セットの方が生産性30〜50%UP実証されています。",
+          },
+          {
+            question: "20-20-20ルールとは？",
+            answer: "20分ごとに20フィート（6m）先を20秒見る習慣。米国眼科学会推奨の眼精疲労予防法。PC作業の連続で起こるVDT症候群（眼の疲れ・肩こり・頭痛）を防ぐ、スマホ・ゲーム時代の必須習慣。本ツールで20分タイマー設定→意識的な遠方視で、目の健康を守れます。",
+          },
+          {
+            question: "作業時間はどれくらいが最適？",
+            answer: "集中力持続時間は個人差あるが、25〜50分が一般的な限界。25分（ポモドーロ）が最も標準、45分（学校の授業時間）や50分（長め）の選択も。タイマー管理で「区切り」を意識し、疲れる前に休憩するのが鍵、集中と休憩の切替で1日のパフォーマンス2倍向上可能です。",
+          },
+          {
+            question: "おすすめの休憩方法は？",
+            answer: "①立ち上がって軽いストレッチ（デスク体操）②遠方を見る（目のリフレッシュ）③水を飲む・トイレ④窓を開けて深呼吸⑤軽食（ナッツ・フルーツ）⑥スマホ・SNS避ける（新たな情報ストレス）。休憩中のスマホは眼と脳の疲労を悪化、アナログな休憩が最も効果的です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="screen-break-timer" category="日常ツール" />
       <RelatedTools currentSlug="screen-break-timer" category="日常ツール" />
     </div>

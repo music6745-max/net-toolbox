@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [weight, setWeight] = useState("60");
@@ -50,6 +51,33 @@ export default function Page() {
           <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">ご飯換算</div><div className="text-xl font-bold">約{riceEquiv.toFixed(1)}杯分</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="運動消費カロリー計算"
+        howTo={[
+          "体重（kg）を入力",
+          "運動の種類を選択（ウォーキング〜筋トレ12種類）",
+          "運動時間（分）を入力",
+          "消費カロリー・ご飯換算量が自動計算",
+        ]}
+        faqs={[
+          {
+            question: "METsとは？",
+            answer: "Metabolic Equivalent、安静時を1.0とした運動強度の指標。3.5METsは安静時の3.5倍のエネルギー消費。計算式：消費カロリー(kcal)= 1.05 × METs × 体重(kg) × 時間(h)。厚労省・運動生理学で広く使われる標準指標、運動メニューの選択・強度設定の基準となります。",
+          },
+          {
+            question: "1kg減量に必要な消費カロリーは？",
+            answer: "脂肪1kg = 約7,200kcal。月1kg減なら日あたり240kcalマイナス（ウォーキング30分または食事制限）。月2kg減なら日480kcalマイナス。急激な減量（月5kg以上）は筋肉量低下＋リバウンドリスク、月1〜2kgのペースが健康的な減量速度です。",
+          },
+          {
+            question: "運動の消費カロリー目安は？",
+            answer: "体重60kg・30分運動：ウォーキング110kcal、ジョギング220kcal、ランニング315kcal、サイクリング190kcal、水泳190kcal、ヨガ95kcal、筋トレ160kcal、テニス220kcal。ラン・水泳等の高強度運動が最効率、日常運動（ウォーキング・階段）でも継続が重要です。",
+          },
+          {
+            question: "運動だけで痩せられる？",
+            answer: "運動のみは非効率。食事7割・運動3割が減量の定説、運動だけで月1kg減量には月30〜40時間の運動が必要（非現実的）。食事制限（300kcal/日）＋運動（200kcal/日）の組合せが王道、筋トレで基礎代謝UP＋有酸素運動で脂肪燃焼の両輪アプローチが効果的です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="exercise-calorie-burn" category="日常ツール" />
       <RelatedTools currentSlug="exercise-calorie-burn" category="日常ツール" />
     </div>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [usage, setUsage] = useState("20");
@@ -51,6 +52,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 概算値です。実際の金額は条件により異なります。</p>
       </div>
+      <ToolFAQSection
+        toolName="水道料金計算"
+        howTo={[
+          "月間使用量（m³）を入力",
+          "メーター口径（13・20・25mm）を選択",
+          "基本料金＋従量料金＋下水道料金の合計が自動計算",
+          "東京都水道局の料金体系に基づく概算",
+        ]}
+        faqs={[
+          {
+            question: "1人暮らしの水道代は？",
+            answer: "月使用量5〜10m³、料金2,000〜3,000円／月（2ヶ月に1回請求で4,000〜6,000円）。シャワー20分・風呂毎日・洗濯週3回が目安。節水器具（節水シャワーヘッド・節水トイレ）導入で20〜30%削減可能、年間5,000〜15,000円の節約効果があります。",
+          },
+          {
+            question: "4人家族の水道代は？",
+            answer: "月使用量20〜30m³、料金5,000〜8,000円／月（2ヶ月12,000〜16,000円）。節水意識＋食洗機（手洗いより70%節水）・シャワー時間短縮で月1,000〜2,000円削減可能。年1.5万円の節約＋水不足の環境配慮、家族全体での習慣化が効果大きいです。",
+          },
+          {
+            question: "水道代を安くする方法は？",
+            answer: "①節水シャワーヘッド（3〜5千円、30%節水）②食洗機導入（手洗いの1/3の水量）③トイレ節水モード使用④洗濯物のまとめ洗い⑤歯磨き・皿洗い中のこまめな止水⑥メーター口径の見直し（13mm→20mmは基本料金UP注意）。全部実行で月1,000〜2,000円の節約が実現可能です。",
+          },
+          {
+            question: "水道料金の地域差は？",
+            answer: "都市部（東京・大阪）：月20m³で4,000〜5,000円。地方都市：月20m³で3,000〜4,000円。水源豊富な地域（山間部）は安く、島嶼部・離島は高い（海水淡水化等）。引越し先の水道料金は自治体サイトで事前確認、家計への影響10〜30%の差を把握しておきましょう。",
+          },
+        ]}
+      />
       <AffiliateSection slug="water-bill-calculator" category="日常ツール" />
       <RelatedTools currentSlug="water-bill-calculator" category="日常ツール" />
     </div>
