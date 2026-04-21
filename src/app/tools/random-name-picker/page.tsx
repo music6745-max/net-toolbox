@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [names, setNames] = useState("田中\n佐藤\n鈴木\n高橋\n渡辺\n山田\n中村\n小林");
@@ -42,6 +43,33 @@ export default function Page() {
           </div>
         )}
       </div>
+      <ToolFAQSection
+        toolName="ランダム名前ピッカー"
+        howTo={[
+          "名前リストを1行1名で入力",
+          "「ランダムに選ぶ」ボタンをクリック",
+          "10回連続でランダム表示→最終決定される演出付き",
+          "あみだくじ・くじ引きの代替、順番決め・役割分担に活用",
+        ]}
+        faqs={[
+          {
+            question: "どんな場面で使う？",
+            answer: "①職場の当番決め（掃除・資料作成・プレゼン）②会議の司会者選出③プレゼント交換の順番④飲み会の席順⑤子供の習い事順番⑥スポーツチーム分け⑦旅行のドライバー選出。公平性と楽しさを兼ね備えた選出方法、全員が納得できる仕組みです。",
+          },
+          {
+            question: "あみだくじ・くじ引きとの違いは？",
+            answer: "あみだくじ：全員の最終位置が決まる（全員が関与）。くじ引き：1人ずつ引く（ランダム選択）。本ツール：1人だけ選出（当番決め等）。用途で使い分け、複数人の順番決めはあみだくじ、1人選ぶのはこのツール、景品配分はくじ引きが便利です。",
+          },
+          {
+            question: "結果に納得してもらうコツは？",
+            answer: "①事前に全員に「公平にランダムで決める」ことを合意②画面共有で決定過程を皆で見る③結果を記録しておく（後で再選出の根拠）④敗者（当番に当たった人）への感謝・配慮。公開性と透明性が納得感を生む、ビジネス・プライベートどちらでも重要なポイントです。",
+          },
+          {
+            question: "他のランダム選出ツールは？",
+            answer: "スマホアプリ：「iスロット」「デジタルサイコロ」「ルーレット」。オンラインサービス：「Wheel Decide」「Spin the Wheel」「RANDOM.ORG」。本格的な抽選なら「キャンペーン抽選くん」等の専用ツール。無料サービス多数、シーンに合わせて選択可能です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="random-name-picker" category="日常ツール" />
       <RelatedTools currentSlug="random-name-picker" category="日常ツール" />
     </div>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [items, setItems] = useState([
@@ -47,6 +48,33 @@ export default function Page() {
           </div>
         )}
       </div>
+      <ToolFAQSection
+        toolName="確定申告控除チェック"
+        howTo={[
+          "12項目の控除を一覧表示",
+          "自分が該当する控除にチェック",
+          "見落としがちな控除を確認",
+          "e-Tax・freee・マネフォ等の確定申告ソフトで正確計算",
+        ]}
+        faqs={[
+          {
+            question: "見落としがちな控除は？",
+            answer: "①医療費控除：年10万円超で適用、通院交通費・家族合算可②セルフメディケーション税制：市販薬年1.2万円超③ふるさと納税：ワンストップor確定申告④iDeCo：全額所得控除⑤雑損控除：災害・盗難の損失。年収500万円なら5〜20万円の税金還付が現実的、見逃しは数万円の機会損失です。",
+          },
+          {
+            question: "確定申告のメリットは？",
+            answer: "①各種控除で税金還付（年5〜30万円）②住民税も連動で軽減③ふるさと納税ワンストップ超えでも対応④副業収入の正確な申告⑤損益通算・繰越控除（株式投資）。会社員も医療費控除・ふるさと納税等あれば確定申告で数万円の還付獲得、e-Taxなら1〜2時間で完了可能です。",
+          },
+          {
+            question: "確定申告ソフトのおすすめは？",
+            answer: "freee会計（月2,178円・初心者向け・確定申告特化）、マネーフォワードクラウド確定申告（月880円・AI仕訳）、弥生会計オンライン（月2,500円・老舗）、やよいの青色申告オンライン（年10,286円・個人事業主向け）。無料体験期間活用で比較が賢明、年3万円の投資で月5〜20時間の時短実現可能です。",
+          },
+          {
+            question: "税理士相談は必要？",
+            answer: "副業収入20万円超・事業所得・株式運用・不動産投資等の場合、税理士相談で数十万円の節税実現可能。税理士ドットコムで無料マッチング、初回相談無料、年30万円〜の顧問料で事業者は経費化可能。複雑な税務は迷わず専門家相談、自己流で失敗するリスク回避が重要です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="tax-deduction-checker" category="日常ツール" />
       <RelatedTools currentSlug="tax-deduction-checker" category="日常ツール" />
     </div>
