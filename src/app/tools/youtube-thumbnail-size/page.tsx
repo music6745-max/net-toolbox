@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 const platforms = [
   { name: "YouTubeサムネイル", w: 1280, h: 720, ratio: "16:9", max: "2MB", format: "JPG/PNG/GIF/BMP" },
@@ -44,6 +45,33 @@ export default function Page() {
           </table>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="SNS画像サイズ一覧"
+        howTo={[
+          "表から使用プラットフォームを確認",
+          "推奨幅・高さ・比率・ファイル形式に沿って画像作成",
+          "Canva・Photoshop等で指定サイズで新規作成",
+          "スマホアプリ（SNS各社）からのアップロードも同じサイズ推奨",
+        ]}
+        faqs={[
+          {
+            question: "YouTubeサムネイルのコツは？",
+            answer: "推奨1280×720px（16:9比率）、2MB以内のJPG/PNG。クリック率を高めるコツ：①大きな文字（読みやすさ最優先）②顔が大きく写る③強い色のコントラスト（赤・黄・オレンジ効果的）④感情表現豊かな表情⑤数字やランキング表示。高CTR（10%超）サムネはチャンネル登録・視聴回数の決定的要素です。",
+          },
+          {
+            question: "Instagramリール・TikTok動画のサイズは？",
+            answer: "1080×1920px（9:16縦型）、再生時間60〜90秒が主流。ファイルサイズ：Instagram4GB・TikTok287MB。縦型動画はスマホ画面全体を活かしてインパクト大、横型動画より再生完了率2〜3倍高い。動画編集はCapCut（無料）・VLLO（月額）で簡単、テロップ・BGM・エフェクトを活用してバズを狙いましょう。",
+          },
+          {
+            question: "OGP画像とは？",
+            answer: "Open Graph Protocol、SNS（X・Facebook・LINE）シェア時に表示される画像。推奨1200×630px（1.91:1比率）。記事のクリック率を2〜3倍に上げる効果、記事タイトル＋画像の組合せで読者の注目を集める。WordPressならYoast SEO・All in One SEOプラグインで簡単設定、ブログ運営者必須の最適化項目です。",
+          },
+          {
+            question: "各SNSの画像仕様変更頻度は？",
+            answer: "年1〜2回変更される。公式ヘルプページ（YouTube・Instagram・X等）の最新版確認が安全。大幅な仕様変更時は既存画像のリサイズが必要、バッチ処理で一括変換がおすすめ。Canva・Figma・Photopeaの無料ツールで簡単にサイズ調整可能です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="youtube-thumbnail-size" category="日常ツール" />
       <RelatedTools currentSlug="youtube-thumbnail-size" category="日常ツール" />
     </div>

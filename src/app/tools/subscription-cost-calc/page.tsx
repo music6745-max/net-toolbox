@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [subs, setSubs] = useState([
@@ -45,6 +46,33 @@ export default function Page() {
           <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">年間合計</div><div className="text-xl font-bold">¥{yearly.toLocaleString()}</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="サブスク月額合計計算"
+        howTo={[
+          "契約中のサブスクサービス名と月額料金を入力",
+          "「+ サービスを追加」で項目追加、「×」で削除",
+          "月額・年間の合計が自動計算",
+          "年1回の見直しで無駄なサブスクを発見",
+        ]}
+        faqs={[
+          {
+            question: "日本人の平均サブスク支出は？",
+            answer: "20〜40代の平均月5,000〜10,000円、年6万〜12万円。動画（Netflix・Amazon Prime・U-NEXT・Disney+）、音楽（Spotify・Apple Music）、電子書籍（Kindle Unlimited・楽天マガジン）、クラウドストレージ（iCloud・Googleドライブ）、その他（Notion・Evernote）。見直しで月3,000〜5,000円の削減が可能です。",
+          },
+          {
+            question: "サブスク見直しのコツは？",
+            answer: "①過去3ヶ月使わなかったサービス解約②家族プランで共有（Spotify月1,680円で6人）③年払い選択（月払いより20%割引）④重複サービス整理（Netflix＋Disney+＋U-NEXTの3個は過剰）⑤無料トライアル活用。月5,000円削減→新NISAに回せば30年で550万円の資産差に。",
+          },
+          {
+            question: "家族シェア可能なサブスクは？",
+            answer: "①Spotify家族プラン（1,680円・最大6人）②Apple One（1,200円〜・5〜6人）③Netflix（プレミアム2,290円・4台同時視聴）④YouTube Premium家族（2,280円・最大5人）⑤Amazon Prime（年5,900円・家族アカウント1人）⑥Microsoft 365 Family（12,984円/年・6人）。家族で月5,000〜1万円の節約可能。",
+          },
+          {
+            question: "解約忘れの対策は？",
+            answer: "①クレカ明細を毎月チェック②サブスク管理アプリ（Truebill・Rocket Money）活用③スプレッドシートで一覧管理④カレンダー通知設定（無料期間終了日・年払い更新日）⑤メルペイ・PayPay等のサブスク管理機能利用。気付かない自動引落は年数万円の損、月1回のチェック習慣が鉄則です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="subscription-cost-calc" category="日常ツール" />
       <RelatedTools currentSlug="subscription-cost-calc" category="日常ツール" />
     </div>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [birth, setBirth] = useState("1990-05-15");
@@ -43,6 +44,33 @@ export default function Page() {
           </div>
         )}
       </div>
+      <ToolFAQSection
+        toolName="誕生日から星座・干支"
+        howTo={[
+          "生年月日を選択",
+          "星座（12星座）・干支（12支）・現在年齢が表示",
+          "プロフィール作成・履歴書記入に活用",
+          "占い・相性診断の参考情報に",
+        ]}
+        faqs={[
+          {
+            question: "12星座の期間は？",
+            answer: "牡羊座3/21〜4/19、牡牛座4/20〜5/20、双子座5/21〜6/21、蟹座6/22〜7/22、獅子座7/23〜8/22、乙女座8/23〜9/22、天秤座9/23〜10/23、蠍座10/24〜11/22、射手座11/23〜12/21、山羊座12/22〜1/19、水瓶座1/20〜2/18、魚座2/19〜3/20。境界日は年により1〜2日変わります。",
+          },
+          {
+            question: "干支の計算方法は？",
+            answer: "西暦÷12の余りで決定。余り0＝申（2000年・2012年・2024年）、1＝酉、2＝戌、3＝亥、4＝子、5＝丑、6＝寅、7＝卯、8＝辰、9＝巳、10＝午、11＝未。2026年は午年。年末年始生まれは前年扱いなど若干の例外あり、正確には節分（2月3〜4日）以降が年の始まりとされる流派もあります。",
+          },
+          {
+            question: "西暦と元号の換算は？",
+            answer: "令和：西暦-2018（令和7年＝2025年）、平成：西暦-1988（平成30年＝2018年）、昭和：西暦-1925（昭和64年＝1989年）、大正：西暦-1911（大正15年＝1926年）、明治：西暦-1867（明治45年＝1912年）。履歴書は元号・西暦どちらでも可、統一感を持たせましょう。",
+          },
+          {
+            question: "満年齢と数え年の違いは？",
+            answer: "満年齢：生まれた日を0歳、誕生日ごとに+1歳（現代の日本の標準）。数え年：生まれた時点で1歳、正月ごとに+1歳（伝統的・厄年計算で使用）。同じ日でも満30歳・数え31歳になる人もいる、七五三・還暦・厄年等の伝統行事は数え年で行うことが多い慣習です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="birthday-zodiac" category="日常ツール" />
       <RelatedTools currentSlug="birthday-zodiac" category="日常ツール" />
     </div>

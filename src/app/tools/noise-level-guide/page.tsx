@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 const levels = [
   { db: 0, name: "無音", example: "真空", color: "#22c55e" },
@@ -43,6 +44,33 @@ export default function Page() {
           ))}
         </div>
       </div>
+      <ToolFAQSection
+        toolName="騒音レベル早見表"
+        howTo={[
+          "デシベル値（dB）を入力",
+          "騒音レベルと身近な例が表示",
+          "騒音トラブル・引越し物件選び・防音対策の参考に",
+          "スマホの騒音計アプリで実測値と比較",
+        ]}
+        faqs={[
+          {
+            question: "日常の騒音目安は？",
+            answer: "図書館40dB、普通の会話60dB、掃除機70dB、地下鉄車内80dB、カラオケ90dB、ジェット機近く120dB。60dB以下が「静か」、70dB超は「うるさい」と感じる境界。長時間（8時間）85dB以上の騒音環境は聴覚障害リスク上昇、100dB超は1時間未満でも危険です。",
+          },
+          {
+            question: "マンション騒音問題の基準は？",
+            answer: "環境基準：住宅地昼間55dB・夜間45dB以下が推奨。マンションで上下左右の生活音が45〜60dB相当、子供の走り回る音・掃除機・楽器が苦情対象。管理規約の確認＋防音マット・防音カーテン・防音工事で対策、ひどい場合は管理会社経由の注意喚起が現実的です。",
+          },
+          {
+            question: "防音対策の方法は？",
+            answer: "①防音カーテン（2〜5千円で10dB減）②防音マット・カーペット（床振動対策）③吸音パネル（壁面・カラオケ室）④二重窓（サッシ工事10〜50万円で10〜20dB減）⑤防音ドア。プロの防音工事は100〜500万円、賃貸なら剥がせる防音グッズが現実的な選択肢です。",
+          },
+          {
+            question: "静かな住環境選びのコツは？",
+            answer: "①幹線道路・線路・高速道路から100m以上離れた物件②工場・商業施設の近く避ける③最上階or低層階角部屋（上階・左右の生活音少ない）④内見で時間帯を変えて2回訪問（朝夜で違う）⑤周辺騒音レベル測定（スマホアプリ）。50dB以下を基準に物件選びするのがおすすめです。",
+          },
+        ]}
+      />
       <AffiliateSection slug="noise-level-guide" category="日常ツール" />
       <RelatedTools currentSlug="noise-level-guide" category="日常ツール" />
     </div>
