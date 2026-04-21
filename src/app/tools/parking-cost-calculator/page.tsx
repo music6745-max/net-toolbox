@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [rate, setRate] = useState("200");
@@ -44,6 +45,33 @@ export default function Page() {
         </div>
         <p className="text-xs text-muted mt-2">※ 概算値です。実際の金額は条件により異なります。</p>
       </div>
+      <ToolFAQSection
+        toolName="駐車場料金計算"
+        howTo={[
+          "単価（円）と課金単位（分）を入力",
+          "駐車時間（時間・分）を入力",
+          "最大料金（1日上限・円）を入力（ない場合0）",
+          "時間課金と最大料金を比較、適用料金が自動計算",
+        ]}
+        faqs={[
+          {
+            question: "東京都心の駐車場相場は？",
+            answer: "30分200〜400円、1日最大2,000〜4,500円。六本木・銀座・表参道等の一等地は30分500〜800円、1日最大5,000〜8,000円。郊外・地方都市は半額程度、都心集中の買い物は駐車場代だけで月1万円超になるケースも。駅近コインパーキングは「タイムズ」「リパーク」が全国展開。",
+          },
+          {
+            question: "月極駐車場とコインパーキングどっち？",
+            answer: "毎日利用なら月極、週1〜2回ならコインパーキング。都心月極2〜5万円、都下1〜3万円、郊外5000〜1.5万円。月15回超利用なら月極が有利、週末ドライバーはコインパーキング＋カーシェアの組合せが最安になる場合が多いです。",
+          },
+          {
+            question: "カーシェアと所有どっち？",
+            answer: "年1万km以下ならカーシェア（タイムズ・カレコ等）が有利。月会費880〜1,650円＋使用時間当たり200〜400円＋距離料金。年間コスト：所有（任意保険・車検・駐車場・税金で年50〜80万円）vs カーシェア（年15〜30万円）。郊外・地方で頻繁に運転するなら所有、都市部通勤は電車＋カーシェアが王道。",
+          },
+          {
+            question: "駐車場代の節約方法は？",
+            answer: "①事前予約サービス（akippa・タイムズのB）で最大50%割引②デパート・ショッピングセンター（2〜3時間無料）活用③月極駐車場の相見積り（物件により差大）④カーシェア切替で年30〜50万円節約⑤公共交通機関＋自転車で車不要化。都市部は車不要＝最強の節約策です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="parking-cost-calculator" category="日常ツール" />
       <RelatedTools currentSlug="parking-cost-calculator" category="日常ツール" />
     </div>

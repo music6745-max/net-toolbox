@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [temp, setTemp] = useState("22");
@@ -43,6 +44,33 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="服装提案"
+        howTo={[
+          "天気予報から気温（℃）を入力",
+          "降水確率（%）を入力",
+          "トップス・ボトムス・追加アイテムの提案が表示",
+          "毎朝の服選びを時短、持ち歩き傘判断にも",
+        ]}
+        faqs={[
+          {
+            question: "気温と服装の目安は？",
+            answer: "30℃以上：半袖Tシャツ、25〜30℃：半袖シャツ（冷房対策で薄手羽織り）、20〜25℃：長袖カットソー＋薄手カーディガン、15〜20℃：ニット＋ジャケット、10〜15℃：厚手ニット＋コート、5〜10℃：ヒートテック＋ダウン、5℃未満：防寒完全装備。季節の変わり目は朝晩の温度差10℃以上もあるため注意が必要です。",
+          },
+          {
+            question: "降水確率での傘判断は？",
+            answer: "70%以上：傘必須＋レインブーツ推奨、40〜70%：折りたたみ傘携帯、20〜40%：念のため折りたたみ傘、20%未満：不要。通勤通学の1〜2時間なら30%以上で傘持参、ゴルフ・アウトドアは50%超で中止検討が目安。天気予報アプリ（Yahoo天気・ウェザーニュース）で時間別確率確認が鉄則です。",
+          },
+          {
+            question: "春秋の服装選びは難しい？",
+            answer: "難しい。春（3〜5月）・秋（10〜11月）は朝晩10℃・日中22℃等の温度差が大きく、重ね着が正解。レイヤード（Tシャツ＋シャツ＋薄手ジャケット）で脱ぎ着調整、カバンに羽織り1枚追加。クールビズ・ウォームビズ期の服装選びはこのツールで気温確認が便利です。",
+          },
+          {
+            question: "ビジネスカジュアルの基準は？",
+            answer: "男性：シャツ＋チノパン／スラックス＋革靴、ジャケット有無は場面次第。女性：ブラウス＋スカート／パンツ＋パンプス、カーディガン羽織り。Tシャツ・ジーンズ・スニーカーは避ける、夏でもクールビズで「ノージャケット・ノーネクタイ」が限度。取引先訪問時はスーツ携帯が安全です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="rain-probability-outfit" category="日常ツール" />
       <RelatedTools currentSlug="rain-probability-outfit" category="日常ツール" />
     </div>

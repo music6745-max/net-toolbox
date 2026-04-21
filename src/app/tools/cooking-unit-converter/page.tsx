@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [amount, setAmount] = useState("1");
@@ -42,6 +43,33 @@ export default function Page() {
           {conv.g_rice && <div className="flex justify-between bg-background rounded-lg p-3"><span>米</span><span className="font-bold">{(a * conv.g_rice).toFixed(0)} g</span></div>}
         </div>
       </div>
+      <ToolFAQSection
+        toolName="料理の計量単位変換"
+        howTo={[
+          "量（数字）を入力",
+          "元の単位（カップ・大さじ・小さじ）を選択",
+          "ml・g（薄力粉・砂糖・米）への換算が自動表示",
+          "海外レシピ・プロレシピの分量調整に活用",
+        ]}
+        faqs={[
+          {
+            question: "日本と海外のカップサイズは違う？",
+            answer: "大きく違う。日本1カップ=200ml、アメリカ1カップ=240ml、イギリス1カップ=250ml（メトリック）。海外レシピを日本で作る時は要注意、アメリカンレシピなら20%量を増やす必要あり。正確な料理には電子秤（キッチンスケール）使用が鉄則、誤差で失敗が減らせます。",
+          },
+          {
+            question: "大さじ・小さじの容量は？",
+            answer: "日本：大さじ15ml・小さじ5ml（3倍関係）。アメリカ：tablespoon=14.8ml・teaspoon=4.9mlでほぼ同じ。計量スプーンは料理必需品、100円ショップで購入可能。重さも食材で違う、薄力粉大さじ1=9g・砂糖大さじ1=9g・塩大さじ1=18g、知識として覚えておくと便利です。",
+          },
+          {
+            question: "グラム換算の注意点は？",
+            answer: "食材の密度で大きく違う。薄力粉1カップ=110g・砂糖1カップ=130g・米1カップ=150g・塩1カップ=280g（密度差大）。同じ体積でも重さが2〜3倍変わる、レシピ本は「グラム」「cc」「カップ」混在なので、計量スプーン＋スケール両方使うのがプロの料理人のやり方です。",
+          },
+          {
+            question: "おすすめの計量器具は？",
+            answer: "①電子キッチンスケール（0.1g〜3kg・タニタ/オーム電機）②計量カップ（200ml・500ml）③計量スプーン（大さじ・小さじ・1/2小さじ・1/4小さじ）④温度計（揚げ物・パン作り）⑤タイマー。合計5,000円前後の投資で、料理の精度が劇的に向上、失敗レシピが激減します。",
+          },
+        ]}
+      />
       <AffiliateSection slug="cooking-unit-converter" category="日常ツール" />
       <RelatedTools currentSlug="cooking-unit-converter" category="日常ツール" />
     </div>

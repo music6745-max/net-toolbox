@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -43,6 +44,33 @@ export default function Page() {
         )}
         <p className="text-xs text-muted mt-2">※ エンタメ目的の簡易版です。正確な姓名判断は専門サイトをご利用ください。</p>
       </div>
+      <ToolFAQSection
+        toolName="名前画数チェック"
+        howTo={[
+          "名前を入力（漢字・ひらがな・カタカナ可）",
+          "推定総画数と運勢（大吉〜末吉）が表示",
+          "飲み会・コミュニケーションの話題作りに",
+          "本格的な姓名判断は専門家に依頼を",
+        ]}
+        faqs={[
+          {
+            question: "姓名判断の5大格とは？",
+            answer: "天格（姓）・人格（姓の下＋名の上）・地格（名）・外格（姓の上＋名の下）・総格（全画数）の5つ。それぞれ人生の異なる面を表す、総格は晩年運・人格は主運として重視。画数は吉数（5・7・8・11・15・16・17・21・24・31・32・33・35・37・39・41・47・48画）、凶数は4・9・10・12・14・19・20・22等があります。",
+          },
+          {
+            question: "赤ちゃん命名の姓名判断は？",
+            answer: "命名サイト（赤ちゃん命名辞典・パパママ命名）で無料診断可能。姓との相性・音・漢字の意味・画数のすべてを考慮、名前候補10〜20個リストアップ→姓名判断で絞り込むのが定石。ただし姓名判断結果だけで決めず、読みやすさ・呼びやすさ・書きやすさも大切です。",
+          },
+          {
+            question: "結婚・改名で運勢変わる？",
+            answer: "姓名判断上は変わる（姓が変わるため総格が変化）。結婚後の姓で再度姓名判断、改善されていれば運気UP期待。改名は戸籍上のハードル高いため、通称使用・芸名活用も選択肢。姓名判断を重視するなら、結婚前の相性診断も重要な要素として検討されることがあります。",
+          },
+          {
+            question: "姓名判断は本当に当たる？",
+            answer: "統計的・科学的根拠はない。ただし「自分の名前」への意識が行動・自己暗示を通じて人生に影響する可能性はある。ビジネスで使う名前（会社名・屋号・芸名）は姓名判断で良い画数を選ぶことで自己暗示効果＋覚えやすさを確保、マーケティング視点でも一定の意味を持ちます。",
+          },
+        ]}
+      />
       <AffiliateSection slug="name-counter" category="日常ツール" />
       <RelatedTools currentSlug="name-counter" category="日常ツール" />
     </div>
