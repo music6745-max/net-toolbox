@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [px, setPx] = useState("16");
@@ -35,7 +36,33 @@ export default function Page() {
           <p style={{ fontSize: p + "px" }}>あいうえお ABC 123</p>
         </div>
       </div>
-      <section className="mt-10"><h2 className="text-lg font-bold mb-3">使い方</h2><div className="text-sm text-muted space-y-2"><p>px値を入力すると、pt・em・rem・%に自動変換されます。基準サイズを変更すると、em/rem/%の値も連動します。</p></div></section>
+      <ToolFAQSection
+        toolName="フォントサイズ変換"
+        howTo={[
+          "基準サイズ（root font-size）を入力（通常16px）",
+          "変換したいpx値を入力",
+          "pt・em・rem・%の値が自動計算される",
+          "プレビューで実際の表示サイズを確認",
+        ]}
+        faqs={[
+          {
+            question: "px・em・rem・%の違いは？",
+            answer: "px：絶対単位（固定サイズ）、em：親要素のfont-size基準（相対）、rem：rootのfont-size基準（相対）、%：親要素の%。モダンCSSではrem推奨、ユーザーのブラウザ設定で拡大縮小が反映され、アクセシビリティが高い。pxはレガシー、em はコンポーネント単位での相対サイズに活用。",
+          },
+          {
+            question: "適切な本文フォントサイズは？",
+            answer: "ウェブ本文：14〜16px（デスクトップ）、16〜18px（モバイル）が標準。見出しh1：28〜36px、h2：24〜28px、h3：20〜24px。小さすぎる12px以下はアクセシビリティNG、大きすぎる20px以上は本文には不適切。ユーザビリティ重視で16pxが黄金サイズです。",
+          },
+          {
+            question: "ptとpxの違いは？",
+            answer: "pt（ポイント）：印刷物単位（1pt = 1/72インチ）、px（ピクセル）：画面単位。1pt ≒ 1.333px（96dpi環境）。印刷物はpt、ウェブはpxが原則。Microsoft Wordのフォントサイズはptなので混乱しやすい、ウェブ制作ではpxやrem統一が推奨です。",
+          },
+          {
+            question: "レスポンシブ対応のコツは？",
+            answer: "clamp()関数活用：`font-size: clamp(16px, 2vw, 24px)` でモバイル16px・デスクトップ最大24pxの流動的サイズを実現。メディアクエリと組合せ、rem基準でルートサイズ調整も効果的。TailwindCSS・CSS Modules等のフレームワークで標準化するのが実務的です。",
+          },
+        ]}
+      />
       <AffiliateSection slug="font-size-converter" category="デザイン" />
 
       <RelatedTools currentSlug="font-size-converter" category="デザイン" />

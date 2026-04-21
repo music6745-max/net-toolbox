@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import { ToolFAQSection } from "@/components/ToolFAQSection";
 
 export default function Page() {
   const [hourly, setHourly] = useState("1500");
@@ -38,6 +39,33 @@ export default function Page() {
           <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">合計</div><div className="text-xl font-bold text-primary">¥{Math.round(total).toLocaleString()}</div></div>
         </div>
       </div>
+      <ToolFAQSection
+        toolName="残業代・深夜・休日労働計算"
+        howTo={[
+          "通常時給（円）を入力",
+          "残業時間・深夜時間・休日労働時間（時）を入力",
+          "それぞれの法定割増賃金と合計が計算される",
+          "給与明細の数字が正しいかチェックに活用",
+        ]}
+        faqs={[
+          {
+            question: "残業代の割増率は？",
+            answer: "法定時間外労働：1.25倍（通常の25%増）。深夜労働（22時〜翌5時）：1.5倍（50%増、時間外深夜なら1.5倍）。休日労働（法定休日）：1.35倍（35%増、休日深夜なら1.6倍）。60時間超残業：1.5倍（大企業・中小企業とも2023年4月から適用）。法律で定められた最低基準です。",
+          },
+          {
+            question: "サービス残業は違法？",
+            answer: "違法。労働基準法37条で時間外労働の割増賃金支払い義務あり、違反は6ヶ月以下の懲役or30万円以下の罰金。対処法：①タイムカード・PCログ・LINE履歴等で証拠確保②労働基準監督署に匿名相談（無料）③弁護士相談（過去2年分の残業代請求可）。泣き寝入りせず権利主張を。",
+          },
+          {
+            question: "管理職は残業代もらえない？",
+            answer: "「管理監督者」のみ適用除外。ただし厳格な要件があり、肩書きだけの「名ばかり管理職」は違法。要件：①経営者と一体的立場②労働時間・出退勤の自由③一般社員より相当高い給与④重要決定権限あり。部長・課長でも要件満たさなければ残業代請求可能、過去2年分遡って請求できます。",
+          },
+          {
+            question: "残業代の時効は？",
+            answer: "2020年以前は2年、2020年4月以降発生分から段階的に延長され現在は3年（将来的に5年）。2年前の残業代も請求可能、弁護士や労働基準監督署に相談することで数十〜数百万円の未払い請求例多数あり。証拠保全が重要、タイムカード・メール記録等を必ず保存しましょう。",
+          },
+        ]}
+      />
       <AffiliateSection slug="overtime-calculator" category="日常ツール" />
       <RelatedTools currentSlug="overtime-calculator" category="日常ツール" />
     </div>
