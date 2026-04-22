@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { AdSenseUnit } from "@/components/AdSenseUnit";
+import { onAffiliateClick } from "@/lib/tracking";
 
 interface Recommendation {
   title: string;
@@ -746,6 +747,12 @@ export function AffiliateSection({ slug, category }: { slug: string; category: s
             href={rec.url}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
+            onClick={onAffiliateClick({
+              page: slug,
+              position: `affiliate_section_${i + 1}`,
+              service: rec.title,
+              href: rec.url,
+            })}
             className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
           >
             <div className="flex items-start justify-between gap-4">

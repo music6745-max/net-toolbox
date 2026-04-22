@@ -1,3 +1,6 @@
+"use client";
+import { onAffiliateClick } from "@/lib/tracking";
+
 interface ServiceRow {
   name: string;
   url: string;
@@ -8,9 +11,11 @@ interface ServiceRow {
 
 interface ComparisonTableCTAProps {
   services: ServiceRow[];
+  /** Page identifier for GA4 event grouping (guide slug etc.) */
+  page?: string;
 }
 
-export function ComparisonTableCTA({ services }: ComparisonTableCTAProps) {
+export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) {
   return (
     <div>
       {/* Desktop table */}
@@ -55,6 +60,12 @@ export function ComparisonTableCTA({ services }: ComparisonTableCTAProps) {
                     href={svc.url}
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
+                    onClick={onAffiliateClick({
+                      page,
+                      position: `comparison_table_${i + 1}`,
+                      service: svc.name,
+                      href: svc.url,
+                    })}
                     className="inline-block bg-primary text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                   >
                     申し込む
@@ -68,7 +79,7 @@ export function ComparisonTableCTA({ services }: ComparisonTableCTAProps) {
 
       {/* Mobile cards */}
       <div className="md:hidden space-y-3">
-        {services.map((svc) => (
+        {services.map((svc, i) => (
           <div
             key={svc.name}
             className="bg-card-bg border border-card-border rounded-xl p-4"
@@ -87,6 +98,12 @@ export function ComparisonTableCTA({ services }: ComparisonTableCTAProps) {
               href={svc.url}
               target="_blank"
               rel="nofollow sponsored noopener noreferrer"
+              onClick={onAffiliateClick({
+                page,
+                position: `comparison_table_mobile_${i + 1}`,
+                service: svc.name,
+                href: svc.url,
+              })}
               className="block text-center bg-primary text-white px-5 py-3 rounded-full text-sm font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
             >
               申し込む

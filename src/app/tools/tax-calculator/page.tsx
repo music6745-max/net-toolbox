@@ -78,17 +78,53 @@ export default function TaxCalculatorPage() {
           },
         ]}
       />
-      <section className="mt-10 bg-card-bg border border-card-border rounded-xl p-6">
-        <h2 className="text-lg font-bold mb-3">消費税関連の節税・確定申告ツール</h2>
+      <section className="mt-10 bg-gradient-to-br from-primary/5 to-blue-50/50 dark:from-primary/10 dark:to-blue-900/10 border-2 border-primary/30 rounded-xl p-6">
+        <h2 className="text-lg font-bold mb-3">💡 消費税の計算だけで終わらせない：専門家に相談する</h2>
         <p className="text-sm text-muted mb-4">
-          フリーランス・個人事業主の方は、インボイス制度対応・消費税納税で手間がかかります。会計ソフトを使えば、仕訳から消費税申告まで自動化できます。
+          計算は一瞬でも、インボイス制度・電帳法・青色申告・節税判断は個別事情で大きく変わります。無料で税理士にマッチングし、「自分のケースの最適解」を確認しておくと数十万円単位の節税に繋がります。
         </p>
-        <ul className="list-disc list-inside space-y-1 text-sm text-muted">
-          <li>freee会計：インボイス自動対応・消費税申告ボタン1つ</li>
-          <li>マネーフォワードクラウド：AI仕訳で時短、月1,000円〜</li>
-          <li>弥生会計オンライン：老舗の安心感、初年度無料キャンペーン</li>
-          <li>税理士ドットコム：消費税申告代行税理士の無料マッチング</li>
-        </ul>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://toshi-navi.jp/guide/invoice-system-complete-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+          >
+            <div className="text-xs text-muted mb-1">関連ガイド</div>
+            <div className="font-bold text-sm mb-1">インボイス制度完全ガイド 2026</div>
+            <div className="text-xs text-muted">適格請求書・2割特例・登録要否の判断基準を解説</div>
+          </a>
+          <a
+            href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+          >
+            <div className="text-xs text-muted mb-1">関連ガイド</div>
+            <div className="font-bold text-sm mb-1">電子帳簿保存法ガイド</div>
+            <div className="text-xs text-muted">2024年本格施行の対応方法・罰則回避</div>
+          </a>
+          <a
+            href="https://toshi-navi.jp/guide/company-expense-rules-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+          >
+            <div className="text-xs text-muted mb-1">関連ガイド</div>
+            <div className="font-bold text-sm mb-1">会社員の経費計上ルール</div>
+            <div className="text-xs text-muted">副業経費・特定支出控除で年20〜30万円節税</div>
+          </a>
+          <a
+            href="https://toshi-navi.jp/guide/medical-expense-practical-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+          >
+            <div className="text-xs text-muted mb-1">関連ガイド</div>
+            <div className="font-bold text-sm mb-1">医療費控除の実践ガイド</div>
+            <div className="text-xs text-muted">年10万円超の還付を最大化する方法</div>
+          </a>
+        </div>
       </section>
       <AffiliateSection slug="tax-calculator" category="日常ツール" />
       <RelatedTools currentSlug="tax-calculator" category="日常ツール" />
