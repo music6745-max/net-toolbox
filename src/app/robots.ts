@@ -2,25 +2,25 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/tools";
 
 export default function robots(): MetadataRoute.Robots {
+  // /go/* はアフィリエイトリダイレクタなのでクロール対象外
+  const common = { allow: "/", disallow: "/go/" };
   return {
     rules: [
-      { userAgent: "*", allow: "/" },
-      // 主要検索エンジン
-      { userAgent: "Googlebot", allow: "/" },
-      { userAgent: "Bingbot", allow: "/" },
-      // AI クローラー（一旦すべて許可・SEO観点）
-      { userAgent: "Google-Extended", allow: "/" },
-      { userAgent: "GPTBot", allow: "/" },
-      { userAgent: "ChatGPT-User", allow: "/" },
-      { userAgent: "OAI-SearchBot", allow: "/" },
-      { userAgent: "ClaudeBot", allow: "/" },
-      { userAgent: "Claude-Web", allow: "/" },
-      { userAgent: "anthropic-ai", allow: "/" },
-      { userAgent: "PerplexityBot", allow: "/" },
-      { userAgent: "Applebot-Extended", allow: "/" },
-      { userAgent: "CCBot", allow: "/" },
-      { userAgent: "Bytespider", allow: "/" },
-      { userAgent: "FacebookBot", allow: "/" },
+      { userAgent: "*", ...common },
+      { userAgent: "Googlebot", ...common },
+      { userAgent: "Bingbot", ...common },
+      { userAgent: "Google-Extended", ...common },
+      { userAgent: "GPTBot", ...common },
+      { userAgent: "ChatGPT-User", ...common },
+      { userAgent: "OAI-SearchBot", ...common },
+      { userAgent: "ClaudeBot", ...common },
+      { userAgent: "Claude-Web", ...common },
+      { userAgent: "anthropic-ai", ...common },
+      { userAgent: "PerplexityBot", ...common },
+      { userAgent: "Applebot-Extended", ...common },
+      { userAgent: "CCBot", ...common },
+      { userAgent: "Bytespider", ...common },
+      { userAgent: "FacebookBot", ...common },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,
     host: siteConfig.url,

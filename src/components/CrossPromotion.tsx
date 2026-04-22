@@ -1,3 +1,11 @@
+"use client";
+import { onAffiliateClick } from "@/lib/tracking";
+
+// クロスドメイン UTM: 受け側 (money-navi / ai-tools-navi) の GA4 で
+// utm_source=net-toolbox でセグメント可能にする
+const AI_NAVI_HREF = "https://ai-tools-navi.jp?utm_source=net-toolbox&utm_medium=referral&utm_campaign=sister_site_footer";
+const TOSHI_NAVI_HREF = "https://toshi-navi.jp?utm_source=net-toolbox&utm_medium=referral&utm_campaign=sister_site_footer";
+
 export function CrossPromotion() {
   const aiCategories = [
     { name: "AIチャット", icon: "💬" },
@@ -16,9 +24,15 @@ export function CrossPromotion() {
   return (
     <section className="mt-6 mb-4 space-y-3">
       <a
-        href="https://ai-tools-navi.jp"
+        href={AI_NAVI_HREF}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onAffiliateClick({
+          page: "global",
+          position: "cross_promo_ai",
+          service: "ai-tools-navi",
+          href: AI_NAVI_HREF,
+        })}
         className="block bg-card-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">
@@ -43,9 +57,15 @@ export function CrossPromotion() {
         </div>
       </a>
       <a
-        href="https://toshi-navi.jp"
+        href={TOSHI_NAVI_HREF}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onAffiliateClick({
+          page: "global",
+          position: "cross_promo_money",
+          service: "toshi-navi",
+          href: TOSHI_NAVI_HREF,
+        })}
         className="block bg-card-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">

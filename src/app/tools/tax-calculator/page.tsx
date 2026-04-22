@@ -4,6 +4,11 @@ import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { ToolFAQSection } from "@/components/ToolFAQSection";
+import { onAffiliateClick } from "@/lib/tracking";
+
+// クロスドメイン送客（toolbox→money-navi）の共通UTM
+// money-navi 側の GA4 で utm_source=net-toolbox でセグメント可能
+const CROSS_DOMAIN_UTM = "?utm_source=net-toolbox&utm_medium=referral&utm_campaign=tool_tax-calculator";
 
 export default function TaxCalculatorPage() {
   const [amount, setAmount] = useState(1000);
@@ -84,46 +89,33 @@ export default function TaxCalculatorPage() {
           計算は一瞬でも、インボイス制度・電帳法・青色申告・節税判断は個別事情で大きく変わります。無料で税理士にマッチングし、「自分のケースの最適解」を確認しておくと数十万円単位の節税に繋がります。
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a
-            href="https://toshi-navi.jp/guide/invoice-system-complete-guide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
-          >
-            <div className="text-xs text-muted mb-1">関連ガイド</div>
-            <div className="font-bold text-sm mb-1">インボイス制度完全ガイド 2026</div>
-            <div className="text-xs text-muted">適格請求書・2割特例・登録要否の判断基準を解説</div>
-          </a>
-          <a
-            href="https://toshi-navi.jp/guide/denshi-chobo-preservation-guide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
-          >
-            <div className="text-xs text-muted mb-1">関連ガイド</div>
-            <div className="font-bold text-sm mb-1">電子帳簿保存法ガイド</div>
-            <div className="text-xs text-muted">2024年本格施行の対応方法・罰則回避</div>
-          </a>
-          <a
-            href="https://toshi-navi.jp/guide/company-expense-rules-guide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
-          >
-            <div className="text-xs text-muted mb-1">関連ガイド</div>
-            <div className="font-bold text-sm mb-1">会社員の経費計上ルール</div>
-            <div className="text-xs text-muted">副業経費・特定支出控除で年20〜30万円節税</div>
-          </a>
-          <a
-            href="https://toshi-navi.jp/guide/medical-expense-practical-guide"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
-          >
-            <div className="text-xs text-muted mb-1">関連ガイド</div>
-            <div className="font-bold text-sm mb-1">医療費控除の実践ガイド</div>
-            <div className="text-xs text-muted">年10万円超の還付を最大化する方法</div>
-          </a>
+          {[
+            { slug: "invoice-system-complete-guide", title: "インボイス制度完全ガイド 2026", desc: "適格請求書・2割特例・登録要否の判断基準を解説" },
+            { slug: "denshi-chobo-preservation-guide", title: "電子帳簿保存法ガイド", desc: "2024年本格施行の対応方法・罰則回避" },
+            { slug: "company-expense-rules-guide", title: "会社員の経費計上ルール", desc: "副業経費・特定支出控除で年20〜30万円節税" },
+            { slug: "medical-expense-practical-guide", title: "医療費控除の実践ガイド", desc: "年10万円超の還付を最大化する方法" },
+          ].map((g, i) => {
+            const href = `https://toshi-navi.jp/guide/${g.slug}${CROSS_DOMAIN_UTM}`;
+            return (
+              <a
+                key={g.slug}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onAffiliateClick({
+                  page: "tool_tax-calculator",
+                  position: `cross_domain_guide_${i + 1}`,
+                  service: `toshi-navi:${g.slug}`,
+                  href,
+                })}
+                className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
+              >
+                <div className="text-xs text-muted mb-1">関連ガイド</div>
+                <div className="font-bold text-sm mb-1">{g.title}</div>
+                <div className="text-xs text-muted">{g.desc}</div>
+              </a>
+            );
+          })}
         </div>
       </section>
       <AffiliateSection slug="tax-calculator" category="日常ツール" />
