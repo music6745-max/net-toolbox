@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/tools";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】格安SIM比較おすすめ6選｜料金・速度・通話プランを徹底解説",
@@ -35,5 +36,18 @@ export default function SimComparisonLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <div className="max-w-3xl mx-auto px-4 pb-10">
+        <AffiliateCTA
+          serviceName="保険マンモス（FP無料相談）"
+          url="/go/hoken-mammoth"
+          description="格安SIM乗り換えで通信費を月数千円下げたら、次は保険・住宅ローン・投資の見直しもまとめて。保険マンモスのFP無料相談なら、家計全体の固定費を見直して年間10万円以上の節約事例も。完全無料・自宅やオンラインで相談可能。"
+          badge="FP無料相談"
+          color="blue"
+        />
+      </div>
+    </>
+  );
 }
