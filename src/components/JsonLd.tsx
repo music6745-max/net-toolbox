@@ -128,7 +128,7 @@ export function ItemListJsonLd({
       "@type": "ListItem",
       position: i + 1,
       item: {
-        "@type": "Product",
+        "@type": "Thing",
         name: item.name,
         ...(item.description ? { description: item.description } : {}),
         ...(item.url ? { url: item.url } : {}),
