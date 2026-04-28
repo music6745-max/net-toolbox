@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/tools";
+import { AffiliateCTA } from "@/components/AffiliateCTA";
 
 export const metadata: Metadata = {
   title:
@@ -39,5 +40,18 @@ export default function RentalServerComparisonLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <div className="max-w-3xl mx-auto px-4 pb-10">
+        <AffiliateCTA
+          serviceName="KAGOYA（カゴヤ・ジャパン）"
+          url="/go/kagoya-rental-server"
+          description="1983年設立・約58,000アカウントの実績を誇る老舗ホスティング企業。クラウド・VPS・専用サーバー・WordPress専用サーバーまで法人利用に強いラインナップ。安定性とサポート品質を重視する方、長期運用を見据える方に。"
+          badge="法人実績多数"
+          color="indigo"
+        />
+      </div>
+    </>
+  );
 }

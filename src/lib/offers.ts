@@ -89,6 +89,19 @@ export const offers: Offer[] = [
     status: "active",
     category: "日常ツール",
   },
+
+  // ============ カゴヤ・ジャパン (法人向けクラウド/レンタルサーバー) — 2026-04-28 A8新着承認 ============
+  {
+    id: "kagoya-rental-server",
+    service: "KAGOYA（カゴヤ・ジャパン）",
+    provider: "a8net",
+    payout_yen: 2000,
+    official_url: "https://www.kagoya.jp/",
+    affiliate_url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1HL182+7YE+674EQ",
+    status: "active",
+    note: "A8プログラム 04-0205 (insId=s00000001031001)。2026-04-28 mylink取得・active化。法人利用実績多数のクラウド/VPS/レンタルサーバー、1983年設立で約58000アカウント実績。素材ID 041テキスト推奨。toolbox-site rental-server-comparison/best-rental-servers で活用。報酬は要再確認 (推定2000円)。",
+    category: "日常ツール",
+  },
 ];
 
 const offerById = new Map<string, Offer>(offers.map((o) => [o.id, o]));
