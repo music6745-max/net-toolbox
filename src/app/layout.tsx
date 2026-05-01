@@ -195,6 +195,8 @@ export default function RootLayout({
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
+              <Link href="/about" className="hover:text-primary">運営者情報</Link>
+              <Link href="/author" className="hover:text-primary">編集部について</Link>
               <Link href="/privacy" className="hover:text-primary">プライバシーポリシー</Link>
               <Link href="/terms" className="hover:text-primary">利用規約</Link>
               <Link href="/contact" className="hover:text-primary">お問い合わせ</Link>

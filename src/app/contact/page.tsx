@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const contactEmail = "contact@net-toolbox.jp";
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <nav className="text-sm text-muted mb-6">
@@ -20,20 +22,23 @@ export default function ContactPage() {
 
       <div className="bg-card-bg border border-card-border rounded-xl p-8">
         <p className="text-sm text-muted leading-relaxed mb-6">
-          {siteConfig.name}に関するお問い合わせは、以下のGoogleフォームからお願いいたします。
-          ツールの不具合報告、機能のご要望、その他ご質問がございましたらお気軽にお問い合わせください。
+          {siteConfig.name}に関するお問い合わせは、下記のメールアドレスまでお願いいたします。
+          ツールの不具合報告、機能のご要望、掲載内容の修正依頼などがございましたらお気軽にご連絡ください。
         </p>
 
         <div className="bg-background rounded-lg p-6 text-center">
-          <p className="text-sm text-muted mb-4">
-            お問い合わせフォームは現在準備中です。
-          </p>
-          <p className="text-sm text-muted">
-            お急ぎの場合は、GitHubリポジトリのIssueからご連絡ください。
+          <a
+            href={`mailto:${contactEmail}`}
+            className="inline-block mt-4 bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors"
+          >
+            {contactEmail}
+          </a>
+          <p className="text-xs text-muted mt-4">
+            技術的な不具合報告は、GitHub Issueからも受け付けています。
           </p>
           <a
             href="https://github.com/music6745-max/net-toolbox/issues"
-            className="inline-block mt-4 bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-primary-hover transition-colors"
+            className="inline-block mt-3 text-sm text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
