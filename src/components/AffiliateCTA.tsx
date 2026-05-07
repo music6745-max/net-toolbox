@@ -1,9 +1,27 @@
+"use client";
+
+import { getOffer } from "@/lib/offers";
+import { providerFromUrl, trackEvent } from "@/lib/tracking";
+
 interface AffiliateCTAProps {
   serviceName: string;
   url: string;
   description: string;
   badge?: string;
   color: "green" | "blue" | "purple" | "red" | "orange" | "yellow" | "indigo";
+  page?: string;
+  position?: string;
+}
+
+function offerIdFromGoUrl(url: string): string | undefined {
+  const match = url.match(/^\/go\/([^/?#]+)/);
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
+function currentPage(page?: string): string {
+  if (page) return page;
+  if (typeof window === "undefined") return "";
+  return window.location.pathname;
 }
 
 const colorStyles: Record<
@@ -94,8 +112,26 @@ export function AffiliateCTA({
   description,
   badge,
   color,
+  page,
+  position = "affiliate_cta",
 }: AffiliateCTAProps) {
   const styles = colorStyles[color] || colorStyles.blue;
+  const offerId = offerIdFromGoUrl(url);
+  const offer = offerId ? getOffer(offerId) : undefined;
+  const trackedUrl = offer?.affiliate_url ?? url;
+  const provider =
+    offer?.provider === "direct" ? "direct" : providerFromUrl(trackedUrl);
+  const onClick = () => {
+    trackEvent("affiliate_click", {
+      page: currentPage(page),
+      position,
+      service: offer?.service ?? serviceName,
+      offer_id: offer?.id ?? offerId,
+      provider,
+      status: offer?.status,
+      url: trackedUrl.slice(0, 200),
+    });
+  };
 
   return (
     <div
@@ -122,6 +158,7 @@ export function AffiliateCTA({
           href={url}
           target="_blank"
           rel="nofollow sponsored noopener noreferrer"
+          onClick={onClick}
           className={`inline-block ${styles.button} text-white px-10 py-4 rounded-full text-base font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
         >
           公式サイトで詳細を見る &rarr;
