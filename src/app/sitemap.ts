@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { tools, siteConfig } from "@/lib/tools";
 import { categories } from "@/lib/categories";
+import { getIndexableGuides } from "@/lib/retiredGuides";
 import { guides } from "./guide/guides.data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const guidePages = guides.map((g) => ({
+  const guidePages = getIndexableGuides(guides).map((g) => ({
     url: `${siteConfig.url}/guide/${g.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

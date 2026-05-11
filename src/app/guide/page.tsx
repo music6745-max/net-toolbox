@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
+import { getIndexableGuides } from "@/lib/retiredGuides";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import GuideList from "./GuideList";
 import { guides } from "./guides.data";
 
+const publicGuides = getIndexableGuides(guides);
+
 export const metadata: Metadata = {
-  title: `ガイド・比較記事一覧【全${guides.length}本】| 通信・金融・生活・仕事まで徹底解説`,
-  description: `格安SIM・クレカ・VPN・レンタルサーバー・転職・英会話など${guides.length}本以上の比較ガイドを無料公開。2026年最新の料金・特徴を徹底解説し、あなたに最適なサービスを最短で見つけられます。`,
+  title: `ガイド・比較記事一覧【全${publicGuides.length}本】| 通信・金融・生活・仕事まで徹底解説`,
+  description: `格安SIM・クレカ・VPN・レンタルサーバー・転職・英会話など${publicGuides.length}本以上の比較ガイドを無料公開。2026年最新の料金・特徴を徹底解説し、あなたに最適なサービスを最短で見つけられます。`,
   alternates: {
     canonical: `${siteConfig.url}/guide`,
   },
   openGraph: {
-    title: `ガイド・比較記事一覧【全${guides.length}本】`,
-    description: `通信・金融・生活・仕事スキルまで、2026年最新の比較ガイド${guides.length}本を無料公開。`,
+    title: `ガイド・比較記事一覧【全${publicGuides.length}本】`,
+    description: `通信・金融・生活・仕事スキルまで、2026年最新の比較ガイド${publicGuides.length}本を無料公開。`,
     url: `${siteConfig.url}/guide`,
     type: "website",
   },
@@ -24,7 +27,7 @@ function CollectionPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "ガイド・比較記事一覧",
-    description: `${guides.length}本以上の比較・活用ガイドを掲載。`,
+    description: `${publicGuides.length}本以上の比較・活用ガイドを掲載。`,
     url: `${siteConfig.url}/guide`,
     inLanguage: "ja",
     isPartOf: {
@@ -34,8 +37,8 @@ function CollectionPageJsonLd() {
     },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: guides.length,
-      itemListElement: guides.slice(0, 30).map((g, i) => ({
+      numberOfItems: publicGuides.length,
+      itemListElement: publicGuides.slice(0, 30).map((g, i) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `${siteConfig.url}/guide/${g.slug}`,
@@ -80,7 +83,7 @@ export default function GuidePage() {
         </p>
       </section>
 
-      <GuideList guides={guides} />
+      <GuideList guides={publicGuides} />
 
       {/* About section */}
       <section className="mt-12 bg-card-bg border border-card-border rounded-xl p-6 sm:p-8 text-center">

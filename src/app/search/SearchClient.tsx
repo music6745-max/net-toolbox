@@ -4,7 +4,10 @@ import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { tools } from "@/lib/tools";
+import { getIndexableGuides } from "@/lib/retiredGuides";
 import { guides } from "@/app/guide/guides.data";
+
+const publicGuides = getIndexableGuides(guides);
 
 function highlight(text: string, q: string) {
   if (!q) return text;
@@ -44,7 +47,7 @@ export default function SearchClient() {
   const guideResults = useMemo(
     () =>
       q
-        ? guides.filter(
+        ? publicGuides.filter(
             (g) =>
               g.title.toLowerCase().includes(q) ||
               g.description.toLowerCase().includes(q) ||
