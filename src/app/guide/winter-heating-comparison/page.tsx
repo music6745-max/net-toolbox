@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "エアコン・石油ファンヒーター・ガスファンヒーター・こたつ・電気ストーブを光熱費・暖房能力・安全性で徹底比較。部屋の広さ別おすすめも紹介。",
   alternates: { canonical: `${siteConfig.url}/guide/winter-heating-comparison` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

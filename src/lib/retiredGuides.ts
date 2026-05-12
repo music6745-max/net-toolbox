@@ -27,6 +27,7 @@ export const parkedGuideSlugs = [
   "recommended-books-it",
   "recommended-books-self-development",
   "spring-job-change-tips",
+  "winter-heating-comparison",
 ] as const;
 
 const retiredGuideSlugs = new Set<string>(Object.keys(retiredGuideRedirects));
