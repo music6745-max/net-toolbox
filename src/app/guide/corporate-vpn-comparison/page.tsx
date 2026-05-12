@@ -198,9 +198,9 @@ export default function CorporateVpnComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">リモートワークツール</span>
             <p className="text-xs text-muted mt-1">生産性向上のツール群</p>
           </Link>
-          <Link href="/guide/password-security" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">パスワード管理</span>
-            <p className="text-xs text-muted mt-1">基礎セキュリティ対策</p>
+          <Link href="/tools/password-strength" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">パスワード強度チェック</span>
+            <p className="text-xs text-muted mt-1">基礎セキュリティ対策に使える無料ツール</p>
           </Link>
         </div>
       </section>

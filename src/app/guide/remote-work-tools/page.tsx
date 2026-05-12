@@ -305,10 +305,10 @@ export default function RemoteWorkToolsPage() {
             仕事効率化ツール15選
           </Link>
           <Link
-            href="/guide/password-security"
+            href="/tools/password-strength"
             className="inline-block border border-card-border px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-card-bg transition-colors"
           >
-            パスワードセキュリティガイド
+            パスワード強度チェック
           </Link>
         </div>
       </section>

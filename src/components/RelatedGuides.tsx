@@ -20,9 +20,9 @@ const guidesByCategory: Record<string, Guide[]> = {
       icon: "🛡️",
     },
     {
-      slug: "password-security",
-      title: "安全なパスワードの作り方",
-      description: "パスワードの安全性を高める方法とパスワードマネージャー活用法",
+      slug: "corporate-vpn-comparison",
+      title: "法人向けVPN比較",
+      description: "セキュリティ強化に使えるVPNの選び方を解説",
       icon: "🔒",
     },
   ],
@@ -70,10 +70,10 @@ const guidesByCategory: Record<string, Guide[]> = {
   ],
   "画像・メディア": [
     {
-      slug: "qr-code-howto",
-      title: "【完全ガイド】QRコードの作り方と活用術",
-      description: "QRコードの作成方法から名刺・URL・WiFi共有など活用術を解説",
-      icon: "📱",
+      slug: "web-tools-for-work",
+      title: "仕事効率化に使える無料Webツール15選",
+      description: "テキスト処理、データ変換など業務効率を上げるツールを厳選",
+      icon: "💼",
     },
     {
       slug: "web-tools-for-work",

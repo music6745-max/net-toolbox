@@ -13,15 +13,15 @@ export const metadata: Metadata = {
 
 const items = [
   { rank: 1, name: "マネーフォワード ME", feat: "自動連携数No.1", free: "無料プランあり", link: "/guide/accounting-software-comparison" },
-  { rank: 2, name: "Zaim", feat: "UIが使いやすい", free: "完全無料あり", link: "/guide/subscription-management" },
-  { rank: 3, name: "Moneytree", feat: "シンプルで軽快", free: "完全無料", link: "/guide/subscription-management" },
+  { rank: 2, name: "Zaim", feat: "UIが使いやすい", free: "完全無料あり", link: "/tools/subscription-cost-calc" },
+  { rank: 3, name: "Moneytree", feat: "シンプルで軽快", free: "完全無料", link: "/tools/subscription-cost-calc" },
   { rank: 4, name: "Dr.Wallet", feat: "レシート手入力代行", free: "一部無料", link: "/guide/accounting-software-comparison" },
   { rank: 5, name: "おかねのコンパス", feat: "資産形成も支援", free: "完全無料", link: "/guide/nisa-comparison" },
-  { rank: 6, name: "OsidOri", feat: "家族で共有可", free: "無料プランあり", link: "/guide/subscription-management" },
+  { rank: 6, name: "OsidOri", feat: "家族で共有可", free: "無料プランあり", link: "/tools/subscription-cost-calc" },
   { rank: 7, name: "B/43", feat: "プリペイド連動", free: "無料", link: "/guide/credit-card-comparison" },
   { rank: 8, name: "Fortune City", feat: "ゲーム感覚で楽しく", free: "無料", link: "/guide/fitness-app-comparison" },
-  { rank: 9, name: "LINE家計簿", feat: "LINEで完結", free: "完全無料", link: "/guide/subscription-management" },
-  { rank: 10, name: "家計簿Pro", feat: "シンプル派に", free: "一部無料", link: "/guide/subscription-management" },
+  { rank: 9, name: "LINE家計簿", feat: "LINEで完結", free: "完全無料", link: "/tools/subscription-cost-calc" },
+  { rank: 10, name: "家計簿Pro", feat: "シンプル派に", free: "一部無料", link: "/tools/subscription-cost-calc" },
 ];
 
 export default function SavingAppRankingPage() {
@@ -79,7 +79,7 @@ export default function SavingAppRankingPage() {
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/subscription-management" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/tools/subscription-cost-calc" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">サブスク管理</span>
             <p className="text-xs text-muted mt-1">隠れた支出を可視化</p>
           </Link>

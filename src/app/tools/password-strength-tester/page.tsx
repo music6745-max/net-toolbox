@@ -143,9 +143,9 @@ export default function Page() {
       <section className="mt-10 bg-card-bg border border-card-border rounded-xl p-6">
         <h2 className="text-lg font-bold mb-3">関連ガイド</h2>
         <div className="grid sm:grid-cols-2 gap-3 text-sm">
-          <Link href="/guide/password-security" className="block p-4 rounded-lg border border-card-border hover:border-primary hover:bg-primary/5 transition-colors">
-            <p className="font-medium">パスワードセキュリティガイド</p>
-            <p className="text-muted text-xs mt-1">安全なパスワード管理の基本</p>
+          <Link href="/tools/password-generator" className="block p-4 rounded-lg border border-card-border hover:border-primary hover:bg-primary/5 transition-colors">
+            <p className="font-medium">パスワード生成ツール</p>
+            <p className="text-muted text-xs mt-1">安全なパスワードを作る</p>
           </Link>
           <Link href="/guide/best-vpn-services" className="block p-4 rounded-lg border border-card-border hover:border-primary hover:bg-primary/5 transition-colors">
             <p className="font-medium">VPNサービス比較</p>

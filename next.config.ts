@@ -1,25 +1,31 @@
 import type { NextConfig } from "next";
 
 const retiredGuideRedirects = [
-  ["beauty-clinic-ranking-2026", "beauty-clinic-comparison"],
-  ["credit-card-ranking-2026", "credit-card-comparison"],
-  ["english-school-ranking-2026", "online-english-comparison"],
-  ["insurance-ranking-2026", "insurance-comparison"],
-  ["job-agent-ranking-2026", "job-site-comparison"],
-  ["matching-app-ranking-2026", "matching-app-comparison"],
-  ["online-broker-ranking-2026", "online-broker-comparison"],
-  ["pet-insurance-ranking-2026", "pet-insurance-comparison"],
-  ["programming-school-ranking-2026", "programming-school-comparison"],
-  ["rental-server-ranking-2026", "rental-server-comparison"],
-  ["vpn-ranking-2026", "vpn-comparison"],
-  ["wifi-ranking-2026", "wifi-comparison"],
+  ["beauty-clinic-ranking-2026", "/guide/beauty-clinic-comparison"],
+  ["credit-card-ranking-2026", "/guide/credit-card-comparison"],
+  ["english-school-ranking-2026", "/guide/online-english-comparison"],
+  ["fuel-economy-guide", "/tools/fuel-calculator"],
+  ["insurance-ranking-2026", "/guide/insurance-comparison"],
+  ["job-agent-ranking-2026", "/guide/job-site-comparison"],
+  ["matching-app-ranking-2026", "/guide/matching-app-comparison"],
+  ["mojibake-fix-guide", "/tools/encoding-detector"],
+  ["online-broker-ranking-2026", "/guide/online-broker-comparison"],
+  ["password-security", "/tools/password-strength"],
+  ["pet-insurance-ranking-2026", "/guide/pet-insurance-comparison"],
+  ["programming-school-ranking-2026", "/guide/programming-school-comparison"],
+  ["qr-code-howto", "/tools/qr-code"],
+  ["rental-server-ranking-2026", "/guide/rental-server-comparison"],
+  ["subscription-management", "/tools/subscription-cost-calc"],
+  ["twitter-preview-guide", "/tools/twitter-preview"],
+  ["vpn-ranking-2026", "/guide/vpn-comparison"],
+  ["wifi-ranking-2026", "/guide/wifi-comparison"],
 ] as const;
 
 const nextConfig: NextConfig = {
   async redirects() {
-    return retiredGuideRedirects.map(([from, to]) => ({
+    return retiredGuideRedirects.map(([from, destination]) => ({
       source: `/guide/${from}`,
-      destination: `/guide/${to}`,
+      destination,
       permanent: true,
     }));
   },

@@ -58,10 +58,8 @@ const guideMeta: Record<string, GuideMeta> = {
   "online-fitness-comparison": { title: "オンラインフィットネス比較", desc: "オンラインヨガ・トレーニングを比較" },
   "pet-food-comparison": { title: "ペットフード比較", desc: "プレミアムドッグ・キャットフードを比較" },
   // その他
-  "password-security": { title: "安全なパスワードの作り方", desc: "パスワードマネージャー活用法を解説" },
   "note-taking-app-comparison": { title: "ノートアプリ比較", desc: "Notion・Evernote等を徹底比較" },
   "project-management-comparison": { title: "プロジェクト管理ツール比較", desc: "Asana・Trello等を比較" },
-  "qr-code-howto": { title: "QRコードの作り方ガイド", desc: "QRコードの作成・活用術を解説" },
   "matching-app-comparison": { title: "マッチングアプリ比較", desc: "Pairs・with等の主要アプリを比較" },
   "marriage-agency-comparison": { title: "結婚相談所比較", desc: "成婚率で主要結婚相談所を比較" },
   "car-purchase-comparison": { title: "車買取・購入サービス比較", desc: "ガリバー・ビッグモーター等を比較" },
@@ -74,7 +72,6 @@ const guideMeta: Record<string, GuideMeta> = {
   "air-purifier-comparison": { title: "空気清浄機比較", desc: "花粉・ハウスダスト対策モデルを比較" },
   "cordless-cleaner-comparison": { title: "コードレス掃除機比較", desc: "ダイソン・マキタ等の人気モデルを比較" },
   "rice-cooker-comparison": { title: "炊飯器比較", desc: "象印・タイガー等の高級炊飯器を比較" },
-  "subscription-management": { title: "サブスク管理術", desc: "月額サービスを賢く管理する方法" },
   "baby-goods-comparison": { title: "ベビー用品比較", desc: "出産準備に必要なベビー用品を比較" },
 };
 
@@ -85,7 +82,7 @@ const groups: Record<string, string[]> = {
   life: ["water-server-comparison", "food-delivery-comparison", "meal-kit-comparison", "electric-company-comparison", "gas-company-comparison", "hikari-fiber-comparison", "electricity-saving-tips", "solar-power-comparison"],
   ent: ["streaming-comparison", "ebook-comparison", "cloud-storage-comparison", "photo-editing-comparison", "video-editing-comparison"],
   health: ["hair-removal-comparison", "personal-gym-comparison", "fitness-app-comparison", "online-counseling-comparison", "online-fitness-comparison", "pet-food-comparison"],
-  other: ["password-security", "note-taking-app-comparison", "project-management-comparison", "qr-code-howto", "matching-app-comparison", "marriage-agency-comparison", "car-purchase-comparison", "moving-company-comparison", "junk-removal-comparison", "travel-booking-comparison", "smartphone-comparison", "tablet-comparison", "smart-watch-comparison", "air-purifier-comparison", "cordless-cleaner-comparison", "rice-cooker-comparison", "subscription-management", "baby-goods-comparison"],
+  other: ["note-taking-app-comparison", "project-management-comparison", "matching-app-comparison", "marriage-agency-comparison", "car-purchase-comparison", "moving-company-comparison", "junk-removal-comparison", "travel-booking-comparison", "smartphone-comparison", "tablet-comparison", "smart-watch-comparison", "air-purifier-comparison", "cordless-cleaner-comparison", "rice-cooker-comparison", "baby-goods-comparison"],
 };
 
 function findGroup(slug: string): string[] {

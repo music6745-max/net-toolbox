@@ -187,8 +187,8 @@ export default function RootLayout({
                 <Link href="/guide/tax-software-comparison" className="hover:text-primary transition-colors">確定申告ソフト比較</Link>
                 <Link href="/guide/best-vpn-services" className="hover:text-primary transition-colors">VPN比較</Link>
                 <Link href="/guide/side-business-tools" className="hover:text-primary transition-colors">副業ツール</Link>
-                <Link href="/guide/qr-code-howto" className="hover:text-primary transition-colors">QRコードの作り方</Link>
-                <Link href="/guide/password-security" className="hover:text-primary transition-colors">パスワードセキュリティ</Link>
+                <Link href="/tools/qr-code" className="hover:text-primary transition-colors">QRコード作成</Link>
+                <Link href="/tools/password-strength" className="hover:text-primary transition-colors">パスワード強度チェック</Link>
                 <Link href="/guide/web-tools-for-work" className="hover:text-primary transition-colors">仕事効率化ツール</Link>
                 <Link href="/guide/developer-tools-guide" className="hover:text-primary transition-colors">開発者ツール活用</Link>
                 <Link href="/guide/remote-work-tools" className="hover:text-primary transition-colors">リモートワークツール</Link>

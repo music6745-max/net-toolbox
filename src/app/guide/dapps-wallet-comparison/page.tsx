@@ -233,9 +233,9 @@ export default function DappsWalletComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">仮想通貨の税金計算ソフト</span>
             <p className="text-xs text-muted mt-1">DeFi損益の計算に</p>
           </Link>
-          <Link href="/guide/password-security" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">パスワード・セキュリティ</span>
-            <p className="text-xs text-muted mt-1">シードフレーズ管理の基礎</p>
+          <Link href="/tools/password-strength" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">パスワード強度チェック</span>
+            <p className="text-xs text-muted mt-1">シードフレーズ管理前の基礎確認</p>
           </Link>
         </div>
       </section>

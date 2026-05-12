@@ -76,7 +76,7 @@ const genres: Genre[] = [
     name: "VPN",
     icon: "🔐",
     desc: "セキュリティ強化に役立つVPNサービスの人気トップ3。",
-    slugs: ["vpn-comparison", "best-vpn-services", "password-security"],
+    slugs: ["vpn-comparison", "best-vpn-services", "corporate-vpn-comparison"],
   },
 ];
 
