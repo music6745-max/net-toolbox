@@ -19,14 +19,31 @@ export const retiredGuideRedirects = {
   "wifi-ranking-2026": "wifi-comparison",
 } as const;
 
+export const parkedGuideSlugs = [
+  "new-graduate-financial-tips",
+  "recommended-books-business",
+  "recommended-books-finance",
+  "recommended-books-health",
+  "recommended-books-it",
+  "recommended-books-self-development",
+  "spring-job-change-tips",
+] as const;
+
 const retiredGuideSlugs = new Set<string>(Object.keys(retiredGuideRedirects));
+const parkedGuideSlugSet = new Set<string>(parkedGuideSlugs);
 
 export function isRetiredGuideSlug(slug: string) {
   return retiredGuideSlugs.has(slug);
 }
 
+export function isParkedGuideSlug(slug: string) {
+  return parkedGuideSlugSet.has(slug);
+}
+
 export function getIndexableGuides<T extends { slug: string }>(
   guides: readonly T[]
 ): T[] {
-  return guides.filter((guide) => !isRetiredGuideSlug(guide.slug));
+  return guides.filter(
+    (guide) => !isRetiredGuideSlug(guide.slug) && !isParkedGuideSlug(guide.slug)
+  );
 }

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "若手〜中堅ビジネスパーソン向けに、マネジメント・戦略・思考法・マーケティングの定番ビジネス書を厳選。読む順番とポイント解説付き。",
   alternates: { canonical: `${siteConfig.url}/guide/recommended-books-business` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "ダイエット・食事・運動・睡眠・メンタルまで、科学的根拠に基づいた健康書籍を厳選。流行に流されず一生使える健康知識を手に入れましょう。",
   alternates: { canonical: `${siteConfig.url}/guide/recommended-books-health` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

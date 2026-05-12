@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "新NISA・iDeCo・インデックス投資・FIRE・家計管理まで、お金の勉強を始める人向けに定番書籍を厳選。読む順番とロードマップ付きで解説します。",
   alternates: { canonical: `${siteConfig.url}/guide/recommended-books-finance` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

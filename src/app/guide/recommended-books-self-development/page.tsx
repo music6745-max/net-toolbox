@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "習慣・マインドセット・モチベーション・目標達成の定番自己啓発書を厳選。読む順番と実践のコツも一緒に紹介します。",
   alternates: { canonical: `${siteConfig.url}/guide/recommended-books-self-development` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

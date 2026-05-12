@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "プログラミング未経験からWebエンジニアを目指す人向けに、IT・プログラミング学習の定番書籍を厳選。Python・JavaScript・アルゴリズム・設計・インフラまで網羅したロードマップ付き。",
   alternates: { canonical: `${siteConfig.url}/guide/recommended-books-it` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

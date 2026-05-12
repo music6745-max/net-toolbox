@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "初任給を受け取る新社会人向けに、銀行口座・クレカ・家計簿アプリ・積立NISA・保険の選び方を徹底解説。給料の何割を貯金すべきかも明確に紹介。",
   alternates: { canonical: `${siteConfig.url}/guide/new-graduate-financial-tips` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [

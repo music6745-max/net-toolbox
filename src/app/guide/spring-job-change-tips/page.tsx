@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "3月〜5月は求人数が年間最大級。春の転職を成功させるタイミング・準備・書類作成・面接対策・内定後の手順までを完全ガイド。年収アップ事例も紹介。",
   alternates: { canonical: `${siteConfig.url}/guide/spring-job-change-tips` },
+  robots: { index: false, follow: true },
 };
 
 const faqItems = [
