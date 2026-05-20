@@ -1,5 +1,8 @@
 export const retiredGuideRedirects = {
+  "best-rental-servers": "rental-server-comparison",
+  "best-vpn-services": "vpn-comparison",
   "beauty-clinic-ranking-2026": "beauty-clinic-comparison",
+  "car-loan-rate-comparison": "car-loan-comparison",
   "credit-card-ranking-2026": "credit-card-comparison",
   "english-school-ranking-2026": "online-english-comparison",
   "fuel-economy-guide": "/tools/fuel-calculator",
@@ -14,6 +17,7 @@ export const retiredGuideRedirects = {
   "qr-code-howto": "/tools/qr-code",
   "rental-server-ranking-2026": "rental-server-comparison",
   "subscription-management": "/tools/subscription-cost-calc",
+  "tax-software-comparison": "accounting-software-comparison",
   "twitter-preview-guide": "/tools/twitter-preview",
   "vpn-ranking-2026": "vpn-comparison",
   "wifi-ranking-2026": "wifi-comparison",

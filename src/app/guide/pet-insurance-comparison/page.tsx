@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "ペット保険比較2026｜犬猫の通院・手術・窓口精算で選ぶおすすめ5社",
+  description:
+    "アニコム・アイペット・PS保険・楽天ペット保険・FPC保険を補償割合、通院・入院・手術、窓口精算、加入年齢、保険料で比較。犬猫の医療費に備える選び方を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/pet-insurance-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {

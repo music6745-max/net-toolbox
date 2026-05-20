@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const retiredGuideRedirects = [
+  ["best-rental-servers", "/guide/rental-server-comparison"],
+  ["best-vpn-services", "/guide/vpn-comparison"],
   ["beauty-clinic-ranking-2026", "/guide/beauty-clinic-comparison"],
+  ["car-loan-rate-comparison", "/guide/car-loan-comparison"],
   ["credit-card-ranking-2026", "/guide/credit-card-comparison"],
   ["english-school-ranking-2026", "/guide/online-english-comparison"],
   ["fuel-economy-guide", "/tools/fuel-calculator"],
@@ -16,6 +19,7 @@ const retiredGuideRedirects = [
   ["qr-code-howto", "/tools/qr-code"],
   ["rental-server-ranking-2026", "/guide/rental-server-comparison"],
   ["subscription-management", "/tools/subscription-cost-calc"],
+  ["tax-software-comparison", "/guide/accounting-software-comparison"],
   ["twitter-preview-guide", "/tools/twitter-preview"],
   ["vpn-ranking-2026", "/guide/vpn-comparison"],
   ["wifi-ranking-2026", "/guide/wifi-comparison"],

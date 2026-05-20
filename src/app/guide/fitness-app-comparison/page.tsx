@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "フィットネスアプリ比較2026｜筋トレ・食事管理・自宅トレ向けおすすめ5選",
+  description:
+    "Nike Training Club・MyFitnessPal・FiNC・あすけん・Freeleticsを、筋トレ、食事管理、AI提案、無料プラン、日本語対応で比較。目的別の選び方を解説します。",
+  alternates: { canonical: `${siteConfig.url}/guide/fitness-app-comparison` },
+};
 
 function ArticleJsonLd() {
   const data = {
