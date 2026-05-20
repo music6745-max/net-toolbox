@@ -151,6 +151,30 @@ export default function CarLoanRateComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold mb-4">車の総コストもあわせて確認</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://toshi-navi.jp/guide/auto-loan-comparison-2026?utm_source=net-toolbox&utm_medium=referral&utm_campaign=car-loan-rate-comparison"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">自動車ローンの総返済額を比較</span>
+            <p className="text-xs text-muted mt-1">銀行ローン・ディーラー・残価設定を返済額で確認</p>
+          </a>
+          <a
+            href="https://toshi-navi.jp/guide/auto-insurance-comparison-2026?utm_source=net-toolbox&utm_medium=referral&utm_campaign=car-loan-rate-comparison"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">自動車保険の固定費も見直す</span>
+            <p className="text-xs text-muted mt-1">納車前に保険料と補償条件を比較</p>
+          </a>
+        </div>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
         <ComparisonTableCTA
           services={[

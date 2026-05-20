@@ -418,6 +418,30 @@ export default function PetInsuranceComparisonPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold mb-4">保険料を家計全体で見直す</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://toshi-navi.jp/guide/pet-insurance-detailed-comparison?utm_source=net-toolbox&utm_medium=referral&utm_campaign=pet-insurance-comparison"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">犬猫の通院・手術費用を比較</span>
+            <p className="text-xs text-muted mt-1">補償割合・窓口精算・加入年齢を整理</p>
+          </a>
+          <a
+            href="https://toshi-navi.jp/guide/insurance-optimization-guide?utm_source=net-toolbox&utm_medium=referral&utm_campaign=pet-insurance-comparison"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">生命保険・医療保険も見直す</span>
+            <p className="text-xs text-muted mt-1">家計の固定費として保険料をまとめて確認</p>
+          </a>
+        </div>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
