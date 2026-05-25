@@ -641,6 +641,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-hospital-expense-reimbursement-memo", name: "親の入院費立替精算メモ", description: "親の入院費・日用品・交通費を家族が立て替えたときの精算予定と領収書確認を整理。", icon: "🏥", category: "日常ツール" },
   { slug: "kaigo-parent-monitoring-cost-check", name: "親の見守り費用チェック", description: "一人暮らしの親の見守りにかかる通信費・訪問費・外部サービス費と緊急時の連絡順を整理。", icon: "📞", category: "日常ツール" },
+  { slug: "kaigo-distance-care-family-meeting-agenda", name: "遠距離介護 家族会議アジェンダメーカー", description: "遠距離介護の家族会議で話す議題、担当案、次回確認事項を整理。", icon: "👥", category: "日常ツール" },
   { slug: "kaigo-distance-care-travel-memo", name: "遠距離介護交通費メモメーカー", description: "遠距離介護の交通費・宿泊費・家族分担額と、遠方でも担える役割を整理。", icon: "🚄", category: "日常ツール" },
   { slug: "kaigo-facility-visit-question-list", name: "施設見学質問リストメーカー", description: "介護施設の見学前に、費用・医療対応・夜間対応・面会・退去条件の質問リストを生成。", icon: "🏢", category: "日常ツール" },
   { slug: "kaigo-parent-money-document-memo", name: "親の通帳・保険・支払い確認メモメーカー", description: "親に通帳・保険証券・年金・公共料金を確認するときの聞き方と共有メモを整理。", icon: "📒", category: "日常ツール" },
