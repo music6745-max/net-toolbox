@@ -636,6 +636,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-cost-share", name: "介護費用分担シミュレーター", description: "介護サービス費・交通費・医療費・親本人の負担額から、家族で分担する月額と年額の目安を計算。", icon: "🧾", category: "日常ツール" },
   { slug: "kaigo-hospital-checklist", name: "入院・退院準備チェックリスト", description: "親の入院・退院・介護認定で家族が確認する項目を状況別に生成。", icon: "🏥", category: "日常ツール" },
   { slug: "kaigo-facility-compare", name: "施設見学・費用比較表メーカー", description: "介護施設の入居一時金・月額費・介護費・食費を候補別に比較。", icon: "🏠", category: "日常ツール" },
+  { slug: "kaigo-facility-monthly-cost-memo", name: "施設入居前の月額費用見積もりメモ", description: "施設へ払う月額、医療・日用品、家族の面会交通費、初期費用を分けて概算し、家族共有用メモを生成。", icon: "🏠", category: "日常ツール" },
   { slug: "kaigo-family-role-share", name: "きょうだい役割分担メモ生成", description: "介護連絡・費用記録・定期連絡・実家整理の担当案を家族人数から作成。", icon: "👥", category: "日常ツール" },
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
