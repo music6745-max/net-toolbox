@@ -326,11 +326,11 @@ export default function KaigoParentMonitoringCostCheckPage() {
       <KaigoToolCta
         toolSlug={TOOL_SLUG}
         title="見守り体制を診断ページとテンプレートへつなげる"
-        description="見守り費用と連絡順を整理したら、親のこと整理ナビで必要なテンプレートや無料記事を選び、もしもの時の共有ノートへ転記できます。"
+        description="見守り費用と連絡順を整理したら、親のこと整理ナビで必要なテンプレートや無料記事を選び、家族で使う連絡表へ転記できます。"
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "monitoring_tool", variant: "primary" },
           { label: "一人暮らしの親の記事を読む", href: GUIDE_URL, eventName: "guide_click", position: "monitoring_guide" },
-          { label: "親のもしも準備ノートを見る", href: "https://kaigo-okane.booth.pm/items/8382816", eventName: "booth_click", position: "emergency_note" },
+          { label: "見守り連絡表テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8409959", eventName: "booth_click", position: "monitoring_contact_template" },
         ]}
       />
 
