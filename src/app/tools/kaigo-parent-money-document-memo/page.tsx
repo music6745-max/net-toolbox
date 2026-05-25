@@ -11,6 +11,7 @@ import { ToolJsonLd } from "@/components/ToolJsonLd";
 const TOOL_SLUG = "kaigo-parent-money-document-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=kaigo_parent_money_document_memo";
+const BOOTH_PARENT_MONEY_DOCUMENT_URL = "https://kaigo-okane.booth.pm/items/8410669";
 
 const purposeLabels: Record<string, string> = {
   hospital: "急な入院に備える",
@@ -268,11 +269,11 @@ export default function KaigoParentMoneyDocumentMemoPage() {
 
       <KaigoToolCta
         toolSlug={TOOL_SLUG}
-        title="確認した内容を初期整理テンプレートへつなげる"
+        title="確認した内容を支払い確認テンプレートへつなげる"
         description="書類の場所、問い合わせ先、支払い方法を確認できたら、家族で見返せる形にまとめておくと入院や介護開始時に慌てにくくなります。"
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "parent_money_document_tool", variant: "primary" },
-          { label: "初期整理テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8340072", eventName: "booth_click", position: "initial_template" },
+          { label: "通帳・保険確認テンプレートを見る", href: BOOTH_PARENT_MONEY_DOCUMENT_URL, eventName: "booth_click", position: "parent_money_document_template" },
           { label: "はじめの3点セットを見る", href: "https://kaigo-okane.booth.pm/items/8340473", eventName: "booth_click", position: "starter_set" },
         ]}
       />
