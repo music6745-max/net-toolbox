@@ -639,6 +639,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-family-role-share", name: "きょうだい役割分担メモ生成", description: "介護連絡・費用記録・定期連絡・実家整理の担当案を家族人数から作成。", icon: "👥", category: "日常ツール" },
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
+  { slug: "kaigo-parent-monitoring-cost-check", name: "親の見守り費用チェック", description: "一人暮らしの親の見守りにかかる通信費・訪問費・外部サービス費と緊急時の連絡順を整理。", icon: "📞", category: "日常ツール" },
   { slug: "kaigo-distance-care-travel-memo", name: "遠距離介護交通費メモメーカー", description: "遠距離介護の交通費・宿泊費・家族分担額と、遠方でも担える役割を整理。", icon: "🚄", category: "日常ツール" },
   { slug: "kaigo-facility-visit-question-list", name: "施設見学質問リストメーカー", description: "介護施設の見学前に、費用・医療対応・夜間対応・面会・退去条件の質問リストを生成。", icon: "🏢", category: "日常ツール" },
   { slug: "kaigo-parent-money-document-memo", name: "親の通帳・保険・支払い確認メモメーカー", description: "親に通帳・保険証券・年金・公共料金を確認するときの聞き方と共有メモを整理。", icon: "📒", category: "日常ツール" },
