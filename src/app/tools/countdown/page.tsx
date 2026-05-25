@@ -29,6 +29,8 @@ function pad(n: number) {
 
 export default function CountdownPage() {
   const [inputValue, setInputValue] = useState("");
+  const [defaultDateTime, setDefaultDateTime] = useState("");
+  const [minDateTime, setMinDateTime] = useState("");
   const [label, setLabel] = useState("");
   const [target, setTarget] = useState<Date | null>(null);
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
@@ -79,12 +81,17 @@ export default function CountdownPage() {
 
   const finished = timeLeft !== null && timeLeft.total <= 0;
 
-  // Default datetime value: tomorrow same time
-  const defaultDatetime = () => {
-    const d = new Date(Date.now() + 24 * 60 * 60 * 1000);
-    d.setSeconds(0, 0);
-    return d.toISOString().slice(0, 16);
-  };
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      const now = new Date();
+      const tomorrow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+      now.setSeconds(0, 0);
+      tomorrow.setSeconds(0, 0);
+      setMinDateTime(now.toISOString().slice(0, 16));
+      setDefaultDateTime(tomorrow.toISOString().slice(0, 16));
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, []);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -107,8 +114,8 @@ export default function CountdownPage() {
               type="datetime-local"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              min={new Date().toISOString().slice(0, 16)}
-              placeholder={defaultDatetime()}
+              min={minDateTime}
+              placeholder={defaultDateTime}
               className="w-full border border-card-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
             />
           </div>

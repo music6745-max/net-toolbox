@@ -4,27 +4,30 @@ import { useEffect, useState } from "react";
 
 type Theme = "system" | "light" | "dark";
 
+function applyTheme(t: Theme) {
+  const root = document.documentElement;
+  if (t === "dark") {
+    root.setAttribute("data-theme", "dark");
+  } else if (t === "light") {
+    root.setAttribute("data-theme", "light");
+  } else {
+    root.removeAttribute("data-theme");
+  }
+}
+
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("system");
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme") as Theme | null;
-    if (saved) {
-      setTheme(saved);
-      applyTheme(saved);
-    }
+    const id = window.setTimeout(() => {
+      const saved = localStorage.getItem("theme") as Theme | null;
+      if (saved) {
+        setTheme(saved);
+        applyTheme(saved);
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
-
-  function applyTheme(t: Theme) {
-    const root = document.documentElement;
-    if (t === "dark") {
-      root.setAttribute("data-theme", "dark");
-    } else if (t === "light") {
-      root.setAttribute("data-theme", "light");
-    } else {
-      root.removeAttribute("data-theme");
-    }
-  }
 
   function cycle() {
     const next: Theme = theme === "system" ? "dark" : theme === "dark" ? "light" : "system";

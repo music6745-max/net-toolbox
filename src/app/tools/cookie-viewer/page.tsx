@@ -33,7 +33,8 @@ export default function CookieViewerPage() {
   };
 
   useEffect(() => {
-    reload();
+    const id = window.setTimeout(reload, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   const filtered = filter

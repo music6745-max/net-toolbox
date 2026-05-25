@@ -71,10 +71,9 @@ function isDaytime(timezone: string, now: Date): boolean {
 }
 
 export default function WorldClockPage() {
-  const [now, setNow] = useState<Date | null>(null);
+  const [now, setNow] = useState<Date>(() => new Date());
 
   useEffect(() => {
-    setNow(new Date());
     const id = setInterval(() => setNow(new Date()), 1000);
     return () => clearInterval(id);
   }, []);

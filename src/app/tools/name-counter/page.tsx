@@ -15,7 +15,7 @@ export default function Page() {
       const code = ch.charCodeAt(0);
       if (code >= 0x4E00 && code <= 0x9FFF) {
         // CJK characters - estimate based on code range
-        total += 5 + Math.floor(Math.random() * 10); // simplified
+        total += 5 + (code % 10); // simplified deterministic estimate
       } else if (code >= 0x3040 && code <= 0x309F) {
         total += 3; // hiragana
       } else if (code >= 0x30A0 && code <= 0x30FF) {

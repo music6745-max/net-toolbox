@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { type Dispatch, type SetStateAction, useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
 
 const PERMS = ["---", "--x", "-w-", "-wx", "r--", "r-x", "rw-", "rwx"];
+type PermSetter = Dispatch<SetStateAction<boolean[]>>;
 
 export default function ChmodCalculatorPage() {
   const [owner, setOwner] = useState([false, false, false]);
@@ -30,11 +31,16 @@ export default function ChmodCalculatorPage() {
   };
 
   const labels = ["読み取り (r)", "書き込み (w)", "実行 (x)"];
-  const togglePerm = (setter: Function, perms: boolean[], idx: number) => {
+  const togglePerm = (setter: PermSetter, perms: boolean[], idx: number) => {
     const next = [...perms];
     next[idx] = !next[idx];
     setter(next);
   };
+  const groups: { label: string; perms: boolean[]; setter: PermSetter }[] = [
+    { label: "所有者", perms: owner, setter: setOwner },
+    { label: "グループ", perms: group, setter: setGroup },
+    { label: "その他", perms: other, setter: setOther },
+  ];
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -50,12 +56,12 @@ export default function ChmodCalculatorPage() {
           <button onClick={applyNumeric} className="bg-primary text-white rounded-lg px-4 py-2 font-medium hover:opacity-90 transition">適用</button>
         </div>
         <div className="grid grid-cols-3 gap-4">
-          {[["所有者", owner, setOwner], ["グループ", group, setGroup], ["その他", other, setOther]].map(([label, perms, setter], gi) => (
+          {groups.map(({ label, perms, setter }, gi) => (
             <div key={gi}>
-              <h3 className="font-medium text-sm mb-2">{label as string}</h3>
+              <h3 className="font-medium text-sm mb-2">{label}</h3>
               {labels.map((l, i) => (
                 <label key={i} className="flex items-center gap-2 text-sm py-1 cursor-pointer">
-                  <input type="checkbox" checked={(perms as boolean[])[i]} onChange={() => togglePerm(setter as Function, perms as boolean[], i)} className="rounded" />
+                  <input type="checkbox" checked={perms[i]} onChange={() => togglePerm(setter, perms, i)} className="rounded" />
                   {l}
                 </label>
               ))}

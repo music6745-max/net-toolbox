@@ -20,12 +20,6 @@ export default function PresentationTimerPage() {
   }, []);
 
   useEffect(() => {
-    if (state === "idle") {
-      setRemaining(totalMinutes * 60);
-    }
-  }, [totalMinutes, state]);
-
-  useEffect(() => {
     if (state === "running") {
       intervalRef.current = setInterval(() => {
         setRemaining((prev) => {
@@ -145,7 +139,15 @@ export default function PresentationTimerPage() {
                 min={1}
                 max={60}
                 value={totalMinutes}
-                onChange={(e) => { setTotalMinutes(Number(e.target.value)); if (state !== "idle") reset(); }}
+                onChange={(e) => {
+                  const next = Number(e.target.value);
+                  setTotalMinutes(next);
+                  if (state === "idle") {
+                    setRemaining(next * 60);
+                  } else {
+                    reset();
+                  }
+                }}
                 disabled={state === "running" || state === "paused"}
                 className="w-full accent-primary disabled:opacity-40"
               />

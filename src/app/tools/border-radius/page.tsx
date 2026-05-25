@@ -17,6 +17,40 @@ const PRESETS = [
 
 type Corners = { tl: number; tr: number; br: number; bl: number };
 
+function SliderInput({
+  label,
+  k,
+  corners,
+  onChange,
+}: {
+  label: string;
+  k: keyof Corners;
+  corners: Corners;
+  onChange: (key: keyof Corners, value: number) => void;
+}) {
+  return (
+    <div>
+      <label className="block text-xs font-medium mb-1 text-muted">{label}: {corners[k]}px</label>
+      <input
+        type="range"
+        value={corners[k]}
+        onChange={(e) => onChange(k, +e.target.value)}
+        min={0}
+        max={100}
+        className="w-full accent-primary"
+      />
+      <input
+        type="number"
+        value={corners[k]}
+        onChange={(e) => onChange(k, Math.max(0, Math.min(100, +e.target.value)))}
+        className="mt-1 w-full border border-card-border rounded px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30"
+        min={0}
+        max={100}
+      />
+    </div>
+  );
+}
+
 export default function BorderRadiusPage() {
   const [corners, setCorners] = useState<Corners>({ tl: 16, tr: 16, br: 16, bl: 16 });
   const [linked, setLinked] = useState(true);
@@ -38,28 +72,6 @@ export default function BorderRadiusPage() {
   const copy = () => {
     navigator.clipboard.writeText(css).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); });
   };
-
-  const SliderInput = ({ label, k }: { label: string; k: keyof Corners }) => (
-    <div>
-      <label className="block text-xs font-medium mb-1 text-muted">{label}: {corners[k]}px</label>
-      <input
-        type="range"
-        value={corners[k]}
-        onChange={(e) => set(k, +e.target.value)}
-        min={0}
-        max={100}
-        className="w-full accent-primary"
-      />
-      <input
-        type="number"
-        value={corners[k]}
-        onChange={(e) => set(k, Math.max(0, Math.min(100, +e.target.value)))}
-        className="mt-1 w-full border border-card-border rounded px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30"
-        min={0}
-        max={100}
-      />
-    </div>
-  );
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -103,10 +115,10 @@ export default function BorderRadiusPage() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <SliderInput label="左上" k="tl" />
-          <SliderInput label="右上" k="tr" />
-          <SliderInput label="左下" k="bl" />
-          <SliderInput label="右下" k="br" />
+          <SliderInput label="左上" k="tl" corners={corners} onChange={set} />
+          <SliderInput label="右上" k="tr" corners={corners} onChange={set} />
+          <SliderInput label="左下" k="bl" corners={corners} onChange={set} />
+          <SliderInput label="右下" k="br" corners={corners} onChange={set} />
         </div>
         <div>
           <label className="block text-sm font-medium mb-2">生成されたCSS</label>

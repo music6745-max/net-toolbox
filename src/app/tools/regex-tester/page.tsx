@@ -10,7 +10,7 @@ export default function RegexTesterPage() {
   const [text, setText] = useState("");
   const [error, setError] = useState("");
 
-  let matches: { match: string; index: number; groups: string[] }[] = [];
+  const matches: { match: string; index: number; groups: string[] }[] = [];
   if (pattern && text) {
     try {
       const re = new RegExp(pattern, flags);

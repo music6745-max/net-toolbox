@@ -36,8 +36,11 @@ export default function TodoListPage() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setTodos(loadTodos());
-    setMounted(true);
+    const id = window.setTimeout(() => {
+      setTodos(loadTodos());
+      setMounted(true);
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   const updateTodos = (next: TodoItem[]) => {

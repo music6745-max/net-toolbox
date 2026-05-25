@@ -46,7 +46,7 @@ export default function RentalHouseComparisonPage() {
           <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300">比較</span>
           <span className="text-xs text-muted">12分で読める</span>
         </div>
-        <h1 className="text-3xl font-bold mb-4 leading-tight">【2026年最新】賃貸物件サイト比較5選｜SUUMO/HOME'S/at home/CHINTAI/エイブル</h1>
+        <h1 className="text-3xl font-bold mb-4 leading-tight">【2026年最新】賃貸物件サイト比較5選｜SUUMO/HOME&apos;S/at home/CHINTAI/エイブル</h1>
         <p className="text-muted leading-relaxed">引越しの第一歩は物件探し。本記事では大手5サイトを徹底比較し、賢い物件探しのコツを解説します。</p>
       </div>
 

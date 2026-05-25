@@ -28,7 +28,7 @@ const categoryColors: Record<string, string> = {
 
 type Props = { guides: Guide[] };
 
-const ALL: "all" = "all";
+const ALL = "all" as const;
 
 export default function GuideList({ guides }: Props) {
   const [q, setQ] = useState("");

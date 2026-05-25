@@ -34,6 +34,15 @@ function getInfo(): SizeInfo {
   };
 }
 
+function SizeRow({ label, value, note }: { label: string; value: string | number; note?: string }) {
+  return (
+    <tr className="border-b border-card-border last:border-0">
+      <td className="py-3 px-4 text-sm text-muted w-48">{label}</td>
+      <td className="py-3 px-4 text-sm font-mono font-semibold">{value}{note && <span className="text-xs text-muted font-normal ml-2">{note}</span>}</td>
+    </tr>
+  );
+}
+
 export default function ScreenSizePage() {
   const [info, setInfo] = useState<SizeInfo | null>(null);
   const [updated, setUpdated] = useState(0);
@@ -43,21 +52,15 @@ export default function ScreenSizePage() {
       setInfo(getInfo());
       setUpdated(Date.now());
     };
-    update();
+    const initialId = window.setTimeout(update, 0);
     window.addEventListener("resize", update);
     window.addEventListener("orientationchange", update);
     return () => {
+      window.clearTimeout(initialId);
       window.removeEventListener("resize", update);
       window.removeEventListener("orientationchange", update);
     };
   }, []);
-
-  const Row = ({ label, value, note }: { label: string; value: string | number; note?: string }) => (
-    <tr className="border-b border-card-border last:border-0">
-      <td className="py-3 px-4 text-sm text-muted w-48">{label}</td>
-      <td className="py-3 px-4 text-sm font-mono font-semibold">{value}{note && <span className="text-xs text-muted font-normal ml-2">{note}</span>}</td>
-    </tr>
-  );
 
   const isPortrait = info ? info.innerHeight > info.innerWidth : false;
 
@@ -90,16 +93,16 @@ export default function ScreenSizePage() {
             <div className="bg-background rounded-lg overflow-hidden">
               <table className="w-full">
                 <tbody>
-                  <Row label="画面の幅 (screen.width)" value={`${info.screenWidth} px`} />
-                  <Row label="画面の高さ (screen.height)" value={`${info.screenHeight} px`} />
-                  <Row label="ウィンドウ幅 (outerWidth)" value={`${info.windowWidth} px`} note="ブラウザUI含む" />
-                  <Row label="ウィンドウ高さ (outerHeight)" value={`${info.windowHeight} px`} note="ブラウザUI含む" />
-                  <Row label="ビューポート幅 (innerWidth)" value={`${info.innerWidth} px`} />
-                  <Row label="ビューポート高さ (innerHeight)" value={`${info.innerHeight} px`} />
-                  <Row label="デバイスピクセル比" value={`${info.devicePixelRatio}x`} note={info.devicePixelRatio >= 2 ? "Retina / High-DPI" : "標準"} />
-                  <Row label="画面の向き" value={info.orientation} />
-                  <Row label="色深度 (colorDepth)" value={`${info.colorDepth} bit`} />
-                  <Row label="スクロールバー幅" value={`${info.scrollbarWidth} px`} />
+                  <SizeRow label="画面の幅 (screen.width)" value={`${info.screenWidth} px`} />
+                  <SizeRow label="画面の高さ (screen.height)" value={`${info.screenHeight} px`} />
+                  <SizeRow label="ウィンドウ幅 (outerWidth)" value={`${info.windowWidth} px`} note="ブラウザUI含む" />
+                  <SizeRow label="ウィンドウ高さ (outerHeight)" value={`${info.windowHeight} px`} note="ブラウザUI含む" />
+                  <SizeRow label="ビューポート幅 (innerWidth)" value={`${info.innerWidth} px`} />
+                  <SizeRow label="ビューポート高さ (innerHeight)" value={`${info.innerHeight} px`} />
+                  <SizeRow label="デバイスピクセル比" value={`${info.devicePixelRatio}x`} note={info.devicePixelRatio >= 2 ? "Retina / High-DPI" : "標準"} />
+                  <SizeRow label="画面の向き" value={info.orientation} />
+                  <SizeRow label="色深度 (colorDepth)" value={`${info.colorDepth} bit`} />
+                  <SizeRow label="スクロールバー幅" value={`${info.scrollbarWidth} px`} />
                 </tbody>
               </table>
             </div>

@@ -26,7 +26,7 @@ function safeEval(expr: string): number | null {
     // Replace % with /100 for percentage
     const sanitized = expr.replace(/(\d+(?:\.\d+)?)%/g, "($1/100)");
     // Use Function constructor as a safe alternative to direct eval
-    // eslint-disable-next-line no-new-func
+
     const result = new Function(`"use strict"; return (${sanitized})`)() as number;
     if (!isFinite(result) || isNaN(result)) return null;
     return result;

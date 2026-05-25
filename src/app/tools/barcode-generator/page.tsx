@@ -85,20 +85,19 @@ function buildBars(values: number[]): boolean[] {
 export default function BarcodeGeneratorPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [input, setInput] = useState("Hello123");
-  const [error, setError] = useState("");
   const [barWidth, setBarWidth] = useState(2);
   const [barHeight, setBarHeight] = useState(80);
   const [showText, setShowText] = useState(true);
+  const encodedValues = encodeCode128B(input);
+  const error = encodedValues ? "" : "半角英数字・記号（ASCII 32〜126）のみ対応しています";
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const values = encodeCode128B(input);
     if (!values) {
-      setError("半角英数字・記号（ASCII 32〜126）のみ対応しています");
       return;
     }
-    setError("");
     const bars = buildBars(values);
     const w = bars.length * barWidth;
     const textH = showText ? 24 : 0;

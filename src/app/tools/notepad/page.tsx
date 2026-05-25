@@ -16,11 +16,14 @@ export default function NotepadPage() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored !== null) {
-      setContent(stored);
-      setLastSaved(new Date());
-    }
+    const id = window.setTimeout(() => {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored !== null) {
+        setContent(stored);
+        setLastSaved(new Date());
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   const saveNow = useCallback((text: string) => {

@@ -154,7 +154,7 @@ export default function DuplicateRemoverPage() {
         <h2 className="text-lg font-bold mb-3">重複行削除ツールの使い方</h2>
         <div className="text-sm text-muted leading-relaxed space-y-2">
           <p>1. テキストエリアに処理したいテキストを入力します（1行ずつ）。</p>
-          <p>2. 「大文字小文字を区別する」をオフにすると、"Apple" と "apple" を同じ行として扱い重複を削除します。</p>
+          <p>2. 「大文字小文字を区別する」をオフにすると、&quot;Apple&quot; と &quot;apple&quot; を同じ行として扱い重複を削除します。</p>
           <p>3. 「前後の空白を除去してから比較」をオンにすると、スペースやタブの違いを無視して重複を判定します。</p>
           <p>4. 「重複を削除」ボタンをクリックすると、重複のない行だけが結果に表示されます。削除した行数も確認できます。</p>
           <p>すべての処理はブラウザ内で完結し、データが外部に送信されることはありません。</p>

@@ -19,6 +19,15 @@ interface ParsedUrl {
   searchParams: [string, string][];
 }
 
+function UrlPartRow({ label, value }: { label: string; value: string }) {
+  return (
+    <tr className="border-b border-card-border last:border-0">
+      <td className="py-2 pr-4 text-sm font-mono text-muted whitespace-nowrap w-36">{label}</td>
+      <td className="py-2 text-sm font-mono break-all">{value || <span className="text-muted italic">（なし）</span>}</td>
+    </tr>
+  );
+}
+
 export default function UrlParserPage() {
   const [input, setInput] = useState("https://example.com:8080/path/to/page?foo=1&bar=hello#section");
   const [parsed, setParsed] = useState<ParsedUrl | null>(null);
@@ -53,13 +62,6 @@ export default function UrlParserPage() {
       setParsed(null);
     }
   };
-
-  const Row = ({ label, value }: { label: string; value: string }) => (
-    <tr className="border-b border-card-border last:border-0">
-      <td className="py-2 pr-4 text-sm font-mono text-muted whitespace-nowrap w-36">{label}</td>
-      <td className="py-2 text-sm font-mono break-all">{value || <span className="text-muted italic">（なし）</span>}</td>
-    </tr>
-  );
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -102,15 +104,15 @@ export default function UrlParserPage() {
               <div className="bg-background rounded-lg overflow-hidden">
                 <table className="w-full">
                   <tbody className="divide-y divide-card-border">
-                    <Row label="protocol" value={parsed.protocol} />
-                    <Row label="username" value={parsed.username} />
-                    <Row label="password" value={parsed.password} />
-                    <Row label="hostname" value={parsed.hostname} />
-                    <Row label="port" value={parsed.port} />
-                    <Row label="pathname" value={parsed.pathname} />
-                    <Row label="search" value={parsed.search} />
-                    <Row label="hash" value={parsed.hash} />
-                    <Row label="origin" value={parsed.origin} />
+                    <UrlPartRow label="protocol" value={parsed.protocol} />
+                    <UrlPartRow label="username" value={parsed.username} />
+                    <UrlPartRow label="password" value={parsed.password} />
+                    <UrlPartRow label="hostname" value={parsed.hostname} />
+                    <UrlPartRow label="port" value={parsed.port} />
+                    <UrlPartRow label="pathname" value={parsed.pathname} />
+                    <UrlPartRow label="search" value={parsed.search} />
+                    <UrlPartRow label="hash" value={parsed.hash} />
+                    <UrlPartRow label="origin" value={parsed.origin} />
                   </tbody>
                 </table>
               </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
@@ -42,9 +42,8 @@ function formatTime(unix: number): string {
   });
 }
 
-function getExpiryStatus(exp?: number): { label: string; color: string } {
+function getExpiryStatus(exp: number | undefined, now: number): { label: string; color: string } {
   if (exp === undefined) return { label: "有効期限なし", color: "text-muted" };
-  const now = Math.floor(Date.now() / 1000);
   if (exp < now) {
     const diff = now - exp;
     const hours = Math.floor(diff / 3600);
@@ -62,6 +61,14 @@ const SAMPLE_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODk
 export default function JwtDecoderPage() {
   const [token, setToken] = useState("");
   const [error, setError] = useState("");
+  const [nowSec, setNowSec] = useState(0);
+
+  useEffect(() => {
+    const update = () => setNowSec(Math.floor(Date.now() / 1000));
+    const id = window.setInterval(update, 1000);
+    update();
+    return () => window.clearInterval(id);
+  }, []);
 
   const parsed = token.trim() ? parseJwt(token) : null;
 
@@ -80,7 +87,7 @@ export default function JwtDecoderPage() {
   const exp = payload?.exp as number | undefined;
   const iat = payload?.iat as number | undefined;
   const nbf = payload?.nbf as number | undefined;
-  const expiryStatus = exp !== undefined ? getExpiryStatus(exp) : null;
+  const expiryStatus = exp !== undefined && nowSec > 0 ? getExpiryStatus(exp, nowSec) : null;
 
   const copyPart = (obj: object) => navigator.clipboard.writeText(JSON.stringify(obj, null, 2));
 
@@ -166,7 +173,7 @@ export default function JwtDecoderPage() {
 
           {/* Expiry status banner */}
           {expiryStatus && (
-            <div className={`rounded-xl px-4 py-3 border ${exp! < Math.floor(Date.now() / 1000) ? "bg-red-50 border-red-200" : "bg-green-50 border-green-200"}`}>
+            <div className={`rounded-xl px-4 py-3 border ${exp! < nowSec ? "bg-red-50 border-red-200" : "bg-green-50 border-green-200"}`}>
               <p className={`text-sm font-medium ${expiryStatus.color}`}>
                 {expiryStatus.label}
                 {exp && ` — ${formatTime(exp)}`}

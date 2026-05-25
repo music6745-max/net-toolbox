@@ -30,14 +30,13 @@ function inputToDatetime(d: Date): string {
 }
 
 export default function EpochConverterPage() {
-  const [now, setNow] = useState<number>(0);
+  const [now, setNow] = useState<number>(() => Date.now());
   const [epochInput, setEpochInput] = useState("");
   const [epochUnit, setEpochUnit] = useState<"ms" | "s">("ms");
   const [datetimeInput, setDatetimeInput] = useState("");
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   useEffect(() => {
-    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);

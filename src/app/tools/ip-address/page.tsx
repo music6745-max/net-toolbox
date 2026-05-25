@@ -15,10 +15,12 @@ export default function IpAddressPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    setUserAgent(navigator.userAgent);
-    setPlatform(navigator.platform);
-    setLanguage(navigator.language);
-    setScreenSize(`${window.screen.width} x ${window.screen.height}`);
+    const browserInfoId = window.setTimeout(() => {
+      setUserAgent(navigator.userAgent);
+      setPlatform(navigator.platform);
+      setLanguage(navigator.language);
+      setScreenSize(`${window.screen.width} x ${window.screen.height}`);
+    }, 0);
 
     fetch("https://api.ipify.org?format=json")
       .then((res) => res.json())
@@ -30,6 +32,7 @@ export default function IpAddressPage() {
         setError("IPアドレスの取得に失敗しました");
         setLoading(false);
       });
+    return () => window.clearTimeout(browserInfoId);
   }, []);
 
   const copyToClipboard = (text: string) => {

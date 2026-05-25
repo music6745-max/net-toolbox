@@ -25,38 +25,40 @@ export default function IpInfoPage() {
         setIpError(true);
       });
 
-    // Collect browser/device info
-    const info: InfoItem[] = [
-      {
-        label: "ユーザーエージェント",
-        value: navigator.userAgent,
-      },
-      {
-        label: "画面解像度",
-        value: `${window.screen.width} × ${window.screen.height} px`,
-      },
-      {
-        label: "ビューポートサイズ",
-        value: `${window.innerWidth} × ${window.innerHeight} px`,
-      },
-      {
-        label: "言語設定",
-        value: navigator.language || "不明",
-      },
-      {
-        label: "タイムゾーン",
-        value: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      },
-      {
-        label: "プラットフォーム",
-        value: navigator.platform || "不明",
-      },
-      {
-        label: "Cookie有効",
-        value: navigator.cookieEnabled ? "はい" : "いいえ",
-      },
-    ];
-    setClientInfo(info);
+    const infoId = window.setTimeout(() => {
+      const info: InfoItem[] = [
+        {
+          label: "ユーザーエージェント",
+          value: navigator.userAgent,
+        },
+        {
+          label: "画面解像度",
+          value: `${window.screen.width} × ${window.screen.height} px`,
+        },
+        {
+          label: "ビューポートサイズ",
+          value: `${window.innerWidth} × ${window.innerHeight} px`,
+        },
+        {
+          label: "言語設定",
+          value: navigator.language || "不明",
+        },
+        {
+          label: "タイムゾーン",
+          value: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        },
+        {
+          label: "プラットフォーム",
+          value: navigator.platform || "不明",
+        },
+        {
+          label: "Cookie有効",
+          value: navigator.cookieEnabled ? "はい" : "いいえ",
+        },
+      ];
+      setClientInfo(info);
+    }, 0);
+    return () => window.clearTimeout(infoId);
   }, []);
 
   const [copied, setCopied] = useState(false);

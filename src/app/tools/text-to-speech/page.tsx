@@ -17,17 +17,22 @@ export default function TextToSpeechPage() {
   const uttRef = useRef<SpeechSynthesisUtterance | null>(null);
 
   useEffect(() => {
-    if (!("speechSynthesis" in window)) { setSupported(false); return; }
-    const loadVoices = () => {
-      const v = window.speechSynthesis.getVoices();
-      setVoices(v);
-      const jaVoice = v.find((vx) => vx.lang.startsWith("ja"));
-      if (jaVoice) setSelectedVoice(jaVoice.name);
-      else if (v.length > 0) setSelectedVoice(v[0].name);
+    const initId = window.setTimeout(() => {
+      if (!("speechSynthesis" in window)) { setSupported(false); return; }
+      const loadVoices = () => {
+        const v = window.speechSynthesis.getVoices();
+        setVoices(v);
+        const jaVoice = v.find((vx) => vx.lang.startsWith("ja"));
+        if (jaVoice) setSelectedVoice(jaVoice.name);
+        else if (v.length > 0) setSelectedVoice(v[0].name);
+      };
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }, 0);
+    return () => {
+      window.clearTimeout(initId);
+      if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     };
-    loadVoices();
-    window.speechSynthesis.onvoiceschanged = loadVoices;
-    return () => { window.speechSynthesis.cancel(); };
   }, []);
 
   const speak = () => {

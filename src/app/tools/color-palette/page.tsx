@@ -8,9 +8,9 @@ import { AffiliateSection } from "@/components/AffiliateSection";
 function hexToHsl(hex: string): [number, number, number] | null {
   const m = hex.replace("#", "").match(/^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i);
   if (!m) return null;
-  let r = parseInt(m[1], 16) / 255;
-  let g = parseInt(m[2], 16) / 255;
-  let b = parseInt(m[3], 16) / 255;
+  const r = parseInt(m[1], 16) / 255;
+  const g = parseInt(m[2], 16) / 255;
+  const b = parseInt(m[3], 16) / 255;
   const max = Math.max(r, g, b), min = Math.min(r, g, b);
   const l = (max + min) / 2;
   if (max === min) return [0, 0, Math.round(l * 100)];

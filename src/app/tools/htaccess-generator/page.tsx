@@ -19,6 +19,28 @@ interface Config {
   hotlinkDomain: string;
 }
 
+function CheckBox({
+  label,
+  checked,
+  onChange,
+}: {
+  label: string;
+  checked: boolean;
+  onChange: (v: boolean) => void;
+}) {
+  return (
+    <label className="flex items-center gap-3 cursor-pointer py-2">
+      <input
+        type="checkbox"
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+        className="w-4 h-4 rounded"
+      />
+      <span className="text-sm">{label}</span>
+    </label>
+  );
+}
+
 export default function HtaccessGeneratorPage() {
   const [config, setConfig] = useState<Config>({
     forceHttps: false,
@@ -185,26 +207,6 @@ export default function HtaccessGeneratorPage() {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  const CheckBox = ({
-    label,
-    checked,
-    onChange,
-  }: {
-    label: string;
-    checked: boolean;
-    onChange: (v: boolean) => void;
-  }) => (
-    <label className="flex items-center gap-3 cursor-pointer py-2">
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={(e) => onChange(e.target.checked)}
-        className="w-4 h-4 rounded"
-      />
-      <span className="text-sm">{label}</span>
-    </label>
-  );
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">

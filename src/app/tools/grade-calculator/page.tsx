@@ -5,10 +5,12 @@ import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
 import { ToolFAQSection } from "@/components/ToolFAQSection";
 
+type ScoreRow = { name: string; score: string; max: string };
+
 export default function Page() {
-  const [scores, setScores] = useState([{ name: "テスト1", score: "85", max: "100" }]);
+  const [scores, setScores] = useState<ScoreRow[]>([{ name: "テスト1", score: "85", max: "100" }]);
   const addScore = () => setScores([...scores, { name: `テスト${scores.length+1}`, score: "", max: "100" }]);
-  const updateScore = (i: number, k: string, v: string) => { const s = [...scores]; (s[i] as any)[k] = v; setScores(s); };
+  const updateScore = (i: number, k: keyof ScoreRow, v: string) => { const s = [...scores]; s[i] = { ...s[i], [k]: v }; setScores(s); };
   const removeScore = (i: number) => setScores(scores.filter((_,j) => j !== i));
   const vals = scores.map(s => parseFloat(s.score)||0);
   const maxs = scores.map(s => parseFloat(s.max)||100);

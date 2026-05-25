@@ -34,8 +34,8 @@ export default function Page() {
   const [turns, setTurns] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [started, setStarted] = useState(false);
-  const [won, setWon] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const won = cards.length > 0 && cards.every((c) => c.matched);
 
   const reset = useCallback(
     (s: Size) => {
@@ -45,7 +45,6 @@ export default function Page() {
       setTurns(0);
       setSeconds(0);
       setStarted(false);
-      setWon(false);
       if (timerRef.current) clearInterval(timerRef.current);
     },
     []
@@ -97,11 +96,10 @@ export default function Page() {
   };
 
   useEffect(() => {
-    if (cards.length > 0 && cards.every((c) => c.matched)) {
-      setWon(true);
+    if (won) {
       if (timerRef.current) clearInterval(timerRef.current);
     }
-  }, [cards]);
+  }, [won]);
 
   const mm = Math.floor(seconds / 60).toString().padStart(2, "0");
   const ss = (seconds % 60).toString().padStart(2, "0");

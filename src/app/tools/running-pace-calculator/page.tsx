@@ -33,7 +33,7 @@ export default function Page() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-          <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">ペース</div><div className="text-xl font-bold text-primary">{paceMin}'{paceS.toString().padStart(2, '0')}"/km</div></div>
+          <div className="bg-primary/10 rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">ペース</div><div className="text-xl font-bold text-primary">{paceMin}&apos;{paceS.toString().padStart(2, '0')}&quot;/km</div></div>
           <div className="bg-background rounded-lg p-4 text-center"><div className="text-xs text-muted mb-1">時速</div><div className="text-xl font-bold">{speed.toFixed(2)} km/h</div></div>
         </div>
       </div>

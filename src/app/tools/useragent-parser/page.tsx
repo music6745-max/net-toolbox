@@ -109,10 +109,13 @@ export default function UserAgentParserPage() {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const ua = navigator.userAgent;
-    setCurrentUA(ua);
-    setInputUA(ua);
-    setParsed(parseUA(ua));
+    const id = window.setTimeout(() => {
+      const ua = navigator.userAgent;
+      setCurrentUA(ua);
+      setInputUA(ua);
+      setParsed(parseUA(ua));
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   const analyze = () => {

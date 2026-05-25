@@ -30,7 +30,10 @@ export default function LocalStorageViewerPage() {
     setEntries(items);
   };
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    const id = window.setTimeout(load, 0);
+    return () => window.clearTimeout(id);
+  }, []);
 
   const showMsg = (text: string) => {
     setMsg(text);

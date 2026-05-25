@@ -33,12 +33,6 @@ export default function InterviewTimerPage() {
   }, []);
 
   useEffect(() => {
-    if (timerState === "idle" && stages[currentStageIndex]) {
-      setRemaining(stages[currentStageIndex].minutes * 60);
-    }
-  }, [stages, currentStageIndex, timerState]);
-
-  useEffect(() => {
     if (timerState === "running") {
       intervalRef.current = setInterval(() => {
         setRemaining((prev) => {
@@ -103,6 +97,9 @@ export default function InterviewTimerPage() {
     setStages((prev) =>
       prev.map((s) => (s.id === id ? { ...s, [field]: value } : s))
     );
+    if (timerState === "idle" && field === "minutes" && stages[currentStageIndex]?.id === id) {
+      setRemaining(Number(value) * 60);
+    }
   };
 
   const currentStage = stages[currentStageIndex];
