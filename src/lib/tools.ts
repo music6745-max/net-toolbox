@@ -640,6 +640,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-distance-care-travel-memo", name: "遠距離介護交通費メモメーカー", description: "遠距離介護の交通費・宿泊費・家族分担額と、遠方でも担える役割を整理。", icon: "🚄", category: "日常ツール" },
+  { slug: "kaigo-facility-visit-question-list", name: "施設見学質問リストメーカー", description: "介護施設の見学前に、費用・医療対応・夜間対応・面会・退去条件の質問リストを生成。", icon: "🏢", category: "日常ツール" },
   { slug: "company-savings-simulator", name: "企業型DCシミュレーター", description: "会社拠出＋マッチング拠出による確定拠出年金の将来資産と節税額を試算。", icon: "🏢", category: "日常ツール" },
   { slug: "tax-bracket-calculator", name: "所得税ブラケット計算", description: "年収から課税所得・適用税率・所得税・住民税の概算を表示。", icon: "📊", category: "日常ツール" },
   { slug: "invoice-tax-calculator", name: "インボイス税額計算", description: "適格請求書発行事業者・非適格事業者との取引における消費税の仕入税額控除差額を計算。経過措置にも対応。", icon: "🧾", category: "日常ツール" },
