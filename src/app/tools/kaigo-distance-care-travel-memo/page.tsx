@@ -262,7 +262,7 @@ export default function KaigoDistanceCareTravelMemoPage() {
         description="遠距離介護では、移動費だけでなく連絡係、費用記録、緊急時対応も一緒に整理すると家族共有が進めやすくなります。"
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "distance_travel_tool", variant: "primary" },
-          { label: "介護連携シート集を見る", href: "https://kaigo-okane.booth.pm/items/8382202", eventName: "booth_click", position: "coordination_sheet" },
+          { label: "遠距離介護テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8411252", eventName: "booth_click", position: "distance_care_template" },
           { label: "費用分担テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8340354", eventName: "booth_click", position: "cost_template" },
         ]}
       />

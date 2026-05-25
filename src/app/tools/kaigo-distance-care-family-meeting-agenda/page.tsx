@@ -290,7 +290,7 @@ export default function KaigoDistanceCareFamilyMeetingAgendaPage() {
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "distance_family_meeting_tool", variant: "primary" },
           { label: "家族会議の記事を読む", href: GUIDE_URL, eventName: "guide_click", position: "distance_family_meeting_guide" },
-          { label: "介護連携シート集を見る", href: "https://kaigo-okane.booth.pm/items/8382202", eventName: "booth_click", position: "coordination_sheet" },
+          { label: "遠距離介護テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8411252", eventName: "booth_click", position: "distance_care_template" },
           { label: "費用分担テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8340354", eventName: "booth_click", position: "cost_template" },
         ]}
       />
