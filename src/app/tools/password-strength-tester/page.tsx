@@ -147,7 +147,7 @@ export default function Page() {
             <p className="font-medium">パスワード生成ツール</p>
             <p className="text-muted text-xs mt-1">安全なパスワードを作る</p>
           </Link>
-          <Link href="/guide/best-vpn-services" className="block p-4 rounded-lg border border-card-border hover:border-primary hover:bg-primary/5 transition-colors">
+          <Link href="/guide/vpn-comparison" className="block p-4 rounded-lg border border-card-border hover:border-primary hover:bg-primary/5 transition-colors">
             <p className="font-medium">VPNサービス比較</p>
             <p className="text-muted text-xs mt-1">通信もまとめて保護するなら</p>
           </Link>

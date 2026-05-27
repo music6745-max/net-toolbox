@@ -233,7 +233,7 @@ export default function CryptoTaxComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">NFTマーケットプレイス比較</span>
             <p className="text-xs text-muted mt-1">NFT売買の税金も解説</p>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
             <p className="text-xs text-muted mt-1">副業申告の定番ソフト</p>
           </Link>

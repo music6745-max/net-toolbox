@@ -464,7 +464,7 @@ export default function InvestmentAppComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">クレジットカード比較おすすめ5選</span>
             <p className="text-xs text-muted mt-1">クレカ積立に使えるおすすめカードを比較</p>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
             <p className="text-xs text-muted mt-1">特定口座以外の方の確定申告に便利</p>
           </Link>

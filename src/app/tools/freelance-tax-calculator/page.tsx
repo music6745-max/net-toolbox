@@ -76,13 +76,13 @@ export default function Page() {
       <section className="mt-10">
         <h2 className="text-lg font-bold mb-3">関連ガイド</h2>
         <div className="grid sm:grid-cols-2 gap-3">
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
             <div className="font-semibold mb-1">確定申告ソフト比較</div>
             <div className="text-xs text-muted">freee・弥生・マネーフォワードを徹底比較</div>
           </Link>
-          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
-            <div className="font-semibold mb-1">会計ソフト比較</div>
-            <div className="text-xs text-muted">フリーランス向け会計ソフトの選び方</div>
+          <Link href="/guide/invoice-system-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
+            <div className="font-semibold mb-1">請求書システム比較</div>
+            <div className="text-xs text-muted">請求・入金管理の選び方</div>
           </Link>
         </div>
       </section>

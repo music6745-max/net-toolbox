@@ -105,7 +105,7 @@ export default function Page() {
       <section className="mt-10">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/job-agent-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+          <Link href="/guide/job-site-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
             <div className="text-xs text-muted mb-1">ランキング</div>
             <div className="font-bold text-sm">転職エージェントランキング2026</div>
           </Link>

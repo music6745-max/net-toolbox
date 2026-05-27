@@ -8,9 +8,7 @@ const guideMeta: Record<string, GuideMeta> = {
   "wifi-comparison": { title: "ポケットWiFi/モバイルWiFi比較", desc: "外出先で使えるWiFiを料金・速度で徹底比較" },
   "hikari-fiber-comparison": { title: "光回線おすすめ比較", desc: "戸建・マンション向け光回線を料金で比較" },
   "vpn-comparison": { title: "VPNサービス比較", desc: "セキュリティ強化に最適なVPNを徹底比較" },
-  "best-vpn-services": { title: "【2026年】VPNおすすめ比較", desc: "NordVPN・ExpressVPNなど主要VPNを比較" },
   "rental-server-comparison": { title: "レンタルサーバー比較", desc: "ブログ・サイト運営向けサーバーを比較" },
-  "best-rental-servers": { title: "【2026年】レンタルサーバー比較", desc: "ConoHa WING・エックスサーバー等を比較" },
   // 金融系
   "credit-card-comparison": { title: "クレジットカード比較", desc: "還元率・年会費でおすすめカードを比較" },
   "insurance-comparison": { title: "生命保険比較", desc: "掛け捨て・終身など主要保険を徹底比較" },
@@ -35,7 +33,6 @@ const guideMeta: Record<string, GuideMeta> = {
   "web-tools-for-work": { title: "仕事効率化Webツール15選", desc: "業務効率を上げる無料ツールを紹介" },
   "developer-tools-guide": { title: "Web開発者向け便利ツール", desc: "JSON整形・正規表現テスト等を解説" },
   "accounting-software-comparison": { title: "会計ソフト比較", desc: "freee・マネフォ・弥生など主要ソフトを比較" },
-  "tax-software-comparison": { title: "確定申告ソフト比較", desc: "個人事業主向け確定申告ソフトを比較" },
   // 生活系
   "water-server-comparison": { title: "ウォーターサーバー比較", desc: "天然水・RO水で主要サーバーを比較" },
   "food-delivery-comparison": { title: "フードデリバリー比較", desc: "Uber Eats・出前館等の手数料を比較" },
@@ -76,9 +73,9 @@ const guideMeta: Record<string, GuideMeta> = {
 };
 
 const groups: Record<string, string[]> = {
-  telecom: ["sim-comparison", "wifi-comparison", "hikari-fiber-comparison", "vpn-comparison", "best-vpn-services", "rental-server-comparison", "best-rental-servers"],
+  telecom: ["sim-comparison", "wifi-comparison", "hikari-fiber-comparison", "vpn-comparison", "rental-server-comparison"],
   finance: ["credit-card-comparison", "insurance-comparison", "car-insurance-comparison", "pet-insurance-comparison", "cancer-insurance-comparison", "bicycle-insurance-comparison", "housing-loan-comparison", "fx-account-comparison", "crypto-exchange-comparison", "investment-app-comparison", "online-broker-comparison", "real-estate-investment-comparison", "furusato-tax-comparison"],
-  work: ["programming-school-comparison", "online-english-comparison", "job-site-comparison", "crowdsourcing-comparison", "side-business-tools", "remote-work-tools", "web-tools-for-work", "developer-tools-guide", "accounting-software-comparison", "tax-software-comparison"],
+  work: ["programming-school-comparison", "online-english-comparison", "job-site-comparison", "crowdsourcing-comparison", "side-business-tools", "remote-work-tools", "web-tools-for-work", "developer-tools-guide", "accounting-software-comparison"],
   life: ["water-server-comparison", "food-delivery-comparison", "meal-kit-comparison", "electric-company-comparison", "gas-company-comparison", "hikari-fiber-comparison", "electricity-saving-tips", "solar-power-comparison"],
   ent: ["streaming-comparison", "ebook-comparison", "cloud-storage-comparison", "photo-editing-comparison", "video-editing-comparison"],
   health: ["hair-removal-comparison", "personal-gym-comparison", "fitness-app-comparison", "online-counseling-comparison", "online-fitness-comparison", "pet-food-comparison"],

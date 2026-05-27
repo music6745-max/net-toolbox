@@ -69,7 +69,7 @@ export default function Page() {
             <div className="font-semibold mb-1">副業向けツール比較</div>
             <div className="text-xs text-muted">副業を始める人のおすすめツール</div>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-lg p-4 hover:border-primary transition-colors">
             <div className="font-semibold mb-1">確定申告ソフト比較</div>
             <div className="text-xs text-muted">freee・弥生・マネーフォワード</div>
           </Link>

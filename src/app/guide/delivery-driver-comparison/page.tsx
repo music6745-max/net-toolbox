@@ -109,7 +109,7 @@ export default function DeliveryDriverComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">副業ツール</span>
             <p className="text-xs text-muted mt-1">副業全般の必須ツール</p>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">確定申告ソフト</span>
             <p className="text-xs text-muted mt-1">副業所得の申告に</p>
           </Link>

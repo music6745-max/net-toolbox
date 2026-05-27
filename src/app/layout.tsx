@@ -183,9 +183,9 @@ export default function RootLayout({
               <h3 className="font-medium text-foreground mb-3 text-center">ガイド記事</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link href="/guide" className="hover:text-primary transition-colors">活用ガイド一覧</Link>
-                <Link href="/guide/best-rental-servers" className="hover:text-primary transition-colors">レンタルサーバー比較</Link>
-                <Link href="/guide/tax-software-comparison" className="hover:text-primary transition-colors">確定申告ソフト比較</Link>
-                <Link href="/guide/best-vpn-services" className="hover:text-primary transition-colors">VPN比較</Link>
+                <Link href="/guide/rental-server-comparison" className="hover:text-primary transition-colors">レンタルサーバー比較</Link>
+                <Link href="/guide/accounting-software-comparison" className="hover:text-primary transition-colors">確定申告ソフト比較</Link>
+                <Link href="/guide/vpn-comparison" className="hover:text-primary transition-colors">VPN比較</Link>
                 <Link href="/guide/side-business-tools" className="hover:text-primary transition-colors">副業ツール</Link>
                 <Link href="/tools/qr-code" className="hover:text-primary transition-colors">QRコード作成</Link>
                 <Link href="/tools/password-strength" className="hover:text-primary transition-colors">パスワード強度チェック</Link>

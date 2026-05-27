@@ -302,7 +302,7 @@ export default function FreelanceStartupBundlePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/accountant-cloud-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">会計</div><div className="font-bold text-sm">会計事務所クラウド連携比較</div></Link>
           <Link href="/guide/side-business-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">副業</div><div className="font-bold text-sm">副業ツール比較</div></Link>
-          <Link href="/guide/best-rental-servers" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">サーバー</div><div className="font-bold text-sm">レンタルサーバー比較</div></Link>
+          <Link href="/guide/rental-server-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">サーバー</div><div className="font-bold text-sm">レンタルサーバー比較</div></Link>
           <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors"><div className="text-xs text-muted mb-1">会計</div><div className="font-bold text-sm">会計ソフト比較</div></Link>
         </div>
       </section>

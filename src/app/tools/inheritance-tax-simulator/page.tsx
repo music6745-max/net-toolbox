@@ -69,7 +69,7 @@ export default function Page() {
           <div className="font-bold text-sm mb-1">弁護士・法律相談サービス比較</div>
           <p className="text-xs text-muted">相続トラブルに強い専門家を探す →</p>
         </Link>
-        <Link href="/guide/tax-software-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+        <Link href="/guide/accounting-software-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
           <div className="font-bold text-sm mb-1">税務ソフト比較ガイドを見る</div>
           <p className="text-xs text-muted">相続税申告に役立つソフトを比較 →</p>
         </Link>

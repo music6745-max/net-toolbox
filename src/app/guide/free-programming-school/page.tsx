@@ -142,7 +142,7 @@ export default function FreeProgrammingSchoolPage() {
             <span className="text-sm font-bold hover:text-primary">プログラミングスクール比較</span>
             <p className="text-xs text-muted mt-1">有料・無料を含む徹底比較</p>
           </Link>
-          <Link href="/guide/job-agent-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/guide/job-site-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">転職エージェントランキング2026</span>
             <p className="text-xs text-muted mt-1">就職・転職成功の近道</p>
           </Link>

@@ -89,7 +89,7 @@ const sections = [
         path: "/tools/character-count",
       },
     ],
-    guideLink: "/guide/best-rental-servers",
+    guideLink: "/guide/rental-server-comparison",
     guideLinkText: "レンタルサーバー比較の詳細を見る",
   },
   {
@@ -126,7 +126,7 @@ const sections = [
         path: "/tools/compound-interest",
       },
     ],
-    guideLink: "/guide/tax-software-comparison",
+    guideLink: "/guide/accounting-software-comparison",
     guideLinkText: "確定申告ソフト比較の詳細を見る",
   },
   {
@@ -163,7 +163,7 @@ const sections = [
         path: "/tools/hash-generator",
       },
     ],
-    guideLink: "/guide/best-vpn-services",
+    guideLink: "/guide/vpn-comparison",
     guideLinkText: "VPN比較の詳細を見る",
   },
   {

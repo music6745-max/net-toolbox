@@ -120,7 +120,7 @@ export default function Page() {
         <p className="text-sm text-muted mb-3">節税は日々の記帳の正確さから始まります。freeeや弥生などの会計ソフトを比較してみましょう。</p>
         <div className="flex flex-wrap gap-3">
           <Link href="/guide/accounting-software-comparison" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">会計ソフト比較</Link>
-          <Link href="/guide/tax-software-comparison" className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors">確定申告ソフト比較</Link>
+          <Link href="/guide/tax-accountant-comparison" className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors">税理士比較</Link>
           <Link href="/guide/furusato-tax-comparison" className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors">ふるさと納税サイト比較</Link>
         </div>
       </section>

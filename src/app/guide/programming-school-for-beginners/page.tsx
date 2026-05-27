@@ -109,9 +109,9 @@ export default function Page() {
             <div className="text-xs text-muted mb-1">比較</div>
             <div className="font-bold text-sm">プログラミングスクール徹底比較</div>
           </Link>
-          <Link href="/guide/programming-school-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-            <div className="text-xs text-muted mb-1">ランキング</div>
-            <div className="font-bold text-sm">プログラミングスクールランキング2026</div>
+          <Link href="/guide/free-programming-school" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">無料相談</div>
+            <div className="font-bold text-sm">無料プログラミングスクール</div>
           </Link>
         </div>
       </section>

@@ -1027,7 +1027,7 @@ export default function AccountingSoftwareComparisonPage() {
             副業ツール完全ガイドを見る
           </Link>
           <Link
-            href="/guide/best-rental-servers"
+            href="/guide/rental-server-comparison"
             className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors"
           >
             レンタルサーバー比較も見る

@@ -109,9 +109,9 @@ export default function Page() {
             <div className="text-xs text-muted mb-1">比較</div>
             <div className="font-bold text-sm">WiFi徹底比較</div>
           </Link>
-          <Link href="/guide/wifi-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-            <div className="text-xs text-muted mb-1">ランキング</div>
-            <div className="font-bold text-sm">WiFiランキング2026</div>
+          <Link href="/guide/mobile-router-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">モバイル</div>
+            <div className="font-bold text-sm">モバイルルーター比較</div>
           </Link>
         </div>
       </section>

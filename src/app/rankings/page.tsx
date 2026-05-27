@@ -69,14 +69,14 @@ const genres: Genre[] = [
     name: "サーバー",
     icon: "🖥️",
     desc: "レンタルサーバー・クラウドストレージの人気トップ3。",
-    slugs: ["rental-server-comparison", "best-rental-servers", "cloud-storage-comparison"],
+    slugs: ["rental-server-comparison", "cloud-storage-comparison", "developer-tools-guide"],
   },
   {
     id: "vpn",
     name: "VPN",
     icon: "🔐",
     desc: "セキュリティ強化に役立つVPNサービスの人気トップ3。",
-    slugs: ["vpn-comparison", "best-vpn-services", "corporate-vpn-comparison"],
+    slugs: ["vpn-comparison", "corporate-vpn-comparison", "hikari-fiber-comparison"],
   },
 ];
 

@@ -93,9 +93,9 @@ export default function Page() {
           <div className="font-bold text-sm mb-1">VPN比較ガイドを見る</div>
           <p className="text-xs text-muted">主要VPNを速度・セキュリティ・料金で徹底比較 →</p>
         </Link>
-        <Link href="/guide/best-vpn-services" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
-          <div className="font-bold text-sm mb-1">おすすめVPNランキング</div>
-          <p className="text-xs text-muted">用途別のおすすめVPNを詳しく解説 →</p>
+        <Link href="/guide/corporate-vpn-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+          <div className="font-bold text-sm mb-1">法人向けVPN比較</div>
+          <p className="text-xs text-muted">業務利用の要件も確認 →</p>
         </Link>
       </section>
 

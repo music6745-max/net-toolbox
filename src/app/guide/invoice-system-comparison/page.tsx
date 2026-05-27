@@ -201,9 +201,9 @@ export default function InvoiceSystemComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">会計ソフト比較</span>
             <p className="text-xs text-muted mt-1">請求書連携で経理を自動化</p>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
-            <p className="text-xs text-muted mt-1">申告まで一気通貫</p>
+          <Link href="/guide/tax-accountant-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">税理士比較</span>
+            <p className="text-xs text-muted mt-1">申告相談先も確認</p>
           </Link>
           <Link href="/guide/company-credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">法人カード比較</span>

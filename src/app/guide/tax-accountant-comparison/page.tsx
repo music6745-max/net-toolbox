@@ -174,9 +174,9 @@ export default function TaxAccountantComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">クラウド会計ソフト比較</span>
             <p className="text-xs text-muted mt-1">税理士と連携しやすいソフト選び</p>
           </Link>
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
-            <p className="text-xs text-muted mt-1">個人事業主の申告に</p>
+          <Link href="/guide/invoice-system-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">請求書システム比較</span>
+            <p className="text-xs text-muted mt-1">経理作業の前工程も整理</p>
           </Link>
           <Link href="/guide/business-loan-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">事業者向け融資比較</span>

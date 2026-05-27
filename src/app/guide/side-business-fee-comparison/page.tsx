@@ -223,7 +223,7 @@ export default function SideBusinessFeeComparisonPage() {
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/tax-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
             <p className="text-xs text-muted mt-1">freee・弥生・マネフォ徹底比較</p>
           </Link>

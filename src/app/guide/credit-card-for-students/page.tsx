@@ -109,9 +109,9 @@ export default function Page() {
             <div className="text-xs text-muted mb-1">比較</div>
             <div className="font-bold text-sm">クレジットカード徹底比較</div>
           </Link>
-          <Link href="/guide/credit-card-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
-            <div className="text-xs text-muted mb-1">ランキング</div>
-            <div className="font-bold text-sm">クレジットカードランキング2026</div>
+          <Link href="/guide/credit-card-for-gold-beginner" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">次の一枚</div>
+            <div className="font-bold text-sm">初めてのゴールドカード</div>
           </Link>
         </div>
       </section>

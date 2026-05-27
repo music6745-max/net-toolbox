@@ -14,7 +14,7 @@ type Guide = {
 const guidesByCategory: Record<string, Guide[]> = {
   "セキュリティ": [
     {
-      slug: "best-vpn-services",
+      slug: "vpn-comparison",
       title: "【2026年】VPNおすすめ比較",
       description: "NordVPN・ExpressVPNなど5社の料金・セキュリティ機能を比較",
       icon: "🛡️",
@@ -28,7 +28,7 @@ const guidesByCategory: Record<string, Guide[]> = {
   ],
   "開発ツール": [
     {
-      slug: "best-rental-servers",
+      slug: "rental-server-comparison",
       title: "【2026年】レンタルサーバーおすすめ比較5選",
       description: "ConoHa WING・エックスサーバーなど初心者向け5社を徹底比較",
       icon: "🖥️",

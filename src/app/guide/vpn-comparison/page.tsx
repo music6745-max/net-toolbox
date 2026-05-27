@@ -1040,7 +1040,7 @@ export default function VpnComparisonPage() {
             パスワード生成ツールを使う
           </Link>
           <Link
-            href="/guide/best-vpn-services"
+            href="/guide/vpn-comparison"
             className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors"
           >
             VPNおすすめ5選も見る

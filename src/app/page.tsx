@@ -93,9 +93,9 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
           {[
             { slug: "side-business-ranking-2026", label: "副業おすすめTOP10", icon: "🏆", desc: "月5万円を目指す副業" },
-            { slug: "credit-card-ranking-2026", label: "クレジットカードTOP10", icon: "💳", desc: "還元率で厳選" },
-            { slug: "online-broker-ranking-2026", label: "ネット証券TOP10", icon: "📊", desc: "新NISA対応" },
-            { slug: "programming-school-ranking-2026", label: "プログラミングスクールTOP10", icon: "💻", desc: "転職保証付き" },
+            { slug: "credit-card-comparison", label: "クレジットカード比較", icon: "💳", desc: "還元率で厳選" },
+            { slug: "online-broker-comparison", label: "ネット証券比較", icon: "📊", desc: "新NISA対応" },
+            { slug: "programming-school-comparison", label: "プログラミングスクール比較", icon: "💻", desc: "転職保証付き" },
             { slug: "saving-app-ranking-2026", label: "家計簿アプリTOP10", icon: "💰", desc: "無料で使える定番" },
           ].map((g) => (
             <Link
@@ -209,7 +209,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             {
-              slug: "best-rental-servers",
+              slug: "rental-server-comparison",
               title: "【2026年】レンタルサーバーおすすめ比較5選",
               description: "ConoHa WING・エックスサーバーなど初心者向け5社を徹底比較",
               category: "比較",
@@ -217,7 +217,7 @@ export default function Home() {
               icon: "🖥️",
             },
             {
-              slug: "tax-software-comparison",
+              slug: "accounting-software-comparison",
               title: "【2026年】確定申告ソフト比較",
               description: "freee・弥生・マネーフォワードの料金・特徴を解説",
               category: "副業・税金",
@@ -225,7 +225,7 @@ export default function Home() {
               icon: "📊",
             },
             {
-              slug: "best-vpn-services",
+              slug: "vpn-comparison",
               title: "【2026年】VPNおすすめ比較",
               description: "NordVPN・ExpressVPNなど5社の料金・セキュリティを比較",
               category: "セキュリティ",

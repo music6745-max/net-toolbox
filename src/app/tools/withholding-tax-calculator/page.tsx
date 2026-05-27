@@ -74,7 +74,7 @@ export default function Page() {
       </section>
 
       <section className="mt-10 mb-10">
-        <Link href="/guide/tax-software-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+        <Link href="/guide/accounting-software-comparison" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
           <div className="font-bold text-sm mb-1">確定申告ソフト比較ガイド</div>
           <p className="text-xs text-muted">源泉徴収税の管理・納付書作成に対応したソフトを比較 →</p>
         </Link>
