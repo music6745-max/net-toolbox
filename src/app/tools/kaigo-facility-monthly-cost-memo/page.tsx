@@ -253,7 +253,7 @@ export default function KaigoFacilityMonthlyCostMemoPage() {
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "facility_monthly_cost_tool", variant: "primary" },
           { label: "施設費用の記事を読む", href: GUIDE_URL, eventName: "guide_click", position: "facility_monthly_cost_guide" },
-          { label: "施設選び重点パックを見る", href: "https://kaigo-okane.booth.pm/items/8340642", eventName: "booth_click", position: "facility_pack" },
+          { label: "施設費用テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8424477", eventName: "booth_click", position: "facility_cost_template" },
           { label: "施設比較表メーカーを使う", href: "https://net-toolbox.jp/tools/kaigo-facility-compare", eventName: "tool_click", position: "facility_compare" },
         ]}
       />
