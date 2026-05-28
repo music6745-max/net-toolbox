@@ -111,6 +111,7 @@ export default function KaigoHospitalChecklistPage() {
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "hospital_tool", variant: "primary" },
           { label: "入院・退院・ケアマネ相談パックを見る", href: "https://kaigo-okane.booth.pm/items/8424970", eventName: "booth_click", position: "hospital_care_manager_pack" },
+          { label: "入院・退院・在宅復帰テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8340434", eventName: "booth_click", position: "hospital_home_return_template" },
           { label: "親のもしも準備ノートを見る", href: "https://kaigo-okane.booth.pm/items/8382816", eventName: "booth_click", position: "emergency_note" },
           { label: "介護連携シート集を見る", href: "https://kaigo-okane.booth.pm/items/8382202", eventName: "booth_click", position: "coordination_sheet" },
         ]}
