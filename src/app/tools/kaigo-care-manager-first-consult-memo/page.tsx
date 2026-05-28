@@ -246,11 +246,11 @@ export default function KaigoCareManagerFirstConsultMemoPage() {
       <KaigoToolCta
         toolSlug={TOOL_SLUG}
         title="初回相談メモを記事とテンプレートへつなげる"
-        description="相談前に伝えることを整理したら、親のこと整理ナビの記事で進め方を確認し、ケアマネ初回相談テンプレートへ残せます。"
+        description="相談前に伝えることを整理したら、親のこと整理ナビの記事で進め方を確認し、入院・退院・ケアマネ相談パックへ残せます。"
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "care_manager_tool", variant: "primary" },
           { label: "初回相談の記事を読む", href: GUIDE_URL, eventName: "guide_click", position: "care_manager_guide" },
-          { label: "ケアマネ初回相談テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8424688", eventName: "booth_click", position: "care_manager_first_consult_template" },
+          { label: "入院・退院・ケアマネ相談パックを見る", href: "https://kaigo-okane.booth.pm/items/8424970", eventName: "booth_click", position: "hospital_care_manager_pack" },
         ]}
       />
 
