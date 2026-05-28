@@ -641,6 +641,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-care-manager-first-consult-memo", name: "ケアマネ初回相談メモメーカー", description: "ケアマネや地域包括支援センターへ初めて相談する前に、生活状況・困りごと・家族の役割・聞きたいことを整理。", icon: "🗒️", category: "日常ツール" },
+  { slug: "kaigo-work-care-balance-memo", name: "介護と仕事 両立メモメーカー", description: "親の介護を職場へ相談する前に、仕事への影響・休み方の希望・家族分担・確認先を整理。", icon: "💼", category: "日常ツール" },
   { slug: "kaigo-hospital-expense-reimbursement-memo", name: "親の入院費立替精算メモ", description: "親の入院費・日用品・交通費を家族が立て替えたときの精算予定と領収書確認を整理。", icon: "🏥", category: "日常ツール" },
   { slug: "kaigo-parent-monitoring-cost-check", name: "親の見守り費用チェック", description: "一人暮らしの親の見守りにかかる通信費・訪問費・外部サービス費と緊急時の連絡順を整理。", icon: "📞", category: "日常ツール" },
   { slug: "kaigo-distance-care-family-meeting-agenda", name: "遠距離介護 家族会議アジェンダメーカー", description: "遠距離介護の家族会議で話す議題、担当案、次回確認事項を整理。", icon: "👥", category: "日常ツール" },
