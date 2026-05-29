@@ -641,6 +641,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-facility-after-admission-visit-contact-memo", name: "施設入所後 面会・連絡メモメーカー", description: "施設入所後の面会記録・差し入れ・持ち物確認・施設連絡・家族共有を整理。", icon: "🏢", category: "日常ツール" },
   { slug: "kaigo-family-role-share", name: "きょうだい役割分担メモ生成", description: "介護連絡・費用記録・定期連絡・実家整理の担当案を家族人数から作成。", icon: "👥", category: "日常ツール" },
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
+  { slug: "kaigo-parent-disaster-go-bag-contact-memo", name: "高齢親 災害時持ち出し・連絡先メモメーカー", description: "災害時の持ち出し品、避難先、緊急連絡先、医療・介護連絡先、家族の役割を整理。", icon: "🎒", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-care-certification-renewal-memo", name: "要介護認定 更新前メモメーカー", description: "要介護認定の更新前に、前回からの生活変化・困りごと・通院服薬・家族共有メモを整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-home-care-weekly-service-schedule-memo", name: "在宅介護 週間サービス予定メモメーカー", description: "訪問介護・デイサービス・訪問看護など、今週の予定と変更・休止を家族内で共有するメモを整理。", icon: "📅", category: "日常ツール" },
