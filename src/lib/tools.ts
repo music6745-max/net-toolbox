@@ -643,6 +643,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-care-certification-renewal-memo", name: "要介護認定 更新前メモメーカー", description: "要介護認定の更新前に、前回からの生活変化・困りごと・通院服薬・家族共有メモを整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-home-care-weekly-service-schedule-memo", name: "在宅介護 週間サービス予定メモメーカー", description: "訪問介護・デイサービス・訪問看護など、今週の予定と変更・休止を家族内で共有するメモを整理。", icon: "📅", category: "日常ツール" },
+  { slug: "kaigo-home-care-monthly-family-calendar-memo", name: "在宅介護 月間予定・家族分担メモメーカー", description: "通院・訪問サービス・買い物・見守り連絡など、月内の予定と家族担当を整理。", icon: "📅", category: "日常ツール" },
   { slug: "kaigo-post-discharge-month-record-memo", name: "退院後1か月生活記録メモメーカー", description: "退院後の在宅生活について、食事・水分・睡眠・活動・担当者へ伝えることを整理。", icon: "🏠", category: "日常ツール" },
   { slug: "kaigo-clinic-visit-record-memo", name: "通院付き添い記録メモメーカー", description: "親の通院付き添い前後に、質問・医師の説明・薬局メモ・次回予定を整理。", icon: "🏥", category: "日常ツール" },
   { slug: "kaigo-fall-near-miss-record-memo", name: "転倒ヒヤリハット記録メモメーカー", description: "親が転んだ・転びそうになった場面を、日時・場所・状況・本人の様子・相談前メモに整理。", icon: "⚠️", category: "日常ツール" },
