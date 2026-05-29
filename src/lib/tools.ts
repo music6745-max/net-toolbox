@@ -644,6 +644,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-parent-disaster-go-bag-contact-memo", name: "高齢親 災害時持ち出し・連絡先メモメーカー", description: "災害時の持ち出し品、避難先、緊急連絡先、医療・介護連絡先、家族の役割を整理。", icon: "🎒", category: "日常ツール" },
   { slug: "kaigo-caregiver-rest-burden-memo", name: "介護者 休息・負担見える化メモメーカー", description: "介護する家族自身の予定、休息時間、負担が重い時間帯、頼みたいことを整理。", icon: "🛌", category: "日常ツール" },
   { slug: "kaigo-welfare-equipment-rental-purchase-memo", name: "福祉用具 レンタル・購入前確認メモメーカー", description: "生活場面ごとの困りごと、気になる候補、ケアマネや事業者への質問を整理。", icon: "🧰", category: "日常ツール" },
+  { slug: "kaigo-parent-doctor-pharmacy-medicine-memo", name: "高齢親 医療機関・薬局・薬情報メモメーカー", description: "かかりつけ医、薬局、処方薬、市販薬、サプリ、更新日、家族共有メモを整理。", icon: "💊", category: "日常ツール" },
   { slug: "kaigo-parent-meal-water-weight-record-memo", name: "高齢親 食事・水分・体重記録メモメーカー", description: "食事の様子、水分、体重、気になる変化、受診前に伝えたいことを整理。", icon: "🍽️", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-care-certification-renewal-memo", name: "要介護認定 更新前メモメーカー", description: "要介護認定の更新前に、前回からの生活変化・困りごと・通院服薬・家族共有メモを整理。", icon: "📝", category: "日常ツール" },
