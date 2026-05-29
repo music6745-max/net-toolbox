@@ -642,6 +642,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-care-certification-renewal-memo", name: "要介護認定 更新前メモメーカー", description: "要介護認定の更新前に、前回からの生活変化・困りごと・通院服薬・家族共有メモを整理。", icon: "📝", category: "日常ツール" },
+  { slug: "kaigo-fall-near-miss-record-memo", name: "転倒ヒヤリハット記録メモメーカー", description: "親が転んだ・転びそうになった場面を、日時・場所・状況・本人の様子・相談前メモに整理。", icon: "⚠️", category: "日常ツール" },
   { slug: "kaigo-day-service-prep-memo", name: "デイサービス利用前メモメーカー", description: "デイサービス利用前に、持ち物・送迎・事業所への申し送り・確認事項を整理。", icon: "🚐", category: "日常ツール" },
   { slug: "kaigo-short-stay-prep-memo", name: "ショートステイ利用前メモメーカー", description: "ショートステイ利用前に、持ち物・施設への申し送り・緊急連絡先・確認事項を整理。", icon: "🧳", category: "日常ツール" },
   { slug: "kaigo-care-manager-first-consult-memo", name: "ケアマネ初回相談メモメーカー", description: "ケアマネや地域包括支援センターへ初めて相談する前に、生活状況・困りごと・家族の役割・聞きたいことを整理。", icon: "🗒️", category: "日常ツール" },
