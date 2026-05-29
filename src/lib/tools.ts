@@ -638,6 +638,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-discharge-home-return-plan", name: "退院後の在宅復帰メモメーカー", description: "退院後に自宅へ戻る前の通院・服薬・サービス予定・家族分担・自宅環境を整理。", icon: "🏥", category: "日常ツール" },
   { slug: "kaigo-facility-compare", name: "施設見学・費用比較表メーカー", description: "介護施設の入居一時金・月額費・介護費・食費を候補別に比較。", icon: "🏠", category: "日常ツール" },
   { slug: "kaigo-facility-monthly-cost-memo", name: "施設入居前の月額費用見積もりメモ", description: "施設へ払う月額、医療・日用品、家族の面会交通費、初期費用を分けて概算し、家族共有用メモを生成。", icon: "🏠", category: "日常ツール" },
+  { slug: "kaigo-facility-after-admission-visit-contact-memo", name: "施設入所後 面会・連絡メモメーカー", description: "施設入所後の面会記録・差し入れ・持ち物確認・施設連絡・家族共有を整理。", icon: "🏢", category: "日常ツール" },
   { slug: "kaigo-family-role-share", name: "きょうだい役割分担メモ生成", description: "介護連絡・費用記録・定期連絡・実家整理の担当案を家族人数から作成。", icon: "👥", category: "日常ツール" },
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-care-certification-memo", name: "介護認定申請メモメーカー", description: "親の介護認定を相談する前に、生活状況・調査前メモ・家族の役割分担を整理。", icon: "📝", category: "日常ツール" },
