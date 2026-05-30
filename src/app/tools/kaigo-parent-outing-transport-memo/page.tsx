@@ -7,6 +7,7 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-outing-transport-plan?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_outing_transport_plan";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8435122";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentOutingTransportMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -144,6 +145,9 @@ export default function KaigoParentOutingTransportMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               外出予定・移動手段整理テンプレート集を見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -181,4 +185,3 @@ function MemoField({
     </label>
   );
 }
-
