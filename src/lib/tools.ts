@@ -640,6 +640,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-facility-monthly-cost-memo", name: "施設入居前の月額費用見積もりメモ", description: "施設へ払う月額、医療・日用品、家族の面会交通費、初期費用を分けて概算し、家族共有用メモを生成。", icon: "🏠", category: "日常ツール" },
   { slug: "kaigo-facility-after-admission-visit-contact-memo", name: "施設入所後 面会・連絡メモメーカー", description: "施設入所後の面会記録・差し入れ・持ち物確認・施設連絡・家族共有を整理。", icon: "🏢", category: "日常ツール" },
   { slug: "kaigo-family-role-share", name: "きょうだい役割分担メモ生成", description: "介護連絡・費用記録・定期連絡・実家整理の担当案を家族人数から作成。", icon: "👥", category: "日常ツール" },
+  { slug: "kaigo-family-handover-memo", name: "介護家族 申し送り・引き継ぎメモメーカー", description: "日次申し送り、帰省後まとめ、家族への定期共有を同じ形式で整理。", icon: "📝", category: "日常ツール" },
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-parent-disaster-go-bag-contact-memo", name: "高齢親 災害時持ち出し・連絡先メモメーカー", description: "災害時の持ち出し品、避難先、緊急連絡先、医療・介護連絡先、家族の役割を整理。", icon: "🎒", category: "日常ツール" },
   { slug: "kaigo-caregiver-rest-burden-memo", name: "介護者 休息・負担見える化メモメーカー", description: "介護する家族自身の予定、休息時間、負担が重い時間帯、頼みたいことを整理。", icon: "🛌", category: "日常ツール" },
