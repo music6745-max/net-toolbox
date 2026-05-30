@@ -650,6 +650,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-welfare-equipment-rental-purchase-memo", name: "福祉用具 レンタル・購入前確認メモメーカー", description: "生活場面ごとの困りごと、気になる候補、ケアマネや事業者への質問を整理。", icon: "🧰", category: "日常ツール" },
   { slug: "kaigo-parent-home-appliance-remote-manual-memo", name: "高齢親 家電・リモコン・取扱説明書メモメーカー", description: "実家の日常家電、リモコン操作、取扱説明書、保証書、型番、家族共有メモを整理。", icon: "📺", category: "日常ツール" },
   { slug: "kaigo-parent-home-storage-location-map-memo", name: "実家 収納場所・置き場所マップメモメーカー", description: "実家の日用品の置き場所を部屋別・棚段別に整理し、家族で共有できるメモを生成。", icon: "🗺️", category: "日常ツール" },
+  { slug: "kaigo-parent-mail-notification-management-memo", name: "高齢親 郵便物・通知まとめ管理メモメーカー", description: "郵便物・通知を受け取り日、保管場所、期限、次に確認することの形で家族内に整理。", icon: "📬", category: "日常ツール" },
   { slug: "kaigo-parent-clothes-bedding-season-size-memo", name: "高齢親 衣類・寝具・季節替え・サイズ管理メモメーカー", description: "衣類・寝具のサイズ、季節物、保管場所、予備、家族共有メモを整理。", icon: "👕", category: "日常ツール" },
   { slug: "kaigo-parent-home-cleaning-laundry-housework-routine-memo", name: "高齢親 掃除・洗濯・家事ルーティン共有メモメーカー", description: "掃除、洗濯、ゴミ出しなどの家事タスクを頻度別に整理し、担当と申し送りメモを生成。", icon: "🧹", category: "日常ツール" },
   { slug: "kaigo-home-care-consumables-stock-memo", name: "在宅介護 消耗品在庫・補充メモメーカー", description: "紙おむつ、パッド、ウェットティッシュ、手袋などの残量・補充・買い物メモを整理。", icon: "🧻", category: "日常ツール" },
