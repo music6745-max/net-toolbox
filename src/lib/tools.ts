@@ -645,6 +645,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-emergency-info", name: "親の緊急連絡先・服薬メモ生成", description: "救急搬送や急な入院に備えて、家族が確認すべき連絡先・服薬・支払い項目を整理。", icon: "🆘", category: "日常ツール" },
   { slug: "kaigo-parent-disaster-go-bag-contact-memo", name: "高齢親 災害時持ち出し・連絡先メモメーカー", description: "災害時の持ち出し品、避難先、緊急連絡先、医療・介護連絡先、家族の役割を整理。", icon: "🎒", category: "日常ツール" },
   { slug: "kaigo-parent-neighborhood-contact-list-memo", name: "高齢親 近所付き合い・地域連絡先メモメーカー", description: "近所の人、町内会・自治会、管理会社などの連絡先と連絡してよい用件を整理。", icon: "🏘️", category: "日常ツール" },
+  { slug: "kaigo-parent-shopping-supplies-replenishment-memo", name: "高齢親 買い物・日用品補充メモメーカー", description: "よく買う定番品、買わなくてよいもの、補充目安、季節行事の準備メモを家族で整理。", icon: "🛒", category: "日常ツール" },
   { slug: "kaigo-caregiver-rest-burden-memo", name: "介護者 休息・負担見える化メモメーカー", description: "介護する家族自身の予定、休息時間、負担が重い時間帯、頼みたいことを整理。", icon: "🛌", category: "日常ツール" },
   { slug: "kaigo-welfare-equipment-rental-purchase-memo", name: "福祉用具 レンタル・購入前確認メモメーカー", description: "生活場面ごとの困りごと、気になる候補、ケアマネや事業者への質問を整理。", icon: "🧰", category: "日常ツール" },
   { slug: "kaigo-parent-home-appliance-remote-manual-memo", name: "高齢親 家電・リモコン・取扱説明書メモメーカー", description: "実家の日常家電、リモコン操作、取扱説明書、保証書、型番、家族共有メモを整理。", icon: "📺", category: "日常ツール" },
