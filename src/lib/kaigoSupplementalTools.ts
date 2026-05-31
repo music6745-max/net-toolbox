@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-visit-bring-carryback-memo",
+    name: "高齢親宅への帰省 持参・持ち帰りメモメーカー",
+    description:
+      "帰省で家族が手で運ぶ持って行くもの・持ち帰るものを、次に行く家族が見返せる控えとして整理します。",
+    icon: "H",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-next-conversation-topics-memo",
     name: "高齢親に次回聞きたいこと・話したいことメモメーカー",
     description:
