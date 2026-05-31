@@ -8,6 +8,7 @@ const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-home-garbage-schedule-separation?utm_source=net-toolbox&utm_medium=referral&utm_campaign=garbage_schedule_separation";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8435173";
 const PACK_URL = "https://kaigo-okane.booth.pm/items/8383305";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentHomeGarbageScheduleSeparationMemoPage() {
   const [targetHome, setTargetHome] = useState("");
@@ -137,6 +138,9 @@ export default function KaigoParentHomeGarbageScheduleSeparationMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
               親の介護はじめの37商品まとめセットを見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -175,4 +179,3 @@ function MemoField({
     </label>
   );
 }
-

@@ -7,6 +7,7 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-neighborhood-contact-list?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_neighborhood_contact_list";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383033";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentNeighborhoodContactListMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -99,7 +100,7 @@ export default function KaigoParentNeighborhoodContactListMemoPage() {
               value={contactPurpose}
               onChange={setContactPurpose}
               placeholder={
-                "例:\n- 連絡が取れない時に「最近見かけたか」だけ確認\n- 回覧や自治会連絡の窓口確認\n- 建物設備の不具合は管理会社へ\n※緊急時は公式の案内に従って確認"
+                "例:\n- 連絡が取れない時に「最近見かけたか」だけ確認\n- 回覧や自治会連絡の窓口確認\n- 生活音が聞こえない日が続いた時に声かけ\n※緊急時は公式連絡先へ"
               }
             />
             <MemoField
@@ -173,6 +174,9 @@ export default function KaigoParentNeighborhoodContactListMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               近所付き合い・地域連絡先 整理メモテンプレート集を見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -210,4 +214,3 @@ function MemoField({
     </label>
   );
 }
-

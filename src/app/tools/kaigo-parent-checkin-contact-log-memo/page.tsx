@@ -7,6 +7,7 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-checkin-contact-log?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_checkin_contact_log";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8434675";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentCheckinContactLogMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -156,6 +157,9 @@ export default function KaigoParentCheckinContactLogMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               安否確認・定期連絡 記録メモテンプレート集を見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -193,4 +197,3 @@ function MemoField({
     </label>
   );
 }
-
