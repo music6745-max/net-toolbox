@@ -1,0 +1,30 @@
+name: Codex P55 Toolbox Patch
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'codex_p55_toolbox.patch.b64.*'
+      - '.github/workflows/codex-p55-toolbox.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply P55 toolbox patch
+        shell: bash
+        run: |
+          cat codex_p55_toolbox.patch.b64.* | base64 -d > codex_p55_toolbox.patch
+          git apply --whitespace=nowarn codex_p55_toolbox.patch
+          rm codex_p55_toolbox.patch codex_p55_toolbox.patch.b64.* .github/workflows/codex-p55-toolbox.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add P55 hair salon memo tool"
+          git push
