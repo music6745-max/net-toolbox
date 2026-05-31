@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-next-conversation-topics-memo",
+    name: "高齢親に次回聞きたいこと・話したいことメモメーカー",
+    description:
+      "次に親と話すとき、聞きたいこと・伝えたいこと・家族で持ち寄った話題を家族内の控えとして整理します。",
+    icon: "T",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-cherished-item-background-memo",
     name: "高齢親が大切にしている品の背景メモメーカー",
     description:
