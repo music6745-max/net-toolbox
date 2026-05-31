@@ -142,66 +142,66 @@ export default function KaigoParentNextConversationTopicsMemoPage() {
     <main className="mx-auto max-w-5xl px-4 py-8">
       <div className="mb-6">
         <a href="/tools" className="text-sm font-semibold text-blue-700 hover:underline">
-ツール一覧へ戻る
+          ツール一覧へ戻る
         </a>
         <h1 className="mt-3 text-2xl font-bold text-slate-900">
-高齢親に次回聞きたいこと・話したいことメモメーカー
+          高齢親に次回聞きたいこと・話したいことメモメーカー
         </h1>
         <p className="mt-2 text-sm leading-6 text-slate-600">
-次に親と電話・帰省・対面で話すとき、聞きたいこと、伝えたいこと、家族で持ち寄った話題を、会話前に見返す控えとして整理します。
-介護の申し送り、体調確認、医療・契約・法律・お金の判断には使わないでください。
+          次に親と電話・帰省・対面で話すとき、聞きたいこと、伝えたいこと、家族で持ち寄った話題を、会話前に見返す控えとして整理します。
+          介護の申し送り、体調確認、医療・契約・法律・お金の判断には使わないでください。
         </p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-<h2 className="text-lg font-bold text-slate-900">入力</h2>
-<div className="mt-4 space-y-4">
-  {fields.map((field) => (
-    <MemoField
-      key={field.key}
-      label={field.label}
-      value={values[field.key]}
-      onChange={(value) => updateField(field.key, value)}
-      placeholder={field.placeholder}
-      rows={field.rows}
-    />
-  ))}
-</div>
+          <h2 className="text-lg font-bold text-slate-900">入力</h2>
+          <div className="mt-4 space-y-4">
+            {fields.map((field) => (
+              <MemoField
+                key={field.key}
+                label={field.label}
+                value={values[field.key]}
+                onChange={(value) => updateField(field.key, value)}
+                placeholder={field.placeholder}
+                rows={field.rows}
+              />
+            ))}
+          </div>
         </section>
 
         <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-<div className="flex items-center justify-between gap-3">
-  <h2 className="text-lg font-bold text-slate-900">出力メモ</h2>
-  <button
-    type="button"
-    onClick={copyOutput}
-    className="rounded-md bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800"
-  >
-    コピー
-  </button>
-</div>
-<pre className="mt-4 min-h-[620px] whitespace-pre-wrap rounded-md bg-slate-50 p-4 text-sm leading-6 text-slate-800">
-  {output}
-</pre>
-<div className="mt-5 space-y-3 rounded-md border border-blue-100 bg-blue-50 p-4 text-sm text-slate-700">
-  <p className="font-bold text-slate-900">関連リンク</p>
-  <a className="block font-semibold text-blue-700 hover:underline" href={KAIGO_NAVI_URL}>
-    親のこと整理ナビで関連テンプレートを見る
-  </a>
-  <a className="block font-semibold text-blue-700 hover:underline" href={GUIDE_URL}>
-    次回の会話メモの作り方を読む
-  </a>
-  <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
-    次回聞きたいこと・話したいことメモ テンプレート集を見る
-  </a>
-  <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
-    親の介護はじめの37商品まとめセットを見る
-  </a>
-  <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
-    介護まるごと総合パックを見る
-  </a>
-</div>
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-lg font-bold text-slate-900">出力メモ</h2>
+            <button
+              type="button"
+              onClick={copyOutput}
+              className="rounded-md bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800"
+            >
+              コピー
+            </button>
+          </div>
+          <pre className="mt-4 min-h-[620px] whitespace-pre-wrap rounded-md bg-slate-50 p-4 text-sm leading-6 text-slate-800">
+            {output}
+          </pre>
+          <div className="mt-5 space-y-3 rounded-md border border-blue-100 bg-blue-50 p-4 text-sm text-slate-700">
+            <p className="font-bold text-slate-900">関連リンク</p>
+            <a className="block font-semibold text-blue-700 hover:underline" href={KAIGO_NAVI_URL}>
+              親のこと整理ナビで関連テンプレートを見る
+            </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={GUIDE_URL}>
+              次回の会話メモの作り方を読む
+            </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
+              次回聞きたいこと・話したいことメモ テンプレート集を見る
+            </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
+              親の介護はじめの37商品まとめセットを見る
+            </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
+          </div>
         </section>
       </div>
 
