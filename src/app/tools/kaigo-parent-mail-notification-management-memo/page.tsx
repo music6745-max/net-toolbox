@@ -7,6 +7,7 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-mail-notification-management?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_mail_notification_management";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383038";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentMailNotificationManagementMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -140,6 +141,9 @@ export default function KaigoParentMailNotificationManagementMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               郵便物・通知まとめ管理テンプレート集を見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -177,4 +181,3 @@ function MemoField({
     </label>
   );
 }
-
