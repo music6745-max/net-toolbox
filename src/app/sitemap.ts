@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { tools, siteConfig } from "@/lib/tools";
+import { kaigoSupplementalTools } from "@/lib/kaigoSupplementalTools";
 import { categories } from "@/lib/categories";
 import { getIndexableGuides } from "@/lib/retiredGuides";
 import { guides } from "./guide/guides.data";
@@ -7,7 +8,7 @@ import { guides } from "./guide/guides.data";
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const toolPages = tools.map((tool) => ({
+  const toolPages = [...kaigoSupplementalTools, ...tools].map((tool) => ({
     url: `${siteConfig.url}/tools/${tool.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,

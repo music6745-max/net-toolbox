@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { tools, siteConfig } from "@/lib/tools";
+import { kaigoSupplementalTools } from "@/lib/kaigoSupplementalTools";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import ToolsBrowser from "./ToolsBrowser";
 
+const allTools = [...kaigoSupplementalTools, ...tools];
+
 export const metadata: Metadata = {
-  title: `ツール一覧【全${tools.length}種】| ${siteConfig.name}`,
-  description: `${siteConfig.name}の全${tools.length}種類の無料Webツールをカテゴリ別に一覧表示。文字数カウント、QRコード、JSON整形、パスワード生成、BMI計算など、登録不要・完全無料で今すぐ使えます。`,
+  title: `ツール一覧【全${allTools.length}種】| ${siteConfig.name}`,
+  description: `${siteConfig.name}の全${allTools.length}種類の無料Webツールをカテゴリ別に一覧表示。文字数カウント、QRコード、JSON整形、パスワード生成、BMI計算など、登録不要・完全無料で今すぐ使えます。`,
   alternates: {
     canonical: `${siteConfig.url}/tools`,
   },
   openGraph: {
-    title: `ツール一覧【全${tools.length}種】| ${siteConfig.name}`,
-    description: `${tools.length}種類以上の無料Web便利ツールをまとめて掲載。`,
+    title: `ツール一覧【全${allTools.length}種】| ${siteConfig.name}`,
+    description: `${allTools.length}種類以上の無料Web便利ツールをまとめて掲載。`,
     url: `${siteConfig.url}/tools`,
     type: "website",
   },
@@ -23,7 +26,7 @@ function CollectionPageJsonLd() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "ツール一覧",
-    description: `${tools.length}種類以上の無料Webツールを掲載。`,
+    description: `${allTools.length}種類以上の無料Webツールを掲載。`,
     url: `${siteConfig.url}/tools`,
     inLanguage: "ja",
     isPartOf: {
@@ -33,8 +36,8 @@ function CollectionPageJsonLd() {
     },
     mainEntity: {
       "@type": "ItemList",
-      numberOfItems: tools.length,
-      itemListElement: tools.slice(0, 50).map((t, i) => ({
+      numberOfItems: allTools.length,
+      itemListElement: allTools.slice(0, 50).map((t, i) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `${siteConfig.url}/tools/${t.slug}`,
@@ -72,11 +75,11 @@ export default function ToolsIndexPage() {
           ツール<span className="text-primary">一覧</span>
         </h1>
         <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto px-2">
-          全{tools.length}種類の無料Web便利ツールをカテゴリ別に一覧表示。キーワード検索・カテゴリ絞り込みも可能です。
+          全{allTools.length}種類の無料Web便利ツールをカテゴリ別に一覧表示。キーワード検索・カテゴリ絞り込みも可能です。
         </p>
       </section>
 
-      <ToolsBrowser allTools={tools} />
+      <ToolsBrowser allTools={allTools} />
     </div>
   );
 }
