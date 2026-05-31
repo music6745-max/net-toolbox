@@ -29,6 +29,42 @@ export function ThemeToggle() {
     return () => window.clearTimeout(id);
   }, []);
 
+  useEffect(() => {
+    let observer: MutationObserver | null = null;
+
+    function tagBoothLinks() {
+      try {
+        const path = window.location.pathname;
+        if (!path.startsWith("/tools/kaigo-")) return;
+
+        const campaign = path.split("/").filter(Boolean).pop() || "kaigo-tool";
+        document.querySelectorAll<HTMLAnchorElement>('a[href*="kaigo-okane.booth.pm/items/"]').forEach((anchor) => {
+          const url = new URL(anchor.href);
+          if (url.searchParams.has("utm_source")) return;
+
+          const itemId = url.pathname.match(/\/items\/(\d+)/)?.[1];
+          const content =
+            itemId === "8383441" ? "full_pack" : itemId === "8383305" ? "starter_pack" : "single_template";
+          url.searchParams.set("utm_source", "net-toolbox");
+          url.searchParams.set("utm_medium", "tool");
+          url.searchParams.set("utm_campaign", campaign);
+          url.searchParams.set("utm_content", content);
+          anchor.href = url.toString();
+        });
+      } catch {
+        // Link tagging should never block the tool page.
+      }
+    }
+
+    tagBoothLinks();
+    if (document.body) {
+      observer = new MutationObserver(tagBoothLinks);
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    return () => observer?.disconnect();
+  }, []);
+
   function cycle() {
     const next: Theme = theme === "system" ? "dark" : theme === "dark" ? "light" : "system";
     setTheme(next);
