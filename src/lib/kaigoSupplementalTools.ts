@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-speech-habit-phrases-memo",
+    name: "高齢親が話す口癖・言い回しメモメーカー",
+    description:
+      "親がよく使う言葉、地域の言い回し、物や行動の呼び方を、家族内で見返す控えとして整理。",
+    icon: "P",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-frequent-shops-living-area-memo",
     name: "高齢親のよく行く店・生活圏メモメーカー",
     description:
