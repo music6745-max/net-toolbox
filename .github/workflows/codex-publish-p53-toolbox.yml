@@ -1,0 +1,41 @@
+name: Codex publish P53 toolbox
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/codex-publish-p53-toolbox.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: codex-publish-p53-toolbox
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply P53 patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 -d .github/codex-patches/p53-toolbox.patch.gz.b64 | gzip -d > /tmp/codex-p53.patch
+          git apply --whitespace=nowarn /tmp/codex-p53.patch
+          rm -f .github/workflows/codex-publish-p53-toolbox.yml .github/codex-patches/p53-toolbox.patch.gz.b64
+          rmdir .github/codex-patches 2>/dev/null || true
+          git status --short
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "Codex Publisher"
+          git config user.email "music6745-max@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: add P53 belongings memo tool"
+          git push
