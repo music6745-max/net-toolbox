@@ -652,6 +652,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-parent-home-storage-location-map-memo", name: "実家 収納場所・置き場所マップメモメーカー", description: "実家の日用品の置き場所を部屋別・棚段別に整理し、家族で共有できるメモを生成。", icon: "🗺️", category: "日常ツール" },
   { slug: "kaigo-parent-home-garbage-schedule-separation-memo", name: "実家 ごみ出し曜日・分別メモメーカー", description: "実家のごみ出し曜日、分別、集積所（置き場所）、粗大ごみ・一時保管を整理し、家族で共有できるメモを生成。", icon: "🗑️", category: "日常ツール" },
   { slug: "kaigo-parent-garden-plants-vegetable-care-memo", name: "高齢親 庭・植木・家庭菜園 手入れメモメーカー", description: "庭木・鉢植え・家庭菜園の手入れ予定、道具の置き場所、次回確認を家族で共有するメモを生成。", icon: "🌿", category: "日常ツール" },
+  { slug: "kaigo-parent-memory-family-history-record-memo", name: "高齢親 思い出・家族の歴史 書き留めメモメーカー", description: "親が話してくれたこと、生い立ち、家族の節目、次に聞きたいことを家族で見返せる形に整理。", icon: "📖", category: "日常ツール" },
   { slug: "kaigo-parent-mail-notification-management-memo", name: "高齢親 郵便物・通知まとめ管理メモメーカー", description: "郵便物・通知を受け取り日、保管場所、期限、次に確認することの形で家族内に整理。", icon: "📬", category: "日常ツール" },
   { slug: "kaigo-parent-outing-transport-memo", name: "高齢親 外出予定・移動手段メモメーカー", description: "通院・買い物などの外出予定、移動手段、送迎・同行の引き継ぎメモを整理。", icon: "🚌", category: "日常ツール" },
   { slug: "kaigo-parent-clothes-bedding-season-size-memo", name: "高齢親 衣類・寝具・季節替え・サイズ管理メモメーカー", description: "衣類・寝具のサイズ、季節物、保管場所、予備、家族共有メモを整理。", icon: "👕", category: "日常ツール" },
