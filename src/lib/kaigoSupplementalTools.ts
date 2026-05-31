@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-living-tips-routine-memo",
+    name: "高齢親に聞いた家の暮らしの小さなコツ・段取りメモメーカー",
+    description:
+      "親が話してくれた家のなかの場所、道具、小物、季節の変わり目、いつもの置き方や戻し方を、家族内の軽い控えとして整理します。",
+    icon: "L",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-cooking-seasoning-recipe-memo",
     name: "高齢親の家庭料理・味つけ・作り方メモメーカー",
     description:
