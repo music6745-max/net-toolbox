@@ -7,6 +7,7 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-shopping-supplies-replenishment?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_shopping_supplies_replenishment";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8434977";
+const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 
 export default function KaigoParentShoppingSuppliesReplenishmentMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -91,6 +92,7 @@ export default function KaigoParentShoppingSuppliesReplenishmentMemoPage() {
               placeholder={
                 "例:\n- トイレットペーパー / 12ロール / 月1 / 近所スーパー\n- ティッシュ / 5箱 / 2週間ごと / ドラッグストア\n- レトルトごはん / 10食 / 月末に補充 / ネット注文\n※個人情報や決済情報は書かない"
               }
+              rows={7}
             />
             <MemoField
               label="買わなくてよいもの（重複・在庫過多など）"
@@ -161,6 +163,9 @@ export default function KaigoParentShoppingSuppliesReplenishmentMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               買い物・日用品補充メモテンプレート集を見る
             </a>
+            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+              介護まるごと総合パックを見る
+            </a>
           </div>
         </section>
       </div>
@@ -198,4 +203,3 @@ function MemoField({
     </label>
   );
 }
-
