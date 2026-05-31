@@ -655,6 +655,7 @@ export const tools: Tool[] = [
   { slug: "kaigo-parent-memory-family-history-record-memo", name: "高齢親 思い出・家族の歴史 書き留めメモメーカー", description: "親が話してくれたこと、生い立ち、家族の節目、次に聞きたいことを家族で見返せる形に整理。", icon: "📖", category: "日常ツール" },
   { slug: "kaigo-parent-belongings-name-label-carryout-memo", name: "高齢親 持ち物・名前つけ・持ち出し管理メモメーカー", description: "持ち物の記名状況、特徴、持ち出し・返却確認を家族で共有できるメモに整理。", icon: "🧳", category: "日常ツール" },
   { slug: "kaigo-parent-photo-album-organization-memo", name: "高齢親 写真・アルバム整理メモメーカー", description: "実家の写真やアルバムについて、人物、時期、場所、データ化状況、次に聞きたいことを家族で整理。", icon: "📷", category: "日常ツール" },
+  { slug: "kaigo-parent-memorial-service-anniversary-schedule-memo", name: "実家 法事・年忌予定 書き留めメモメーカー", description: "確認済みの法事・年忌予定、過去の法要記録、家族で共有したい確認事項を整理。", icon: "🕯️", category: "日常ツール" },
   { slug: "kaigo-parent-phone-visitor-record-memo", name: "高齢親 電話・来客メモメーカー", description: "親にあった電話や来客の日時、相手の呼び名、用件の概要、次に確認したいことを家族で整理。", icon: "☎️", category: "日常ツール" },
   { slug: "kaigo-parent-hair-salon-barber-visit-record-memo", name: "高齢親 美容院・理容院 予約と来店記録メモメーカー", description: "散髪の予約日、来店日、希望スタイル、前回の仕上がり、次回目安を家族で整理。", icon: "✂️", category: "日常ツール" },
   { slug: "kaigo-parent-mail-notification-management-memo", name: "高齢親 郵便物・通知まとめ管理メモメーカー", description: "郵便物・通知を受け取り日、保管場所、期限、次に確認することの形で家族内に整理。", icon: "📬", category: "日常ツール" },
