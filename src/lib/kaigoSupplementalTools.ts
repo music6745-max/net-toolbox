@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-decoration-seasonal-ornament-memo",
+    name: "高齢親の家の飾りもの・置きもの・季節飾りメモメーカー",
+    description:
+      "親が家のなかで日常や季節の節目に飾ってきた飾りもの、置きもの、季節飾りを、家族内の軽い控えとして整理します。",
+    icon: "D",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-written-note-sticky-message-memo",
     name: "高齢親の家族向け書き置き・付箋・伝言メモメーカー",
     description:
