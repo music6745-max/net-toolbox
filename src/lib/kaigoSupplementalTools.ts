@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-sitting-place-memo",
+    name: "高齢親の家族のいつもの座る場所・過ごす場所メモメーカー",
+    description:
+      "食卓、茶の間、縁側、窓際など、家族がいつも座っていた場所・ふだん過ごしていた場所を、家族内の軽い控えとして整理します。",
+    icon: "S",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-decoration-seasonal-ornament-memo",
     name: "高齢親の家の飾りもの・置きもの・季節飾りメモメーカー",
     description:
