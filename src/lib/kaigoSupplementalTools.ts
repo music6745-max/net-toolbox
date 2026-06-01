@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-stationery-writing-items-memo",
+    name: "高齢親の家の文房具・ペン立て・鉛筆削りまわりメモメーカー",
+    description:
+      "電話台や茶の間、机まわりに長年置かれていたペン立て、鉛筆削り、鉛筆入れ、消しゴム入れなどを、書類や手紙の内容、住所録、契約、価値判断とは切り分けて、家族内で見返す控えとして整理します。",
+    icon: "P",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-lighting-lamp-memo",
     name: "高齢親の家のあかり・照明器具まわりメモメーカー",
     description:
