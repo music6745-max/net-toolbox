@@ -19,13 +19,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python - <<'PY'
-from pathlib import Path
-path = Path('src/app/tools/kaigo-parent-home-family-entrance-footwear-memo/page.tsx')
-text = path.read_text(encoding='utf-8')
-text = text.replace('玄関まりの物', '玄関まわりの物')
-path.write_text(text, encoding='utf-8')
-PY
+          python -c "from pathlib import Path; p=Path('src/app/tools/kaigo-parent-home-family-entrance-footwear-memo/page.tsx'); s=p.read_text(encoding='utf-8').replace('玄関まりの物','玄関まわりの物'); p.write_text(s, encoding='utf-8')"
           git add src/app/tools/kaigo-parent-home-family-entrance-footwear-memo/page.tsx
           git rm .github/workflows/codex-p82-toolbox-typo-fix.yml
           git config user.name "github-actions[bot]"
@@ -33,4 +27,4 @@ PY
           git commit -m "fix: correct P82 entrance wording"
           git push
 
-# trigger: 2026-06-02T01:50:00+09:00
+# trigger: 2026-06-02T01:56:00+09:00
