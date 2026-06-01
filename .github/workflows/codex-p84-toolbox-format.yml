@@ -1,0 +1,47 @@
+name: Codex P84 Toolbox Format
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - ".github/workflows/codex-p84-toolbox-format.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Normalize P84 toolbox formatting
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          index_path = Path("src/lib/kaigoSupplementalTools.ts")
+          index = index_path.read_text(encoding="utf-8")
+          correct = '''  {
+            slug: "kaigo-parent-home-family-lighting-lamp-memo",
+            name: "高齢親の家のあかり・照明器具まわりメモメーカー",
+            description:
+              "茶の間のあかり、台所や玄関の照明、枕元の電気スタンド、ランプシェードなど、親の家で家族が長年見てきたあかりまわりの呼び方、置かれていた部屋、親が話してくれたことを、電気作業や安全判断ではなく家族内の記録として整理します。",
+            icon: "L",
+            category: "日常ツール",
+          },
+          '''
+          marker = 'kaigo-parent-home-family-lighting-lamp-memo'
+          if marker in index:
+            start = index.rfind("  {", 0, index.index(marker))
+            end = index.index('  {\n    slug: "kaigo-parent-home-family-small-box-container-memo"', index.index(marker))
+            index = index[:start] + correct + index[end:]
+            index_path.write_text(index, encoding="utf-8")
+          PY
+          rm -f .github/workflows/codex-p84-toolbox-format.yml
+          git config user.name "codex-automation"
+          git config user.email "codex-automation@example.com"
+          git add src/lib/kaigoSupplementalTools.ts .github/workflows/codex-p84-toolbox-format.yml
+          git commit -m "style: normalize P84 toolbox index formatting"
+          git push origin HEAD:master
