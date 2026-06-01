@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-kitchen-tools-memo",
+    name: "高齢親の家の台所道具・台所小物メモメーカー",
+    description:
+      "鍋、フライパン、包丁、まな板、ザル、ボウルなど、親の家で長く使ってきた台所道具を家族内の軽い控えとして整理します。",
+    icon: "K",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-tableware-combination-memo",
     name: "高齢親の家族別食器・食卓取り合わせメモメーカー",
     description:
