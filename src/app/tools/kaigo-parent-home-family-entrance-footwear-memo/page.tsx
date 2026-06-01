@@ -134,7 +134,7 @@ export default function KaigoParentHomeFamilyEntranceFootwearMemoPage() {
         </a>
         <h1 className="mt-3 text-2xl font-bold text-slate-900">高齢親の家の玄関まわりメモメーカー</h1>
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          傘立て、靴べら、スリッパ立て、来客用履物入れなど、親の家で家族が長年見てきた玄関まりの物を、家族内の控えとして整理します。
+          傘立て、靴べら、スリッパ立て、来客用履物入れなど、親の家で家族が長年見てきた玄関まわりの物を、家族内の控えとして整理します。
           防犯、防災、医療、介護用品、修理、処分の判断をする表ではなく、呼び方、場所、親のひとことを次の帰省や親族の集まりの前に見返すためのメモです。
         </p>
       </div>
