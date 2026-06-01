@@ -7,9 +7,12 @@ const KAIGO_NAVI_URL =
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-home-family-small-box-container-record?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_home_family_small_box_container";
 const NOTE_URL = "https://note.com/mild_quail6092/n/n48ea43b4290b";
-const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383425";
-const PACK_URL = "https://kaigo-okane.booth.pm/items/8383427";
-const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
+const BOOTH_URL =
+  "https://kaigo-okane.booth.pm/items/8383425?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-home-family-small-box-container-memo&utm_content=single_template";
+const PACK_URL =
+  "https://kaigo-okane.booth.pm/items/8383427?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-home-family-small-box-container-memo&utm_content=starter_pack";
+const FULL_PACK_URL =
+  "https://kaigo-okane.booth.pm/items/8383441?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-home-family-small-box-container-memo&utm_content=full_pack";
 
 type FieldKey =
   | "recordDate"
