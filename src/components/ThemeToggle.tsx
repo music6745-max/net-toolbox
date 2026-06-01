@@ -54,7 +54,8 @@ export function ThemeToggle() {
                   itemId === "8383402" ||
                   itemId === "8383405" ||
                   itemId === "8383412" ||
-                  itemId === "8383417"
+                  itemId === "8383417" ||
+                  itemId === "8383420"
                 ? "starter_pack"
                 : "single_template";
           url.searchParams.set("utm_source", "net-toolbox");
