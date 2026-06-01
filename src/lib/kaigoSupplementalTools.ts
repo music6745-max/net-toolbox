@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-mirror-memo",
+    name: "高齢親の家の鏡まわりメモメーカー",
+    description:
+      "姿見、洗面鏡、鏡台の鏡、小さな壁掛け鏡など、親の家で家族が長年見てきた鏡の呼び方、場所、見てきた場面、親が話してくれた由来を、美容や健康観察、修理や処分の判断に使わず家族内の控えとして整理します。",
+    icon: "M",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-clock-memo",
     name: "高齢親の家の時計まわりメモメーカー",
     description:
