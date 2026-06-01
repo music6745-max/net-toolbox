@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-tableware-combination-memo",
+    name: "高齢親の家族別食器・食卓取り合わせメモメーカー",
+    description:
+      "茶碗、湯のみ、お椀、取り皿、お盆など、家族内で通じる食卓の取り合わせを次の帰省や家族の集まりの前に見返せる形で整理します。",
+    icon: "T",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-place-furniture-local-name-memo",
     name: "高齢親の家の場所・部屋・家具の家族内呼び名メモメーカー",
     description:
