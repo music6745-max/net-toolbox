@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-place-furniture-local-name-memo",
+    name: "高齢親の家の場所・部屋・家具の家族内呼び名メモメーカー",
+    description:
+      "「中の間」「茶箪笥のとこ」など、家族だけに通じてきた場所・部屋・家具・コーナーの呼び名を、家族内の軽い控えとして整理します。",
+    icon: "N",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-sitting-place-memo",
     name: "高齢親の家族のいつもの座る場所・過ごす場所メモメーカー",
     description:

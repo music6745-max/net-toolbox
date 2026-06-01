@@ -44,7 +44,11 @@ export function ThemeToggle() {
 
           const itemId = url.pathname.match(/\/items\/(\d+)/)?.[1];
           const content =
-            itemId === "8383441" ? "full_pack" : itemId === "8383305" ? "starter_pack" : "single_template";
+            itemId === "8383441"
+              ? "full_pack"
+              : itemId === "8383305" || itemId === "8383384"
+                ? "starter_pack"
+                : "single_template";
           url.searchParams.set("utm_source", "net-toolbox");
           url.searchParams.set("utm_medium", "tool");
           url.searchParams.set("utm_campaign", campaign);
