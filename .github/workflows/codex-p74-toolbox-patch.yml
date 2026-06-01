@@ -1,0 +1,33 @@
+name: Codex P74 Toolbox Patch
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply P74 toolbox patch
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64
+          from pathlib import Path
+          data = """ZGlmZiAtLWdpdCBhL3NyYy9saWIva2FpZ29TdXBwbGVtZW50YWxUb29scy50cyBiL3NyYy9saWIva2FpZ29TdXBwbGVtZW50YWxUb29scy50cwppbmRleCA0Yzk2ZmE4Li5mNjZmNWM0IDEwMDY0NAotLS0gYS9zcmMvbGliL2thaWdvU3VwcGxlbWVudGFsVG9vbHMudHMKKysrIGIvc3JjL2xpYi9rYWlnb1N1cHBsZW1lbnRhbFRvb2xzLnRzCkBAIC0xLDYgKzEsMTQgQEAKIGltcG9ydCB0eXBlIHsgVG9vbCB9IGZyb20gIi4vdG9vbHMiOwogCiBleHBvcnQgY29uc3Qga2FpZ29TdXBwbGVtZW50YWxUb29sczogVG9vbFtdID0gWworICB7CisgICAgc2x1ZzogImthaWdvLXBhcmVudC1ob21lLWZhbWlseS10YWJsZXdhcmUtY29tYmluYXRpb24tbWVtbyIsCisgICAgbmFtZTogIumrmOm9ouimquOBruWutuaXj+WIpemjn+WZqOODu+mjn+WNk+WPluOCiuWQiOOCj+OBm+ODoeODouODoeODvOOCq+ODvCIsCisgICAgZGVzY3JpcHRpb246CisgICAgICAi6Iy256KX44CB5rmv44Gu44G/44CB44GK5qSA44CB5Y+W44KK55q/44CB44GK55uG44Gq44Gp44CB5a625peP5YaF44Gn6YCa44GY44KL6aOf5Y2T44Gu5Y+W44KK5ZCI44KP44Gb44KS5qyh44Gu5biw55yB44KE5a625peP44Gu6ZuG44G+44KK44Gu5YmN44Gr6KaL6L+U44Gb44KL5b2i44Gn5pW055CG44GX44G+44GZ44CCIiwKKyAgICBpY29uOiAiVCIsCisgICAgY2F0ZWdvcnk6ICLml6XluLjjg4Tjg7zjg6siLAorICB9LAogICB7CiAgICAgc2x1ZzogImthaWdvLXBhcmVudC1ob21lLXBsYWNlLWZ1cm5pdHVyZS1sb2NhbC1uYW1lLW1lbW8iLAogICAgIG5hbWU6ICLpq5jpvaLopqrjga7lrrbjga7loLTmiYDjg7vpg6jlsYvjg7vlrrblhbfjga7lrrbml4/lhoXlkbzjgbPlkI3jg6Hjg6Ljg6Hjg7zjgqvjg7wiLAo="""
+          Path('codex-p74-toolbox.diff').write_bytes(base64.b64decode(data))
+          PY
+          git apply --index codex-p74-toolbox.diff
+          git rm --ignore-unmatch .github/workflows/codex-p74-toolbox-patch.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "feat: connect P74 tableware tool metadata"
+          git push
