@@ -1,0 +1,69 @@
+name: Codex P76 Toolbox Patch
+
+on:
+  push:
+    paths:
+      - ".github/workflows/codex-p76-toolbox.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply P76 toolbox changes
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $utf8 = [System.Text.UTF8Encoding]::new($false)
+
+          $toolsPath = 'src/lib/kaigoSupplementalTools.ts'
+          $tools = [IO.File]::ReadAllText($toolsPath)
+          if ($tools -notmatch 'kaigo-parent-home-daily-cloth-items-memo') {
+            $toolsInsert = @'
+  {
+    slug: "kaigo-parent-home-daily-cloth-items-memo",
+    name: "高齢親の家の手ぬぐい・タオル・前掛け・布巾メモメーカー",
+    description:
+      "手ぬぐい、タオル、前掛け、かっぽう着、布巾など、親の家で日々使ってきた洗える布ものを家族内の軽い控えとして整理します。",
+    icon: "C",
+    category: "日常ツール",
+  },
+'@
+            $toolsMarker = "export const kaigoSupplementalTools: Tool[] = [`n"
+            if (-not $tools.Contains($toolsMarker)) { throw 'supplemental tools marker not found' }
+            $tools = $tools.Replace($toolsMarker, $toolsMarker + $toolsInsert)
+            [IO.File]::WriteAllText($toolsPath, $tools, $utf8)
+          }
+
+          $themePath = 'src/components/ThemeToggle.tsx'
+          $theme = [IO.File]::ReadAllText($themePath)
+          if ($theme -notmatch '8383396') {
+            $old = '              : itemId === "8383305" || itemId === "8383384" || itemId === "8383387" || itemId === "8383391"'
+            $new = @'
+              : itemId === "8383305" ||
+                  itemId === "8383384" ||
+                  itemId === "8383387" ||
+                  itemId === "8383391" ||
+                  itemId === "8383396"
+'@.TrimEnd()
+            if (-not $theme.Contains($old)) { throw 'ThemeToggle starter-pack marker not found' }
+            $theme = $theme.Replace($old, $new)
+            [IO.File]::WriteAllText($themePath, $theme, $utf8)
+          }
+
+          $workflowPath = '.github/workflows/codex-p76-toolbox.yml'
+          if (Test-Path $workflowPath) { Remove-Item $workflowPath -Force }
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/components/ThemeToggle.tsx src/lib/kaigoSupplementalTools.ts src/app/tools/kaigo-parent-home-daily-cloth-items-memo/page.tsx .github/workflows/codex-p76-toolbox.yml
+          if (-not (git diff --cached --quiet)) {
+            git commit -m 'feat: connect P76 daily cloth memo tool'
+            git push origin HEAD:master
+          }
