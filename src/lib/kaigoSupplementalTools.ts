@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-doors-sliding-screens-memo",
+    name: "高齢親の家の障子・襖・引き戸・畳まわりメモメーカー",
+    description:
+      "障子、襖、板戸、引き戸、縁側、床の間、押し入れ、畳、板の間など、親の家で家族が長年触れてきた場所を、修理や改修の判断に使わず家族内の控えとして整理します。",
+    icon: "D",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-furniture-memo",
     name: "高齢親の家の大型家具メモメーカー",
     description:
