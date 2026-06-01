@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-small-box-container-memo",
+    name: "高齢親の家の小箱・入れ物まわりメモメーカー",
+    description:
+      "茶筒、菓子缶、小箱、小さな入れ物など、親の家で家族が長年見てきた小物入れの呼び方、置かれていた場所、親が話してくれたことを、処分や価値判断ではなく家族内の記録として整理します。",
+    icon: "B",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-entrance-footwear-memo",
     name: "高齢親の家の玄関まわりメモメーカー",
     description:
