@@ -1,0 +1,309 @@
+name: Codex P72 toolbox patch
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/codex-p72-toolbox.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply P72 toolbox changes
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import textwrap
+
+          list_path = Path('src/lib/kaigoSupplementalTools.ts')
+          text = list_path.read_text(encoding='utf-8')
+          if 'kaigo-parent-home-family-sitting-place-memo' not in text:
+              entry = '''export const kaigoSupplementalTools: Tool[] = [
+  {
+    slug: "kaigo-parent-home-family-sitting-place-memo",
+    name: "高齢親の家族のいつもの座る場所・過ごす場所メモメーカー",
+    description:
+      "食卓、茶の間、縁側、窓際など、家族がいつも座っていた場所・ふだん過ごしていた場所を、家族内の軽い控えとして整理します。",
+    icon: "S",
+    category: "日常ツール",
+  },'''
+              text = text.replace('export const kaigoSupplementalTools: Tool[] = [', entry, 1)
+              list_path.write_text(text, encoding='utf-8', newline='\n')
+
+          tool_path = Path('src/app/tools/kaigo-parent-home-family-sitting-place-memo/page.tsx')
+          tool_path.parent.mkdir(parents=True, exist_ok=True)
+          tool_path.write_text(textwrap.dedent(r'''
+          "use client";
+
+          import { useMemo, useState } from "react";
+
+          const KAIGO_NAVI_URL =
+            "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_home_family_sitting_place";
+          const GUIDE_URL =
+            "https://toshi-navi.jp/guide/parent-home-family-sitting-place-record?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_home_family_sitting_place";
+          const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383377";
+          const PACK_URL = "https://kaigo-okane.booth.pm/items/8383305";
+          const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
+
+          type FieldKey =
+            | "scope"
+            | "recordDate"
+            | "scene"
+            | "place"
+            | "familyMember"
+            | "usualSeat"
+            | "howRemembered"
+            | "familyMemo"
+            | "excludedInfo"
+            | "nextReview";
+
+          const initialValues: Record<FieldKey, string> = {
+            scope: "",
+            recordDate: "",
+            scene: "",
+            place: "",
+            familyMember: "",
+            usualSeat: "",
+            howRemembered: "",
+            familyMemo: "",
+            excludedInfo: "",
+            nextReview: "",
+          };
+
+          const fields: Array<{ key: FieldKey; label: string; placeholder: string; rows?: number }> = [
+            {
+              key: "scope",
+              label: "対象範囲",
+              placeholder:
+                "例: 実家の食卓、茶の間、縁側、窓際など、家族がいつも座っていた場所・ふだん過ごしていた場所の控え。",
+              rows: 3,
+            },
+            {
+              key: "recordDate",
+              label: "見た日・控えた人",
+              placeholder: "例: 2026年6月1日、帰省時に長女が見た範囲を控えた。",
+              rows: 2,
+            },
+            {
+              key: "scene",
+              label: "場面",
+              placeholder: "例: 朝食、夕食、来客時、テレビを見る時間、家族が集まる日、法事のあとなど。",
+              rows: 3,
+            },
+            {
+              key: "place",
+              label: "場所",
+              placeholder: "例: 台所横の食卓、茶の間の窓側、縁側、仏壇の近く、庭が見える椅子など。",
+              rows: 4,
+            },
+            {
+              key: "familyMember",
+              label: "家族メンバー",
+              placeholder: "例: 父、母、長男、長女、孫、来客時によく座る人など。",
+              rows: 3,
+            },
+            {
+              key: "usualSeat",
+              label: "いつもの座り方・過ごし方",
+              placeholder: "例: 父は窓側、母は台所に近い席。夕方は母が縁側で新聞を読むことが多かった。",
+              rows: 4,
+            },
+            {
+              key: "howRemembered",
+              label: "思い出すきっかけ",
+              placeholder: "例: 写真に写っていた、本人がよく話していた、帰省時に家族で話題になった。",
+              rows: 4,
+            },
+            {
+              key: "familyMemo",
+              label: "家族内メモ",
+              placeholder: "例: 兄弟で覚え方が違う場合は併記する。席順の正解や価値は決めない。",
+              rows: 4,
+            },
+            {
+              key: "excludedInfo",
+              label: "このメモに書かない情報",
+              placeholder:
+                "例: 住所、電話番号、口座、カード、契約番号、暗証番号、パスワード、鍵、防犯コード、健康状態や認知機能の判断。",
+              rows: 4,
+            },
+            {
+              key: "nextReview",
+              label: "次に見返すこと・確認したいこと",
+              placeholder: "例: 次回帰省時に古い写真と照らす。本人や家族に無理なく聞ける範囲だけ確認する。",
+              rows: 3,
+            },
+          ];
+
+          export default function KaigoParentHomeFamilySittingPlaceMemoPage() {
+            const [values, setValues] = useState<Record<FieldKey, string>>(initialValues);
+
+            const output = useMemo(() => {
+              return [
+                "【高齢親の家のなかの家族のいつもの座る場所・ふだん過ごす場所 家族内メモ】",
+                values.scope ? "対象範囲: " + values.scope : "対象範囲: 未入力",
+                values.recordDate ? "見た日・控えた人: " + values.recordDate : "見た日・控えた人: 未入力",
+                "",
+                "■ 場面",
+                values.scene || "未入力",
+                "",
+                "■ 場所",
+                values.place || "未入力",
+                "",
+                "■ 家族メンバー",
+                values.familyMember || "未入力",
+                "",
+                "■ いつもの座り方・過ごし方",
+                values.usualSeat || "未入力",
+                "",
+                "■ 思い出すきっかけ",
+                values.howRemembered || "未入力",
+                "",
+                "■ 家族内メモ",
+                values.familyMemo || "未入力",
+                "",
+                "■ このメモに書かない情報",
+                values.excludedInfo ||
+                  "住所、電話番号、口座、カード、契約番号、暗証番号、パスワード、鍵、防犯コード、健康状態や認知機能の判断は書かない。",
+                "",
+                "■ 次に見返すこと・確認したいこと",
+                values.nextReview || "未入力",
+                "",
+                "※このメモは、家族がいつも座っていた場所・ふだん過ごしていた場所を、家族内で見返すための控えです。",
+                "※席次マナー、上座下座、しきたり、健康状態、認知機能、家具の処分、相続、所有、費用負担の判断には使いません。",
+                "※住所、電話番号、口座、カード、契約番号、暗証番号、パスワード、鍵、防犯コードなどの秘密情報は記録しないでください。",
+              ].join("\n");
+            }, [values]);
+
+            const copyOutput = async () => {
+              await navigator.clipboard.writeText(output);
+            };
+
+            const updateField = (key: FieldKey, value: string) => {
+              setValues((current) => ({ ...current, [key]: value }));
+            };
+
+            return (
+              <main className="mx-auto max-w-5xl px-4 py-8">
+                <div className="mb-6">
+                  <a href="/tools" className="text-sm font-semibold text-blue-700 hover:underline">
+                    ツール一覧へ戻る
+                  </a>
+                  <h1 className="mt-3 text-2xl font-bold text-slate-900">
+                    高齢親の家族のいつもの座る場所・過ごす場所メモメーカー
+                  </h1>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    食卓、茶の間、縁側、窓際など、家族がいつも座っていた場所・ふだん過ごしていた場所を、
+                    家族内で見返す軽い控えとして整理します。席次マナー、健康状態、処分や相続の判断には使わないでください。
+                  </p>
+                </div>
+
+                <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+                  <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+                    <h2 className="text-lg font-bold text-slate-900">入力</h2>
+                    <div className="mt-4 space-y-4">
+                      {fields.map((field) => (
+                        <MemoField
+                          key={field.key}
+                          label={field.label}
+                          value={values[field.key]}
+                          onChange={(value) => updateField(field.key, value)}
+                          placeholder={field.placeholder}
+                          rows={field.rows}
+                        />
+                      ))}
+                    </div>
+                  </section>
+
+                  <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+                    <div className="flex items-center justify-between gap-3">
+                      <h2 className="text-lg font-bold text-slate-900">出力メモ</h2>
+                      <button
+                        type="button"
+                        onClick={copyOutput}
+                        className="rounded-md bg-blue-700 px-4 py-2 text-sm font-bold text-white hover:bg-blue-800"
+                      >
+                        コピー
+                      </button>
+                    </div>
+                    <pre className="mt-4 min-h-[640px] whitespace-pre-wrap rounded-md bg-slate-50 p-4 text-sm leading-6 text-slate-800">
+                      {output}
+                    </pre>
+                    <div className="mt-5 space-y-3 rounded-md border border-blue-100 bg-blue-50 p-4 text-sm text-slate-700">
+                      <p className="font-bold text-slate-900">関連リンク</p>
+                      <a className="block font-semibold text-blue-700 hover:underline" href={KAIGO_NAVI_URL}>
+                        親のこと整理ナビで関連テンプレートを見る
+                      </a>
+                      <a className="block font-semibold text-blue-700 hover:underline" href={GUIDE_URL}>
+                        家族のいつもの座る場所メモの作り方を読む
+                      </a>
+                      <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
+                        座る場所・過ごす場所メモ テンプレート集を見る
+                      </a>
+                      <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
+                        親の介護はじめの37商品まとめセットを見る
+                      </a>
+                      <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
+                        介護まるごと総合パックを見る
+                      </a>
+                    </div>
+                  </section>
+                </div>
+
+                <section className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+                  このツールは、家族がいつも座っていた場所・ふだん過ごしていた場所を、家族内で見返すためのメモです。
+                  席次マナー、上座下座、しきたり、健康状態、認知機能、家具の処分、相続、所有、費用負担の判断には使いません。
+                  秘密情報や防犯に関わる情報は記録しないでください。
+                </section>
+              </main>
+            );
+          }
+
+          function MemoField({
+            label,
+            value,
+            onChange,
+            placeholder,
+            rows = 4,
+          }: {
+            label: string;
+            value: string;
+            onChange: (value: string) => void;
+            placeholder: string;
+            rows?: number;
+          }) {
+            return (
+              <label className="block text-sm font-semibold text-slate-800">
+                {label}
+                <textarea
+                  value={value}
+                  onChange={(event) => onChange(event.target.value)}
+                  placeholder={placeholder}
+                  rows={rows}
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm leading-6"
+                />
+              </label>
+            );
+          }
+          ''').lstrip(), encoding='utf-8', newline='\n')
+
+          Path('.github/workflows/codex-p72-toolbox.yml').unlink(missing_ok=True)
+          PY
+      - name: Commit P72 toolbox changes
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/lib/kaigoSupplementalTools.ts src/app/tools/kaigo-parent-home-family-sitting-place-memo/page.tsx .github/workflows/codex-p72-toolbox.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feat: add P72 sitting place tool"
+          git push
