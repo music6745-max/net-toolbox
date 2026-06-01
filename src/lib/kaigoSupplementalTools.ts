@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-clock-memo",
+    name: "高齢親の家の時計まわりメモメーカー",
+    description:
+      "掛け時計、柱時計、置き時計、目覚まし時計など、親の家で家族が長年見てきた時計の呼び方、場所、見てきた場面、親が話してくれた由来を、修理や処分の判断に使わず家族内の控えとして整理します。",
+    icon: "C",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-doors-sliding-screens-memo",
     name: "高齢親の家の障子・襖・引き戸・畳まわりメモメーカー",
     description:
