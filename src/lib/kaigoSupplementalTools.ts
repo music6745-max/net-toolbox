@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-written-note-sticky-message-memo",
+    name: "高齢親の家族向け書き置き・付箋・伝言メモメーカー",
+    description:
+      "親が家のなかで家族向けに書いていた書き置き、付箋、伝言を、家族内で見返す軽い控えとして整理します。",
+    icon: "N",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-living-tips-routine-memo",
     name: "高齢親に聞いた家の暮らしの小さなコツ・段取りメモメーカー",
     description:
