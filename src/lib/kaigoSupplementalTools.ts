@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-plants-garden-memo",
+    name: "高齢親の家の鉢植え・庭の花・盆栽メモメーカー",
+    description:
+      "家のなか、縁側、庭先で家族が長年見てきた鉢植え、植木、庭の花、盆栽、観葉植物を家族内の軽い控えとして整理します。",
+    icon: "G",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-daily-cloth-items-memo",
     name: "高齢親の家の手ぬぐい・タオル・前掛け・布巾メモメーカー",
     description:
