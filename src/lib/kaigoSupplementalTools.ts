@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+  slug: "kaigo-parent-home-family-lighting-lamp-memo",
+  name: "高齢親の家のあかり・照明器具まわりメモメーカー",
+  description:
+    "茶の間のあかり、台所や玄関の照明、枕元の電気スタンド、ランプシェードなど、親の家で家族が長年見てきたあかりまわりの呼び方、置かれていた部屋、親が話してくれたことを、電気作業や安全判断ではなく家族内の記録として整理します。",
+  icon: "L",
+  category: "日常ツール",
+},
+  {
     slug: "kaigo-parent-home-family-small-box-container-memo",
     name: "高齢親の家の小箱・入れ物まわりメモメーカー",
     description:
