@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-daily-cloth-items-memo",
+    name: "高齢親の家の手ぬぐい・タオル・前掛け・布巾メモメーカー",
+    description:
+      "手ぬぐい、タオル、前掛け、かっぽう着、布巾など、親の家で日々使ってきた洗える布ものを家族内の軽い控えとして整理します。",
+    icon: "C",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-kitchen-tools-memo",
     name: "高齢親の家の台所道具・台所小物メモメーカー",
     description:
