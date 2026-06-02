@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-eyeglasses-cases-memo",
+    name: "高齢親の家の老眼鏡・眼鏡ケースまわりメモメーカー",
+    description:
+      "老眼鏡、眼鏡ケース、眼鏡置き、眼鏡ふきの布などを、視力判断・検眼・処方・度数管理・買い替え判断とは分けて、家族内の呼び方・置き場所・親が話してくれた由来として控えます。",
+    icon: "E",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-travel-souvenirs-memo",
     name: "高齢親の家の旅行記念品・お土産物まわりメモメーカー",
     description:
