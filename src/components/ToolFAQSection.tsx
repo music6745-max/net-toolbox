@@ -16,8 +16,8 @@ export function ToolFAQSection({
       <FAQJsonLd items={faqs} />
       {howTo && howTo.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-lg font-bold mb-3">{toolName}の使い方</h2>
-          <ol className="list-decimal list-inside space-y-2 text-sm text-muted leading-relaxed">
+          <h2 className="mb-3 text-lg font-bold">{toolName}の使い方</h2>
+          <ol className="list-inside list-decimal space-y-2 text-sm leading-relaxed text-muted">
             {howTo.map((step, i) => (
               <li key={i}>{step}</li>
             ))}
@@ -25,12 +25,12 @@ export function ToolFAQSection({
         </section>
       )}
       <section className="mt-10">
-        <h2 className="text-lg font-bold mb-4">よくある質問</h2>
+        <h2 className="mb-4 text-lg font-bold">よくある質問</h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-card-bg border border-card-border rounded-lg p-4">
-              <h3 className="text-sm font-semibold mb-2">Q. {faq.question}</h3>
-              <p className="text-sm text-muted leading-relaxed">A. {faq.answer}</p>
+            <div key={i} className="rounded-lg border border-card-border bg-card-bg p-4">
+              <h3 className="mb-2 text-sm font-semibold">Q. {faq.question}</h3>
+              <p className="text-sm leading-relaxed text-muted">A. {faq.answer}</p>
             </div>
           ))}
         </div>

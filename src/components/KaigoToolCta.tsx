@@ -12,7 +12,7 @@ type CtaLink = {
 
 function boothContent(position: string) {
   if (position.includes("full")) return "full_pack";
-  if (position.includes("starter")) return "starter_pack";
+  if (position.includes("starter") || position.includes("pack")) return "starter_pack";
   if (position.includes("cost")) return "cost_template";
   return "single_template";
 }
