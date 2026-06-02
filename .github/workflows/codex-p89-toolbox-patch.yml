@@ -1,0 +1,35 @@
+name: Codex P89 Toolbox Patch
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/codex-p89-toolbox-patch.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - name: Apply P89 patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > /tmp/p89.patch.gz.b64 <<'PATCH_B64'
+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
+PATCH_B64
+          base64 -d /tmp/p89.patch.gz.b64 | gzip -d > /tmp/p89.patch
+          git apply --whitespace=nowarn /tmp/p89.patch
+          rm -f .github/workflows/codex-p89-toolbox-patch.yml
+          git status --short
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/app/tools/kaigo-parent-home-family-old-toys-dolls-memo/page.tsx src/lib/kaigoSupplementalTools.ts .github/workflows/codex-p89-toolbox-patch.yml
+          git commit -m "feat: add P89 old toys memo tool"
+          git push
