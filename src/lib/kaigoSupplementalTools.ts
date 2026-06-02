@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-wall-decoration-paper-items-memo",
+    name: "高齢親の家の壁飾り・紙ものまわりメモメーカー",
+    description:
+      "額縁、賞状、写真立て、カレンダー、ポスターなど、壁や柱に掛けられていた紙ものを、個人情報や評価判断とは分けて家族内の呼び方・置き場所として控えます。",
+    icon: "W",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-umbrella-rain-gear-memo",
     name: "高齢親の家の傘・雨具まわりメモメーカー",
     description:
