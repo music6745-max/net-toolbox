@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-hanging-ornaments-memo",
+    name: "高齢親の家のつり下げ飾りまわりメモメーカー",
+    description:
+      "風鈴、つるし飾り、提灯、暖簾飾り、つるし雛など、天井や鴨居から吊り下げられていた飾りを、火気・取り付け・落下対策や処分判断とは分けて、家族内の呼び方・場所・見た目として控えるメモです。",
+    icon: "H",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-old-toys-dolls-memo",
     name: "高齢親の家の古いおもちゃ・人形まわりメモメーカー",
     description:
