@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-travel-souvenirs-memo",
+    name: "高齢親の家の旅行記念品・お土産物まわりメモメーカー",
+    description:
+      "旅行先の置物、帰省のお土産、観光地の記念品、家族で出かけた時の小物などを、査定・売却・処分・税務・相続判断とは分けて、家族内の呼び方・置き場所・親が話してくれた由来として控えます。",
+    icon: "R",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-hanging-ornaments-memo",
     name: "高齢親の家のつり下げ飾りまわりメモメーカー",
     description:
