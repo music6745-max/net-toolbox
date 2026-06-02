@@ -13,6 +13,10 @@ const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=kaigo_parent_monitoring_cost_check";
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/living-alone-parent-monitoring-cost-contact-system?utm_source=net-toolbox&utm_medium=referral&utm_campaign=kaigo_parent_monitoring_cost_check";
+const BOOTH_URL =
+  "https://kaigo-okane.booth.pm/items/8409959?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-monitoring-cost-check&utm_content=single_template";
+const FULL_PACK_URL =
+  "https://kaigo-okane.booth.pm/items/8383441?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-monitoring-cost-check&utm_content=full_pack";
 
 const monitoringOptions = {
   phone: "電話・メッセージでの定期連絡",
@@ -330,7 +334,8 @@ export default function KaigoParentMonitoringCostCheckPage() {
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "monitoring_tool", variant: "primary" },
           { label: "一人暮らしの親の記事を読む", href: GUIDE_URL, eventName: "guide_click", position: "monitoring_guide" },
-          { label: "見守り連絡表テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8409959", eventName: "booth_click", position: "monitoring_contact_template" },
+          { label: "見守り連絡表テンプレートを見る", href: BOOTH_URL, eventName: "booth_click", position: "monitoring_contact_template" },
+          { label: "介護フルパックを見る", href: FULL_PACK_URL, eventName: "booth_click", position: "full_pack" },
         ]}
       />
 
