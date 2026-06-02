@@ -1,0 +1,63 @@
+name: Codex P90 toolbox metadata patch
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/codex-p90-toolbox-metadata.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Insert P90 supplemental tool metadata
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = 'src/lib/kaigoSupplementalTools.ts';
+          let source = fs.readFileSync(path, 'utf8');
+          if (source.includes('kaigo-parent-home-family-hanging-ornaments-memo')) {
+            console.log('P90 metadata already present');
+          } else {
+            const insert = `  {
+    slug: "kaigo-parent-home-family-hanging-ornaments-memo",
+    name: "高齢親の家のつり下げ飾りまわりメモメーカー",
+    description:
+      "風鈴、つるし飾り、提灯、暖簾飾り、つるし雛など、天井や鴨居から吊り下げられていた飾りを、火気・取り付け・落下対策や処分判断とは分けて、家族内の呼び方・場所・見た目として控えるメモです。",
+    icon: "H",
+    category: "日常メモ",
+  },
+`;
+            const crlfMarker = 'export const kaigoSupplementalTools: Tool[] = [\r\n';
+            const lfMarker = 'export const kaigoSupplementalTools: Tool[] = [\n';
+            if (source.includes(crlfMarker)) {
+              source = source.replace(crlfMarker, 'export const kaigoSupplementalTools: Tool[] = [\n' + insert);
+            } else if (source.includes(lfMarker)) {
+              source = source.replace(lfMarker, lfMarker + insert);
+            } else {
+              throw new Error('kaigoSupplementalTools marker not found');
+            }
+            fs.writeFileSync(path, source, 'utf8');
+          }
+          NODE
+      - name: Commit patch
+        run: |
+          if git diff --quiet -- src/lib/kaigoSupplementalTools.ts; then
+            echo "No metadata change to commit"
+            exit 0
+          fi
+          git config user.name "codex-automation"
+          git config user.email "codex-automation@users.noreply.github.com"
+          git add src/lib/kaigoSupplementalTools.ts
+          git commit -m "feat: add P90 hanging ornaments toolbox metadata"
+          git push origin HEAD:master
