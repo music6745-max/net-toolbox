@@ -11,7 +11,12 @@ import { ToolJsonLd } from "@/components/ToolJsonLd";
 const TOOL_SLUG = "kaigo-parent-money-document-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=kaigo_parent_money_document_memo";
-const BOOTH_PARENT_MONEY_DOCUMENT_URL = "https://kaigo-okane.booth.pm/items/8410669";
+const BOOTH_PARENT_MONEY_DOCUMENT_URL =
+  "https://kaigo-okane.booth.pm/items/8410669?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-money-document-memo&utm_content=single_template";
+const BOOTH_STARTER_SET_URL =
+  "https://kaigo-okane.booth.pm/items/8340473?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-money-document-memo&utm_content=starter_pack";
+const BOOTH_FULL_PACK_URL =
+  "https://kaigo-okane.booth.pm/items/8383441?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-money-document-memo&utm_content=full_pack";
 
 const purposeLabels: Record<string, string> = {
   hospital: "急な入院に備える",
@@ -274,7 +279,8 @@ export default function KaigoParentMoneyDocumentMemoPage() {
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "parent_money_document_tool", variant: "primary" },
           { label: "通帳・保険確認テンプレートを見る", href: BOOTH_PARENT_MONEY_DOCUMENT_URL, eventName: "booth_click", position: "parent_money_document_template" },
-          { label: "はじめの3点セットを見る", href: "https://kaigo-okane.booth.pm/items/8340473", eventName: "booth_click", position: "starter_set" },
+          { label: "はじめの3点セットを見る", href: BOOTH_STARTER_SET_URL, eventName: "booth_click", position: "starter_set" },
+          { label: "介護テンプレートまとめパックを見る", href: BOOTH_FULL_PACK_URL, eventName: "booth_click", position: "full_pack" },
         ]}
       />
 
