@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-umbrella-rain-gear-memo",
+    name: "高齢親の家の傘・雨具まわりメモメーカー",
+    description:
+      "玄関や傘立て、物置に長年置かれていた傘、折りたたみ傘、雨合羽、長靴、雨具袋などを、雨の日の外出判断、防災判断、修理や処分の判断とは切り分けて、家族内で見返す控えとして整理します。",
+    icon: "U",
+    category: "日常ツール",
+  },
+  {
     slug: "kaigo-parent-home-family-sewing-box-thread-buttons-memo",
     name: "高齢親の家の裁縫箱・糸・ボタン・針山まわりメモメーカー",
     description:
