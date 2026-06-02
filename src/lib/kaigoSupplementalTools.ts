@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-home-family-old-toys-dolls-memo",
+    name: "高齢親の家の古いおもちゃ・人形まわりメモメーカー",
+    description:
+      "ぬいぐるみ、人形、木のおもちゃ、ブリキ玩具、積み木、ボードゲームなど、長年置かれていた古いおもちゃを、価値判断や処分判断とは分けて家族内の呼び方・置き場所として控えます。",
+    icon: "T",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-home-family-wall-decoration-paper-items-memo",
     name: "高齢親の家の壁飾り・紙ものまわりメモメーカー",
     description:
