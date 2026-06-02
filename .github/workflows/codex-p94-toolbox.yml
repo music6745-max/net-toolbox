@@ -1,0 +1,41 @@
+name: Codex apply P94 toolbox monitoring UTM patch
+
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply P94 monitoring UTM patch and remove workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("src/app/tools/kaigo-parent-monitoring-cost-check/page.tsx")
+          text = path.read_text(encoding="utf-8")
+          if "const BOOTH_URL =" not in text:
+              anchor = 'const GUIDE_URL =\n  "https://toshi-navi.jp/guide/living-alone-parent-monitoring-cost-contact-system?utm_source=net-toolbox&utm_medium=referral&utm_campaign=kaigo_parent_monitoring_cost_check";'
+              replacement = anchor + '\nconst BOOTH_URL =\n  "https://kaigo-okane.booth.pm/items/8409959?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-monitoring-cost-check&utm_content=single_template";\nconst FULL_PACK_URL =\n  "https://kaigo-okane.booth.pm/items/8383441?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-parent-monitoring-cost-check&utm_content=full_pack";'
+              text = text.replace(anchor, replacement, 1)
+
+          old_link = '          { label: "見守り連絡表テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8409959", eventName: "booth_click", position: "monitoring_contact_template" },'
+          new_link = '          { label: "見守り連絡表テンプレートを見る", href: BOOTH_URL, eventName: "booth_click", position: "monitoring_contact_template" },\n          { label: "介護フルパックを見る", href: FULL_PACK_URL, eventName: "booth_click", position: "full_pack" },'
+          if old_link in text:
+              text = text.replace(old_link, new_link, 1)
+
+          path.write_text(text, encoding="utf-8")
+          PY
+          git rm .github/workflows/codex-p94-toolbox.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/app/tools/kaigo-parent-monitoring-cost-check/page.tsx
+          git commit -m "feat: add P94 monitoring BOOTH attribution"
+          git push
