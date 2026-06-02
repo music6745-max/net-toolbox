@@ -147,8 +147,18 @@ export default function KaigoCareCertificationMemoPage() {
         description="このツールで確認した項目は、家族会議や地域包括支援センターへの相談前メモに転記できます。更新前の整理や記録用テンプレートもあわせて使えます。"
         links={[
           { label: "親のこと整理ナビで診断する", href: KAIGO_NAVI_URL, eventName: "kaigo_navi_click", position: "certification_tool", variant: "primary" },
-          { label: "介護認定申請前テンプレートを見る", href: "https://kaigo-okane.booth.pm/items/8407555", eventName: "booth_click", position: "certification_prep" },
-          { label: "介護はじめの全部まとめを見る", href: "https://kaigo-okane.booth.pm/items/8383441", eventName: "booth_click", position: "full_pack" },
+          {
+            label: "介護認定申請前テンプレートを見る",
+            href: "https://kaigo-okane.booth.pm/items/8407555?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-care-certification-memo&utm_content=single_template",
+            eventName: "booth_click",
+            position: "certification_prep",
+          },
+          {
+            label: "介護はじめの全部まとめを見る",
+            href: "https://kaigo-okane.booth.pm/items/8383441?utm_source=net-toolbox&utm_medium=tool&utm_campaign=kaigo-care-certification-memo&utm_content=full_pack",
+            eventName: "booth_click",
+            position: "full_pack",
+          },
         ]}
       />
 
