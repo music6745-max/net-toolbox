@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: master
           fetch-depth: 0
       - name: Apply patch and commit
         shell: bash
@@ -28,7 +29,7 @@ jobs:
             echo "Patch file not present; waiting for trigger commit."
             exit 0
           fi
-          git apply --whitespace=nowarn "$PATCH"
+          git apply --whitespace=nowarn --ignore-space-change --ignore-whitespace "$PATCH"
           rm -f "$PATCH" "$WORKFLOW"
           git config user.name "codex-automation"
           git config user.email "codex-automation@users.noreply.github.com"
@@ -38,5 +39,5 @@ jobs:
             exit 0
           fi
           git commit -m "feat: add P110 tv radio memo tool"
-          git push
-# codex-trigger: 2026-06-03T00:55:00+09:00
+          git push origin HEAD:master
+# codex-trigger: 2026-06-03T01:03:00+09:00
