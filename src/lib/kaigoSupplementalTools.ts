@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-reading-newspaper-magazine-memo",
+    name: "高齢親の読書・新聞・雑誌メモメーカー",
+    description:
+      "親がよく読む本、新聞、雑誌、好きな作家やテーマ、会話前に見返す話題を、本選びや契約判断とは分けて家族内の控えとして整理します。",
+    icon: "R",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-tv-radio-favorite-programs-memo",
     name: "高齢親のテレビ・ラジオ好きな番組メモメーカー",
     description:
