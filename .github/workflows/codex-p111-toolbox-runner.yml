@@ -1,0 +1,38 @@
+name: Codex P111 Toolbox Runner
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - ".github/codex-p111-toolbox.trigger"
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+      - name: Apply stored P111 patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          awk '
+            /cat > \/tmp\/codex-p111.patch.b64/ {capture=1; next}
+            capture && /^[[:space:]]*PATCH_B64$/ {exit}
+            capture {sub(/^          /, ""); print}
+          ' .github/workflows/codex-p111-toolbox.yml > /tmp/codex-p111.patch.b64
+          test -s /tmp/codex-p111.patch.b64
+          base64 -d /tmp/codex-p111.patch.b64 > /tmp/codex-p111.patch
+          git apply --binary /tmp/codex-p111.patch
+          rm -f .github/workflows/codex-p111-toolbox.yml .github/workflows/codex-p111-toolbox-runner.yml .github/codex-p111-toolbox.trigger
+          git config user.name "codex-automation"
+          git config user.email "codex-automation@users.noreply.github.com"
+          git add -A src/app/tools/kaigo-parent-reading-newspaper-magazine-memo/page.tsx src/lib/kaigoSupplementalTools.ts .github/workflows/codex-p111-toolbox.yml .github/workflows/codex-p111-toolbox-runner.yml .github/codex-p111-toolbox.trigger
+          git commit -m "feat: add P111 reading magazine memo tool"
+          git push
