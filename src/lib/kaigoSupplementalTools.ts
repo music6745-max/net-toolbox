@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-favorite-music-songs-memo",
+    name: "高齢親の好きな音楽・歌メモメーカー",
+    description:
+      "親が好きな曲、歌手、思い出の歌、会話に出る歌を、歌詞転載や契約判断とは分けて家族内の控えとして整理します。",
+    icon: "M",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-reading-newspaper-magazine-memo",
     name: "高齢親の読書・新聞・雑誌メモメーカー",
     description:
