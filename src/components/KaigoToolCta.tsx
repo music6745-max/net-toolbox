@@ -27,15 +27,25 @@ function trackedHref(href: string, toolSlug: string, position: string) {
 }
 
 // 自社出版のKindle電子書籍（販売中のみ）への相互送客。シナジー追及新事業 A-5。
-// 通院・入退院・医療連携系のツールはK04へ、それ以外はK01へ寄せる。
+// 遠距離・見守り系ツールはK05へ、通院・入退院・医療連携系はK04へ、それ以外はK01へ寄せる。
 const KINDLE_MEDICAL = "B0GXH1FSX1"; // K04 親の通院・入退院 情報整理ノート
 const KINDLE_GENERAL = "B0H3R2S5C9"; // K01 親の介護とお金 はじめの一歩
+const KINDLE_DISTANCE = "B0H3Y4CVHY"; // K05 遠距離介護の段取りノート
 const MEDICAL_SLUG = /hospital|discharge|clinic|doctor|pharmacy|medicine|medical|certification|care-manager|short-stay|day-service|fall|meal-water-weight/;
+const DISTANCE_SLUG = /distance-care|monitoring/;
 
 function kindleHref(toolSlug: string) {
-  const asin = MEDICAL_SLUG.test(toolSlug) ? KINDLE_MEDICAL : KINDLE_GENERAL;
+  const asin = DISTANCE_SLUG.test(toolSlug)
+    ? KINDLE_DISTANCE
+    : MEDICAL_SLUG.test(toolSlug)
+      ? KINDLE_MEDICAL
+      : KINDLE_GENERAL;
   const label =
-    asin === KINDLE_MEDICAL ? "Kindle版『親の通院・入退院 情報整理ノート』" : "Kindle版『親の介護とお金 はじめの一歩』";
+    asin === KINDLE_DISTANCE
+      ? "Kindle版『遠距離介護の段取りノート』"
+      : asin === KINDLE_MEDICAL
+        ? "Kindle版『親の通院・入退院 情報整理ノート』"
+        : "Kindle版『親の介護とお金 はじめの一歩』";
   const href = `https://www.amazon.co.jp/dp/${asin}?utm_source=net-toolbox&utm_medium=tool&utm_campaign=${encodeURIComponent(
     toolSlug,
   )}&utm_content=kindle`;
