@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-favorite-food-snacks-drinks-memo",
+    name: "高齢親の好きな食べ物・お菓子・飲み物メモメーカー",
+    description:
+      "親が会話で話していた食べ物、お菓子、飲み物の好みを、食事判断や購入判断とは分けて家族内の控えとして整理します。",
+    icon: "F",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-everyday-personal-items-memo",
     name: "高齢親のいつもの身の回り品・お気に入り小物メモメーカー",
     description:
