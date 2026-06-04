@@ -1,0 +1,53 @@
+name: Codex P118 Toolbox Patch
+
+on:
+  push:
+    paths:
+      - ".codex-triggers/p118-toolbox.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Patch toolbox P118 metadata
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          const path = 'src/lib/kaigoSupplementalTools.ts';
+          const text = fs.readFileSync(path, 'utf8');
+          if (!text.includes('kaigo-parent-people-names-relationship-memo')) {
+            const eol = text.includes('\r\n') ? '\r\n' : '\n';
+            const insertion = [
+              '  {',
+              '    slug: "kaigo-parent-people-names-relationship-memo",',
+              '    name: "高齢親が話す人の呼び方・関係性メモメーカー",',
+              '    description:',
+              '      "親が話す「○○おじさん」「△△ちゃん」などの呼び方を、連絡先管理や正式な続柄確認ではなく家族内で誰の話か見返す控えとして整理します。",',
+              '    icon: "N",',
+              '    category: "日常メモ",',
+              '  },',
+            ].join(eol) + eol;
+            const next = text.replace(/export const kaigoSupplementalTools: Tool\[\] = \[\r?\n/, (match) => match + insertion);
+            if (next === text) throw new Error('Anchor not found in ' + path);
+            fs.writeFileSync(path, next);
+          }
+          NODE
+
+          git config user.name "codex-automation"
+          git config user.email "codex-automation@users.noreply.github.com"
+          git add src/lib/kaigoSupplementalTools.ts
+          git rm -f .github/workflows/codex-p118-toolbox.yml .codex-triggers/p118-toolbox.txt
+          git status --short
+          if ! git diff --cached --quiet; then
+            git commit -m "Connect P118 people relationship tool metadata"
+            git push
+          else
+            echo "No staged changes"
+          fi
