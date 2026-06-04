@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-everyday-personal-items-memo",
+    name: "高齢親のいつもの身の回り品・お気に入り小物メモメーカー",
+    description:
+      "親がふだん使っている湯飲み、座布団、室内履き、帽子、ハンカチなどを、評価や処分判断ではなく家族内で見分ける控えとして整理します。",
+    icon: "I",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-favorite-music-songs-memo",
     name: "高齢親の好きな音楽・歌メモメーカー",
     description:
