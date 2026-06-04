@@ -1,0 +1,91 @@
+name: Codex apply Kindle recent CTA
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply Kindle CTA patch
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          const workflowPath = '.github/workflows/codex-apply-kindle-recent-cta.yml';
+          const files = [
+            {
+              path: 'src/app/tools/kaigo-parent-favorite-food-snacks-drinks-memo/page.tsx',
+              slug: 'kaigo-parent-favorite-food-snacks-drinks-memo',
+              marker: 'const NOTE_URL = "https://note.com/mild_quail6092/n/n3d9e371ab5ff";',
+            },
+            {
+              path: 'src/app/tools/kaigo-parent-annual-events-seasonal-prep-memo/page.tsx',
+              slug: 'kaigo-parent-annual-events-seasonal-prep-memo',
+              marker: 'const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";',
+            },
+            {
+              path: 'src/app/tools/kaigo-parent-memory-familiar-places-memo/page.tsx',
+              slug: 'kaigo-parent-memory-familiar-places-memo',
+              marker: 'const NOTE_URL = "https://note.com/mild_quail6092/n/nad760f55c4ec";',
+            },
+            {
+              path: 'src/app/tools/kaigo-parent-people-names-relationship-memo/page.tsx',
+              slug: 'kaigo-parent-people-names-relationship-memo',
+              marker: 'const NOTE_URL = "https://note.com/mild_quail6092/n/n0d18a8165daf";',
+            },
+          ];
+
+          const importNeedle = 'import { useMemo, useState } from "react";\n';
+          const importBlock = 'import { useMemo, useState } from "react";\n\nimport { getKaigoKindleLink } from "@/components/KaigoToolCta";\nimport { trackEvent } from "@/lib/tracking";\n';
+          const fullPackAnchor = '            <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>';
+          const linkBlock = `            <a\n              className="block font-semibold text-blue-700 hover:underline"\n              href={KINDLE_LINK.href}\n              target="_blank"\n              rel="noopener noreferrer"\n              onClick={trackKindleClick}\n            >\n              {KINDLE_LINK.label}\n            </a>\n`;
+
+          for (const item of files) {
+            let source = fs.readFileSync(item.path, 'utf8');
+            if (!source.includes('getKaigoKindleLink')) {
+              source = source.replace(importNeedle, importBlock);
+            }
+            if (!source.includes('const TOOL_SLUG =')) {
+              source = source.replace('const KAIGO_NAVI_URL =', `const TOOL_SLUG = "${item.slug}";\nconst KAIGO_NAVI_URL =`);
+            }
+            if (!source.includes('const KINDLE_LINK =')) {
+              source = source.replace(
+                item.marker,
+                `${item.marker}\nconst KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);\n\nfunction trackKindleClick() {\n  trackEvent(KINDLE_LINK.eventName, {\n    page: TOOL_SLUG,\n    position: KINDLE_LINK.position,\n    url: KINDLE_LINK.href.slice(0, 200),\n  });\n}`,
+              );
+            }
+            if (!source.includes('href={KINDLE_LINK.href}')) {
+              source = source.replace(fullPackAnchor, `${linkBlock}${fullPackAnchor}`);
+            }
+            fs.writeFileSync(item.path, source, 'utf8');
+          }
+
+          fs.rmSync(workflowPath, { force: true });
+          NODE
+      - name: Commit Kindle CTA patch
+        shell: bash
+        run: |
+          git config user.name "codex-automation"
+          git config user.email "codex-automation@users.noreply.github.com"
+          git add src/app/tools/kaigo-parent-favorite-food-snacks-drinks-memo/page.tsx \
+            src/app/tools/kaigo-parent-annual-events-seasonal-prep-memo/page.tsx \
+            src/app/tools/kaigo-parent-memory-familiar-places-memo/page.tsx \
+            src/app/tools/kaigo-parent-people-names-relationship-memo/page.tsx \
+            .github/workflows/codex-apply-kindle-recent-cta.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Add Kindle CTAs to recent kaigo tools"
+            git push
+          fi
