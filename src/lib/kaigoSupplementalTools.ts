@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-memory-familiar-places-memo",
+    name: "高齢親が話す思い出の場所・なじみの場所メモメーカー",
+    description:
+      "昔住んでいた地域、よく通った店、家族で出かけた場所など、親が会話で話してくれた場所を、住所特定や旅行計画ではなく家族内の思い出メモとして整理します。",
+    icon: "P",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-annual-events-seasonal-prep-memo",
     name: "高齢親の年中行事・季節の段取りメモメーカー",
     description:
