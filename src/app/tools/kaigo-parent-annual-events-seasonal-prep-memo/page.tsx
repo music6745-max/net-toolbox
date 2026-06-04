@@ -2,12 +2,25 @@
 
 import { useMemo, useState } from "react";
 
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
+import { trackEvent } from "@/lib/tracking";
+
+const TOOL_SLUG = "kaigo-parent-annual-events-seasonal-prep-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_annual_events_seasonal_prep";
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/parent-annual-events-seasonal-prep-record?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_annual_events_seasonal_prep";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383170";
 const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
+
+function trackKindleClick() {
+  trackEvent(KINDLE_LINK.eventName, {
+    page: TOOL_SLUG,
+    position: KINDLE_LINK.position,
+    url: KINDLE_LINK.href.slice(0, 200),
+  });
+}
 
 type FieldKey =
   | "targetFamily"
@@ -208,6 +221,15 @@ export default function KaigoParentAnnualEventsSeasonalPrepMemoPage() {
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               年中行事・季節の段取りメモテンプレート集を見る
+            </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackKindleClick}
+            >
+              {KINDLE_LINK.label}
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
               介護まるごと総合パックを見る

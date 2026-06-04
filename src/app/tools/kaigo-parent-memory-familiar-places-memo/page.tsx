@@ -2,6 +2,10 @@
 
 import { useMemo, useState } from "react";
 
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
+import { trackEvent } from "@/lib/tracking";
+
+const TOOL_SLUG = "kaigo-parent-memory-familiar-places-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_memory_familiar_places";
 const GUIDE_URL =
@@ -9,6 +13,15 @@ const GUIDE_URL =
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383171";
 const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
 const NOTE_URL = "https://note.com/mild_quail6092/n/nad760f55c4ec";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
+
+function trackKindleClick() {
+  trackEvent(KINDLE_LINK.eventName, {
+    page: TOOL_SLUG,
+    position: KINDLE_LINK.position,
+    url: KINDLE_LINK.href.slice(0, 200),
+  });
+}
 
 type FieldKey =
   | "targetPerson"
@@ -200,6 +213,15 @@ export default function KaigoParentMemoryFamiliarPlacesMemoPage() {
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={NOTE_URL}>
               note記事を見る
+            </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackKindleClick}
+            >
+              {KINDLE_LINK.label}
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={FULL_PACK_URL}>
               介護まるごと総合パックを見る
