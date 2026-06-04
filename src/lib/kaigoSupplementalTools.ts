@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-annual-events-seasonal-prep-memo",
+    name: "高齢親の年中行事・季節の段取りメモメーカー",
+    description:
+      "お正月、節分、節句、お盆前後、お月見、年越しなど、親の家で毎年していた流れを、正式な作法や宗派・地域差の判断ではなく家族内の段取りメモとして整理します。",
+    icon: "Y",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-favorite-food-snacks-drinks-memo",
     name: "高齢親の好きな食べ物・お菓子・飲み物メモメーカー",
     description:
