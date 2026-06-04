@@ -26,6 +26,22 @@ function trackedHref(href: string, toolSlug: string, position: string) {
   )}&utm_content=${boothContent(position)}`;
 }
 
+// 自社出版のKindle電子書籍（販売中のみ）への相互送客。シナジー追及新事業 A-5。
+// 通院・入退院・医療連携系のツールはK04へ、それ以外はK01へ寄せる。
+const KINDLE_MEDICAL = "B0GXH1FSX1"; // K04 親の通院・入退院 情報整理ノート
+const KINDLE_GENERAL = "B0H3R2S5C9"; // K01 親の介護とお金 はじめの一歩
+const MEDICAL_SLUG = /hospital|discharge|clinic|doctor|pharmacy|medicine|medical|certification|care-manager|short-stay|day-service|fall|meal-water-weight/;
+
+function kindleHref(toolSlug: string) {
+  const asin = MEDICAL_SLUG.test(toolSlug) ? KINDLE_MEDICAL : KINDLE_GENERAL;
+  const label =
+    asin === KINDLE_MEDICAL ? "Kindle版『親の通院・入退院 情報整理ノート』" : "Kindle版『親の介護とお金 はじめの一歩』";
+  const href = `https://www.amazon.co.jp/dp/${asin}?utm_source=net-toolbox&utm_medium=tool&utm_campaign=${encodeURIComponent(
+    toolSlug,
+  )}&utm_content=kindle`;
+  return { href, label };
+}
+
 export function KaigoToolCta({
   toolSlug,
   title,
@@ -41,7 +57,7 @@ export function KaigoToolCta({
     ...link,
     href: trackedHref(link.href, toolSlug, link.position),
   }));
-  const ctaLinks =
+  const withFullPack =
     toolSlug.startsWith("kaigo-") && !trackedLinks.some((link) => link.href.includes("/items/8383441"))
       ? [
           ...trackedLinks,
@@ -53,6 +69,17 @@ export function KaigoToolCta({
           },
         ]
       : trackedLinks;
+  const ctaLinks =
+    toolSlug.startsWith("kaigo-") && !withFullPack.some((link) => link.href.includes("amazon.co.jp"))
+      ? [
+          ...withFullPack,
+          {
+            ...kindleHref(toolSlug),
+            eventName: "kindle_click",
+            position: "kindle_cross_referral",
+          },
+        ]
+      : withFullPack;
 
   return (
     <section className="mt-8 rounded-xl border border-primary/20 bg-primary/5 p-5">
