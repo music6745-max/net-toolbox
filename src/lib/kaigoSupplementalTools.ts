@@ -2,6 +2,14 @@ import type { Tool } from "./tools";
 
 export const kaigoSupplementalTools: Tool[] = [
   {
+    slug: "kaigo-parent-people-names-relationship-memo",
+    name: "高齢親が話す人の呼び方・関係性メモメーカー",
+    description:
+      "親が話す「○○おじさん」「△△ちゃん」などの呼び方を、連絡先管理や正式な続柄確認ではなく家族内で誰の話か見返す控えとして整理します。",
+    icon: "N",
+    category: "日常メモ",
+  },
+  {
     slug: "kaigo-parent-memory-familiar-places-memo",
     name: "高齢親が話す思い出の場所・なじみの場所メモメーカー",
     description:
