@@ -1,12 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
 
+const TOOL_SLUG = "kaigo-caregiver-rest-burden-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=caregiver_rest_burden";
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/caregiver-rest-schedule-burden-visualization?utm_source=net-toolbox&utm_medium=referral&utm_campaign=caregiver_rest_burden";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8382978";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
 
 export default function KaigoCaregiverRestBurdenMemoPage() {
   const [weekStart, setWeekStart] = useState("");
@@ -147,6 +150,14 @@ export default function KaigoCaregiverRestBurdenMemoPage() {
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               介護者自身の休息・予定・負担見える化テンプレート集を見る
+            </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {KINDLE_LINK.label}
             </a>
           </div>
         </section>

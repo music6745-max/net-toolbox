@@ -2,7 +2,7 @@
 
 import { trackEvent } from "@/lib/tracking";
 
-type CtaLink = {
+export type CtaLink = {
   label: string;
   href: string;
   eventName: string;
@@ -52,6 +52,16 @@ function kindleHref(toolSlug: string) {
   return { href, label };
 }
 
+export function getKaigoKindleLink(toolSlug: string): CtaLink {
+  const { href, label } = kindleHref(toolSlug);
+  return {
+    label,
+    href,
+    eventName: "kindle_click",
+    position: "kindle_cross_referral",
+  };
+}
+
 export function KaigoToolCta({
   toolSlug,
   title,
@@ -83,11 +93,7 @@ export function KaigoToolCta({
     toolSlug.startsWith("kaigo-") && !withFullPack.some((link) => link.href.includes("amazon.co.jp"))
       ? [
           ...withFullPack,
-          {
-            ...kindleHref(toolSlug),
-            eventName: "kindle_click",
-            position: "kindle_cross_referral",
-          },
+          getKaigoKindleLink(toolSlug),
         ]
       : withFullPack;
 

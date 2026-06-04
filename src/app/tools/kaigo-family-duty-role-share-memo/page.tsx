@@ -1,13 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
 
+const TOOL_SLUG = "kaigo-family-duty-role-share-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=family_duty_role_share_memo";
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/kaigo-family-duty-role-share-memo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=family_duty_role_share_memo";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383027";
 const PACK_URL = "https://kaigo-okane.booth.pm/items/8383440";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
 
 export default function KaigoFamilyDutyRoleShareMemoPage() {
   const [checkDate, setCheckDate] = useState("");
@@ -150,6 +153,14 @@ export default function KaigoFamilyDutyRoleShareMemoPage() {
             <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
               介護はじめの87商品まとめセットを見る
             </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {KINDLE_LINK.label}
+            </a>
           </div>
         </section>
       </div>
@@ -187,4 +198,3 @@ function MemoField({
     </label>
   );
 }
-

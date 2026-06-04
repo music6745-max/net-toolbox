@@ -1,13 +1,16 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
 
+const TOOL_SLUG = "kaigo-family-handover-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=family_handover_memo";
 const GUIDE_URL =
   "https://toshi-navi.jp/guide/kaigo-family-handover-memo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=family_handover_memo";
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383018";
 const PACK_URL = "https://kaigo-okane.booth.pm/items/8383305";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
 
 export default function KaigoFamilyHandoverMemoPage() {
   const [target, setTarget] = useState("");
@@ -161,6 +164,14 @@ export default function KaigoFamilyHandoverMemoPage() {
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
               親の介護はじめの37商品まとめセットを見る
+            </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {KINDLE_LINK.label}
             </a>
           </div>
         </section>
