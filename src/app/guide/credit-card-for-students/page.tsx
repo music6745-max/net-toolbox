@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】学生向けクレジットカードおすすめ5選｜18歳から作れる1枚目",
@@ -96,12 +95,6 @@ export default function Page() {
         </div>
       </section>
 
-      <ComparisonTableCTA services={[
-        { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM", highlight: "Web・AI", price: "月額制", badge: "おすすめ" },
-        { name: "Aidemy", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM", highlight: "AI特化", price: "月額制" },
-        { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM", highlight: "転職保証", price: "月額制" },
-      ]} />
-
       <section className="mt-10">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -112,6 +105,14 @@ export default function Page() {
           <Link href="/guide/credit-card-for-gold-beginner" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
             <div className="text-xs text-muted mb-1">次の一枚</div>
             <div className="font-bold text-sm">初めてのゴールドカード</div>
+          </Link>
+          <Link href="/guide/bank-account-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">口座</div>
+            <div className="font-bold text-sm">ネット銀行口座比較</div>
+          </Link>
+          <Link href="/guide/qr-pay-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">決済</div>
+            <div className="font-bold text-sm">QRコード決済比較</div>
           </Link>
         </div>
       </section>

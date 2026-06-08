@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】一人暮らしにおすすめのWiFi5選｜工事不要・契約期間なし",
@@ -96,12 +95,6 @@ export default function Page() {
         </div>
       </section>
 
-      <ComparisonTableCTA services={[
-        { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM", highlight: "Web・AI", price: "月額制", badge: "おすすめ" },
-        { name: "Aidemy", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM", highlight: "AI特化", price: "月額制" },
-        { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM", highlight: "転職保証", price: "月額制" },
-      ]} />
-
       <section className="mt-10">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -112,6 +105,14 @@ export default function Page() {
           <Link href="/guide/mobile-router-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
             <div className="text-xs text-muted mb-1">モバイル</div>
             <div className="font-bold text-sm">モバイルルーター比較</div>
+          </Link>
+          <Link href="/guide/budget-sim-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">スマホ回線</div>
+            <div className="font-bold text-sm">格安SIM比較</div>
+          </Link>
+          <Link href="/guide/smartphone-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:border-primary transition-colors">
+            <div className="text-xs text-muted mb-1">端末</div>
+            <div className="font-bold text-sm">スマートフォン比較</div>
           </Link>
         </div>
       </section>

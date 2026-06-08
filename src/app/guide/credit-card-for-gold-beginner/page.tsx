@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】初めて作るゴールドカードおすすめ5選｜年会費・特典で比較",
@@ -125,17 +124,6 @@ export default function CreditCardForGoldBeginnerPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">スキルアップで年収UPも視野に</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM", highlight: "Web・AI", price: "月額制", badge: "おすすめ" },
-            { name: "Aidemy", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM", highlight: "AI特化", price: "月額制" },
-            { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM", highlight: "転職保証", price: "月額制" },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -145,6 +133,14 @@ export default function CreditCardForGoldBeginnerPage() {
           <Link href="/guide/credit-card-platinum-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">プラチナカード比較</span>
             <p className="text-xs text-muted mt-1">次のステップに</p>
+          </Link>
+          <Link href="/guide/credit-card-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">クレジットカードランキング</span>
+            <p className="text-xs text-muted mt-1">人気カードをまとめて確認</p>
+          </Link>
+          <Link href="/guide/credit-card-for-students" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">学生向けカード比較</span>
+            <p className="text-xs text-muted mt-1">家族や若年層の1枚目選び</p>
           </Link>
         </div>
       </section>

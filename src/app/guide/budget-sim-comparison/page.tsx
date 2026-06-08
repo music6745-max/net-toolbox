@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】格安SIM(MVNO)おすすめ10選｜料金・速度・キャンペーンを徹底比較",
@@ -127,17 +126,6 @@ export default function BudgetSimComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">スキルアップに役立つサービス</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM", highlight: "Web・AI", price: "月額制", badge: "おすすめ" },
-            { name: "Aidemy", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM", highlight: "AI特化", price: "月額制" },
-            { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM", highlight: "転職保証", price: "月額制" },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/wifi-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -147,6 +135,14 @@ export default function BudgetSimComparisonPage() {
           <Link href="/guide/smartphone-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">スマートフォン比較</span>
             <p className="text-xs text-muted mt-1">端末選びのポイント</p>
+          </Link>
+          <Link href="/guide/esim-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">eSIM比較</span>
+            <p className="text-xs text-muted mt-1">即日開通できる回線選び</p>
+          </Link>
+          <Link href="/guide/mobile-router-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">モバイルルーター比較</span>
+            <p className="text-xs text-muted mt-1">外出先の通信費も見直す</p>
           </Link>
         </div>
       </section>

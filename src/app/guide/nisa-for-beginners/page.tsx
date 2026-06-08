@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】NISA初心者におすすめの始め方5ステップ｜証券会社選びから運用まで",
@@ -138,20 +137,9 @@ export default function NisaForBeginnersPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            NISAは始めるのが早ければ早いほど複利の恩恵を受けられます。「完璧を目指して始められない」より「とりあえず月5,000円で始めて慣れる」方が正解。SBI証券か楽天証券でオルカンを毎月自動積立、あとは10年20年放置でOK。同時にプログラミングなどのスキルアップで収入源を増やせば、積立額を増やして資産形成スピードを加速できます。
+            NISAは始めるのが早ければ早いほど複利の恩恵を受けられます。「完璧を目指して始められない」より「とりあえず月5,000円で始めて慣れる」方が正解。SBI証券か楽天証券でオルカンを毎月自動積立、あとは10年20年放置でOK。まずは家計の固定費と生活防衛資金を整理し、無理のない積立額を続けることが大切です。
           </p>
         </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">投資額を増やすための副業スキルアップ</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+APTO2+35VG+5YJRM", highlight: "Web・AI", price: "月額制", badge: "おすすめ" },
-            { name: "Aidemy", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+A4E2A+4HHM+5YJRM", highlight: "AI特化", price: "月額制" },
-            { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXO+4RHMA+4D4Y+5YJRM", highlight: "転職保証", price: "月額制" },
-          ]}
-        />
       </section>
 
       <section className="mb-10">
@@ -171,6 +159,14 @@ export default function NisaForBeginnersPage() {
           <Link href="/guide/ideco-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">iDeCo比較</span>
             <p className="text-xs text-muted mt-1">NISAと併用でさらに節税</p>
+          </Link>
+          <Link href="/guide/online-broker-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ネット証券比較</span>
+            <p className="text-xs text-muted mt-1">口座選びの全体像</p>
+          </Link>
+          <Link href="/guide/investment-app-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">投資アプリ比較</span>
+            <p className="text-xs text-muted mt-1">運用状況の見える化</p>
           </Link>
         </div>
       </section>
