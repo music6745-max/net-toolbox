@@ -20,8 +20,8 @@ jobs:
       - name: Apply deterministic cleanup and verify tree
         run: |
           set -euo pipefail
-          expected_base="3136207371e23c18ff48bc57a7595117b90b21e9"
-          expected_tree="e76dc07a10432f30f8e1b8a2d56fced39b19d3d8"
+          expected_base="7fd59aa00369dd8746209b16476c4d7e7921702e"
+          expected_tree="412416ce98433b8f7c5c621d05e618481862e475"
           actual_base="$(git rev-parse HEAD^)"
           if [ "$actual_base" != "$expected_base" ]; then
             echo "Unexpected workflow parent: $actual_base"
