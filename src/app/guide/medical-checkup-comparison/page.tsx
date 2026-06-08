@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】人間ドック・健康診断比較おすすめ5選｜料金・検査項目・受診方法を徹底解説",
@@ -121,7 +120,7 @@ export default function MedicalCheckupComparisonPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">賢い受診の進め方</h2>
         <p className="text-muted leading-relaxed mb-4">
-          まず加入している健康保険組合のマイページで補助額と提携施設リストを確認しましょう。協会けんぽなら生活習慣病予防健診が年1回約7,000円で受けられ、プラス数千円で乳がん・子宮がん検診も追加できます。会社員は人間ドック休暇制度を活用し、自営業・副業の方は医療費や診断結果をクラウド会計ソフトの添付機能で一元管理しておくと翌年の申告も楽です。
+          まず加入している健康保険組合のマイページで補助額と提携施設リストを確認しましょう。協会けんぽなら生活習慣病予防健診が年1回約7,000円で受けられ、プラス数千円で乳がん・子宮がん検診も追加できます。会社員は人間ドック休暇制度を活用し、自営業・副業の方は医療費や診断結果を家計簿アプリやメモで一元管理しておくと翌年の申告も楽です。
         </p>
       </section>
 
@@ -147,30 +146,25 @@ export default function MedicalCheckupComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">医療費・家計管理に役立つソフト</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "医療費控除の集計もラクラク",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "レシート撮影で自動仕訳",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "家計と事業の同時管理",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">健診後にあわせて確認したいガイド・ツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/guide/clinic-online-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンライン診療比較</span>
+            <p className="text-xs text-muted mt-1">検査後のフォローアップに</p>
+          </Link>
+          <Link href="/guide/insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ネット保険比較</span>
+            <p className="text-xs text-muted mt-1">医療保険の見直し</p>
+          </Link>
+          <Link href="/tools/blood-pressure" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">血圧チェックツール</span>
+            <p className="text-xs text-muted mt-1">健診結果の血圧目安を確認</p>
+          </Link>
+          <Link href="/tools/bmi-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">BMI計算ツール</span>
+            <p className="text-xs text-muted mt-1">体重管理の目安をすぐに計算</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">
