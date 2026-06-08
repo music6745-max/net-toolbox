@@ -44,7 +44,7 @@ function ArticleJsonLd() {
 }
 
 const RAKUTEN_CARD_A8_URL =
-  "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y";
+  "https://www.rakuten-card.co.jp/";
 
 const cardServices = [
   {

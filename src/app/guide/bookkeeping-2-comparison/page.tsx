@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】MBA・ビジネススクール比較5選｜国内・オンラインで学ぶ経営学",
@@ -86,16 +85,6 @@ export default function MbaComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">転職・キャリアアップ</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ビズリーチ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "ハイクラス転職", price: "登録無料", badge: "ハイクラス" },
-            { name: "doda", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "総合エージェント", price: "登録無料" },
-            { name: "リクルートエージェント", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "求人数最大", price: "登録無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

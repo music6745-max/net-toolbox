@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】夏の電気代節約ガイド｜エアコンと電力プランの見直し",
@@ -160,19 +159,6 @@ export default function SummerElectricitySavingPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "光熱費も自動で家計簿化",
-              price: "月額制",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

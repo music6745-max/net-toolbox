@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】火災保険一括見積もり比較5選｜安く・補償充実の選び方を解説",
@@ -98,16 +97,6 @@ export default function FireInsuranceComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料一括見積もりサービス</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "保険スクエアbang!", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "最大15社一括", price: "完全無料", badge: "人気" },
-            { name: "住宅本舗", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "住宅取得者向け", price: "完全無料" },
-            { name: "インズウェブ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "SBI系の老舗", price: "完全無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

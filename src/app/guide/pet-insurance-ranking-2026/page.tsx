@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ペット保険おすすめランキングTOP10｜犬猫の医療費に備える",
@@ -65,16 +64,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料資料請求</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "アニコム損保", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界最大手", price: "資料請求無料", badge: "人気" },
-            { name: "アイペット損保", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "業界2位", price: "資料請求無料" },
-            { name: "FPC", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "業界最安級", price: "資料請求無料" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

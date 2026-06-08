@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】パーソナルダイエットプログラム比較5選｜料金・効果・サポートを徹底解説",
@@ -98,16 +97,6 @@ export default function DietProgramComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料体験・カウンセリングを予約する</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "RIZAP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "結果にコミット", price: "無料カウンセリング", badge: "最大手" },
-            { name: "24/7Workout", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "全額返金保証付き", price: "無料カウンセリング" },
-            { name: "chocoZAP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "月額3,278円のコスパ最強", price: "月額制" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

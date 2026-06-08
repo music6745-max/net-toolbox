@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】結婚相談所おすすめ比較5選｜料金・成婚率・サポートを徹底解説",
@@ -91,16 +90,6 @@ export default function MatchmakingComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料カウンセリング予約</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ゼクシィ縁結びエージェント", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "成婚料0円", price: "月額制", badge: "コスパ" },
-            { name: "パートナーエージェント", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "成果重視のサポート", price: "月額制" },
-            { name: "サンマリエ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "創業40年の老舗", price: "月額制" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

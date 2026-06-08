@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】注文住宅ハウスメーカー比較5選｜価格・性能・保証を徹底解説",
@@ -98,16 +97,6 @@ export default function HomeBuilderComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料一括資料請求サービス</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "タウンライフ家づくり", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "間取りプランも無料作成", price: "完全無料", badge: "人気" },
-            { name: "LIFULL HOME'S 注文住宅", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "国内最大級の登録社数", price: "完全無料" },
-            { name: "持ち家計画", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "厳選ハウスメーカー紹介", price: "完全無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

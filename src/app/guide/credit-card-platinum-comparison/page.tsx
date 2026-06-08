@@ -132,7 +132,7 @@ export default function Page() {
         <p className="text-sm text-muted mb-3">まずは年会費無料カードから選びたい方には、還元率重視の5枚を徹底比較した記事もあります。</p>
         <div className="flex flex-wrap gap-3">
           <Link href="/guide/credit-card-comparison" className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors">クレジットカード徹底比較</Link>
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y" target="_blank" rel="nofollow sponsored noopener noreferrer" className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors">楽天カード公式</a>
+          <a href="/guide/credit-card-comparison" target="_blank" rel="nofollow sponsored noopener noreferrer" className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors">楽天カード公式</a>
         </div>
       </section>
 

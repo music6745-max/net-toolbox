@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】定年退職前後のお金管理ガイド｜年金・退職金・健康保険を徹底解説",
@@ -135,25 +134,6 @@ export default function RetirementPreparationGuidePage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">退職後の家計管理におすすめ</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告の定番ソフト",
-              price: "年額制",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "年金・退職所得の申告も簡単",
-              price: "月額制",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

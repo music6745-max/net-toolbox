@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ポケットWiFi・クラウドWiFiおすすめランキングTOP10",
@@ -65,16 +64,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">WiFi申し込みキャンペーン</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "楽天モバイル", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "データ無制限", price: "月3,278円", badge: "人気" },
-            { name: "Broad WiMAX", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "キャンペーン豊富", price: "月2,999円〜" },
-            { name: "MUGEN WiFi", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "クラウド型100GB", price: "月3,438円〜" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

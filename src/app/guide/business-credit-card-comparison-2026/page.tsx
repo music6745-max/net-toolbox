@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】法人・個人事業主向けビジネスクレジットカードおすすめ比較10選",
@@ -20,7 +19,7 @@ const faqItems = [
 
 const cards = [
   { name: "三井住友カード ビジネスオーナーズ", rank: 1, url: "https://www.smbc-card.com/nyukai/affiliate/business/bo_lp.jsp", type: "年会費永年無料", highlight: "決算書不要・個人事業主OK", points: ["年会費永年無料（一般版）", "登記簿謄本・決算書不要、本人確認書類のみで申込可", "追加カード年会費永年無料（18枚まで）", "Amazon Business 利用で1.5%還元（ゴールド版）"], bestFor: "開業直後の個人事業主・1人法人に最適。" },
-  { name: "freee カード Unlimited", rank: 2, url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", type: "会計連携最強", highlight: "限度額最大2億円・AI審査で即日発行", points: ["freee会計と連動した自動仕訳", "利用限度額はAIが動的に算出（最大2億円）", "年会費無料、海外決済手数料も無料", "決算書・登記簿不要"], bestFor: "freee会計ユーザー、経理効率を最大化したい法人。" },
+  { name: "freee カード Unlimited", rank: 2, url: "https://www.freee.co.jp/card/corporate/", type: "会計連携最強", highlight: "限度額最大2億円・AI審査で即日発行", points: ["freee会計と連動した自動仕訳", "利用限度額はAIが動的に算出（最大2億円）", "年会費無料、海外決済手数料も無料", "決算書・登記簿不要"], bestFor: "freee会計ユーザー、経理効率を最大化したい法人。" },
   { name: "楽天ビジネスカード", rank: 3, url: "https://www.rakuten-card.co.jp/card/rakuten-business-card/", type: "楽天経済圏", highlight: "楽天プレミアムカード必須・空港ラウンジ・1%還元", points: ["楽天プレミアム（年11,000円）の追加カードとして発行", "プライオリティパス無料、世界の空港ラウンジ使い放題", "楽天市場の仕入れで最大5%還元", "楽天市場の出店者と相性最高"], bestFor: "楽天市場で仕入・販売している事業者、海外出張が多い経営者。" },
   { name: "JCB CARD Biz", rank: 4, url: "https://www.jcb.co.jp/ordercard/business/biz/", type: "JCBプロパー", highlight: "本人確認書類のみで申込・JCBの信頼感", points: ["登記簿謄本・決算書不要、個人の本人確認書類のみ", "JCBプロパーの信頼性で対法人取引で有利", "年会費1,375円（初年度無料）", "弥生会計・freee・マネフォ 3大会計ソフトと連携"], bestFor: "大手法人との取引が多い経営者、JCBブランドを好む方。" },
   { name: "UPSIDER", rank: 5, url: "https://up-sider.com/lp/cards", type: "スタートアップ向け", highlight: "与信枠最大10億円・従業員カード無制限", points: ["設立1日目のスタートアップでも与信枠発行可能", "使い切り型仮想カードを従業員ごとに無制限発行", "年会費無料、ポイント還元率1.0〜1.5%", "クラウド会計との仕訳連携＋承認フロー機能"], bestFor: "急成長スタートアップ・従業員が多い企業。" },
@@ -114,16 +113,6 @@ export default function BusinessCreditCardPage() {
         </div>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-bold mb-4">まず1枚目は年会費無料から</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "三井住友ビジネスオーナーズ", url: "https://www.smbc-card.com/nyukai/affiliate/business/bo_lp.jsp", highlight: "年会費永年無料、決算書不要、個人事業主OK", price: "年会費無料", badge: "開業直後向き" },
-            { name: "freeeカード Unlimited", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "AI限度額、freee会計連携で経理7〜8割削減", price: "年会費無料", badge: "会計連携最強" },
-            { name: "UPSIDER", url: "https://up-sider.com/lp/cards", highlight: "スタートアップ特化、与信枠最大10億円", price: "年会費無料", badge: "急成長企業向き" },
-          ]}
-        />
-      </section>
 
       <section className="mt-12 mb-8">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>

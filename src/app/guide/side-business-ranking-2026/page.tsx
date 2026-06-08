@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】おすすめ副業ランキングTOP10｜初心者でも月5万円を目指せる",
@@ -87,18 +86,6 @@ export default function SideBusinessRankingPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">副業を始めるための必須ツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1", highlight: "国内シェアNo.1の老舗サーバー", price: "月額990円〜", badge: "ブログ定番" },
-            { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "ブログ開設に最速", price: "月額1,452円〜" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "確定申告に必須", price: "月額制" },
-            { name: "クラウドワークス", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "国内最大の案件サイト", price: "無料登録" },
-            { name: "マクロミル", url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+8XJMI+2WL0+CLYLD", highlight: "スキマ時間のアンケート副業", price: "無料登録", badge: "即金性◎" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】オンライン英会話おすすめランキングTOP10｜料金・講師数・日本語サポート",
@@ -65,16 +64,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料体験レッスン予約</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ネイティブキャンプ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "毎日無制限", price: "月6,480円", badge: "定番" },
-            { name: "QQ English", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "カランメソッド", price: "月2,980円〜" },
-            { name: "AQUES", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "ハイブリッド指導", price: "月額制" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】フリーランス独立スタートアップ完全バンドル｜必要な10サービス",
@@ -39,7 +38,7 @@ const essentials = [
     name: "会計ソフト（freee会計）",
     category: "会計・経理",
     price: "月1,180円〜（30日無料）",
-    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+    url: "/guide/accounting-software-comparison",
     highlight: "開業届・青色申告承認申請を無料で自動作成",
     badge: "必須",
     reasons: [
@@ -286,16 +285,6 @@ export default function FreelanceStartupBundlePage() {
         </div>
       </section>
 
-      <section className="mb-8">
-        <h2 className="text-xl font-bold mb-4">独立最初の一歩はここから</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "開業届・青色申告承認申請を無料作成、30日無料", price: "月1,180円〜", badge: "必須" },
-            { name: "三井住友カード ビジネスオーナーズ", url: "https://www.smbc-card.com/nyukai/affiliate/business/bo_lp.jsp", highlight: "年会費永年無料、個人事業主でも申込OK", price: "年会費無料", badge: "必須" },
-            { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1B19KI+CO4+6HES1", highlight: "独自ドメイン永年無料、10分でWordPress公開", price: "月693円〜", badge: "必須" },
-          ]}
-        />
-      </section>
 
       <section className="mt-12 mb-8">
         <h2 className="text-xl font-bold mb-4">関連ガイド</h2>

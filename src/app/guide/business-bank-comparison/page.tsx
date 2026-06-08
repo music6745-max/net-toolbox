@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ビジネス銀行口座比較おすすめ5選｜振込手数料・APIゴ連携・開設スピードを徹底解説",
@@ -149,32 +148,6 @@ export default function BusinessBankComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">会計ソフトを併用しよう</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <Link href="/tools/withholding-tax-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">

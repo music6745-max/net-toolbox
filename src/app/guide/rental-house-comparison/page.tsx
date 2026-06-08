@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】賃貸物件サイト比較5選｜SUUMO/HOME'S/at home/CHINTAI/エイブル",
@@ -86,16 +85,6 @@ export default function RentalHouseComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">引越し見積もりも一緒に</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "引越し侍", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "一括見積最大手", price: "完全無料", badge: "定番" },
-            { name: "SUUMO引越し", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "リクルート運営", price: "完全無料" },
-            { name: "ズバット引越し比較", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "最大10社一括", price: "完全無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

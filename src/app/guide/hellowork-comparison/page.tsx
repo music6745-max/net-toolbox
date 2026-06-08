@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】公務員試験対策スクール比較5選｜独学・通信・通学を徹底解説",
@@ -86,16 +85,6 @@ export default function HelloworkComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料資料請求・体験講義</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "クレアール", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "コスパ最強", price: "受講料20万円台〜", badge: "おすすめ" },
-            { name: "LEC東京リーガルマインド", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "業界大手", price: "受講料30万円台〜" },
-            { name: "資格の大原", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "通学型老舗", price: "受講料30万円台〜" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

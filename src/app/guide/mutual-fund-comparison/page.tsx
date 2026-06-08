@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】投資信託おすすめ比較5選｜信託報酬・運用実績・人気銘柄を徹底解説",
@@ -86,16 +85,6 @@ export default function MutualFundComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">投資信託を始める証券口座</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "SBI証券", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "国内口座数No.1", price: "口座開設無料", badge: "定番" },
-            { name: "楽天証券", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "楽天ポイント貯まる", price: "口座開設無料" },
-            { name: "マネックス証券", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "米国株に強い", price: "口座開設無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

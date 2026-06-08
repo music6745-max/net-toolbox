@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】家計簿・節約アプリおすすめランキングTOP10｜無料で使える定番",
@@ -65,16 +64,6 @@ export default function SavingAppRankingPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計改善の次の一手</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "保険見直しラボ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "固定費の見直しで家計改善", price: "無料FP相談", badge: "節約の定番" },
-            { name: "楽天モバイル", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "通信費を大幅削減", price: "月3,278円〜" },
-            { name: "楽天でんき", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "電気代も節約", price: "月額制" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

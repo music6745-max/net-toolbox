@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】不動産投資クラウドファンディング比較5選｜利回り・安全性・最低投資額を徹底解説",
@@ -91,16 +90,6 @@ export default function UsedPropertyInvestmentComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料口座開設</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "COZUCHI", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "高利回り案件", price: "口座開設無料", badge: "高利回り" },
-            { name: "CREAL", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "上場企業運営", price: "口座開設無料" },
-            { name: "OwnersBook", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "10年以上の実績", price: "口座開設無料" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

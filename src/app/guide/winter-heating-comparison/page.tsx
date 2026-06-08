@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】冬の暖房器具比較ガイド｜電気・ガス・灯油のコストと選び方",
@@ -139,19 +138,6 @@ export default function WinterHeatingComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">光熱費の見直しにおすすめ</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "家計管理ソフトの定番",
-              price: "年額制",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

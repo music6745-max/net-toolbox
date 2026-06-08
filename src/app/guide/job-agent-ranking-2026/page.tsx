@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】転職エージェントおすすめランキングTOP10｜20代/30代/ハイクラス",
@@ -65,16 +64,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料会員登録・相談</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "リクルートエージェント", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "求人数業界最大", price: "無料", badge: "定番" },
-            { name: "doda", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "エージェント+求人サイト", price: "無料" },
-            { name: "ビズリーチ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "ハイクラス特化", price: "無料" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

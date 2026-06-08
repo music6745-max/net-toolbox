@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】プログラミングスクールおすすめランキングTOP10｜未経験からエンジニア転職",
@@ -65,16 +64,6 @@ export default function ProgrammingSchoolRankingPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料説明会・体験レッスン</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "DMM WEBCAMP", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "転職保証付き", price: "月額分割可", badge: "定番" },
-            { name: "テックアカデミー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "オンライン完結", price: "月額制" },
-            { name: "侍エンジニア", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "マンツーマン指導", price: "月額制" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

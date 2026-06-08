@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】新社会人のお金管理完全ガイド｜口座・家計簿・投資の始め方",
@@ -139,25 +138,6 @@ export default function NewGraduateFinancialTipsPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理におすすめのツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "口座・カード連携で自動家計簿",
-              price: "月額制",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "副業の確定申告にも対応",
-              price: "月額制",
-            },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

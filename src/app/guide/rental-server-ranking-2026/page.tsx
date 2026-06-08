@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】レンタルサーバーおすすめランキングTOP10｜WordPress/速度/料金",
@@ -65,16 +64,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料お試し・申し込み</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ConoHa WING", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "国内最速級", price: "月額1,452円〜", badge: "定番" },
-            { name: "エックスサーバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "業界最大手", price: "月額990円〜" },
-            { name: "ロリポップ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "低価格で初心者向き", price: "月額220円〜" },
-          ]}
-        />
-      </section>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】軽自動車おすすめ比較5選｜N-BOX/タント/スペーシア/ハスラー/ワゴンR",
@@ -91,16 +90,6 @@ export default function KeiCarComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">中古車・新車のオトクな探し方</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ガリバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界最大手の中古車", price: "無料査定", badge: "中古" },
-            { name: "ネクステージ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "全国60万台以上", price: "無料査定" },
-            { name: "定額カルモくん", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "新車カーリース", price: "月額1万円台〜" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>

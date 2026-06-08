@@ -103,14 +103,14 @@ const sections = [
         name: "freee（フリー）",
         desc: "会計知識ゼロでもOK。スマホで領収書を撮影するだけで自動仕訳。確定申告書もそのまま電子申告可能。",
         price: "月額980円〜（年払い）",
-        url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+        url: "/guide/accounting-software-comparison",
         tag: "初心者向け",
       },
       {
         name: "やよいの青色申告",
         desc: "売上実績No.1の会計ソフト。初年度無料のプランがあり、コストを抑えて始められます。",
         price: "初年度無料〜",
-        url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
+        url: "/guide/accounting-software-comparison",
         tag: "コスパ重視",
       },
     ],
@@ -383,26 +383,6 @@ export default function SideBusinessToolsPage() {
       ))}
 
       {/* Accounting CTA */}
-      <section className="mb-12">
-        <h3 className="text-lg font-bold mb-4">会計ソフトを比較して選ぶ</h3>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "やよいの青色申告",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定率91.74%",
-              price: "無料〜",
-              badge: "定番",
-            },
-            {
-              name: "freee（フリー）",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "スマホで確定申告",
-              price: "月1,180円〜",
-            },
-          ]}
-        />
-      </section>
 
       {/* Rental Server CTA */}
       <section className="mb-12">
@@ -467,7 +447,7 @@ export default function SideBusinessToolsPage() {
               step: "STEP 4",
               title: "収入が出たら確定申告の準備",
               desc: "副業所得が年間20万円を超えたら確定申告が必要です。早めに会計ソフトを導入しておきましょう。",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
+              url: "/guide/accounting-software-comparison",
               linkText: "freeeで確定申告を始める",
             },
           ].map((item) => (

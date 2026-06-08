@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】高齢者向け宅配弁当比較5選｜栄養バランス・料金・配送エリアを徹底解説",
@@ -86,16 +85,6 @@ export default function MealDeliverySeniorComparisonPage() {
         </div>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料お試し・資料請求</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ワタミの宅食", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界シェアNo.1", price: "1食490円〜", badge: "定番" },
-            { name: "ナッシュ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "冷凍で長期保存可", price: "1食599円〜" },
-            { name: "食宅便", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "医療食ノウハウ", price: "1食560円〜" },
-          ]}
-        />
-      </section>
 
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
