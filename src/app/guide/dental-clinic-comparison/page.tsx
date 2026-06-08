@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】歯科クリニック比較おすすめ5選｜インプラント・矯正歯科を徹底解説",
@@ -156,14 +155,25 @@ export default function DentalClinicComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">医療費控除の確定申告に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "確定申告・医療費控除に対応", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">治療費とあわせて確認したい歯科・美容ガイド</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/guide/dental-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">歯科保険比較</span>
+            <p className="text-xs text-muted mt-1">将来の歯科治療費に備える保険選び</p>
+          </Link>
+          <Link href="/guide/whitening-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ホワイトニング比較</span>
+            <p className="text-xs text-muted mt-1">歯の見た目を整える施術を比較</p>
+          </Link>
+          <Link href="/guide/beauty-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">美容クリニック比較</span>
+            <p className="text-xs text-muted mt-1">美容医療を総合的に検討</p>
+          </Link>
+          <Link href="/guide/lasik-ico-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">レーシック・ICL比較</span>
+            <p className="text-xs text-muted mt-1">視力矯正手術の選び方</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">
