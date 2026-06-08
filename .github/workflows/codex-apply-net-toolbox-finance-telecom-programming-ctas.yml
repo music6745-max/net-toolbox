@@ -1,0 +1,49 @@
+name: Codex Apply Net Toolbox Finance Telecom Programming CTA Cleanup
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/codex-sync-net-toolbox-finance-telecom-programming-ctas.patch.br.b64
+      - .github/workflows/codex-apply-net-toolbox-finance-telecom-programming-ctas.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decode and verify patch
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const zlib = require('zlib');
+          const payloadPath = '.github/codex-sync-net-toolbox-finance-telecom-programming-ctas.patch.br.b64';
+          const expected = 'bcdd43251a4fad0967e8c4f7c171639ffeb0c5bf5ca6e9b66fcede98fa7a0151';
+          const compressed = Buffer.from(fs.readFileSync(payloadPath, 'utf8').trim(), 'base64');
+          const actual = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (actual !== expected) {
+            throw new Error(`Patch SHA mismatch: ${actual}`);
+          }
+          fs.writeFileSync('codex-sync.patch', zlib.brotliDecompressSync(compressed));
+          NODE
+      - name: Apply patch
+        run: |
+          git apply --check codex-sync.patch
+          git apply codex-sync.patch
+      - name: Commit applied source sync
+        run: |
+          rm -f codex-sync.patch
+          rm -f .github/codex-sync-net-toolbox-finance-telecom-programming-ctas.patch.br.b64
+          rm -f .github/workflows/codex-apply-net-toolbox-finance-telecom-programming-ctas.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "sync: replace finance telecom programming ctas"
+          git push origin HEAD:master
