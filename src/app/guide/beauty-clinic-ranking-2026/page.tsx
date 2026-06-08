@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, ArticleJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】美容クリニックおすすめランキングTOP10｜脱毛・美肌・痩身",
@@ -66,14 +65,25 @@ export default function Page() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料カウンセリング予約</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "湘南美容クリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界最大手", price: "無料カウンセリング", badge: "定番" },
-            { name: "TCB東京中央美容外科", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "学割・モニター割", price: "無料カウンセリング" },
-            { name: "リゼクリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "医療脱毛の定番", price: "無料カウンセリング" },
-          ]}
-        />
+        <h2 className="text-lg font-bold mb-4">美容医療とあわせて確認したいガイド</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/guide/beauty-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">美容クリニック比較</span>
+            <p className="text-xs text-muted mt-1">施術目的別の選び方</p>
+          </Link>
+          <Link href="/guide/hair-removal-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">脱毛サロン比較</span>
+            <p className="text-xs text-muted mt-1">サロン脱毛との違い</p>
+          </Link>
+          <Link href="/guide/mens-hair-removal-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">メンズ医療脱毛比較</span>
+            <p className="text-xs text-muted mt-1">男性向けの料金・通いやすさ</p>
+          </Link>
+          <Link href="/guide/hairloss-women-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">女性の薄毛治療比較</span>
+            <p className="text-xs text-muted mt-1">美容医療と一緒に検討しやすいケア</p>
+          </Link>
+        </div>
       </section>
     </div>
   );

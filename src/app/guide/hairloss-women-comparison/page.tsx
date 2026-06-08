@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】女性の薄毛治療クリニック比較5選｜FAGA・びまん性脱毛症対策",
@@ -87,17 +86,6 @@ export default function HairlossWomenComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料カウンセリング予約</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "クリニックフォア", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "オンライン完結", price: "月3,036円〜", badge: "おすすめ" },
-            { name: "湘南美容クリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "全国大手", price: "無料カウンセリング" },
-            { name: "東京ビューティークリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "女性専門", price: "無料カウンセリング" },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/aga-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -107,6 +95,14 @@ export default function HairlossWomenComparisonPage() {
           <Link href="/guide/beauty-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">美容クリニック比較</span>
             <p className="text-xs text-muted mt-1">美容医療全般</p>
+          </Link>
+          <Link href="/guide/clinic-online-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンライン診療比較</span>
+            <p className="text-xs text-muted mt-1">通院負担を抑えたい人向け</p>
+          </Link>
+          <Link href="/guide/medical-checkup-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">健康診断サービス比較</span>
+            <p className="text-xs text-muted mt-1">体調管理もあわせて確認</p>
           </Link>
         </div>
       </section>
