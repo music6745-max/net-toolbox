@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】自転車保険比較おすすめ5選｜義務化対応・保険料・補償内容を徹底解説",
@@ -188,36 +187,27 @@ export default function BicycleInsuranceComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            自転車保険は月数百円の出費で1億円超の賠償リスクから家計を守れる、コスパの高い備えです。義務化エリアの方はもちろん、義務化されていなくても加入を強く推奨します。既存の火災・自動車保険との重複を避けつつ、家族プラン・示談交渉サービス付きを優先して選ぶのが正解。家計簿アプリや会計ソフトで毎月の固定費を見直し、無駄な保険や重複契約を削減すれば、家計のスリム化と安心の両立が可能です。
+            自転車保険は月数百円の出費で1億円超の賠償リスクから家計を守れる、コスパの高い備えです。義務化エリアの方はもちろん、義務化されていなくても加入を強く推奨します。既存の火災・自動車保険との重複を避けつつ、家族プラン・示談交渉サービス付きを優先して選ぶのが正解。補償額や既存保険の特約を定期的に見直せば、無駄な保険や重複契約を削減しながら安心を確保できます。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">自転車保険の見直しに役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/insurance-need-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">保険必要額計算</span>
+            <p className="text-xs text-muted mt-1">補償額の考え方を整理</p>
+          </Link>
+          <Link href="/guide/insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ネット保険比較</span>
+            <p className="text-xs text-muted mt-1">家計全体の保険も見直す</p>
+          </Link>
+          <Link href="/guide/car-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">自動車保険比較</span>
+            <p className="text-xs text-muted mt-1">特約や重複補償の確認に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】カーリース比較おすすめ5選｜頭金0円・月額料金・契約期間を徹底解説",
@@ -141,36 +140,27 @@ export default function AutoLeaseComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            カーリースは「月額・走行距離・残価・付帯サービス」の4点を一覧化して比較するのが正解。ライフプランが安定している人は長期で月額を圧縮、短期で乗り換えたい人は2〜5年プランが有利です。契約後の家計管理は会計ソフトや家計簿アプリで月々の固定費を可視化すれば、車関連支出をムリなくコントロールできます。
+            カーリースは「月額・走行距離・残価・付帯サービス」の4点を一覧化して比較するのが正解。ライフプランが安定している人は長期で月額を圧縮、短期で乗り換えたい人は2〜5年プランが有利です。契約後は車両代・保険・燃料代・メンテ費を年額で見える化すると、車関連支出をムリなくコントロールできます。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">車関連コストの見直しツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/car-expense-yearly-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">車の年間維持費計算</span>
+            <p className="text-xs text-muted mt-1">リースと購入の総額比較に</p>
+          </Link>
+          <Link href="/tools/car-loan-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">自動車ローン計算</span>
+            <p className="text-xs text-muted mt-1">購入時の月額と比べる</p>
+          </Link>
+          <Link href="/guide/car-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">自動車保険比較</span>
+            <p className="text-xs text-muted mt-1">保険込み条件との比較に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

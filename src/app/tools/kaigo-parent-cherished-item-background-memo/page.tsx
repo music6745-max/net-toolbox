@@ -2,6 +2,10 @@
 
 import { useMemo, useState } from "react";
 
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
+import { trackEvent } from "@/lib/tracking";
+
+const TOOL_SLUG = "kaigo-parent-cherished-item-background-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_cherished_item_background";
 const GUIDE_URL =
@@ -9,6 +13,15 @@ const GUIDE_URL =
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383181";
 const PACK_URL = "https://kaigo-okane.booth.pm/items/8383305";
 const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
+
+function trackKindleClick() {
+  trackEvent(KINDLE_LINK.eventName, {
+    page: TOOL_SLUG,
+    position: KINDLE_LINK.position,
+    url: KINDLE_LINK.href.slice(0, 200),
+  });
+}
 
 type FieldKey =
   | "targetScope"
@@ -189,6 +202,15 @@ export default function KaigoParentCherishedItemBackgroundMemoPage() {
                 className="rounded-md bg-primary px-4 py-2 text-sm font-bold text-white hover:opacity-90"
               >
                 単品を見る
+              </a>
+              <a
+                href={KINDLE_LINK.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={trackKindleClick}
+                className="rounded-md border border-primary/30 px-4 py-2 text-sm font-bold text-primary hover:border-primary"
+              >
+                {KINDLE_LINK.label}
               </a>
               <a
                 href={FULL_PACK_URL}

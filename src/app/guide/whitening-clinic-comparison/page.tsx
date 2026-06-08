@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ホワイトニング歯科クリニック比較5選｜料金・効果・通いやすさを徹底解説",
@@ -99,14 +98,21 @@ export default function WhiteningClinicComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">関連美容系サービスもチェック</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "湘南美容クリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "美容医療と一括ケア", price: "無料カウンセリング", badge: "大手" },
-            { name: "TCB東京中央美容外科", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "学割・モニター割あり", price: "無料カウンセリング" },
-            { name: "リゼクリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "医療脱毛で清潔感UP", price: "無料カウンセリング" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">歯科・美容医療の検討に役立つ内部ガイド</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/guide/dental-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">歯科クリニック比較</span>
+            <p className="text-xs text-muted mt-1">治療内容と費用の見方を確認</p>
+          </Link>
+          <Link href="/guide/beauty-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">美容クリニック比較</span>
+            <p className="text-xs text-muted mt-1">美容医療の選び方を確認</p>
+          </Link>
+          <Link href="/guide/dental-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">歯科保険比較</span>
+            <p className="text-xs text-muted mt-1">自費診療の備えも確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

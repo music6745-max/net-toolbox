@@ -151,7 +151,7 @@ export const kaigoSupplementalTools: Tool[] = [
     description:
       "傘立て、靴べら、スリッパ立て、来客用履物入れなど、親の家で家族が長年見てきた玄関まわりの物を、修理や処分、防犯、防災、医療・介護シューズ選定に使わず、家族内の呼び方・置かれていた場所・親が話してくれたこととして整理します。",
     icon: "E",
-    category: "譌･蟶ｸ繝・・繝ｫ",
+    category: "日常ツール",
   },
   {
     slug: "kaigo-parent-home-family-mirror-memo",

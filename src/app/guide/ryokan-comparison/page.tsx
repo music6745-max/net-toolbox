@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】旅館・ホテル予約サイト徹底比較6選｜じゃらん・JTB・一休ほか",
@@ -113,12 +112,21 @@ export default function RyokanComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計・経費管理に役立つツール</h2>
-        <ComparisonTableCTA services={[
-          { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "確定申告・経理の定番ソフト", price: "年額制", badge: "定番" },
-          { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-          { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-        ]} />
+        <h2 className="text-xl font-bold mb-4">宿泊予約後に役立つ旅行ツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/hotel-night-saver" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">宿泊数・料金メモ</span>
+            <p className="text-xs text-muted mt-1">泊数と総額の整理に</p>
+          </Link>
+          <Link href="/tools/travel-budget-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行予算シミュレーター</span>
+            <p className="text-xs text-muted mt-1">交通費込みの総額確認に</p>
+          </Link>
+          <Link href="/guide/travel-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行保険比較</span>
+            <p className="text-xs text-muted mt-1">予約後の補償確認に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

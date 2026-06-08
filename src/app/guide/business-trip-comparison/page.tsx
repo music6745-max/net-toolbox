@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】出張に便利な予約サイト比較｜領収書・法人契約・ポイント還元",
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 const faqItems = [
   { question: "出張の宿はどのサイトで予約するとお得？", answer: "ポイント還元とクーポン併用でじゃらん・楽天トラベルがコスパ良し。PayPayを使うならYahoo!トラベル、ワンランク上の宿なら一休.comが向いています。会社精算ならポイントは個人還元で賢く貯める戦略が定番です。" },
   { question: "領収書は全サイトで発行できますか？", answer: "主要予約サイトはすべて宛名指定の領収書をマイページからダウンロード可能です。但し書きは「宿泊代として」が一般的。インボイス制度対応のため適格請求書発行事業者番号の確認も忘れずに。" },
-  { question: "法人契約プランはどうすれば使える？", answer: "JTBや楽天トラベルには法人向け出張手配サービスがあります。個人事業主はビジネスカード・会計ソフトと連携することで経費精算が自動化でき、時間とコストを同時に削減できます。" },
+  { question: "法人契約プランはどうすれば使える？", answer: "JTBや楽天トラベルには法人向け出張手配サービスがあります。個人事業主はビジネスカード、領収書保存、日当ルールをあわせて整理すると、出張後の精算時間とコストを同時に削減できます。" },
   { question: "マイル・ポイントを最大化する方法は？", answer: "航空券はマイル付与率の高いANA/JAL公式で、宿は還元率の高い楽天/Yahoo!トラベルで分けて予約するのがセオリー。クレカはビジネスゴールド以上で決済するとさらに還元率が上がります。" },
 ];
 
@@ -63,7 +62,7 @@ export default function BusinessTripComparisonPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">経費精算を効率化する方法</h2>
         <p className="text-muted leading-relaxed mb-4">
-          出張経費はfreee・弥生・マネーフォワードなどのクラウド会計ソフトとビジネスカードを連携させることで、予約から仕訳までを自動化できます。領収書はスマホで撮影してクラウド保存すればペーパーレス化も実現。出張頻度が高い個人事業主は会計ソフト導入で年間数十時間の経理時間を削減できます。
+          出張経費は宿泊費・交通費・日当・通信費を分けて記録し、領収書はスマホで撮影してクラウド保存すると後から確認しやすくなります。出張頻度が高い個人事業主は、出張手当の基準と精算フローを先に決めておくと、年間の事務時間を大きく削減できます。
         </p>
       </section>
 
@@ -82,17 +81,26 @@ export default function BusinessTripComparisonPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
-          <p className="text-muted leading-relaxed">出張予約は「<a href="https://www.jalan.net/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">じゃらん</a>・<a href="https://travel.rakuten.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">楽天トラベル</a>で日常利用、<a href="https://www.ikyu.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">一休.com</a>で重要出張、<a href="https://www.jtb.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">JTB</a>で法人契約」という使い分けが定番。会計ソフトと連動させれば経費精算まで自動化できます。</p>
+          <p className="text-muted leading-relaxed">出張予約は「<a href="https://www.jalan.net/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">じゃらん</a>・<a href="https://travel.rakuten.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">楽天トラベル</a>で日常利用、<a href="https://www.ikyu.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">一休.com</a>で重要出張、<a href="https://www.jtb.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">JTB</a>で法人契約」という使い分けが定番。予約後は日当・領収書・移動費を同じルールで記録すると、経費精算まで迷わず進められます。</p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">経費・会計管理に役立つツール</h2>
-        <ComparisonTableCTA services={[
-          { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "確定申告・経理の定番ソフト", price: "年額制", badge: "定番" },
-          { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-          { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-        ]} />
+        <h2 className="text-xl font-bold mb-4">出張費用の整理に役立つツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/business-trip-allowance-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">出張手当計算</span>
+            <p className="text-xs text-muted mt-1">日当・宿泊費の目安作りに</p>
+          </Link>
+          <Link href="/tools/travel-budget-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行予算シミュレーター</span>
+            <p className="text-xs text-muted mt-1">出張総額の事前確認に</p>
+          </Link>
+          <Link href="/guide/business-card-platinum" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ビジネスカード比較</span>
+            <p className="text-xs text-muted mt-1">出張決済とポイント管理に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

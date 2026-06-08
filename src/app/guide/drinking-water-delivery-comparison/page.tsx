@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ウォーターサーバー定額制比較5選｜赤ちゃんに優しい天然水・RO水",
@@ -87,14 +86,21 @@ export default function DrinkingWaterDeliveryComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">申し込み・無料体験</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "プレミアムウォーター", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界シェアNo.1", price: "月額制", badge: "定番" },
-            { name: "コスモウォーター", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "下置きで楽", price: "月額制" },
-            { name: "アクアクララ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "RO水で安心", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">水まわり・育児の関連ツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/daily-water-log" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">水分摂取記録</span>
+            <p className="text-xs text-muted mt-1">家庭の水利用の目安に</p>
+          </Link>
+          <Link href="/guide/water-server-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ウォーターサーバー比較</span>
+            <p className="text-xs text-muted mt-1">別比較記事で条件を確認</p>
+          </Link>
+          <Link href="/guide/water-filter-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">浄水器比較</span>
+            <p className="text-xs text-muted mt-1">定額制以外の代替案</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

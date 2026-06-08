@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】国内旅行プラン完全ガイド｜予約サイト比較と費用節約術",
@@ -148,36 +147,27 @@ export default function DomesticTravelGuidePage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            国内旅行を安く楽しむには「予約サイトの比較」「タイミング」「プラン選び」の3点が鍵。<a href="https://www.jalan.net/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">じゃらん</a>、<a href="https://www.jtb.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">JTB</a>、<a href="https://www.ikyu.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">一休.com</a>、<a href="https://travel.yahoo.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Yahoo!トラベル</a>、<a href="https://travel.rakuten.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">楽天トラベル</a>をジャンルと経済圏で使い分け、早割と直前割を賢く活用すれば旅行費用は大きく節約できます。旅費の記録は家計簿アプリや会計ソフトに残しておくと次回の旅行予算も立てやすくなります。
+            国内旅行を安く楽しむには「予約サイトの比較」「タイミング」「プラン選び」の3点が鍵。<a href="https://www.jalan.net/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">じゃらん</a>、<a href="https://www.jtb.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">JTB</a>、<a href="https://www.ikyu.com/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">一休.com</a>、<a href="https://travel.yahoo.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Yahoo!トラベル</a>、<a href="https://travel.rakuten.co.jp/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">楽天トラベル</a>をジャンルと経済圏で使い分け、早割と直前割を賢く活用すれば旅行費用は大きく節約できます。旅費は予算表や持ち物リストと一緒に残しておくと、次回の旅行計画も立てやすくなります。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計・旅費管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">旅費計画に役立つツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/travel-budget-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行予算シミュレーター</span>
+            <p className="text-xs text-muted mt-1">宿泊・交通・食費を整理</p>
+          </Link>
+          <Link href="/tools/packing-checklist" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">持ち物チェックリスト</span>
+            <p className="text-xs text-muted mt-1">出発前の忘れ物対策に</p>
+          </Link>
+          <Link href="/guide/travel-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行保険比較</span>
+            <p className="text-xs text-muted mt-1">万一の費用も事前に確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

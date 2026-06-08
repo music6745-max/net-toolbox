@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】旅行予約アプリ徹底比較おすすめ5選｜国内・海外・ホテル・航空券を解説",
@@ -105,7 +104,7 @@ export default function TravelAppComparisonPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">最安予約のテクニック</h2>
         <p className="text-muted leading-relaxed mb-4">
-          ①同じ宿を複数アプリで価格比較。②楽天スーパーセール・じゃらんセールなどのタイミングを狙う。③キャンセル無料プランで早めに仮押さえし、価格が下がったら予約し直す。④出張旅費は経費精算アプリや会計ソフトに連動させて管理。⑤マイル・ポイント積算の経路を逆算して予約チャネルを選ぶ——この5つを習慣化するだけで年間の旅費を大幅に削減できます。
+          ①同じ宿を複数アプリで価格比較。②楽天スーパーセール・じゃらんセールなどのタイミングを狙う。③キャンセル無料プランで早めに仮押さえし、価格が下がったら予約し直す。④旅費は予算表と領収書メモに分けて管理。⑤マイル・ポイント積算の経路を逆算して予約チャネルを選ぶ——この5つを習慣化するだけで年間の旅費を大幅に削減できます。
         </p>
       </section>
 
@@ -125,20 +124,27 @@ export default function TravelAppComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            旅行予約は「アプリの使い分け×タイミング×ポイント還元」の3点で大きく差が出ます。国内なら楽天トラベル・じゃらん、海外ならBooking.com・Agoda、パッケージならエクスペディアを基本に、複数アプリで常に比較する習慣をつけましょう。出張費の管理は会計ソフトに紐づけると便利です。
+            旅行予約は「アプリの使い分け×タイミング×ポイント還元」の3点で大きく差が出ます。国内なら楽天トラベル・じゃらん、海外ならBooking.com・Agoda、パッケージならエクスペディアを基本に、複数アプリで常に比較する習慣をつけましょう。予約後は旅費・保険・現地移動費をまとめて確認すると、旅行全体の予算管理がしやすくなります。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">旅費・経費管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "出張旅費の仕訳も簡単", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "領収書撮影で自動読取", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "カード明細から仕訳", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">旅行予約後に役立つツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/travel-budget-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行予算シミュレーター</span>
+            <p className="text-xs text-muted mt-1">予約後の総額整理に</p>
+          </Link>
+          <Link href="/tools/flight-mile-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">フライトマイル計算</span>
+            <p className="text-xs text-muted mt-1">航空券予約前の比較に</p>
+          </Link>
+          <Link href="/guide/travel-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行保険比較</span>
+            <p className="text-xs text-muted mt-1">予約後の補償確認に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】オンライン診療アプリ比較5選｜診療科目・料金・処方薬の即日配送を徹底解説",
@@ -92,14 +91,21 @@ export default function OnlineDoctorComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">オンライン診療の予約</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "DMMオンラインクリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "DMMの低価格", price: "保険＋自由診療", badge: "人気" },
-            { name: "クリニックフォア", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "業界最大級", price: "保険＋自由診療" },
-            { name: "ファストドクター", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "24時間対応", price: "保険診療" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">オンライン診療の検討に役立つ内部ガイド</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/guide/clinic-online-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンラインクリニック比較</span>
+            <p className="text-xs text-muted mt-1">診療方法と費用の見方を確認</p>
+          </Link>
+          <Link href="/guide/online-pill-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンラインピル比較</span>
+            <p className="text-xs text-muted mt-1">処方サービスの選び方を確認</p>
+          </Link>
+          <Link href="/guide/aga-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">AGAクリニック比較</span>
+            <p className="text-xs text-muted mt-1">継続治療の選択肢も確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

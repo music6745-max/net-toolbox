@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】スポーツクラブ・スイミングスクール比較おすすめ5選｜料金・設備・プログラムを徹底解説",
@@ -105,7 +104,7 @@ export default function SportClubComparisonPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">入会の裏ワザと継続のコツ</h2>
         <p className="text-muted leading-relaxed mb-4">
-          入会金無料キャンペーンは3月・9月と7月が狙い目。法人会員制度や福利厚生サービス（リロクラブ・ベネフィットステーション）経由で入会すると個人契約より月1,000〜3,000円安くなるケースもあります。会費は家計簿アプリや会計ソフトで固定費として管理し、利用頻度が月4回を切るようなら会員種別の見直しや退会も検討しましょう。
+          入会金無料キャンペーンは3月・9月と7月が狙い目。法人会員制度や福利厚生サービス（リロクラブ・ベネフィットステーション）経由で入会すると個人契約より月1,000〜3,000円安くなるケースもあります。会費は固定費として把握し、利用頻度が月4回を切るようなら会員種別の見直しや退会も検討しましょう。
         </p>
       </section>
 
@@ -125,20 +124,27 @@ export default function SportClubComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            スポーツクラブは「立地×設備×月会費」のバランスで選びましょう。家族全員で使うなら相互利用可の全国チェーン、水泳を本格的に習うなら指導実績のあるクラブ、スタジオレッスン中心ならプログラム数の多い施設が正解です。継続利用のために家計管理も忘れずに。
+            スポーツクラブは「立地×設備×月会費」のバランスで選びましょう。家族全員で使うなら相互利用可の全国チェーン、水泳を本格的に習うなら指導実績のあるクラブ、スタジオレッスン中心ならプログラム数の多い施設が正解です。継続利用のために、利用頻度と運動量を定期的に見直しましょう。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">会費・家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "固定費管理に最適", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "家計と事業の同時管理", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">会費と運動習慣の見直しに役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/exercise-calorie-burn" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">運動消費カロリー計算</span>
+            <p className="text-xs text-muted mt-1">運動量の目安を数値化</p>
+          </Link>
+          <Link href="/tools/calorie-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">基礎代謝計算</span>
+            <p className="text-xs text-muted mt-1">毎日の消費カロリー確認に</p>
+          </Link>
+          <Link href="/guide/fitness-app-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">フィットネスアプリ比較</span>
+            <p className="text-xs text-muted mt-1">クラブ外の習慣化も支援</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "コードレス掃除機おすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -143,14 +142,21 @@ export default function CordlessCleanerComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "家計・経費管理の定番", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">家電の電気代・周辺見直しツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/appliance-electricity-cost" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">家電の電気代計算</span>
+            <p className="text-xs text-muted mt-1">掃除機の電気代を概算</p>
+          </Link>
+          <Link href="/tools/electricity-cost" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">電気代計算</span>
+            <p className="text-xs text-muted mt-1">月間・年間の電気代を確認</p>
+          </Link>
+          <Link href="/guide/air-purifier-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">空気清浄機比較</span>
+            <p className="text-xs text-muted mt-1">掃除とあわせて空気環境も見直し</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

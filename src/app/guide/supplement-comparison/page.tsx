@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】プロテイン・サプリメント比較おすすめ5選｜成分・コスパ・安全性を徹底解説",
@@ -149,20 +148,23 @@ export default function SupplementComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            プロテイン・サプリ選びは「目的・品質・コスパ」の3点で決まります。筋トレ初心者はまずホエイプロテインから始め、健康維持目的ならマルチビタミンを加えるのが王道です。継続が最も重要なので、味と価格で続けやすい製品を選びましょう。家計管理には会計ソフトの活用がおすすめです。
+            プロテイン・サプリ選びは「目的・品質・コスパ」の3点で決まります。筋トレ初心者はまずホエイプロテインから始め、健康維持目的ならマルチビタミンを加えるのが王道です。継続が最も重要なので、味と価格で続けやすい製品を選びましょう。体重や食事量の目安も合わせて確認すると、必要な補助食品を選びやすくなります。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "確定申告・経理の定番ソフト", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">健康管理ツールも合わせて使う</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/tools/bmi-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+            <div className="font-bold text-sm mb-1">BMIを確認する</div>
+            <p className="text-xs text-muted">体重管理の目安を確認して、サプリ選びの前提を整理できます。</p>
+          </Link>
+          <Link href="/tools/calorie-calculator" className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <div className="font-bold text-sm mb-1">摂取カロリーを試算する</div>
+            <p className="text-xs text-muted">目的に合わせた食事量を確認し、補助としてサプリを選びます。</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

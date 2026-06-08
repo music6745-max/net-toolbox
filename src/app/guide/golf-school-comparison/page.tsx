@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ゴルフスクール比較おすすめ5選｜ライザップゴルフ・ゴルフパフォーマンス他",
@@ -118,20 +117,27 @@ export default function GolfSchoolComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            ゴルフスクールは「自分の目的と性格に合うか」が最大のポイント。短期集中・データ解析・通い放題・楽しく継続など、コンセプトは各社で大きく異なります。必ず無料体験に行って施設・コーチと相性を確かめましょう。月謝や道具代は家計簿アプリ・会計ソフトで管理し、趣味費の使いすぎを防ぐことも大切です。
+            ゴルフスクールは「自分の目的と性格に合うか」が最大のポイント。短期集中・データ解析・通い放題・楽しく継続など、コンセプトは各社で大きく異なります。必ず無料体験に行って施設・コーチと相性を確かめましょう。月謝や道具代は上限を決めて見直し、趣味費の使いすぎを防ぐことも大切です。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "弥生シリーズ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "確定申告・経理の定番ソフト", price: "年額制", badge: "定番" },
-            { name: "freee会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "クラウド会計の代表格", price: "月額制" },
-            { name: "マネーフォワード クラウド会計", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "金融機関連携で自動仕訳", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">趣味費と運動習慣の見直しに役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/exercise-calorie-burn" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">運動消費カロリー計算</span>
+            <p className="text-xs text-muted mt-1">ラウンドや練習量の目安に</p>
+          </Link>
+          <Link href="/guide/sport-club-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">スポーツクラブ比較</span>
+            <p className="text-xs text-muted mt-1">基礎体力づくりも検討</p>
+          </Link>
+          <Link href="/guide/online-fitness-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンラインフィットネス比較</span>
+            <p className="text-xs text-muted mt-1">自宅トレーニングで補強</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

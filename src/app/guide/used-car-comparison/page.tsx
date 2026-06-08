@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】中古車購入サービス比較おすすめ5選｜ガリバー・ビッグモーター後・ネクステージ徹底比較",
@@ -150,36 +149,27 @@ export default function UsedCarComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            中古車購入は「価格・保証・在庫数」の3点で業者を選びましょう。初めてなら返品保証付きのガリバー、長期保証重視ならネクステージ、徹底比較したいならカーセンサー・グーネット、価格重視なら中・上級者向けのUSSオークションが最適。購入後は会計ソフトや家計簿アプリで維持費を管理し、無駄のないカーライフを実現できます。
+            中古車購入は「価格・保証・在庫数」の3点で業者を選びましょう。初めてなら返品保証付きのガリバー、長期保証重視ならネクステージ、徹底比較したいならカーセンサー・グーネット、価格重視なら中・上級者向けのUSSオークションが最適。購入後はローン・保険・燃料代・整備費を年額で管理し、無駄のないカーライフを実現できます。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">中古車購入後の費用確認ツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/car-loan-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">自動車ローン計算</span>
+            <p className="text-xs text-muted mt-1">購入資金の月額を確認</p>
+          </Link>
+          <Link href="/tools/car-expense-yearly-calculator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">車の年間維持費計算</span>
+            <p className="text-xs text-muted mt-1">保険・燃料・整備費を整理</p>
+          </Link>
+          <Link href="/guide/car-purchase-buyback-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">車買取比較</span>
+            <p className="text-xs text-muted mt-1">買い替え時の下取り確認に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

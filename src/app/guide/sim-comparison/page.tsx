@@ -227,6 +227,53 @@ const simServices = [
   },
 ];
 
+const simAffiliateServices = [
+  {
+    name: "ごえんモバイル",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8LLFCI+424K+TS3OI",
+    highlight: "シンプル・低価格の格安SIM",
+    price: "月額制",
+    badge: "低価格",
+  },
+  {
+    name: "BB.exciteモバイル Flat",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8NZ5RM+7JY+4ATK5D",
+    highlight: "定額使い放題プラン",
+    price: "月額制",
+  },
+  {
+    name: "BB.exciteモバイル Fit",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8M6UYA+7JY+2BCWEQ",
+    highlight: "段階制プランでムダなく使える",
+    price: "月額制",
+  },
+  {
+    name: "DTI SIM",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8P60Z6+1QFI+2Z68LU",
+    highlight: "ドコモ回線の格安SIM",
+    price: "月額制",
+  },
+  {
+    name: "LIBMO",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8KZZQQ+3UM0+62ENL",
+    highlight: "TOKAIグループの格安SIM",
+    price: "月額制",
+  },
+  {
+    name: "レンシム",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8MSAK2+57X0+HVV0H",
+    highlight: "レンタルSIMサービス",
+    price: "月額制",
+  },
+  {
+    name: "Saily eSIM",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3X3R5E+5L2C+5YJRM",
+    highlight: "海外旅行向けeSIM",
+    price: "従量課金",
+    badge: "海外旅行",
+  },
+];
+
 const colorMap: Record<string, string> = {
   pink: "bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300",
   blue: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
@@ -362,6 +409,20 @@ export default function SimComparisonPage() {
           </p>
         </div>
       </div>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">
+          料金を下げたい人の申し込み候補
+        </h2>
+        <p className="text-sm text-muted leading-relaxed mb-4">
+          大手キャリアから乗り換える場合は、月額料金だけでなくデータ容量と通話オプションを先に確認しましょう。まずは低価格SIM、段階制SIM、海外向けeSIMの候補を比較できます。
+        </p>
+        <ComparisonTableCTA
+          page="sim-comparison"
+          positionPrefix="summary_sim_cta"
+          services={simAffiliateServices.slice(0, 4)}
+        />
+      </section>
 
       {/* Table of Contents */}
       <div className="bg-card-bg border border-card-border rounded-xl p-6 mb-8">
@@ -1055,51 +1116,9 @@ export default function SimComparisonPage() {
       <section className="mb-8">
         <h2 className="text-xl font-bold mb-4">格安SIM・eSIMに申し込む</h2>
         <ComparisonTableCTA
-          services={[
-            {
-              name: "ごえんモバイル",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8LLFCI+424K+TS3OI",
-              highlight: "シンプル・低価格の格安SIM",
-              price: "月額制",
-            },
-            {
-              name: "BB.exciteモバイル Flat",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8NZ5RM+7JY+4ATK5D",
-              highlight: "定額使い放題プラン",
-              price: "月額制",
-            },
-            {
-              name: "BB.exciteモバイル Fit",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8M6UYA+7JY+2BCWEQ",
-              highlight: "段階制プランでムダなく使える",
-              price: "月額制",
-            },
-            {
-              name: "DTI SIM",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8P60Z6+1QFI+2Z68LU",
-              highlight: "ドコモ回線の格安SIM",
-              price: "月額制",
-            },
-            {
-              name: "LIBMO",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8KZZQQ+3UM0+62ENL",
-              highlight: "TOKAIグループの格安SIM",
-              price: "月額制",
-            },
-            {
-              name: "レンシム",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8MSAK2+57X0+HVV0H",
-              highlight: "レンタルSIMサービス",
-              price: "月額制",
-            },
-            {
-              name: "Saily eSIM",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3X3R5E+5L2C+5YJRM",
-              highlight: "海外旅行向けeSIM",
-              price: "従量課金",
-              badge: "海外旅行",
-            },
-          ]}
+          page="sim-comparison"
+          positionPrefix="footer_sim_cta"
+          services={simAffiliateServices}
         />
       </section>
       <section className="mb-10">

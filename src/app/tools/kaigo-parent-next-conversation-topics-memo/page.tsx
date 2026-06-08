@@ -2,6 +2,10 @@
 
 import { useMemo, useState } from "react";
 
+import { getKaigoKindleLink } from "@/components/KaigoToolCta";
+import { trackEvent } from "@/lib/tracking";
+
+const TOOL_SLUG = "kaigo-parent-next-conversation-topics-memo";
 const KAIGO_NAVI_URL =
   "https://toshi-navi.jp/kaigo?utm_source=net-toolbox&utm_medium=referral&utm_campaign=parent_next_conversation_topics";
 const GUIDE_URL =
@@ -9,6 +13,15 @@ const GUIDE_URL =
 const BOOTH_URL = "https://kaigo-okane.booth.pm/items/8383185";
 const PACK_URL = "https://kaigo-okane.booth.pm/items/8383305";
 const FULL_PACK_URL = "https://kaigo-okane.booth.pm/items/8383441";
+const KINDLE_LINK = getKaigoKindleLink(TOOL_SLUG);
+
+function trackKindleClick() {
+  trackEvent(KINDLE_LINK.eventName, {
+    page: TOOL_SLUG,
+    position: KINDLE_LINK.position,
+    url: KINDLE_LINK.href.slice(0, 200),
+  });
+}
 
 type FieldKey =
   | "recordFor"
@@ -194,6 +207,15 @@ export default function KaigoParentNextConversationTopicsMemoPage() {
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={BOOTH_URL}>
               次回聞きたいこと・話したいことメモ テンプレート集を見る
+            </a>
+            <a
+              className="block font-semibold text-blue-700 hover:underline"
+              href={KINDLE_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackKindleClick}
+            >
+              {KINDLE_LINK.label}
             </a>
             <a className="block font-semibold text-blue-700 hover:underline" href={PACK_URL}>
               親の介護はじめの37商品まとめセットを見る

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】海外旅行保険比較おすすめ5選｜AIG・損保ジャパン・たびほ徹底解説",
@@ -130,7 +129,7 @@ export default function TravelInsuranceComparisonPage() {
           海外旅行保険の補償項目で最も重要なのが「治療・救援費用」。最低でも1,000万円以上、できれば無制限プランを選びましょう。続いて重要なのが「賠償責任」(1億円以上)、「携行品損害」(30〜50万円)、「航空機遅延補償」(2〜3万円)。これらをカバーするフルパッケージプランが理想です。
         </p>
         <p className="text-muted leading-relaxed">
-          保険料を抑えたい場合は、必要な補償だけ選べる「選べるオーダーメイドプラン」(損保ジャパンoff!・たびほ)がお得。例えば短期間のヨーロッパ旅行なら、治療費1,000万円・賠償責任1億円・携行品20万円程度で十分。家計簿アプリに保険料・旅行費用を記録し、年間の旅行コストを把握すれば、頻繁に旅行する方は年間契約プランへの切替も検討できます。
+          保険料を抑えたい場合は、必要な補償だけ選べる「選べるオーダーメイドプラン」(損保ジャパンoff!・たびほ)がお得。例えば短期間のヨーロッパ旅行なら、治療費1,000万円・賠償責任1億円・携行品20万円程度で十分。保険料・航空券・宿泊費を旅行予算としてまとめておくと、頻繁に旅行する方は年間契約プランへの切替も検討しやすくなります。
         </p>
       </section>
 
@@ -150,36 +149,27 @@ export default function TravelInsuranceComparisonPage() {
         <h2 className="text-2xl font-bold mb-4">まとめ</h2>
         <div className="bg-card-bg border border-card-border rounded-xl p-6">
           <p className="text-muted leading-relaxed">
-            海外旅行保険は「万が一」のためではなく「必ず起こる小さなトラブル」のために加入するもの。長期・高額補償ならAIG損保、コスパ重視ならネット型のたびほ・損保ジャパンoff!、短期旅行ならエポスカード等のクレカ付帯保険+αが最適解。家計簿アプリで旅行費用を管理し、無理のない旅行プランを楽しみましょう。
+            海外旅行保険は「万が一」のためではなく「必ず起こる小さなトラブル」のために加入するもの。長期・高額補償ならAIG損保、コスパ重視ならネット型のたびほ・損保ジャパンoff!、短期旅行ならエポスカード等のクレカ付帯保険+αが最適解。旅行予算と補償額をセットで確認し、無理のない旅行プランを楽しみましょう。
           </p>
         </div>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">旅行保険と旅費の確認ツール</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/tools/travel-budget-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">旅行予算シミュレーター</span>
+            <p className="text-xs text-muted mt-1">保険料を含めた総額確認に</p>
+          </Link>
+          <Link href="/guide/overseas-travel-guide" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">海外旅行準備ガイド</span>
+            <p className="text-xs text-muted mt-1">保険以外の準備も確認</p>
+          </Link>
+          <Link href="/guide/credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">クレジットカード比較</span>
+            <p className="text-xs text-muted mt-1">付帯保険つきカードも確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

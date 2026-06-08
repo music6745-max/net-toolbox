@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】婚約指輪ブランド比較5選｜価格・デザイン・アフターサービスを徹底解説",
@@ -92,14 +91,21 @@ export default function BridalJewelryComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">来店予約・カタログ請求</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "I-PRIMO", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "豊富なデザイン", price: "来店予約", badge: "国内人気" },
-            { name: "銀座ダイヤモンドシライシ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "ブライダル専門", price: "来店予約" },
-            { name: "ハナユメ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "ブライダルフェア検索", price: "完全無料" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">指輪と結婚準備に役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/wedding-budget-split" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">結婚費用分担計算</span>
+            <p className="text-xs text-muted mt-1">指輪・式費用の分担整理に</p>
+          </Link>
+          <Link href="/guide/wedding-ring-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">結婚指輪比較</span>
+            <p className="text-xs text-muted mt-1">マリッジリングも確認</p>
+          </Link>
+          <Link href="/guide/wedding-venue-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">結婚式場比較</span>
+            <p className="text-xs text-muted mt-1">式場費用とのバランスを見る</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

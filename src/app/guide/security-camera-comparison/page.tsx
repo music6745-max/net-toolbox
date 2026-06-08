@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】防犯カメラ・スマートホームカメラ比較5選",
@@ -87,14 +86,21 @@ export default function SecurityCameraComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">プロ設置型ホームセキュリティ</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ALSOK", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "プロのホーム警備", price: "月額制", badge: "プロ設置" },
-            { name: "セコム", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "業界最大手", price: "月額制" },
-            { name: "ホームセキュリティApp", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "セルフ型", price: "月額制" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">カメラ設置と通信環境の確認に役立つ内部ガイド</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/guide/home-security-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ホームセキュリティ比較</span>
+            <p className="text-xs text-muted mt-1">プロ設置型との違いを確認</p>
+          </Link>
+          <Link href="/guide/wifi-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">Wi-Fi比較</span>
+            <p className="text-xs text-muted mt-1">録画に必要な通信環境を見直す</p>
+          </Link>
+          <Link href="/tools/internet-speed-grade-checker" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">通信速度チェック</span>
+            <p className="text-xs text-muted mt-1">クラウド録画前の確認に</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

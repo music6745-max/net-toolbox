@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】AGA治療クリニック比較5選｜料金・効果・オンライン対応を徹底解説",
@@ -99,14 +98,21 @@ export default function AgaClinicComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料カウンセリング・診療を予約する</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "DMMオンラインクリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "最短当日診療・薬翌日着", price: "月額1,760円〜", badge: "最安級" },
-            { name: "クリニックフォア", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "オンライン完結で手軽", price: "月額1,760円〜" },
-            { name: "AGAスキンクリニック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "症例数220万件の最大手", price: "月額3,700円〜" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">AGA・オンライン診療の検討に役立つ内部ガイド</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link href="/guide/clinic-online-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンラインクリニック比較</span>
+            <p className="text-xs text-muted mt-1">通院しない診療の選択肢を確認</p>
+          </Link>
+          <Link href="/guide/hairloss-women-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">女性向け薄毛治療比較</span>
+            <p className="text-xs text-muted mt-1">症状や相談先の違いを確認</p>
+          </Link>
+          <Link href="/guide/online-doctor-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">オンライン診療比較</span>
+            <p className="text-xs text-muted mt-1">診療アプリの使い方を確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

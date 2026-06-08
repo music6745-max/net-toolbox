@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
 import { AdSenseUnit } from "@/components/AdSenseUnit";
+import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "クレジットカードおすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -41,6 +42,9 @@ function ArticleJsonLd() {
     />
   );
 }
+
+const RAKUTEN_CARD_A8_URL =
+  "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y";
 
 const cardServices = [
   {
@@ -330,6 +334,29 @@ export default function CreditCardComparisonPage() {
           </p>
         </div>
       </div>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">
+          楽天市場・楽天ペイを使うなら先に確認
+        </h2>
+        <p className="text-sm text-muted leading-relaxed mb-4">
+          楽天市場、楽天ペイ、楽天証券、ふるさと納税を使う機会がある方は、年会費無料の楽天カードを基準にするとポイント還元を比較しやすくなります。
+        </p>
+        <ComparisonTableCTA
+          page="credit-card-comparison"
+          positionPrefix="summary_credit_card_cta"
+          services={[
+            {
+              name: "楽天カード",
+              url: RAKUTEN_CARD_A8_URL,
+              highlight:
+                "年会費無料。楽天市場・楽天ペイ・ふるさと納税と組み合わせやすい定番カード。",
+              price: "年会費無料",
+              badge: "PR",
+            },
+          ]}
+        />
+      </section>
 
       {/* Table of Contents */}
       <div className="bg-card-bg border border-card-border rounded-xl p-6 mb-8">
@@ -659,7 +686,8 @@ export default function CreditCardComparisonPage() {
               card: "楽天カード",
               reason:
                 "楽天市場でSPU適用3.0%以上、お買い物マラソンやスーパーSALEでさらにポイントアップ。楽天経済圏で生活するなら圧倒的にお得なメインカードです。",
-              url: "https://www.rakuten-card.co.jp/",
+              url: RAKUTEN_CARD_A8_URL,
+              sponsored: true,
             },
             {
               scene: "コンビニ・ファストフード店をよく利用する",
@@ -704,7 +732,11 @@ export default function CreditCardComparisonPage() {
               <a
                 href={item.url}
                 target="_blank"
-                rel="nofollow noopener noreferrer"
+                rel={
+                  item.sponsored
+                    ? "nofollow sponsored noopener noreferrer"
+                    : "nofollow noopener noreferrer"
+                }
                 className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"
               >
                 {item.card}を詳しく見る
@@ -862,6 +894,52 @@ export default function CreditCardComparisonPage() {
         </div>
       </section>
 
+      {/* Monetized CTA */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">
+          楽天経済圏を使うなら楽天カードから確認
+        </h2>
+        <p className="text-sm text-muted leading-relaxed mb-4">
+          楽天市場、楽天ペイ、楽天証券、ふるさと納税を使う機会がある方は、年会費無料の楽天カードを先に確認しておくとポイント還元を取りこぼしにくくなります。
+        </p>
+        <ComparisonTableCTA
+          page="credit-card-comparison"
+          positionPrefix="footer_credit_card_cta"
+          services={[
+            {
+              name: "楽天カード",
+              url: RAKUTEN_CARD_A8_URL,
+              highlight:
+                "年会費無料。楽天市場や楽天ペイ、ふるさと納税と組み合わせやすい定番カード。",
+              price: "年会費無料",
+              badge: "PR",
+            },
+          ]}
+        />
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-bold mb-4">あわせて見直したい固定費</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/guide/furusato-tax-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ふるさと納税サイト比較</span>
+            <p className="text-xs text-muted mt-1">楽天ポイントを活かす節税系の回遊先</p>
+          </Link>
+          <Link href="/guide/online-broker-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ネット証券比較</span>
+            <p className="text-xs text-muted mt-1">楽天証券やNISA口座もあわせて確認</p>
+          </Link>
+          <Link href="/guide/sim-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">格安SIM比較</span>
+            <p className="text-xs text-muted mt-1">通信費とスマホ決済の相性を確認</p>
+          </Link>
+          <Link href="/guide/mobile-router-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">モバイルWi-Fi比較</span>
+            <p className="text-xs text-muted mt-1">自宅・外出先の通信費も見直す</p>
+          </Link>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="bg-card-bg border border-card-border rounded-xl p-8 text-center">
         <h2 className="text-xl font-bold mb-3">
@@ -872,9 +950,9 @@ export default function CreditCardComparisonPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <a
-            href="https://www.rakuten-card.co.jp/"
+            href={RAKUTEN_CARD_A8_URL}
             target="_blank"
-            rel="nofollow noopener noreferrer"
+            rel="nofollow sponsored noopener noreferrer"
             className="inline-block bg-pink-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-pink-700 transition-colors"
           >
             楽天カード

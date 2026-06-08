@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ニューボーンフォト・出張撮影比較5選｜料金・撮影スタイルを徹底解説",
@@ -87,14 +86,21 @@ export default function BabyPhotoComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">予約・カタログ請求</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "fotowa", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "出張撮影No.1", price: "21,780円〜", badge: "出張定番" },
-            { name: "スタジオアリス", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "スタジオ最大手", price: "撮影料無料キャンペーン" },
-            { name: "スタジオマリオ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "コスパ重視", price: "撮影料無料キャンペーン" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">出産準備と記念撮影に役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/birth-cost-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">出産費用シミュレーター</span>
+            <p className="text-xs text-muted mt-1">撮影費を含めた準備費確認に</p>
+          </Link>
+          <Link href="/tools/baby-growth-tracker" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">赤ちゃん成長記録</span>
+            <p className="text-xs text-muted mt-1">撮影時期の記録にも使える</p>
+          </Link>
+          <Link href="/guide/photo-studio-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">フォトスタジオ比較</span>
+            <p className="text-xs text-muted mt-1">七五三・家族写真も検討</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

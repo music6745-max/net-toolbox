@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】通信制高校おすすめ比較5選｜学費・サポート・進学実績を徹底解説",
@@ -92,14 +91,21 @@ export default function OnlineHighSchoolComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料資料請求・体験相談</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ズバット通信制高校", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "一括資料請求", price: "完全無料", badge: "おすすめ" },
-            { name: "通信制高校ナビ", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "全国の通信制高校情報", price: "完全無料" },
-            { name: "なるには進学サイト", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "進路選択総合", price: "完全無料" },
-          ]}
-        />
+        <h2 className="text-xl font-bold mb-4">進路と学習計画に役立つ内部ツール</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <Link href="/tools/education-cost-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">教育費シミュレーター</span>
+            <p className="text-xs text-muted mt-1">学費と支援金の検討に</p>
+          </Link>
+          <Link href="/tools/study-plan-generator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">学習計画ジェネレーター</span>
+            <p className="text-xs text-muted mt-1">自宅学習の設計に</p>
+          </Link>
+          <Link href="/guide/tutoring-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">学習塾比較</span>
+            <p className="text-xs text-muted mt-1">進学サポートも確認</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】自動車ローン金利徹底比較｜銀行・ディーラー・残価設定を解説",
@@ -175,37 +174,25 @@ export default function CarLoanRateComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
-        <Link href="/tools/loan-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
-          <div className="font-bold text-sm mb-1">ローン返済シミュレータを使う</div>
-          <p className="text-xs text-muted">借入額・金利・期間から毎月の返済額と総支払利息を自動計算 →</p>
-        </Link>
+        <h2 className="text-xl font-bold mb-4">ローン総額を先に試算する</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/tools/loan-calculator" className="block bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl p-5 transition-colors">
+            <div className="font-bold text-sm mb-1">毎月返済額を計算する</div>
+            <p className="text-xs text-muted">借入額・金利・期間から、月額返済と総支払額をすぐ確認できます。</p>
+          </Link>
+          <Link href="/tools/car-loan-simulator" className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <div className="font-bold text-sm mb-1">車ローン専用で試算する</div>
+            <p className="text-xs text-muted">頭金、ボーナス払い、返済年数を入れて購入前の予算を固めます。</p>
+          </Link>
+          <Link href="/guide/car-loan-comparison" className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <div className="font-bold text-sm mb-1">マイカーローン比較へ</div>
+            <p className="text-xs text-muted">銀行系、ディーラー系、残価設定型の違いを比較します。</p>
+          </Link>
+          <Link href="/guide/car-insurance-comparison" className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <div className="font-bold text-sm mb-1">自動車保険も見直す</div>
+            <p className="text-xs text-muted">ローンだけでなく、保険料を含めた固定費を下げます。</p>
+          </Link>
+        </div>
       </section>
 
       <section className="mb-10">

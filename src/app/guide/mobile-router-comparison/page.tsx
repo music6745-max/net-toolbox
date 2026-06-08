@@ -47,6 +47,29 @@ const services = [
   { name: "ZEUS WiFi", type: "クラウドSIM", rate: "月額2,361円〜", points: ["20/50/100GBから選べる", "縛りなしプランあり", "シンプル料金体系"], bestFor: "ライトユーザー・データ量に合わせたい人。" },
 ];
 
+const mobileRouterAffiliateServices = [
+  {
+    name: "リチャージWiFi",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8J7OXE+57FS+5YZ77",
+    highlight: "買い切り・チャージ式で短期利用やサブ回線に使いやすい",
+    price: "従量課金",
+    badge: "工事なし",
+  },
+  {
+    name: "TCOMヒカリ",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8GTYIA+3HKU+1ZG8B6",
+    highlight: "在宅勤務や家族利用で通信量が多い場合の固定回線候補",
+    price: "月額制",
+    badge: "光回線",
+  },
+  {
+    name: "ITSUKI光",
+    url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+8NDQ5U+4VXM+5YRHE",
+    highlight: "シンプル料金の光回線。モバイルWi-Fiで足りない場合に比較",
+    price: "月額制",
+  },
+];
+
 export default function MobileRouterComparisonPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -89,6 +112,20 @@ export default function MobileRouterComparisonPage() {
           <p><span className="font-bold">海外出張あり → MUGEN WiFi</span></p>
         </div>
       </div>
+
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold mb-4">
+          工事なし・固定回線の候補を先に比較
+        </h2>
+        <p className="text-sm text-muted leading-relaxed mb-4">
+          短期利用や外出先中心ならチャージ式WiFi、在宅勤務や家族利用が多いなら光回線も候補です。用途に合わせて通信費の見直し先を確認できます。
+        </p>
+        <ComparisonTableCTA
+          page="mobile-router-comparison"
+          positionPrefix="summary_mobile_router_cta"
+          services={mobileRouterAffiliateServices}
+        />
+      </section>
 
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">モバイルWi-Fi選びの基本</h2>
@@ -147,29 +184,14 @@ export default function MobileRouterComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">家計管理に役立つツール</h2>
+        <h2 className="text-xl font-bold mb-4">通信費を見直す候補</h2>
+        <p className="text-sm text-muted leading-relaxed mb-4">
+          迷う場合は、まずモバイルWi-Fiで足りる通信量か、光回線が必要な使い方かを分けて比較しましょう。
+        </p>
         <ComparisonTableCTA
-          services={[
-            {
-              name: "弥生シリーズ",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU",
-              highlight: "確定申告・経理の定番ソフト",
-              price: "年額制",
-              badge: "定番",
-            },
-            {
-              name: "freee会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y",
-              highlight: "クラウド会計の代表格",
-              price: "月額制",
-            },
-            {
-              name: "マネーフォワード クラウド会計",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6",
-              highlight: "金融機関連携で自動仕訳",
-              price: "月額制",
-            },
-          ]}
+          page="mobile-router-comparison"
+          positionPrefix="footer_mobile_router_cta"
+          services={mobileRouterAffiliateServices}
         />
       </section>
 
@@ -183,6 +205,14 @@ export default function MobileRouterComparisonPage() {
           <Link href="/guide/sim-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">格安SIM比較</span>
             <p className="text-xs text-muted mt-1">スマホ通信費の削減</p>
+          </Link>
+          <Link href="/tools/mobile-rate-simulator" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">携帯料金シミュレーター</span>
+            <p className="text-xs text-muted mt-1">スマホ料金もあわせて試算</p>
+          </Link>
+          <Link href="/tools/broadband-comparison-tool" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">光回線比較ツール</span>
+            <p className="text-xs text-muted mt-1">固定回線が必要か確認</p>
           </Link>
         </div>
       </section>

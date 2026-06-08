@@ -1,5 +1,5 @@
 "use client";
-import { onAffiliateClick } from "@/lib/tracking";
+import { onAffiliateClick, trackEvent } from "@/lib/tracking";
 
 interface ServiceRow {
   name: string;
@@ -13,9 +13,36 @@ interface ComparisonTableCTAProps {
   services: ServiceRow[];
   /** Page identifier for GA4 event grouping (guide slug etc.) */
   page?: string;
+  /** Distinguishes repeated CTA blocks on the same page in GA4. */
+  positionPrefix?: string;
 }
 
-export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) {
+export function ComparisonTableCTA({
+  services,
+  page,
+  positionPrefix = "comparison_table",
+}: ComparisonTableCTAProps) {
+  const isInternalUrl = (url: string) => url.startsWith("/");
+  const onCtaClick = (svc: ServiceRow, position: string) => {
+    if (!isInternalUrl(svc.url)) {
+      return onAffiliateClick({
+        page,
+        position,
+        service: svc.name,
+        href: svc.url,
+      });
+    }
+
+    return () => {
+      trackEvent("internal_cta_click", {
+        page,
+        position,
+        service: svc.name,
+        url: svc.url.slice(0, 200),
+      });
+    };
+  };
+
   return (
     <div>
       {/* Desktop table */}
@@ -58,14 +85,13 @@ export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) 
                 <td className="p-4 border-b border-card-border text-center">
                   <a
                     href={svc.url}
-                    target="_blank"
-                    rel="nofollow sponsored noopener noreferrer"
-                    onClick={onAffiliateClick({
-                      page,
-                      position: `comparison_table_${i + 1}`,
-                      service: svc.name,
-                      href: svc.url,
-                    })}
+                    target={isInternalUrl(svc.url) ? undefined : "_blank"}
+                    rel={
+                      isInternalUrl(svc.url)
+                        ? undefined
+                        : "nofollow sponsored noopener noreferrer"
+                    }
+                    onClick={onCtaClick(svc, `${positionPrefix}_${i + 1}`)}
                     className="inline-block bg-primary text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                   >
                     申し込む
@@ -96,14 +122,13 @@ export function ComparisonTableCTA({ services, page }: ComparisonTableCTAProps) 
             <p className="text-sm font-medium mb-3">{svc.price}</p>
             <a
               href={svc.url}
-              target="_blank"
-              rel="nofollow sponsored noopener noreferrer"
-              onClick={onAffiliateClick({
-                page,
-                position: `comparison_table_mobile_${i + 1}`,
-                service: svc.name,
-                href: svc.url,
-              })}
+              target={isInternalUrl(svc.url) ? undefined : "_blank"}
+              rel={
+                isInternalUrl(svc.url)
+                  ? undefined
+                  : "nofollow sponsored noopener noreferrer"
+              }
+              onClick={onCtaClick(svc, `${positionPrefix}_mobile_${i + 1}`)}
               className="block text-center bg-primary text-white px-5 py-3 rounded-full text-sm font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
             >
               申し込む
