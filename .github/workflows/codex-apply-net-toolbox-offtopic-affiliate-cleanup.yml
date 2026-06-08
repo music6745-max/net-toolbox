@@ -1,0 +1,95 @@
+name: Codex Apply Net Toolbox Off Topic Affiliate Cleanup
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/codex-apply-net-toolbox-offtopic-affiliate-cleanup.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply off-topic affiliate cleanup and verify tree
+        run: |
+          set -euo pipefail
+          expected_base="2bf3d6a2f40e64252a99bbda7d0bc2d4a3a3862e"
+          expected_tree="c62a7d56913d549cdf6fa76a0a0a91d19eff5c3c"
+          actual_base="$(git rev-parse HEAD^)"
+          if [ "$actual_base" != "$expected_base" ]; then
+            echo "Unexpected workflow parent: $actual_base"
+            exit 1
+          fi
+          node <<'NODE'
+          const fs = require('fs');
+
+          function removeSectionContaining(file, needle) {
+            const before = fs.readFileSync(file, 'utf8');
+            const idx = before.indexOf(needle);
+            if (idx === -1) throw new Error(`Needle not found in ${file}`);
+            const start = before.lastIndexOf('<section', idx);
+            const endToken = before.indexOf('</section>', idx);
+            if (start === -1 || endToken === -1) throw new Error(`Section not found in ${file}`);
+            const end = endToken + '</section>'.length;
+            let after = before.slice(0, start) + before.slice(end);
+            after = after.replace(/^import \{ ComparisonTableCTA \} from "@\/components\/ComparisonTableCTA";\r?\n/m, '');
+            fs.writeFileSync(file, after, 'utf8');
+          }
+
+          removeSectionContaining(
+            'src/app/guide/online-counseling-comparison/page.tsx',
+            'https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6',
+          );
+
+          const streaming = 'src/app/guide/streaming-comparison/page.tsx';
+          let text = fs.readFileSync(streaming, 'utf8');
+          const oldParagraph = 'Netflix・U-NEXT・Hulu などの日本の動画サービスは、海外からアクセスすると地域制限で視聴できないことがあります。動画視聴に特化した「Glocal VPN」なら、海外赴任・出張・旅行先からでも日本の動画コンテンツをスマートに楽しめます。';
+          const newParagraph = 'Netflix・U-NEXT・Hulu などの日本の動画サービスは、海外からアクセスすると地域制限で視聴できないことがあります。VPNの利用可否や速度、対応地域はサービスごとに異なるため、動画視聴の前に専用の比較ガイドで確認しておきましょう。';
+          if (!text.includes(oldParagraph)) throw new Error('Streaming old paragraph not found');
+          text = text.replace(oldParagraph, newParagraph);
+          const oldLink = `<a
+          href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+3YW1YQ+50C8+5YJRM"
+          target="_blank"
+          rel="noopener noreferrer nofollow sponsored"
+          className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors"
+        >
+          Glocal VPN公式サイトを見る
+        </a>`;
+          const newLink = `<Link
+          href="/guide/vpn-comparison"
+          className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-colors"
+        >
+          VPN比較ガイドを見る
+        </Link>`;
+          if (!text.includes(oldLink)) throw new Error('Streaming old link not found');
+          text = text.replace(oldLink, newLink);
+          fs.writeFileSync(streaming, text, 'utf8');
+
+          const online = fs.readFileSync('src/app/guide/online-counseling-comparison/page.tsx', 'utf8');
+          if (online.includes('px.a8.net') || online.includes('ComparisonTableCTA')) {
+            throw new Error('Online counseling target still contains A8 or ComparisonTableCTA');
+          }
+          const streamingAfter = fs.readFileSync(streaming, 'utf8');
+          if (streamingAfter.includes('px.a8.net') || streamingAfter.includes('Glocal VPN')) {
+            throw new Error('Streaming target still contains direct A8 or Glocal VPN');
+          }
+          NODE
+          rm -f .github/workflows/codex-apply-net-toolbox-offtopic-affiliate-cleanup.yml
+          git add -A
+          actual_tree="$(git write-tree)"
+          if [ "$actual_tree" != "$expected_tree" ]; then
+            echo "Tree mismatch: $actual_tree"
+            git diff --cached --stat
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --cached --quiet || git commit -m "sync: reduce off topic affiliate ctas"
+          git push origin HEAD:master
