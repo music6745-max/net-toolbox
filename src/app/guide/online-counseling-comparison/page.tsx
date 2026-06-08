@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】オンラインカウンセリング比較おすすめ5選｜料金・特徴を徹底解説",
@@ -136,33 +135,6 @@ export default function OnlineCounselingComparisonPage() {
             オンラインカウンセリングは「形式」「料金」「カウンセラーの資格」で選ぶのがポイント。プロに相談するハードルが下がり、心の健康を保つセルフケアの選択肢が広がります。通信のプライバシーを守るために、自宅のネット環境とセキュリティ対策（VPN利用など）も併せて整えておくと安心です。
           </p>
         </div>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">安心の通信環境を整えるVPN</h2>
-        <ComparisonTableCTA
-          services={[
-            {
-              name: "MillenVPN",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+41V7ZM+3JTE+HV7V6",
-              highlight: "国産で日本語サポート充実",
-              price: "月額制",
-              badge: "国産",
-            },
-            {
-              name: "NordVPN",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+60OXD",
-              highlight: "世界最大手・高セキュリティ",
-              price: "月額制",
-            },
-            {
-              name: "ExpressVPN",
-              url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3WIBJM+5JSS+5YRHE",
-              highlight: "業界最速クラスの通信速度",
-              price: "月額制",
-            },
-          ]}
-        />
       </section>
 
       <section className="mb-10">
