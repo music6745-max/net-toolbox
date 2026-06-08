@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】車買取一括査定サービス比較5選｜高く売るコツも解説",
@@ -92,17 +91,6 @@ export default function CarBuybackComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料一括査定を依頼する</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "ガリバー", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "業界最大手", price: "完全無料", badge: "定番" },
-            { name: "MOTA車買取", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "上位3社からだけ連絡", price: "完全無料" },
-            { name: "ユーカーパック", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "営業電話なし", price: "完全無料" },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/used-car-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -112,6 +100,14 @@ export default function CarBuybackComparisonPage() {
           <Link href="/guide/auto-lease-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">カーリース比較</span>
             <p className="text-xs text-muted mt-1">次の車はリースも検討</p>
+          </Link>
+          <Link href="/guide/car-purchase-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">車購入比較</span>
+            <p className="text-xs text-muted mt-1">購入先と買い方を整理</p>
+          </Link>
+          <Link href="/guide/bike-buyback-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">バイク買取比較</span>
+            <p className="text-xs text-muted mt-1">二輪の売却も確認</p>
           </Link>
         </div>
       </section>

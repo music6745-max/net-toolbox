@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ArticleJsonLd } from "@/components/JsonLd";
-import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 
 export const metadata: Metadata = {
   title: "【2026年最新】ネット銀行口座開設キャンペーン比較5選｜金利・手数料・特典を徹底解説",
@@ -87,17 +86,6 @@ export default function BankAccountComparisonPage() {
       </section>
 
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">無料口座開設キャンペーン</h2>
-        <ComparisonTableCTA
-          services={[
-            { name: "住信SBIネット銀行", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4XF71U+35XE+609HU", highlight: "メインバンク向き", price: "口座開設無料", badge: "おすすめ" },
-            { name: "楽天銀行", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+1UOKJ6+3SPO+9FDI8Y", highlight: "楽天ポイント", price: "口座開設無料" },
-            { name: "PayPay銀行", url: "https://px.a8.net/svt/ejp?a8mat=4B1DXI+4W8BUA+4JGQ+60WN6", highlight: "PayPay連携", price: "口座開設無料" },
-          ]}
-        />
-      </section>
-
-      <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/guide/credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
@@ -107,6 +95,14 @@ export default function BankAccountComparisonPage() {
           <Link href="/guide/online-broker-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">ネット証券比較</span>
             <p className="text-xs text-muted mt-1">投資も同時に</p>
+          </Link>
+          <Link href="/guide/business-bank-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">法人口座比較</span>
+            <p className="text-xs text-muted mt-1">事業用の口座選び</p>
+          </Link>
+          <Link href="/guide/budget-sim-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">家計管理アプリ比較</span>
+            <p className="text-xs text-muted mt-1">口座管理とあわせて確認</p>
           </Link>
         </div>
       </section>
