@@ -1,0 +1,49 @@
+name: Codex Apply Net Toolbox Beauty Hair A8 Cleanup
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/codex-sync-net-toolbox-beauty-hair-a8.patch.br.b64
+      - .github/workflows/codex-apply-net-toolbox-beauty-hair-a8.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decode and verify patch
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const zlib = require('zlib');
+          const payloadPath = '.github/codex-sync-net-toolbox-beauty-hair-a8.patch.br.b64';
+          const expected = '613e545dc1cd1db7d242ce0a816d74bf9beacd3c61e1d35cfcbf51b46853b9da';
+          const compressed = Buffer.from(fs.readFileSync(payloadPath, 'utf8').trim(), 'base64');
+          const actual = crypto.createHash('sha256').update(compressed).digest('hex');
+          if (actual !== expected) {
+            throw new Error(`Patch SHA mismatch: ${actual}`);
+          }
+          fs.writeFileSync('codex-sync.patch', zlib.brotliDecompressSync(compressed));
+          NODE
+      - name: Apply patch
+        run: |
+          git apply --check codex-sync.patch
+          git apply codex-sync.patch
+      - name: Commit applied source sync
+        run: |
+          rm -f codex-sync.patch
+          rm -f .github/codex-sync-net-toolbox-beauty-hair-a8.patch.br.b64
+          rm -f .github/workflows/codex-apply-net-toolbox-beauty-hair-a8.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "sync: replace beauty hair a8 ctas"
+          git push origin HEAD:master
