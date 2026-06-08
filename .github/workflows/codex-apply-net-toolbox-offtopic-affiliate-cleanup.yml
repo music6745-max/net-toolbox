@@ -20,8 +20,8 @@ jobs:
       - name: Apply patch and verify tree
         run: |
           set -euo pipefail
-          expected_base="736d37ae7c8fd1d3f228be50405fd75b69e29ca9"
-          expected_tree="c62a7d56913d549cdf6fa76a0a0a91d19eff5c3c"
+          expected_base="06116d3b57e3f914d5d02856c3a63b019aa38d5f"
+          expected_tree="91d0d64b37ed8752dbfc13c631ac1f10c1e23627"
           actual_base="$(git rev-parse HEAD^)"
           if [ "$actual_base" != "$expected_base" ]; then
             echo "Unexpected workflow parent: $actual_base"
@@ -75,10 +75,16 @@ jobs:
                    <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           diff --git a/src/app/guide/streaming-comparison/page.tsx b/src/app/guide/streaming-comparison/page.tsx
-          index bb5fcff..f347327 100644
+          index bb5fcff..04f8bbd 100644
           --- a/src/app/guide/streaming-comparison/page.tsx
           +++ b/src/app/guide/streaming-comparison/page.tsx
-          @@ -864,16 +864,14 @@ export default function StreamingComparisonPage() {
+          @@ -858,22 +858,19 @@ export default function StreamingComparisonPage() {
+                   </div>
+                 </section>
+           
+          -      {/* Overseas viewing CTA - Glocal VPN */}
+                 <section className="bg-amber-50 dark:bg-amber-900/40 border border-amber-200 dark:border-amber-800 rounded-xl p-6 mb-8">
+                   <h2 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">
                      海外から日本の動画配信を観たい方へ
                    </h2>
                    <p className="text-sm text-slate-700 dark:text-slate-200 mb-3">
