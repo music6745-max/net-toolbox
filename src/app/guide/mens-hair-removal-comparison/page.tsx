@@ -96,9 +96,9 @@ export default function MensHairRemovalComparisonPage() {
             <span className="text-sm font-bold hover:text-primary">AGAクリニック比較</span>
             <p className="text-xs text-muted mt-1">男性向け美容医療</p>
           </Link>
-          <Link href="/guide/beauty-clinic-ranking-2026" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">美容クリニックランキング</span>
-            <p className="text-xs text-muted mt-1">美容医療の全体比較</p>
+          <Link href="/guide/whitening-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">ホワイトニングクリニック比較</span>
+            <p className="text-xs text-muted mt-1">美容医療に近い歯科ケア</p>
           </Link>
           <Link href="/guide/beauty-clinic-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">美容クリニック比較</span>
