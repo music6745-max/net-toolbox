@@ -67,6 +67,8 @@ const RATIOS = [
   },
 ];
 
+const formatPreviewPx = (value: number) => `${Math.round(value * 100) / 100}px`;
+
 export default function AspectRatioListPage() {
   const [search, setSearch] = useState("");
   const [widthIn, setWidthIn] = useState(1920);
@@ -134,8 +136,8 @@ export default function AspectRatioListPage() {
                 <div
                   className="bg-primary/20 border-2 border-primary rounded"
                   style={{
-                    width: `${Math.min(56, 56 * parseFloat(r.decimal))}px`,
-                    height: `${Math.min(36, 36 / parseFloat(r.decimal))}px`,
+                    width: formatPreviewPx(Math.min(56, 56 * parseFloat(r.decimal))),
+                    height: formatPreviewPx(Math.min(36, 36 / parseFloat(r.decimal))),
                   }}
                 />
               </div>
