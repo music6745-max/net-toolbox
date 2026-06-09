@@ -1134,7 +1134,7 @@ export default function SimComparisonPage() {
         </Link>
       </section>
       <GuideRelatedLinks currentSlug="sim-comparison" />
-      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
+      <AdSenseUnit adFormat="auto" />
     </div>
   );
 }

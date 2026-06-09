@@ -992,7 +992,7 @@ export default function CreditCardComparisonPage() {
         </div>
       </section>
       <GuideRelatedLinks currentSlug="credit-card-comparison" />
-      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
+      <AdSenseUnit adFormat="auto" />
     </div>
   );
 }

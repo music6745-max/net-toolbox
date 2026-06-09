@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 type AdFormat = "auto" | "rectangle" | "horizontal" | "vertical";
 
 interface AdSenseUnitProps {
-  /** AdSense data-ad-slot ID. Pass "0000000000" as a placeholder until real slots are issued. */
+  /** AdSense data-ad-slot ID. Leave unset until real slots are issued. */
   adSlot?: string;
   /** Legacy alias for adSlot. */
   slot?: string;
@@ -18,10 +18,9 @@ interface AdSenseUnitProps {
 /**
  * AdSense display ad unit (pub-6483317297217533).
  *
- * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED. When the env var is unset
- * or not "true", a dark-mode-friendly placeholder is rendered (or nothing in
- * production). After AdSense approval, set NEXT_PUBLIC_ADSENSE_ENABLED=true
- * and replace placeholder slot IDs.
+ * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED and a real ad slot. When
+ * either is missing, a dark-mode-friendly placeholder is rendered in
+ * development and nothing is rendered in production.
  */
 export function AdSenseUnit({
   adSlot,
@@ -30,15 +29,17 @@ export function AdSenseUnit({
   format,
   className = "",
 }: AdSenseUnitProps) {
-  const resolvedSlot = adSlot ?? slot;
+  const rawSlot = adSlot ?? slot;
+  const resolvedSlot = rawSlot && rawSlot !== "0000000000" ? rawSlot : undefined;
   const resolvedFormat: AdFormat = adFormat ?? format ?? "auto";
   const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
+  const shouldRenderAd = enabled && Boolean(resolvedSlot);
 
   const adRef = useRef<HTMLModElement>(null);
   const pushed = useRef(false);
 
   useEffect(() => {
-    if (!enabled) return;
+    if (!shouldRenderAd) return;
     if (pushed.current) return;
     try {
       const adsbygoogle =
@@ -48,9 +49,9 @@ export function AdSenseUnit({
     } catch {
       // AdSense not loaded (adblocker etc.)
     }
-  }, [enabled]);
+  }, [shouldRenderAd]);
 
-  if (!enabled) {
+  if (!shouldRenderAd) {
     if (process.env.NODE_ENV === "production") return null;
     return (
       <div

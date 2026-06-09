@@ -439,7 +439,7 @@ export default function GasCompanyComparisonPage() {
         </div>
       </section>
 
-      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
+      <AdSenseUnit adFormat="auto" />
     </div>
   );
 }
