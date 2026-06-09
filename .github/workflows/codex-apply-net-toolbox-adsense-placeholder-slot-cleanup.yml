@@ -17,142 +17,47 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Apply patch and verify tree
+      - name: Apply deterministic replacements and verify tree
         run: |
           set -euo pipefail
-          expected_base="f70d154013c84a5210077602a2e82d77fee190ba"
+          expected_base="367374acb7bad669d0a7920070c522daa186f948"
           expected_tree="efd9477016acee2a9d24272f0a7047d9b95d063e"
           actual_base="$(git rev-parse HEAD^)"
           if [ "$actual_base" != "$expected_base" ]; then
             echo "Unexpected workflow parent: $actual_base"
             exit 1
           fi
-          git apply --whitespace=nowarn <<'PATCH'
-          diff --git a/src/app/guide/credit-card-comparison/page.tsx b/src/app/guide/credit-card-comparison/page.tsx
-          index a48311a..7b55c60 100644
-          --- a/src/app/guide/credit-card-comparison/page.tsx
-          +++ b/src/app/guide/credit-card-comparison/page.tsx
-          @@ -992,7 +992,7 @@ export default function CreditCardComparisonPage() {
-                   </div>
-                 </section>
-                 <GuideRelatedLinks currentSlug="credit-card-comparison" />
-          -      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
-          +      <AdSenseUnit adFormat="auto" />
-               </div>
-             );
-           }
-          diff --git a/src/app/guide/electric-company-comparison/page.tsx b/src/app/guide/electric-company-comparison/page.tsx
-          index bfd5f7a..4b01298 100644
-          --- a/src/app/guide/electric-company-comparison/page.tsx
-          +++ b/src/app/guide/electric-company-comparison/page.tsx
-          @@ -445,7 +445,7 @@ export default function ElectricCompanyComparisonPage() {
-                 </Link>
-               </section>
-           
-          -      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
-          +      <AdSenseUnit adFormat="auto" />
-             </div>
-           );
+          node <<'NODE'
+          const fs = require('fs');
+          const files = [
+            'src/app/guide/credit-card-comparison/page.tsx',
+            'src/app/guide/electric-company-comparison/page.tsx',
+            'src/app/guide/gas-company-comparison/page.tsx',
+            'src/app/guide/hikari-fiber-comparison/page.tsx',
+            'src/app/guide/sim-comparison/page.tsx',
+          ];
+          for (const file of files) {
+            const before = fs.readFileSync(file, 'utf8');
+            const after = before.replace('<AdSenseUnit adSlot="0000000000" adFormat="auto" />', '<AdSenseUnit adFormat="auto" />');
+            if (after === before) throw new Error(`No placeholder slot replacement in ${file}`);
+            fs.writeFileSync(file, after, 'utf8');
           }
-          diff --git a/src/app/guide/gas-company-comparison/page.tsx b/src/app/guide/gas-company-comparison/page.tsx
-          index 46714ae..e944dc7 100644
-          --- a/src/app/guide/gas-company-comparison/page.tsx
-          +++ b/src/app/guide/gas-company-comparison/page.tsx
-          @@ -439,7 +439,7 @@ export default function GasCompanyComparisonPage() {
-                 </div>
-               </section>
-           
-          -      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
-          +      <AdSenseUnit adFormat="auto" />
-             </div>
-           );
+          const component = 'src/components/AdSenseUnit.tsx';
+          let text = fs.readFileSync(component, 'utf8');
+          const replacements = [
+            ['/** AdSense data-ad-slot ID. Pass "0000000000" as a placeholder until real slots are issued. */', '/** AdSense data-ad-slot ID. Leave unset until real slots are issued. */'],
+            [' * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED. When the env var is unset\n * or not "true", a dark-mode-friendly placeholder is rendered (or nothing in\n * production). After AdSense approval, set NEXT_PUBLIC_ADSENSE_ENABLED=true\n * and replace placeholder slot IDs.', ' * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED and a real ad slot. When\n * either is missing, a dark-mode-friendly placeholder is rendered in\n * development and nothing is rendered in production.'],
+            ['  const resolvedSlot = adSlot ?? slot;\n  const resolvedFormat: AdFormat = adFormat ?? format ?? "auto";\n  const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";', '  const rawSlot = adSlot ?? slot;\n  const resolvedSlot = rawSlot && rawSlot !== "0000000000" ? rawSlot : undefined;\n  const resolvedFormat: AdFormat = adFormat ?? format ?? "auto";\n  const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";\n  const shouldRenderAd = enabled && Boolean(resolvedSlot);'],
+            ['    if (!enabled) return;', '    if (!shouldRenderAd) return;'],
+            ['  }, [enabled]);', '  }, [shouldRenderAd]);'],
+            ['  if (!enabled) {', '  if (!shouldRenderAd) {'],
+          ];
+          for (const [from, to] of replacements) {
+            if (!text.includes(from)) throw new Error(`Component replacement missing: ${from}`);
+            text = text.replace(from, to);
           }
-          diff --git a/src/app/guide/hikari-fiber-comparison/page.tsx b/src/app/guide/hikari-fiber-comparison/page.tsx
-          index d727c93..98b7b81 100644
-          --- a/src/app/guide/hikari-fiber-comparison/page.tsx
-          +++ b/src/app/guide/hikari-fiber-comparison/page.tsx
-          @@ -467,7 +467,7 @@ export default function HikariFiberComparisonPage() {
-                 </Link>
-               </section>
-           
-          -      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
-          +      <AdSenseUnit adFormat="auto" />
-             </div>
-           );
-          }
-          diff --git a/src/app/guide/sim-comparison/page.tsx b/src/app/guide/sim-comparison/page.tsx
-          index 3ecdfbf..781243b 100644
-          --- a/src/app/guide/sim-comparison/page.tsx
-          +++ b/src/app/guide/sim-comparison/page.tsx
-          @@ -1134,7 +1134,7 @@ export default function SimComparisonPage() {
-                 </Link>
-               </section>
-               <GuideRelatedLinks currentSlug="sim-comparison" />
-          -      <AdSenseUnit adSlot="0000000000" adFormat="auto" />
-          +      <AdSenseUnit adFormat="auto" />
-             </div>
-           );
-          }
-          diff --git a/src/components/AdSenseUnit.tsx b/src/components/AdSenseUnit.tsx
-          index 0498e07..b2f0b4a 100644
-          --- a/src/components/AdSenseUnit.tsx
-          +++ b/src/components/AdSenseUnit.tsx
-          @@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
-           type AdFormat = "auto" | "rectangle" | "horizontal" | "vertical";
-           
-           interface AdSenseUnitProps {
-          -  /** AdSense data-ad-slot ID. Pass "0000000000" as a placeholder until real slots are issued. */
-          +  /** AdSense data-ad-slot ID. Leave unset until real slots are issued. */
-             adSlot?: string;
-             /** Legacy alias for adSlot. */
-             slot?: string;
-          @@ -18,10 +18,9 @@ interface AdSenseUnitProps {
-           /**
-            * AdSense display ad unit (pub-6483317297217533).
-            *
-          - * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED. When the env var is unset
-          - * or not "true", a dark-mode-friendly placeholder is rendered (or nothing in
-          - * production). After AdSense approval, set NEXT_PUBLIC_ADSENSE_ENABLED=true
-          - * and replace placeholder slot IDs.
-          + * Display is gated by NEXT_PUBLIC_ADSENSE_ENABLED and a real ad slot. When
-          + * either is missing, a dark-mode-friendly placeholder is rendered in
-          + * development and nothing is rendered in production.
-            */
-           export function AdSenseUnit({
-             adSlot,
-          @@ -30,15 +29,17 @@ export function AdSenseUnit({
-             format,
-             className = "",
-           }: AdSenseUnitProps) {
-          -  const resolvedSlot = adSlot ?? slot;
-          +  const rawSlot = adSlot ?? slot;
-          +  const resolvedSlot = rawSlot && rawSlot !== "0000000000" ? rawSlot : undefined;
-             const resolvedFormat: AdFormat = adFormat ?? format ?? "auto";
-             const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
-          +  const shouldRenderAd = enabled && Boolean(resolvedSlot);
-           
-             const adRef = useRef<HTMLModElement>(null);
-             const pushed = useRef(false);
-           
-             useEffect(() => {
-          -    if (!enabled) return;
-          +    if (!shouldRenderAd) return;
-               if (pushed.current) return;
-               try {
-                 const adsbygoogle =
-          @@ -48,9 +49,9 @@ export function AdSenseUnit({
-               } catch {
-                 // AdSense not loaded (adblocker etc.)
-               }
-          -  }, [enabled]);
-          +  }, [shouldRenderAd]);
-           
-          -  if (!enabled) {
-          +  if (!shouldRenderAd) {
-               if (process.env.NODE_ENV === "production") return null;
-               return (
-                 <div
-          PATCH
+          fs.writeFileSync(component, text, 'utf8');
+          NODE
           rm -f .github/workflows/codex-apply-net-toolbox-adsense-placeholder-slot-cleanup.yml
           git add -A
           if git grep -n -E 'adSlot="0000000000"|slot="0000000000"' -- src; then
