@@ -30,7 +30,7 @@ export function AdSenseUnit({
   className = "",
 }: AdSenseUnitProps) {
   const rawSlot = adSlot ?? slot;
-  const resolvedSlot = rawSlot && rawSlot !== "0000000000" ? rawSlot : undefined;
+  const resolvedSlot = rawSlot && !/^0{10}$/.test(rawSlot) ? rawSlot : undefined;
   const resolvedFormat: AdFormat = adFormat ?? format ?? "auto";
   const enabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
   const shouldRenderAd = enabled && Boolean(resolvedSlot);

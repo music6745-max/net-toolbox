@@ -52,7 +52,7 @@ function numberToKanji(num: bigint, daiji: boolean): string {
 
 const KANJI_MAP_NORMAL: Record<string, number> = {
   "〇": 0, "零": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9,
-  "十": 10, "百": 100, "千": 1000, "万": 10000, "億": 100000000, "兆": 1000000000000,
+  "十": 10, "百": 100, "千": 1000, "万": 10000, "億": 10 ** 8, "兆": 10 ** 12,
 };
 const KANJI_MAP_DAIJI: Record<string, number> = {
   "壱": 1, "弐": 2, "参": 3, "伍": 5, "拾": 10,
@@ -92,7 +92,7 @@ function kanjiToNumber(text: string): string {
   }
 }
 
-const EXAMPLES = [1, 10, 100, 1000, 10000, 100000, 1000000, 100000000, 1000000000000];
+const EXAMPLES = [1, 10, 100, 1000, 10000, 100000, 1000000, 100000000, 10 ** 12];
 
 export default function NumberToKanjiPage() {
   const [input, setInput] = useState("");
