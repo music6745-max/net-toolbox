@@ -442,6 +442,15 @@ export const guides: Guide[] = [
     icon: "🚙",
   },
   {
+    slug: "car-insurance-renewal-timing",
+    title: "自動車保険の更新は何日前から？見積もり比較のタイミングと必要書類",
+    description:
+      "自動車保険の更新前に見積もりを取る最適な時期、必要書類、保険料が変わりやすい条件を整理。",
+    category: "金融",
+    readTime: "8分",
+    icon: "🚗",
+  },
+  {
     slug: "crypto-exchange-comparison",
     title:
       "【2026年最新】仮想通貨取引所比較おすすめ5選｜手数料・取扱通貨・セキュリティを徹底解説",
@@ -1944,6 +1953,7 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "credit-card-comparison": "金融",
   "insurance-comparison": "金融",
   "car-insurance-comparison": "金融",
+  "car-insurance-renewal-timing": "金融",
   "pet-insurance-comparison": "金融",
   "bicycle-insurance-comparison": "金融",
   "housing-loan-comparison": "金融",

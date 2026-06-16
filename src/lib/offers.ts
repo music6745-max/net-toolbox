@@ -55,6 +55,17 @@ export const offers: Offer[] = [
     note: "FP無料相談。ライフプラン系ツールから。",
     category: "日常ツール",
   },
+  {
+    id: "sbi-insweb-auto",
+    service: "インズウェブ自動車保険一括見積",
+    provider: "a8net",
+    payout_yen: 1714,
+    official_url: "https://www.inzweb.com/",
+    affiliate_url: "https://px.a8.net/svt/ejp?a8mat=4B1O1P+47857E+2PS+15RZIP",
+    status: "active",
+    note: "SBIホールディングス 2026-04-24承認。成果条件: 自動車保険一括見積もり申込み。EPC 30.56 / 確定率 86.11%。",
+    category: "自動車",
+  },
 
   // ============ money-navi へのクロスドメインリンク ============
   // これ自体は 0円だが、money-navi 側で高単価オファーに接続される
