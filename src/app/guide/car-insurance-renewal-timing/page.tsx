@@ -278,6 +278,24 @@ export default function CarInsuranceRenewalTimingPage() {
             </span>
             <p className="text-xs text-muted mt-1">保険料を含めた年間コストを試算</p>
           </Link>
+          <Link
+            href="/guide/car-insurance-required-documents"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">
+              見積もりに必要な書類
+            </span>
+            <p className="text-xs text-muted mt-1">保険証券・車検証・免許証を確認</p>
+          </Link>
+          <Link
+            href="/guide/car-insurance-expired-renewal"
+            className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+          >
+            <span className="text-sm font-bold hover:text-primary">
+              満期日を過ぎたときの対応
+            </span>
+            <p className="text-xs text-muted mt-1">更新忘れ時の確認手順</p>
+          </Link>
         </div>
       </section>
     </main>

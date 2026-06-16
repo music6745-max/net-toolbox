@@ -451,6 +451,24 @@ export const guides: Guide[] = [
     icon: "🚗",
   },
   {
+    slug: "car-insurance-required-documents",
+    title: "自動車保険の見積もりに必要な書類と入力項目チェックリスト",
+    description:
+      "自動車保険の一括見積もりや乗り換え前に用意する書類、確認しておく入力項目を整理。",
+    category: "金融",
+    readTime: "7分",
+    icon: "📄",
+  },
+  {
+    slug: "car-insurance-expired-renewal",
+    title: "自動車保険の満期日を過ぎたらどうする？無保険期間を避ける確認手順",
+    description:
+      "自動車保険の満期日を過ぎた、更新を忘れた、乗り換えが間に合わないときの確認手順を整理。",
+    category: "金融",
+    readTime: "7分",
+    icon: "🚨",
+  },
+  {
     slug: "crypto-exchange-comparison",
     title:
       "【2026年最新】仮想通貨取引所比較おすすめ5選｜手数料・取扱通貨・セキュリティを徹底解説",
@@ -1954,6 +1972,8 @@ const GENRE_BY_SLUG: Record<string, Genre> = {
   "insurance-comparison": "金融",
   "car-insurance-comparison": "金融",
   "car-insurance-renewal-timing": "金融",
+  "car-insurance-required-documents": "金融",
+  "car-insurance-expired-renewal": "金融",
   "pet-insurance-comparison": "金融",
   "bicycle-insurance-comparison": "金融",
   "housing-loan-comparison": "金融",
