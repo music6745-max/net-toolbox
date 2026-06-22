@@ -22,6 +22,10 @@ export function ComparisonTableCTA({
   page,
   positionPrefix = "comparison_table",
 }: ComparisonTableCTAProps) {
+  if (process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE !== "false") {
+    return null;
+  }
+
   const isInternalUrl = (url: string) => url.startsWith("/");
   const onCtaClick = (svc: ServiceRow, position: string) => {
     if (!isInternalUrl(svc.url)) {

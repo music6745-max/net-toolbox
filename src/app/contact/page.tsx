@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/tools";
 export const metadata: Metadata = {
   title: "お問い合わせ",
   description: `${siteConfig.name}へのお問い合わせページです。`,
+  alternates: { canonical: `${siteConfig.url}/contact` },
 };
 
 export default function ContactPage() {
@@ -55,7 +56,7 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="font-medium text-foreground">Q. 入力したデータはサーバーに送信されますか？</p>
-              <p>A. いいえ、すべての処理はブラウザ内で完結します。データが外部に送信されることはありません。</p>
+              <p>A. 多くのツールはブラウザ内で処理します。DNS確認やIP確認など外部通信が必要な機能は、ページ内で利用する外部サービスを明示します。</p>
             </div>
             <div>
               <p className="font-medium text-foreground">Q. 会員登録は必要ですか？</p>

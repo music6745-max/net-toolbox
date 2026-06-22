@@ -44,7 +44,7 @@ export default async function Image() {
             lineHeight: 1.4,
           }}
         >
-          無料Web便利ツール300+｜登録不要・ブラウザ完結
+          仕事・制作・開発の無料Webツール｜登録不要
         </div>
         <div
           style={{

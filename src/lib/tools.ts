@@ -552,7 +552,7 @@ export const tools: Tool[] = [
   { slug: "yaml-formatter", name: "YAML整形", description: "YAMLデータを見やすくフォーマット。インデントの自動修正と構文チェック。", icon: "📝", category: "開発ツール" },
   { slug: "toml-formatter", name: "TOML整形", description: "TOMLファイルを整形・検証。設定ファイルの編集に。", icon: "⚙️", category: "開発ツール" },
   { slug: "env-validator", name: ".env検証", description: ".envファイルの構文チェックと重複キーの検出。環境変数の管理に。", icon: "🔐", category: "開発ツール" },
-  { slug: "http-header-viewer", name: "HTTPヘッダー確認", description: "URLのHTTPレスポンスヘッダーを一覧表示。キャッシュやセキュリティの確認に。", icon: "📡", category: "開発ツール" },
+  { slug: "http-header-viewer", name: "HTTPヘッダー確認", description: "代表的なHTTPヘッダーの意味と記述例を確認。キャッシュやセキュリティ設定の学習に。", icon: "📡", category: "開発ツール" },
   { slug: "regex-cheatsheet", name: "正規表現チートシート", description: "よく使う正規表現パターンを一覧表示。クリックでコピー。", icon: "📋", category: "開発ツール" },
   { slug: "diff-checker", name: "テキスト差分比較（高機能）", description: "2つのテキストの差分を行単位・文字単位でハイライト表示。コードレビューに。", icon: "🔍", category: "開発ツール" },
   { slug: "markdown-preview", name: "Markdownプレビュー", description: "Markdownテキストをリアルタイムでプレビュー。README作成に便利。", icon: "📖", category: "開発ツール" },
@@ -760,8 +760,8 @@ export const tools: Tool[] = [
   { slug: "wifi-speed-guide", name: "WiFi速度で何ができるかチェック", description: "回線速度から各用途で快適に使えるかを判定。", icon: "📶", category: "日常ツール" },
   { slug: "lucky-number", name: "ラッキーナンバー・抽選番号生成", description: "重複なしのランダム番号を生成。宝くじ・ビンゴに。", icon: "🎲", category: "日常ツール" },
   { slug: "paper-size-guide", name: "用紙サイズ一覧(A判/B判)", description: "A0〜A6、B0〜B6、はがき、名刺の用紙サイズ一覧。", icon: "📄", category: "日常ツール" },
-  { slug: "katakana-to-romaji", name: "カタカナ→ローマ字変換", description: "カタカナをヘボン式ローマ字に変換。パスポート申請に。", icon: "🔤", category: "テキストツール" },
-  { slug: "email-subject-generator", name: "ビジネスメール件名ジェネレーター", description: "トピックから件名候補を自動生成。", icon: "📧", category: "テキストツール" },
+  { slug: "katakana-to-romaji", name: "カタカナ→ローマ字変換", description: "カタカナをヘボン式ローマ字に変換。パスポート申請に。", icon: "🔤", category: "テキスト" },
+  { slug: "email-subject-generator", name: "ビジネスメール件名ジェネレーター", description: "トピックから件名候補を自動生成。", icon: "📧", category: "テキスト" },
   { slug: "random-name-picker", name: "ランダム名前ピッカー", description: "名前リストからランダムに1人を選出。順番決め・抽選に。", icon: "🎯", category: "日常ツール" },
   { slug: "business-card-checker", name: "名刺情報チェッカー", description: "名刺に必要な情報の記入漏れをチェック。", icon: "🪪", category: "日常ツール" },
   { slug: "interest-rate-comparison", name: "金利差シミュレーション", description: "2つの金利で預けた場合の差額を計算。", icon: "💹", category: "日常ツール" },
@@ -800,11 +800,11 @@ export const tools: Tool[] = [
   { slug: "grocery-budget-calculator", name: "食費計算ツール", description: "世帯人数と生活スタイルから月間食費を概算", icon: "🛒", category: "日常ツール" },
   { slug: "commute-distance-calc", name: "通勤距離・交通費計算", description: "通勤距離と手段から交通費と通勤時間を計算", icon: "🚃", category: "日常ツール" },
 
-  { slug: "image-weight-reducer", name: "画像軽量化チェッカー", description: "画像サイズと用途から最適なファイルサイズと形式を提案", icon: "🖼️", category: "Web開発ツール" },
+  { slug: "image-weight-reducer", name: "画像軽量化チェッカー", description: "画像サイズと用途から最適なファイルサイズと形式を提案", icon: "🖼️", category: "画像・メディア" },
 ];
 
 export const siteConfig = {
   name: "ネットツールボックス",
-  description: "無料で使えるWeb便利ツール集。QRコード作成、文字数カウント、パスワード生成など、日常で使えるツールが揃っています。",
+  description: "仕事・制作・開発で使える無料Webツール集。QRコード作成、文字数カウント、パスワード生成、JSON整形などを登録不要で使えます。",
   url: "https://net-toolbox.jp",
 };

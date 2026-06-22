@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { siteConfig } from "@/lib/tools";
+import { publicTools } from "@/lib/publicCatalog";
 import { categories } from "@/lib/categories";
 import { WebSiteJsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -24,11 +25,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} - 無料Web便利ツール集｜300以上のオンラインツール`,
+    default: `${siteConfig.name} - 無料Web便利ツール集`,
     template: `%s | ${siteConfig.name}`,
   },
   description:
-    "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など300以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
+    "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など、仕事と制作に使う無料Webツールを提供。登録不要で使えます。",
   metadataBase: new URL(siteConfig.url),
   keywords: [
     "無料Webツール",
@@ -45,9 +46,9 @@ export const metadata: Metadata = {
     "計算ツール",
   ],
   openGraph: {
-    title: `${siteConfig.name} - 無料Web便利ツール集｜300以上のオンラインツール`,
+    title: `${siteConfig.name} - 無料Web便利ツール集`,
     description:
-      "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など300以上の無料Webツールを提供。登録不要・ブラウザ完結でデータはサーバーに送信されません。",
+      "文字数カウント・QRコード作成・パスワード生成・JSON整形・画像変換など、仕事と制作に使う無料Webツールを提供。",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "ja_JP",
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} - 無料Web便利ツール300+`,
+    title: `${siteConfig.name} - 無料Web便利ツール`,
     description:
-      "文字数カウント・QRコード作成・パスワード生成など300以上の無料ツール。登録不要・ブラウザ完結。",
+      "文字数カウント・QRコード作成・パスワード生成などの無料ツール。登録不要で使えます。",
     creator: "@net_toolbox_jp",
   },
   alternates: {
@@ -148,6 +149,9 @@ export default function RootLayout({
                 <Link href="/guide" className="hover:text-primary transition-colors font-medium">
                   ガイド
                 </Link>
+                <Link href="/tools" className="hover:text-primary transition-colors font-medium">
+                  ツール一覧
+                </Link>
                 {categories.slice(0, 4).map((cat) => (
                   <Link
                     key={cat.slug}
@@ -168,7 +172,9 @@ export default function RootLayout({
             <div className="mb-6">
               <h3 className="font-medium text-foreground mb-3 text-center">カテゴリ</h3>
               <div className="flex flex-wrap justify-center gap-3">
-                {categories.map((cat) => (
+                {categories
+                  .filter((cat) => publicTools.some((tool) => tool.category === cat.slug))
+                  .map((cat) => (
                   <Link
                     key={cat.slug}
                     href={`/category/${cat.slug}`}
@@ -183,46 +189,25 @@ export default function RootLayout({
               <h3 className="font-medium text-foreground mb-3 text-center">ガイド記事</h3>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link href="/guide" className="hover:text-primary transition-colors">活用ガイド一覧</Link>
-                <Link href="/guide/rental-server-comparison" className="hover:text-primary transition-colors">レンタルサーバー比較</Link>
-                <Link href="/guide/accounting-software-comparison" className="hover:text-primary transition-colors">確定申告ソフト比較</Link>
-                <Link href="/guide/vpn-comparison" className="hover:text-primary transition-colors">VPN比較</Link>
-                <Link href="/guide/side-business-tools" className="hover:text-primary transition-colors">副業ツール</Link>
-                <Link href="/tools/qr-code" className="hover:text-primary transition-colors">QRコード作成</Link>
-                <Link href="/tools/password-strength" className="hover:text-primary transition-colors">パスワード強度チェック</Link>
                 <Link href="/guide/web-tools-for-work" className="hover:text-primary transition-colors">仕事効率化ツール</Link>
                 <Link href="/guide/developer-tools-guide" className="hover:text-primary transition-colors">開発者ツール活用</Link>
                 <Link href="/guide/remote-work-tools" className="hover:text-primary transition-colors">リモートワークツール</Link>
+                <Link href="/guide/cloud-storage-comparison" className="hover:text-primary transition-colors">クラウドストレージ比較</Link>
+                <Link href="/guide/note-taking-app-comparison" className="hover:text-primary transition-colors">ノートアプリ比較</Link>
+                <Link href="/guide/project-management-comparison" className="hover:text-primary transition-colors">プロジェクト管理ツール比較</Link>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Link href="/about" className="hover:text-primary">運営者情報</Link>
-              <Link href="/author" className="hover:text-primary">編集部について</Link>
+              <Link href="/author" className="hover:text-primary">編集方針</Link>
+              <Link href="/quality" className="hover:text-primary">品質管理</Link>
               <Link href="/privacy" className="hover:text-primary">プライバシーポリシー</Link>
               <Link href="/terms" className="hover:text-primary">利用規約</Link>
               <Link href="/contact" className="hover:text-primary">お問い合わせ</Link>
             </div>
-            <div className="text-center mb-4 flex flex-wrap justify-center gap-x-4 gap-y-1">
-              <span className="text-xs">姉妹サイト:</span>
-              <a
-                href="https://ai-tools-navi.jp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs hover:text-primary"
-              >
-                🤖 AIツールナビ
-              </a>
-              <a
-                href="https://toshi-navi.jp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs hover:text-primary"
-              >
-                💰 投資ナビJP
-              </a>
-            </div>
             <p className="text-center">&copy; 2026 {siteConfig.name}. All rights reserved.</p>
             <p className="mt-1 text-center">
-              すべてのツールは無料でご利用いただけます。データはブラウザ内で処理され、サーバーに送信されません。
+              主要ツールは無料でご利用いただけます。多くの処理はブラウザ内で行い、外部通信が必要な機能はページ内で明示します。
             </p>
           </div>
         </footer>

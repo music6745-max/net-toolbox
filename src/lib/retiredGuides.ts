@@ -1,3 +1,5 @@
+import { isIndexableGuideSlug } from "@/lib/contentPolicy";
+
 export const retiredGuideRedirects = {
   "best-rental-servers": "rental-server-comparison",
   "best-vpn-services": "vpn-comparison",
@@ -49,6 +51,9 @@ export function getIndexableGuides<T extends { slug: string }>(
   guides: readonly T[]
 ): T[] {
   return guides.filter(
-    (guide) => !isRetiredGuideSlug(guide.slug) && !isParkedGuideSlug(guide.slug)
+    (guide) =>
+      isIndexableGuideSlug(guide.slug) &&
+      !isRetiredGuideSlug(guide.slug) &&
+      !isParkedGuideSlug(guide.slug)
   );
 }

@@ -92,6 +92,8 @@ export default function IpAddressPage() {
         <h2 className="text-lg font-bold mb-3">IPアドレス確認ツールの使い方</h2>
         <div className="text-sm text-muted leading-relaxed space-y-2">
           <p>ページを開くと自動的にグローバルIPアドレスとブラウザ情報を取得・表示します。</p>
+          <p>グローバルIPアドレスの取得には外部API（api.ipify.org）を使用しています。</p>
+          <p>ユーザーエージェント、言語、画面解像度などのブラウザ情報は端末内で取得します。</p>
           <p>各項目の「コピー」ボタンでクリップボードにコピーできます。</p>
           <p>VPN接続の確認やネットワーク設定の診断にご利用ください。</p>
         </div>

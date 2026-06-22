@@ -220,21 +220,21 @@ export default function SmallBusinessSoftwarePage() {
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
-            <p className="text-xs text-muted mt-1">副業・フリーランス向け</p>
+          <Link href="/guide/web-tools-for-work" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">仕事効率化ツール</span>
+            <p className="text-xs text-muted mt-1">日々の作業を整える無料ツール</p>
           </Link>
           <Link href="/guide/invoice-system-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
             <span className="text-sm font-bold hover:text-primary">請求書システム比較</span>
             <p className="text-xs text-muted mt-1">インボイス対応サービス</p>
           </Link>
-          <Link href="/guide/side-business-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">副業ツール総合</span>
-            <p className="text-xs text-muted mt-1">副業を始めるなら</p>
+          <Link href="/guide/crowdsourcing-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">クラウドソーシング比較</span>
+            <p className="text-xs text-muted mt-1">外注・受発注の候補整理</p>
           </Link>
-          <Link href="/guide/side-business-fee-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">副業の確定申告比較</span>
-            <p className="text-xs text-muted mt-1">手数料・サポート比較</p>
+          <Link href="/guide/esign-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">電子契約サービス比較</span>
+            <p className="text-xs text-muted mt-1">契約締結のオンライン化</p>
           </Link>
         </div>
       </section>

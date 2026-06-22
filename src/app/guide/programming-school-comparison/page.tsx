@@ -921,10 +921,10 @@ export default function ProgrammingSchoolComparisonPage() {
             開発者向けツールガイドを見る
           </Link>
           <Link
-            href="/guide/job-site-comparison"
+            href="/guide/it-job-comparison"
             className="inline-block border border-card-border px-6 py-2 rounded-full text-sm font-medium hover:bg-card-bg transition-colors"
           >
-            転職サイト比較も見る
+            IT転職サービス比較も見る
           </Link>
         </div>
       </section>

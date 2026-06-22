@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/tools";
 export const metadata: Metadata = {
   title: `サイト内検索 | ${siteConfig.name}`,
   description:
-    "ネットツールボックスのサイト内検索。250以上の無料ツールと100以上の比較ガイドからキーワードで瞬時に検索できます。",
+    "ネットツールボックスのサイト内検索。仕事・制作・開発に使う無料ツールと活用ガイドをキーワードで検索できます。",
   alternates: {
     canonical: `${siteConfig.url}/search`,
   },

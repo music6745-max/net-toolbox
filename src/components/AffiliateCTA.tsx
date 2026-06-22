@@ -115,6 +115,10 @@ export function AffiliateCTA({
   page,
   position = "affiliate_cta",
 }: AffiliateCTAProps) {
+  if (process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE !== "false") {
+    return null;
+  }
+
   const styles = colorStyles[color] || colorStyles.blue;
   const offerId = offerIdFromGoUrl(url);
   const offer = offerId ? getOffer(offerId) : undefined;

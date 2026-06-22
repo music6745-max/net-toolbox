@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { AdSenseUnit } from "@/components/AdSenseUnit";
+import { isIndexableToolSlug } from "@/lib/contentPolicy";
 import { onAffiliateClick } from "@/lib/tracking";
 
 interface Recommendation {
@@ -728,12 +729,15 @@ const TOOL_SPECIFIC: Record<string, Recommendation[]> = {
 };
 
 export function AffiliateSection({ slug, category }: { slug: string; category: string }) {
+  const reviewMode = process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE !== "false";
   const recommendations = useMemo(() => {
+    if (reviewMode) return [];
+    if (!isIndexableToolSlug(slug)) return [];
     // Tool-specific recommendations take priority
     if (TOOL_SPECIFIC[slug]) return TOOL_SPECIFIC[slug];
     // Fall back to category-level recommendations
     return RECOMMENDATIONS[category] || [];
-  }, [slug, category]);
+  }, [slug, category, reviewMode]);
 
   if (recommendations.length === 0) return null;
 

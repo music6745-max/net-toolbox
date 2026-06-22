@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { tools, siteConfig } from "@/lib/tools";
+import { siteConfig } from "@/lib/tools";
+import { publicTools } from "@/lib/publicCatalog";
 import { categories, getCategoryBySlug } from "@/lib/categories";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import type { Metadata } from "next";
@@ -33,7 +34,7 @@ export default async function CategoryPage({ params }: Props) {
   const { slug } = await params;
   const decoded = decodeURIComponent(slug);
   const cat = getCategoryBySlug(decoded);
-  const categoryTools = tools.filter((t) => t.category === decoded);
+  const categoryTools = publicTools.filter((t) => t.category === decoded);
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">

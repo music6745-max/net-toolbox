@@ -18,7 +18,7 @@ const faqItems = [
   {
     question: "ツールに入力したコードやデータは安全ですか？",
     answer:
-      "はい。すべてのツールはブラウザ上のJavaScriptで動作し、入力データがサーバーに送信されることはありません。APIキーや機密情報を含むデータも安心してお使いいただけます。",
+      "主要な変換・整形ツールはブラウザ上で処理します。ただし、APIキーや本番の個人情報などは公開端末や共有画面で扱わず、必要に応じてローカル環境でも確認してください。",
   },
   {
     question: "オフラインでも使えますか？",
@@ -263,7 +263,7 @@ export default function DeveloperToolsGuidePage() {
       <div className="bg-purple-50 dark:bg-purple-900/40 border border-purple-200 dark:border-purple-800 rounded-lg p-4 mb-8">
         <p className="text-sm font-medium mb-1">開発者にうれしいポイント</p>
         <ul className="text-sm text-muted space-y-1">
-          <li>・ すべてブラウザ内で処理 - 機密データも安心</li>
+          <li>・ 主要ツールはブラウザ内で処理 - 入力値を外部保存しない設計</li>
           <li>・ 登録不要・広告控えめ - すぐに作業に集中できる</li>
           <li>・ レスポンシブ対応 - 外出先でもスマホから利用可能</li>
         </ul>
@@ -387,7 +387,7 @@ export default function DeveloperToolsGuidePage() {
             href="/"
             className="inline-block border border-card-border px-6 py-2.5 rounded-lg text-sm font-medium hover:bg-card-bg transition-colors"
           >
-            全ツール一覧
+            ツール一覧
           </Link>
         </div>
       </section>

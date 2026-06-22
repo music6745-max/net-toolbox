@@ -30,7 +30,7 @@ const toolGroups = [
     tools: [
       {
         name: "ポモドーロタイマー",
-        slug: "pomodoro",
+        slug: "pomodoro-timer",
         desc: "25分集中＋5分休憩のポモドーロテクニックをブラウザで実践。在宅勤務で集中力が途切れがちな方に最適です。作業と休憩のリズムを作ることで、長時間の在宅ワークでも高い生産性を維持できます。",
       },
       {
@@ -185,7 +185,7 @@ export default function RemoteWorkToolsPage() {
         <p className="text-sm font-medium mb-1">このガイドの特徴</p>
         <ul className="text-sm text-muted space-y-1">
           <li>・ すべて無料・登録不要で利用可能</li>
-          <li>・ ブラウザ上で動作し、データがサーバーに送信されない</li>
+          <li>・ 主要ツールはブラウザ上で動作し、入力値を外部保存しない設計</li>
           <li>・ PC・スマホ・タブレットに対応</li>
           <li>・ 在宅勤務・テレワーク・ノマドワークに最適</li>
         </ul>
@@ -289,14 +289,14 @@ export default function RemoteWorkToolsPage() {
           まだまだ便利なツールがあります
         </h2>
         <p className="text-sm text-muted mb-5">
-          ネットツールボックスにはこの記事で紹介した10個以外にも、250以上の無料ツールが揃っています。リモートワークをさらに快適にするツールがきっと見つかります。
+          ネットツールボックスにはこの記事で紹介した10個以外にも、リモートワークで使いやすい無料ツールを整理しています。
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link
-            href="/"
+            href="/tools"
             className="inline-block bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            全ツール一覧を見る
+            ツール一覧を見る
           </Link>
           <Link
             href="/guide/web-tools-for-work"

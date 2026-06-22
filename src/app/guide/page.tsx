@@ -9,14 +9,14 @@ import { guides } from "./guides.data";
 const publicGuides = getIndexableGuides(guides);
 
 export const metadata: Metadata = {
-  title: `ガイド・比較記事一覧【全${publicGuides.length}本】| 通信・金融・生活・仕事まで徹底解説`,
-  description: `格安SIM・クレカ・VPN・レンタルサーバー・転職・英会話など${publicGuides.length}本以上の比較ガイドを無料公開。2026年最新の料金・特徴を徹底解説し、あなたに最適なサービスを最短で見つけられます。`,
+  title: `ガイド・比較記事一覧【厳選${publicGuides.length}本】| Webツール・通信・制作環境`,
+  description: `Webツール、通信、クラウド、制作環境、個人運営に関係する${publicGuides.length}本のガイドを公開。作業目的に合うツールとサービスの選び方を整理します。`,
   alternates: {
     canonical: `${siteConfig.url}/guide`,
   },
   openGraph: {
-    title: `ガイド・比較記事一覧【全${publicGuides.length}本】`,
-    description: `通信・金融・生活・仕事スキルまで、2026年最新の比較ガイド${publicGuides.length}本を無料公開。`,
+    title: `ガイド・比較記事一覧【厳選${publicGuides.length}本】`,
+    description: `Webツール、通信、クラウド、制作環境、個人運営に関係するガイド${publicGuides.length}本を公開。`,
     url: `${siteConfig.url}/guide`,
     type: "website",
   },
@@ -79,7 +79,7 @@ export default function GuidePage() {
           ガイド・比較<span className="text-primary">記事一覧</span>
         </h1>
         <p className="text-muted text-base sm:text-lg max-w-2xl mx-auto px-2">
-          通信・金融・仕事スキル・生活・健康など、2026年最新の比較ガイドを無料公開。あなたに最適なサービスを最短で見つけられます。
+          Webツール、通信、クラウド、制作環境、個人運営に関係するガイドを整理しています。
         </p>
       </section>
 

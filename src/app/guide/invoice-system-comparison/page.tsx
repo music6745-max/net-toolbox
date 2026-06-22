@@ -197,21 +197,21 @@ export default function InvoiceSystemComparisonPage() {
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">会計ソフト比較</span>
-            <p className="text-xs text-muted mt-1">請求書連携で経理を自動化</p>
+          <Link href="/guide/small-business-software" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">小規模事業の作業環境</span>
+            <p className="text-xs text-muted mt-1">請求・共有・制作まわりを整理</p>
           </Link>
-          <Link href="/guide/tax-accountant-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">税理士比較</span>
-            <p className="text-xs text-muted mt-1">申告相談先も確認</p>
+          <Link href="/guide/esign-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">電子契約サービス比較</span>
+            <p className="text-xs text-muted mt-1">契約と請求の流れを整理</p>
           </Link>
-          <Link href="/guide/company-credit-card-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">法人カード比較</span>
-            <p className="text-xs text-muted mt-1">経費管理と合わせて</p>
+          <Link href="/guide/crowdsourcing-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">クラウドソーシング比較</span>
+            <p className="text-xs text-muted mt-1">外注先・受注先の候補整理</p>
           </Link>
-          <Link href="/guide/business-bank-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">ビジネス銀行口座比較</span>
-            <p className="text-xs text-muted mt-1">入金管理に必須</p>
+          <Link href="/guide/web-tools-for-work" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">仕事効率化Webツール</span>
+            <p className="text-xs text-muted mt-1">請求前後の確認作業に</p>
           </Link>
         </div>
       </section>

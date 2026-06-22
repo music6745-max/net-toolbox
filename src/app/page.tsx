@@ -1,357 +1,238 @@
 import Link from "next/link";
-import { tools, siteConfig } from "@/lib/tools";
+import { siteConfig } from "@/lib/tools";
+import { publicTools } from "@/lib/publicCatalog";
 import { categories } from "@/lib/categories";
 import { FAQJsonLd } from "@/components/JsonLd";
 import { ToolSearch } from "@/components/ToolSearch";
-import { AdSenseUnit } from "@/components/AdSenseUnit";
+
+const featuredToolSlugs = [
+  "character-count",
+  "json-formatter",
+  "qr-code",
+  "password-generator",
+  "image-compressor",
+  "regex-tester",
+  "markdown-preview",
+  "timestamp-converter",
+  "color-picker",
+  "contrast-checker",
+  "csv-json",
+  "timezone-converter",
+];
+
+const workflowGuides = [
+  {
+    slug: "developer-tools-guide",
+    title: "開発者向けツール活用ガイド",
+    description:
+      "JSON、正規表現、Base64、HTTP、構造化データなど、開発作業で使う確認ツールを用途別に整理。",
+  },
+  {
+    slug: "web-tools-for-work",
+    title: "仕事効率化に使える無料Webツール",
+    description:
+      "文章確認、画像調整、時刻変換、簡易チェックなど、日々の作業で使うツールの選び方を整理。",
+  },
+  {
+    slug: "remote-work-tools",
+    title: "リモートワークの作業環境ガイド",
+    description:
+      "時差、集中時間、共有前チェック、セキュリティ確認をブラウザ上のツールで補助する流れを解説。",
+  },
+  {
+    slug: "small-business-software",
+    title: "個人運営・小規模事業の作業環境ガイド",
+    description:
+      "請求、会計前の整理、共有、制作、サイト運営など、小規模な作業環境に必要なツールを整理します。",
+  },
+];
 
 const faqItems = [
   {
     question: "ネットツールボックスは無料ですか？",
-    answer: "はい、すべてのツールを完全無料でご利用いただけます。会員登録やログインも不要です。",
+    answer:
+      "はい。主要なWebツールは無料で利用でき、会員登録やログインも不要です。",
   },
   {
-    question: "入力したデータは安全ですか？",
-    answer: "すべてのツールはブラウザ上で動作し、入力したデータがサーバーに送信されることはありません。安心してご利用いただけます。",
+    question: "入力したデータはサーバーに送信されますか？",
+    answer:
+      "多くのツールはブラウザ内で処理します。DNS確認やIP確認など外部通信が必要な機能は、ページ内で利用する外部サービスを明示します。",
   },
   {
-    question: "スマートフォンでも使えますか？",
-    answer: "はい、すべてのツールはスマートフォン・タブレット・PCのブラウザに対応しています。",
+    question: "どのツールから使えばよいですか？",
+    answer:
+      "文章は文字数カウント、開発作業はJSON整形や正規表現テスト、画像作業はQRコード作成や画像圧縮から使うと効果を確認しやすいです。",
   },
   {
-    question: "ツールの数はどれくらいありますか？",
-    answer: `現在${tools.length}種類以上のツールをご用意しています。テキスト処理、開発ツール、デザイン、日常ツールなど幅広いカテゴリをカバーしています。`,
+    question: "掲載ツールの基準はありますか？",
+    answer:
+      "現在は仕事・制作・開発で利用頻度が高いツールを中心に公開カタログへ掲載し、重複やテーマ外のページは検索向けの露出を抑えています。",
   },
 ];
 
 export default function Home() {
   const toolsByCategory = categories.map((cat) => ({
     ...cat,
-    tools: tools.filter((t) => t.category === cat.slug),
+    tools: publicTools.filter((t) => t.category === cat.slug),
   }));
+
+  const featuredTools = featuredToolSlugs
+    .map((slug) => publicTools.find((tool) => tool.slug === slug))
+    .filter((tool): tool is NonNullable<typeof tool> => Boolean(tool));
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <FAQJsonLd items={faqItems} />
 
-      <section className="text-center mb-10">
-        <h1 className="text-3xl font-bold mb-3">{siteConfig.name}</h1>
-        <p className="text-muted text-lg max-w-2xl mx-auto">
-          無料で使えるWeb便利ツール集。すべてブラウザ上で動作し、データがサーバーに送信されることはありません。
-        </p>
-        <p className="text-sm text-muted mt-2">
-          全{tools.length}ツール ・ 登録不要 ・ 完全無料
-        </p>
+      <section className="mb-10">
+        <div className="max-w-3xl">
+          <p className="text-sm font-medium text-primary mb-3">
+            登録不要・ブラウザ中心の実務ツール
+          </p>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
+            {siteConfig.name}
+          </h1>
+          <p className="text-muted text-base sm:text-lg leading-relaxed">
+            文章、開発、画像、デザイン、セキュリティ確認に使う無料Webツールを整理しています。
+            多くの処理はブラウザ内で行い、短い作業でも迷わず使えることを重視しています。
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3 text-sm text-muted">
+            <span className="rounded-full border border-card-border px-3 py-1">
+              厳選{publicTools.length}ツール
+            </span>
+            <span className="rounded-full border border-card-border px-3 py-1">
+              会員登録不要
+            </span>
+            <span className="rounded-full border border-card-border px-3 py-1">
+              スマホ・PC対応
+            </span>
+          </div>
+        </div>
       </section>
 
       <ToolSearch />
 
-      {/* Popular tools CTA */}
-      <section className="mb-10 mt-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">🔥 人気のツール</h2>
-          <Link href="/tools" className="text-sm text-primary hover:underline">
-            全{tools.length}ツールを見る →
-          </Link>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {[
-            "qr-code",
-            "character-count",
-            "password-generator",
-            "json-formatter",
-            "color-picker",
-            "bmi-calculator",
-            "base64",
-            "image-compressor",
-            "markdown-preview",
-            "regex-tester",
-          ]
-            .map((slug) => tools.find((t) => t.slug === slug))
-            .filter((t): t is NonNullable<typeof t> => Boolean(t))
-            .map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tools/${tool.slug}`}
-                className="inline-flex items-center gap-1.5 bg-card-bg border border-card-border rounded-full px-4 py-2 text-sm hover:border-primary/40 hover:text-primary transition-all"
-              >
-                <span>{tool.icon}</span>
-                <span>{tool.name}</span>
-              </Link>
-            ))}
-        </div>
-      </section>
-
-      {/* 2026年おすすめランキング */}
-      <section className="mb-10">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">🏆 2026年おすすめランキング</h2>
-          <Link href="/guide" className="text-sm text-primary hover:underline">
-            すべて見る →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {[
-            { slug: "side-business-ranking-2026", label: "副業おすすめTOP10", icon: "🏆", desc: "月5万円を目指す副業" },
-            { slug: "credit-card-comparison", label: "クレジットカード比較", icon: "💳", desc: "還元率で厳選" },
-            { slug: "online-broker-comparison", label: "ネット証券比較", icon: "📊", desc: "新NISA対応" },
-            { slug: "programming-school-comparison", label: "プログラミングスクール比較", icon: "💻", desc: "転職保証付き" },
-            { slug: "saving-app-ranking-2026", label: "家計簿アプリTOP10", icon: "💰", desc: "無料で使える定番" },
-          ].map((g) => (
-            <Link
-              key={g.slug}
-              href={`/guide/${g.slug}`}
-              className="block bg-gradient-to-br from-primary/5 to-primary/0 border border-primary/20 rounded-lg p-4 hover:border-primary/40 hover:shadow-sm transition-all"
-            >
-              <div className="flex items-start gap-2">
-                <span className="text-2xl">{g.icon}</span>
-                <div>
-                  <div className="text-sm font-bold">{g.label}</div>
-                  <div className="text-xs text-muted mt-0.5">{g.desc}</div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Popular guides CTA */}
-      <section className="mb-10">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">📊 人気の比較ガイド</h2>
-          <Link href="/guide" className="text-sm text-primary hover:underline">
-            すべての比較ガイドを見る →
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-          {[
-            { slug: "rental-server-comparison", label: "レンタルサーバー", icon: "🖥️" },
-            { slug: "sim-comparison", label: "格安SIM", icon: "📱" },
-            { slug: "credit-card-comparison", label: "クレジットカード", icon: "💳" },
-            { slug: "vpn-comparison", label: "VPN", icon: "🛡️" },
-            { slug: "nisa-comparison", label: "NISA口座", icon: "💰" },
-          ].map((g) => (
-            <Link
-              key={g.slug}
-              href={`/guide/${g.slug}`}
-              className="block bg-card-bg border border-card-border rounded-lg p-3 text-center hover:border-primary/40 hover:shadow-sm transition-all"
-            >
-              <div className="text-2xl mb-1">{g.icon}</div>
-              <div className="text-xs font-medium">{g.label}</div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Category navigation */}
-      <nav className="flex flex-wrap justify-center gap-2 mb-10">
-        {categories.map((cat) => (
-          <Link
-            key={cat.slug}
-            href={`/category/${cat.slug}`}
-            className="inline-flex items-center gap-1.5 bg-card-bg border border-card-border rounded-full px-4 py-2 text-sm hover:border-primary/30 hover:shadow-sm transition-all"
-          >
-            <span>{cat.icon}</span>
-            <span>{cat.slug}</span>
-            <span className="text-xs text-muted">
-              ({tools.filter((t) => t.category === cat.slug).length})
-            </span>
-          </Link>
-        ))}
-      </nav>
-
-      {/* Tools by category */}
-      {toolsByCategory.map((cat) => (
-        <section key={cat.slug} className="mb-12">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-bold">
-              {cat.icon} {cat.name}
-            </h2>
-            <Link
-              href={`/category/${cat.slug}`}
-              className="text-sm text-primary hover:underline"
-            >
-              すべて見る →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cat.tools.slice(0, 6).map((tool) => (
-              <Link
-                key={tool.slug}
-                href={`/tools/${tool.slug}`}
-                className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
-              >
-                <div className="text-2xl mb-2">{tool.icon}</div>
-                <h3 className="text-base font-semibold mb-1">{tool.name}</h3>
-                <p className="text-sm text-muted leading-relaxed line-clamp-2">
-                  {tool.description}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
-      ))}
-
-      {/* Mid-page ad placement */}
-      <AdSenseUnit format="horizontal" className="my-8" />
-
-      {/* Guide Articles Section */}
       <section className="mb-12">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">📚 ガイド記事</h2>
-          <Link
-            href="/guide"
-            className="text-sm text-primary hover:underline"
-          >
-            すべて見る →
+        <div className="flex items-center justify-between mb-4 gap-3">
+          <h2 className="text-xl font-bold">よく使われる主要ツール</h2>
+          <Link href="/tools" className="text-sm text-primary hover:underline">
+            ツール一覧へ
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {featuredTools.map((tool) => (
+            <Link
+              key={tool.slug}
+              href={`/tools/${tool.slug}`}
+              className="block bg-card-bg border border-card-border rounded-lg p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+            >
+              <div className="text-2xl mb-2">{tool.icon}</div>
+              <h3 className="text-base font-semibold mb-1">{tool.name}</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                {tool.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <div className="flex items-center justify-between mb-4 gap-3">
+          <h2 className="text-xl font-bold">作業フロー別ガイド</h2>
+          <Link href="/guide" className="text-sm text-primary hover:underline">
+            ガイド一覧へ
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            {
-              slug: "rental-server-comparison",
-              title: "【2026年】レンタルサーバーおすすめ比較5選",
-              description: "ConoHa WING・エックスサーバーなど初心者向け5社を徹底比較",
-              category: "比較",
-              readTime: "10分",
-              icon: "🖥️",
-            },
-            {
-              slug: "accounting-software-comparison",
-              title: "【2026年】確定申告ソフト比較",
-              description: "freee・弥生・マネーフォワードの料金・特徴を解説",
-              category: "副業・税金",
-              readTime: "8分",
-              icon: "📊",
-            },
-            {
-              slug: "vpn-comparison",
-              title: "【2026年】VPNおすすめ比較",
-              description: "NordVPN・ExpressVPNなど5社の料金・セキュリティを比較",
-              category: "セキュリティ",
-              readTime: "8分",
-              icon: "🛡️",
-            },
-            {
-              slug: "side-business-tools",
-              title: "副業に必要なWebツール完全ガイド",
-              description: "ブログ開設からデザイン・確定申告まで必要ツールを網羅",
-              category: "副業",
-              readTime: "12分",
-              icon: "💰",
-            },
-          ].map((guide) => (
+          {workflowGuides.map((guide) => (
             <Link
               key={guide.slug}
               href={`/guide/${guide.slug}`}
-              className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200 group"
+              className="block bg-card-bg border border-card-border rounded-lg p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
             >
-              <div className="flex items-start gap-3">
-                <span className="text-3xl flex-shrink-0">{guide.icon}</span>
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary">
-                      {guide.category}
-                    </span>
-                    <span className="text-xs text-muted">{guide.readTime}</span>
-                  </div>
-                  <h3 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-sm text-muted leading-relaxed line-clamp-2">
-                    {guide.description}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-base font-semibold mb-2">{guide.title}</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                {guide.description}
+              </p>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Sister Site Section - AI Tools Navi */}
-      <section className="mt-8 rounded-xl p-8" style={{ background: "linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)", color: "#ffffff" }}>
-        <div className="flex items-center gap-4 mb-4">
-          <span className="text-4xl">🤖</span>
-          <div>
-            <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>AIツールもお探しですか？</h2>
-            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「AIツールナビ」で150以上のAIツールを比較・解説</p>
-          </div>
+      <nav className="mb-12" aria-label="カテゴリ">
+        <h2 className="text-xl font-bold mb-4">カテゴリから探す</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {toolsByCategory
+            .filter((cat) => cat.tools.length > 0)
+            .map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/category/${cat.slug}`}
+                className="block bg-card-bg border border-card-border rounded-lg p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
+              >
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <h3 className="font-semibold">
+                    {cat.icon} {cat.name}
+                  </h3>
+                  <span className="text-xs text-muted">
+                    {cat.tools.length}件
+                  </span>
+                </div>
+                <p className="text-sm text-muted leading-relaxed">
+                  {cat.description}
+                </p>
+              </Link>
+            ))}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-          <a href="https://ai-tools-navi.jp/compare" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>ChatGPT vs Claude</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIチャット比較</div>
-          </a>
-          <a href="https://ai-tools-navi.jp/guide/ai-english-learning" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI英語学習ガイド</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>AIで英語力UP</div>
-          </a>
-          <a href="https://ai-tools-navi.jp/guide/ai-side-business" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>AI副業ガイド</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>月5万円を目指す</div>
-          </a>
-        </div>
-        <a href="https://ai-tools-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#7c3aed" }}>
-          AIツールナビを見る →
-        </a>
-      </section>
+      </nav>
 
-      {/* Sister Site Section - Toshi Navi JP */}
-      <section className="mt-6 rounded-xl p-8" style={{ background: "linear-gradient(135deg, #059669 0%, #0891b2 100%)", color: "#ffffff" }}>
-        <div className="flex items-center gap-4 mb-4">
-          <span className="text-4xl">💰</span>
-          <div>
-            <h2 className="text-xl font-bold" style={{ color: "#ffffff" }}>お金の悩みはこちらで解決</h2>
-            <p className="text-sm" style={{ color: "rgba(255,255,255,0.8)" }}>姉妹サイト「投資ナビJP」で新NISA・iDeCo・副業・節税を徹底解説</p>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-          <a href="https://toshi-navi.jp/guide/nisa-broker-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>新NISA証券会社TOP5</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>ポイント還元で選ぶ</div>
-          </a>
-          <a href="https://toshi-navi.jp/guide/side-business-ranking-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>副業ランキングTOP10</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>月5万円から稼ぐ</div>
-          </a>
-          <a href="https://toshi-navi.jp/guide/furusato-tax-guide-2026" target="_blank" rel="noopener noreferrer" className="rounded-lg p-3 text-center hover:opacity-90 transition" style={{ background: "rgba(255,255,255,0.15)" }}>
-            <div className="text-sm font-medium" style={{ color: "#ffffff" }}>ふるさと納税2026</div>
-            <div className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>限度額・おすすめサイト</div>
-          </a>
-        </div>
-        <a href="https://toshi-navi.jp" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition" style={{ background: "#ffffff", color: "#059669" }}>
-          投資ナビJPを見る →
-        </a>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="mt-8 bg-card-bg border border-card-border rounded-xl p-8">
-        <h2 className="text-xl font-bold mb-6">よくある質問</h2>
-        <div className="space-y-4">
-          {faqItems.map((item, i) => (
-            <div key={i} className="border-b border-card-border pb-4 last:border-0 last:pb-0">
-              <h3 className="font-medium mb-2">Q. {item.question}</h3>
-              <p className="text-sm text-muted leading-relaxed">A. {item.answer}</p>
+      <section className="mb-12">
+        <h2 className="text-xl font-bold mb-4">運営方針</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            {
+              title: "ローカル処理を優先",
+              body: "多くのツールは入力値を端末内で処理します。保存や送信が必要な機能はページ内で明示します。",
+            },
+            {
+              title: "重複ページの整理",
+              body: "似た検索意図のページやテーマ外ページは公開カタログから外し、主要ツールの説明を優先します。",
+            },
+            {
+              title: "訂正と更新",
+              body: "仕様変更や誤りを確認した場合は、問い合わせ内容をもとに修正します。",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="bg-card-bg border border-card-border rounded-lg p-5"
+            >
+              <h3 className="font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm text-muted leading-relaxed">{item.body}</p>
             </div>
           ))}
         </div>
+        <div className="mt-4">
+          <Link href="/quality" className="text-sm text-primary hover:underline">
+            品質管理・編集方針を見る
+          </Link>
+        </div>
       </section>
 
-      {/* About section */}
-      <section className="mt-8 bg-card-bg border border-card-border rounded-xl p-8">
-        <h2 className="text-xl font-bold mb-4">
-          {siteConfig.name}について
-        </h2>
-        <div className="text-sm text-muted leading-relaxed space-y-3">
-          <p>
-            {siteConfig.name}は、日常的に使えるWeb便利ツールを無料で提供するサイトです。
-            QRコード作成、文字数カウント、パスワード生成、JSON整形、カラーコード変換など、
-            {tools.length}種類以上のツールを取り揃えています。
-          </p>
-          <p>
-            すべてのツールはブラウザ上で動作するため、入力したデータがサーバーに送信されることはありません。
-            安心してご利用ください。会員登録やログインも不要です。
-          </p>
+      <section className="bg-card-bg border border-card-border rounded-lg p-6 sm:p-8">
+        <h2 className="text-xl font-bold mb-5">よくある質問</h2>
+        <div className="space-y-5">
+          {faqItems.map((item) => (
+            <div
+              key={item.question}
+              className="border-b border-card-border pb-5 last:border-0 last:pb-0"
+            >
+              <h3 className="font-medium mb-2">Q. {item.question}</h3>
+              <p className="text-sm text-muted leading-relaxed">
+                A. {item.answer}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
     </div>

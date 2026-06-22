@@ -198,7 +198,7 @@ export default function WebToolsForWorkPage() {
         <p className="text-sm font-medium mb-1">このガイドの特徴</p>
         <ul className="text-sm text-muted space-y-1">
           <li>・ すべて無料・登録不要で利用可能</li>
-          <li>・ ブラウザ上で動作し、データがサーバーに送信されない</li>
+          <li>・ 主要ツールはブラウザ上で動作し、入力値を外部保存しない設計</li>
           <li>・ PC・スマホ・タブレットに対応</li>
         </ul>
       </div>
@@ -265,7 +265,7 @@ export default function WebToolsForWorkPage() {
               データの安全性を確認する
             </h3>
             <p className="text-sm text-muted">
-              業務で扱うデータには機密情報が含まれることがあります。ネットツールボックスのツールはすべてブラウザ内で処理され、サーバーにデータが送信されないため安心してお使いいただけます。
+              業務で扱うデータには機密情報が含まれることがあります。ネットツールボックスの主要ツールはブラウザ内処理を基本にしていますが、公開端末や画面共有中の入力には注意してください。
             </p>
           </div>
         </div>
@@ -284,14 +284,14 @@ export default function WebToolsForWorkPage() {
           まだまだ便利なツールがあります
         </h2>
         <p className="text-sm text-muted mb-5">
-          ネットツールボックスにはこの記事で紹介した15個以外にも、200以上の無料ツールが揃っています。きっと業務に役立つツールが見つかるはずです。
+          ネットツールボックスにはこの記事で紹介した15個以外にも、仕事と制作で使いやすい無料ツールを整理しています。
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link
-            href="/"
+            href="/tools"
             className="inline-block bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            全ツール一覧を見る
+            ツール一覧を見る
           </Link>
           <Link
             href={`/category/${encodeURIComponent("テキスト")}`}

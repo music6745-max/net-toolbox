@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { tools, type Tool } from "@/lib/tools";
+import { type Tool } from "@/lib/tools";
 import { categories } from "@/lib/categories";
 
 const popularSlugs = [

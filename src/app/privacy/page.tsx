@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/tools";
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
   description: `${siteConfig.name}のプライバシーポリシーです。個人情報の取り扱いについてご確認ください。`,
+  alternates: { canonical: `${siteConfig.url}/privacy` },
 };
 
 export default function PrivacyPage() {
@@ -23,7 +24,8 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-bold mt-8 mb-3">1. 個人情報の収集について</h2>
           <p className="text-sm text-muted leading-relaxed">
             {siteConfig.name}（以下「当サイト」）では、ユーザーの個人情報を直接収集することはありません。
-            当サイトのツールはすべてブラウザ内で動作し、入力されたデータがサーバーに送信されることはありません。
+            多くのツールはブラウザ内で動作し、入力されたデータを当サイトのサーバーへ保存しません。
+            DNS確認やIP確認など外部通信が必要な機能では、ページ内に記載した外部サービスへ問い合わせ情報が送信される場合があります。
           </p>
         </section>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isIndexableGuideSlug } from "@/lib/contentPolicy";
 
 type GuideMeta = { title: string; desc: string };
 
@@ -92,7 +93,7 @@ function findGroup(slug: string): string[] {
 export function GuideRelatedLinks({ currentSlug }: { currentSlug: string }) {
   const groupSlugs = findGroup(currentSlug);
   const related = groupSlugs
-    .filter((s) => s !== currentSlug && guideMeta[s])
+    .filter((s) => s !== currentSlug && guideMeta[s] && isIndexableGuideSlug(s))
     .slice(0, 5);
 
   if (related.length === 0) return null;

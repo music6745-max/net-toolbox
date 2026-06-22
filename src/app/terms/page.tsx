@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/tools";
 export const metadata: Metadata = {
   title: "利用規約",
   description: `${siteConfig.name}の利用規約です。ご利用前にご確認ください。`,
+  alternates: { canonical: `${siteConfig.url}/terms` },
 };
 
 export default function TermsPage() {
@@ -31,7 +32,7 @@ export default function TermsPage() {
           <h2 className="text-lg font-bold mt-8 mb-3">第2条（サービスの内容）</h2>
           <p className="text-sm text-muted leading-relaxed">
             当サイトは、各種Webツールを無料で提供するサービスです。
-            すべてのツールはブラウザ上で動作し、ユーザーが入力したデータはサーバーに送信されません。
+            多くのツールはブラウザ上で動作します。外部通信が必要な機能では、ページ内の説明に従って外部サービスへ問い合わせ情報が送信される場合があります。
             当サイトは、ユーザーへの事前通知なくサービス内容を変更・追加・廃止することがあります。
           </p>
         </section>

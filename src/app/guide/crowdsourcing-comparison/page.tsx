@@ -427,13 +427,13 @@ export default function CrowdsourcingComparisonPage() {
       <section className="mb-10">
         <h2 className="text-lg font-bold mb-4">関連ガイド</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/guide/side-business-tools" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">副業に必要なWebツール完全ガイド</span>
-            <p className="text-xs text-muted mt-1">副業を始めるためのWebツールを徹底解説</p>
+          <Link href="/guide/web-tools-for-work" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">仕事効率化Webツール</span>
+            <p className="text-xs text-muted mt-1">受注後の作業を整える無料ツール</p>
           </Link>
-          <Link href="/guide/accounting-software-comparison" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
-            <span className="text-sm font-bold hover:text-primary">確定申告ソフト比較</span>
-            <p className="text-xs text-muted mt-1">副業の確定申告を効率化するソフト</p>
+          <Link href="/guide/small-business-software" className="block bg-card-bg border border-card-border rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <span className="text-sm font-bold hover:text-primary">小規模事業の作業環境</span>
+            <p className="text-xs text-muted mt-1">受発注・請求・共有の環境整理</p>
           </Link>
         </div>
       </section>

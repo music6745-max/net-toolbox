@@ -65,7 +65,7 @@ export default function GuideList({ guides }: Props) {
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="ガイドを検索（例: 格安SIM、クレカ、VPN）"
+            placeholder="ガイドを検索（例: JSON、VPN、クラウド、リモートワーク）"
             aria-label="ガイドを検索"
             className="w-full px-4 py-3 pl-11 rounded-xl bg-card-bg border border-card-border text-base focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition"
           />

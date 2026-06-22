@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { tools } from "@/lib/tools";
+import { publicTools } from "@/lib/publicCatalog";
 
 export function ToolSearch() {
   const [query, setQuery] = useState("");
@@ -20,7 +20,7 @@ export function ToolSearch() {
   const results = useMemo(() => {
     if (!query.trim()) return [];
     const q = query.toLowerCase();
-    return tools
+    return publicTools
       .filter(
         (t) =>
           t.name.toLowerCase().includes(q) ||

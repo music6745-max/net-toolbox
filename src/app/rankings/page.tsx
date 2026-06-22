@@ -11,6 +11,7 @@ const URL = `${siteConfig.url}/rankings`;
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
+  robots: { index: false, follow: true },
   alternates: { canonical: URL },
   openGraph: {
     title: TITLE,

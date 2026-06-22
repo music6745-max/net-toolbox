@@ -7,6 +7,10 @@ const AI_NAVI_HREF = "https://ai-tools-navi.jp?utm_source=net-toolbox&utm_medium
 const TOSHI_NAVI_HREF = "https://toshi-navi.jp?utm_source=net-toolbox&utm_medium=referral&utm_campaign=sister_site_footer";
 
 export function CrossPromotion() {
+  if (process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE !== "false") {
+    return null;
+  }
+
   const aiCategories = [
     { name: "AIチャット", icon: "💬" },
     { name: "AI画像生成", icon: "🎨" },

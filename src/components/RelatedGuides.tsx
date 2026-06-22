@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { tools } from "@/lib/tools";
+import { isIndexableGuideSlug } from "@/lib/contentPolicy";
+import { publicTools } from "@/lib/publicCatalog";
 
 type Guide = {
   slug: string;
@@ -14,25 +15,19 @@ type Guide = {
 const guidesByCategory: Record<string, Guide[]> = {
   "セキュリティ": [
     {
-      slug: "vpn-comparison",
-      title: "【2026年】VPNおすすめ比較",
-      description: "NordVPN・ExpressVPNなど5社の料金・セキュリティ機能を比較",
-      icon: "🛡️",
+      slug: "developer-tools-guide",
+      title: "Web開発者向け便利ツール活用ガイド",
+      description: "JSON整形、Base64変換、正規表現テストなど開発ツールの使い方",
+      icon: "💻",
     },
     {
-      slug: "corporate-vpn-comparison",
-      title: "法人向けVPN比較",
-      description: "セキュリティ強化に使えるVPNの選び方を解説",
-      icon: "🔒",
+      slug: "remote-work-tools",
+      title: "リモートワークに使う確認ツール",
+      description: "時差、集中時間、共有前チェックの流れを整理",
+      icon: "🏠",
     },
   ],
   "開発ツール": [
-    {
-      slug: "rental-server-comparison",
-      title: "【2026年】レンタルサーバーおすすめ比較5選",
-      description: "ConoHa WING・エックスサーバーなど初心者向け5社を徹底比較",
-      icon: "🖥️",
-    },
     {
       slug: "developer-tools-guide",
       title: "Web開発者向け便利ツール活用ガイド",
@@ -42,16 +37,16 @@ const guidesByCategory: Record<string, Guide[]> = {
   ],
   "日常ツール": [
     {
-      slug: "side-business-tools",
-      title: "副業に必要なWebツール完全ガイド",
-      description: "ブログ開設から確定申告まで副業に必要なツールを網羅",
-      icon: "💰",
-    },
-    {
       slug: "web-tools-for-work",
       title: "仕事効率化に使える無料Webツール15選",
       description: "テキスト処理、データ変換など業務効率を上げるツールを厳選",
       icon: "💼",
+    },
+    {
+      slug: "remote-work-tools",
+      title: "リモートワークに使う確認ツール",
+      description: "時差、集中時間、共有前チェックの流れを整理",
+      icon: "🏠",
     },
   ],
   "テキスト": [
@@ -76,10 +71,10 @@ const guidesByCategory: Record<string, Guide[]> = {
       icon: "💼",
     },
     {
-      slug: "web-tools-for-work",
-      title: "仕事効率化に使える無料Webツール15選",
-      description: "テキスト処理、データ変換など業務効率を上げるツールを厳選",
-      icon: "💼",
+      slug: "photo-editing-comparison",
+      title: "写真編集ソフト比較",
+      description: "画像編集や軽い制作に使うツールの選び方",
+      icon: "📷",
     },
   ],
   "デザイン": [
@@ -101,12 +96,6 @@ const guidesByCategory: Record<string, Guide[]> = {
 // Default guides for categories not explicitly mapped
 const defaultGuides: Guide[] = [
   {
-    slug: "side-business-tools",
-    title: "副業に必要なWebツール完全ガイド",
-    description: "ブログ開設から確定申告まで副業に必要なツールを網羅",
-    icon: "💰",
-  },
-  {
     slug: "web-tools-for-work",
     title: "仕事効率化に使える無料Webツール15選",
     description: "テキスト処理、データ変換など業務効率を上げるツールを厳選",
@@ -117,9 +106,13 @@ const defaultGuides: Guide[] = [
 export function RelatedGuides() {
   const pathname = usePathname();
   const toolSlug = pathname.replace("/tools/", "");
-  const tool = tools.find((t) => t.slug === toolSlug);
+  const tool = publicTools.find((t) => t.slug === toolSlug);
   const category = tool?.category || "";
-  const guides = guidesByCategory[category] || defaultGuides;
+  const guides = (guidesByCategory[category] || defaultGuides).filter((guide) =>
+    isIndexableGuideSlug(guide.slug)
+  );
+
+  if (guides.length === 0) return null;
 
   return (
     <section className="mt-8 mb-4">

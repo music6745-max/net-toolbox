@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { tools } from "@/lib/tools";
+import { publicTools } from "@/lib/publicCatalog";
 import { getIndexableGuides } from "@/lib/retiredGuides";
 import { guides } from "@/app/guide/guides.data";
 
@@ -33,7 +33,7 @@ export default function SearchClient() {
   const toolResults = useMemo(
     () =>
       q
-        ? tools.filter(
+        ? publicTools.filter(
             (t) =>
               t.name.toLowerCase().includes(q) ||
               t.description.toLowerCase().includes(q) ||
