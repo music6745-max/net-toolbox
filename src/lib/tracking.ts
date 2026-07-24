@@ -13,7 +13,8 @@ type EventParams = Record<string, string | number | boolean | undefined>;
 export type TrackedLinkEvent =
   | "affiliate_click"
   | "outbound_click"
-  | "internal_referral_click";
+  | "internal_referral_click"
+  | "internal_cta_click";
 
 export interface TrackedLinkParams {
   page?: string;
@@ -26,6 +27,7 @@ export interface TrackedLinkParams {
 }
 
 const SISTER_SITE_HOSTS = ["ai-tools-navi.jp", "toshi-navi.jp"];
+const SELF_SITE_HOSTS = new Set(["net-toolbox.jp", "www.net-toolbox.jp"]);
 
 const AFFILIATE_HOSTS = [
   "px.a8.net",
@@ -54,7 +56,7 @@ function isHostOrSubdomain(hostname: string, expected: string): boolean {
 }
 
 /**
- * Classify a tracked destination into the three GA4 link funnels.
+ * Classify a tracked destination into the canonical GA4 link funnels.
  * Only known ASP tracking URLs count as affiliate traffic.
  */
 export function trackedLinkEventForUrl(url: string): TrackedLinkEvent {
@@ -62,6 +64,12 @@ export function trackedLinkEventForUrl(url: string): TrackedLinkEvent {
 
   if (SISTER_SITE_HOSTS.some((host) => isHostOrSubdomain(hostname, host))) {
     return "internal_referral_click";
+  }
+
+  // Relative URLs resolve against the canonical base in hostnameFromUrl.
+  // Also accept the canonical host with or without www for absolute URLs.
+  if (SELF_SITE_HOSTS.has(hostname)) {
+    return "internal_cta_click";
   }
 
   if (
@@ -96,6 +104,11 @@ export function trackEvent(name: string, params: EventParams = {}): void {
  */
 export function providerFromUrl(url: string): string {
   if (!url) return "unknown";
+  const hostname = hostnameFromUrl(url);
+  if (SELF_SITE_HOSTS.has(hostname)) return "internal";
+  if (SISTER_SITE_HOSTS.some((host) => isHostOrSubdomain(hostname, host))) {
+    return "sister-site";
+  }
   const u = url.toLowerCase();
   if (u.includes("px.a8.net")) return "a8net";
   if (u.includes("af.moshimo.com")) return "moshimo";
@@ -111,8 +124,8 @@ export function providerFromUrl(url: string): string {
 }
 
 /**
- * Track a monetized, official outbound, or sister-site referral click.
- * Existing GA4 dimensions are shared across all three event names.
+ * Track a monetized, official outbound, same-site CTA, or sister-site click.
+ * Existing GA4 dimensions are shared across all link event names.
  */
 export function trackLinkClick(params: TrackedLinkParams): void {
   trackEvent(trackedLinkEventForUrl(params.href), {
