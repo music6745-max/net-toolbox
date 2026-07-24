@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { AdSenseUnit } from "@/components/AdSenseUnit";
 import { isIndexableToolSlug } from "@/lib/contentPolicy";
-import { onAffiliateClick } from "@/lib/tracking";
+import { onTrackedLinkClick } from "@/lib/tracking";
 
 interface Recommendation {
   title: string;
@@ -751,7 +751,7 @@ export function AffiliateSection({ slug, category }: { slug: string; category: s
             href={rec.url}
             target="_blank"
             rel="noopener noreferrer nofollow sponsored"
-            onClick={onAffiliateClick({
+            onClick={onTrackedLinkClick({
               page: slug,
               position: `affiliate_section_${i + 1}`,
               service: rec.title,

@@ -1,5 +1,5 @@
 "use client";
-import { onAffiliateClick, trackEvent } from "@/lib/tracking";
+import { onTrackedLinkClick, trackEvent } from "@/lib/tracking";
 
 interface ServiceRow {
   name: string;
@@ -29,7 +29,7 @@ export function ComparisonTableCTA({
   const isInternalUrl = (url: string) => url.startsWith("/");
   const onCtaClick = (svc: ServiceRow, position: string) => {
     if (!isInternalUrl(svc.url)) {
-      return onAffiliateClick({
+      return onTrackedLinkClick({
         page,
         position,
         service: svc.name,

@@ -5,7 +5,7 @@ import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { ToolFAQSection } from "@/components/ToolFAQSection";
 import { TrackedOfferLink } from "@/components/TrackedOfferLink";
-import { onAffiliateClick } from "@/lib/tracking";
+import { onTrackedLinkClick } from "@/lib/tracking";
 
 // クロスドメイン送客（toolbox→money-navi）の共通UTM
 const CROSS_DOMAIN_UTM = "?utm_source=net-toolbox&utm_medium=referral&utm_campaign=tool_tax-calculator";
@@ -244,7 +244,7 @@ export default function TaxCalculatorPage() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={onAffiliateClick({
+                onClick={onTrackedLinkClick({
                   page: "tool_tax-calculator",
                   position: `cross_domain_guide_${i + 1}`,
                   service: `toshi-navi:${g.slug}`,
