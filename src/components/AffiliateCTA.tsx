@@ -1,7 +1,7 @@
 "use client";
 
 import { getOffer } from "@/lib/offers";
-import { providerFromUrl, trackEvent } from "@/lib/tracking";
+import { providerFromUrl, trackLinkClick } from "@/lib/tracking";
 
 interface AffiliateCTAProps {
   serviceName: string;
@@ -126,14 +126,14 @@ export function AffiliateCTA({
   const provider =
     offer?.provider === "direct" ? "direct" : providerFromUrl(trackedUrl);
   const onClick = () => {
-    trackEvent("affiliate_click", {
+    trackLinkClick({
       page: currentPage(page),
       position,
       service: offer?.service ?? serviceName,
       offer_id: offer?.id ?? offerId,
       provider,
       status: offer?.status,
-      url: trackedUrl.slice(0, 200),
+      href: trackedUrl,
     });
   };
 

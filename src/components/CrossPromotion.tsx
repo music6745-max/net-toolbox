@@ -1,5 +1,5 @@
 "use client";
-import { onAffiliateClick } from "@/lib/tracking";
+import { onTrackedLinkClick } from "@/lib/tracking";
 
 // クロスドメイン UTM: 受け側 (money-navi / ai-tools-navi) の GA4 で
 // utm_source=net-toolbox でセグメント可能にする
@@ -31,7 +31,7 @@ export function CrossPromotion() {
         href={AI_NAVI_HREF}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={onAffiliateClick({
+        onClick={onTrackedLinkClick({
           page: "global",
           position: "cross_promo_ai",
           service: "ai-tools-navi",
@@ -64,7 +64,7 @@ export function CrossPromotion() {
         href={TOSHI_NAVI_HREF}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={onAffiliateClick({
+        onClick={onTrackedLinkClick({
           page: "global",
           position: "cross_promo_money",
           service: "toshi-navi",
