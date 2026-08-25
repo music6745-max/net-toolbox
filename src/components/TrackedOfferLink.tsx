@@ -45,6 +45,7 @@ export function TrackedOfferLink({
       rel="nofollow sponsored noopener noreferrer"
       onClick={onClick}
       className={className}
+      data-analytics-tracked="true"
       data-offer-id={offer.id}
       data-offer-status={offer.status}
     >

@@ -96,6 +96,7 @@ export function ComparisonTableCTA({
                         : "nofollow sponsored noopener noreferrer"
                     }
                     onClick={onCtaClick(svc, `${positionPrefix}_${i + 1}`)}
+                    data-analytics-tracked="true"
                     className="inline-block bg-primary text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
                   >
                     申し込む
@@ -133,6 +134,7 @@ export function ComparisonTableCTA({
                   : "nofollow sponsored noopener noreferrer"
               }
               onClick={onCtaClick(svc, `${positionPrefix}_mobile_${i + 1}`)}
+              data-analytics-tracked="true"
               className="block text-center bg-primary text-white px-5 py-3 rounded-full text-sm font-bold hover:bg-primary-hover transform hover:scale-105 transition-all duration-200 shadow-sm hover:shadow-md"
             >
               申し込む

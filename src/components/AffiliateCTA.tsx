@@ -163,6 +163,7 @@ export function AffiliateCTA({
           target="_blank"
           rel="nofollow sponsored noopener noreferrer"
           onClick={onClick}
+          data-analytics-tracked="true"
           className={`inline-block ${styles.button} text-white px-10 py-4 rounded-full text-base font-bold shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
         >
           公式サイトで詳細を見る &rarr;
