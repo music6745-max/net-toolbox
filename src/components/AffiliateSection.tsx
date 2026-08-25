@@ -757,6 +757,7 @@ export function AffiliateSection({ slug, category }: { slug: string; category: s
               service: rec.title,
               href: rec.url,
             })}
+            data-analytics-tracked="true"
             className="block bg-card-bg border border-card-border rounded-xl p-5 hover:shadow-lg hover:border-primary/30 transition-all duration-200"
           >
             <div className="flex items-start justify-between gap-4">

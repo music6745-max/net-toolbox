@@ -124,6 +124,41 @@ export function providerFromUrl(url: string): string {
 }
 
 /**
+ * Build a stable fallback identifier when a direct ASP URL is not registered in
+ * the offer master. This keeps delegated clicks attributable without guessing
+ * that two ASP links with different query parameters are the same offer.
+ */
+export function fallbackOfferIdFromUrl(url: string): string | undefined {
+  try {
+    const provider = providerFromUrl(url);
+    const parsed = new URL(url, "https://net-toolbox.jp");
+    if (provider === "a8net") {
+      const a8mat = parsed.searchParams.get("a8mat");
+      return a8mat
+        ? `a8mat_${a8mat.replace(/[^a-z0-9]+/gi, "_").toLowerCase()}`
+        : "unmapped_a8net";
+    }
+    if (provider === "moshimo") return "unmapped_moshimo";
+    if (provider === "valuecommerce") return "unmapped_valuecommerce";
+    if (provider === "rakuten-aff") return "unmapped_rakuten";
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Whether the document-level fallback should emit an event for a link.
+ * Explicitly instrumented links are excluded to prevent double counting.
+ */
+export function shouldTrackDelegatedAffiliateClick(
+  url: string,
+  explicitlyTracked: boolean,
+): boolean {
+  return !explicitlyTracked && trackedLinkEventForUrl(url) === "affiliate_click";
+}
+
+/**
  * Track a monetized, official outbound, same-site CTA, or sister-site click.
  * Existing GA4 dimensions are shared across all link event names.
  */

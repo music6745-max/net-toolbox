@@ -250,6 +250,7 @@ export default function TaxCalculatorPage() {
                   service: `toshi-navi:${g.slug}`,
                   href,
                 })}
+                data-analytics-tracked="true"
                 className="block p-4 rounded-lg bg-card-bg border border-card-border hover:border-primary transition-colors"
               >
                 <div className="flex items-center gap-2 mb-2">

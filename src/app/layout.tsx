@@ -7,6 +7,7 @@ import { publicTools } from "@/lib/publicCatalog";
 import { categories } from "@/lib/categories";
 import { WebSiteJsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { AffiliateClickTracker } from "@/components/AffiliateClickTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -121,6 +122,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <AffiliateClickTracker />
         <WebSiteJsonLd
           url={siteConfig.url}
           name={siteConfig.name}

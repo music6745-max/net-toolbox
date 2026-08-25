@@ -37,6 +37,7 @@ export function CrossPromotion() {
           service: "ai-tools-navi",
           href: AI_NAVI_HREF,
         })}
+        data-analytics-tracked="true"
         className="block bg-card-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">
@@ -70,6 +71,7 @@ export function CrossPromotion() {
           service: "toshi-navi",
           href: TOSHI_NAVI_HREF,
         })}
+        data-analytics-tracked="true"
         className="block bg-card-bg border border-card-border rounded-lg p-5 hover:border-primary/40 hover:shadow-sm transition-all group"
       >
         <div className="flex items-center gap-2 mb-2">
