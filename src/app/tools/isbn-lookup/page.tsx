@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import {
-  isAffiliateRevenueEnabled,
+  isRakutenBooksExperimentEnabled,
   normalizeIsbn,
   RAKUTEN_BOOKS_AFFILIATE_URL,
 } from "@/lib/rakutenBooksAffiliate";
@@ -29,14 +29,14 @@ export default function Page() {
   const offerRef = useRef<HTMLDivElement | null>(null);
   const viewedBookRef = useRef<BookInfo | null>(null);
   const requestInFlightRef = useRef(false);
-  const affiliateRevenueEnabled = isAffiliateRevenueEnabled(
-    process.env.NEXT_PUBLIC_ADSENSE_REVIEW_MODE,
+  const rakutenBooksExperimentEnabled = isRakutenBooksExperimentEnabled(
+    process.env.NEXT_PUBLIC_ISBN_RAKUTEN_EXPERIMENT,
   );
 
   useEffect(() => {
     const target = offerRef.current;
     if (
-      !affiliateRevenueEnabled ||
+      !rakutenBooksExperimentEnabled ||
       !book ||
       !target ||
       viewedBookRef.current === book
@@ -73,7 +73,7 @@ export default function Page() {
     );
     observer.observe(target);
     return () => observer.disconnect();
-  }, [affiliateRevenueEnabled, book]);
+  }, [rakutenBooksExperimentEnabled, book]);
 
   const lookup = async () => {
     if (requestInFlightRef.current) return;
@@ -194,7 +194,7 @@ export default function Page() {
                   Google Booksで詳細を見る
                 </a>
               )}
-              {affiliateRevenueEnabled && (
+              {rakutenBooksExperimentEnabled && (
                 <div ref={offerRef} className="pt-3 mt-3 border-t border-card-border">
                   <a
                     href={RAKUTEN_BOOKS_AFFILIATE_URL}

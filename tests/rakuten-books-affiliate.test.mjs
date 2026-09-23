@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
-  isAffiliateRevenueEnabled,
+  isRakutenBooksExperimentEnabled,
   normalizeIsbn,
   RAKUTEN_BOOKS_AFFILIATE_URL,
 } from "../src/lib/rakutenBooksAffiliate.ts";
@@ -27,8 +27,8 @@ test("keeps the existing Moshimo-generated Rakuten Books URL unchanged", () => {
   assert.equal(affiliate.searchParams.get("url"), "https://books.rakuten.co.jp/");
 });
 
-test("respects the existing affiliate revenue review-mode switch", () => {
-  assert.equal(isAffiliateRevenueEnabled("false"), true);
-  assert.equal(isAffiliateRevenueEnabled("true"), false);
-  assert.equal(isAffiliateRevenueEnabled(undefined), false);
+test("keeps the ISBN experiment on by default with a narrow off switch", () => {
+  assert.equal(isRakutenBooksExperimentEnabled(undefined), true);
+  assert.equal(isRakutenBooksExperimentEnabled("true"), true);
+  assert.equal(isRakutenBooksExperimentEnabled("false"), false);
 });

@@ -8,6 +8,8 @@ export function normalizeIsbn(value: string): string | null {
   return /^\d{10}(?:\d{3})?$/.test(cleaned) ? cleaned : null;
 }
 
-export function isAffiliateRevenueEnabled(reviewMode: string | undefined): boolean {
-  return reviewMode === "false";
+// This experiment is independent from the legacy site-wide AdSense review mode.
+// It defaults on, while retaining a narrow emergency off switch.
+export function isRakutenBooksExperimentEnabled(value: string | undefined): boolean {
+  return value !== "false";
 }
