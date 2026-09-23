@@ -979,7 +979,7 @@ export default function JobSiteComparisonPage() {
             {
               name: "ファルマスタッフ",
               url: "https://px.a8.net/svt/ejp?a8mat=4B1DXL+95U5WY+276A+63OYA",
-              highlight: "薬剤師転職専門・業界トップクラスの求人数",
+              highlight: "薬剤師向けの転職支援サービス",
               price: "無料登録",
               badge: "薬剤師向け",
             },

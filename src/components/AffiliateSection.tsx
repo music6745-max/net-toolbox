@@ -13,6 +13,15 @@ interface Recommendation {
   tag: string;
 }
 
+// 2026-07-24〜09-22 の60日最終判定で、収益CTAは実利用の多い
+// ツールだけに縮小。active users 上位のうち、反復アクセスに偏った
+// time-calculator（48 views / 3 users）は除外する。
+const MONETIZATION_TOOL_SLUGS = new Set([
+  "isbn-lookup",
+  "dns-lookup",
+  "video-size-calculator",
+]);
+
 // Affiliate recommendations mapped by tool category or specific tool slug
 // URLs are placeholder - replace with actual affiliate links after signup
 const RECOMMENDATIONS: Record<string, Recommendation[]> = {
@@ -733,6 +742,7 @@ export function AffiliateSection({ slug, category }: { slug: string; category: s
   const recommendations = useMemo(() => {
     if (reviewMode) return [];
     if (!isIndexableToolSlug(slug)) return [];
+    if (!MONETIZATION_TOOL_SLUGS.has(slug)) return [];
     // Tool-specific recommendations take priority
     if (TOOL_SPECIFIC[slug]) return TOOL_SPECIFIC[slug];
     // Fall back to category-level recommendations

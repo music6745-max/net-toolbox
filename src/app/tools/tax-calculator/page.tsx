@@ -4,7 +4,6 @@ import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
 import { ToolFAQSection } from "@/components/ToolFAQSection";
-import { TrackedOfferLink } from "@/components/TrackedOfferLink";
 import { onTrackedLinkClick } from "@/lib/tracking";
 
 // クロスドメイン送客（toolbox→money-navi）の共通UTM
@@ -17,28 +16,9 @@ const CROSS_DOMAIN_UTM = "?utm_source=net-toolbox&utm_medium=referral&utm_campai
  * 最も伸びているエントリポイント。だからこそ、次に読ませるページを
  * 期待収益順に並べて、ここで離脱させない設計に切り替える。
  *
- * 優先順位（1件あたりの期待粗利 × 成約確度）:
- *  1. 税理士ドットコム（A8.net, ¥12,000/件） — 消費税計算 → インボイス対応相談は
- *     意図マッチ最強。「個人事業主」「インボイス」「副業ライター」向け。
- *  2. FP無料相談（A8.net, ¥10,000/件） — 税金計算した後「保険・老後も」の横展開。
- *  3. toshi-navi のインボイス完全ガイド → 内部で上記案件に再接続。
- *  4. toshi-navi の副業系ガイド — tax-calculator 利用者の実際のバックグラウンドと一致。
+ * 60日最終判定後は直接の収益CTAを停止し、関連ガイドと無料ツールへの
+ * 受動導線だけを維持する。
  */
-
-const HIGH_VALUE_CTA = {
-  zeirishi: {
-    offerId: "zeirishi-dotcom",
-    title: "税理士ドットコム（無料マッチング）",
-    payoutNote: "全国5,900名の税理士が登録、相性の合う税理士を最短1日で紹介",
-    why: "消費税の計算が出たあと、「この数字で本当に合っているか」「2割特例は適用できるか」を具体的に相談したい方へ。インボイス登録の要否判定にも使えます。",
-  },
-  hoken: {
-    offerId: "hoken-mammoth",
-    title: "保険マンモス（FP無料相談）",
-    payoutNote: "業界経験12年超のベテランFPが平均12年の経験で家計全体を見直し",
-    why: "税金だけでなく、保険・老後資金・住宅ローンなど人生のお金を一度に相談したい方へ。税理士より広範囲で相談できるのが強み。",
-  },
-};
 
 const CROSS_DOMAIN_GUIDES = [
   {
@@ -106,10 +86,6 @@ export default function TaxCalculatorPage() {
   const taxExcluded = mode === "include" ? amount / (1 + taxRate / 100) : amount;
   const taxAmount = taxIncluded - taxExcluded;
 
-  // 「消費税額が年間100万円以上になる規模」かを判定して、CTAの出し方を変える
-  // （大きい金額の試算をしている人＝事業者の可能性が高いので税理士相談の優先度を上げる）
-  const isLikelyBusinessOwner = taxAmount >= 10000;
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <nav className="text-sm text-muted mb-6">
@@ -154,34 +130,6 @@ export default function TaxCalculatorPage() {
         </div>
       </div>
 
-      {/* 🎯 計算結果直下の最高単価CTA（動的: 大きい金額の試算時はさらに強めに表示） */}
-      <section className="mt-6 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-2 border-amber-400 dark:border-amber-600 rounded-xl p-6">
-        <div className="flex items-start gap-3">
-          <span className="text-3xl">💡</span>
-          <div className="flex-1">
-            <h2 className="text-base font-bold mb-2">
-              {isLikelyBusinessOwner
-                ? "この規模の取引なら、専門家に相談した方が数十万円得します"
-                : "インボイス・2割特例の対象か、無料で確認できます"}
-            </h2>
-            <p className="text-sm text-muted leading-relaxed mb-4">
-              {isLikelyBusinessOwner
-                ? "消費税額が年間10万円を超える規模の事業者は、課税事業者か免税事業者か・2割特例の適用可否・簡易課税の選択などで最終税額が大きく変わります。税理士ドットコムなら無料でマッチング＆初回相談可能。"
-                : "消費税の計算は一瞬ですが、「そもそも申告が必要か」「2割特例は使えるか」「インボイス登録すべきか」の判断で損益が数十万円変わります。無料の税理士マッチングで方針を確認できます。"}
-            </p>
-            <TrackedOfferLink
-              offerId={HIGH_VALUE_CTA.zeirishi.offerId}
-              page="tool_tax-calculator"
-              position="result_below_primary_cta"
-              className="inline-block px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-sm font-bold transition-colors"
-            >
-              税理士ドットコムで無料相談 →
-            </TrackedOfferLink>
-            <p className="text-[11px] text-muted mt-2">※ PR・広告を含みます</p>
-          </div>
-        </div>
-      </section>
-
       <ToolFAQSection
         toolName="消費税計算"
         howTo={[
@@ -209,25 +157,6 @@ export default function TaxCalculatorPage() {
           },
         ]}
       />
-
-      {/* 🎯 もう1本の高単価CTA（FP相談） — 税務相談とは異なる属性を取りに行く */}
-      <section className="mt-8 bg-card-bg border border-card-border rounded-xl p-6">
-        <h2 className="text-base font-bold mb-2">💼 税金の先にある「家計・老後」を設計したい方へ</h2>
-        <p className="text-sm text-muted leading-relaxed mb-4">
-          {HIGH_VALUE_CTA.hoken.why}
-        </p>
-        <TrackedOfferLink
-          offerId={HIGH_VALUE_CTA.hoken.offerId}
-          page="tool_tax-calculator"
-          position="hub_fp_cta"
-          className="inline-block px-5 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg text-sm font-medium transition-colors"
-        >
-          保険マンモスで無料FP相談 →
-        </TrackedOfferLink>
-        <p className="text-[11px] text-muted mt-2">
-          {HIGH_VALUE_CTA.hoken.payoutNote}｜※ PR・広告を含みます
-        </p>
-      </section>
 
       {/* 🎯 money-navi 送客 — 優先度バッジつき */}
       <section className="mt-10 bg-gradient-to-br from-primary/5 to-blue-50/50 dark:from-primary/10 dark:to-blue-900/10 border-2 border-primary/30 rounded-xl p-6">
