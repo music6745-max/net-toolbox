@@ -13,11 +13,11 @@ interface Recommendation {
   tag: string;
 }
 
-// 2026-07-24〜09-22 の60日最終判定で、収益CTAは実利用の多い
-// ツールだけに縮小。active users 上位のうち、反復アクセスに偏った
-// time-calculator（48 views / 3 users）は除外する。
+// 2026-07-24〜09-22 の60日最終判定で、共通収益CTAは実利用の多い
+// ツールだけに縮小。ISBN検索は検索結果に一致する専用CTAへ移行した。
+// active users 上位でも反復アクセスに偏った time-calculator
+// （48 views / 3 users）は除外する。
 const MONETIZATION_TOOL_SLUGS = new Set([
-  "isbn-lookup",
   "dns-lookup",
   "video-size-calculator",
 ]);

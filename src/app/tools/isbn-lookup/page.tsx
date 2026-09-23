@@ -1,9 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AffiliateSection } from "@/components/AffiliateSection";
 import { RelatedTools } from "@/components/RelatedTools";
+import {
+  isRakutenBooksExperimentEnabled,
+  normalizeIsbn,
+  RAKUTEN_BOOKS_AFFILIATE_URL,
+} from "@/lib/rakutenBooksAffiliate";
+import { onTrackedLinkClick, trackEvent } from "@/lib/tracking";
 
 type BookInfo = {
   title: string;
@@ -21,21 +26,78 @@ export default function Page() {
   const [book, setBook] = useState<BookInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const offerRef = useRef<HTMLDivElement | null>(null);
+  const viewedBookRef = useRef<BookInfo | null>(null);
+  const requestInFlightRef = useRef(false);
+  const rakutenBooksExperimentEnabled = isRakutenBooksExperimentEnabled(
+    process.env.NEXT_PUBLIC_ISBN_RAKUTEN_EXPERIMENT,
+  );
+
+  useEffect(() => {
+    const target = offerRef.current;
+    if (
+      !rakutenBooksExperimentEnabled ||
+      !book ||
+      !target ||
+      viewedBookRef.current === book
+    ) {
+      return;
+    }
+
+    const recordView = () => {
+      if (viewedBookRef.current === book) return;
+      viewedBookRef.current = book;
+      trackEvent("offer_view", {
+        page: "tool_isbn-lookup",
+        position: "isbn_result_after_metadata",
+        service: "楽天ブックス",
+        offer_id: "moshimo-rakuten-books",
+        provider: "moshimo",
+        status: "active",
+      });
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      recordView();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          recordView();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [rakutenBooksExperimentEnabled, book]);
 
   const lookup = async () => {
-    const cleaned = isbn.replace(/[-\s]/g, "");
-    if (!/^\d{10}(\d{3})?$/.test(cleaned)) {
+    if (requestInFlightRef.current) return;
+    const cleaned = normalizeIsbn(isbn);
+    if (!cleaned) {
       setError("ISBNは10桁または13桁の数字で入力してください");
       setBook(null);
       return;
     }
     setError("");
+    requestInFlightRef.current = true;
     setLoading(true);
     setBook(null);
     try {
       const res = await fetch(
         `https://www.googleapis.com/books/v1/volumes?q=isbn:${cleaned}`
       );
+      if (!res.ok) {
+        if (res.status === 429) {
+          setError("検索サービスが混み合っています。時間をおいて再度お試しください。");
+          return;
+        }
+        throw new Error(`Google Books request failed: ${res.status}`);
+      }
       const data = await res.json();
       if (!data.items || data.items.length === 0) {
         setError("該当する書籍が見つかりませんでした");
@@ -55,6 +117,7 @@ export default function Page() {
     } catch {
       setError("検索中にエラーが発生しました。時間をおいて再度お試しください。");
     } finally {
+      requestInFlightRef.current = false;
       setLoading(false);
     }
   };
@@ -79,7 +142,7 @@ export default function Page() {
               type="text"
               value={isbn}
               onChange={(e) => setIsbn(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && lookup()}
+              onKeyDown={(e) => e.key === "Enter" && !loading && lookup()}
               className="flex-1 border border-card-border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               placeholder="例: 9784873119045"
             />
@@ -131,6 +194,31 @@ export default function Page() {
                   Google Booksで詳細を見る
                 </a>
               )}
+              {rakutenBooksExperimentEnabled && (
+                <div ref={offerRef} className="pt-3 mt-3 border-t border-card-border">
+                  <a
+                    href={RAKUTEN_BOOKS_AFFILIATE_URL}
+                    target="_blank"
+                    rel="nofollow sponsored noopener noreferrer"
+                    onClick={onTrackedLinkClick({
+                      page: "tool_isbn-lookup",
+                      position: "isbn_result_after_metadata",
+                      service: "楽天ブックス",
+                      offer_id: "moshimo-rakuten-books",
+                      provider: "moshimo",
+                      status: "active",
+                      href: RAKUTEN_BOOKS_AFFILIATE_URL,
+                    })}
+                    data-analytics-tracked="true"
+                    className="inline-flex items-center justify-center rounded-lg bg-[#bf0000] px-5 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+                  >
+                    楽天ブックスで探す
+                  </a>
+                  <p className="mt-2 text-[11px] leading-relaxed text-muted">
+                    PR｜リンク経由で購入されると運営者に報酬が入る場合があります。価格・在庫は販売店でご確認ください。
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -144,7 +232,6 @@ export default function Page() {
         </div>
       </section>
 
-      <AffiliateSection slug="isbn-lookup" category="日常ツール" />
       <RelatedTools currentSlug="isbn-lookup" category="日常ツール" />
     </div>
   );
