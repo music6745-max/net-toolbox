@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd, ItemListJsonLd } from "@/components/JsonLd";
-import { AffiliateCTA } from "@/components/AffiliateCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
+import { ExperimentOfferCard } from "@/components/ExperimentOfferCard";
 
 export const metadata: Metadata = {
   title: "プログラミングスクールおすすめ5選【2026年最新】徹底比較｜選び方も解説",
@@ -878,31 +878,20 @@ export default function ProgrammingSchoolComparisonPage() {
         </div>
       </section>
 
-      {/* SkillHacks Affiliate CTA */}
-      <AffiliateCTA
-        serviceName="SkillHacks（スキルハックス）"
-        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM"
-        description="業界最安値のオンラインプログラミングスクール。動画で学べて質問し放題。初心者でも安心のサポート体制。"
-        badge="業界最安値"
-        color="purple"
-      />
-
-      {/* Winスクール Affiliate CTA */}
-      <AffiliateCTA
-        serviceName="Winスクール"
-        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4D6GHE+529E+5ZMCH"
-        description="全国各地に教室を展開する個人レッスンのプログラミングスクール。資格取得に強く、就転職サポートも充実。"
-        badge="全国展開"
-        color="blue"
-      />
-
-      {/* Python Winner (Winスクール) Affiliate CTA */}
-      <AffiliateCTA
-        serviceName="Python Winner（Winスクール）"
-        url="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4EDBOY+529E+HW2Q9"
-        description="Winスクールが提供するPython特化コース。AI・データ分析に必要なスキルを個人レッスンで効率的に習得できます。"
-        badge="Python特化"
-        color="green"
+      <ExperimentOfferCard
+        experimentId="ai_pricing_skillhacks_20260926"
+        variant="v1"
+        eligibleKey="programming-school-comparison"
+        page="guide_programming-school-comparison"
+        position="exp.ai_pricing_skillhacks.v1.landing_primary"
+        service="SkillHacks"
+        offerId="a8-skillhacks"
+        provider="a8net"
+        href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+4DRW36+4K3S+5YJRM"
+        title="SkillHacksの学習内容と条件を確認"
+        description="独学だけでは進めにくいと感じた方向けの選択肢です。申込み前に、現在の講座内容・料金・質問対応範囲を公式ページで確認できます。"
+        buttonLabel="公式の講座内容を確認する"
+        disclosure="PR｜リンク経由の申込みで運営者に報酬が入る場合があります。学習成果や収入は保証されません。"
       />
 
       {/* Related Tool CTA */}

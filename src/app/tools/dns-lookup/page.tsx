@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { RelatedTools } from "@/components/RelatedTools";
 import { AffiliateSection } from "@/components/AffiliateSection";
+import { ExperimentOfferCard } from "@/components/ExperimentOfferCard";
 
 interface DnsRecord {
   type: string;
@@ -13,6 +14,8 @@ interface DnsRecord {
 }
 
 const RECORD_TYPES = ["A", "AAAA", "MX", "NS", "TXT", "CNAME", "SOA"];
+const NORDVPN_AFFILIATE_URL =
+  "https://px.a8.net/svt/ejp?a8mat=4B1DXI+3U4L4I+3YFI+674EQ";
 
 export default function DnsLookupPage() {
   const [domain, setDomain] = useState("");
@@ -20,6 +23,9 @@ export default function DnsLookupPage() {
   const [records, setRecords] = useState<DnsRecord[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [successfulLookupId, setSuccessfulLookupId] = useState(0);
+  const dnsRevenueExperimentEnabled =
+    process.env.NEXT_PUBLIC_DNS_PRIVACY_EXPERIMENT !== "false";
 
   const handleLookup = async () => {
     if (!domain.trim()) return;
@@ -40,6 +46,7 @@ export default function DnsLookupPage() {
             data: a.data,
           }))
         );
+        setSuccessfulLookupId((value) => value + 1);
       } else {
         setError("レコードが見つかりませんでした。");
       }
@@ -106,8 +113,9 @@ export default function DnsLookupPage() {
         {error && <p className="text-red-500 text-sm">{error}</p>}
 
         {records.length > 0 && (
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+          <div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-card-border">
                   <th className="text-left py-2 px-3">タイプ</th>
@@ -126,7 +134,25 @@ export default function DnsLookupPage() {
                   </tr>
                 ))}
               </tbody>
-            </table>
+              </table>
+            </div>
+            {dnsRevenueExperimentEnabled && (
+              <ExperimentOfferCard
+                experimentId="tb_dns_vpn_20260926"
+                variant="v1"
+                eligibleKey={successfulLookupId}
+                page="tool_dns-lookup"
+                position="exp.tb_dns_vpn.v1.result"
+                service="NordVPN"
+                offerId="a8-nordvpn"
+                provider="a8net"
+                href={NORDVPN_AFFILIATE_URL}
+                title="通信経路のプライバシー対策も確認する"
+                description="この結果はDNSレコードの内容です。VPNは別の仕組みですが、公共Wi-Fiなどで通信を保護したい場合は、各サービスのDNS機能・対応端末・利用条件を公式情報で比較できます。"
+                buttonLabel="NordVPNの機能を確認する"
+                disclosure="PR｜リンク経由の申込みで運営者に報酬が入る場合があります。VPNだけで匿名性や安全性が完全に保証されるものではありません。"
+              />
+            )}
           </div>
         )}
       </div>
