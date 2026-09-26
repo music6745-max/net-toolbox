@@ -4,6 +4,7 @@ import { publicTools } from "@/lib/publicCatalog";
 import { categories } from "@/lib/categories";
 import { FAQJsonLd } from "@/components/JsonLd";
 import { ToolSearch } from "@/components/ToolSearch";
+import { CustomerHarassmentLandingLink } from "@/components/CustomerHarassmentExperiment";
 
 const featuredToolSlugs = [
   "character-count",
@@ -111,6 +112,29 @@ export default function Home() {
       </section>
 
       <ToolSearch />
+
+      <section
+        className="mb-12 mt-8 rounded-xl border border-primary/30 bg-primary/5 p-5 sm:p-6"
+        data-experiment-id="opp_customer_harassment_kit"
+      >
+        <div className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center">
+          <div>
+            <p className="text-xs font-bold text-primary">事業者向け・有料実証</p>
+            <h2 className="mt-1 text-xl font-bold">
+              カスタマーハラスメント対策 運用スタートキット
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              2026年10月1日の施行に向け、方針・相談受付・初動対応・記録のたたき台を事業者ごとに整えます。実証価格19,800円。
+            </p>
+          </div>
+          <CustomerHarassmentLandingLink
+            position="home_business_pilot"
+            className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90"
+          >
+            内容と対象範囲を見る
+          </CustomerHarassmentLandingLink>
+        </div>
+      </section>
 
       <section className="mb-12">
         <div className="flex items-center justify-between mb-4 gap-3">
@@ -238,3 +262,4 @@ export default function Home() {
     </div>
   );
 }
+
