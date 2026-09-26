@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/tools";
 import { BreadcrumbJsonLd, FAQJsonLd } from "@/components/JsonLd";
 import { ComparisonTableCTA } from "@/components/ComparisonTableCTA";
 import { GuideRelatedLinks } from "@/components/GuideRelatedLinks";
+import { ExperimentOfferCard } from "@/components/ExperimentOfferCard";
 
 function ArticleJsonLd() {
   const data = {
@@ -333,16 +334,21 @@ export default function RentalServerComparisonPage() {
             （月額220円〜・ハイスピードプランならLiteSpeed搭載）
           </p>
         </div>
-        <div className="mt-4">
-          <a
-            href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT"
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
-            className="inline-block bg-primary text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-primary-hover transition-colors"
-          >
-            ConoHa WINGを公式サイトで見る
-          </a>
-        </div>
+        <ExperimentOfferCard
+          experimentId="ai_business_hosting_20260926"
+          variant="v1"
+          eligibleKey="rental-server-comparison"
+          page="guide_rental-server-comparison"
+          position="exp.ai_business_hosting.v1.landing_primary"
+          service="ConoHa WING"
+          offerId="a8-conoha-wing"
+          provider="a8net"
+          href="https://px.a8.net/svt/ejp?a8mat=4B1DXI+1FSQEQ+50+5SG2LT"
+          title="ConoHa WINGの現在の契約条件を確認"
+          description="WordPressの開始方法、契約期間ごとの料金、ドメイン特典の適用条件を公式ページで確認できます。"
+          buttonLabel="公式の料金・条件を確認する"
+          disclosure="PR｜リンク経由の申込みで運営者に報酬が入る場合があります。契約前に最新料金と適用条件をご確認ください。"
+        />
       </div>
 
       {/* Table of Contents */}

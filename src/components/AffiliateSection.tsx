@@ -18,7 +18,6 @@ interface Recommendation {
 // active users 上位でも反復アクセスに偏った time-calculator
 // （48 views / 3 users）は除外する。
 const MONETIZATION_TOOL_SLUGS = new Set([
-  "dns-lookup",
   "video-size-calculator",
 ]);
 

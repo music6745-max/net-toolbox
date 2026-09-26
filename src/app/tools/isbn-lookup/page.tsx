@@ -28,6 +28,7 @@ export default function Page() {
   const [error, setError] = useState("");
   const offerRef = useRef<HTMLDivElement | null>(null);
   const viewedBookRef = useRef<BookInfo | null>(null);
+  const eligibleBookRef = useRef<BookInfo | null>(null);
   const requestInFlightRef = useRef(false);
   const rakutenBooksExperimentEnabled = isRakutenBooksExperimentEnabled(
     process.env.NEXT_PUBLIC_ISBN_RAKUTEN_EXPERIMENT,
@@ -44,16 +45,36 @@ export default function Page() {
       return;
     }
 
+    if (eligibleBookRef.current !== book) {
+      eligibleBookRef.current = book;
+      trackEvent("experiment_eligible", {
+        experiment_id: "tb_isbn_rkt_20260924",
+        experiment_variant: "v1",
+        page: "tool_isbn-lookup",
+        position: "exp.tb_isbn_rkt.v1.result",
+        offer_id: "moshimo-rakuten-books",
+      });
+    }
+
     const recordView = () => {
       if (viewedBookRef.current === book) return;
       viewedBookRef.current = book;
       trackEvent("offer_view", {
+        experiment_id: "tb_isbn_rkt_20260924",
+        experiment_variant: "v1",
         page: "tool_isbn-lookup",
-        position: "isbn_result_after_metadata",
+        position: "exp.tb_isbn_rkt.v1.result",
         service: "楽天ブックス",
         offer_id: "moshimo-rakuten-books",
         provider: "moshimo",
         status: "active",
+      });
+      trackEvent("experiment_view", {
+        experiment_id: "tb_isbn_rkt_20260924",
+        experiment_variant: "v1",
+        page: "tool_isbn-lookup",
+        position: "exp.tb_isbn_rkt.v1.result",
+        offer_id: "moshimo-rakuten-books",
       });
     };
 
@@ -200,16 +221,27 @@ export default function Page() {
                     href={RAKUTEN_BOOKS_AFFILIATE_URL}
                     target="_blank"
                     rel="nofollow sponsored noopener noreferrer"
-                    onClick={onTrackedLinkClick({
-                      page: "tool_isbn-lookup",
-                      position: "isbn_result_after_metadata",
-                      service: "楽天ブックス",
-                      offer_id: "moshimo-rakuten-books",
-                      provider: "moshimo",
-                      status: "active",
-                      href: RAKUTEN_BOOKS_AFFILIATE_URL,
-                    })}
+                    onClick={() => {
+                      onTrackedLinkClick({
+                        page: "tool_isbn-lookup",
+                        position: "exp.tb_isbn_rkt.v1.result",
+                        service: "楽天ブックス",
+                        offer_id: "moshimo-rakuten-books",
+                        provider: "moshimo",
+                        status: "active",
+                        href: RAKUTEN_BOOKS_AFFILIATE_URL,
+                      })();
+                      trackEvent("experiment_click", {
+                        experiment_id: "tb_isbn_rkt_20260924",
+                        experiment_variant: "v1",
+                        page: "tool_isbn-lookup",
+                        position: "exp.tb_isbn_rkt.v1.result",
+                        offer_id: "moshimo-rakuten-books",
+                      });
+                    }}
                     data-analytics-tracked="true"
+                    data-experiment-id="tb_isbn_rkt_20260924"
+                    data-experiment-variant="v1"
                     className="inline-flex items-center justify-center rounded-lg bg-[#bf0000] px-5 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
                   >
                     楽天ブックスで探す
