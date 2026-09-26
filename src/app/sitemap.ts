@@ -36,6 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: siteConfig.url, priority: 1, changeFrequency: "weekly" as const },
     { url: `${siteConfig.url}/guide`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${siteConfig.url}/tools`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${siteConfig.url}/services/customer-harassment-kit`, priority: 0.7, changeFrequency: "weekly" as const },
     { url: `${siteConfig.url}/about`, priority: 0.4, changeFrequency: "yearly" as const },
     { url: `${siteConfig.url}/author`, priority: 0.4, changeFrequency: "yearly" as const },
     { url: `${siteConfig.url}/quality`, priority: 0.4, changeFrequency: "yearly" as const },
@@ -46,3 +47,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPages, ...guidePages, ...categoryPages, ...toolPages];
 }
+
