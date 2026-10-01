@@ -41,4 +41,3 @@ test("paused offer is no longer promoted or included in the sitemap", () => {
   assert.doesNotMatch(layout, /\/services\/customer-harassment-kit/);
 });
 
-
