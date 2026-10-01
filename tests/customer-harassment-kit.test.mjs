@@ -5,40 +5,39 @@ import { test } from "node:test";
 const read = (path) =>
   readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("paid pilot states buyer, price, deliverables, source, and boundary", () => {
+test("service page clearly stops new intake and is excluded from search", () => {
   const page = read("src/app/services/customer-harassment-kit/page.tsx");
   assert.match(page, /CUSTOMER_HARASSMENT_EXPERIMENT_ID/);
-  assert.match(page, /19,800円/);
-  assert.match(page, /従業員1〜50名/);
-  assert.match(page, /納品するもの/);
-  assert.match(page, /2026年10月1日/);
-  assert.match(page, /https:\/\/www\.mhlw\.go\.jp\//);
+  assert.match(page, /新規受付停止中/);
+  assert.match(page, /再開時期は未定/);
+  assert.match(page, /index: false/);
   assert.match(page, /法的助言/);
-  assert.match(page, /適法性の保証/);
   assert.match(page, /個人情報/);
-  assert.match(page, /4営業時間以内/);
+  assert.doesNotMatch(page, /mailto:/);
+  assert.doesNotMatch(page, /contact@net-toolbox\.jp/);
+  assert.doesNotMatch(page, /trackEvent/);
+  assert.doesNotMatch(page, /19,800円/);
+  assert.doesNotMatch(page, /4営業時間以内/);
 });
 
-test("inquiry CTA is attributable without editing shared tracking", () => {
+test("paused CTA exposes no inquiry or tracking action", () => {
   const component = read("src/components/CustomerHarassmentExperiment.tsx");
   assert.match(component, /opp_customer_harassment_kit/);
-  assert.match(component, /contact@net-toolbox\.jp/);
-  assert.match(component, /trackEvent\("experiment_eligible"/);
-  assert.match(component, /if \(!eligibleRecorded\)/);
-  assert.match(component, /trackEvent\("offer_view"/);
-  assert.match(component, /trackEvent\("experiment_view"/);
-  assert.match(component, /trackEvent\("experiment_click"/);
-  assert.match(component, /trackEvent\("service_inquiry_start"/);
-  assert.match(component, /data-analytics-tracked="true"/);
-  assert.match(component, /個人情報を記載しないでください/);
+  assert.match(component, /新規受付停止中/);
+  assert.match(component, /個人情報・機密情報を送らないでください/);
+  assert.doesNotMatch(component, /mailto:/);
+  assert.doesNotMatch(component, /trackEvent/);
+  assert.doesNotMatch(component, /href=/);
 });
 
-test("offer route is discoverable from home, footer, and sitemap", () => {
+test("paused offer is no longer promoted or included in the sitemap", () => {
   const home = read("src/app/page.tsx");
   const layout = read("src/app/layout.tsx");
   const sitemap = read("src/app/sitemap.ts");
-  assert.match(home, /CustomerHarassmentLandingLink/);
-  assert.match(layout, /CustomerHarassmentLandingLink/);
-  assert.match(sitemap, /services\/customer-harassment-kit/);
+  assert.doesNotMatch(home, /CustomerHarassmentLandingLink/);
+  assert.doesNotMatch(layout, /CustomerHarassmentLandingLink/);
+  assert.doesNotMatch(sitemap, /services\/customer-harassment-kit/);
+  assert.doesNotMatch(home, /\/services\/customer-harassment-kit/);
+  assert.doesNotMatch(layout, /\/services\/customer-harassment-kit/);
 });
 

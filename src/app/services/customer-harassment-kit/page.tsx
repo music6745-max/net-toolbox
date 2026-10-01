@@ -11,14 +11,15 @@ const officialSourceUrl =
   "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyoukintou/seisaku06/";
 
 export const metadata: Metadata = {
-  title: "カスタマーハラスメント対策 運用スタートキット",
+  title: "カスタマーハラスメント対策 運用スタートキット｜新規受付停止中",
   description:
-    "2026年10月1日のカスタマーハラスメント防止措置義務化に向けた、小規模事業者向けの運用テンプレート作成・導入支援。実証価格19,800円。",
+    "カスタマーハラスメント対策 運用スタートキットは、個別調整・短納期対応・法務に隣接する確認を安全に継続できる運用体制と合わないため、新規相談と受注を停止しています。",
   alternates: { canonical: pageUrl },
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "カスタマーハラスメント対策 運用スタートキット",
+    title: "カスタマーハラスメント対策 運用スタートキット｜新規受付停止中",
     description:
-      "方針周知、相談受付、初動対応、記録のたたき台を小規模事業者向けに整える有料導入支援。",
+      "カスタマーハラスメント対策 運用スタートキットは現在、新規相談と受注を停止しています。",
     url: pageUrl,
     type: "website",
   },
@@ -46,18 +47,18 @@ const deliverables = [
 const steps = [
   {
     number: "1",
-    title: "個人情報なしで要件確認",
-    body: "業種、従業員数の範囲、拠点数、既存文書の有無だけをメールで確認します。実際の事案の詳細は不要です。",
+    title: "新規受付を停止",
+    body: "新規相談、見積り、契約、個別文書作成を受け付けていません。",
   },
   {
     number: "2",
-    title: "範囲と納期を合意",
-    body: "対象文書、反映する社名・役職、納期を確認します。合意前に費用は発生しません。",
+    title: "個人情報を受領しない",
+    body: "顧客・従業員の氏名、連絡先、録音、実際の事案内容を送らないでください。",
   },
   {
     number: "3",
-    title: "4営業時間以内を目安に初稿",
-    body: "必要情報の確定後、編集可能な文書とPDFの初稿を4営業時間以内を目安に納品します。納品後7日以内の文言修正を1回含みます。",
+    title: "再開時期は未定",
+    body: "自動販売できる一般テンプレートへ再設計する場合も、法務判断や適法保証は提供しません。",
   },
 ];
 
@@ -65,17 +66,17 @@ const faqItems = [
   {
     question: "このキットだけで法令対応が完了しますか？",
     answer:
-      "いいえ。本サービスは運用文書のたたき台と導入支援であり、個別事業者の法的義務の判定、適法性の保証、法律相談は行いません。厚生労働省の一次資料を確認し、必要に応じて弁護士、社会保険労務士、都道府県労働局へご相談ください。",
+      "いいえ。旧販売実験で想定していた内容も、個別事業者の法的義務の判定、適法性の保証、法律相談を含みません。厚生労働省の一次資料を確認し、必要に応じて弁護士、社会保険労務士、都道府県労働局へご相談ください。",
   },
   {
     question: "実際に起きた事案の情報を送る必要はありますか？",
     answer:
-      "初回相談では不要です。顧客・従業員の氏名、連絡先、録音、具体的な事案内容などの個人情報・機密情報は送らないでください。",
+      "現在は相談を受け付けていません。顧客・従業員の氏名、連絡先、録音、具体的な事案内容などの個人情報・機密情報は送らないでください。",
   },
   {
-    question: "問い合わせると料金が発生しますか？",
+    question: "現在申し込めますか？",
     answer:
-      "発生しません。対象範囲、納期、成果物をメールで確認し、双方が合意した場合にだけお申し込みとなります。",
+      "いいえ。現在は新規相談、見積り、契約、個別文書作成を受け付けていません。再開時期は未定です。",
   },
 ];
 
@@ -98,10 +99,10 @@ export default function CustomerHarassmentKitPage() {
       <header className="rounded-2xl border border-primary/30 bg-primary/5 p-6 sm:p-10">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">
-            事業者向け・有料実証
+            新規受付停止中
           </span>
           <span className="rounded-full border border-card-border bg-card-bg px-3 py-1 text-xs text-muted">
-            受付上限 3事業者
+            再開時期は未定
           </span>
         </div>
         <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
@@ -109,22 +110,19 @@ export default function CustomerHarassmentKitPage() {
           <span className="block text-primary">運用スタートキット</span>
         </h1>
         <p className="mt-5 max-w-3xl leading-relaxed text-muted">
-          方針、相談受付、初動対応、記録の「何から作るか」を止めないための小規模事業者向け導入支援です。
-          既製文書を渡すだけでなく、社名・窓口・連絡手順を反映した運用開始用のたたき台を作成します。
+          このページは旧販売実験の内容を記録するために残しています。
+          個別調整、短納期対応、法務に隣接する確認を安全に継続できる運用体制と合わないため、新規相談と受注を停止しました。
         </p>
 
         <div className="mt-7 grid gap-5 rounded-xl border border-card-border bg-card-bg p-5 sm:grid-cols-[1fr_auto] sm:items-center">
           <div>
-            <p className="text-sm font-medium text-muted">実証価格</p>
-            <p className="mt-1 text-3xl font-bold">19,800円<span className="ml-1 text-sm font-medium">（税込）</span></p>
+            <p className="text-sm font-medium text-muted">受付状況</p>
+            <p className="mt-1 text-3xl font-bold">新規受付停止中</p>
             <p className="mt-2 text-xs text-muted">
-              1事業者・1拠点・従業員50名まで／文言修正1回を含む
+              新規契約、個別相談、個人情報・機密情報の受領は行いません
             </p>
           </div>
-          <CustomerHarassmentInquiryCta
-            position="hero"
-            label="個人情報なしで相談する"
-          />
+          <CustomerHarassmentInquiryCta position="hero" />
         </div>
         <p className="mt-4 text-xs text-muted">
           実証受付ID: <code>{CUSTOMER_HARASSMENT_EXPERIMENT_ID}</code>
@@ -136,7 +134,7 @@ export default function CustomerHarassmentKitPage() {
         <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-5 text-sm leading-relaxed text-slate-800 dark:border-blue-800 dark:bg-blue-950/50 dark:text-slate-100">
           <p>
             厚生労働省は、カスタマーハラスメントの防止措置が2026年10月1日から事業主の義務になると案内しています。
-            本サービスは、その案内を読んでも社内文書や運用手順へ落とし込む時間が足りない小規模事業者向けの作業支援です。
+            旧販売実験では、その案内を社内文書や運用手順へ落とし込む時間が足りない小規模事業者向けの作業支援を想定していました。現在は提供していません。
           </p>
           <a
             href={officialSourceUrl}
@@ -150,9 +148,9 @@ export default function CustomerHarassmentKitPage() {
       </section>
 
       <section className="pb-10">
-        <h2 className="text-2xl font-bold">納品するもの</h2>
+        <h2 className="text-2xl font-bold">旧販売実験で想定していた納品物</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted">
-          一般的なひな型を、初回確認で伺った業種・体制に合わせて編集します。編集可能な文書とPDFで納品します。
+          以下は旧販売実験の記録です。現在は業種・体制に合わせた編集や、文書・PDFの納品を行っていません。
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {deliverables.map((item) => (
@@ -169,7 +167,7 @@ export default function CustomerHarassmentKitPage() {
 
       <section className="grid gap-5 pb-10 md:grid-cols-2">
         <div className="rounded-xl border border-card-border bg-card-bg p-6">
-          <h2 className="text-xl font-bold">対象となる事業者</h2>
+          <h2 className="text-xl font-bold">旧販売実験で想定していた対象</h2>
           <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted">
             <li>・従業員1〜50名で、顧客対応のある店舗・サービス業</li>
             <li>・専任の人事・法務担当がおらず、文書作成が止まっている</li>
@@ -187,7 +185,7 @@ export default function CustomerHarassmentKitPage() {
       </section>
 
       <section className="pb-10">
-        <h2 className="text-2xl font-bold">相談から納品まで</h2>
+        <h2 className="text-2xl font-bold">現在の受付状況</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {steps.map((step) => (
             <article
@@ -220,16 +218,13 @@ export default function CustomerHarassmentKitPage() {
       </section>
 
       <section className="rounded-2xl border border-primary/30 bg-primary/5 p-6 sm:p-8">
-        <h2 className="text-2xl font-bold">まず、対象範囲だけ確認します</h2>
+        <h2 className="text-2xl font-bold">新規相談と受注を停止しています</h2>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
-          初回メールでは、業種・従業員数の範囲・拠点数・既存文書の有無・希望納期だけをお知らせください。
-          顧客や従業員の氏名、連絡先、録音、実際の事案の詳細は送らないでください。
+          現在は対象範囲の確認、見積り、契約、個別文書作成を行いません。
+          顧客や従業員の氏名、連絡先、録音、実際の事案の詳細を送らないでください。
         </p>
         <div className="mt-6">
-          <CustomerHarassmentInquiryCta
-            position="final"
-            label="運用キットについて相談する"
-          />
+          <CustomerHarassmentInquiryCta position="final" />
         </div>
         <p className="mt-5 text-xs leading-relaxed text-muted">
           本サービスは法的助言、個別事案の判断、法令適合性の審査・保証を提供しません。法的判断が必要な場合は、弁護士、社会保険労務士、都道府県労働局などの専門窓口をご利用ください。
