@@ -8,7 +8,6 @@ import { categories } from "@/lib/categories";
 import { WebSiteJsonLd } from "@/components/JsonLd";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { AffiliateClickTracker } from "@/components/AffiliateClickTracker";
-import { CustomerHarassmentLandingLink } from "@/components/CustomerHarassmentExperiment";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -200,17 +199,6 @@ export default function RootLayout({
                 <Link href="/guide/project-management-comparison" className="hover:text-primary transition-colors">プロジェクト管理ツール比較</Link>
               </div>
             </div>
-            <div className="mb-6">
-              <h3 className="font-medium text-foreground mb-3 text-center">事業者向け導入支援</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                <CustomerHarassmentLandingLink
-                  position="footer_business_pilot"
-                  className="hover:text-primary transition-colors"
-                >
-                  カスタマーハラスメント対策 運用スタートキット
-                </CustomerHarassmentLandingLink>
-              </div>
-            </div>
             <div className="flex flex-wrap justify-center gap-4 mb-4">
               <Link href="/about" className="hover:text-primary">運営者情報</Link>
               <Link href="/author" className="hover:text-primary">編集方針</Link>
@@ -229,4 +217,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
